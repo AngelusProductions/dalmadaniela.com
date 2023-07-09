@@ -1,0 +1,21 @@
+{
+  "name": "dalma-daniela",
+  "author": {
+    "name": "Corey Angelus",
+    "url": "https://dalmadaniela.com"
+  },
+  "repository": {
+    "url": "https://github.com/AngelusProductions/dalma-daniela"
+  },
+  "version": "1.0.0",
+  "description": "Dalma Daniela's Website.",
+  "main": "index.js",
+  "scripts": {
+    "build-client": "cd client && npm install && npm run build ",
+    "build": "cd server && npm install",
+    "start": "cd server && npm install && npm run start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "license": "ISC"
+}
