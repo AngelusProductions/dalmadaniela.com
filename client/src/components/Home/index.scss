@@ -1,14 +1,77 @@
-.pageLeft {
+@import '../colors.scss';
+
+.left, .right {
     width: 50%;
     height: 100%;
     display: inline-block;
+    vertical-align: bottom;
+    position: relative;
 }
 
-#landing {
-    height: 100vw;
+.homeSection {
+    height: 100vh;
+    
+    &:nth-of-type(even) {
+        background: $yellow;
+    }
+    &:nth-of-type(odd) {
+        background: $pink;
+    }
 }
 
-#landing .pageLeft img {
+img.halfSection {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+}
+
+#landingRight {
+    position: absolute;
+    width: 50%;
+    left: 15%;
+    top: 25%;
+}
+#landingRight h1 {
+    font-size: 7vw;
+    color: $white;
+    font-family: 'Hatton';
+    font-weight: 400;
+}
+#landingRight span {
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.4vw;
+    font-family: "Garet";
+    margin-top: 1vh;
+    display: block;
+}
+#landingRight p {
+    color: $white;
+    font-family: "Garbata";
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin-top: 3vh;
+    line-height: 3vh;
+}
+img#landingStarsTwinkleSmall {
+    position: absolute;
+    top: 12.2vh;
+    width: 1.7vw;
+    right: 9.7vw;
+}
+img#landingStarsTwinkleLarge {
+    position: absolute;
+    right: -11vw;
+    top: 2vh;
+    width: 13vw;
+}
+
+span#angelusProductions {
+    position: absolute;
+    left: 3vw;
+    font-family: 'Hatton';
+    color: white;
+    bottom: 2vh;
+    font-size: 0.8vw;
 }

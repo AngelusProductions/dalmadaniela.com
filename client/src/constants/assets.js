@@ -54,6 +54,7 @@ export const i = {
         magic8: `${bucketPrefix}/magic/magic8.webp`,
         magic9: `${bucketPrefix}/magic/magic9.webp`,
         magic10: `${bucketPrefix}/magic/magic10.webp`,
+        magicCloud: `${bucketPrefix}/magic/magicCloud.png`,
     },
     stars: {
         starDownwardSpiral: `${bucketPrefix}/stars/starDownwardSpiral.webp`,

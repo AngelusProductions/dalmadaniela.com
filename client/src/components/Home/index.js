@@ -5,8 +5,9 @@ import Navbar from './Navbar'
 import { i } from '../../constants/assets'
 
 const t = {
+  angelusProductions: 'Angelus Productions LLC ®',
   dalmaName: 'Dalma Llinas',
-  dalmaTaglines: ['Actress.', 'Singer.', 'Digital Strategist.', 'Content Creator'],
+  dalmaTaglines: 'Actress. Singer. Digital Strategist. Content Creator.',
   dalmaIntro: 'I am a self-made multipotentialite based in Los Angeles. I teach people how to pursue multiple passions and amplify their success by rocking their social media game.',
   
   bioTitle: 'As a digital marketer and social media  strategist',
@@ -33,24 +34,29 @@ const t = {
 const Home = () => {
   return (
     <main id='homePage'>
-      <section id='landing' className='homeSection'>
-        <Navbar />
-        <div className='pageLeft'>
-          <img src={i.dalma.landingPhoto} alt={t.dalmaName} />
+      <Navbar />
+      <section className='homeSection'>
+        <div className='left'>
+          <img className='halfSection' src={i.dalma.landingPhoto} alt={t.dalmaName} />
+          <span id='angelusProductions'>{t.angelusProductions}</span>
         </div>
-        <div className='pageRight'>
-          <h1>{t.dalmaName}</h1>
-          <div>{t.dalmaTaglines.map(tagline => <span key={tagline}>{tagline}</span>)}</div>
-          <p>{t.dalmaIntro}</p>
+        <div className='right'>
+          <div id='landingRight'>
+            <h1>{t.dalmaName}</h1>
+            <span>{t.dalmaTaglines}</span>
+            <p>{t.dalmaIntro}</p>
+            <img id='landingStarsTwinkleSmall' src={i.stars.starTwinkleSmall} />
+            <img id='landingStarsTwinkleLarge' src={i.stars.starTwinklesLarge} />
+          </div>
         </div>
       </section>
-      <section id='bio' className='homeSection'>
-        <div className='pageLeft'>
-          <img src={i.dalma.iVisaPhoto} alt={t.dalmaName} />
-        </div>
-        <div className='pageRight'>
+      <section className='homeSection'>
+        <div className='left'>
           <h2>{t.bioTitle}</h2>
           <p>{t.bioText}</p>
+        </div>
+        <div className='right'>
+          <img className='halfSection' src={i.dalma.iVisaPhoto} alt={t.dalmaName} />
         </div>
       </section>
     </main>

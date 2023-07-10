@@ -20,14 +20,14 @@ export default [
     name: 'Magic calendars',
     path: paths.magicCalendars,
     side: 'left',
-    tooltip: 'Wow! Magic calendars are coming soon. Get ready.'
+    tooltip: 'Wow!\nMagic calendars are coming soon. Get ready.'
   },
   {
     id: 4,
     name: 'Blog',
     path: paths.blog,
     side: 'left',
-    tooltip: 'Aha! Freebies galore over here. Keep checking.'
+    tooltip: 'Aha!\nFreebies galore over here. Keep checking.'
   },
   {
     id: 5,
@@ -41,7 +41,7 @@ export default [
     name: 'Contact us',
     path: paths.contactUs,
     side: 'right',
-    tooltip: 'Yay! Let\'s for sure chat soon. I\'d love to hear from you.'
+    tooltip: 'Yay!\nLet\'s for sure chat soon. I\'d love to hear from you.'
   },
   {
     id: 7,

@@ -1,0 +1,33 @@
+#navbar {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarSection {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2vh;
+}
+
+#navbarCloudContainer {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
+#navbarCloudContainer img {
+    width: 50%;
+    z-index: 98;
+}
+#navbarCloudContainer span {
+    position: absolute;
+    top: 18vh;
+    left: 32%;
+    width: 37%;
+    font-size: 3vw;
+    font-family: "Garbata";
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+}

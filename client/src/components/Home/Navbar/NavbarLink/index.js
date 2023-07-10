@@ -2,24 +2,26 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './index.scss'
 
-const NavbarLink = ({ name, path, side, tooltip }) => {
-  const [showTooltip, setShowTooltip] = useState(false)
-  
+const NavbarLink = ({
+    id,
+    name, 
+    path, 
+    tooltip, 
+    setHoveringLinkId
+}) => {
   return tooltip != null ? (
-    <div className='inactiveNavbarLinkContainer'>
-      <span 
-        className={`navbarLink ${side === 'left' ? 'left' : 'right'} inactive`}
-        onMouseEnter={() => setShowTooltip(true)}
-        onMouseLeave={() => setShowTooltip(false)}
-      > 
+    <span 
+        className='navbarLink inactive'
+        onMouseEnter={() => setHoveringLinkId(id)}
+        onMouseLeave={() => setHoveringLinkId(null)}
+    > 
         {name}
-      </span>
-      {showTooltip && (
-        <span className='navbarTooltip'>{tooltip}</span>
-      )}
-    </div>
+    </span>
   ) : (
-    <Link to={path} className={`navbarLink ${side === 'left' ? 'left' : 'right'} active`}>
+    <Link 
+        to={path} 
+        className={`navbarLink active clickable`}
+    >
       {name}
     </Link>
   )
