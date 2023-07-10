@@ -17,8 +17,8 @@ const t = {
   brandsCollaborated: 'Brands I\'ve collaborated with on social:',
   brandsFeatured: 'As featured in:',
 
-  filmTitle: 'As an actress and producer',
-  filmText: 'I have used my social media influence to promote the projects that  have cast me as an actress and launch successful crowdfunding campaigns that have funded the entire pre and postproduction of my latest feature film.',
+  filmsTitle: 'As an actress and producer',
+  filmsText: 'I have used my social media influence to promote the projects that  have cast me as an actress and launch successful crowdfunding campaigns that have funded the entire pre and postproduction of my latest feature film.',
   limeAndVinegarCaption: 'Lime & Vinegar, directed by Evan Snyder',
   theSovereignCaption: 'The Sovereign, directed by Farah Y. Mourad Vera',
 
@@ -85,6 +85,24 @@ const Home = () => {
             {Object.keys(i.logos.brandsFeatured).map(key => (
               <img src={i.logos.brandsFeatured[key]} className='brandFeatured brandLogo' key={key} />
             ))}
+          </div>
+        </div>
+      </section>
+      <section id='films' className='homeSection'>
+        <div className='left'>
+          <div id='filmsLeft'>
+            <h2>{t.filmsTitle}</h2>
+            <p>{t.filmsText}</p>
+          </div>
+        </div>
+        <div id='limeAndVinegar' className='right'>
+          <div className='film'>
+            <img src={i.films.limeAndVinegar} />
+            <span>{t.limeAndVinegarCaption}</span>
+          </div>
+          <div id='theSovereign' className='film'>
+            <img src={i.films.theSovereign} />
+            <span>{t.theSovereignCaption}</span>
           </div>
         </div>
       </section>
