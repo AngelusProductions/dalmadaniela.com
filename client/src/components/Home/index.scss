@@ -109,7 +109,10 @@ section#brands {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}.brandLogo {
+    height: fit-content;
+    padding-bottom: 10vh;
+}
+.brandLogo {
     width: 15%;
 }
 .brandLogosContainer {
@@ -139,6 +142,9 @@ section#brands {
 #brandsFeatured h3 {
     font-size: 3vw;
     color: $yellow;
+}
+.brandsSection {
+    margin-top: 5vw;
 }
 
 #films .left {
@@ -177,14 +183,12 @@ section#brands {
     top: 18%;
 }
 .film img {
-    width: 95%;
-    height: 84%;
+    height: 33vw;
     object-fit: contain;
-    margin-bottom: 1vh;
+    margin-bottom: 1vw;
 }
 #theSovereign {
     right: 0;
-    top: 4%;
 }
 .film span {
     font-family: 'Garbata';
