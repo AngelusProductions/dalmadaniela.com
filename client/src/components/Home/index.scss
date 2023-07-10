@@ -196,3 +196,43 @@ section#brands {
     color: $pink;
     font-size: 1.1vw;
 }
+
+#socialMedia .left {
+    width: 50%;
+}
+#socialMedia .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+div#socialMediaRight {
+    height: 100%;
+    padding: 0 4vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#socialMediaRight p {
+    color: $white;
+    font-family: 'Garbata';
+    font-weight: 600;
+    width: 45%;
+    line-height: 3vh;
+    font-size: 1.6vw;
+}
+div#socialMediaPhone {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#socialMediaPhone div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1vw;
+    margin-bottom: 0.7vh;
+}
+#socialMediaPhone a img {
+    width: 2vw;
+    height: 2vw;
+}

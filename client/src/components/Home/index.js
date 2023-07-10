@@ -106,6 +106,37 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section id='socialMedia' className='homeSection'>
+        <div className='left'> 
+          <img src={i.dalma.linkedInLaptop} alt={t.dalmaName} />
+        </div>
+        <div className='right'>
+          <div id='socialMediaRight'>
+            <p>{t.socialMedia}</p>
+            <div id='socialMediaPhone'>
+              <div>
+                <a href='mailto:dalmadaniela@gmail.com'>
+                  <img src={i.icons.email} />
+                </a>
+                <a href='https://www.instagram.com/dalma.llinas/'>
+                  <img src={i.icons.instagram} />
+                </a>
+                <a href='https://www.threads.net/@dalma.llinas'>
+                  <img src={i.icons.threads} />
+                </a>
+                <a href='https://www.facebook.com/dalmallinasconde/'>
+                  <img src={i.icons.facebook} />
+                </a>
+                <a href='https://www.linkedin.com/in/dalma-llin%C3%A1s-5851b549/'>
+                  <img src={i.icons.linkedIn} />
+                </a>
+              </div>
+              <img src={i.dalma.instagramPhone} />
+            </div>
+          </div>
+          <img src={i.magic.magic1} />
+        </div>
+      </section>
     </main>
   )
 }
