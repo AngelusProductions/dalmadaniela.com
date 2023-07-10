@@ -13,9 +13,9 @@ const t = {
   bioTitle: 'As a digital marketer and social media  strategist',
   bioText: 'I have helped brands in the US and Colombia boost their online visibility and achieve their business objectives by creating and implementing customized social media strategies that have enhanced their engagement, conversions, and revenue from social, and more importantly, improved the image they projected to their target audience.',
   
-  brandHelp: 'Brands I\'ve helped across the globe',
-  brandCollaborate: 'Brands I\'ve collaborated with on social',
-  brandFeature: 'As featured in',
+  brandsHelped: 'Brands I\'ve helped across the globe:',
+  brandsCollaborated: 'Brands I\'ve collaborated with on social:',
+  brandsFeatured: 'As featured in:',
 
   filmTitle: 'As an actress and producer',
   filmText: 'I have used my social media influence to promote the projects that  have cast me as an actress and launch successful crowdfunding campaigns that have funded the entire pre and postproduction of my latest feature film.',
@@ -35,7 +35,7 @@ const Home = () => {
   return (
     <main id='homePage'>
       <Navbar />
-      <section className='homeSection'>
+      <section id='landing' className='homeSection'>
         <div className='left'>
           <img className='halfSection' src={i.dalma.landingPhoto} alt={t.dalmaName} />
           <span id='angelusProductions'>{t.angelusProductions}</span>
@@ -50,7 +50,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='homeSection'>
+      <section id='bio' className='homeSection'>
         <div className='left'>
           <img id='bioLeftMagic' src={i.magic.magic5} />  
           <div id='bioLeft'>
@@ -60,6 +60,32 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='halfSection' src={i.dalma.iVisaPhoto} alt={t.dalmaName} />
+        </div>
+      </section>
+      <section id='brands' className='homeSection'>
+        <div id='brandsHelped' className='brandsSection'>
+          <h3>{t.brandsHelped}</h3>
+          <div className='brandLogosContainer'>
+            {Object.keys(i.logos.brandsHelped).map(key => (
+              <img src={i.logos.brandsHelped[key]} className='brandHelped brandLogo' key={key} />
+            ))}
+          </div>
+        </div>
+        <div id='brandsCollaborated' className='brandsSection'>
+          <h3>{t.brandsCollaborated}</h3>
+          <div className='brandLogosContainer'>
+            {Object.keys(i.logos.brandsCollaborated).map(key => (
+              <img src={i.logos.brandsCollaborated[key]} className='brandCollaborated brandLogo' key={key} />
+            ))}
+          </div>
+        </div>
+        <div id='brandsFeatured' className='brandsSection'>
+          <h3>{t.brandsFeatured}</h3>
+          <div className='brandLogosContainer'>
+            {Object.keys(i.logos.brandsFeatured).map(key => (
+              <img src={i.logos.brandsFeatured[key]} className='brandFeatured brandLogo' key={key} />
+            ))}
+          </div>
         </div>
       </section>
     </main>

@@ -7,7 +7,7 @@ import { i } from '../../../constants/assets'
 import navbarLinks from '../../../constants/navbarLinks'
 
 const Navbar = () => {
-  const [hoveringLinkId, setHoveringLinkId] = useState(null)
+  const [hoveringLinkId, setHoveringLinkId] = useState(4)
   return (
     <nav id='navbar'>
       <div className='navbarSection'>

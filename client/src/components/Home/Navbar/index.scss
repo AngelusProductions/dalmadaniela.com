@@ -18,16 +18,18 @@
     z-index: 1;
 }
 #navbarCloudContainer img {
-    width: 50%;
-    z-index: 98;
+    width: 50vw;
+    left: 25vw;
+    position: absolute;
 }
 #navbarCloudContainer span {
     position: absolute;
-    top: 18vh;
-    left: 32%;
-    width: 37%;
+    top: 14vw;
+    left: 31vw;
+    width: 37vw;
     font-size: 3vw;
     font-family: "Garbata";
     font-weight: 600;
     letter-spacing: 0.1vw;
+    z-index: 99;
 }
