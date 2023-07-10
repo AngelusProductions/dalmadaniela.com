@@ -225,6 +225,7 @@ div#socialMediaPhone {
     width: 50%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 #socialMediaPhone div {
     display: flex;
@@ -235,4 +236,73 @@ div#socialMediaPhone {
 #socialMediaPhone a img {
     width: 2vw;
     height: 2vw;
+}
+img#socialMediaInstagramPhone {
+    z-index: 99;
+}
+img#socialMediaMagic {
+    position: absolute;
+    bottom: -60vw;
+    right: -8vw;
+    height: 63vw;
+}
+
+.testimonial .left {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10%;
+}
+#garettTestimonial h2 {
+    font-family: "Hatton";
+    font-size: 5vw;
+    letter-spacing: 0.2vw;
+    font-weight: 500;
+}
+.testimonial p {
+    font-size: 2vw;
+    font-family: "Garbata";
+    font-weight: 300;
+    font-style: italic;
+    width: 72%;
+}
+.testimonial p.black {
+    color: $black;
+}
+.testimonialLabel {
+    display: flex;
+    flex-direction: column;
+    font-size: 3vw;
+    font-family: "Garbata";
+    font-weight: 700;
+    font-style: italic;
+}
+.testimonialLabel.pink {
+    color: $pink;
+}
+.testimonialLabel.yellow {
+    color: $yellow;
+}
+.testimonial .right {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+img.testimonialPhone {
+    width: 67%;
+    z-index: 99;
+}
+img.testimonialMagic {
+    height: 100%;
+    position: absolute;
+    right: -20%;
+    filter: opacity(0.6);
+}
+#garettTestimonial .testimonialMagic,
+#evanTestimonial .testimonialMagic {
+    transform: scaleX(-1);
+}
+#evanTestimonial .testimonialMagic {
+    right: 0%;
 }

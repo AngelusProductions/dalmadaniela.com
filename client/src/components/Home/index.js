@@ -3,6 +3,7 @@ import './index.scss'
 
 import Navbar from './Navbar'
 import { i } from '../../constants/assets'
+import testimonials from '../../constants/testimonials'
 
 const t = {
   angelusProductions: 'Angelus Productions LLC ®',
@@ -23,9 +24,9 @@ const t = {
   theSovereignCaption: 'The Sovereign, directed by Farah Y. Mourad Vera',
 
   socialMedia: 'Social media is the new frontier. My content strategies are crafted to make sure your potential followers enjoy the vibe of your profile with every scroll.',
+  
   testimonialsTitle: 'Testimonials',
-  testimonialsQuote: '"Nothing ruins your day more than a bad review." - Taylor Swift',
-
+  
   classViral: 'All without having to go viral.',
   classTeach: 'And now, I\'m going to teach you.',
   classTitle: 'How to be successful on social media without having to go viral'
@@ -131,10 +132,40 @@ const Home = () => {
                   <img src={i.icons.linkedIn} />
                 </a>
               </div>
-              <img src={i.dalma.instagramPhone} />
+              <img id='socialMediaInstagramPhone' src={i.dalma.instagramPhone} />
+              <img id='socialMediaMagic' src={i.magic.magic8} />
             </div>
           </div>
-          <img src={i.magic.magic1} />
+        </div>
+      </section>
+      <section id='garettTestimonial' className='homeSection testimonial'>
+        <div className='left'>
+          <h2>{t.testimonialsTitle}</h2>
+          <p>{testimonials.garett.quote}</p>
+          <div className='testimonialLabel pink'>
+            <span>{testimonials.garett.name}</span>
+            <span>{testimonials.garett.label1}</span>
+            <span>{testimonials.garett.label2}</span>
+          </div>
+        </div>
+        <div className='right'>
+          <img className='testimonialPhone' src={testimonials.garett.image} />
+          <img className='testimonialMagic' src={i.magic.magic8} />
+        </div>
+      </section>
+      <section id='evanTestimonial' className='homeSection testimonial'>
+        <div className='left'>
+          <h2></h2>
+          <p>{testimonials.evan.quote}</p>
+          <div className='testimonialLabel yellow'>
+            <span>{testimonials.evan.name}</span>
+            <span>{testimonials.evan.label1}</span>
+            <span>{testimonials.evan.label2}</span>
+          </div>
+        </div>
+        <div className='right'>
+          <img className='testimonialPhone' src={testimonials.evan.image} />
+          <img className='testimonialMagic' src={i.magic.magic9} />
         </div>
       </section>
     </main>
