@@ -5,15 +5,6 @@
   "homepage": "https://dalmadaniela.com",
   "dependencies": {
     "@shopify/polaris": "^2.12.1",
-    "@types/jest": "^23.3.14",
-    "@types/mongodb": "^4.0.7",
-    "@types/node": "^10.17.60",
-    "@types/react": "^16.14.41",
-    "@types/react-dom": "^16.9.19",
-    "@types/react-redux": "^6.0.21",
-    "@types/react-router": "^4.4.5",
-    "@types/react-router-dom": "^4.3.5",
-    "@types/redux": "^3.6.0",
     "axios": "^0.18.1",
     "cors": "^2.8.5",
     "gh-pages": "^5.0.0",
@@ -22,22 +13,30 @@
     "react-dom": "^16.14.0",
     "react-redux": "^5.1.2",
     "react-router-dom": "^4.3.1",
+    "react-scripts": "^5.0.1",
     "react-scripts-ts": "2.16.0",
     "react-stripe-checkout": "2.6.3",
     "react-testing-library": "^3.1.7",
     "redux": "^4.2.1",
     "redux-persist": "^5.10.0",
-    "sass": "^1.63.4",
-    "typescript": "^2.9.2"
+    "sass": "^1.63.4"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom --modulePaths=src",
-    "eject": "react-scripts-ts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom --modulePaths=src",
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "@types/bson": "^4.2.0",
-    "@types/history": "^4.7.11"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,11 +1,10 @@
-import * as React from 'react';
-import { connect } from 'react-redux';
-import { Card, Layout } from '@shopify/polaris';
+import React from 'react'
+import { connect } from 'react-redux'
 import './index.scss'
 
 import {
-  bucketPrefix,
-  folders
+  i,
+  bucketPrefix
 } from '../../constants/assets'
 
 const t = {
@@ -35,12 +34,11 @@ const t = {
 }
 
 const Home = ({ currentUser, loggedIn, email }) => {
-
   return (
     <main id='homePage'>
       <section id='landing'>
         <div className='pageLeft'>
-          <img src={dalmaLanding} alt={t.dalmaName} />
+          <img src={i.dalma.dalmaLanding} alt={t.dalmaName} />
         </div>
         <div className='pageRight'>
           <h1>{t.dalmaName}</h1>
@@ -50,7 +48,7 @@ const Home = ({ currentUser, loggedIn, email }) => {
       </section>
       <section id='bio'>
         <div className='pageLeft'>
-          <img src={dalmaiVisa} alt={t.dalmaName} />
+          <img src={i.dalma.dalmaiVisa} alt={t.dalmaName} />
         </div>
         <div className='pageRight'>
           <h2>{t.bioTitle}</h2>
@@ -66,4 +64,4 @@ const mapState = (state) => ({
   email: state.currentUser.email
 })
 
-export default connect(mapState)(Home);
+export default connect(mapState)(Home)
