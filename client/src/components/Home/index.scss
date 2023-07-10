@@ -10,6 +10,7 @@
 
 .homeSection {
     height: 100vh;
+    overflow: hidden;
     
     &:nth-of-type(even) {
         background: $yellow;
@@ -66,7 +67,6 @@ img#landingStarsTwinkleLarge {
     top: 2vh;
     width: 13vw;
 }
-
 span#angelusProductions {
     position: absolute;
     left: 3vw;
@@ -74,4 +74,32 @@ span#angelusProductions {
     color: white;
     bottom: 2vh;
     font-size: 0.8vw;
+}
+
+img#bioLeftMagic {
+    left: -35vw;
+    height: 146%;
+    position: absolute;
+    top: -45vh;
+    transform: rotate(5deg);
+}
+div#bioLeft {
+    top: 20vh;
+    position: absolute;
+    left: 33%;
+    width: 50%;
+}
+#bioLeft h2 {
+    color: $pink;
+    font-family: 'Hatton';
+    font-weight: 400;
+    font-size: 3.2vw;
+}
+#bioLeft p {
+    color: $black;
+    font-family: "Garbata";
+    font-weight: 700;
+    font-size: 1.3vw;
+    margin-top: 3vh;
+    line-height: 3vh;
 }

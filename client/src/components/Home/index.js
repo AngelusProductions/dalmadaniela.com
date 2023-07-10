@@ -52,8 +52,11 @@ const Home = () => {
       </section>
       <section className='homeSection'>
         <div className='left'>
-          <h2>{t.bioTitle}</h2>
-          <p>{t.bioText}</p>
+          <img id='bioLeftMagic' src={i.magic.magic5} />  
+          <div id='bioLeft'>
+            <h2>{t.bioTitle}</h2>
+            <p>{t.bioText}</p>
+          </div>
         </div>
         <div className='right'>
           <img className='halfSection' src={i.dalma.iVisaPhoto} alt={t.dalmaName} />
