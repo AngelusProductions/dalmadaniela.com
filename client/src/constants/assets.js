@@ -2,10 +2,10 @@ export const bucketPrefix = 'https://dalma-daniela.s3.us-east-2.amazonaws.com/as
 
 export const i = {
     dalma: {
-        dalmaInstagramPhone: `${bucketPrefix}/dalma/dalmaInstagramPhone.png`,
-        dalmaLanding: `${bucketPrefix}/dalma/dalmaLanding.png`,
-        dalmaLinkedInLaptop: `${bucketPrefix}/dalma/dalmaLinkedInLaptop.png`,
-        dalmaiVisa: `${bucketPrefix}/dalma/dalmaiVisa.png`,
+        instagramPhone: `${bucketPrefix}/dalma/instagramPhone.png`,
+        landingPhoto: `${bucketPrefix}/dalma/landingPhoto.png`,
+        linkedInLaptop: `${bucketPrefix}/dalma/linkedInLaptop.png`,
+        iVisaPhoto: `${bucketPrefix}/dalma/iVisaPhoto.png`,
     },
     films: {
         limeAndVinegar: `${bucketPrefix}/films/limeAndVinegar.png`,

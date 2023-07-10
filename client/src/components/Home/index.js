@@ -1,11 +1,8 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import './index.scss'
 
-import {
-  i,
-  bucketPrefix
-} from '../../constants/assets'
+import Navbar from './Navbar'
+import { i } from '../../constants/assets'
 
 const t = {
   dalmaName: 'Dalma Llinas',
@@ -33,12 +30,13 @@ const t = {
   classTitle: 'How to be successful on social media without having to go viral'
 }
 
-const Home = ({ currentUser, loggedIn, email }) => {
+const Home = () => {
   return (
     <main id='homePage'>
-      <section id='landing'>
+      <section id='landing' className='homeSection'>
+        <Navbar />
         <div className='pageLeft'>
-          <img src={i.dalma.dalmaLanding} alt={t.dalmaName} />
+          <img src={i.dalma.landingPhoto} alt={t.dalmaName} />
         </div>
         <div className='pageRight'>
           <h1>{t.dalmaName}</h1>
@@ -46,9 +44,9 @@ const Home = ({ currentUser, loggedIn, email }) => {
           <p>{t.dalmaIntro}</p>
         </div>
       </section>
-      <section id='bio'>
+      <section id='bio' className='homeSection'>
         <div className='pageLeft'>
-          <img src={i.dalma.dalmaiVisa} alt={t.dalmaName} />
+          <img src={i.dalma.iVisaPhoto} alt={t.dalmaName} />
         </div>
         <div className='pageRight'>
           <h2>{t.bioTitle}</h2>
@@ -59,9 +57,4 @@ const Home = ({ currentUser, loggedIn, email }) => {
   )
 }
 
-const mapState = (state) => ({
-  loggedIn: state.currentUser.loggedIn,
-  email: state.currentUser.email
-})
-
-export default connect(mapState)(Home)
+export default Home

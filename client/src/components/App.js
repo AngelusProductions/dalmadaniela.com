@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Home from './Home'
@@ -19,7 +19,7 @@ import { loginSuccess, loginFailure, loginRequest } from '../actions/login'
 import './app.scss'
 import './fonts.scss'
 
-const App= ({ currentUser, onBoot }) => {
+const App = ({ currentUser, onBoot }) => {
   useEffect(() => {
     if (currentUser.token && !currentUser.loggedIn) {
       onBoot(currentUser.token)
@@ -27,15 +27,15 @@ const App= ({ currentUser, onBoot }) => {
   })
 
   return (
-    <div id='appContainer'>
-      <Route path={paths.home} component={Home}/>
-      <Route path= {paths.superClass} component={SuperClass} />
-      <Route path= {paths.magicCalendars} component={MagicCalendars} />
-      <Route path= {paths.blog} component={Blog} />
-      <Route path= {paths.meetTheTeam} component={MeetTheTeam} />
-      <Route path= {paths.contactUs} component={ContactUs} />
-      <Route path= {paths.geniusMarketingServices} component={GeniusMarketingServices} />
-    </div>
+    <Routes>
+      <Route index element={<Home />}/>
+      <Route path={paths.superClass} element={<SuperClass />} />
+      <Route path={paths.magicCalendars} element={<MagicCalendars />} />
+      <Route path={paths.blog} element={<Blog />} />
+      <Route path={paths.meetTheTeam} element={<MeetTheTeam />} />
+      <Route path={paths.contactUs} element={<ContactUs />} />
+      <Route path={paths.geniusMarketingServices} element={<GeniusMarketingServices />} />
+    </Routes>
   )
 }
 
