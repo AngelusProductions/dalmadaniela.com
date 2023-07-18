@@ -31,42 +31,48 @@ img.halfSection {
     width: 50%;
     left: 15%;
     top: 25%;
+    
+    h1 {
+        font-size: 7vw;
+        color: $white;
+        font-family: 'Hatton';
+        font-weight: 400;
+    }
+    
+    span {
+        font-size: 1vw;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.4vw;
+        font-family: "Garet";
+        margin-top: 1vh;
+        display: block;
+    }
+    
+    p {
+        color: $white;
+        font-family: "Garbata";
+        font-weight: 700;
+        font-size: 1.5vw;
+        margin-top: 3vh;
+        line-height: 3vh;
+    }
 }
-#landingRight h1 {
-    font-size: 7vw;
-    color: $white;
-    font-family: 'Hatton';
-    font-weight: 400;
-}
-#landingRight span {
-    font-size: 1vw;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.4vw;
-    font-family: "Garet";
-    margin-top: 1vh;
-    display: block;
-}
-#landingRight p {
-    color: $white;
-    font-family: "Garbata";
-    font-weight: 700;
-    font-size: 1.5vw;
-    margin-top: 3vh;
-    line-height: 3vh;
-}
+
 img#landingStarsTwinkleSmall {
     position: absolute;
     top: 8.9vw;
     width: 1.7vw;
     right: 9.7vw;
 }
+
 img#landingStarsTwinkleLarge {
     position: absolute;
     right: -11vw;
     top: 2vh;
     width: 13vw;
 }
+
 span#angelusProductions {
     position: absolute;
     left: 3vw;
@@ -84,25 +90,28 @@ img#bioLeftMagic {
     transform: rotate(5deg);
     filter: opacity(0.4);
 }
+
 div#bioLeft {
     top: 20vh;
     position: absolute;
     left: 33%;
     width: 50%;
-}
-#bioLeft h2 {
-    color: $pink;
-    font-family: 'Hatton';
-    font-weight: 400;
-    font-size: 3.2vw;
-}
-#bioLeft p {
-    color: $black;
-    font-family: "Garbata";
-    font-weight: 700;
-    font-size: 1.3vw;
-    margin-top: 3vh;
-    line-height: 3vh;
+    
+    h2 {
+        color: $pink;
+        font-family: 'Hatton';
+        font-weight: 400;
+        font-size: 3.2vw;
+    }
+    
+    p {
+        color: $black;
+        font-family: "Garbata";
+        font-weight: 700;
+        font-size: 1.3vw;
+        margin-top: 3vh;
+        line-height: 3vh;
+    }
 }
 
 section#brands {
@@ -111,68 +120,83 @@ section#brands {
     justify-content: space-around;
     height: fit-content;
     padding-bottom: 10vh;
-}
-.brandLogo {
-    width: 15%;
-}
-.brandLogosContainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-#brandsHelped .brandLogosContainer {
-    padding: 0 10vw;
-}
-#brandsCollaborated .brandLogosContainer {
-    padding: 0 3vw;
-}
-#brandsFeatured .brandLogosContainer {
-    padding: 0 5vw;
-}
-#brandsHelped h3,
-#brandsCollaborated h3,
-#brandsFeatured h3 {
-    font-family: "Hatton";
-    color: white;
-    text-align: center;
-    font-size: 1.8vw;
-    margin-bottom: 3vh;
-}
-#brandsFeatured h3 {
-    font-size: 3vw;
-    color: $yellow;
-}
-.brandsSection {
-    margin-top: 5vw;
+
+    .brandLogo {
+        width: 15%;
+    }
+
+    .brandLogosContainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #brandsHelped .brandLogosContainer {
+        padding: 0 10vw;
+    }
+
+    #brandsCollaborated .brandLogosContainer {
+        padding: 0 3vw;
+    }
+
+    #brandsFeatured .brandLogosContainer {
+        padding: 0 5vw;
+    }
+
+    #brandsHelped h3,
+    #brandsCollaborated h3,
+    #brandsFeatured h3 {
+        font-family: "Hatton";
+        color: white;
+        text-align: center;
+        font-size: 1.8vw;
+        margin-bottom: 3vh;
+    }
+
+    #brandsFeatured h3 {
+        font-size: 3vw;
+        color: $yellow;
+    }
+    
+    .brandsSection {
+        margin-top: 5vw;
+    }
 }
 
-#films .left {
-    width: 33%;
-}
+#films {
+    .left {
+        width: 33%;
+    }
+
+    .right {
+        width: 67%;
+    }
+} 
+
 #filmsLeft {
     position: absolute;
     left: 15%;
     width: 70%;
     top: 33%;
+    
+    h2 {
+        font-family: 'Hatton';
+        font-size: 3.5vw;
+        color: $pink;
+        margin-bottom: 3vh;
+    }
+
+    p {
+        color: $black;
+        font-family: "Garbata";
+        font-weight: 700;
+        font-size: 1.4vw;
+        margin-top: 3vh;
+        line-height: 3vh;
+    }
 }
-#filmsLeft h2 {
-    font-family: 'Hatton';
-    font-size: 3.5vw;
-    color: $pink;
-    margin-bottom: 3vh;
-}
-#filmsLeft p {
-    color: $black;
-    font-family: "Garbata";
-    font-weight: 700;
-    font-size: 1.4vw;
-    margin-top: 3vh;
-    line-height: 3vh;
-}
-#films .right {
-    width: 67%;
-}
+
 .film {
     width: 50%;
     margin-top: 15%;
@@ -181,65 +205,75 @@ section#brands {
     flex-direction: column;
     text-align: center;
     top: 18%;
-}
-.film img {
-    height: 33vw;
-    object-fit: contain;
-    margin-bottom: 1vw;
+    
+    img {
+        height: 33vw;
+        object-fit: contain;
+        margin-bottom: 1vw;
+    }
+
+    span {
+        font-family: 'Garbata';
+        font-weight: 600;
+        color: $pink;
+        font-size: 1.1vw;
+    }
 }
 #theSovereign {
     right: 0;
 }
-.film span {
-    font-family: 'Garbata';
-    font-weight: 600;
-    color: $pink;
-    font-size: 1.1vw;
-}
 
 #socialMedia .left {
     width: 50%;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+    }
 }
-#socialMedia .left img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: left;
-}
+
 div#socialMediaRight {
     height: 100%;
     padding: 0 4vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    p {
+        color: $white;
+        font-family: 'Garbata';
+        font-weight: 600;
+        width: 45%;
+        line-height: 3vh;
+        font-size: 1.6vw;
+    }
 }
-#socialMediaRight p {
-    color: $white;
-    font-family: 'Garbata';
-    font-weight: 600;
-    width: 45%;
-    line-height: 3vh;
-    font-size: 1.6vw;
-}
+
 div#socialMediaPhone {
     width: 50%;
     display: flex;
     flex-direction: column;
     position: relative;
+    
+    div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1vw;
+        margin-bottom: 0.7vh;
+    }
+
+    a img {
+        width: 2vw;
+        height: 2vw;
+    }
 }
-#socialMediaPhone div {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1vw;
-    margin-bottom: 0.7vh;
-}
-#socialMediaPhone a img {
-    width: 2vw;
-    height: 2vw;
-}
+
 img#socialMediaInstagramPhone {
     z-index: 99;
 }
+
 img#socialMediaMagic {
     position: absolute;
     bottom: -60vw;
@@ -259,16 +293,28 @@ img#socialMediaMagic {
     letter-spacing: 0.2vw;
     font-weight: 500;
 }
-.testimonial p {
-    font-size: 2vw;
-    font-family: "Garbata";
-    font-weight: 300;
-    font-style: italic;
-    width: 72%;
+
+.testimonial {
+    p {
+        font-size: 2vw;
+        font-family: "Garbata";
+        font-weight: 300;
+        font-style: italic;
+        width: 72%;
+        
+        .black {
+            color: $black;
+        }
+    }
+
+    .right {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40%;
+    }
 }
-.testimonial p.black {
-    color: $black;
-}
+
 .testimonialLabel {
     display: flex;
     flex-direction: column;
@@ -276,19 +322,15 @@ img#socialMediaMagic {
     font-family: "Garbata";
     font-weight: 700;
     font-style: italic;
+    
+    .pink {
+        color: $pink;
+    }
+    .yellow {
+        color: $yellow;
+    }
 }
-.testimonialLabel.pink {
-    color: $pink;
-}
-.testimonialLabel.yellow {
-    color: $yellow;
-}
-.testimonial .right {
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 40%;
-}
+
 img.testimonialPhone {
     width: 67%;
     z-index: 99;
@@ -299,10 +341,150 @@ img.testimonialMagic {
     right: -20%;
     filter: opacity(0.6);
 }
+
 #garettTestimonial .testimonialMagic,
 #evanTestimonial .testimonialMagic {
     transform: scaleX(-1);
 }
+
 #evanTestimonial .testimonialMagic {
     right: 0%;
+}
+
+section#teachYou {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    #whiteChick {
+        filter: opacity(0.5);
+    }
+
+    #whiteChickStars {
+        position: absolute;
+        bottom: -35vw;
+        width: 31vw;
+        left: 43vw;
+    }
+
+    p {
+        position: absolute;
+        color: black;
+        font-family: "Hatton";
+        font-size: 4vw;
+        display: flex;
+        flex-direction: column;
+        right: 0%;
+        top: 33%;
+        text-align: center;
+        background: #FEFF7C;
+        padding: 2%;
+    }
+}
+
+section#classAbout {
+    padding: 5%;
+    position: relative;
+    display: flex;
+
+    img {    
+        position: absolute;
+        left: -280px;
+        top: -94px;
+        transform: scaleX(-0.8) rotate(-17deg);
+    }
+
+    .videoContainer {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        h2 {
+            position: absolute;
+            background: $yellow;
+            color: $pink;
+            text-transform: uppercase;
+            margin: 5%;
+            font-family: 'Hatton';
+            font-size: 1.4vw;
+            letter-spacing: 2px;
+            text-align: center;
+            padding: 0.8vw;
+        }
+
+        video {
+            height: 100%;
+        }
+    }
+
+    .right {
+        background: $yellow;
+        padding: 0 5%;
+        font-family: 'Garet';
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        span {
+            &.part1 {
+                margin-top: 5%;
+                font-weight: bold;
+                font-size: 1.6vw;
+            }
+            
+            &.part2 {
+                margin-bottom: 5%;
+                font-size: 1.2vw;
+            }
+
+            &.part3 {
+                text-transform: uppercase;
+                font-size: 1.1vw;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+            
+            &.part4 {
+                font-weight: 700;
+                font-size: 1.7vw;
+            }
+            
+            &.part5 {
+                font-size: 1.3vw;
+            }
+        }
+        
+        ul {
+            font-weight: 600;
+            font-size: 1.3vw;
+        
+            li.howTo {
+                list-style: initial;
+            }
+        }
+
+        a {
+            background: black;
+            color: $yellow;
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 2vw;
+            font-weight: 600;
+            font-family: 'Garbata';
+            margin-bottom: 5%;
+            padding: 2% 0;
+
+            &:hover {
+                background: $pink;
+                color: black;
+            }
+            &:active {
+                background: $pink;
+                color: $yellow;
+            }
+        }
+    }
 }

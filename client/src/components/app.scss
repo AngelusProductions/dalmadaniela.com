@@ -2,12 +2,18 @@ body {
     margin: unset;
 }
 
+ul {
+    margin: unset;
+    padding: unset;
+}
+
 li {
     list-style: none;
 }
 
 a {
     color: unset;
+    text-decoration: none;;
     &:hover {
         text-decoration: none;
     }

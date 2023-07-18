@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './index.scss'
 
 import Navbar from './Navbar'
 import { i } from '../../constants/assets'
 import testimonials from '../../constants/testimonials'
+import { paths } from '../../constants/routes'
 
 const t = {
   angelusProductions: 'Angelus Productions LLC ®',
@@ -27,9 +29,23 @@ const t = {
   
   testimonialsTitle: 'Testimonials',
   
-  classViral: 'All without having to go viral.',
-  classTeach: 'And now, I\'m going to teach you.',
-  classTitle: 'How to be successful on social media without having to go viral'
+  classTeach1: 'And now,',
+  classTeach2: 'I\'m going to',
+  classTeach3: 'teach you.',
+  
+  classTitle: 'How to be successful on social without having to go viral',
+  classDescription1: 'The only content system you\'ll ever need for your social media.',
+  classDescription2: 'Become successful on social and get exactly what you want: brand awareness, conversions, bookings, reach, and authority without having to go viral, have big numbers, or invest a lot of money.',
+  classDescription3: 'Only 1.1% of social videos go viral, And when they do, most of the time, they generate reach, NOT sales.',
+  classDescription4: 'When you focus on creating viral content, you burn out easily and get discouraged because you focus on the outcome, not the process, and why you\'re doing this in the first place.',
+  classDescription5: 'No more of that. It\'s time to destroy the myth and drop viral content off the pedestal. In this SuperClass, you\'ll learn:',
+  classHowTo: [
+    'How to be found by those who matter when it matters.',
+    'How to create a social media strategy that works for you.',
+    'How to post with purpose and provide value to your audience on autopilot.',
+    'How to leverage your social media presence to grow your business and personal brand in the real world.',
+  ],
+  classCta: 'Get SuperClass'
 }
 
 const Home = () => {
@@ -133,7 +149,7 @@ const Home = () => {
                 </a>
               </div>
               <img id='socialMediaInstagramPhone' src={i.dalma.instagramPhone} />
-              <img id='socialMediaMagic' src={i.magic.magic8} />
+              {/* <img id='socialMediaMagic' src={i.magic.magic8} /> */}
             </div>
           </div>
         </div>
@@ -150,7 +166,7 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.garett.image} />
-          <img className='testimonialMagic' src={i.magic.magic8} />
+          {/* <img className='testimonialMagic' src={i.magic.magic8} /> */}
         </div>
       </section>
       <section id='evanTestimonial' className='homeSection testimonial'>
@@ -165,7 +181,68 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.evan.image} />
-          <img className='testimonialMagic' src={i.magic.magic9} />
+          {/* <img className='testimonialMagic' src={i.magic.magic9} /> */}
+        </div>
+      </section>
+      <section id='alexTestimonial' className='homeSection testimonial'>
+        <div className='left'>
+          <h2></h2>
+          <p>{testimonials.alex.quote}</p>
+          <div className='testimonialLabel pink'>
+            <span>{testimonials.alex.name}</span>
+            <span>{testimonials.alex.label1}</span>
+            <span>{testimonials.alex.label2}</span>
+          </div>
+        </div>
+        <div className='right'>
+          <img className='testimonialPhone' src={testimonials.alex.image} />
+          {/* <img className='testimonialMagic' src={i.magic.magic5} /> */}
+        </div>
+      </section>
+      <section id='camiTestimonial' className='homeSection testimonial'>
+        <div className='left'>
+          <h2></h2>
+          <p>{testimonials.cami.quote}</p>
+          <div className='testimonialLabel yellow'>
+            <span>{testimonials.cami.name}</span>
+            <span>{testimonials.cami.label1}</span>
+            <span>{testimonials.cami.label2}</span>
+          </div>
+        </div>
+        <div className='right'>
+          <img className='testimonialPhone' src={testimonials.cami.image} />
+          {/* <img className='testimonialMagic' src={i.magic.magic5} /> */}
+        </div>
+      </section>
+      <section id='teachYou' className='homeSection'>
+        <img id='whiteChick' src={i.stock.whiteChick} />
+        <img id='whiteChickStars' src={i.stars.starTwinklesLarge} />
+        <p>
+          <span>{t.classTeach1}</span>
+          <span>{t.classTeach2}</span>
+          <span>{t.classTeach3}</span>
+        </p>
+      </section>
+      <section id='classAbout' className='homeSection'>
+        <img src={i.stars.starTwinklesLarge} />
+        <div className='videoContainer left'>
+          <h2>{t.classTitle}</h2>
+          <video autoPlay loop src={i.videos.plantGrowing} />
+        </div>
+        <div className='right'>
+          <span className='part1'>{t.classDescription1}</span>
+          <span className='part2'>{t.classDescription2}</span>
+          <span className='part3'>{t.classDescription3}</span>
+          <span className='part4'>{t.classDescription4}</span>
+          <span className='part5'>{t.classDescription5}</span>
+          <ul id='classHowTo'>
+            {t.classHowTo.map((howTo, index) => (
+              <li key={index} className='howTo'>{howTo}</li>
+            ))}
+          </ul>
+          <Link to={paths.superClass} id='classCta'>
+            {t.classCta}
+          </Link>
         </div>
       </section>
     </main>
