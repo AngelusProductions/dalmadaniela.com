@@ -1,0 +1,27 @@
+@import '../colors.scss';
+
+main#superClassPage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: black;
+    transform: scale(1.2);
+    bottom: 0;
+    left: 0;
+
+    video {
+        position: absolute;
+        height: 100vh;
+        z-index: -1;
+    }
+
+    img {
+        position: absolute;
+        right: 9%;
+        width: 20vw;
+        top: 46%;
+    }
+}

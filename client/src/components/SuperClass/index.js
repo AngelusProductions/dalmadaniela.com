@@ -1,14 +1,33 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+import { i } from '../../constants/assets'
 import './index.scss'
 
 const t = {
-  title: 'SuperClass'
+  title: 'How to be successful on social without having to go viral',
+  comingSoon: 'Coming Soon',
+  date: 'On 11/23',
+  home1: 'Go back ',
+  home2: 'home'
 }
 
 const SuperClass = () => {
   return (
     <main id='superClassPage'>
-      <h1 id='superClassPageTitle'>{t.title}</h1>
+      <video autoPlay loop src={i.videos.tvStatic} />
+      <img src={i.stars.starTwinklesLarge} />
+      <h3>{t.title}</h3>
+      <h1>{t.comingSoon}</h1>
+      <div id='superClassNavigationContainer'>
+        <span id='superClassDate'>{t.date}</span>
+        <div id='superClassHomeText'>
+          <span>{t.home1}</span>
+          <Link id='superClassHomeLink'>
+            {t.home2}
+          </Link>
+        </div>
+      </div>
     </main>
   )
 }
