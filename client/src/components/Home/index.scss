@@ -267,6 +267,10 @@ div#socialMediaPhone {
     a img {
         width: 2vw;
         height: 2vw;
+
+        &:hover {
+            color: black;
+        }
     }
 }
 

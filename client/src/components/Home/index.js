@@ -133,19 +133,19 @@ const Home = () => {
             <div id='socialMediaPhone'>
               <div>
                 <a href='mailto:dalmadaniela@gmail.com'>
-                  <img src={i.icons.email} />
+                  <img className='clickable' src={i.icons.email} />
                 </a>
                 <a href='https://www.instagram.com/dalma.llinas/'>
-                  <img src={i.icons.instagram} />
+                  <img className='clickable' src={i.icons.instagram} />
                 </a>
                 <a href='https://www.threads.net/@dalma.llinas'>
-                  <img src={i.icons.threads} />
+                  <img className='clickable' src={i.icons.threads} />
                 </a>
-                <a href='https://www.facebook.com/dalmallinasconde/'>
+                <a className='clickable' href='https://www.facebook.com/dalmallinasconde/'>
                   <img src={i.icons.facebook} />
                 </a>
                 <a href='https://www.linkedin.com/in/dalma-llin%C3%A1s-5851b549/'>
-                  <img src={i.icons.linkedIn} />
+                  <img className='clickable' src={i.icons.linkedIn} />
                 </a>
               </div>
               <img id='socialMediaInstagramPhone' src={i.dalma.instagramPhone} />
