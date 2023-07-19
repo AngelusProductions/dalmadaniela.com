@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { i } from '../../constants/assets'
+import { paths } from '../../constants/routes'
 import './index.scss'
 
 const t = {
@@ -23,7 +24,7 @@ const SuperClass = () => {
         <span id='superClassDate'>{t.date}</span>
         <div id='superClassHomeText'>
           <span>{t.home1}</span>
-          <Link id='superClassHomeLink'>
+          <Link to={paths.home} id='superClassHomeLink'>
             {t.home2}
           </Link>
         </div>
