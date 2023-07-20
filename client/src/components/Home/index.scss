@@ -230,7 +230,7 @@ div#bioLeft {
         }
 
         #brandsFeatured .brandLogo {
-            width: 15% !important; 
+            width: 18% !important; 
         }
 
         #brandsHelped h3,
@@ -320,6 +320,15 @@ section#brands {
     }
     #brandsCollaborated > div > img:nth-child(10) {
         transform: scale(0.8);
+    }
+    #brandsFeatured > div > img:nth-child(3) {
+        transform: scale(0.7);
+    }
+    #brandsFeatured > div > img:nth-child(6) {
+        transform: scale(1.5);
+    }
+    #brandsFeatured > div > img:nth-child(7) {
+        transform: scale(0.7);
     }
 
     #brandsHelped h3,

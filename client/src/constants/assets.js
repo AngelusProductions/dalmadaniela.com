@@ -44,6 +44,9 @@ export const i = {
             vireo: `${bucketPrefix}/logos/vireo.png`,
         },
         brandsFeatured: {
+            shoutoutLA: `${bucketPrefix}/logos/shoutoutLA.jpeg`,
+            voyageLA: `${bucketPrefix}/logos/voyageLA.jpeg`,
+            canvasRebel: `${bucketPrefix}/logos/canvasRebel.jpeg`,
             laWeekly: `${bucketPrefix}/logos/laWeekly.png`,
             nyWeekly: `${bucketPrefix}/logos/nyWeekly.png`,
             nyWire: `${bucketPrefix}/logos/nyWire.png`,
