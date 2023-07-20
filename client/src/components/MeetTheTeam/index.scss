@@ -1,0 +1,38 @@
+@import '../colors.scss';
+
+#meetTheTeamPage {
+    background: $yellow;
+    height: 90vh;
+    padding: 5vh;
+    overflow: hidden;
+    display: flex;
+
+    #teamTitleContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: 'Hatton';
+        font-size: 5vw;
+        height: 45vh;
+        margin: 0;
+        
+        #multipotentialite {
+            color: $pink;
+        }
+        
+        img {
+            position: absolute;
+            top: 45vh;
+            right: 0%;
+            width: 45vmin;
+        }
+    }
+
+    #teamMembersContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+

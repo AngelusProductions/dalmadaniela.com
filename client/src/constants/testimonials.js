@@ -21,7 +21,7 @@ export default {
     id: 3,
     name: 'Alex R.',
     label1: 'Actor, Model, Filmmaker',
-    label2: 'Los Angeles,, CA',
+    label2: 'Los Angeles, CA',
     image: i.testimonials.alexTestimonialPhone,
     quote: "\"Hiring Dalma Llinas to update and improve my Instagram and teach me how to post effectively was one of the best decisions I made for my acting career. There is a night and day difference between the posts I made before and after hiring Dalma. Casting Directors often ask for my Instagram handle, and I feel confident now in what I send them. My Instagram is far more impressive, and it's definitely helped in advancing my career.\""
   },

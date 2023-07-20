@@ -1,13 +1,5 @@
 @import '../colors.scss';
 
-.left, .right {
-    width: 50%;
-    height: 100%;
-    display: inline-block;
-    vertical-align: bottom;
-    position: relative;
-}
-
 .homeSection {
     height: 100vh;
     overflow: hidden;
