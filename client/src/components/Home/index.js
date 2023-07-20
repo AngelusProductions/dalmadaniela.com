@@ -58,6 +58,7 @@ const Home = () => {
       <main id='page-wrap'>
         <img id='homeBurgerIcon' src={i.icons.burger} />
         <Navbar />
+        <img id='mobileLandingPhoto' src={i.dalma.landingPhoto} />
         <section id='landing' className='homeSection'>
           <div className='left'>
             <img className='halfSection' src={i.dalma.landingPhoto} alt={t.dalmaName} />
@@ -236,6 +237,7 @@ const Home = () => {
             <video autoPlay loop src={i.videos.plantGrowing} />
           </div>
           <div className='right'>
+            <h2 id='mobileClassTitle'>{t.classTitle}</h2>
             <span className='part1'>{t.classDescription1}</span>
             <span className='part2'>{t.classDescription2}</span>
             <span className='part3'>{t.classDescription3}</span>
