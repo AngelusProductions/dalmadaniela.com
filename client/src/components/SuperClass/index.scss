@@ -1,5 +1,30 @@
 @import '../colors.scss';
 
+@media (max-width: 600px) {
+    main#superClassPage {
+        h1 {
+            font-size: 13vw !important;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 5.5vw !important;
+        }
+
+        img {
+            right: 5vw !important;
+            top: 40% !important; 
+            width: 40vw !important;
+        }
+
+        #superClassNavigationContainer {
+            padding: 20px !important;
+            bottom: 8% !important;
+            font-size: 5vw !important;
+        }
+    }
+}
+
 main#superClassPage {
     position: relative;
     width: 100vw;

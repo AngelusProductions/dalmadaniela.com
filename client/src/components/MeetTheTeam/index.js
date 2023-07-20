@@ -20,7 +20,7 @@ const MeetTheTeam = () => {
         <span>{t.title1[2]}</span>
         <span id='multipotentialite'>{t.title2}</span>
         <span>{t.title3}</span>
-        <img src={i.stars.starDownwardSpiral} />
+        <img id='teamDownwardSpiral' src={i.stars.starDownwardSpiral} />
       </div>
       <div id='teamMembersContainer' className='right'>
         {teamMembers.map(teamMember => (

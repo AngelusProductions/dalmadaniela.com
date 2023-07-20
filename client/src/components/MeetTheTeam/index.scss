@@ -1,5 +1,31 @@
 @import '../colors.scss';
 
+@media (max-width: 600px) {
+    #meetTheTeamPage {
+        .right {
+            width: 100% !important;
+        }
+
+        #teamTitleContainer {
+            font-size: 7vw !important;
+            height: 15vh !important;
+            width: 25% !important;
+
+            #teamDownwardSpiral {
+                top: 69vh !important;
+                right: unset !important;
+                left: 38vw;
+                width: 50vmin !important;
+            }
+        }
+
+        #teamMembersContainer {
+            margin-top: 20vh;
+            height: 50vh;
+        }
+    }
+}
+
 #meetTheTeamPage {
     background: $yellow;
     height: 90vh;
@@ -20,7 +46,7 @@
             color: $pink;
         }
         
-        img {
+        #teamDownwardSpiral {
             position: absolute;
             top: 45vh;
             right: 0%;
@@ -34,5 +60,3 @@
         justify-content: space-between;
     }
 }
-
-

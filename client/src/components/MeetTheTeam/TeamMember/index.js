@@ -7,7 +7,7 @@ import './index.scss'
 
 const TeamMember = ({ name, label1, label2, image }) => (
   <section id={name} className='teamMemberContainer'>
-    <img id='teamDownwardSpiral' src={image} />
+    <img className='teamMemberPhoto' src={image} />
     <div className='teamMemberTextContainer'>
       <span className='teamMemberName'>{name}</span>
       <span>{label1} &</span>
