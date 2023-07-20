@@ -6,11 +6,11 @@ import NavbarLink from './NavbarLink'
 import { i } from '../../../constants/assets'
 import navbarLinks from '../../../constants/navbarLinks'
 
-const Navbar = () => {
+const Navbar = ({ burgerMenu = false }) => {
   const [hoveringLinkId, setHoveringLinkId] = useState(null)
   return (
-    <nav id='navbar'>
-      <div className='navbarSection'>
+    <nav id='navbar' className={burgerMenu ? 'burger' : 'normal'}>
+      <div className='navbarSection leftSection'>
         {navbarLinks.filter(({ side }) => side === 'left')
           .map(link => (
             <NavbarLink 
@@ -21,7 +21,7 @@ const Navbar = () => {
           ))
         }
       </div>
-      <div className='navbarSection'>
+      <div className='navbarSection rightSection'>
         {navbarLinks.filter(({ side }) => side === 'right')
           .map(link => (
             <NavbarLink 

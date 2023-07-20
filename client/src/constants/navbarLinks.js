@@ -20,7 +20,7 @@ export default [
     name: 'Magic calendars',
     path: paths.magicCalendars,
     side: 'left',
-    tooltip: 'Wow!\nMagic calendars are coming soon. Get ready.'
+    tooltip: 'Wow!\nMagic calendars coming soon. Get ready.'
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export default [
     name: 'Contact us',
     path: paths.contactUs,
     side: 'right',
-    tooltip: 'Yay!\nLet\'s for sure chat soon. I\'d love to hear from you.'
+    tooltip: 'Yay!\nLet\'s chat soon. I\'d love to hear from you.'
   },
   {
     id: 7,

@@ -12,6 +12,7 @@ export const i = {
         theSovereign: `${bucketPrefix}/films/theSovereign.png`,
     },
     icons: {
+        burger: `${bucketPrefix}/icons/burger.png`,
         email: `${bucketPrefix}/icons/email.svg`,
         facebook: `${bucketPrefix}/icons/facebook.svg`,
         home: `${bucketPrefix}/icons/home.svg`,
@@ -20,6 +21,7 @@ export const i = {
         shareNeon: `${bucketPrefix}/icons/shareNeon.webp`,
         syringe: `${bucketPrefix}/icons/syringe.png`,
         threads: `${bucketPrefix}/icons/threads.svg`,
+        youtube: `${bucketPrefix}/icons/youtube.svg`,
     },
     logos: {
         brandsHelped: {

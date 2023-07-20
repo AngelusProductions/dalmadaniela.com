@@ -1,22 +1,36 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
+import { Tooltip } from 'react-tippy'
+import 'react-tippy/dist/tippy.css'
+
 import './index.scss'
 
 const NavbarLink = ({
     id,
     name, 
     path, 
-    tooltip, 
-    setHoveringLinkId
+    tooltip
 }) => {
   return tooltip != null ? (
-    <span 
-        className='navbarLink inactive'
-        onMouseEnter={() => setHoveringLinkId(id)}
-        onMouseLeave={() => setHoveringLinkId(null)}
-    > 
-        {name}
-    </span>
+    <Tooltip 
+      className='navbarTooltip'
+      title={tooltip}
+      position='bottom'
+      delay={300}
+      hideDelay={1000}
+      animation='perspective'
+      arrowSize='small'
+      stickyDuration={100}
+      theme='dark'
+      arrow
+      inertia
+      sticky
+      touchHold
+    >
+      <span className='navbarLink inactive'> 
+          {name}
+      </span>
+    </Tooltip>
   ) : (
     <Link 
         to={path} 

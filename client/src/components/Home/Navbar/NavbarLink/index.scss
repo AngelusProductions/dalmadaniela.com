@@ -3,7 +3,35 @@
 .navbarLink {
     color: $yellow;
     text-decoration: none;
-    font-family: 'Hatton';
+    font-family: "Hatton";
     font-size: 1.5vw;
     z-index: 99;
+    position: relative;
+}
+
+.navbarTooltip {
+    cursor: help;
+    display: flex !important;
+    align-items: center;
+}
+
+.tippy-popper {
+    font-family: 'Garbata';
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .inactive {
+        color: white;
+        font-size: 4vw !important;
+    }
+
+    .navbarTooltip {
+        justify-content: center;
+    }
+    
+    #navbar.normal,
+    .tippy-popper {
+        display: none;
+    }
 }
