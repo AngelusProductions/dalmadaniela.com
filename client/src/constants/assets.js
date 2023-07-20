@@ -14,6 +14,7 @@ export const i = {
     icons: {
         email: `${bucketPrefix}/icons/email.svg`,
         facebook: `${bucketPrefix}/icons/facebook.svg`,
+        home: `${bucketPrefix}/icons/home.svg`,
         instagram: `${bucketPrefix}/icons/instagram.svg`,
         linkedIn: `${bucketPrefix}/icons/linkedIn.svg`,
         shareNeon: `${bucketPrefix}/icons/shareNeon.webp`,
