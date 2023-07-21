@@ -12,10 +12,10 @@ export default {
   evan: {
     id: 2,
     name: 'Evan S.',
-    label1: 'Director, Lime & Vinegar',
+    label1: 'Director, Lime and Vinegar',
     label2: 'Los Angeles, CA',
     image: i.testimonials.evanTestimonialPhone,
-    quote: "\"I wouldn't have been able to make 'Lime & Vinegar' without Dalma. She led the digital marketing strategy for the pre and post-production crowdfunding campaigns, and we raised 15K to shoot and finish the film. She did an outstanding job as a film producer, writer, and lead actress, and I'm grateful to have worked with her.\""
+    quote: "\"I wouldn't have been able to make 'Lime and Vinegar' without Dalma. She led the digital marketing strategy for the pre and post-production crowdfunding campaigns, and we raised 15K to shoot and finish the film. She did an outstanding job as a film producer, writer, and lead actress, and I'm grateful to have worked with her.\""
   },
   alex: {
     id: 3,

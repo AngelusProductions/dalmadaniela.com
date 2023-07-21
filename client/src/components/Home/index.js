@@ -22,8 +22,8 @@ const t = {
   brandsFeatured: 'As featured in:',
 
   filmsTitle: 'As an actress and producer',
-  filmsText: 'I have used my social media influence to promote the projects that  have cast me as an actress and launch successful crowdfunding campaigns that have funded the entire pre and postproduction of my latest feature film.',
-  limeAndVinegarCaption: 'Lime & Vinegar, directed by Evan Snyder',
+  filmsText: 'I have used my social media influence to promote the projects that have cast me as an actress and launched successful crowdfunding campaigns that have funded the entire pre and post production of my latest feature film.',
+  limeAndVinegarCaption: 'Lime and Vinegar, directed by Evan Snyder',
   theSovereignCaption: 'The Sovereign, directed by Farah Y. Mourad Vera',
 
   socialMedia: 'Social media is the new frontier. My content strategies are crafted to make sure your potential followers enjoy the vibe of your profile with every scroll.',
