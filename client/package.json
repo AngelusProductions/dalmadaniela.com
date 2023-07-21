@@ -27,6 +27,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "npm run build && gcloud app deploy",
     "test": "react-scripts test --env=jsdom --modulePaths=src",
     "eject": "react-scripts eject"
   },
