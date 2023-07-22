@@ -1,4 +1,4 @@
-export const bucketPrefix = 'https://dalma-daniela.s3.us-east-2.amazonaws.com/assets'
+export const bucketPrefix = 'https://storage.cloud.google.com/dalmadaniela.com/assets'
 
 export const i = {
     dalma: {
