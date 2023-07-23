@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { scaleDown as Menu } from 'react-burger-menu'
-import './index.scss'
+import './styles/index.scss'
 
 import Navbar from './Navbar'
 import { i } from '../../constants/assets'
@@ -231,10 +231,10 @@ const Home = () => {
           </p>
         </section>
         <section id='classAbout' className='homeSection'>
-          <img src={i.stars.starTwinklesLarge} />
+          <img id='magicAboutStars' src={i.stars.starTwinklesLarge} />
           <div className='videoContainer left'>
             <h2>{t.classTitle}</h2>
-            <video autoPlay loop src={i.videos.plantGrowing} />
+            <img id='plantGrowing' src={i.videos.plantGrowing} />
           </div>
           <div className='right'>
             <h2 id='mobileClassTitle'>{t.classTitle}</h2>

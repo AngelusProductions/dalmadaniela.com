@@ -1,4 +1,4 @@
-@import '../../../colors.scss';
+@import '../../../../colors.scss';
 
 .navbarLink {
     color: $yellow;
@@ -18,20 +18,4 @@
 .tippy-popper {
     font-family: 'Garbata';
     font-weight: bold;
-}
-
-@media (max-width: 600px) {
-    .inactive {
-        color: white;
-        font-size: 4vw !important;
-    }
-
-    .navbarTooltip {
-        justify-content: center;
-    }
-    
-    #navbar.normal,
-    .tippy-popper {
-        display: none;
-    }
 }

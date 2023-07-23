@@ -5,7 +5,7 @@ export const paths = {
   superClass: '/super-class',
   magicCalendars: '/magic-calendars',
   blog: '/blog',
-  meetTheTeam: '/team',
+  team: '/team',
   contactUs: '/contact',
   geniusMarketingServices: '/services',
 }

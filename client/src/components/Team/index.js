@@ -1,9 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import TeamMember from './TeamMember'
+
 import { i } from '../../constants/assets'
+import { paths } from '../../constants/routes'
 import teamMembers from '../../constants/team'
-import './index.scss'
+import './styles/index.scss'
+
 
 const t = {
   title1: ['Meet', 'Dalma\'s', 'powerful,'],
@@ -14,6 +18,9 @@ const t = {
 const MeetTheTeam = () => {
   return (
     <main id='meetTheTeamPage'>
+      <Link to={paths.home}>
+        <img id='teamHomeIcon' className='clickable' src={i.icons.home} />
+      </Link>
       <div id='teamTitleContainer' className='left'>
         <span>{t.title1[0]}</span>
         <span>{t.title1[1]}</span>

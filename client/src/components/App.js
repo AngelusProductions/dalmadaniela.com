@@ -6,7 +6,7 @@ import Home from './Home'
 import SuperClass from './SuperClass'
 import MagicCalendars from './MagicCalendars'
 import Blog from './Blog'
-import MeetTheTeam from './MeetTheTeam'
+import Team from './Team'
 import ContactUs from './ContactUs'
 import GeniusMarketingServices from './GeniusMarketingServices'
 // import Checkout from './Payment/Checkout'
@@ -32,7 +32,7 @@ const App = ({ currentUser, onBoot }) => {
       <Route path={paths.superClass} element={<SuperClass />} />
       <Route path={paths.magicCalendars} element={<MagicCalendars />} />
       <Route path={paths.blog} element={<Blog />} />
-      <Route path={paths.meetTheTeam} element={<MeetTheTeam />} />
+      <Route path={paths.team} element={<Team />} />
       <Route path={paths.contactUs} element={<ContactUs />} />
       <Route path={paths.geniusMarketingServices} element={<GeniusMarketingServices />} />
     </Routes>

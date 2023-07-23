@@ -1,0 +1,19 @@
+@import '../../colors.scss';
+
+@media (min-width: 640px) and  (max-width: 1024px) {
+    .teamMemberContainer {
+        .teamMemberTextContainer {
+            height: 40%;
+            font-size: 2vw;
+
+            .teamMemberName {
+                font-size: 2.5vw;
+            }
+        }
+    
+        .teamMemberPhoto {
+            width: 15vw;
+            height: 15vw;
+        }
+    }
+}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Tooltip } from 'react-tippy'
 import 'react-tippy/dist/tippy.css'
 
-import './index.scss'
+import './styles/index.scss'
 
 const NavbarLink = ({
     id,

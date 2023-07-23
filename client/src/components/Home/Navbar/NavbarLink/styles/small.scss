@@ -1,0 +1,17 @@
+@import '../../../../colors.scss';
+
+@media (max-width: 640px) {
+    .inactive {
+        color: white;
+        font-size: 4vw !important;
+    }
+
+    .navbarTooltip {
+        justify-content: center;
+    }
+
+    #navbar.normal,
+    .tippy-popper {
+        display: none;
+    }
+}

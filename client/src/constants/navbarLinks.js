@@ -32,7 +32,7 @@ export default [
   {
     id: 5,
     name: 'Meet the Team',
-    path: paths.meetTheTeam,
+    path: paths.team,
     side: 'right',
     tooltip: null
   },

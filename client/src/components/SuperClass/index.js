@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { i } from '../../constants/assets'
 import { paths } from '../../constants/routes'
-import './index.scss'
+import './styles/index.scss'
 
 const t = {
   title: 'How to be successful on social without having to go viral',
@@ -16,8 +16,8 @@ const t = {
 const SuperClass = () => {
   return (
     <main id='superClassPage'>
-      <video autoPlay loop src={i.videos.tvStatic} />
-      <img src={i.stars.starTwinklesLarge} />
+      <img id='superClassTvStatic' src={i.videos.tvStatic} />
+      <img id='superClassStarTwinkles' src={i.stars.starTwinklesLarge} />
       <h3>{t.title}</h3>
       <h1>{t.comingSoon}</h1>
       <div id='superClassNavigationContainer'>

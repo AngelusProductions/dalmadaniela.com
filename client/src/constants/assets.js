@@ -93,7 +93,7 @@ export const i = {
         garretTestimonialPhone: `${bucketPrefix}/testimonials/garrettTestimonialPhone.png`,
     },
     videos: {
-        plantGrowing: `${bucketPrefix}/videos/plantGrowing.mov`,
-        tvStatic: `${bucketPrefix}/videos/tvStatic.mp4`,
+        plantGrowing: `${bucketPrefix}/videos/plantGrowing.gif`,
+        tvStatic: `${bucketPrefix}/videos/tvStatic.gif`,
     }
 }
