@@ -3,15 +3,15 @@
 @media (min-width: 640px) and  (max-width: 1024px) {
     section#landing {
         #landingRight {
-            top: 12vmin;
-
-            h1 {
-                font-size: 12vmin;
-            }
+            top: 6vw;
         }
     }
 
     section#classAbout {
+        .videoContainer h2 {
+            font-size: 1.2vw;
+        }
+
         .right {
             font-size: 1.9vmin;
         }

@@ -8,6 +8,7 @@ main#superClassPage {
     display: flex;
     justify-content: center;
     background: black;
+    min-height: 825px;
 
     h1,
     h3 {
@@ -46,7 +47,7 @@ main#superClassPage {
         padding: 10px;
         background: $yellow;
         border-radius: 8px;
-        bottom: 10%;
+        bottom: 5%;
         font-weight: 600;
         font-size: 3vw;
 

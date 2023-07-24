@@ -9,6 +9,7 @@
 .homeSection {
     height: 100vh;
     overflow: hidden;
+    min-height: 700px;
 
     &:nth-of-type(even) {
         background: $yellow;
@@ -45,7 +46,7 @@ section#landing {
             font-weight: 600;
             letter-spacing: 0.4vw;
             font-family: "Garet";
-            margin-top: 1vh;
+            margin-top: 2vw;
             display: block;
             color: $yellow;
         }
@@ -70,7 +71,7 @@ section#landing {
     img#landingStarsTwinkleLarge {
         position: absolute;
         right: -11vw;
-        top: 2vh;
+        top: 10vw;
         width: 13vw;
     }
 
@@ -110,7 +111,7 @@ section#bio {
         p {
             color: $black;
             font-family: "Garbata";
-            font-weight: 300;
+            font-weight: 700;
             font-size: 1.3vw;
             margin-top: 3vh;
             line-height: 3vh;
@@ -249,7 +250,7 @@ section#films {
         p {
             color: $black;
             font-family: "Garbata";
-            font-weight: 300;
+            font-weight: 700;
             font-size: 1.4vw;
             margin-top: 3vh;
             line-height: 3vh;
@@ -272,7 +273,7 @@ section#films {
 
         span {
             font-family: 'Garbata';
-            font-weight: 600;
+            font-weight: 700;
             color: $pink;
             font-size: 1.1vw;
         }
@@ -306,7 +307,7 @@ section#socialMedia {
         p {
             color: $white;
             font-family: 'Garbata';
-            font-weight: 300;
+            font-weight: 700;
             width: 45%;
             line-height: 3vh;
             font-size: 1.6vw;
@@ -497,7 +498,7 @@ section#classAbout {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        font-size: 2.4vmin;
+        font-size: 2.1vmin;
 
         #mobileClassTitle {
             display: none;
