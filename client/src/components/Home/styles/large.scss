@@ -3,7 +3,11 @@
 @media (min-width: 1024px) {
     section#landing {
         #landingRight {
-            top: 10%;
+            top: 12vmin;
+
+            h1 {
+                font-size: 12vmin;
+            }
             
             span {
                 margin-top: 2vw;
