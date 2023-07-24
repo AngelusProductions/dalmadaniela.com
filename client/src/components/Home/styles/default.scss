@@ -47,6 +47,7 @@ section#landing {
             font-family: "Garet";
             margin-top: 1vh;
             display: block;
+            color: $yellow;
         }
 
         p {
@@ -109,7 +110,7 @@ section#bio {
         p {
             color: $black;
             font-family: "Garbata";
-            font-weight: 700;
+            font-weight: 300;
             font-size: 1.3vw;
             margin-top: 3vh;
             line-height: 3vh;
@@ -200,7 +201,7 @@ section#brands {
     }
 
     #brandsFeatured>div>img:nth-child(6) {
-        transform: scale(1.5);
+        
     }
 
     #brandsFeatured>div>img:nth-child(7) {
@@ -252,7 +253,7 @@ section#films {
         p {
             color: $black;
             font-family: "Garbata";
-            font-weight: 700;
+            font-weight: 300;
             font-size: 1.4vw;
             margin-top: 3vh;
             line-height: 3vh;
@@ -309,7 +310,7 @@ section#socialMedia {
         p {
             color: $white;
             font-family: 'Garbata';
-            font-weight: 600;
+            font-weight: 300;
             width: 45%;
             line-height: 3vh;
             font-size: 1.6vw;
@@ -356,6 +357,7 @@ section#socialMedia {
     font-size: 5vw;
     letter-spacing: 0.2vw;
     font-weight: 500;
+    transform: translateY(1vw);
 }
 #garettTestimonial .testimonialMagic,
 #evanTestimonial .testimonialMagic {
@@ -374,7 +376,7 @@ section#socialMedia {
     }
 
     p {
-        font-size: 2vw;
+        font-size: 1.9vw;
         font-family: "Garbata";
         font-weight: 300;
         font-style: italic;
@@ -498,43 +500,41 @@ section#classAbout {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        font-size: 2.4vmin;
 
         #mobileClassTitle {
             display: none;
         }
 
         span {
+            display: block;
+
             &.part1 {
                 margin-top: 5%;
                 font-weight: bold;
-                font-size: 1.6vw;
             }
 
             &.part2 {
-                margin-bottom: 5%;
-                font-size: 1.2vw;
+
             }
 
             &.part3 {
                 text-transform: uppercase;
-                font-size: 1.1vw;
                 font-weight: 600;
                 letter-spacing: 2px;
             }
 
             &.part4 {
                 font-weight: 700;
-                font-size: 1.7vw;
             }
 
             &.part5 {
-                font-size: 1.3vw;
+
             }
         }
 
         ul {
             font-weight: 600;
-            font-size: 1.3vw;
 
             li.howTo {
                 list-style: initial;

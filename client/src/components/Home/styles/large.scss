@@ -1,5 +1,55 @@
 @import '../../colors.scss';
 
 @media (min-width: 1024px) {
-    
+    section#landing {
+        #landingRight {
+            top: 10%;
+            
+            span {
+                margin-top: 2vw;
+            }
+
+            p {
+                font-size: 1.5vw;
+            }
+        }
+    }
+
+    section#bio {
+        div#bioLeft {
+            h2 {
+                font-size: 3.5vw;
+            }
+
+            p {
+                margin-top: 5vh;
+            }
+        }
+    }
+
+    section#films {
+        #filmsLeft {
+            top: 25%;
+        }
+
+        .film {
+            img {
+                height: 65vmin;
+            }
+        }
+    }
+
+    section#socialMedia {
+        div#socialMediaRight {
+            p {
+                transform: translateY(1vw);
+            }
+        }
+    }
+
+    .testimonial {
+        img.testimonialPhone {
+            width: 47vmin;
+        }
+    }
 }

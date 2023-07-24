@@ -15,7 +15,7 @@ const t = {
   dalmaIntro: 'I am a self-made multipotentialite based in Los Angeles. I teach people how to pursue multiple passions and amplify their success by rocking their social media game.',
   
   bioTitle: 'As a digital marketer and social media  strategist',
-  bioText: 'I have helped brands in the US and Colombia boost their online visibility and achieve their business objectives by creating and implementing customized social media strategies that have enhanced their engagement, conversions, and revenue from social, and more importantly, improved the image they projected to their target audience.',
+  bioText: 'I have helped brands in the US and Latin America boost their online visibility and achieve their business objectives by creating and implementing customized social media strategies that have enhanced their engagement, conversions, and revenue from social, and more importantly, improved the image they projected to their target audience.',
   
   brandsHelped: 'Some brands I\'ve helped across the globe:',
   brandsCollaborated: 'Some brands I\'ve collaborated with on social:',
