@@ -6,7 +6,6 @@
     padding: 5vh;
     overflow: hidden;
     display: flex;
-    min-height: 650px;
 
     img#teamHomeIcon {
         width: 5vw;
@@ -14,6 +13,7 @@
         position: absolute;
         top: 2vw;
         right: 2vw;
+        z-index: 99;
     }
 
     #teamTitleContainer {
