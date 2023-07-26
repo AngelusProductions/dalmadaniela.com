@@ -228,7 +228,8 @@ section#brands {
 
     #brandsHelped h3,
     #brandsCollaborated h3,
-    #brandsFeatured h3 {
+    #brandsFeatured h3,
+    #brandsFeatured h4 {
         font-family: "Hatton";
         color: white;
         text-align: center;
@@ -236,13 +237,22 @@ section#brands {
         margin-bottom: 3vh;
     }
 
-    #brandsFeatured h3 {
+    #brandsFeatured h3,
+    #brandsFeatured h4 {
         font-size: 3vw;
         color: $yellow;
     }
 
+    #brandsFeatured h4 {
+        width: 67%;
+        margin: 4vh auto 0 auto;
+        color: white;
+        font-size: 3.5vw;
+    }
+
     .brandsSection {
         margin-top: 5vw;
+        margin-bottom: 0;
     }
 }
 

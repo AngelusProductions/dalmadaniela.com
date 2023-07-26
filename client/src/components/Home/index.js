@@ -20,6 +20,7 @@ const t = {
   brandsHelped: 'Some brands I\'ve helped across the globe:',
   brandsCollaborated: 'Some brands I\'ve collaborated with on social:',
   brandsFeatured: 'As featured in:',
+  brandsFigures: 'Over 6 figures in revenue made for brands in the US and LatAm.',
 
   filmsTitle: 'As an actress and producer',
   filmsText: 'I have used my social media influence to promote the projects that have cast me as an actress and launched successful crowdfunding campaigns that have funded the entire pre and post production of my latest feature film.',
@@ -113,6 +114,7 @@ const Home = () => {
                 <img src={i.logos.brandsFeatured[key]} className='brandFeatured brandLogo' key={key} />
               ))}
             </div>
+            <h4>{t.brandsFigures}</h4>
           </div>
         </section>
         <section id='films' className='homeSection'>
