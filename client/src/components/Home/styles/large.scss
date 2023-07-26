@@ -3,14 +3,34 @@
 @media (min-width: 1024px) {
     section#landing {
         #landingRight {
-            top: 12vmin;
+            #dalmaNameContainer {
+                #landingStarsTwinkleSmall {
+                    position: absolute;
+                    top: 6vw !important;
+                    width: 1.5vw !important;
+                    right: 20vw !important;
+                }
+
+                #landingStarsTwinkleLarge {
+                    position: absolute;
+                    right: -8vw !important;
+                        top: 0vw !important;
+                        width: 14vw !important;
+                }
+            }
+
+            h1 {
+                font-size: 5vw !important;
+                width: 50%;
+            }
 
             span {
-                margin-top: 2vw;
+                font-size: 1.5vw !important;
+                width: 67%;
             }
 
             p {
-                font-size: 1.5vw;
+                font-size: 1.6vw;
             }
         }
     }

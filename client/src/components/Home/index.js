@@ -58,28 +58,31 @@ const Home = () => {
       <main id='page-wrap'>
         <img id='homeBurgerIcon' src={i.icons.burger} />
         <Navbar />
-        <img id='mobileLandingPhoto' src={i.dalma.landingPhoto} />
         <section id='landing' className='homeSection'>
           <div className='left'>
             <img className='halfSection' src={i.dalma.landingPhoto} alt={t.dalmaName} />
             <span id='angelusProductions'>{t.angelusProductions}</span>
           </div>
           <div className='right'>
-            <div id='landingRight'>
-              <h1>{t.dalmaName}</h1>
+            <div id='landingRight' className='centerText'>
+              <img id='landingMinifiedPhoto' className='minifiedPhoto' src={i.dalma.landingPhoto} />
+              <div id='dalmaNameContainer'>
+                <h1>{t.dalmaName}</h1>
+                <img id='landingStarsTwinkleSmall' src={i.stars.starTwinkleSmall} />
+                <img id='landingStarsTwinkleLarge' src={i.stars.starTwinklesLarge} />
+              </div>
               <span>{t.dalmaTaglines}</span>
               <p>{t.dalmaIntro}</p>
-              <img id='landingStarsTwinkleSmall' src={i.stars.starTwinkleSmall} />
-              <img id='landingStarsTwinkleLarge' src={i.stars.starTwinklesLarge} />
             </div>
           </div>
         </section>
         <section id='bio' className='homeSection'>
           <div className='left'>
-            <img id='bioLeftMagic' src={i.magic.magic5} />  
-            <div id='bioLeft'>
+            {/* <img id='bioLeftMagic' src={i.magic.magic5} />   */}
+            <div id='bioLeft' className='centerText'>
               <h2>{t.bioTitle}</h2>
               <p>{t.bioText}</p>
+              <img id='bioMinifiedPhoto' className='minifiedPhoto' src={i.dalma.iVisaPhoto} />
             </div>
           </div>
           <div className='right'>
@@ -114,7 +117,7 @@ const Home = () => {
         </section>
         <section id='films' className='homeSection'>
           <div className='left'>
-            <div id='filmsLeft'>
+            <div id='filmsLeft' className='centerText'>
               <h2>{t.filmsTitle}</h2>
               <p>{t.filmsText}</p>
             </div>
