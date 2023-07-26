@@ -36,7 +36,7 @@ const t = {
   classTeach3: 'teach you.',
   
   classTitle: 'How to be successful on social without having to go viral',
-  classDescription1: 'The only content system you\'ll ever need for your social media.',
+  classDescription1: 'I spent 10 years developing the only content system you\'ll ever need for your social media.',
   classDescription2: 'Become successful on social and get exactly what you want: brand awareness, conversions, bookings, reach, and authority without having to go viral, have big numbers, or invest a lot of money.',
   classDescription3: 'Only 1.1% of social videos go viral, And when they do, most of the time, they generate reach, NOT sales.',
   classDescription4: 'When you focus on creating viral content, you burn out easily and get discouraged because you focus on the outcome, not the process, and why you\'re doing this in the first place.',
