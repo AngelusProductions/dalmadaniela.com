@@ -3,8 +3,8 @@ import './styles/index.scss'
 
 import NavbarLink from './NavbarLink'
 
-import { i } from '../../../constants/assets'
-import navbarLinks from '../../../constants/navbarLinks'
+import { i } from '../../../constants/data/assets'
+import navbarLinks from '../../../constants/data/navbarLinks'
 
 const Navbar = ({ burgerMenu = false }) => {
   const [hoveringLinkId, setHoveringLinkId] = useState(null)

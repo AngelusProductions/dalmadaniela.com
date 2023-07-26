@@ -14,7 +14,7 @@ import { loginWithPassword } from 'api/login'
 import { changeAuthFieldText } from 'actions/formAuth'
 import { loginFailure, loginSuccess, loginRequest } from 'actions/login'
 
-import { paths } from 'constants/routes'
+import { paths } from 'constants/paths'
 import { pushToAppHistory } from 'utils/history'
 
 const LoginForm = props => {

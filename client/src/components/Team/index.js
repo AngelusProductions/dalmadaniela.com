@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom'
 
 import TeamMember from './TeamMember'
 
-import { i } from '../../constants/assets'
-import { paths } from '../../constants/routes'
-import teamMembers from '../../constants/team'
+import teamMembers from '../../constants/data/teamMembers'
+import { i } from '../../constants/data/assets'
+import { paths } from '../../constants/paths'
 import './styles/index.scss'
-
 
 const t = {
   title1: ['Meet', 'Dalma\'s', 'powerful,'],

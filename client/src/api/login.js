@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { apiEndpoints, ROOT_API_URL } from '../constants/routes'
+import { apiEndpoints, ROOT_API_URL } from '../constants/paths'
 
 export const loginWithPassword = async payload => {
   const response = await axios.post(

@@ -4,7 +4,7 @@ import { Layout, FormLayout, Card, Button } from '@shopify/polaris'
 
 import { PasswordField, PasswordConfField, EmailField } from './AuthTextFields'
 
-import { paths } from 'constants/routes'
+import { paths } from 'constants/paths'
 import { loginSuccess } from 'actions/login'
 import { changeAuthFieldText } from 'actions/formAuth'
 import { registerAccountSuccess, registerAccountFailure, registerAccountRequest } from 'actions/signup'

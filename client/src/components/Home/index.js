@@ -4,9 +4,9 @@ import { scaleDown as Menu } from 'react-burger-menu'
 import './styles/index.scss'
 
 import Navbar from './Navbar'
-import { i } from '../../constants/assets'
-import testimonials from '../../constants/testimonials'
-import { paths } from '../../constants/routes'
+import testimonials from '../../constants/data/testimonials'
+import { i } from '../../constants/data/assets'
+import { paths } from '../../constants/paths'
 
 const t = {
   angelusProductions: 'Angelus Productions LLC ®',

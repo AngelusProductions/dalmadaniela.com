@@ -9,15 +9,13 @@ import Blog from './Blog'
 import Team from './Team'
 import ContactUs from './ContactUs'
 import GeniusMarketingServices from './GeniusMarketingServices'
-// import Checkout from './Payment/Checkout'
-// import PageHeader from './Navigation/PageHeader'
-// import AuthLayout from './Auth/AuthLayout'
 
-import { paths } from '../constants/routes'
+import { paths } from '../constants/paths'
 import { loginWithJwt } from '../api/login'
 import { loginSuccess, loginFailure, loginRequest } from '../actions/login'
 import './app.scss'
 import './fonts.scss'
+import './colors.scss'
 
 const App = ({ currentUser, onBoot }) => {
   useEffect(() => {
