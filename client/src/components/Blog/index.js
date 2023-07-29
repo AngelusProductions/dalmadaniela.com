@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Routes, Route, NavLink } from 'react-router-dom'
 
 import TipTap from '../UI/tiptap/TipTap'
 import {
@@ -9,6 +8,7 @@ import './index.scss'
 
 export const Blog = props => {
   const [content, setContent] = useState(BASIC_CONTENT)
+
   return (
   <div id="Wrapper">
     <TipTap
@@ -24,6 +24,7 @@ export const Blog = props => {
         withEmojiSuggestion
         withCodeBlockLowlightExtension
         withPlaceholderExtension
+        spellcheck
     />
   </div>
 )}
