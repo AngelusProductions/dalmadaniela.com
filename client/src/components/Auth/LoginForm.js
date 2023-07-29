@@ -10,12 +10,12 @@ import {
 
 import { PasswordField, EmailField } from './AuthTextFields'
 
-import { loginWithPassword } from 'api/login'
-import { changeAuthFieldText } from 'actions/formAuth'
-import { loginFailure, loginSuccess, loginRequest } from 'actions/login'
+import { loginWithPassword } from '../../api/login'
+import { changeAuthFieldText } from '../../actions/formAuth'
+import { loginFailure, loginSuccess, loginRequest } from '../../actions/login'
 
-import { paths } from 'constants/paths'
-import { pushToAppHistory } from 'utils/history'
+import { paths } from '../../constants/paths'
+import { pushToAppHistory } from '../../utils/history'
 
 const LoginForm = props => {
   const { email, password, onChange, onSubmit, currentUser, errors } = props

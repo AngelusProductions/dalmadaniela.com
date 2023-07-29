@@ -11,6 +11,7 @@ import BlogPost from './Blog/BlogPost'
 import Team from './Team'
 import ContactUs from './ContactUs'
 import GeniusMarketingServices from './GeniusMarketingServices'
+import SignupForm from './Auth/SignupForm'
 
 import { paths } from '../constants/paths'
 import { loginWithJwt } from '../api/login'
@@ -39,6 +40,8 @@ const App = ({ currentUser, onBoot }) => {
       <Route path={paths.team} element={<Team />} />
       <Route path={paths.contactUs} element={<ContactUs />} />
       <Route path={paths.geniusMarketingServices} element={<GeniusMarketingServices />} />
+
+      <Route path={paths.auth.signup} element={<SignupForm />} />
     </Routes>
   )
 }

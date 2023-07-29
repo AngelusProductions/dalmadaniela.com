@@ -12,6 +12,10 @@ export const paths = {
   team: '/team',
   contactUs: '/contact',
   geniusMarketingServices: '/services',
+  auth: {
+    login: '/auth/login',
+    signup: '/auth/signup'
+  }
 }
 
 export const apiEndpoints = {

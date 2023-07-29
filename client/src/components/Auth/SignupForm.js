@@ -4,14 +4,14 @@ import { Layout, FormLayout, Card, Button } from '@shopify/polaris'
 
 import { PasswordField, PasswordConfField, EmailField } from './AuthTextFields'
 
-import { paths } from 'constants/paths'
-import { loginSuccess } from 'actions/login'
-import { changeAuthFieldText } from 'actions/formAuth'
-import { registerAccountSuccess, registerAccountFailure, registerAccountRequest } from 'actions/signup'
-import { sendUserRegistrationRequest } from 'api/signup'
+import { paths } from '../../constants/paths'
+import { loginSuccess } from '../../actions/login'
+import { changeAuthFieldText } from '../../actions/formAuth'
+import { registerAccountSuccess, registerAccountFailure, registerAccountRequest } from '../../actions/signup'
+import { sendUserRegistrationRequest } from '../../api/signup'
 
-import { pushToAppHistory } from 'utils/history'
-import { resolveSignupErrors } from 'utils/errorHandlers'
+import { pushToAppHistory } from '../../utils/history'
+import { resolveSignupErrors } from '../../utils/errorHandlers'
 
 const SignupForm = props => {
   const { email, password, passwordConf, onSubmit, onChange, errors } = props
@@ -40,7 +40,7 @@ const SignupForm = props => {
   }
 
   return (
-    <Layout.Section>
+    <Layout.Section id='signupPageContainer'>
       <Card sectioned>
         <FormLayout>
           <div onKeyPress={watchForEnter}>

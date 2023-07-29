@@ -6,7 +6,7 @@ import LoginForm from './LoginForm'
 
 const AuthLayout = () => {
   return (
-    <React.Fragment>
+    <div id='authContainer'>
       <Layout.AnnotatedSection title={'Log in to your account.'}>
         <LoginForm />
       </Layout.AnnotatedSection>
@@ -16,7 +16,7 @@ const AuthLayout = () => {
       >
         <SignupForm />
       </Layout.AnnotatedSection>
-    </React.Fragment>
+    </div>
   )
 }
 
