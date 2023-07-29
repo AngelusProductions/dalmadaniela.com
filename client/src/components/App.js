@@ -6,6 +6,8 @@ import Home from './Home'
 import SuperClass from './SuperClass'
 import MagicCalendars from './MagicCalendars'
 import Blog from './Blog'
+import AllBlogPosts from './Blog/AllBlogPosts'
+import BlogPost from './Blog/BlogPost'
 import Team from './Team'
 import ContactUs from './ContactUs'
 import GeniusMarketingServices from './GeniusMarketingServices'
@@ -29,7 +31,11 @@ const App = ({ currentUser, onBoot }) => {
       <Route index element={<Home />}/>
       <Route path={paths.superClass} element={<SuperClass />} />
       <Route path={paths.magicCalendars} element={<MagicCalendars />} />
-      <Route path={paths.blog} element={<Blog />} />
+
+      <Route path={paths.blog.page} element={<Blog />} />
+      <Route path={paths.blog.allBlogPosts} element={<AllBlogPosts />} />
+      <Route path={paths.blog.blogPost} element={<BlogPost />} />
+      
       <Route path={paths.team} element={<Team />} />
       <Route path={paths.contactUs} element={<ContactUs />} />
       <Route path={paths.geniusMarketingServices} element={<GeniusMarketingServices />} />

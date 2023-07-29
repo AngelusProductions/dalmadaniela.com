@@ -4,7 +4,11 @@ export const paths = {
   home: '/',
   superClass: '/super-class',
   magicCalendars: '/magic-calendars',
-  blog: '/blog',
+  blog: {
+    page: '/blog',
+    allBlogPosts: '/blog/posts',
+    blogPost: 'blog/posts/:id'
+  },
   team: '/team',
   contactUs: '/contact',
   geniusMarketingServices: '/services',

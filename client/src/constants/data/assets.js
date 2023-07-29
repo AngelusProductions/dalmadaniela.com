@@ -12,7 +12,9 @@ export const i = {
         theSovereign: `${bucketPrefix}/films/theSovereign.png`,
     },
     icons: {
+        back: `${bucketPrefix}/icons/back.png`,
         burger: `${bucketPrefix}/icons/burger.png`,
+        document: `${bucketPrefix}/icons/document.svg`,
         email: `${bucketPrefix}/icons/email.svg`,
         facebook: `${bucketPrefix}/icons/facebook.svg`,
         home: `${bucketPrefix}/icons/home.svg`,

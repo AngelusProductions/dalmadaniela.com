@@ -25,7 +25,7 @@ export default [
   {
     id: 4,
     name: 'Blog',
-    path: paths.blog,
+    path: paths.blog.page,
     side: 'left',
     tooltip: null
   },

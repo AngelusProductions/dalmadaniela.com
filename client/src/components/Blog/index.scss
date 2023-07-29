@@ -1,85 +1,46 @@
-@mixin white-card {
-    background: #ffffff;
-    border: 2px solid #999999;
-    border-radius: 10px;
-    margin: 0 auto;
-    padding: 20px;
-}
+@import '../colors.scss';
 
-html {
-    box-sizing: border-box;
-}
+#blogPageContainer {
+    background: $pink;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
 
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
+    #blogPageHomeIcon {
+        position: absolute;
+        width: 5vw;
+        left: 25px;
+        top: 25px;
+    }
 
-body {
-    background: #eaeaea;
-    font-family: 'Inter', sans-serif;
-    margin: 50px;
-    color: #111111;
-}
+    #blogPageTitleContainer {
+        background-color: $yellow;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        border: 3px solid black;
+        margin: auto;
+        position: relative;
+        padding: 0.5vw;
+        padding-top: 1.5vw;
 
-#Wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-
-    >nav {
-        @include white-card;
-
-        margin-bottom: 50px;
-        padding: 18px 20px;
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
+        h1 {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-family: 'Hatton';
+            font-size: 3.5vw;
         }
 
-        li {
-            display: inline-block;
-            line-height: 2.5;
-            margin-right: 5px;
-        }
-
-        a {
-            border: 2px solid transparent;
-            border-radius: 5px;
-            padding: 5px;
-            color: #005D71;
-            text-decoration: none;
-            font-weight: bold;
-
-            &.selected {
-                background: #007992;
-                color: #ffffff;
-                cursor: default;
-            }
-        }
-
-        a:hover:not(.selected) {
-            border: 2px solid #007992;
+        img {
+            position: absolute;
+            right: -7vw;
+            width: 12vw;
+            top: -5vw;
         }
     }
-}
-
-.WhiteCard {
-    @include white-card;
-}
-
-.WhiteCard+h2 {
-    margin: 20px 20px 5px;
-}
-
-.WhiteCard+.WhiteCard {
-    margin-top: 20px;
-}
-
-.WhiteCard>pre {
-    min-height: 15px;
-    margin: 0;
-    white-space: pre-wrap;
 }

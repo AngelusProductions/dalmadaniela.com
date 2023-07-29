@@ -1,32 +1,35 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-import TipTap from '../UI/tiptap/TipTap'
-import {
-    BASIC_CONTENT
-} from '../UI/tiptap/data'
+import { paths } from '../../constants/paths'
+import { i } from '../../constants/data/assets'
+
 import './index.scss'
 
+const t = {
+  title: 'Your Dose of Marketing Wisdom',
+  morePosts: 'More blogposts...'
+}
+
 export const Blog = props => {
-  const [content, setContent] = useState(BASIC_CONTENT)
 
   return (
-  <div id="Wrapper">
-    <TipTap
-        content={content}
-        withToolbar
-        withTaskListExtension
-        withLinkExtension
-        withEmojisReplacer
-        withPopover
-        withTypographyExtension
-        withHexColorsDecorator
-        withMentionSuggestion
-        withEmojiSuggestion
-        withCodeBlockLowlightExtension
-        withPlaceholderExtension
-        spellcheck
-    />
-  </div>
+    <div id="blogPageContainer">
+      <Link to={paths.home}>
+        <img 
+          id='blogPageHomeIcon' 
+          className='clickable' 
+          src={i.icons.home}
+        />
+      </Link>      
+      <div id='blogPageTitleContainer'>
+        <h1>{t.title}</h1>
+        <img src={i.icons.syringe} />
+      </div>
+      <div id='blogPageHilightsContainer'>
+        
+      </div>
+    </div>
 )}
 
 export default Blog
