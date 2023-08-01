@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Home from './Home'
@@ -11,7 +11,8 @@ import BlogPost from './Blog/BlogPost'
 import Team from './Team'
 import ContactUs from './ContactUs'
 import GeniusMarketingServices from './GeniusMarketingServices'
-import SignupForm from './Auth/SignupForm'
+import Signup from './Auth/Signup'
+import Login from './Auth/Login'
 
 import { paths } from '../constants/paths'
 import { loginWithJwt } from '../api/login'
@@ -41,7 +42,8 @@ const App = ({ currentUser, onBoot }) => {
       <Route path={paths.contactUs} element={<ContactUs />} />
       <Route path={paths.geniusMarketingServices} element={<GeniusMarketingServices />} />
 
-      <Route path={paths.auth.signup} element={<SignupForm />} />
+      <Route path={paths.auth.login} element={<Login navigate={Navigate}/>} />
+      <Route path={paths.auth.signup} element={<Signup navigate={Navigate}/>} />
     </Routes>
   )
 }

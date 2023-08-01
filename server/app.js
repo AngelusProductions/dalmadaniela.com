@@ -34,10 +34,10 @@ app.use(cors(corsOptions));
 app.use(function (_, res, next) {
   if(process.env.NODE_ENV === 'development')
     res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-  else {
+  else
     res.header('Access-Control-Allow-Origin', 'https://dalmadaniela.com');
-  }
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });

@@ -8,14 +8,6 @@
     justify-content: space-between;
     flex-direction: column;
     text-align: center;
-    text-transform: uppercase;
-
-    #blogPageHomeIcon {
-        position: absolute;
-        width: 5vw;
-        left: 25px;
-        top: 25px;
-    }
 
     #blogPageTitleContainer {
         background-color: $yellow;
@@ -34,6 +26,7 @@
             height: 100%;
             font-family: 'Hatton';
             font-size: 3.5vw;
+            text-transform: uppercase;
         }
 
         img {

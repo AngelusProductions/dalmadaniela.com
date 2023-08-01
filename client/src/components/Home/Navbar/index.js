@@ -7,7 +7,6 @@ import { i } from '../../../constants/data/assets'
 import navbarLinks from '../../../constants/data/navbarLinks'
 
 const Navbar = ({ burgerMenu = false }) => {
-  const [hoveringLinkId, setHoveringLinkId] = useState(null)
   return (
     <nav id='navbar' className={burgerMenu ? 'burger' : 'normal'}>
       <div className='navbarSection leftSection'>
@@ -15,7 +14,6 @@ const Navbar = ({ burgerMenu = false }) => {
           .map(link => (
             <NavbarLink 
               key={link.id}
-              setHoveringLinkId={setHoveringLinkId}
               {...link} 
             />
           ))
@@ -26,18 +24,11 @@ const Navbar = ({ burgerMenu = false }) => {
           .map(link => (
             <NavbarLink 
               key={link.id}
-              setHoveringLinkId={setHoveringLinkId}
               {...link} 
             />
           ))
         }
       </div>
-      {hoveringLinkId && (
-        <div id='navbarCloudContainer'>
-          <span>{navbarLinks.find(({ id }) => id === hoveringLinkId ).tooltip}</span>
-          <img src={i.magic.magicCloud} />
-        </div>
-      )}
     </nav>
   )
 }

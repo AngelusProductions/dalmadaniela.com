@@ -7,6 +7,7 @@ import teamMembers from '../../constants/data/teamMembers'
 import { i } from '../../constants/data/assets'
 import { paths } from '../../constants/paths'
 import './styles/index.scss'
+import HomeIcon from '../UI/HomeIcon'
 
 const t = {
   title1: ['Meet', 'Dalma\'s', 'powerful,'],
@@ -17,9 +18,7 @@ const t = {
 const MeetTheTeam = () => {
   return (
     <main id='meetTheTeamPage'>
-      <Link to={paths.home}>
-        <img id='teamHomeIcon' className='clickable' src={i.icons.home} />
-      </Link>
+      <HomeIcon />
       <div id='teamTitleContainer' className='left'>
         <span>{t.title1[0]}</span>
         <span>{t.title1[1]}</span>

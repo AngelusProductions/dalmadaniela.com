@@ -23,6 +23,7 @@ export const i = {
         shareNeon: `${bucketPrefix}/icons/shareNeon.webp`,
         syringe: `${bucketPrefix}/icons/syringe.png`,
         threads: `${bucketPrefix}/icons/threads.svg`,
+        user: `${bucketPrefix}/icons/user.png`,
         youtube: `${bucketPrefix}/icons/youtube.svg`,
     },
     logos: {
