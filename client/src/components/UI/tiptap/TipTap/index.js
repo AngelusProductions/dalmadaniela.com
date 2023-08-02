@@ -36,7 +36,8 @@ function TipTap({
     withEmojiSuggestion = false,
     withEmojisReplacer = false,
     withHexColorsDecorator = false,
-    // withYoutubeExtension = false
+    // withYoutubeExtension = false,
+    onSubmit
 }) {
 
     const [editorHtmlContent, setEditorHtmlContent] = React.useState(content.trim())
@@ -157,7 +158,7 @@ function TipTap({
     }
 
     const onSubmitClick = e => {
-        debugger
+        onSubmit(editor.getHTML())
     }
 
     editor.options.onUpdate(e => {
@@ -260,7 +261,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
 
     return (
         <div>
-            <button onClick={setVideo} className={editor.isActive('video') ? 'is-active' : ''}>Video</button>
+            {/* <button onClick={setVideo} className={editor.isActive('video') ? 'is-active' : ''}>Video</button>
 
             <button id="add" onClick={addYoutubeVideo}>Add YouTube video</button>
             <input id="width" type="number" min="320" max="1024" placeholder="width"
@@ -268,29 +269,13 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
             />
             <input id="height" type="number" min="180" max="720" placeholder="height"
                 onChange={(e) => setYoutubeHeight(e.target.value)} value={youtubeHeight}
-            />
-            <button id="submit" onClick={onSubmitClick}>Submit</button>
+            /> */}
             <div className="WhiteCard">
                 {withToolbar ? <Toolbar editor={editor} /> : null}
                 {withPopover ? <Popover editor={editor} /> : null}
                 <EditorContent editor={editor} />
             </div>
-            <h2>Text (tiptap)</h2>
-            <div className="WhiteCard">
-                <pre>{editor.getText()}</pre>
-            </div>
-            <h2>HTML Output</h2>
-            <div className="WhiteCard">
-                <pre>{formatHtml(editorHtmlContent)}</pre>
-            </div>
-            <h2>HTML Output (tiptap) ➡ Turndown (lib) ➡ Markdown</h2>
-            <div className="WhiteCard">
-                <pre>{turndownMarkdownContent}</pre>
-            </div>
-            <h2>Markdown ➡ Marked (lib) ➡ DOMPurify (lib) ➡ HTML</h2>
-            <div className="WhiteCard">
-                <pre>{formatHtml(markedHtmlContent)}</pre>
-            </div>
+            <button id="submit" onClick={onSubmitClick}>Submit</button>
         </div>
     )
 }

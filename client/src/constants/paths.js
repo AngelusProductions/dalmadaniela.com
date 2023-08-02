@@ -2,12 +2,13 @@ import { configureApiRoot } from '../utils/config'
 
 export const paths = {
   home: '/',
-  superClass: '/super-class',
+  superClass: '/superclass',
   magicCalendars: '/magic-calendars',
   blog: {
     page: '/blog',
     allBlogPosts: '/blog/posts',
-    blogPost: 'blog/posts/:id'
+    blogPost: '/blog/posts/:id',
+    create: '/blog/create'
   },
   team: '/team',
   contactUs: '/contact',

@@ -28,7 +28,6 @@ const Login = props => {
     password, 
     onChange, 
     onSubmit, 
-    currentUser,
     errors 
   } = props
 
@@ -36,9 +35,9 @@ const Login = props => {
     onSubmit({
       email,
       password
-    }).then(data => {
+    }).then(email => {
       debugger
-      if (currentUser.email) {
+      if (!!email) {
         navigate(paths.blog)
       }
     })
@@ -78,7 +77,7 @@ const Login = props => {
           error={errors.password}
         />
       </div>
-      <Button
+      {/* <Button
         id='authButton'
         loading={props.loading}
         onClick={handleLogIn}
@@ -86,7 +85,14 @@ const Login = props => {
         accessibilityLabel='Log in'
       >
         {t.button}
-      </Button>
+      </Button> */}
+      <button
+        id='authButton'
+        onClick={handleLogIn}
+        disabled={validForm()}
+      >
+        {t.button}
+      </button>
     </div>
   )
 }
@@ -114,6 +120,7 @@ const mapDispatch = dispatch => ({
 
       dispatch(loginSuccess(email, token))
       pushToAppHistory(paths.home)
+      return email
     } catch (e) {
       dispatch(loginFailure({ password: 'Incorrect email or password.' }))
       console.warn(e)

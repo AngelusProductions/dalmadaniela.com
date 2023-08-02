@@ -5,9 +5,12 @@ import { connect } from 'react-redux'
 import Home from './Home'
 import SuperClass from './SuperClass'
 import MagicCalendars from './MagicCalendars'
+
 import Blog from './Blog'
 import AllBlogPosts from './Blog/AllBlogPosts'
 import BlogPost from './Blog/BlogPost'
+import CreateBlogPost from './Blog/CreateBlogPost'
+
 import Team from './Team'
 import ContactUs from './ContactUs'
 import GeniusMarketingServices from './GeniusMarketingServices'
@@ -37,6 +40,7 @@ const App = ({ currentUser, onBoot }) => {
       <Route path={paths.blog.page} element={<Blog />} />
       <Route path={paths.blog.allBlogPosts} element={<AllBlogPosts />} />
       <Route path={paths.blog.blogPost} element={<BlogPost />} />
+      <Route path={paths.blog.create} element={<CreateBlogPost />} />
       
       <Route path={paths.team} element={<Team />} />
       <Route path={paths.contactUs} element={<ContactUs />} />
