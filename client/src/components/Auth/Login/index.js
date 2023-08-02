@@ -1,19 +1,17 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Button } from '@shopify/polaris'
 import { useNavigate } from 'react-router-dom'
 
+import HomeIcon from '../../UI/HomeIcon'
 import { PasswordField, EmailField } from '../AuthTextFields'
 
+import { paths } from '../../../constants/paths'
 import { loginWithPassword } from '../../../api/login'
 import { changeAuthFieldText } from '../../../actions/formAuth'
 import { loginFailure, loginSuccess, loginRequest } from '../../../actions/login'
 
-import { paths } from '../../../constants/paths'
-import { pushToAppHistory } from '../../../utils/history'
-
+import './index.scss'
 import '../index.scss'
-import HomeIcon from '../../UI/HomeIcon'
 
 const t = {
   title: 'Login',
@@ -36,10 +34,8 @@ const Login = props => {
       email,
       password
     }).then(email => {
-      debugger
-      if (!!email) {
-        navigate(paths.blog)
-      }
+      if (email)
+        navigate(paths.blog.page)
     })
   }
 
@@ -59,7 +55,7 @@ const Login = props => {
   }
 
   return (
-    <div className='authPageContainer'>
+    <div id='loginPageContainer' className='authPageContainer'>
       <HomeIcon />
       <h1>{t.title}</h1>
       <div className='authFieldContainer' onKeyDown={watchForEnter}>
@@ -77,19 +73,11 @@ const Login = props => {
           error={errors.password}
         />
       </div>
-      {/* <Button
-        id='authButton'
-        loading={props.loading}
-        onClick={handleLogIn}
-        disabled={validForm()}
-        accessibilityLabel='Log in'
-      >
-        {t.button}
-      </Button> */}
       <button
-        id='authButton'
+        id='loginButton'
         onClick={handleLogIn}
         disabled={validForm()}
+        className='authButton clickable'
       >
         {t.button}
       </button>
@@ -119,7 +107,6 @@ const mapDispatch = dispatch => ({
       const { email, token } = await loginWithPassword(payload)
 
       dispatch(loginSuccess(email, token))
-      pushToAppHistory(paths.home)
       return email
     } catch (e) {
       dispatch(loginFailure({ password: 'Incorrect email or password.' }))

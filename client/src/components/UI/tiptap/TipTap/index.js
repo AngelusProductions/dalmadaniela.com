@@ -37,7 +37,7 @@ function TipTap({
     withEmojisReplacer = false,
     withHexColorsDecorator = false,
     // withYoutubeExtension = false,
-    onSubmit
+    onChange
 }) {
 
     const [editorHtmlContent, setEditorHtmlContent] = React.useState(content.trim())
@@ -157,34 +157,34 @@ function TipTap({
         }
     }
 
-    const onSubmitClick = e => {
-        onSubmit(editor.getHTML())
-    }
 
-    editor.options.onUpdate(e => {
-        debugger
+    editor.options.onUpdate(() => {
+        onChange(editor)
     })
 
-    const Video = Node.create({
-    name: 'video', // unique name for the Node
-    group: 'block', // belongs to the 'block' group of extensions
-    selectable: true, // so we can select the video
-    draggable: true, // so we can drag the video
-    atom: true, // is a single unit
+    const onSubmitClick = () => {
+        onSubmit(editor)
+    }
 
-    addAttributes() {
-        return {
-        "src": {
-            default: null
-        },
+    const Video = Node.create({
+        name: 'video', // unique name for the Node
+        group: 'block', // belongs to the 'block' group of extensions
+        selectable: true, // so we can select the video
+        draggable: true, // so we can drag the video
+        atom: true, // is a single unit
+
+        addAttributes() {
+            return {
+            "src": {
+                default: null
+            },
         }
     },
-
     parseHTML() {
         return [
-        {
-            tag: 'video',
-        },
+            {
+                tag: 'video',
+            },
         ]
     },
 
@@ -258,7 +258,6 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
         // }
     };
 
-
     return (
         <div>
             {/* <button onClick={setVideo} className={editor.isActive('video') ? 'is-active' : ''}>Video</button>
@@ -275,7 +274,6 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
                 {withPopover ? <Popover editor={editor} /> : null}
                 <EditorContent editor={editor} />
             </div>
-            <button id="submit" onClick={onSubmitClick}>Submit</button>
         </div>
     )
 }

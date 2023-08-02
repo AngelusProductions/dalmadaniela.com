@@ -5,4 +5,4 @@ export const freshHistory = createBrowserHistory()
 /**
  * Curried version of history.pushState that leaves the first two arguments blank.
  */
-export const pushToAppHistory = (newState) => freshHistory.push('/')
+export const pushToAppHistory = path => freshHistory.push(path)

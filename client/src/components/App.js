@@ -46,8 +46,8 @@ const App = ({ currentUser, onBoot }) => {
       <Route path={paths.contactUs} element={<ContactUs />} />
       <Route path={paths.geniusMarketingServices} element={<GeniusMarketingServices />} />
 
-      <Route path={paths.auth.login} element={<Login navigate={Navigate}/>} />
-      <Route path={paths.auth.signup} element={<Signup navigate={Navigate}/>} />
+      <Route path={paths.auth.login} element={<Login />} />
+      <Route path={paths.auth.signup} element={<Signup />} />
     </Routes>
   )
 }

@@ -1,23 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Button } from '@shopify/polaris'
+import { useNavigate } from 'react-router-dom'
 
-import { 
-  PasswordField, 
-  PasswordConfField, 
-  EmailField 
-} from '../AuthTextFields'
+import HomeIcon from '../../UI/HomeIcon'
+import { PasswordField, PasswordConfField, EmailField } from '../AuthTextFields'
 
 import { paths } from '../../../constants/paths'
 import { loginSuccess } from '../../../actions/login'
 import { changeAuthFieldText } from '../../../actions/formAuth'
 import { registerAccountSuccess, registerAccountFailure, registerAccountRequest } from '../../../actions/signup'
 import { sendUserRegistrationRequest } from '../../../api/signup'
-import { pushToAppHistory } from '../../../utils/history'
 import { resolveSignupErrors } from '../../../utils/errorHandlers'
 
+import './index.scss'
 import '../index.scss'
-import HomeIcon from '../../UI/HomeIcon'
 
 const t = {
   title: 'Signup',
@@ -25,6 +21,8 @@ const t = {
 }
 
 const Signup = props => {
+  const navigate = useNavigate()
+
   const { 
     email, 
     password, 
@@ -43,6 +41,9 @@ const Signup = props => {
       email,
       password,
       passwordConf
+    }).then(email => {
+      if (email) 
+        navigate(paths.blog)
     })
   }
 
@@ -58,7 +59,7 @@ const Signup = props => {
   }
 
   return (
-    <div className='authPageContainer'>
+    <div id='signupPageContainer' className='authPageContainer'>
       <HomeIcon />
       <h1>{t.title}</h1>
       <div className='authFieldContainer' onKeyDown={watchForEnter}>
@@ -82,15 +83,14 @@ const Signup = props => {
           error={errors.passwordConf}
         />
       </div>
-      <Button
-        id='authButton'
-        loading={props.loading}
+      <button
+        id='signupButton'
         onClick={handleSignUp}
         disabled={validForm()}
-        accessibilityLabel='Sign up'
+        className='authButton clickable'
       >
         {t.button}
-      </Button>
+      </button>
     </div>
   )
 }
@@ -120,15 +120,15 @@ const mapDispatchToProps = dispatch => ({
   onSubmit: async (payload) => {
     dispatch(registerAccountRequest)
     try {
-      const data = await sendUserRegistrationRequest(payload)
+      const { email, token } = await sendUserRegistrationRequest(payload)
       dispatch(registerAccountSuccess())
       /**
        * POSTing to /signup will run through passport.js' login
        * middleware. So if there are no errors at this point we can log-in
        * the user without sending a separate request.
        */
-      dispatch(loginSuccess(data.email, data.token))
-      pushToAppHistory(paths.home)
+      dispatch(loginSuccess(email, token))
+      return email
     } catch (e) {
       const errors = resolveSignupErrors(e)
       dispatch(registerAccountFailure(errors))

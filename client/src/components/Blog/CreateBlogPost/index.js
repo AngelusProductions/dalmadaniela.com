@@ -8,13 +8,14 @@ import { i } from '../../../constants/data/assets'
 import './index.scss'
 
 const t = {
-  title: 'Create a Blog Post'
+  title: 'Create a Blog Post',
+  create: 'Create'
 }
 
 export const CreateBlogPost = props => {
-  const [content, setContent] = useState('')
+  const [introEditor, setIntroEditor] = useState('')
 
-  const onSubmit = content => {
+  const onCreate = () => {
     debugger
   }
 
@@ -40,8 +41,14 @@ export const CreateBlogPost = props => {
             withCodeBlockLowlightExtension
             withPlaceholderExtension
             spellcheck
-            onSubmit={onSubmit}
+            onChange={editor => setIntroEditor(editor)}
         />
+        <button 
+          id='createBlogPostSubmitButton' 
+          className='clickable'
+        >
+          {t.create}
+        </button>
       </div>
   </div>
 )}

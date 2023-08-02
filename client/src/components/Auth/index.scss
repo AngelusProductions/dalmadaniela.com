@@ -6,14 +6,12 @@
     justify-content: space-around;
     align-items: center;
     height: 100vh;
-    background: $yellow;
     font-family: 'Garbata';
 
     input {
         background-color: black;
         height: 4vh;
-        width: 50vw;
-        color: $pink;
+        width: 50vw;    
         outline: $pink;
         border-radius: 50px;
         padding: 0 10px;
@@ -38,27 +36,24 @@
     }
 
     .Polaris-Icon__Svg {
-        width: 7vw;
+        width: 5vw;
     }
 
     .Polaris-Labelled__Error {
         font-family: 'Garet';
         font-weight: 600;
         color: $pink;
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
 
-    #authButton {
+    .authButton {
         margin-bottom: 50vh;
-        background: $pink;
         border: none;
         padding: 11px;
         border-radius: 15px;
         font-family: "Garet";
         text-transform: uppercase;
         font-weight: 600;
-        color: white;
-        box-shadow: 0vw 1vw 0vw 0vw $yellow, 0vw 1.5vw 0vw black;
         cursor: pointer;
     }
 }
