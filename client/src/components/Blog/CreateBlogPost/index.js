@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import getYouTubeID from 'get-youtube-id'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
+import FileUpload from 'react-material-file-upload'
+import { Storage } from '@google-cloud/storage'
+import path from 'path'
 
 import HomeIcon from '../../UI/HomeIcon'
 import TipTap from '../../UI/tiptap/TipTap'
@@ -45,7 +48,15 @@ export const CreateBlogPost = props => {
   const [youtubeLink, setYoutubeLink] = useState(null)
   const [isYoutubeLinkSubmitted, setIsYoutubeLinkSubmitted] = useState(false)
   const [isValidationError, setIsValidationError] = useState(false)
+  const [files, setFiles] = useState([])
+  
+  const storage = new Storage({
+    keyfileName: path.join(__dirname, '../../../dalmadaniela-6225b44c6f08.json'),
+    prjectId: 'dalmadaniela'
+  });
 
+  const test = storage.getItem('dalmadaniela.com')
+  debugger
   const onCreate = () => {
     if(!(introEditor && bodyEditor && conclusionEditor))
       setIsValidationError(true)
@@ -107,6 +118,8 @@ export const CreateBlogPost = props => {
             {...tipTapProps}
           />
         </div> 
+
+        <FileUpload value={files} onChange={setFiles} />
 
         <div className='tipTapEditorContainer'>
           <h2 className='tipTabEditorLabel'>{t.conclusion}</h2>
