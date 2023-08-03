@@ -68,30 +68,25 @@ export const CreateBlogPost = props => {
           />
         </div> 
 
-        {/* <div id='youtubeLinkContainer'> */}
-          <h2 id='youtubeLinkTitle'>{t.youtubeLink}</h2> 
-          {isYoutubeLinkSubmitted ? (
-            <LiteYouTubeEmbed 
-              id={getYouTubeID(youtubeLink)} 
-            />
-          ) : (
-            <input onChange={e => setYoutubeLink(e.target.value)} />
-          )}
-          <button 
-            id='youtubeLinkSubmitButton'
-            className='clickable'
-            onClick={() => {
-              setIsYoutubeLinkSubmitted(!isYoutubeLinkSubmitted)
-              if (isYoutubeLinkSubmitted)
-                setYoutubeLink('')
-            }}
-          >
-            {isYoutubeLinkSubmitted ? t.remove : t.submit}
-          </button>
-        {/* </div> */}
-
-        
-
+        <h2 id='youtubeLinkTitle'>{t.youtubeLink}</h2> 
+        {isYoutubeLinkSubmitted ? (
+          <LiteYouTubeEmbed 
+            id={getYouTubeID(youtubeLink)} 
+          />
+        ) : (
+          <input onChange={e => setYoutubeLink(e.target.value)} />
+        )}
+        <button 
+          id='youtubeLinkSubmitButton'
+          className='clickable'
+          onClick={() => {
+            setIsYoutubeLinkSubmitted(!isYoutubeLinkSubmitted)
+            if (isYoutubeLinkSubmitted)
+              setYoutubeLink('')
+          }}
+        >
+          {isYoutubeLinkSubmitted ? t.remove : t.submit}
+        </button>
 
         <div className='tipTapEditorContainer'>
           <h2 className='tipTabEditorLabel'>{t.body}</h2>
