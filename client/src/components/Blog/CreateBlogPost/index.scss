@@ -10,7 +10,7 @@
 
 #createBlogPostContainer {
     background: $pink;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: flex-start;
@@ -42,6 +42,55 @@
             top: -2vw;
         }
     }
+
+    .tipTapEditorContainer,
+    #youtubeLinkContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+
+        .tipTabEditorLabel {
+            font-family: 'Garbata';
+            color: white;
+            margin-bottom: 5px;
+        }
+    }
+
+    // #youtubeLinkContainer {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+
+        #youtubeLinkTitle {
+            color: white;
+            font-weight: 600;
+            font-family: 'Garbata';
+            text-align: center;
+            margin-bottom: 25px
+        }
+
+        input {
+            margin: auto;
+            width: calc(50% - 10px);
+            font-family: 'Garet';
+            color: $pink;
+            padding-left: 10px;
+            outline: none;
+            border-radius: 15px;
+            border: 1px solid yellow;
+        }
+
+        #youtubeLinkSubmitButton {
+            font-family: "Garet";
+            text-transform: uppercase;
+            background: #FEFF7C;
+            cursor: pointer;
+            width: 15%;
+            margin: auto;
+            margin: 25px auto 50px auto;
+        }
+    // }
     
     #createBlogPostTipTapContainer {
         margin: 0 auto;
@@ -91,7 +140,6 @@
         }
 
         #createBlogPostSubmitButton {
-            margin-bottom: 50vh;
             background: $yellow;
             border: none;
             padding: 11px;
@@ -101,7 +149,8 @@
             font-weight: 600;
             box-shadow: 0vw 5px 0vw 0vw $pink, 0vw 10px 0vw black;
             cursor: pointer;
-            margin: 50px auto;
+            margin: auto;
+            margin-bottom: 50px;
         }
     }
 }

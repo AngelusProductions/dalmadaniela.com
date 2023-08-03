@@ -117,14 +117,15 @@ function TipTap({
         content,
         extensions,
         editable,
-        editorProps: {
-            attributes: {
-            spellcheck: 'true',
-        },
         onUpdate: ({ editor }) => {
             setEditorHtmlContent(editor.getHTML())
-        }
-    },
+            onChange(editor)
+        },
+        editorProps: {
+            attributes: {
+                spellcheck: 'true',
+            },
+        },
     })
 
     React.useEffect(
@@ -158,12 +159,12 @@ function TipTap({
     }
 
 
-    editor.options.onUpdate(() => {
-        onChange(editor)
-    })
+    // editor.options.onUpdate(() => {
+    //     onChange(editor)
+    // })
 
-    const onSubmitClick = () => {
-        onSubmit(editor)
+    const onEditorChange = () => {
+        debugger
     }
 
     const Video = Node.create({
@@ -272,7 +273,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
             <div className="WhiteCard">
                 {withToolbar ? <Toolbar editor={editor} /> : null}
                 {withPopover ? <Popover editor={editor} /> : null}
-                <EditorContent editor={editor} />
+                <EditorContent editor={editor} onChange={onEditorChange} />
             </div>
         </div>
     )
