@@ -18,7 +18,9 @@ const t = {
   conclusion: 'Conclusion',
   youtubeLink: 'Insert YouTube Link',
   remove: 'Remove',
-  submit: 'Submit'
+  submit: 'Submit',
+  validationError: 'Check yourself, dummy.',
+  youtubeRegex: /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/
 }
 
 const tipTapProps = {
@@ -42,9 +44,19 @@ export const CreateBlogPost = props => {
   const [conclusionEditor, setConclusionEditor] = useState({})
   const [youtubeLink, setYoutubeLink] = useState(null)
   const [isYoutubeLinkSubmitted, setIsYoutubeLinkSubmitted] = useState(false)
+  const [isValidationError, setIsValidationError] = useState(false)
 
   const onCreate = () => {
-    debugger
+    if(!(introEditor && bodyEditor && conclusionEditor))
+      setIsValidationError(true)
+    else if (introEditor.getHTML().length === 0 
+    || bodyEditor.getHTML().length === 0 
+    || conclusionEditor.getHTML().length === 0
+    || !youtubeLink.match(t.youtubeRegex)) {
+      setIsValidationError(true)
+    } else {
+      setIsValidationError(false)
+    }
   }
 
   const onIntroChange = editor => setIntroEditor(editor)
@@ -103,7 +115,12 @@ export const CreateBlogPost = props => {
             {...tipTapProps}
           />
         </div> 
-       
+
+        {isValidationError && (
+          <span id='validationError'>
+            {t.validationError}
+          </span>
+        )}
         <button 
           id='createBlogPostSubmitButton' 
           className='clickable'
