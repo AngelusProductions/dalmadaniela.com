@@ -65,7 +65,7 @@
         margin-bottom: 25px
     }
 
-    input {
+    input[type="text"] {
         margin: auto;
         width: calc(50% - 10px);
         font-family: 'Garet';
@@ -74,6 +74,15 @@
         outline: none;
         border-radius: 15px;
         border: 1px solid yellow;
+    }
+
+    input[type="file"] {
+        margin: auto;
+        margin-bottom: 40px;
+        font-family: 'Hatton';
+        width: 25%;
+        background: yellow;
+        border: 2px solid black;
     }
 
     #youtubeLinkSubmitButton {

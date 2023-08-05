@@ -62,13 +62,11 @@ export const CreateBlogPost = props => {
     }
   }
 
-  const handleFileChange = e => {
-    const img = {
+  const handleFileChange = e =>
+    setFile({
       preview: URL.createObjectURL(e.target.files[0]),
       data: e.target.files[0],
-    };
-    setFile(img);
-  }
+    })
 
   const onIntroChange = editor => setIntroEditor(editor)
   const onBodyChange = editor => setBodyEditor(editor)
@@ -97,7 +95,7 @@ export const CreateBlogPost = props => {
             id={getYouTubeID(youtubeLink)} 
           />
         ) : (
-          <input onChange={e => setYoutubeLink(e.target.value)} />
+          <input type='text' onChange={e => setYoutubeLink(e.target.value)} />
         )}
         <button 
           id='youtubeLinkSubmitButton'
@@ -119,7 +117,7 @@ export const CreateBlogPost = props => {
           />
         </div> 
 
-        <input type='file' name='file' onChange={handleFileChange}></input>
+        <input type='file' name='file' onChange={handleFileChange}/>
 
         <div className='tipTapEditorContainer'>
           <h2 className='tipTabEditorLabel'>{t.conclusion}</h2>
