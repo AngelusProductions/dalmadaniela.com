@@ -6,11 +6,49 @@ const cookieParser = require('cookie-parser');
 const expressValidator = require('express-validator');
 const errorHandlers = require('./handlers/errorHandlers');
 
+const { Storage } = require("@google-cloud/storage");
+const { format } = require("util");
+const Multer = require("multer");
+
 require('./handlers/passport');
 const routes = require('./routes');
 const CORS_WHITELIST = require('./constants/frontend');
 
+const multer = Multer({
+  storage: Multer.memoryStorage(),
+  limits: {
+    fileSize: 5 * 1024 * 1024, // no larger than 5mb, you can change as needed.
+  },
+});
+
+const cloudStorage = new Storage({
+  keyFilename: `${__dirname}/service_account_key.json`,
+  projectId: "dalmadaniela",
+});
+const bucketName = "dalmadaniela.com";
+
+const bucket = cloudStorage.bucket(bucketName);
+
 const app = express();
+
+app.post("/upload-file-to-cloud-storage", multer.single("file"), function (req, res, next) {
+  if (!req.file) {
+    res.status(400).send("No file uploaded.");
+    return;
+  }
+  const blob = bucket.file(req.file.originalname);
+  const blobStream = blob.createWriteStream();
+  blobStream.on("error", (err) => {
+    next(err);
+  });
+  blobStream.on("finish", () => {
+    // The public URL can be used to directly access the file via HTTP.
+    const publicUrl = format(`https://storage.googleapis.com/${bucket.name}/${blob.name}`);
+    res.status(200).json({ publicUrl });
+  });
+  blobStream.end(req.file.buffer);
+  console.log(req.file);
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -2,3 +2,5 @@ node_modules/
 *.log
 *.env
 .vscode
+
+service_account_key.json

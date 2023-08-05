@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import getYouTubeID from 'get-youtube-id'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import FileUpload from 'react-material-file-upload'
-import { Storage } from '@google-cloud/storage'
-import path from 'path'
+import axios from 'axios'
 
 import HomeIcon from '../../UI/HomeIcon'
 import TipTap from '../../UI/tiptap/TipTap'
@@ -49,14 +48,9 @@ export const CreateBlogPost = props => {
   const [isYoutubeLinkSubmitted, setIsYoutubeLinkSubmitted] = useState(false)
   const [isValidationError, setIsValidationError] = useState(false)
   const [files, setFiles] = useState([])
-  
-  const storage = new Storage({
-    keyfileName: path.join(__dirname, '../../../dalmadaniela-6225b44c6f08.json'),
-    prjectId: 'dalmadaniela'
-  });
+  const [file, setFile] = useState(null);
 
-  const test = storage.getItem('dalmadaniela.com')
-  debugger
+  
   const onCreate = () => {
     if(!(introEditor && bodyEditor && conclusionEditor))
       setIsValidationError(true)
@@ -70,9 +64,45 @@ export const CreateBlogPost = props => {
     }
   }
 
+  const handleSubmit = async e => {
+    e.preventDefault();
+    let formData = new FormData();
+    formData.append("file", file.data);
+    debugger
+    const response = await fetch("http://localhost:4000/upload-file-to-cloud-storage", {
+      method: "POST",
+      body: formData,
+      mode: 'no-cors',
+      
+    }).catch(error => {
+      debugger
+    });
+    // const response = await axios.post(
+    //   "http://localhost:4000/upload-file-to-cloud-storage",
+    //   formData,
+    // ).catch(error => {
+    //   debugger
+    // });
+    const responseWithBody = await response.json();
+    if (response) setUrl(responseWithBody.publicUrl);
+  };
+
   const onIntroChange = editor => setIntroEditor(editor)
   const onBodyChange = editor => setBodyEditor(editor)
   const onConclusionChange = editor => setConclusionEditor(editor)
+
+  // useEffect(() => {
+  //   const test = files
+  //   debugger
+  // }, [files])
+
+    const handleFileChange = e => {
+    const img = {
+      preview: URL.createObjectURL(e.target.files[0]),
+      data: e.target.files[0],
+    };
+    setFile(img);
+  };
 
   return (
     <div id="createBlogPostContainer">
@@ -119,7 +149,9 @@ export const CreateBlogPost = props => {
           />
         </div> 
 
-        <FileUpload value={files} onChange={setFiles} />
+        {/* <FileUpload value={files} onChange={setFiles} /> */}
+        <input type="file" name="file" onChange={handleFileChange}></input>
+        <button onClick={handleSubmit}>Upload</button>
 
         <div className='tipTapEditorContainer'>
           <h2 className='tipTabEditorLabel'>{t.conclusion}</h2>
