@@ -1,26 +1,16 @@
 const { sendJson } = require('../handlers/util');
 const { createBlogPost } = require('../data/blog');
+const { v4 } = require('uuid');
 
 exports.createBlogPost = (req, res, next) => {
-  const { 
-    name,
-    introHtml,
-    youtubeLink,
-    bodyHtml,
-    photoUrl,
-    conclusionHtml
-    } = req.body;
+  const newBlogPost = {
+    id: v4(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    ...req.body
+  }
 
-  console.log(
-    name,
-    introHtml,
-    youtubeLink,
-    bodyHtml,
-    photoUrl,
-    conclusionHtml
-  )
-
-  const blogPost = createBlogPost(req.body)
+  const blogPost = createBlogPost(newBlogPost)
 
   sendJson(res, 201, { blogPost });
 };

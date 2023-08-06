@@ -1,11 +1,13 @@
 const mongoose = require('mongoose');
+const { v4 } = require('uuid');
 
 const blogPostSchema = new mongoose.Schema({
   id: {
     type: Number,
     index: {
       unique: true
-    }
+    },
+    default: v4()
   },
   name: String,
   introHtml: String,
@@ -15,11 +17,11 @@ const blogPostSchema = new mongoose.Schema({
   conclusionHtml: String,
   createdAt: {
     type: Date,
-    default: Date.now
+    default: new Date()
   }, 
   updatedAt: {
     type: Date,
-    default: Date.now
+    default: new Date()
   }
 });
 

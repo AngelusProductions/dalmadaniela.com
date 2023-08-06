@@ -8,3 +8,9 @@ export const createBlogPost = async payload => {
   )
   return response.data
 }
+
+export const getAllBlogPosts = async () => {
+  const response = await axios.get(`${ROOT_API_URL}${apiEndpoints.blogPost.getAll}`)
+  debugger
+  return response.data
+}
