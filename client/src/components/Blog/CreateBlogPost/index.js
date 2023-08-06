@@ -6,12 +6,14 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import HomeIcon from '../../UI/HomeIcon'
 import TipTap from '../../UI/tiptap/TipTap'
 
+import { paths } from '../../../constants/paths'
 import { i } from '../../../constants/data/assets'
 import { BUCKET_URL } from '../../../constants/config'
 import { uploadFileToStorage } from '../../../api/google'
 import { createBlogPost } from '../../../api/blog'
 
 import './index.scss'
+import { useNavigate } from 'react-router'
 
 const t = {
   title: 'Create a Blog Post',
@@ -42,6 +44,8 @@ const tipTapProps = {
 }
 
 export const CreateBlogPost = props => {
+  const navigate = useNavigate()
+
   const [blogPostName, setBlogPostName] = useState('')
   const [introEditor, setIntroEditor] = useState({})
   const [bodyEditor, setBodyEditor] = useState({})
@@ -71,6 +75,7 @@ export const CreateBlogPost = props => {
         conclusionHtml: conclusionEditor.getHTML(),
       })
       setIsValidationError(false)
+      navigate(paths.blog.page)
     }
   }
 
