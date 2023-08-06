@@ -7,7 +7,9 @@ import HomeIcon from '../../UI/HomeIcon'
 import TipTap from '../../UI/tiptap/TipTap'
 
 import { i } from '../../../constants/data/assets'
+import { BUCKET_URL } from '../../../constants/config'
 import { uploadFileToStorage } from '../../../api/google'
+import { createBlogPost } from '../../../api/blog'
 
 import './index.scss'
 
@@ -40,6 +42,7 @@ const tipTapProps = {
 }
 
 export const CreateBlogPost = props => {
+  const [blogPostName, setBlogPostName] = useState('')
   const [introEditor, setIntroEditor] = useState({})
   const [bodyEditor, setBodyEditor] = useState({})
   const [conclusionEditor, setConclusionEditor] = useState({})
@@ -49,7 +52,8 @@ export const CreateBlogPost = props => {
   const [file, setFile] = useState(null);
   
   const onCreate = () => {
-    if(!file || !(introEditor && bodyEditor && conclusionEditor))
+    if(!file || blogPostName.length === 0 
+      || !(introEditor && bodyEditor && conclusionEditor))
       setIsValidationError(true)
     else if (introEditor.getHTML().length === 0 
     || bodyEditor.getHTML().length === 0 
@@ -58,6 +62,14 @@ export const CreateBlogPost = props => {
       setIsValidationError(true)
     } else {
       uploadFileToStorage(file)
+      createBlogPost({
+        name: blogPostName,
+        introHtml: introEditor.getHTML(),
+        youtubeLink,
+        bodyHtml: bodyEditor.getHTML(),
+        photoUrl: `${BUCKET_URL}/${file.data.name}`,
+        conclusionHtml: conclusionEditor.getHTML(),
+      })
       setIsValidationError(false)
     }
   }
@@ -78,6 +90,11 @@ export const CreateBlogPost = props => {
       <div id='createBlogPostTitleContainer'>
         <h1>{t.title}</h1>
         <img src={i.icons.document} />
+      </div>
+
+      <div id='blogPostNameContainer'>
+        <h2>Name</h2>
+        <input type='text' value={blogPostName} onChange={(e => setBlogPostName(e.target.value))} />
       </div>
 
       <div id='createBlogPostTipTapContainer'>

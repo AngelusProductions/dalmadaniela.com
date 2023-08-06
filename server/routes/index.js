@@ -6,6 +6,7 @@ const { catchErrors } = require('../handlers/errorHandlers');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 const stripeController = require('../controllers/stripeController');
+const blogController = require('../controllers/blogController');
 
 router.post(
   '/signup',
@@ -19,5 +20,7 @@ router.post('/stripe', stripeController.processPayment);
 router.post('/auth/jwt', authController.decodeJwt);
 
 router.post('/auth/password', authController.login);
+
+router.post('/blogpost/create', blogController.createBlogPost);
 
 module.exports = router;

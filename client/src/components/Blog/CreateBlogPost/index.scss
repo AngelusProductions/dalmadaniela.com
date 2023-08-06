@@ -43,18 +43,27 @@
         }
     }
 
+    h2 {
+        font-family: 'Garbata';
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    #blogPostNameContainer {
+        margin: auto;
+        margin-bottom: 50px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .tipTapEditorContainer,
     #youtubeLinkContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 50px;
-
-        .tipTabEditorLabel {
-            font-family: 'Garbata';
-            color: white;
-            margin-bottom: 5px;
-        }
     }
 
     #youtubeLinkTitle {

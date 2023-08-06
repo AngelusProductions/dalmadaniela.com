@@ -24,7 +24,10 @@ export const apiEndpoints = {
   loginWithJwt: '/auth/jwt',
   signup: '/signup',
   payment: '/stripe',
-  upload: '/upload'
+  upload: '/upload',
+  blogPost: {
+    create: '/blogpost/create'
+  }
 }
 
 export const ROOT_API_URL = configureApiRoot()
