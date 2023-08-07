@@ -11,6 +11,21 @@
     display: none;
 }
 
+#homePageContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+#mobileMenuShadow {
+    animation: cubic-bezier(0.455, 0.03, 0.515, 0.955) 1000ms fadeIn;
+    background: black;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    position: absolute;
+    cursor: n-resize;
+}
+
 .homeSection {
     height: 100vh;
     overflow: hidden;
@@ -312,7 +327,7 @@ section#films {
 }
 
 section#socialMedia {
-    
+
     .left {
         width: 50%;
 
@@ -365,7 +380,7 @@ section#socialMedia {
     }
 
     img#socialMediaInstagramPhone {
-        z-index: 99;
+        z-index: 97;
     }
 
     img#socialMediaMagic {
@@ -383,6 +398,7 @@ section#socialMedia {
     font-weight: 500;
     transform: translateY(1vw);
 }
+
 #garettTestimonial .testimonialMagic,
 #evanTestimonial .testimonialMagic {
     transform: scaleX(-1);
@@ -391,6 +407,7 @@ section#socialMedia {
 #evanTestimonial .testimonialMagic {
     right: 0%;
 }
+
 .testimonial {
     .left {
         display: inline-flex;
@@ -437,7 +454,7 @@ section#socialMedia {
 
     img.testimonialPhone {
         width: 67%;
-        z-index: 99;
+        z-index: 97;
     }
 
     img.testimonialMagic {
@@ -512,7 +529,7 @@ section#classAbout {
             border-radius: 8px;
             padding-top: 1.3vw;
         }
-        
+
         #plantGrowing {
             height: 100%;
         }
@@ -581,5 +598,15 @@ section#classAbout {
                 color: $yellow;
             }
         }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

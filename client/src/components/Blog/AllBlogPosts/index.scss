@@ -36,7 +36,6 @@
 
         a {
             height: 100%;
-            width: 48%;
 
             .allBlogPostsPageBlogPostContainer {
                 background: white;
@@ -51,7 +50,6 @@
                 display: flex;
                 align-items: center;
                 flex-direction: column;
-                min-width: 350px;
                 overflow: hidden;
                 z-index: 99;
         
@@ -60,7 +58,7 @@
                 }
         
                 img {
-                    height: 67%;
+                    width: 100%;
                 }
             }
         }

@@ -1,6 +1,10 @@
 @import '../../../../colors.scss';
 
 @media (max-width: 640px) {
+    .leftSection a:nth-of-type(1) {
+        display: none;
+    }
+    
     .inactive {
         color: white;
         font-size: 4vw !important;
