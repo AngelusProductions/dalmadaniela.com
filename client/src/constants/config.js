@@ -5,4 +5,6 @@ export const PRODUCTION_API_HOSTNAME = 'dalma-daniela-server.herokuapp.com'
 
 export const API_VERSION = 1
 
+export const HOST_URL = 'https://dalmadaniela.com'
+
 export const BUCKET_URL = 'https://storage.googleapis.com/dalmadaniela.com'

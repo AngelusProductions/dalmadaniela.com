@@ -17,6 +17,8 @@ export const i = {
         backPink: `${bucketPrefix}/icons/backPink.png`,
         backYellow: `${bucketPrefix}/icons/backYellow.png`,
         burger: `${bucketPrefix}/icons/burger.png`,
+        check: `${bucketPrefix}/icons/check.svg`,
+        copy: `${bucketPrefix}/icons/copy.png`,
         document: `${bucketPrefix}/icons/document.svg`,
         documents: `${bucketPrefix}/icons/documents.png`,
         email: `${bucketPrefix}/icons/email.svg`,

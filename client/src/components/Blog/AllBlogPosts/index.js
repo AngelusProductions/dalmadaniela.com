@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
+import { getAllBlogPosts } from '../../../api/blog'
 import { paths } from '../../../constants/paths'
 import { i } from '../../../constants/data/assets'
+import { getAllBlogPostsRequest, getAllBlogPostsFailure, getAllBlogPostsSuccess } from '../../../actions/blog'
 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
@@ -14,7 +16,7 @@ const t = {
   title: 'All Posts'
 }
 
-export const AllBlogPosts = ({ blogPosts }) => {
+export const AllBlogPosts = ({ blogPosts, getAllBlogPosts }) => {
 
   useEffect(() => {
     if(blogPosts.length === 0)
