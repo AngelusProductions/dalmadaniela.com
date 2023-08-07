@@ -37,11 +37,11 @@ const t = {
 export const BlogPost = ({ blogPost, getBlogPost }) => {
   const { name } = useParams()
   const [isLinkCopied, setIsLinkCopied] = useState(false)
-
+  
   const currentUrl = `${HOST_URL}${window.location.pathname}`
 
   useEffect(() => {
-    getBlogPost(name)
+    getBlogPost(name.replace(/_/g," "))
   }, [])
 
   const onCopyClick = async () => {
