@@ -1,0 +1,223 @@
+@import '../../colors.scss';
+
+@mixin white-card {
+    background: #ffffff;
+    border: 2px solid #999999;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#createBlogPostContainer {
+    background: $pink;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    #createBlogPostTitleContainer {
+        background-color: $yellow;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        border: 3px solid black;
+        margin: calc(3vw + 25px) auto;
+        position: relative;
+        padding: 0.5vw;
+        padding-top: 1.5vw;
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-family: "Hatton";
+            font-size: 3.5vw;
+            text-transform: uppercase;
+        }
+
+        img {
+            position: absolute;
+            right: -2vw;
+            width: 4vw;
+            top: -2vw;
+        }
+    }
+
+    h2 {
+        font-family: 'Garbata';
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    #blogPostNameContainer {
+        margin: auto;
+        margin-bottom: 50px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tipTapEditorContainer,
+    #youtubeLinkContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    #youtubeLinkTitle {
+        color: white;
+        font-weight: 600;
+        font-family: 'Garbata';
+        text-align: center;
+        margin-bottom: 25px
+    }
+
+    input[type="text"] {
+        margin: auto;
+        width: 80%;
+        font-family: 'Garet';
+        color: $pink;
+        padding-left: 10px;
+        outline: none;
+        border-radius: 15px;
+        border: 1px solid yellow;
+    }
+
+    input[type="file"] {
+        margin: auto;
+        margin-bottom: 40px;
+        font-family: 'Hatton';
+        width: 25%;
+        background: yellow;
+        border: 2px solid black;
+    }
+
+    #youtubeLinkSubmitButton {
+        font-family: "Garet";
+        text-transform: uppercase;
+        background: #FEFF7C;
+        cursor: pointer;
+        width: 15%;
+        margin: auto;
+        margin: 25px auto 50px auto;
+    }
+        
+    #createBlogPostTipTapContainer {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: unset;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Garet';
+        }
+
+        h2, h4, h6 {
+            color: $pink;
+        }
+
+        h1, h3, h5 {
+            color: black;
+        }
+
+        p, ul, ol, li {
+            font-family: 'Garet';
+        }
+
+        ul, ol, li {
+            list-style: unset;
+        }
+
+        blockquote {
+            font-style: italic;
+        }
+        
+        a {
+            color: $pink;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        > nav {
+            @include white-card;
+
+            margin-bottom: 50px;
+            padding: 18px 20px;
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                display: inline-block;
+                line-height: 2.5;
+                margin-right: 5px;
+            }
+
+            a {
+                border: 2px solid transparent;
+                border-radius: 5px;
+                padding: 5px;
+                color: #005D71;
+                text-decoration: none;
+                font-weight: bold;
+
+                &.selected {
+                    background: #007992;
+                    color: #ffffff;
+                    cursor: default;
+                }
+            }
+
+            a:hover:not(.selected) {
+                border: 2px solid #007992;
+            }
+        }
+
+        #validationError {
+            margin: auto;
+            margin-bottom: 25px;
+            font-family: 'Hatton';
+            color: $yellow;
+        }
+
+        #createBlogPostSubmitButton {
+            background: $yellow;
+            border: none;
+            padding: 11px;
+            border-radius: 15px;
+            font-family: "Garet";
+            text-transform: uppercase;
+            font-weight: 600;
+            box-shadow: 0vw 5px 0vw 0vw $pink, 0vw 10px 0vw black;
+            cursor: pointer;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+.WhiteCard {
+    @include white-card;
+}
+
+.WhiteCard+h2 {
+    margin: 20px 20px 5px;
+}
+
+.WhiteCard+.WhiteCard {
+    margin-top: 20px;
+}
+
+.WhiteCard>pre {
+    min-height: 15px;
+    margin: 0;
+    white-space: pre-wrap;
+}

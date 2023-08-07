@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { i } from '../../constants/assets'
-import { paths } from '../../constants/routes'
+import { i } from '../../constants/data/assets'
+import { paths } from '../../constants/paths'
 import './styles/index.scss'
 
 const t = {

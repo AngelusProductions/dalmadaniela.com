@@ -1,13 +1,14 @@
 import * as React from 'react'
 import { TextField } from '@shopify/polaris'
 
+import './index.scss'
+
 const PasswordField = ({ text, onChange, kind, error }) => {
   return (
     <TextField
-      label="Password"
       name={`password-${kind}`}
       type="password"
-      placeholder="At least 6 characters."
+      placeholder="At least six characters."
       value={text}
       onChange={onChange}
       error={error}
@@ -20,7 +21,6 @@ const PasswordConfField = ({ text, onChange, kind, error }) => {
   return (
     <TextField
       spellCheck={false}
-      label="Confirm Password"
       name={`passwordConf-${kind}`}
       type="password"
       value={text}
@@ -36,7 +36,6 @@ const EmailField = ({ text, onChange, kind, error }) => {
   return (
     <TextField
       autoComplete={false}
-      label="Email address"
       name={`email-${kind}`}
       type="email"
       value={text}
@@ -48,4 +47,8 @@ const EmailField = ({ text, onChange, kind, error }) => {
   )
 }
 
-export { PasswordField, PasswordConfField, EmailField }
+export { 
+  PasswordField, 
+  PasswordConfField, 
+  EmailField 
+}

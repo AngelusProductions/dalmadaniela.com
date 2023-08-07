@@ -12,7 +12,15 @@ export const i = {
         theSovereign: `${bucketPrefix}/films/theSovereign.png`,
     },
     icons: {
+        add: `${bucketPrefix}/icons/add.png`,
+        backBlack: `${bucketPrefix}/icons/backBlack.png`,
+        backPink: `${bucketPrefix}/icons/backPink.png`,
+        backYellow: `${bucketPrefix}/icons/backYellow.png`,
         burger: `${bucketPrefix}/icons/burger.png`,
+        check: `${bucketPrefix}/icons/check.svg`,
+        copy: `${bucketPrefix}/icons/copy.png`,
+        document: `${bucketPrefix}/icons/document.svg`,
+        documents: `${bucketPrefix}/icons/documents.png`,
         email: `${bucketPrefix}/icons/email.svg`,
         facebook: `${bucketPrefix}/icons/facebook.svg`,
         home: `${bucketPrefix}/icons/home.svg`,
@@ -21,6 +29,7 @@ export const i = {
         shareNeon: `${bucketPrefix}/icons/shareNeon.webp`,
         syringe: `${bucketPrefix}/icons/syringe.png`,
         threads: `${bucketPrefix}/icons/threads.svg`,
+        user: `${bucketPrefix}/icons/user.png`,
         youtube: `${bucketPrefix}/icons/youtube.svg`,
     },
     logos: {

@@ -3,6 +3,7 @@ const User = mongoose.model('User');
 const { sendJson } = require('../handlers/util');
 
 exports.validateSignup = (req, res, next) => {
+  console.log('hit signup')
   req.sanitizeBody('username');
   req.checkBody('email', `That email isn't valid.`).isEmail();
   req.sanitizeBody('email').normalizeEmail({
@@ -29,7 +30,7 @@ exports.validateSignup = (req, res, next) => {
 
 exports.createUser = async (req, res, next) => {
   const { email, username } = req.body;
-  debugger
+  console.log('hit create user')
   const user = new User({ email, username });
 
   await User.register(user, req.body.password);

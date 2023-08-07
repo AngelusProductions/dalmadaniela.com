@@ -2,19 +2,33 @@ import { configureApiRoot } from '../utils/config'
 
 export const paths = {
   home: '/',
-  superClass: '/super-class',
+  superClass: '/superclass',
   magicCalendars: '/magic-calendars',
-  blog: '/blog',
+  blog: {
+    page: '/blog',
+    allBlogPosts: '/blog/posts',
+    blogPost: '/blog/posts/:id',
+    create: '/blog/create'
+  },
   team: '/team',
   contactUs: '/contact',
   geniusMarketingServices: '/services',
+  auth: {
+    login: '/auth/login',
+    signup: '/auth/signup'
+  }
 }
 
 export const apiEndpoints = {
   loginWithPassword: '/auth/password',
   loginWithJwt: '/auth/jwt',
   signup: '/signup',
-  payment: '/stripe'
+  payment: '/stripe',
+  upload: '/upload',
+  blogPosts: {
+    getAll: '/blogposts',
+    create: '/blogposts/create'
+  }
 }
 
 export const ROOT_API_URL = configureApiRoot()

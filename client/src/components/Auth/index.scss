@@ -1,0 +1,59 @@
+@import '../colors.scss';
+
+.authPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Garbata';
+
+    input {
+        background-color: black;
+        height: 4vh;
+        width: 50vw;    
+        outline: $pink;
+        border-radius: 50px;
+        padding: 0 10px;
+        font-family: 'Garbata';
+        font-weight: 600;
+        margin: 1vh auto;
+    }
+
+    h1 {
+        font-family: 'Garet';
+        font-weight: 600;
+    }
+
+    .authFieldContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div:nth-child(1) {
+            text-align: center;
+        }
+    }
+
+    .Polaris-Icon__Svg {
+        width: 5vw;
+    }
+
+    .Polaris-Labelled__Error {
+        font-family: 'Garet';
+        font-weight: 600;
+        color: $pink;
+        font-size: 1.5vw;
+    }
+
+    .authButton {
+        margin-bottom: 50vh;
+        border: none;
+        padding: 11px;
+        border-radius: 15px;
+        font-family: "Garet";
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}

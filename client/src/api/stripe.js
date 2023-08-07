@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { ROOT_API_URL, apiEndpoints } from '../constants/routes'
+import { ROOT_API_URL, apiEndpoints } from '../constants/paths'
 
 export const sendPaymentRequest = (
   amount,

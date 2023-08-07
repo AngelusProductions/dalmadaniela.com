@@ -1,4 +1,4 @@
-import { paths } from './routes'
+import { paths } from '../../constants/paths'
 
 export default [
   {
@@ -25,9 +25,9 @@ export default [
   {
     id: 4,
     name: 'Blog',
-    path: paths.blog,
+    path: paths.blog.page,
     side: 'left',
-    tooltip: 'Aha!\nFreebies galore over here. Keep checking.'
+    tooltip: null
   },
   {
     id: 5,

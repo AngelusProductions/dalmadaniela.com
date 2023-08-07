@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import authForms from './reducers/formAuth'
-import currentUser from './reducers/currentUser'
+import authReducer from './reducers/auth'
+import currentUserReducer from './reducers/currentUser'
+import blogReducer from './reducers/blog'
 
 export const rootReducer = combineReducers({
-  currentUser,
-  authForms
+  currentUser: currentUserReducer,
+  auth: authReducer,
+  blog: blogReducer
 })

@@ -6,7 +6,6 @@ import 'react-tippy/dist/tippy.css'
 import './styles/index.scss'
 
 const NavbarLink = ({
-    id,
     name, 
     path, 
     tooltip

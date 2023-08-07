@@ -6,15 +6,9 @@
     padding-top: 2vh;
 
     &.burger {
-        width: 85vw;
+        width: 100vw;
         flex-direction: column;
         margin-top: 10%;
-        position: absolute;
-        top: 25vh;
-        left: 5vw;
-        overflow: hidden;
-        z-index: 99;
-        animation: cubic-bezier(0.6, -0.28, 0.735, 0.045) 500ms slideDown;
 
         .navbarSection {
             flex-direction: column;
@@ -33,24 +27,4 @@
     width: 50%;
     display: flex;
     justify-content: space-around;
-}
-
-@keyframes slideDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-200px);
-    }
-
-    30% {
-        opacity: 1;
-        transform: translateY(30px);
-    }
-
-    60% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
 }

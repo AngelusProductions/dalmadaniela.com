@@ -1,7 +1,3 @@
-import { ExpressValidatorError } from 'server-response-types';
-import { SignupPayload, FormErrorMap } from 'types';
-import { AxiosError } from 'axios';
-
 export const resolveSignupErrors = e => {
   /**
    * If the error doesn't contain response.data, the server hasn't sent back any

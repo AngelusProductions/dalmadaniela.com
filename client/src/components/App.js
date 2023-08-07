@@ -1,27 +1,32 @@
 import React, { useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Home from './Home'
 import SuperClass from './SuperClass'
 import MagicCalendars from './MagicCalendars'
+
 import Blog from './Blog'
+import AllBlogPosts from './Blog/AllBlogPosts'
+import BlogPost from './Blog/BlogPost'
+import CreateBlogPost from './Blog/CreateBlogPost'
+
 import Team from './Team'
 import ContactUs from './ContactUs'
 import GeniusMarketingServices from './GeniusMarketingServices'
-// import Checkout from './Payment/Checkout'
-// import PageHeader from './Navigation/PageHeader'
-// import AuthLayout from './Auth/AuthLayout'
+import Signup from './Auth/Signup'
+import Login from './Auth/Login'
 
-import { paths } from '../constants/routes'
+import { paths } from '../constants/paths'
 import { loginWithJwt } from '../api/login'
 import { loginSuccess, loginFailure, loginRequest } from '../actions/login'
 import './app.scss'
 import './fonts.scss'
+import './colors.scss'
 
 const App = ({ currentUser, onBoot }) => {
   useEffect(() => {
-    if (currentUser.token && !currentUser.loggedIn) {
+    if (currentUser && currentUser.token && !currentUser.loggedIn) {
       onBoot(currentUser.token)
     }
   })
@@ -31,10 +36,18 @@ const App = ({ currentUser, onBoot }) => {
       <Route index element={<Home />}/>
       <Route path={paths.superClass} element={<SuperClass />} />
       <Route path={paths.magicCalendars} element={<MagicCalendars />} />
-      <Route path={paths.blog} element={<Blog />} />
+
+      <Route path={paths.blog.page} element={<Blog />} />
+      <Route path={paths.blog.allBlogPosts} element={<AllBlogPosts />} />
+      <Route path={paths.blog.blogPost} element={<BlogPost />} />
+      <Route path={paths.blog.create} element={<CreateBlogPost />} />
+      
       <Route path={paths.team} element={<Team />} />
       <Route path={paths.contactUs} element={<ContactUs />} />
       <Route path={paths.geniusMarketingServices} element={<GeniusMarketingServices />} />
+
+      <Route path={paths.auth.login} element={<Login />} />
+      <Route path={paths.auth.signup} element={<Signup />} />
     </Routes>
   )
 }

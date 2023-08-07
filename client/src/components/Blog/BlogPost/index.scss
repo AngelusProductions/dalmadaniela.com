@@ -1,0 +1,104 @@
+@import '../../colors.scss';
+
+#blogPostPageContainer {
+    position: relative;
+
+    #blogPageTitleContainer {
+        padding: 50px;
+        padding-top: 100px;
+        background: $yellow;
+
+        h1 {
+            color: $pink;
+            text-align: center;
+            font-size: 4.5vw;
+            margin-bottom: 4vw;
+        }
+
+        p {
+            font-family: 'Garet';
+            font-size: 2.5vw;
+            margin-bottom: 2.5vw;
+        }
+
+        #blogPostShareIconsContainer {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 50px;
+
+            #blogPostCopyIcon {
+                width: 40px !important;
+                height: 50px;
+            }
+
+            button svg,
+            img  {
+                width: 50px;
+                cursor: pointer;
+            }
+        }
+
+        #blogPostPhoto {
+            width: 100%;
+            margin: 0px 0 25px 0;
+            border: 3px solid black;
+        }
+
+        #youtubeEmbedContainer {
+            margin: 4vw 0;
+        }
+        
+        h2 {
+            margin-bottom: unset;
+        }
+
+        h3, h5 {
+            font-family: 'Garet';
+            font-size: 2.9vw;
+        }
+
+        h2, h4, h6 {
+            color: $pink;
+            font-family: "Hatton";
+            font-size: 3.3vw;
+            margin: 12px 0;
+        }
+
+        h3, h5 {
+            color: black;
+            font-size: 3vw;
+        }
+
+        p, ul, ol, li {
+            font-family: 'Garet';
+        }
+
+        blockquote {
+            font-style: italic;
+        }
+        
+        a {
+            color: $pink;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        #conclusionContainer {
+            margin-bottom: 100px;
+        }
+    }
+
+    #blogPostNavContainer {
+        font-family: 'Garbata';
+        font-weight: 600;
+        font-style: italic;
+        color: $pink;
+        position: absolute;
+        left: 0;
+        bottom: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        font-size: 3vw;
+    }
+}

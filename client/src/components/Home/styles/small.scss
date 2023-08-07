@@ -1,20 +1,25 @@
 @import '../../colors.scss';
 
 @media (max-width: 640px) {
-    .minifiedPhoto {
+    .minifiedPhoto,
+    #outer-container>div {
         display: block !important;
     }
     
-    #homeBurgerIcon {
+    #homeBurgerIcon,
+    button#react-burger-menu-btn {
         display: block !important;
         width: 35px !important;
         height: 35px !important;
         position: absolute !important;
         right: 35px !important;
         top: 35px !important;
+        z-index: 99 !important;
         left: unset !important;
-        cursor: pointer;
-        z-index: 99;
+    }
+
+    button#react-burger-menu-btn {
+        z-index: 100 !important;
     }
 
     section#landing {
