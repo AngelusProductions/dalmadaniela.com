@@ -45,7 +45,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
       </div>
 
       <div id='blogPageHilightsContainer'>
-        {blogPosts.map(({ id, name, introHtml, photoUrl }) => (
+        {blogPosts.map(({ id, name, photoUrl }) => (
           <div id={`blogPageBlogPost-${id}`} key={id} className='blogPageBlogPostContainer clickable'>
             <h2>{name}</h2>
             <img src={photoUrl} />
@@ -53,7 +53,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
         ))}
       </div>
 
-      {blogPosts.length  > 0 && (
+      {blogPosts.length  > 3 && (
         <Link id='blogPageAllBlogPostsLink' to={paths.blog.allBlogPosts} className='clickable'>
           <span>{t.morePosts}</span>
         </Link>
