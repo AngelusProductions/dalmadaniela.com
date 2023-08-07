@@ -3,7 +3,7 @@ const { getBlogPost, getAllBlogPosts, createBlogPost } = require('../data/blog')
 const { v4 } = require('uuid');
 
 exports.getBlogPost = async (req, res, __) => {
-  const blogPost = await getBlogPost(req.params.id)
+  const blogPost = await getBlogPost(req.params.name)
   sendJson(res, 200, { blogPost });
 };
 

@@ -7,7 +7,7 @@ export const paths = {
   blog: {
     page: '/blog',
     allBlogPosts: '/blog/posts',
-    blogPost: '/blog/posts/:id',
+    blogPost: '/blog/posts/:name',
     create: '/blog/create'
   },
   team: '/team',

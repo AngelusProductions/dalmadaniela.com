@@ -24,27 +24,28 @@ export const AllBlogPosts = ({ blogPosts, getAllBlogPosts }) => {
   }, [])
 
   return (
-  <div id="allBlogPostsPageContainer">
-    <HomeIcon />
-    <BackIcon path={paths.blog.page} pink />
+    <div id="allBlogPostsPageContainer">
+      <HomeIcon />
+      <BackIcon path={paths.blog.page} pink />
 
-    <div id='allBlogPostsPageTitleContainer'>
-      <h1>{t.title}</h1>
-      <img src={i.icons.documents} />
-    </div>
+      <div id='allBlogPostsPageTitleContainer'>
+        <h1>{t.title}</h1>
+        <img src={i.icons.documents} />
+      </div>
 
-    <div id='allBlogPostsPageBlogPostsList'>
-      {blogPosts.map(({ id, name, photoUrl }) => (
-          <Link to={`${paths.blog.allBlogPosts}/${id}`}>
-            <div id={`allBlogPostsPageBlogPost-${id}`} key={id} className='allBlogPostsPageBlogPostContainer clickable'>
-              <h2>{name}</h2>
-              <img src={photoUrl} />
-            </div>
-          </Link>
-        ))}
+      <div id='allBlogPostsPageBlogPostsList'>
+        {blogPosts.map(({ id, name, photoUrl }) => (
+            <Link to={`${paths.blog.allBlogPosts}/${encodeURI(name)}`}>
+              <div id={`allBlogPostsPageBlogPost-${id}`} key={id} className='allBlogPostsPageBlogPostContainer clickable'>
+                <h2>{name}</h2>
+                <img src={photoUrl} />
+              </div>
+            </Link>
+          ))}
+      </div>
     </div>
-  </div>
-)}
+  )
+}
 
 const mapState = state => {
   return {
