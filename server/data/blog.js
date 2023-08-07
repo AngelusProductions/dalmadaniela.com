@@ -5,13 +5,16 @@ mongoose.connect(process.env.DEV_DATABASE);
 
 const BlogPost = require('../models/BlogPost');
 
-
 async function getAllBlogPosts() {
   try {
-    const blogPosts = await BlogPost.collection.find();
-    
-    console.log(blogPosts)
-    console.log('Finished fetching all blog posts.');
+    let blogPosts = []
+
+    for await (const doc of BlogPost.find()) {
+      doc.set('field', 'value')
+      blogPosts.push(await doc.save())
+    }
+
+    console.log(blogPosts, 'Finished fetching all blog posts.');
     
     return blogPosts
   } catch (e) {
@@ -22,11 +25,9 @@ async function getAllBlogPosts() {
 
 async function createBlogPost(blogPostData) {
   try {
-    console.log(blogPostData)
-
     const blogPost = await BlogPost.collection.insertOne(blogPostData);
     
-    console.log('Finished inserting blog post.');
+    console.log(blogPost, 'Finished creating blog post.');
     
     return blogPost
   } catch (e) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -46,24 +46,22 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
 
       <div id='blogPageHilightsContainer'>
         {blogPosts.map(({ id, name, introHtml, photoUrl }) => (
-          <div id={`blogPageBlogPost-${id}`} key={id} className='blogPageBlogPostContainer'>
+          <div id={`blogPageBlogPost-${id}`} key={id} className='blogPageBlogPostContainer clickable'>
             <h2>{name}</h2>
-            <div id='blogPageBlogPostIntroContainer'>
-              {introHtml}
-            </div>
             <img src={photoUrl} />
           </div>
         ))}
       </div>
 
-      <Link id='blogPageAllBlogPostsLink' to={paths.blog.allBlogPosts}>
-        <span>{t.morePosts}</span>
-      </Link>
+      {blogPosts.length  > 0 && (
+        <Link id='blogPageAllBlogPostsLink' to={paths.blog.allBlogPosts} className='clickable'>
+          <span>{t.morePosts}</span>
+        </Link>
+      )}
     </div>
 )}
 
 const mapState = state => {
-  debugger
   return {
     currentUser: state.currentUser,
     blogPosts: state.blog.blogPosts

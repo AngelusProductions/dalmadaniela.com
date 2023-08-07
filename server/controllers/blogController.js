@@ -2,12 +2,12 @@ const { sendJson } = require('../handlers/util');
 const { getAllBlogPosts, createBlogPost } = require('../data/blog');
 const { v4 } = require('uuid');
 
-exports.getAllBlogPosts = (req, res, next) => {
-  const blogPosts = getAllBlogPosts()
+exports.getAllBlogPosts = async (_, res, __) => {
+  const blogPosts = await getAllBlogPosts()
   sendJson(res, 200, { blogPosts });
 };
 
-exports.createBlogPost = (req, res, next) => {
+exports.createBlogPost = async (req, res, _) => {
   const newBlogPost = {
     id: v4(),
     createdAt: new Date(),
@@ -15,7 +15,7 @@ exports.createBlogPost = (req, res, next) => {
     ...req.body
   }
 
-  const blogPost = createBlogPost(newBlogPost)
+  const blogPost = await createBlogPost(newBlogPost)
 
   sendJson(res, 201, { blogPost });
 };

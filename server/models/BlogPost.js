@@ -3,7 +3,7 @@ const { v4 } = require('uuid');
 
 const blogPostSchema = new mongoose.Schema({
   id: {
-    type: Number,
+    type: String,
     index: {
       unique: true
     },
