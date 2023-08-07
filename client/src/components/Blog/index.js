@@ -46,7 +46,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
 
       <div id='blogPageHilightsContainer'>
         {blogPosts.map(({ id, name, photoUrl }) => (
-          <Link to={`${paths.blog.allBlogPosts}/${id}`}>
+          <Link to={`${paths.blog.allBlogPosts}/${name.replace(/ /g,"_")}`}>
             <div id={`blogPageBlogPost-${id}`} key={id} className='blogPageBlogPostContainer clickable'>
               <h2>{name}</h2>
               <img src={photoUrl} />

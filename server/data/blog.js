@@ -5,9 +5,9 @@ mongoose.connect(process.env.DEV_DATABASE);
 
 const BlogPost = require('../models/BlogPost');
 
-async function getBlogPost(id) {
+async function getBlogPost(name) {
   try {
-    const blogPost = await BlogPost.findOne({ id })
+    const blogPost = await BlogPost.findOne({ name })
 
     console.log(blogPost, 'Finished fetching blog post.');
     

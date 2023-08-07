@@ -9,8 +9,8 @@ export const createBlogPost = async payload => {
   return response.data
 }
 
-export const getBlogPost = async id => {
-  const response = await axios.get(`${ROOT_API_URL}${apiEndpoints.blogPosts.getAll}/${id}`)
+export const getBlogPost = async name => {
+  const response = await axios.get(`${ROOT_API_URL}${apiEndpoints.blogPosts.getAll}/${encodeURI(name)}`)
   return response.data
 }
 
