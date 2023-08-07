@@ -21,6 +21,7 @@ router.post('/auth/jwt', authController.decodeJwt);
 
 router.post('/auth/password', authController.login);
 
-router.post('/blogpost/create', blogController.createBlogPost);
+router.post('/blogposts', blogController.getAllBlogPosts);
+router.post('/blogposts/create', blogController.createBlogPost);
 
 module.exports = router;

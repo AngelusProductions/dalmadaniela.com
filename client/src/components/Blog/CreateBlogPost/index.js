@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import getYouTubeID from 'get-youtube-id'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 import HomeIcon from '../../UI/HomeIcon'
+import BackIcon from '../../UI/BackIcon'
 import TipTap from '../../UI/tiptap/TipTap'
 
 import { paths } from '../../../constants/paths'
@@ -13,34 +15,21 @@ import { uploadFileToStorage } from '../../../api/google'
 import { createBlogPost } from '../../../api/blog'
 
 import './index.scss'
-import { useNavigate } from 'react-router'
 
 const t = {
   title: 'Create a Blog Post',
   create: 'Create',
   intro: 'Intro',
+  introPlaceholder: "Type intro here...",
   body: 'Body',
+  bodyPlaceholder: "Type body here...",
   conclusion: 'Conclusion',
+  conclusionPlaceholder: "Type conlusion here...",
   youtubeLink: 'Insert YouTube Link',
+  preview: 'Preview',
   remove: 'Remove',
-  submit: 'Submit',
   validationError: 'Check yourself, dummy.',
   youtubeRegex: /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/
-}
-
-const tipTapProps = {
-  withToolbar: true,
-  withTaskListExtension: true,
-  withLinkExtension: true,
-  withEmojisReplacer: true,
-  withPopover: true,
-  withTypographyExtension: true,
-  withHexColorsDecorator: true,
-  withMentionSuggestion: true,
-  withEmojiSuggestion: true,
-  withCodeBlockLowlightExtension: true,
-  withPlaceholderExtension: true,
-  spellcheck: true,
 }
 
 export const CreateBlogPost = props => {
@@ -56,6 +45,8 @@ export const CreateBlogPost = props => {
   const [file, setFile] = useState(null);
   
   const onCreate = () => {
+    debugger
+
     if(!file || blogPostName.length === 0 
       || !(introEditor && bodyEditor && conclusionEditor))
       setIsValidationError(true)
@@ -92,6 +83,7 @@ export const CreateBlogPost = props => {
   return (
     <div id='createBlogPostContainer'>
       <HomeIcon />
+      <BackIcon path={paths.blog.page} />
       <div id='createBlogPostTitleContainer'>
         <h1>{t.title}</h1>
         <img src={i.icons.document} />
@@ -105,10 +97,14 @@ export const CreateBlogPost = props => {
       <div id='createBlogPostTipTapContainer'>
         <div className='tipTapEditorContainer'>
           <h2 className='tipTabEditorLabel'>{t.intro}</h2>
-          <TipTap
-            onChange={onIntroChange}
-            {...tipTapProps}
-          />
+          <TipTap onChange={onIntroChange} placeholder={t.introPlaceholder} />
+        </div> 
+
+        <input type='file' name='file' onChange={handleFileChange}/>
+
+        <div className='tipTapEditorContainer'>
+          <h2 className='tipTabEditorLabel'>{t.body}</h2>
+          <TipTap onChange={onBodyChange} placeholder={t.bodyPlaceholder} />
         </div> 
 
         <h2 id='youtubeLinkTitle'>{t.youtubeLink}</h2> 
@@ -128,25 +124,12 @@ export const CreateBlogPost = props => {
               setYoutubeLink('')
           }}
         >
-          {isYoutubeLinkSubmitted ? t.remove : t.submit}
+          {isYoutubeLinkSubmitted ? t.remove : t.preview}
         </button>
 
         <div className='tipTapEditorContainer'>
-          <h2 className='tipTabEditorLabel'>{t.body}</h2>
-          <TipTap
-            onChange={onBodyChange}
-            {...tipTapProps}
-          />
-        </div> 
-
-        <input type='file' name='file' onChange={handleFileChange}/>
-
-        <div className='tipTapEditorContainer'>
           <h2 className='tipTabEditorLabel'>{t.conclusion}</h2>
-          <TipTap
-            onChange={onConclusionChange}
-            {...tipTapProps}
-          />
+          <TipTap onChange={onConclusionChange} placeholder={t.conclusionPlaceholder} />
         </div> 
 
         {isValidationError && (

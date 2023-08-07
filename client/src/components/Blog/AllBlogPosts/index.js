@@ -1,10 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import { paths } from '../../../constants/paths'
 import { i } from '../../../constants/data/assets'
 
 import './index.scss'
+import HomeIcon from '../../UI/HomeIcon'
+import BackIcon from '../../UI/BackIcon'
 
 const t = {
   title: 'All Posts'
@@ -13,15 +14,9 @@ const t = {
 export const AllBlogPosts = props => {
 
   return (
-    <div id="allBlogPostsContainer">
-    <div id='allBlogPostsNavContainer'>
-      <Link to={paths.home}>
-        <img id='allBlogPostsHomeIcon' className='clickable' src={i.icons.home} />
-      </Link>      
-      <Link to={paths.home}>
-        <img id='allBlogPostsBackIcon' className='clickable' src={i.icons.back} />
-      </Link>
-    </div>
+  <div id="allBlogPostsContainer">
+    <HomeIcon />
+    <BackIcon path={paths.blog.page} pink />
 
     <div id='allBlogPostsTitleContainer'>
       <h1>{t.title}</h1>
@@ -29,7 +24,7 @@ export const AllBlogPosts = props => {
     </div>
 
     <div id='allBlogPostsList'>
-
+      
     </div>
   </div>
 )}

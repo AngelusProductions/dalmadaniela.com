@@ -76,7 +76,7 @@
 
     input[type="text"] {
         margin: auto;
-        width: calc(50% - 10px);
+        width: 80%;
         font-family: 'Garet';
         color: $pink;
         padding-left: 10px;
@@ -109,10 +109,40 @@
         display: flex;
         flex-direction: column;
 
+        h2 {
+            margin-bottom: unset;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Garet';
+        }
+
+        h2, h4, h6 {
+            color: $pink;
+        }
+
+        h1, h3, h5 {
+            color: black;
+        }
+
+        p, ul, ol, li {
+            font-family: 'Garet';
+        }
+
         ul, ol, li {
             list-style: unset;
         }
+
+        blockquote {
+            font-style: italic;
+        }
         
+        a {
+            color: $pink;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
         > nav {
             @include white-card;
 

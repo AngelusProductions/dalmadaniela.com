@@ -7,7 +7,7 @@ import { PasswordField, EmailField } from '../AuthTextFields'
 
 import { paths } from '../../../constants/paths'
 import { loginWithPassword } from '../../../api/login'
-import { changeAuthFieldText } from '../../../actions/formAuth'
+import { changeAuthFieldText } from '../../../actions/auth'
 import { loginFailure, loginSuccess, loginRequest } from '../../../actions/login'
 
 import './index.scss'
@@ -86,7 +86,7 @@ const Login = props => {
 }
 
 const mapState = state => {
-  const { email, password, loading, errors } = state.authForms.login
+  const { email, password, loading, errors } = state.auth.login
   const currentUser = state.currentUser
 
   return {

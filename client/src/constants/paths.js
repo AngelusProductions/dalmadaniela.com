@@ -25,8 +25,9 @@ export const apiEndpoints = {
   signup: '/signup',
   payment: '/stripe',
   upload: '/upload',
-  blogPost: {
-    create: '/blogpost/create'
+  blogPosts: {
+    getAll: '/blogposts',
+    create: '/blogposts/create'
   }
 }
 

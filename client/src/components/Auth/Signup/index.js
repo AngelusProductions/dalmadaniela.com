@@ -7,7 +7,7 @@ import { PasswordField, PasswordConfField, EmailField } from '../AuthTextFields'
 
 import { paths } from '../../../constants/paths'
 import { loginSuccess } from '../../../actions/login'
-import { changeAuthFieldText } from '../../../actions/formAuth'
+import { changeAuthFieldText } from '../../../actions/auth'
 import { registerAccountSuccess, registerAccountFailure, registerAccountRequest } from '../../../actions/signup'
 import { sendUserRegistrationRequest } from '../../../api/signup'
 import { resolveSignupErrors } from '../../../utils/errorHandlers'
@@ -102,7 +102,7 @@ const mapStateToProps = state => {
     passwordConf,
     loading,
     errors
-  } = state.authForms.signup
+  } = state.auth.signup
 
   return {
     email,

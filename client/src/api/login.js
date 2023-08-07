@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { useLocation } from 'react-router'
 
 import { apiEndpoints, ROOT_API_URL } from '../constants/paths'
 

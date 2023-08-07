@@ -26,7 +26,7 @@ import './colors.scss'
 
 const App = ({ currentUser, onBoot }) => {
   useEffect(() => {
-    if (currentUser.token && !currentUser.loggedIn) {
+    if (currentUser && currentUser.token && !currentUser.loggedIn) {
       onBoot(currentUser.token)
     }
   })
