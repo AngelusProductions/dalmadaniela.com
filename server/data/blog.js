@@ -5,6 +5,19 @@ mongoose.connect(process.env.DEV_DATABASE);
 
 const BlogPost = require('../models/BlogPost');
 
+async function getBlogPost(id) {
+  try {
+    const blogPost = await BlogPost.findOne({ id })
+
+    console.log(blogPost, 'Finished fetching blog post.');
+    
+    return blogPost
+  } catch (e) {
+    console.log(e);
+    return e
+  }
+}
+
 async function getAllBlogPosts() {
   try {
     let blogPosts = []
@@ -36,5 +49,6 @@ async function createBlogPost(blogPostData) {
   }
 }
 
+module.exports.getBlogPost = getBlogPost;
 module.exports.getAllBlogPosts = getAllBlogPosts;
 module.exports.createBlogPost = createBlogPost;

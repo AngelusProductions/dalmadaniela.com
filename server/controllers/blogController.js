@@ -1,6 +1,11 @@
 const { sendJson } = require('../handlers/util');
-const { getAllBlogPosts, createBlogPost } = require('../data/blog');
+const { getBlogPost, getAllBlogPosts, createBlogPost } = require('../data/blog');
 const { v4 } = require('uuid');
+
+exports.getBlogPost = async (req, res, __) => {
+  const blogPost = await getBlogPost(req.params.id)
+  sendJson(res, 200, { blogPost });
+};
 
 exports.getAllBlogPosts = async (_, res, __) => {
   const blogPosts = await getAllBlogPosts()

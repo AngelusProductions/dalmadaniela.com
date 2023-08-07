@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { paths } from '../../../constants/paths'
 import { i } from '../../../constants/data/assets'
@@ -32,10 +33,12 @@ export const AllBlogPosts = ({ blogPosts }) => {
 
     <div id='allBlogPostsPageBlogPostsList'>
       {blogPosts.map(({ id, name, photoUrl }) => (
-          <div id={`allBlogPostssPageBlogPost-${id}`} key={id} className='allBlogPostsPageBlogPostContainer clickable'>
-            <h2>{name}</h2>
-            <img src={photoUrl} />
-          </div>
+          <Link to={`${paths.blog.allBlogPosts}/${id}`}>
+            <div id={`allBlogPostsPageBlogPost-${id}`} key={id} className='allBlogPostsPageBlogPostContainer clickable'>
+              <h2>{name}</h2>
+              <img src={photoUrl} />
+            </div>
+          </Link>
         ))}
     </div>
   </div>

@@ -21,6 +21,7 @@ router.post('/auth/jwt', authController.decodeJwt);
 
 router.post('/auth/password', authController.login);
 
+router.get('/blogposts/:id', blogController.getBlogPost);
 router.get('/blogposts', blogController.getAllBlogPosts);
 router.post('/blogposts/create', blogController.createBlogPost);
 
