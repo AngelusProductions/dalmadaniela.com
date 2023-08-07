@@ -109,9 +109,7 @@ export const CreateBlogPost = props => {
 
         <h2 id='youtubeLinkTitle'>{t.youtubeLink}</h2> 
         {isYoutubeLinkSubmitted ? (
-          <LiteYouTubeEmbed 
-            id={getYouTubeID(youtubeLink)} 
-          />
+          <LiteYouTubeEmbed id={getYouTubeID(youtubeLink)} />
         ) : (
           <input type='text' onChange={e => setYoutubeLink(e.target.value)} />
         )}
