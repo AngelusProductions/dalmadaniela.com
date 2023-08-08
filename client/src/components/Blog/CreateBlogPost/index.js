@@ -45,8 +45,6 @@ export const CreateBlogPost = props => {
   const [file, setFile] = useState(null);
   
   const onCreate = () => {
-    debugger
-
     if(!file || blogPostName.length === 0 
       || !(introEditor && bodyEditor && conclusionEditor))
       setIsValidationError(true)
