@@ -28,6 +28,9 @@ export const apiEndpoints = {
   blogPosts: {
     getAll: '/blogposts',
     create: '/blogposts/create'
+  },
+  superClass: {
+    checkIP: '/superClass/checkIP'
   }
 }
 
