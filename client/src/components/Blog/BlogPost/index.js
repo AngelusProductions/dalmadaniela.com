@@ -26,7 +26,7 @@ import { HOST_URL } from '../../../constants/config'
 import { i } from '../../../constants/data/assets'
 import { getBlogPostRequest, getBlogPostFailure, getBlogPostSuccess } from '../../../actions/blog'
 
-import './index.scss'
+import './styles/index.scss'
 
 const t = {
   homeLink: 'Go back home',
