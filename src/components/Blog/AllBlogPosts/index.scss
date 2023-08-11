@@ -1,8 +1,7 @@
 @import '../../colors.scss';
 
 #allBlogPostsPageContainer {
-    background-color: #FEFF7C;
-    height: 100vh;
+    background-color: $yellow;
     padding: 50px;
 
     #allBlogPostsPageTitleContainer {
@@ -27,15 +26,15 @@
     }
 
     #allBlogPostsPageBlogPostsList {
-        height: 69%;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         padding: 50px;
         box-sizing: border-box;
+        flex-direction: column;
 
         a {
-            height: 100%;
+            margin-bottom: 50px;
 
             .allBlogPostsPageBlogPostContainer {
                 background: white;
@@ -52,6 +51,7 @@
                 flex-direction: column;
                 overflow: hidden;
                 z-index: 99;
+                max-width: 1000px;
         
                 h2 {
                     margin-bottom: 25px;

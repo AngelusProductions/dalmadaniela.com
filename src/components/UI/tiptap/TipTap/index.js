@@ -9,7 +9,7 @@ import Placeholder from '@tiptap/extension-placeholder'
 
 import { Toolbar } from '../Toolbar'
 import { Popover } from '../Popover'
-import { EmojiSuggestion, MentionSuggestion, EmojiReplacer, HexColorDecorator } from '../extensions'
+import { EmojiSuggestion, MentionSuggestion, HexColorDecorator } from '../extensions'
 
 import './index.scss'
 
@@ -25,7 +25,6 @@ function TipTap({
     withPlaceholderExtension = true,
     withMentionSuggestion = true,
     withEmojiSuggestion = true,
-    withEmojisReplacer = true,
     withHexColorsDecorator = true,
     withSpellCheck = true,
     onChange
@@ -65,10 +64,6 @@ function TipTap({
 
     if (withEmojiSuggestion) {
         extensions.push(EmojiSuggestion)
-    }
-
-    if (withEmojisReplacer) {
-        extensions.push(EmojiReplacer)
     }
 
     if (withHexColorsDecorator) {

@@ -19,9 +19,10 @@ const t = {
 export const AllBlogPosts = ({ blogPosts, getAllBlogPosts }) => {
 
   useEffect(() => {
-    if(blogPosts.length === 0)
-      getAllBlogPosts()
+    getAllBlogPosts()
   }, [])
+
+  debugger
 
   return (
     <div id="allBlogPostsPageContainer">
@@ -34,8 +35,10 @@ export const AllBlogPosts = ({ blogPosts, getAllBlogPosts }) => {
       </div>
 
       <div id='allBlogPostsPageBlogPostsList'>
-        {blogPosts.map(({ id, name, photoUrl }) => (
-            <Link to={`${paths.blog.allBlogPosts}/${name.replace(/ /g,"_")}`}>
+        {blogPosts.sort((a, b) => {
+          return new Date(b.createdAt) - new Date(a.createdAt)
+        }).map(({ id, name, photoUrl }) => (
+            <Link to={`${paths.blog.allBlogPosts}/${name.replace(/ /g,"_")}`} key={id}>
               <div id={`allBlogPostsPageBlogPost-${id}`} key={id} className='allBlogPostsPageBlogPostContainer clickable'>
                 <h2>{name}</h2>
                 <img src={photoUrl} />

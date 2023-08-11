@@ -111,6 +111,7 @@
 
         h2 {
             margin-bottom: unset;
+            font-family: 'Hatton' !important;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -130,7 +131,7 @@
         }
 
         ul, ol, li {
-            list-style: unset;
+            list-style: disc;
         }
 
         blockquote {

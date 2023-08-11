@@ -17,14 +17,16 @@ const Home = () => {
   const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
   const [IP, setIP] = useState(null)
 
-  useEffect(() => {
-    axios.get(t.IPUrl).then(res => {
-      setIP(res.data.ip)
-      checkForReoccuringIP(res.data.ip).then(res => {
-        debugger
-      })
-    })
-  }, [])
+  // useEffect(() => {
+  //   axios.get(t.IPUrl).then(res => {
+  //     setIP(res.data.ip)
+  //     checkForReoccuringIP(res.data.ip).then(isReocurringIP => {
+  //       if(!isReocurringIP) {
+  //         setShowSuperClassPopUp(true)
+  //       }
+  //     })
+  //   })
+  // }, [])
 
   const onSuperClassPopUpSubmitClick = async () => {
     const res = await axios.get(t.IPUrl);
@@ -32,11 +34,11 @@ const Home = () => {
 
   return (
     <main id='homePageContainer'>
-      {showSuperClassPopUp && (
+      {/* {showSuperClassPopUp && (
         <SuperClassPopUp 
           onSubmitClick={onSuperClassPopUpSubmitClick}
         />
-      )}
+      )} */}
       <img 
         id='homeBurgerIcon' 
         src={i.icons.burger} 
