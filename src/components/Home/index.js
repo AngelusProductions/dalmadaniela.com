@@ -31,10 +31,8 @@ const Home = () => {
 
   const onSuperClassPopUpSubmitClick = async email => {
     const res = await saveSuperClassSubscribeInfo({ email, IP })
-    debugger
     if (res.isSuccess) {
       setShowSuperClassPopUpThankYou(true)
-      debugger
       setTimeout(() => {
         setShowSuperClassPopUp(false)
       }, 2000)
