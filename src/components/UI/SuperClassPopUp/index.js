@@ -18,13 +18,27 @@ const t = {
         8: 'ALMOST FULL!'
     },
     email: 'Email *',
-    subscribe: 'Subscribe'
+    subscribe: 'Subscribe',
+    thankYou1: 'Thank you for subscribing!',
+    thankYou2: '(This popup will automatically close in 2 seconds.)',
 }
 
-const SuperClassPopUp = ({ onCloseClick, onSubscribeClick }) => {
+const SuperClassPopUp = ({ onCloseClick, onSubscribeClick, showThankYou }) => {
     const [email, setEmail] = useState('')
+    const [validationError, setValidationError] = useState(null)
 
-    return (
+    return showThankYou ? (
+        <div id='superClassPopUpContainer' className='thankYou'>
+            <img 
+                id='superClassPopUpCloseButton' 
+                className='clickable'
+                src={i.icons.close} 
+                onClick={onCloseClick} 
+            />
+            <span className='thankYou1'>{t.thankYou1}</span>
+            <span className='thankYou2'>{t.thankYou2}</span>
+        </div>
+    ) : (
         <div id='superClassPopUpContainer'>
             <Countdown date={new Date(2023, 10, 1)}  />
             <img 
@@ -47,16 +61,20 @@ const SuperClassPopUp = ({ onCloseClick, onSubscribeClick }) => {
                     </span>
                 ))}
             </div>
-            <span id='superClassPopUpSubHeader'>{t.subHeader}</span>
             <div id='superClassPopUpEmailContainer'>
                 <label>{t.email}</label>
                 <input value={email} onChange={e => setEmail(e.target.value)} />
             </div>
+            {validationError && <span id='superClassValidationError'>{validationError}</span>}
             <button 
                 id='superClassPopUpSubscribeButton' 
                 className='clickable'
-                onClick={onSubscribeClick}
-            
+                onClick={() => {
+                    if (email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/))
+                        onSubscribeClick(email)
+                    else 
+                        setValidationError('Invalid email :/')
+                }}
             >
                 {t.subscribe}
             </button>
