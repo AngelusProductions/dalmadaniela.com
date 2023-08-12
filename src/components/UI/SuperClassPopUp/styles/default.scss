@@ -87,7 +87,7 @@
         }
     }
 
-    #superClassValidationError {
+    #superClassPopUpValidationError {
         color: $pink;
         font-size: 3vw;
         text-align: center;
@@ -103,6 +103,7 @@
         color: white;
         font-size: 3vw;
         cursor: pointer;
+        padding-top: 0.6vw;
 
         &:hover {
             background: black;

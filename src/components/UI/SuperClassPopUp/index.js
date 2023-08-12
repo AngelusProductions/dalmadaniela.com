@@ -65,7 +65,7 @@ const SuperClassPopUp = ({ onCloseClick, onSubscribeClick, showThankYou }) => {
                 <label>{t.email}</label>
                 <input value={email} onChange={e => setEmail(e.target.value)} />
             </div>
-            {validationError && <span id='superClassValidationError'>{validationError}</span>}
+            {validationError && <span id='superClassPopUpValidationError'>{validationError}</span>}
             <button 
                 id='superClassPopUpSubscribeButton' 
                 className='clickable'
