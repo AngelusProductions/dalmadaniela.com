@@ -35,10 +35,13 @@ const Home = () => {
   return (
     <main id='homePageContainer'>
       {showSuperClassPopUp && (
-        <SuperClassPopUp 
-          onCloseClick={() => setShowSuperClassPopUp(false)}
-          onSubscribeClick={onSuperClassPopUpSubmitClick}
-        />
+        <>
+          <SuperClassPopUp 
+            onCloseClick={() => setShowSuperClassPopUp(false)}
+            onSubscribeClick={onSuperClassPopUpSubmitClick}
+          />
+          <div id='mobileMenuShadow'/>
+        </>
       )}
       <img 
         id='homeBurgerIcon' 
@@ -47,7 +50,7 @@ const Home = () => {
         onClick={() => setShowMobileMenu(!showMobileMenu)} 
       />
       <Navbar />
-      {showMobileMenu || showSuperClassPopUp && (
+      {showMobileMenu && (
         <>
           <div id='mobileMenuShadow' onClick={() => setShowMobileMenu(false)}/>
           <Navbar burgerMenu={showMobileMenu} />

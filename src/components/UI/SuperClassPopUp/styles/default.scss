@@ -1,8 +1,8 @@
-@import '../../colors.scss';
+@import '../../../colors.scss';
 
 #superClassPopUpContainer {
     position: absolute;
-    z-index: 99;
+    z-index: 100;
     width: calc(50vw - 6px);
     height: calc(67vh - 6px);
     background: $yellow;
@@ -36,16 +36,20 @@
         span#\32 {
             font-style: italic;
         }
+
         span#\33 {
             display: inline-block;
         }
+
         span#\34 {
             color: $pink;
             margin: 0 0.2vmin 0 1vmin;
         }
+
         span#\36 {
             color: $pink;
         }
+
         span#\38 {
             display: block;
             margin-top: 10px;

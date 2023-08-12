@@ -1,0 +1,11 @@
+@import '../../../colors.scss';
+
+@media (max-width: 640px) {
+    #countdownContainer {
+        .countdownSection {
+            width: 15% !important;
+            margin-top: 25px;
+            font-size: 2vmin !important;
+        }
+    }
+}

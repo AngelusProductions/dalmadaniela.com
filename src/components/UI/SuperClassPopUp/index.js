@@ -4,7 +4,7 @@ import Countdown from '../Countdown'
 
 import { i } from '../../../constants/data/assets'
 
-import './index.scss'
+import './styles/index.scss'
 
 const t = {
     header: {

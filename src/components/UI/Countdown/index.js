@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactCountdown from 'react-countdown'
 
-import './index.scss'
+import './styles/index.scss'
 
 const t = {
     days: 'Days',
