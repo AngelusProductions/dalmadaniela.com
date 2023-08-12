@@ -1,0 +1,20 @@
+@import '../../colors.scss';
+
+#countdownContainer {
+    display: flex;
+    font-family: 'Hatton';
+    justify-content: space-between;
+
+    .countdownSection {
+        background: $pink;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+        width: 21%;
+        color: white;
+        font-size: 1.6vmin;
+        border: 1px solid black;
+    }
+}

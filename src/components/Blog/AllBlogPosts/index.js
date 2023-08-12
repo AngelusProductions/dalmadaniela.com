@@ -21,9 +21,7 @@ export const AllBlogPosts = ({ blogPosts, getAllBlogPosts }) => {
   useEffect(() => {
     getAllBlogPosts()
   }, [])
-
-  debugger
-
+  
   return (
     <div id="allBlogPostsPageContainer">
       <HomeIcon />

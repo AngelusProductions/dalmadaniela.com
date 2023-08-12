@@ -19,6 +19,7 @@ export const i = {
         burger: `${bucketPrefix}/icons/burger.png`,
         check: `${bucketPrefix}/icons/check.svg`,
         copy: `${bucketPrefix}/icons/copy.png`,
+        close: `${bucketPrefix}/icons/close.png`,
         document: `${bucketPrefix}/icons/document.svg`,
         documents: `${bucketPrefix}/icons/documents.png`,
         email: `${bucketPrefix}/icons/email.svg`,

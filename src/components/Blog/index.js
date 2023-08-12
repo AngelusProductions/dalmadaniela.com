@@ -24,8 +24,6 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
     getAllBlogPosts()
   }, [])
 
-  debugger
-
   return (
     <div id="blogPageContainer">
       <HomeIcon />
