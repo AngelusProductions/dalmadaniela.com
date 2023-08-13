@@ -17,6 +17,16 @@
         #introContainer {
             margin-bottom: 50px;
         }
+        
+        #mobileMenuShadow {
+            animation: cubic-bezier(0.455, 0.03, 0.515, 0.955) 1000ms fadeIn;
+            background: black;
+            width: 100%;
+            height: 100%;
+            z-index: 98;
+            position: absolute;
+            cursor: n-resize;
+        }
 
         p {
             font-family: 'Garet';
@@ -114,5 +124,15 @@
         display: flex;
         justify-content: space-around;
         font-size: 3vw;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

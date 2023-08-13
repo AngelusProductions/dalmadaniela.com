@@ -1,5 +1,51 @@
 @import '../../../colors.scss';
 
 @media (min-width: 1024px) {
-    
+    #superClassPopUpContainer {
+        width: calc(75vw - 6px);
+        left: 12.5vw;
+        font-size: 1vmin;
+        height: 75vh;
+
+        &.thankYou {
+            height: 50vh;
+        }
+
+        #superClassPopUpCloseButton {
+            width: 3vw;
+        }
+
+        #superClassPopUpHeaderContainer {
+            font-size: 4.3vmin;
+            margin-top: 6vmin;
+        }
+
+        #superClassPopUpEmailContainer {
+            label {
+                font-size: 3.4vmin;
+            }
+
+            input {
+                font-size: 3vmin;
+                height: 50%;
+            }
+        }
+
+        #superClassPopUpSubscribeButton {
+            font-size: 3vw;
+        }
+
+        #superClassPopUpValidationError {
+            font-size: 2vw;
+        }
+
+        .thankYou1 {
+            margin-top: 25px;
+            font-size: 6vw;
+        }
+
+        .thankYou2 {
+            font-size: 2vw;
+        }
+    }
 }

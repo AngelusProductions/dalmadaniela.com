@@ -15,33 +15,46 @@ import {
   LinkedinIcon,
   WhatsappShareButton,
   WhatsappIcon
-} from "react-share";
+} from 'react-share'
+import axios from 'axios'
 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
+import SuperClassPopUp from '../../UI/SuperClassPopUp'
 
 import { paths } from '../../../constants/paths'
 import { getBlogPost } from '../../../api/blog'
 import { HOST_URL } from '../../../constants/config'
 import { i } from '../../../constants/data/assets'
+import { checkForReoccuringIP, saveSuperClassSubscribeInfo } from '../../../api/superClass'
 import { getBlogPostRequest, getBlogPostFailure, getBlogPostSuccess } from '../../../actions/blog'
 
 import './styles/index.scss'
 
 const t = {
   homeLink: 'Go back home',
-  share: 'Share',
-  morePosts: 'Read more posts'
+  morePosts: 'Read more posts',
+  IPUrl: 'https://api.ipify.org/?format=json'
 }
 
 export const BlogPost = ({ blogPost, getBlogPost }) => {
   const { name } = useParams()
   const [isLinkCopied, setIsLinkCopied] = useState(false)
-  
+  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
+  const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
+  const [IP, setIP] = useState(null)
   const currentUrl = `${HOST_URL}${window.location.pathname}`
 
   useEffect(() => {
-    getBlogPost(name.replace(/_/g," "))
+    axios.get(t.IPUrl).then(res => {
+      setIP(res.data.ip)
+      checkForReoccuringIP(res.data.ip).then(isReocurringIP => {
+        if(!isReocurringIP) {
+          setShowSuperClassPopUp(true)
+          getBlogPost(name.replace(/_/g,' '))
+        }
+      })
+    })
   }, [])
 
   const onCopyClick = async () => {
@@ -49,11 +62,31 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
     setIsLinkCopied(true)
   }
 
+  const onSuperClassPopUpSubmitClick = async email => {
+    const res = await saveSuperClassSubscribeInfo({ email, IP })
+    if (res.isSuccess) {
+      setShowSuperClassPopUpThankYou(true)
+      getBlogPost(name.replace(/_/g,' '))
+      setTimeout(() => {
+        setShowSuperClassPopUp(false)
+      }, 2000)
+    }
+  }
+
   return (
-    <div id="blogPostPageContainer">
+    <div id='blogPostPageContainer'>
       <HomeIcon />
       <BackIcon path={paths.blog.page} pink />
-
+      {showSuperClassPopUp && (
+        <>
+          <SuperClassPopUp 
+            onCloseClick={() => setShowSuperClassPopUp(false)}
+            onSubscribeClick={onSuperClassPopUpSubmitClick}
+            showThankYou={showSuperClassPopUpThankYou}
+          />
+          <div id='mobileMenuShadow'/>
+        </>
+      )}
       {blogPost && (
         <div id='blogPostContainer'>
           <h1 id='blogPostName'>{blogPost.name}</h1>

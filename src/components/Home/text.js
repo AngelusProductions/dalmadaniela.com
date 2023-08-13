@@ -39,20 +39,5 @@ export default {
   ],
   classCta: 'Get SuperClass',
   
-  IPUrl: 'https://api.ipify.org/?format=json',
-
-  superClassPopUp: {
-    header: {
-      1: 'Grow up with our ',
-      2: 'SuperClass.',
-      3: 'Sign up ',
-      4: 'today',
-      5: ' and save ',
-      6: '15%',
-      7: " when it's released!",
-    },
-    subheader: 'ALMOST FULL!',
-    email: 'Email *',
-    subscribe: 'Subscribe'
-  }
+  IPUrl: 'https://api.ipify.org/?format=json'
 }

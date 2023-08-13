@@ -7,6 +7,10 @@
         font-size: 2vmin;
         height: 50vh;
 
+        &.thankYou {
+            height: fit-content;
+        }
+
         #superClassPopUpCloseButton {
             width: 5vw;
             position: absolute;
@@ -32,6 +36,14 @@
 
         #superClassPopUpSubscribeButton {
             font-size: 5vw;
+        }
+
+        .thankYou1 {
+            margin-top: 25px;
+            font-size: 6vw;
+        }
+        .thankYou2 {
+            font-size: 4vw;
         }
     }
 }

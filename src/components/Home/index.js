@@ -6,7 +6,7 @@ import Navbar from './Navbar'
 import SuperClassPopUp from '../UI/SuperClassPopUp'
 
 import { i } from '../../constants/data/assets'
-import { checkForReoccuringIP } from '../../api/superClass'
+import { checkForReoccuringIP, saveSuperClassSubscribeInfo } from '../../api/superClass'
 import testimonials from '../../constants/data/testimonials'
 import { paths } from '../../constants/paths'
 import t from './text.js'
@@ -15,6 +15,7 @@ import './styles/index.scss'
 const Home = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
+  const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
   const [IP, setIP] = useState(null)
 
   useEffect(() => {
@@ -28,8 +29,14 @@ const Home = () => {
     })
   }, [])
 
-  const onSuperClassPopUpSubmitClick = async () => {
-    const res = await axios.get(t.IPUrl);
+  const onSuperClassPopUpSubmitClick = async email => {
+    const res = await saveSuperClassSubscribeInfo({ email, IP })
+    if (res.isSuccess) {
+      setShowSuperClassPopUpThankYou(true)
+      setTimeout(() => {
+        setShowSuperClassPopUp(false)
+      }, 2000)
+    }
   }
 
   return (
@@ -39,6 +46,7 @@ const Home = () => {
           <SuperClassPopUp 
             onCloseClick={() => setShowSuperClassPopUp(false)}
             onSubscribeClick={onSuperClassPopUpSubmitClick}
+            showThankYou={showSuperClassPopUpThankYou}
           />
           <div id='mobileMenuShadow'/>
         </>

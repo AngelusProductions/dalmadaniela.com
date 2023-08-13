@@ -30,7 +30,8 @@ export const apiEndpoints = {
     create: '/blogposts/create'
   },
   superClass: {
-    checkIP: '/superClass/checkIP'
+    checkIP: '/superClass/checkIP',
+    saveInfo: '/superClass/saveInfo',
   }
 }
 

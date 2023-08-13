@@ -6,13 +6,13 @@ export const sendPaymentRequest = (
   amount,
   description
 ) => async (token) => {
-  const response = await axios.post(`${ROOT_API_URL}${apiEndpoints.payment}`, {
+  const res = await axios.post(`${ROOT_API_URL}${apiEndpoints.payment}`, {
     description,
     source: token.id,
     email: token.email,
     currency: 'USD',
     amount
   })
-  console.log(response)
-  return response
+  console.log(res)
+  return res
 }
