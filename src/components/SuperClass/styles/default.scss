@@ -40,6 +40,131 @@ main#superClassPage {
         width: 20vw;
     }
 
+    #superClassSignupContainer {
+        position: absolute;
+        z-index: 100;
+        width: calc(90vw - 6px);
+        height: calc(50vh - 6px);
+        background: $yellow;
+        left: 5vw;
+        top: 16vh;
+        min-height: 250px;
+        font-family: "Garet";
+        font-weight: 600;
+        animation: cubic-bezier(0.6, -0.28, 0.735, 0.045) 500ms slideDown;
+        border-radius: 15px;
+        border: 3px solid $pink;
+        padding: 5vw;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.thankYou {
+            height: 33vh;
+        }
+
+        #superClassPopUpCloseButton {
+            width: 3vw;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+
+        #superClassPopUpHeaderContainer {
+            font-size: 3vmin;
+            text-align: center;
+            margin-top: 4vmin;
+
+            span#\32 {
+                font-style: italic;
+            }
+
+            span#\33 {
+                display: inline-block;
+            }
+
+            span#\34 {
+                color: $pink;
+                margin: 0 0.2vmin 0 1vmin;
+            }
+
+            span#\36 {
+                color: $pink;
+            }
+
+            span#\38 {
+                display: block;
+                margin-top: 10px;
+                color: $pink;
+            }
+        }
+
+        #superClassPopUpEmailContainer {
+            height: 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &:focus-visible {
+                outline: none !important;
+            }
+
+            label {
+                font-size: 2.4vmin;
+                font-family: 'Garbata';
+                margin-bottom: 10px;
+            }
+
+            input {
+                border: solid 1px black;
+                height: 25%;
+                font-family: 'Garbata';
+                font-weight: 600;
+                font-size: 2vw;
+                padding: 0 10px;
+            }
+        }
+    
+        #superClassPopUpValidationError {
+            color: $pink;
+            font-size: 3vw;
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: 'Garbata';
+        }
+
+        #superClassPopUpSubscribeButton {
+            background: #DA2A7D;
+            border: none;
+            height: 15%;
+            font-family: 'Hatton';
+            color: white;
+            font-size: 3vw;
+            cursor: pointer;
+            padding-top: 0.6vw;
+
+            &:hover {
+                background: black;
+                color: $yellow;
+            }
+        }
+
+        .thankYou1 {
+            font-family: 'Hatton';
+            font-size: 5vw;
+            text-align: center;
+            color: $pink;
+        }
+
+        .thankYou2 {
+            font-size: 2.5vw;
+            font-weight: initial;
+            text-align: center;
+        }
+    }
+
     #superClassNavigationContainer {
         position: absolute;
         text-align: center;

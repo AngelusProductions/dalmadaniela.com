@@ -8,7 +8,7 @@
         height: 50vh;
 
         &.thankYou {
-            height: 25vh;
+            height: fit-content;
         }
 
         #superClassPopUpCloseButton {
@@ -40,7 +40,7 @@
 
         .thankYou1 {
             margin-top: 25px;
-            font-size: 8vw;
+            font-size: 6vw;
         }
         .thankYou2 {
             font-size: 4vw;
