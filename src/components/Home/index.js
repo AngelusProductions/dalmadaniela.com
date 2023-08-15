@@ -14,23 +14,11 @@ import './styles/index.scss'
 
 const Home = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
+  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
   const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
-  const [IP, setIP] = useState(null)
-
-  useEffect(() => {
-    axios.get(t.IPUrl).then(res => {
-      setIP(res.data.ip)
-      checkForReoccuringIP(res.data.ip).then(isReocurringIP => {
-        if(!isReocurringIP) {
-          setShowSuperClassPopUp(true)
-        }
-      })
-    })
-  }, [])
 
   const onSuperClassPopUpSubmitClick = async email => {
-    const res = await saveSuperClassSubscribeInfo({ email, IP })
+    const res = await saveSuperClassSubscribeInfo({ email })
     if (res.isSuccess) {
       setShowSuperClassPopUpThankYou(true)
       setTimeout(() => {

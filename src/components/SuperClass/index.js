@@ -37,21 +37,9 @@ const t = {
 
 const SuperClass = () => {
   const [showThankYou, setShowThankYou] = useState(false)
-  const [IP, setIP] = useState(null)
-
-  useEffect(() => {
-    axios.get(t.IPUrl).then(res => {
-      setIP(res.data.ip)
-      checkForReoccuringIP(res.data.ip).then(isReocurringIP => {
-        if(isReocurringIP) {
-          setShowThankYou(true)
-        }
-      })
-    })
-  }, [])
 
   const onSubscribeClick = async email => {
-    const res = await saveSuperClassSubscribeInfo({ email, IP })
+    const res = await saveSuperClassSubscribeInfo({ email })
     if (res.isSuccess) {
       setShowThankYou(true)
     }

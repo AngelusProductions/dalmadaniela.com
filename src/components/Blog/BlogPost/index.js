@@ -26,36 +26,22 @@ import { paths } from '../../../constants/paths'
 import { getBlogPost } from '../../../api/blog'
 import { HOST_URL } from '../../../constants/config'
 import { i } from '../../../constants/data/assets'
-import { checkForReoccuringIP, saveSuperClassSubscribeInfo } from '../../../api/superClass'
+import { saveSuperClassSubscribeInfo } from '../../../api/superClass'
 import { getBlogPostRequest, getBlogPostFailure, getBlogPostSuccess } from '../../../actions/blog'
 
 import './styles/index.scss'
 
 const t = {
   homeLink: 'Go back home',
-  morePosts: 'Read more posts',
-  IPUrl: 'https://api.ipify.org/?format=json'
+  morePosts: 'Read more posts'
 }
 
 export const BlogPost = ({ blogPost, getBlogPost }) => {
   const { name } = useParams()
   const [isLinkCopied, setIsLinkCopied] = useState(false)
-  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
+  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
   const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
-  const [IP, setIP] = useState(null)
   const currentUrl = `${HOST_URL}${window.location.pathname}`
-
-  useEffect(() => {
-    axios.get(t.IPUrl).then(res => {
-      setIP(res.data.ip)
-      checkForReoccuringIP(res.data.ip).then(isReocurringIP => {
-        if(!isReocurringIP) {
-          setShowSuperClassPopUp(true)
-          getBlogPost(name.replace(/_/g,' '))
-        }
-      })
-    })
-  }, [])
 
   const onCopyClick = async () => {
     await navigator.clipboard.writeText(currentUrl);
@@ -63,7 +49,7 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
   }
 
   const onSuperClassPopUpSubmitClick = async email => {
-    const res = await saveSuperClassSubscribeInfo({ email, IP })
+    const res = await saveSuperClassSubscribeInfo({ email })
     if (res.isSuccess) {
       setShowSuperClassPopUpThankYou(true)
       getBlogPost(name.replace(/_/g,' '))
