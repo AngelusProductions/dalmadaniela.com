@@ -126,7 +126,7 @@ const FAQ = () => {
             <FlashCard questionId='four' question={t.questions.four} answer={() => (
                 <div id='faqAnswer-five' className='faqAnswer'>
                     <span className='one'>
-                        SuperClass
+                        <Link to={paths.superClass}>SuperClass</Link>
                     </span>
                     <span className='two'>
                         teaches you the only content creation system you need for social media. 

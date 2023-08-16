@@ -10,9 +10,20 @@
             h2 {
                 font-size: 1vw;
             }
+        }
 
-            img {
-                
+        #faqContainer {
+            .faqQuestionContainer {
+                .cardFlipQuestionContainer {
+                    padding: 5px;
+                    font-size: 2vw;
+                }
+
+                .cardFlipAnswerContainer {
+                    span {
+                        font-size: 1vw !important;
+                    }
+                }
             }
         }
     }
