@@ -1,0 +1,30 @@
+@import '../../../colors.scss';
+
+@media (min-width: 1024px) {
+    #faq {
+        #faqTitleContainer {
+            h1 {
+                font-size: 4vw;
+            }
+
+            h2 {
+                font-size: 1vw;
+            }
+        }
+
+        #faqContainer {
+            .faqQuestionContainer {
+                .cardFlipQuestionContainer {
+                    padding: 5px;
+                    font-size: 2vw;
+                }
+
+                .cardFlipAnswerContainer {
+                    span {
+                        font-size: 1vw !important;
+                    }
+                }
+            }
+        }
+    }
+}

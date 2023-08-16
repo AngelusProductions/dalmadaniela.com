@@ -1,0 +1,124 @@
+@import '../../../colors.scss';
+
+#faq {
+    width: 100%;
+    display: inline-flex;
+
+    #faqTitleContainer {
+        width: 33%;
+        height: 100%;
+        background: $pink;
+        text-align: center;
+        padding-top: 25px;
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+        display: inline-block;
+
+        h1 {
+            font-family: 'Garbata';
+            color: $yellow;
+            font-size: 6vw;
+            padding-bottom: 25px;
+            z-index: 99;
+        }
+
+        h2 {
+            font-family: 'Garet';
+            color: white;
+            font-size: 2vw;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            z-index: 99;
+        }
+
+        img {
+            width: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            max-width: 500px;
+            z-index: 1;
+        }
+    }
+
+    #faqContainer {
+        width: 67%;
+
+        .faqQuestionContainer {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+
+            .cardFlipContainer {
+                width: calc(50% - 4px);
+                height: 33%;
+                font-family: 'Garet';
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid $pink;
+                font-size: 2vw;
+                cursor: pointer;
+                // animation: flipHorizontal 300ms ease-in-out;
+
+                .cardFlipAnswerContainer {
+                    padding: 5px;
+                    span {
+                        font-size: 1.3vw;
+                    }
+
+                    span+span {
+                        margin-left: 5px;
+                    }
+
+                    #faqAnswer-one .two,
+                    #faqAnswer-two .three,
+                    #faqAnswer-two .five,
+                    #faqAnswer-three .two,
+                    #faqAnswer-three .five,
+                    #faqAnswer-three .seven,
+                    #faqAnswer-four .three,
+                    #faqAnswer-four .five,
+                    #faqAnswer-five .one,
+                    #faqAnswer-five .five,
+                    #faqAnswer-six .two,
+                    #faqAnswer-six .four {
+                        color: $pink;
+                    }
+
+                    #faqAnswer-one .one,
+                    #faqAnswer-one .four,
+                    #faqAnswer-two .one,
+                    #faqAnswer-two .four,
+                    #faqAnswer-three .one,
+                    #faqAnswer-three .three,
+                    #faqAnswer-three .six,
+                    #faqAnswer-four .one,
+                    #faqAnswer-four .four,
+                    #faqAnswer-five .two,
+                    #faqAnswer-five .four,
+                    #faqAnswer-six .one,
+                    #faqAnswer-six .three {
+                        font-weight: 100;
+                    }
+                }
+
+                div.inactive {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@keyframes flipHorizontal {
+    from {
+        transform: scaleX(-1)
+    }
+    to {
+        transform: scaleX(1)
+    }
+}
