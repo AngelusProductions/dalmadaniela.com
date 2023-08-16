@@ -64,6 +64,48 @@
                 cursor: pointer;
                 // animation: flipHorizontal 300ms ease-in-out;
 
+                .cardFlipAnswerContainer {
+                    span {
+                        font-size: 1.5vw;
+                    }
+
+                    span+span {
+                        margin-left: 5px;
+                    }
+
+                    #faqAnswer-one .two,
+                    #faqAnswer-two .three,
+                    #faqAnswer-two .five,
+                    #faqAnswer-three .two,
+                    #faqAnswer-three .five,
+                    #faqAnswer-three .seven,
+                    #faqAnswer-four .three,
+                    #faqAnswer-four .five,
+                    #faqAnswer-five .one,
+                    #faqAnswer-five .five,
+                    #faqAnswer-six .two,
+                    #faqAnswer-six .four {
+                        color: $pink;
+                    }
+
+
+                    #faqAnswer-one .one,
+                    #faqAnswer-one .four,
+                    #faqAnswer-two .one,
+                    #faqAnswer-two .four,
+                    #faqAnswer-three .one,
+                    #faqAnswer-three .three,
+                    #faqAnswer-three .six,
+                    #faqAnswer-four .one,
+                    #faqAnswer-four .four,
+                    #faqAnswer-five .two,
+                    #faqAnswer-five .four,
+                    #faqAnswer-six .one,
+                    #faqAnswer-six .three {
+                        font-weight: 100;
+                    }
+                }
+
                 div.inactive {
                     display: none;
                 }

@@ -72,9 +72,6 @@ const FAQ = () => {
                         for small businesses, personal brands, artists, and solopreneurs
                     </span>
                     <span className='four'>
-                        We are a
-                    </span>
-                    <span className='five'>
                          looking to optimize their social media experience.
                     </span>
                 </div>
@@ -127,7 +124,7 @@ const FAQ = () => {
                 </div>
             )} />
             <FlashCard questionId='four' question={t.questions.four} answer={() => (
-                <div id='faqAnswer-four' className='faqAnswer'>
+                <div id='faqAnswer-five' className='faqAnswer'>
                     <span className='one'>
                         SuperClass
                     </span>
@@ -165,7 +162,7 @@ const FAQ = () => {
                 </div>
             )} />
             <FlashCard questionId='six' question={t.questions.six} answer={() => (
-                 <div id='faqAnswer-five' className='faqAnswer'>
+                 <div id='faqAnswer-six' className='faqAnswer'>
                     <span className='one'>
                         Our multipotentialite marketing team is based in
                     </span>
