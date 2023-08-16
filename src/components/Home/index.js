@@ -6,15 +6,16 @@ import Navbar from './Navbar'
 import SuperClassPopUp from '../UI/SuperClassPopUp'
 
 import { i } from '../../constants/data/assets'
-import { checkForReoccuringIP, saveSuperClassSubscribeInfo } from '../../api/superClass'
+import { saveSuperClassSubscribeInfo } from '../../api/superClass'
 import testimonials from '../../constants/data/testimonials'
 import { paths } from '../../constants/paths'
 import t from './text.js'
 import './styles/index.scss'
+import FAQ from './FAQ'
 
 const Home = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
+  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
   const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
 
   const onSuperClassPopUpSubmitClick = async email => {
@@ -250,6 +251,9 @@ const Home = () => {
             {t.classCta}
           </Link>
         </div>
+      </section>
+      <section id='faqHomeSection' className='homeSection'>
+        <FAQ />
       </section>
     </main>
   )

@@ -501,6 +501,7 @@ section#classAbout {
     position: relative;
     display: flex;
     color: black;
+    background: black;
 
     #magicAboutStars {
         position: absolute;
@@ -599,6 +600,10 @@ section#classAbout {
             }
         }
     }
+}
+
+section#faqHomeSection {
+    display: flex;
 }
 
 @keyframes fadeIn {

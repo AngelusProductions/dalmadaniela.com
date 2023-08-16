@@ -38,6 +38,4 @@ export default {
     'How to leverage your social media presence to grow your business and personal brand in the real world.',
   ],
   classCta: 'Get SuperClass',
-  
-  IPUrl: 'https://api.ipify.org/?format=json'
 }
