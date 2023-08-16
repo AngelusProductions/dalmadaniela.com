@@ -124,7 +124,7 @@ const FAQ = () => {
                 </div>
             )} />
             <FlashCard questionId='four' question={t.questions.four} answer={() => (
-                <div id='faqAnswer-five' className='faqAnswer'>
+                <div id='faqAnswer-four' className='faqAnswer'>
                     <span className='one'>
                         <Link to={paths.superClass}>SuperClass</Link>
                     </span>
