@@ -23,7 +23,7 @@ const MagicCalendars = () => {
         <img id='magicCalendarsTitleSectionWandBackgroundMagic' src={i.stars.starTwinklesLarge} /> 
       </section>
       <section id='smallBusinessSection' className='magicCalendarsSection'>
-        
+        <img src={i.stock.smallBusinessOwner} />
       </section>
       <section id='personalizationSection' className='magicCalendarsSection'>
         
