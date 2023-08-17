@@ -1,0 +1,68 @@
+@import '../../colors.scss';
+
+@media (max-width: 640px) {
+    #magicCalendarsPage {
+        section#titleSection {
+            padding-top: 10%;
+
+            h1 {
+                font-size: 7vw;
+                width: 70%;
+            }
+
+            h2 {
+                padding: 12px;
+                font-size: 4vw;
+                width: 50%;
+            }
+
+            h3 {
+                font-size: 4vw;
+            }
+
+            #magicCalendarsTitleSectionWandContainer {
+                animation: hoverSmall infinite 10000ms ease-in-out;
+
+                #magicCalendarsTitleSectionWand {
+                    width: 67vw;
+                }
+    
+                #magicCalendarsTitleSectionWandMagic {
+                    width: 30vw;
+                    position: absolute;
+                    top: 33%;
+                    right: -17%;
+                    z-index: -1;
+                    animation: flash infinite 10000ms ease-in-out;
+                }
+            }
+
+            #magicCalendarsTitleSectionComputerHands {
+                width: 80%;
+                left: 10%;
+            }
+        }
+    }
+}
+
+@keyframes hoverSmall {
+    0% {
+        left: -33%;
+        top: 33%;
+    }
+
+    40% {
+        left: 0%;
+        top: 55%;
+    }
+
+    60% {
+        left: -15%;
+        top: 55%;
+    }
+
+    100% {
+        left: -33%;
+        top: 33%;
+    }
+}

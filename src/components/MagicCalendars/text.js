@@ -8,22 +8,22 @@ export default {
     personalizationSection: {
         title: "A month's worth of social media posts with Magic Calendars",
         bullets: {
-        one: {
-            one: '100% personalized ',
-            two: 'for your brand.'
-        },
-        two: {
-            one: 'No impersonal AI. No expensive agencies. ',
-            two: 'Our Magic Calendars are perfectly crafted by our team of multipotentialite marketers. ',
-            three: 'Versatile for any industry!'
-        },
-        three: {
-            one: 'Fill out our magic form in 5 minutes, and ',
-            two: "we'll take care of your social media posts. ",
-            three: 'Graphics included.'
-        }
-    }
-  },
+            one: {
+                one: '100% personalized ',
+                two: 'for your brand.'
+            },
+            two: {
+                one: 'No impersonal AI. No expensive agencies. ',
+                two: 'Our Magic Calendars are perfectly crafted by our team of multipotentialite marketers. ',
+                three: 'Versatile for any industry!'
+            },
+            three: {
+                one: 'Fill out our magic form in 5 minutes, and ',
+                two: "we'll take care of your social media posts. ",
+                three: 'Graphics included.'
+            }
+        }   
+    },
     feedSection: {
         one: {
             title: 'We make it consistent',
