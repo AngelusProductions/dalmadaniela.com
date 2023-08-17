@@ -1,9 +1,7 @@
 import React from 'react'
 import './index.scss'
 
-const t = {
-  title: 'Magic Calendars'
-}
+import t from './text.js'
 
 const MagicCalendars = () => {
   return (

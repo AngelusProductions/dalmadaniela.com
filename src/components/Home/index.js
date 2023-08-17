@@ -15,7 +15,7 @@ import FAQ from './FAQ'
 
 const Home = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
+  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
   const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
 
   const onSuperClassPopUpSubmitClick = async email => {

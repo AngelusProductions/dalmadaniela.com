@@ -20,7 +20,7 @@ export default [
     name: 'Magic calendars',
     path: paths.magicCalendars,
     side: 'left',
-    tooltip: 'Wow!\nMagic calendars coming soon. Get ready.'
+    tooltip: null
   },
   {
     id: 4,
