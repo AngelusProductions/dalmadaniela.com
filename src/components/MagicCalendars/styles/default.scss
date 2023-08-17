@@ -77,9 +77,63 @@
         display: flex;
         align-items: center;
         background: linear-gradient(180deg, $pink, $yellow);
-        padding: 0 10%;
+        padding: 10%;
+        height: fit-content;
+
         img {
             width: 80%;
+        }
+    }
+
+    section#personalizationSection {
+        height: fit-content;
+
+        div {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10%;
+            padding-bottom: 0;
+
+            h1 {
+                width: 48%;
+                font-family: "Garbata";
+                font-weight: 300;
+                font-size: 8vw;
+            }
+
+            img {
+                width: 42vw;
+                height: 42vw;
+            }
+        }
+
+        ul {
+            margin: 10%;
+            font-family: 'Garet';
+            
+            li {
+                list-style: disc;
+                margin-bottom: 25px;
+
+                &.one {
+                    span.one {
+                        color: $pink;
+                    }
+                }
+
+                &.two {
+                    span.three {
+                        color: $pink;
+                    }
+                }
+                
+                &.three {
+                    span.three {
+                        color: $pink;
+                    }
+                }
+            }
         }
     }
 }

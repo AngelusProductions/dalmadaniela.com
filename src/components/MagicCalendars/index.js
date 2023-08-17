@@ -26,7 +26,26 @@ const MagicCalendars = () => {
         <img src={i.stock.smallBusinessOwner} />
       </section>
       <section id='personalizationSection' className='magicCalendarsSection'>
-        
+        <div>
+          <h1>{t.personalizationSection.title}</h1>
+          <img src={i.stock.instagramFeed} />
+        </div>
+        <ul>
+          <li className='one'>
+            <span className='one'>{t.personalizationSection.bullets.one.one}</span>
+            <span className='two'>{t.personalizationSection.bullets.one.two}</span>
+          </li>
+          <li className='two'>
+            <span className='one'>{t.personalizationSection.bullets.two.one}</span>
+            <span className='two'>{t.personalizationSection.bullets.two.two}</span>
+            <span className='three'>{t.personalizationSection.bullets.two.three}</span>
+          </li>
+          <li className='three'>
+            <span className='one'>{t.personalizationSection.bullets.three.one}</span>
+            <span className='two'>{t.personalizationSection.bullets.three.two}</span>
+            <span className='three'>{t.personalizationSection.bullets.three.three}</span>
+          </li>
+        </ul>
       </section>
       <section id='feedSection' className='magicCalendarsSection'>
         

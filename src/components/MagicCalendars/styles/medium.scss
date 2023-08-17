@@ -42,6 +42,18 @@
             }
         }
     }
+
+    section#personalizationSection {
+        div {
+            h1 {
+                font-size: 6vw !important;
+            }
+        }
+
+        ul {
+            font-size: 4.3vw;
+        }
+    }
 }
 
 @keyframes hoverMedium {
