@@ -48,7 +48,24 @@ const MagicCalendars = () => {
         </ul>
       </section>
       <section id='feedSection' className='magicCalendarsSection'>
-        
+        <img src={i.stock.bigBenContentCalendar} />
+        <div id='feedSectionRight'>
+          <div className='feedSectionRightSection'>
+            <h1>{t.feedSection.one.title}</h1>
+            <h2>{t.feedSection.one.subtitle}</h2>
+            <p>{t.feedSection.one.body}</p>
+          </div>
+          <div className='feedSectionRightSection'>
+            <h1>{t.feedSection.two.title}</h1>
+            <h2>{t.feedSection.two.subtitle}</h2>
+            <p>{t.feedSection.two.body}</p>
+          </div>
+          <div className='feedSectionRightSection'>
+            <h1>{t.feedSection.three.title}</h1>
+            <h2>{t.feedSection.three.subtitle}</h2>
+            <p>{t.feedSection.three.body}</p>
+          </div>
+        </div>
       </section>
       <section id='whatYouGetSection' className='magicCalendarsSection'>
         
