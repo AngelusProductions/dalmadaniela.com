@@ -45,7 +45,7 @@ export default {
         title: 'What you get:',
         bullets: {
             one: {
-                title: 'a month worth of posts',
+                title: 'A month worth of posts',
                 body: {
                     one: '6 custom-made, professional posts with captions, graphics, edited photos, post objectives, and hashtags, ',
                     two: 'all included.'

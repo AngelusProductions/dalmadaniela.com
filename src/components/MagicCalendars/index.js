@@ -68,9 +68,74 @@ const MagicCalendars = () => {
         </div>
       </section>
       <section id='whatYouGetSection' className='magicCalendarsSection'>
-        
+        <div id='whatYouGetLeftSection'>
+          <span>{t.magicCalendars}</span>
+          <h1>{t.whatYouGetSection.title}</h1>
+          <div className='whatYouGetLeftSectionSection'>
+            <h2>{t.whatYouGetSection.bullets.one.title}</h2>
+            <div className='whatYouGetLeftSectionBodySection'>
+              <img src={i.icons.checkMark} />
+              <p className='whatYouGetLeftSectionBodySectionBody'>
+                <span className='one'>{t.whatYouGetSection.bullets.one.body.one}</span>
+                <span className='two'>{t.whatYouGetSection.bullets.one.body.two}</span>
+              </p>
+            </div>
+          </div>
+          <div className='whatYouGetLeftSectionSection'>
+            <h2>{t.whatYouGetSection.bullets.two.title}</h2>
+            <div className='whatYouGetLeftSectionBodySection'>
+              <img src={i.icons.checkMark} />
+              <p className='whatYouGetLeftSectionBodySectionBody'>
+                <span className='one'>{t.whatYouGetSection.bullets.two.body.one}</span>
+                <span className='two'>{t.whatYouGetSection.bullets.two.body.two}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id='whatYouGetRightSection'>
+          <div id='whatYouGetRightSectionLeft'>
+            <img src={i.stock.contentCalendarAssets} />
+            <div id='whatYouGetSectionContentCalendarSocialIconsContainer'>
+              <img src={i.icons.instagramRealIcon} />
+              <img src={i.icons.facebookRealIcon} />
+              <img src={i.icons.threadsRealIcon} />
+            </div>
+          </div>
+          <div id='whatYouGetRightSectionRight'>
+            <div className='whatYouGetRightSectionRightSection'>
+              <div className='whatYouGetRightSectionRightTitleContainer'>
+                <img src={i.icons.checkMark} />
+                <h2>{t.whatYouGetSection.bullets.three.title}</h2>
+              </div>
+              <hr />
+              <p className='whatYouGetRightSectionBodySectionBody'>
+                {t.whatYouGetSection.bullets.three.body.one}
+              </p>
+            </div>
+            <div className='whatYouGetRightSectionRightSection'>
+              <div className='whatYouGetRightSectionRightTitleContainer'>
+                <img src={i.icons.checkMark} />
+                <h2>{t.whatYouGetSection.bullets.four.title}</h2>
+              </div>
+              <hr />
+              <p className='whatYouGetRightSectionBodySectionBody'>
+                {t.whatYouGetSection.bullets.four.body.one}
+              </p>
+            </div>
+            <div className='whatYouGetRightSectionRightSection'>
+              <div className='whatYouGetRightSectionRightTitleContainer'>
+                <img src={i.icons.checkMark} />
+                <h2>{t.whatYouGetSection.bullets.five.title}</h2>
+              </div>
+              <hr />
+              <p className='whatYouGetRightSectionBodySectionBody'>
+                {t.whatYouGetSection.bullets.five.body.one}
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section id='fillOutSection' className='magicCalendarsSection'>
+      {/* <section id='fillOutSection' className='magicCalendarsSection'>
         
       </section>
       <section id='chooseSection' className='magicCalendarsSection'>
@@ -78,7 +143,7 @@ const MagicCalendars = () => {
       </section>
       <section id='innovateSection' className='magicCalendarsSection'>
         
-      </section>
+      </section> */}
     </main>
   )
 }
