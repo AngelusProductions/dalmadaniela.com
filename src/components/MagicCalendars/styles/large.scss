@@ -59,6 +59,63 @@
             font-size: 2vw;
         }
     }
+
+    section#whatYouGetSection {
+        padding: 5%;
+        display: flex;
+        height: 100%;
+        width: calc(100vw - 12%);
+
+        #whatYouGetLeftSection {
+            width: 33%;
+
+            >span {
+                width: 20.8vw !important;
+            }
+
+            >h1 {
+                margin: 25px 0;
+                font-family: 'Garbata';
+                font-size: 4.5vw;
+            }
+
+            .whatYouGetLeftSectionSection {
+                h2 {
+                    font-size: 1.6vw !important;
+                }
+
+                .whatYouGetLeftSectionBodySection {
+                    .whatYouGetLeftSectionBodySectionBody {
+                        font-size: 1.3vw !important;
+                    }
+                }
+            }
+        }
+
+        #whatYouGetRightSection {
+            #whatYouGetRightSectionLeft {
+                height: 50% !important;
+            }
+
+            #whatYouGetRightSectionRight {
+                .whatYouGetRightSectionRightTitleContainer {
+                    img {
+                        width: 2vw !important;
+                        height: 2vw !important;
+                        margin-top: 0.1vw !important;
+                        transform: translateX(-0.7vw) !important;
+                    }
+
+                    h2 {
+                        font-size: 1.6vw !important;
+                    }
+                }
+                .whatYouGetRightSectionBodySectionBody {
+                    font-size: 1.4vw !important;
+                }
+            }
+        }
+    }
 }
 
 @keyframes hoverLarge {
