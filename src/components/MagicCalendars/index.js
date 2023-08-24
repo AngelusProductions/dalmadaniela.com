@@ -257,9 +257,21 @@ const MagicCalendars = () => {
           </div>
         </div>
       </section>
-      {/* <section id='innovateSection' className='magicCalendarsSection'>
-        
-      </section> */}
+      <section id='innovateSection' className='magicCalendarsSection'>
+      <div id='innovateSectionWandContainer'>
+        <img id='innovateSectionWand' src={i.stock.wand} />
+        <img id='innovateSectionMagic' src={i.stars.starTwinklesLarge} />
+        </div>
+        <div id='innovateSectionContentContainer'>
+          <div>
+            <img src={i.icons.face} />
+            <h4>{t.innovateSection.websiteName}</h4>
+          </div>
+          <h1>{t.innovateSection.title}</h1>
+          <h2>{t.innovateSection.description}</h2>
+          <button className='clickable'>{t.innovateSection.cta}</button>
+        </div>
+      </section>
     </main>
   )
 }

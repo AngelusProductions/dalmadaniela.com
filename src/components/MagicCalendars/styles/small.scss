@@ -253,6 +253,45 @@
             }
         }
     }
+
+    section#innovateSection {
+        #innovateSectionWandContainer {
+            margin-left: 10vw !important;
+            margin-top: 10vw !important;
+
+            #innovateSectionMagic {
+                right: -15vw !important;
+                bottom: -22vw !important;
+                width: 23vw !important;
+            }
+        }
+
+        #innovateSectionContentContainer {
+            margin-left: 0% !important;
+            margin-right: 0% !important;
+
+            div {
+                img {
+                    width: 21vw !important;
+                    margin-right: 3.7vw !important;
+                }
+                h4 {
+                    font-size: 5vw !important;
+                }
+            }
+            h1 {
+                font-size: 10vw !important;
+            }
+            h2 {
+                font-size: 5vw !important;
+            }
+            button {
+                width: 67% !important;
+                font-size: 5vw !important;
+                padding: 5vw !important;
+            }
+        }
+    }
 }
 
 @keyframes hoverSmall {

@@ -482,6 +482,71 @@
             }
         }
     }
+
+    section#innovateSection {
+        background: black;
+        display: flex;
+        flex-direction: column;
+        color: white;   
+
+        #innovateSectionWandContainer {
+            margin-left: 10vw;
+            margin-top: 10vw;
+            position: absolute;
+
+            #innovateSectionWand {
+                width: 33vw;
+            }
+            #innovateSectionMagic {
+                position: absolute;
+                right: -12vw;
+                bottom: -15vw;
+                width: 19vw;
+            }
+        }
+
+        #innovateSectionContentContainer {
+            margin: auto;
+            text-align: center;
+            margin-left: 50%;
+            margin-right: 10%;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 5vw;
+                    margin-right: 1.5vw;
+                }
+                h4 {
+                    font-family: 'Garet';
+                }
+            }
+            h1 {
+                font-family: 'Garbata';
+                font-size: 4.4vw;
+            }
+            h2 {
+                font-family: 'Garet';
+                font-weight: 100;
+                margin: 25px;
+            }
+            button {
+                background: $pink;
+                font-family: 'Garet';
+                text-transform: uppercase;
+                width: 50%;
+                font-size: 1.5vw;
+                font-weight: 700;
+                padding: 1vw;
+                color: $yellow;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 @keyframes flash {
