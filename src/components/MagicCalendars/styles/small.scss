@@ -69,7 +69,7 @@
         #feedSectionRight {
 
             .feedSectionRightSection {
-                padding: 0 2% !important;
+                padding: 0 5% !important;
                 margin-bottom: 25px;
 
                 h1 {
@@ -77,12 +77,87 @@
                 }
 
                 h2 {
-                    font-size: 3.4vw !important;
+                    font-size: 3.2vw !important;
                 }
 
                 p {
                     font-family: 'Garet';
                     font-size: 2.9vw !important;
+                }
+            }
+        }
+    }
+
+    section#whatYouGetSection {
+        flex-direction: column;
+        padding-top: 0 !important;
+
+        #whatYouGetLeftSection {
+            width: 100% !important;
+
+            .whatYouGetLeftSectionSection:nth-of-type(1) {
+                margin-top: 0 !important;
+            }
+
+            >span {
+                font-size: 3vw !important;
+                padding: 2vw !important;
+            }
+
+            >h1 {
+                font-size: 7vw !important;
+                position: relative !important;
+            }
+
+            .whatYouGetLeftSectionSection {
+                h2 {
+                    font-size: 3.5vw !important;
+                }
+
+                img {
+                    width: 6vw !important;
+                    height: 3vw !important;
+                }
+
+                .whatYouGetLeftSectionBodySection {
+                    .whatYouGetLeftSectionBodySectionBody {
+                        font-size: 2.9vw !important;
+                    }
+                }
+            }
+        }
+
+        #whatYouGetRightSection {
+            flex-direction: column;
+
+            #whatYouGetRightSectionLeft {
+                height: 50% !important;
+                margin: 5% auto !important;
+
+                > img {
+                    margin-bottom: 12.5px;
+                }
+            }
+
+            #whatYouGetRightSectionRight {
+                width: 100% !important;
+
+                .whatYouGetRightSectionRightTitleContainer {
+                    img {
+                        width: 3vw !important;
+                        height: 3vw !important;
+                        margin-top: 0 !important;
+                        transform: translate(-1vw, 0.9vw) !important;
+                    }
+
+                    h2 {
+                        font-size: 3.5vw !important;
+                    }
+                }
+
+                .whatYouGetRightSectionBodySectionBody {
+                    font-size: 2.9vw !important;
+                    margin-bottom: 25px;
                 }
             }
         }

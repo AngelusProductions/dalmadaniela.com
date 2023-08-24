@@ -54,6 +54,48 @@
             font-size: 4.3vw;
         }
     }
+
+    section#whatYouGetSection {
+        #whatYouGetLeftSection {
+            .whatYouGetLeftSectionSection {
+                h2 {
+                    font-size: 1.6vw !important;
+                }
+
+                .whatYouGetLeftSectionBodySection {
+                    .whatYouGetLeftSectionBodySectionBody {
+                        font-size: 1.3vw !important;
+                    }
+                }
+            }
+        }
+
+        #whatYouGetRightSection {
+            #whatYouGetRightSectionLeft {
+                height: 50% !important;
+                margin: 23% 5% !important;
+            }
+
+            #whatYouGetRightSectionRight {
+                .whatYouGetRightSectionRightTitleContainer {
+                    img {
+                        width: 2vw !important;
+                        height: 2vw !important;
+                        margin-top: 0.1vw !important;
+                        transform: translateX(-0.7vw) !important;
+                    }
+
+                    h2 {
+                        font-size: 1.6vw !important;
+                    }
+                }
+
+                .whatYouGetRightSectionBodySectionBody {
+                    font-size: 1.4vw !important;
+                }
+            }
+        }
+    }
 }
 
 @keyframes hoverMedium {

@@ -180,18 +180,17 @@
         width: calc(100vw - 12%);
 
         #whatYouGetLeftSection {
-            width: 33%; 
-
             > span {
                 background: #DA2A7D;
                 color: #FEFF7C;
-                padding: 12px;
+                padding: 1vw;
                 font-family: "Garet";
                 text-transform: uppercase;
                 font-weight: 600;
                 display: block;
                 width: fit-content;
-                font-size: 2vw;
+                font-size: 1.7vw;
+                text-align: center;
             }
 
             > h1 {
@@ -246,7 +245,7 @@
 
             #whatYouGetRightSectionLeft {
                 width: 40%;
-                margin: auto 5%;
+                margin: 22% 5%;
                 height: 19%;
                 padding: 2vw;
                 background: black;
