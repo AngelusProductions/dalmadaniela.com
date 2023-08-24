@@ -99,7 +99,7 @@ export default {
         options: {
             one: {
                 title: 'Standard Magic',
-                prive: '$74.99',
+                price: '$74.99',
                 description: {
                     choice: 'The Cool Choice. ',
                     inbox: 'Your Magic Calendar will arrive in your inbox in ',
@@ -110,39 +110,39 @@ export default {
                     two: 'Eye-catching graphics'
                 },
                 cta: 'Get Standard Magic'
+            },
+            two: {
+                title: 'Fast Magic',
+                price: '$77.99',
+                description: {
+                    choice: 'The Smart Choice. ',
+                    inbox: 'Your Magic Calendar will arrive in your inbox in ',
+                    time: '8 hours!'
+                },
+                bullets: {
+                    one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
+                    two: 'Eye-catching graphics',
+                    three: 'Free photo enhancement'
+                },
+                cta: 'Get Fast Magic'
+            },
+            three: {
+                title: 'SuperFast Magic',
+                price: '$84.99',
+                description: {
+                    choice: 'The Best Choice. ',
+                    inbox: 'Your Magic Calendar will arrive in your inbox in ',
+                    time: '4 hours!'
+                },
+                bullets: {
+                    one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
+                    two: 'Eye-catching graphics',
+                    three: 'Free photo enhancement',
+                    four: "Did you know you have a brand archetype? We'll let you know what it is.",
+                    five: "Free social media marketing tips 100% tailored to your brand goals."
+                },
+                cta: 'Get SuperFast Magic'
             }
-        },
-        two: {
-            title: 'Fast Magic',
-            prive: '$77.99',
-            description: {
-                choice: 'The Smart Choice. ',
-                inbox: 'Your Magic Calendar will arrive in your inbox in ',
-                time: '8 hours!'
-            },
-            bullets: {
-                one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
-                two: 'Eye-catching graphics',
-                three: 'Free photo enhancement'
-            },
-            cta: 'Get Fast Magic'
-        },
-        three: {
-            title: 'SuperFast Magic',
-            prive: '$84.99',
-            description: {
-                choice: 'The Best Choice. ',
-                inbox: 'Your Magic Calendar will arrive in your inbox in ',
-                time: '4 hours!'
-            },
-            bullets: {
-                one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
-                two: 'Eye-catching graphics',
-                three: 'Free photo enhancement',
-                four: "Did you know you have a brand archetype? We'll let you know what it is.",
-                five: "Free social media marketing tips 100% tailored to your brand goals."
-            },
-            cta: 'Get SuperFast Magic'
         }
     },
     innovateSection: {

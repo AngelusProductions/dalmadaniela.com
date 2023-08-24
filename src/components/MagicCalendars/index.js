@@ -161,10 +161,103 @@ const MagicCalendars = () => {
           </div>
         </div>
       </section>
-      {/* <section id='chooseSection' className='magicCalendarsSection'>
-        
+      <section id='chooseSection' className='magicCalendarsSection'>
+        <h1>{t.chooseSection.title}</h1>
+        <div id='chooseSectionSelectionsContainer'>
+          <div className='chooseSectionSelection'>
+            <div className='chooseSectionSelectionTitleContainer'>
+              <h3>{t.chooseSection.options.one.title}</h3>
+              <h2>{t.chooseSection.options.one.price}</h2>
+              <hr />
+              <div className='chooseSectionSelectionDescription'>
+                <span>{t.chooseSection.options.one.description.choice}</span>
+                <span>{t.chooseSection.options.one.description.inbox}</span>
+                <span>{t.chooseSection.options.one.description.time}</span>
+              </div>
+            </div>
+            <ul className='chooseSectionSelectionBulletsContainer'>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.one.bullets.one}</p>
+              </li>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.one.bullets.two}</p>
+              </li>
+            </ul>
+            <button className='chooseSectionSelectionCta clickable'>
+              {t.chooseSection.options.one.cta}
+            </button>
+          </div>
+          <div className='chooseSectionSelection'>
+            <div className='chooseSectionSelectionTitleContainer'>
+              <h3>{t.chooseSection.options.two.title}</h3>
+              <h2>{t.chooseSection.options.two.price}</h2>
+              <hr />
+              <div className='chooseSectionSelectionDescription'>
+                <span>{t.chooseSection.options.two.description.choice}</span>
+                <span>{t.chooseSection.options.two.description.inbox}</span>
+                <span>{t.chooseSection.options.two.description.time}</span>
+              </div>
+            </div>
+            <ul className='chooseSectionSelectionBulletsContainer'>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.two.bullets.one}</p>
+              </li>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.two.bullets.two}</p>
+              </li>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.two.bullets.three}</p>
+              </li>
+            </ul>
+            <button className='chooseSectionSelectionCta clickable'>
+              {t.chooseSection.options.two.cta}
+            </button>
+          </div>
+          <div className='chooseSectionSelection'>
+            <div className='chooseSectionSelectionTitleContainer'>
+              <h3>{t.chooseSection.options.three.title}</h3>
+              <h2>{t.chooseSection.options.three.price}</h2>
+              <hr />
+              <div className='chooseSectionSelectionDescription'>
+                <span>{t.chooseSection.options.three.description.choice}</span>
+                <span>{t.chooseSection.options.three.description.inbox}</span>
+                <span>{t.chooseSection.options.three.description.time}</span>
+              </div>
+            </div>
+            <ul className='chooseSectionSelectionBulletsContainer'>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.three.bullets.one}</p>
+              </li>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.three.bullets.two}</p>
+              </li>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.three.bullets.three}</p>
+              </li>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.three.bullets.four}</p>
+              </li>
+              <li className='chooseSectionSelectionBullet'>
+                <img src={i.icons.checkMark} />
+                <p>{t.chooseSection.options.three.bullets.five}</p>
+              </li>
+            </ul>
+            <button className='chooseSectionSelectionCta clickable'>
+              {t.chooseSection.options.three.cta}
+            </button>
+          </div>
+        </div>
       </section>
-      <section id='innovateSection' className='magicCalendarsSection'>
+      {/* <section id='innovateSection' className='magicCalendarsSection'>
         
       </section> */}
     </main>
