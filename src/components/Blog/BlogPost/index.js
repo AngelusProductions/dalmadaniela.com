@@ -43,6 +43,10 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
   const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
   const currentUrl = `${HOST_URL}${window.location.pathname}`
 
+  useEffect(() => {
+    getBlogPost(name.replace(/_/g,' '))
+  }, [])
+
   const onCopyClick = async () => {
     await navigator.clipboard.writeText(currentUrl);
     setIsLinkCopied(true)
@@ -52,7 +56,6 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
     const res = await saveSuperClassSubscribeInfo({ email })
     if (res.isSuccess) {
       setShowSuperClassPopUpThankYou(true)
-      getBlogPost(name.replace(/_/g,' '))
       setTimeout(() => {
         setShowSuperClassPopUp(false)
       }, 2000)
@@ -136,6 +139,7 @@ const mapDispatch = dispatch => ({
   getBlogPost: async id => {
     dispatch(getBlogPostRequest)
     try {
+      debugger
       const { blogPost } = await getBlogPost(id)
 
       dispatch(getBlogPostSuccess(blogPost))
