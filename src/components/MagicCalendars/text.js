@@ -135,7 +135,7 @@ export default {
                     time: '4 hours!'
                 },
                 bullets: {
-                    one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
+                    one: 'Custom-made, attractive captions',
                     two: 'Eye-catching graphics',
                     three: 'Free photo enhancement',
                     four: "Did you know you have a brand archetype? We'll let you know what it is.",

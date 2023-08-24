@@ -96,6 +96,32 @@
             }
         }
     }
+
+    section#chooseSection {
+        #chooseSectionSelectionsContainer {
+            .chooseSectionSelection {
+                .chooseSectionSelectionDescription {
+                    font-size: 2vw !important;
+                }
+
+                .chooseSectionSelectionBulletsContainer {
+                    .chooseSectionSelectionBullet {
+                        img {
+                            margin-top: 0.3vw;
+                            margin-right: 1vw !important;
+                        }
+                        p {
+                            font-size: 1.5vw !important;
+                        }
+                    }
+                }
+                
+                .chooseSectionSelectionCta {
+                    font-size: 1.5vw !important;
+                }
+            }
+        }
+    }
 }
 
 @keyframes hoverMedium {
