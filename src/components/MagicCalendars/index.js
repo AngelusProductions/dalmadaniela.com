@@ -135,10 +135,33 @@ const MagicCalendars = () => {
           </div>
         </div>
       </section>
-      {/* <section id='fillOutSection' className='magicCalendarsSection'>
-        
+      <section id='fillOutSection' className='magicCalendarsSection'>
+        <h1>{t.fillOutSection.title}</h1>
+        <div id='fillOutSectionStepsContainer'>
+          <div className='fillOutSectionStep'>
+            <img src={i.stock.survey} />
+            <div className='fillOutSectionStepBody'>
+              <span>{t.fillOutSection.steps.one.one}</span>
+              <span>{t.fillOutSection.steps.one.two}</span>
+            </div>
+          </div>
+          <div className='fillOutSectionStep'>
+            <img src={i.stock.brand} />
+            <div className='fillOutSectionStepBody'>
+              <span>{t.fillOutSection.steps.two.one}</span>
+              <span>{t.fillOutSection.steps.two.two}</span>
+            </div>
+          </div>
+          <div className='fillOutSectionStep'>
+            <img src={i.videos.lightbulbConstruction} />
+            <div className='fillOutSectionStepBody'>
+              <span>{t.fillOutSection.steps.three.one}</span>
+              <span>{t.fillOutSection.steps.three.two}</span>
+            </div>
+          </div>
+        </div>
       </section>
-      <section id='chooseSection' className='magicCalendarsSection'>
+      {/* <section id='chooseSection' className='magicCalendarsSection'>
         
       </section>
       <section id='innovateSection' className='magicCalendarsSection'>

@@ -85,7 +85,7 @@ export default {
                 two: "You'll be ready in 5!"
             },
             two: {
-                one: 'Share your brand story with us ',
+                one: 'Share your brand story ',
                 two: 'in a few words or a lot!'
             },
             three: {

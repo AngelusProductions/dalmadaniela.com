@@ -167,7 +167,7 @@
 
                 p {
                     font-family: 'Garet';
-                    font-size: 1.1vw;
+                    font-size: 1.3vw;
                 }
             }
         }
@@ -293,14 +293,85 @@
                 }
 
                 hr {
-                    border: 2px #DA2A7D double;
-                    width: 100%;
-                    transform: translateX(-10%);
+                    border: 1px #DA2A7D solid;
                 }
 
                 .whatYouGetRightSectionBodySectionBody {
                     font-family: 'Garet';
                     font-size: 2vw;
+                }
+            }
+        }
+    }
+
+    section#fillOutSection {
+        background: black;
+        height: fit-content;
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 10%;
+            font-size: 4vw;
+        }
+
+        #fillOutSectionStepsContainer {
+            padding: 10%;
+            display: flex;
+            justify-content: space-between;
+
+            .fillOutSectionStep {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                .fillOutSectionStepBody {
+                    color: white;
+                    text-align: center;
+                    font-family: "Garet";
+                    margin-top: 25px;
+                    line-height: 2.5vw;
+                    font-size: 1.8vw;
+                }
+            }
+
+            .fillOutSectionStep:nth-of-type(1) {
+                img {
+                    width: 13vw;
+                }
+
+                .fillOutSectionStepBody {
+                    span:nth-of-type(1) {
+                        color: $yellow;
+                        display: block;
+                    }
+                }
+            }
+            
+            .fillOutSectionStep:nth-of-type(2) {
+                img {
+                    width: 23vw;
+                }
+
+                .fillOutSectionStepBody {
+                    width: 80%;
+
+                    span:nth-of-type(2) {
+                        color: $yellow;
+                        display: block;
+                    }
+                }
+            }
+            
+            .fillOutSectionStep:nth-of-type(3) {
+                img {
+                    width: 23vw;
+                }
+
+                span:nth-of-type(1) {
+                    color: $yellow;
+                    display: block;
                 }
             }
         }
