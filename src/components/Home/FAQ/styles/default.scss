@@ -66,8 +66,10 @@
 
                 .cardFlipAnswerContainer {
                     padding: 5px;
+
                     span {
                         font-size: 1.3vw;
+                        font-weight: 100;
                     }
 
                     span+span {
@@ -83,26 +85,11 @@
                     #faqAnswer-four .one,
                     #faqAnswer-four .three,
                     #faqAnswer-five .one,
-                    #faqAnswer-five .five,
+                    #faqAnswer-five .four,
                     #faqAnswer-six .two,
                     #faqAnswer-six .four {
                         color: $pink;
-                    }
-
-                    #faqAnswer-one .one,
-                    #faqAnswer-one .four,
-                    #faqAnswer-two .one,
-                    #faqAnswer-two .four,
-                    #faqAnswer-three .one,
-                    #faqAnswer-three .three,
-                    #faqAnswer-three .six,
-                    #faqAnswer-four .two,
-                    #faqAnswer-four .five,
-                    #faqAnswer-five .two,
-                    #faqAnswer-five .four,
-                    #faqAnswer-six .one,
-                    #faqAnswer-six .three {
-                        font-weight: 100;
+                        font-weight: 600;
                     }
                 }
 

@@ -148,15 +148,12 @@ const FAQ = () => {
                         We realize that social media can be stressful. 
                     </span>
                     <span className='two'>
-                        Our team has 
+                       In 10+ years of experience
                     </span>
                     <span className='three'>
-                       10+ years of experience
+                        our team has faced the troubles that brands and creators encounter on social media.  
                     </span>
                     <span className='four'>
-                        in social media marketing for all kinds of businesses and has faced the troubles that brands and creators encounter on social media.  
-                    </span>
-                    <span className='five'>
                          We want to make social media better for everyone by making content creation easy, simple, and affordable.
                     </span>
                 </div>
