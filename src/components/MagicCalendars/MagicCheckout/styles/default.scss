@@ -1,0 +1,59 @@
+@import '../../../colors.scss';
+
+#magicCheckoutPage {
+
+        h1 {
+            text-align: center;
+            margin-top: 10%;
+            font-size: 6vw;
+            color: $pink;
+        }
+
+        #magicCheckoutMagic {
+            position: absolute;
+            right: 0;
+            width: 25vw;
+            top: 0;
+            z-index: -1;
+            filter: opacity(0.4);
+        }
+
+        #magicCheckoutMagicSpeedsContainer {
+            text-align: center;
+            margin: 50px auto;
+
+            label {
+                font-family: 'Garbata';
+                font-weight: bold;
+                font-size: 2.6vw;
+            }
+
+            #magicCheckoutMagicSpeedsList {
+                width: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                margin: 25px auto;
+
+                button {
+                    font-size: 1.7vw;
+                    text-transform: uppercase;
+                    font-family: 'Garbata';
+                    border: none;
+                    cursor: pointer;
+
+                    &.active {
+                        background: $pink;
+                        color: $yellow;
+                        font-weight: bold;
+                        padding: 25px;
+                        font-style: italic;
+                    }
+                    &.inactive {
+                        padding: 13px;
+                        background: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+}

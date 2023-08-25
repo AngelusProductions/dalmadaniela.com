@@ -18,7 +18,7 @@ export default [
   {
     id: 3,
     name: 'Magic calendars',
-    path: paths.magicCalendars,
+    path: paths.magicCalendars.page,
     side: 'left',
     tooltip: null
   },

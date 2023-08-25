@@ -4,7 +4,9 @@ import { connect } from 'react-redux'
 
 import Home from './Home'
 import SuperClass from './SuperClass'
+
 import MagicCalendars from './MagicCalendars'
+import MagicCheckout from './MagicCalendars/MagicCheckout'
 
 import Blog from './Blog'
 import AllBlogPosts from './Blog/AllBlogPosts'
@@ -35,7 +37,9 @@ const App = ({ currentUser, onBoot }) => {
     <Routes>
       <Route index element={<Home />}/>
       <Route path={paths.superClass} element={<SuperClass />} />
-      <Route path={paths.magicCalendars} element={<MagicCalendars />} />
+
+      <Route path={paths.magicCalendars.page} element={<MagicCalendars />} />
+      <Route path={paths.magicCalendars.checkout} element={<MagicCheckout />} />
 
       <Route path={paths.blog.page} element={<Blog />} />
       <Route path={paths.blog.allBlogPosts} element={<AllBlogPosts />} />

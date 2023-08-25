@@ -3,7 +3,10 @@ import { configureApiRoot } from '../utils/config'
 export const paths = {
   home: '/',
   superClass: '/superclass',
-  magicCalendars: '/magic-calendars',
+  magicCalendars: {
+    page: '/magic-calendars',
+    checkout: '/magic-calendars/checkout',
+  },
   blog: {
     page: '/blog',
     allBlogPosts: '/blog/posts',

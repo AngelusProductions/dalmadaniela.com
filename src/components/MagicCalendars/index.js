@@ -1,13 +1,24 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
+import { connect } from 'react-redux'
 
 import HomeIcon from '../UI/HomeIcon'
 
+import { paths } from '../../constants/paths'
 import { i } from '../../constants/data/assets'
+import { setMagicSpeed } from '../../actions/magicCalendars'
 
 import t from './text.js'
 import './styles/index.scss'
 
-const MagicCalendars = () => {
+const MagicCalendars = ({ setMagicSpeed }) => {
+  const navigate = useNavigate()
+
+  const onChooseClick = speed => {
+    setMagicSpeed(speed)
+    navigate(paths.magicCalendars.checkout)
+  }
+
   return (
     <main id='magicCalendarsPage'>
       <HomeIcon />
@@ -185,7 +196,10 @@ const MagicCalendars = () => {
                 <p>{t.chooseSection.options.one.bullets.two}</p>
               </li>
             </ul>
-            <button className='chooseSectionSelectionCta clickable'>
+            <button 
+              onClick={() => onChooseClick('standard')}
+              className='chooseSectionSelectionCta clickable'
+            >
               {t.chooseSection.options.one.cta}
             </button>
           </div>
@@ -214,7 +228,10 @@ const MagicCalendars = () => {
                 <p>{t.chooseSection.options.two.bullets.three}</p>
               </li>
             </ul>
-            <button className='chooseSectionSelectionCta clickable'>
+            <button 
+              onClick={() => onChooseClick('fast')}
+              className='chooseSectionSelectionCta clickable'
+            >
               {t.chooseSection.options.two.cta}
             </button>
           </div>
@@ -251,7 +268,10 @@ const MagicCalendars = () => {
                 <p>{t.chooseSection.options.three.bullets.five}</p>
               </li>
             </ul>
-            <button className='chooseSectionSelectionCta clickable'>
+            <button 
+              onClick={() => onChooseClick('superfast')}
+              className='chooseSectionSelectionCta clickable'
+            >
               {t.chooseSection.options.three.cta}
             </button>
           </div>
@@ -276,4 +296,10 @@ const MagicCalendars = () => {
   )
 }
 
-export default MagicCalendars;
+const mapDispatch = dispatch => ({
+  setMagicSpeed: async speed => {
+    dispatch(setMagicSpeed(speed))
+  }
+})
+
+export default connect(null, mapDispatch)(MagicCalendars);
