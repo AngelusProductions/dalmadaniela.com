@@ -1,6 +1,6 @@
 export default {
     title: 'Your Magic Calendar',
-    yourMagicSpeed: 'Magic Speed:',
+    yourMagicSpeed: 'Speed:',
     magicSpeeds: {
         standard: 'Standard',
         fast: 'Fast',
@@ -14,8 +14,8 @@ export default {
         two: {
             question: "Let's check out your website (if you have one) and main social media accounts.",
             websiteLabel: 'Website:',
-            socialMediaLabel1: 'Social Media 1:',
-            socialMediaLabel2: 'Social Media 2:'
+            socialMediaLabel1: 'Social Media:',
+            socialMediaLabel2: 'Social Media:'
         },
         three: {
             question: 'Tell us about your brand or business.',
