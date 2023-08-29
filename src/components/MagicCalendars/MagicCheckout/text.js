@@ -46,5 +46,39 @@ export default {
             question: "What's a good email to send your calendar link to?"
         }
     },
-    cta: 'Create My Calendar'
+    cta: 'Create My Calendar',
+
+    test: {
+        brandName: "Big Ben Lawyers",
+        website: "https://www.bigbenlawyers.com",
+        socialMedia1: "https://www.instagram.com/bigbenlawyers",
+        socialMedia2: "https://www.facebook.com/bigbenlawyers",
+        description: "We are a Glendale-based law firm with over 10 years of experience representing victims in personal injury cases such as car accidents, ride-share app incidents, and dog bites. What differenciates us from the rest is that Ben treats all of his clients like family, we provide them with the maxiumum possible compensation, and we'll do our best to give them justice.",
+        objective: "Our main business objective is to get new clients and convert the people who follow us on social media.",
+
+        brandColor1: "#3366ac",
+        brandColor2: "#ffffff",
+        brandColor3: "#ffbc00",
+        brandColor4: "#ffffff",
+        brandColor5: "#ffffff",
+
+        brandEmoji1: "",
+        brandEmoji2: "",
+        brandEmoji3: "",
+        brandEmoji4: "",
+        brandEmoji5: "",
+
+        specificTopics: "We've achieved a remarkable outcome for our client. After a slip and fall incident at a fast-food chain restaurant, we worked dilligently and managed to secure a substancial settlement of $700,000. We want this post to be called 'SETTLEMENT ALERT'",
+        useHolidays: true,
+        country: {
+            name: "United States of America", 
+            code: "US", 
+            capital: "Washington, D.C.", 
+            region: "Americas", 
+            latlng: [38, -97]
+        },
+        wantsGraphics: false,
+        graphics: [],
+        email: "dalma@dalmadaniela.com"
+    }
 }

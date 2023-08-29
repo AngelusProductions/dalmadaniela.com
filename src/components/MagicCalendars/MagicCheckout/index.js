@@ -41,43 +41,37 @@ const uploader = Uploader({
 })
 
 const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
-  const [brandName, setBrandName] = useState('Angelus Productions')
-  const [website, setWebsite] = useState('angelusproductions.com')
-  const [socialMedia1, setSocialMedia1] = useState('https://www.instagram.com/corey.angelus/')
-  const [socialMedia2, setSocialMedia2] = useState('')
-  const [description, setDescription] = useState('We are a software development and music production company')
-  const [objective, setObjective] = useState('My objective is to gain more followers.')
+  const [brandName, setBrandName] = useState(t.test.brandName)
+  const [website, setWebsite] = useState(t.test.website)
+  const [socialMedia1, setSocialMedia1] = useState(t.test.socialMedia1)
+  const [socialMedia2, setSocialMedia2] = useState(t.test.socialMedia2)
+  const [description, setDescription] = useState(t.test.description)
+  const [objective, setObjective] = useState(t.test.objective)
 
-  const [brandColor1, setBrandColor1] = useColor('#ffffff')
-  const [brandColor2, setBrandColor2] = useColor('#ffffff')
-  const [brandColor3, setBrandColor3] = useColor('#ffffff')
-  const [brandColor4, setBrandColor4] = useColor('#ffffff')
-  const [brandColor5, setBrandColor5] = useColor('#ffffff')
+  const [brandColor1, setBrandColor1] = useColor(t.test.brandColor1)
+  const [brandColor2, setBrandColor2] = useColor(t.test.brandColor2)
+  const [brandColor3, setBrandColor3] = useColor(t.test.brandColor3)
+  const [brandColor4, setBrandColor4] = useColor(t.test.brandColor4)
+  const [brandColor5, setBrandColor5] = useColor(t.test.brandColor5)
   const [changedBrandColors, setChangedBrandColors] = useState({
     one: false, two: false, three: false, four: false, five: false
   })
 
-  const [brandEmoji1, setBrandEmoji1] = useState(null)
-  const [brandEmoji2, setBrandEmoji2] = useState(null)
-  const [brandEmoji3, setBrandEmoji3] = useState(null)
-  const [brandEmoji4, setBrandEmoji4] = useState(null)
-  const [brandEmoji5, setBrandEmoji5] = useState(null)
+  const [brandEmoji1, setBrandEmoji1] = useState(t.test.brandEmoji1)
+  const [brandEmoji2, setBrandEmoji2] = useState(t.test.brandEmoji2)
+  const [brandEmoji3, setBrandEmoji3] = useState(t.test.brandEmoji3)
+  const [brandEmoji4, setBrandEmoji4] = useState(t.test.brandEmoji4)
+  const [brandEmoji5, setBrandEmoji5] = useState(t.test.brandEmoji5)
 
-  const [specificTopics, setSpecificTopics] = useState('I want to make jokes and talk about music production')
+  const [specificTopics, setSpecificTopics] = useState(t.test.specificTopics)
 
-  const [useHolidays, setUseHolidays] = useState(false)
-  const [country, setCountry] = useState({
-    name: "United States of America", 
-    code: "US", 
-    capital: "Washington, D.C.", 
-    region: "Americas", 
-    latlng: [38, -97]
-  })
+  const [useHolidays, setUseHolidays] = useState(t.test.useHolidays)
+  const [country, setCountry] = useState(t.test.country)
   
-  const [wantsGraphics, setWantsGraphics] = useState(false)
-  const [graphics, setGraphics] = useState([])
+  const [wantsGraphics, setWantsGraphics] = useState(t.test.wantsGraphics)
+  const [graphics, setGraphics] = useState(t.test.graphics)
 
-  const [email, setEmail] = useState('angelusproductions@gmail.com')
+  const [email, setEmail] = useState(t.test.email)
 
   const onSubmitClick = async () => {
     let brandColors = [brandColor1.hex]
@@ -93,11 +87,13 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
 
     const magicGPTPrompt = getMagicGPTPrompt(
       magicSpeed, brandName, website, socialMedia1, socialMedia2, description, objective,
-      brandColors, brandEmojis, specificTopics, useHolidays, country, wantsGraphics, graphics, email
+      [
+        t.test.brandColor1, t.test.brandColor2, t.test.brandColor3
+      ], [], specificTopics, useHolidays, country, wantsGraphics, graphics, email
     )
     
     const checkoutResponse = await checkoutMagicCalendar({ prompt: magicGPTPrompt })
-    debugger
+    // debugger
   }
 
   return (
@@ -169,14 +165,14 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
               })
               setBrandColor1(brandColor)
             }} />
-            {changedBrandColors.one && <ColorPicker color={brandColor2} onChange={brandColor => {
+            {<ColorPicker color={brandColor2} onChange={brandColor => {
               setChangedBrandColors({
                 ...changedBrandColors, 
                 two: true
               })
               setBrandColor2(brandColor)
             }}/>}
-            {changedBrandColors.two && <ColorPicker color={brandColor3} onChange={brandColor => {
+            {<ColorPicker color={brandColor3} onChange={brandColor => {
               setChangedBrandColors({
                 ...changedBrandColors, 
                 three: true
@@ -229,7 +225,7 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
           <label>{t.questions.eight.question}</label>
           <Toggle
             id='toggleUseHolidays'
-            defaultChecked={false}
+            defaultChecked={t.test.useHolidays}
             onChange={() => setUseHolidays(!useHolidays)} 
           />
           {useHolidays && (
@@ -244,7 +240,7 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
             <label>{t.questions.nine.graphics}</label>
             <Toggle
               id='toggleWantGraphics'
-              defaultChecked={false}
+              defaultChecked={t.test.wantsGraphics}
               onChange={() => setWantsGraphics(!wantsGraphics)} 
             />
           </div>
