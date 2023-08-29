@@ -77,6 +77,8 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
   const [wantsGraphics, setWantsGraphics] = useState(false)
   const [graphics, setGraphics] = useState([])
 
+  const [email, setEmail] = useState('angelusproductions@gmail.com')
+
   const onSubmitClick = async () => {
     let brandColors = [brandColor1.hex]
     const brandColorTuples =  [[brandColor2, 'two'], [brandColor3, 'three'], [brandColor4, 'four'], [brandColor5, 'five']]
@@ -91,7 +93,7 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
 
     const magicGPTPrompt = getMagicGPTPrompt(
       magicSpeed, brandName, website, socialMedia1, socialMedia2, description, objective,
-      brandColors, brandEmojis, specificTopics, useHolidays, country, wantsGraphics, graphics
+      brandColors, brandEmojis, specificTopics, useHolidays, country, wantsGraphics, graphics, email
     )
     
     const checkoutResponse = await checkoutMagicCalendar({ prompt: magicGPTPrompt })
@@ -255,6 +257,11 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
               height="375px" 
             />
           )}
+        </div>
+        <div className='magicCheckoutQuestionContainer'>
+          <h2>10</h2>
+          <label>{t.questions.ten.question}</label>
+          <input className='magicCheckoutInput' value={email} onChange={e => setEmail(e.target.value)} />
         </div>
       </div>
       <button 

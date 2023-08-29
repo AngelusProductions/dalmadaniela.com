@@ -41,6 +41,9 @@ export default {
             question: "Now upload up to 6 photos you'd like us to use.",
             helper: "No pics? No problem! Just choose 'I want graphics', and you're all set!",
             graphics: 'I want graphics'
+        },
+        ten: {
+            question: "What's a good email to send your calendar link to?"
         }
     },
     cta: 'Create My Calendar'

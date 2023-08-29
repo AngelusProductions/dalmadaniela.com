@@ -6,12 +6,13 @@ export const getMagicTimeframe = magicSpeed => ({
 
 export const getMagicGPTPrompt = (
     magicSpeed, brandName, website, socialMedia1, socialMedia2, description, objective,
-    brandColors, brandEmojis, specificTopics, useHolidays, country, wantsGraphics, graphics
+    brandColors, brandEmojis, specificTopics, useHolidays, country, wantsGraphics, graphics, email
 ) => {
     let prompt = ''
     const magicTimeframe = getMagicTimeframe(magicSpeed)
 
     prompt += `I am making a content calendar for this brand name: ${brandName}. `
+    prompt += `Their email is: ${email}. `
     prompt += `I need to make it within ${magicTimeframe}. `
     if(website.length > 0) 
         prompt += `This is their website: ${website}. `
