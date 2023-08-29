@@ -35,6 +35,9 @@ export const apiEndpoints = {
   superClass: {
     checkIP: '/superClass/checkIP',
     saveInfo: '/superClass/saveInfo',
+  },
+  magicCalendars: {
+    checkout: '/magic-calendars/checkout'
   }
 }
 

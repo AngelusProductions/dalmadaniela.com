@@ -12,7 +12,7 @@ import Toggle from 'react-toggle'
 import { ReactCountryDropdown } from 'react-country-dropdown'
 import 'react-country-dropdown/dist/index.css'
 import { Uploader } from "uploader"
-import { UploadButton, UploadDropzone } from "react-uploader"
+import { UploadDropzone } from "react-uploader"
 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
@@ -20,8 +20,10 @@ import BackIcon from '../../UI/BackIcon'
 import { i } from '../../../constants/data/assets'
 import { paths } from '../../../constants/paths'
 import { setMagicSpeed } from '../../../actions/magicCalendars'
+import { checkoutMagicCalendar } from '../../../api/magicCalendars'
 
 import t from './text.js'
+import { getMagicGPTPrompt } from './prompts.js'
 import './styles/index.scss'
 
 const emojiPickerProps = {
@@ -36,21 +38,24 @@ const emojiPickerProps = {
 
 const uploader = Uploader({
   apiKey: "free"
-});
+})
 
 const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
-  const [brandName, setBrandName] = useState('')
-  const [website, setWebsite] = useState('')
-  const [socialMedia1, setSocialMedia1] = useState('')
+  const [brandName, setBrandName] = useState('Angelus Productions')
+  const [website, setWebsite] = useState('angelusproductions.com')
+  const [socialMedia1, setSocialMedia1] = useState('https://www.instagram.com/corey.angelus/')
   const [socialMedia2, setSocialMedia2] = useState('')
-  const [description, setDescription] = useState('')
-  const [objective, setObjective] = useState('')
+  const [description, setDescription] = useState('We are a software development and music production company')
+  const [objective, setObjective] = useState('My objective is to gain more followers.')
 
   const [brandColor1, setBrandColor1] = useColor('#ffffff')
   const [brandColor2, setBrandColor2] = useColor('#ffffff')
   const [brandColor3, setBrandColor3] = useColor('#ffffff')
   const [brandColor4, setBrandColor4] = useColor('#ffffff')
   const [brandColor5, setBrandColor5] = useColor('#ffffff')
+  const [changedBrandColors, setChangedBrandColors] = useState({
+    one: false, two: false, three: false, four: false, five: false
+  })
 
   const [brandEmoji1, setBrandEmoji1] = useState(null)
   const [brandEmoji2, setBrandEmoji2] = useState(null)
@@ -58,7 +63,7 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
   const [brandEmoji4, setBrandEmoji4] = useState(null)
   const [brandEmoji5, setBrandEmoji5] = useState(null)
 
-  const [specificTopics, setSpecificTopics] = useState('')
+  const [specificTopics, setSpecificTopics] = useState('I want to make jokes and talk about music production')
 
   const [useHolidays, setUseHolidays] = useState(false)
   const [country, setCountry] = useState({
@@ -70,8 +75,26 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
   })
   
   const [wantsGraphics, setWantsGraphics] = useState(false)
+  const [graphics, setGraphics] = useState([])
 
-  const onSubmitClick = () => {
+  const onSubmitClick = async () => {
+    let brandColors = [brandColor1.hex]
+    const brandColorTuples =  [[brandColor2, 'two'], [brandColor3, 'three'], [brandColor4, 'four'], [brandColor5, 'five']]
+    brandColorTuples.forEach(([brandColor, order]) => {
+      if(changedBrandColors[order]) {
+        brandColors.push(brandColor.hex)
+      }
+    })
+
+    const brandEmojis = [brandEmoji1, brandEmoji2, brandEmoji3, brandEmoji4, brandEmoji5]
+      .filter(emoji => emoji !== null).map(e => e.emoji)
+
+    const magicGPTPrompt = getMagicGPTPrompt(
+      magicSpeed, brandName, website, socialMedia1, socialMedia2, description, objective,
+      brandColors, brandEmojis, specificTopics, useHolidays, country, wantsGraphics, graphics
+    )
+    
+    const checkoutResponse = await checkoutMagicCalendar({ prompt: magicGPTPrompt })
     debugger
   }
 
@@ -137,11 +160,41 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
           <h2>5</h2>
           <h3>{t.questions.five.question}</h3>
           <div id='magicCheckoutColorPickersContainer'>
-            <ColorPicker color={brandColor1} onChange={setBrandColor1} />
-            <ColorPicker color={brandColor2} onChange={setBrandColor2} />
-            <ColorPicker color={brandColor3} onChange={setBrandColor3} />
-            <ColorPicker color={brandColor4} onChange={setBrandColor4} />
-            <ColorPicker color={brandColor5} onChange={setBrandColor5} />
+            <ColorPicker color={brandColor1} onChange={brandColor => {
+              setChangedBrandColors({
+                ...changedBrandColors, 
+                one: true
+              })
+              setBrandColor1(brandColor)
+            }} />
+            {changedBrandColors.one && <ColorPicker color={brandColor2} onChange={brandColor => {
+              setChangedBrandColors({
+                ...changedBrandColors, 
+                two: true
+              })
+              setBrandColor2(brandColor)
+            }}/>}
+            {changedBrandColors.two && <ColorPicker color={brandColor3} onChange={brandColor => {
+              setChangedBrandColors({
+                ...changedBrandColors, 
+                three: true
+              })
+              setBrandColor3(brandColor)
+            }}/>}
+            {changedBrandColors.three && <ColorPicker color={brandColor4} onChange={brandColor => {
+              setChangedBrandColors({
+                ...changedBrandColors, 
+                four: true
+              })
+              setBrandColor4(brandColor)
+            }}/>}
+            {changedBrandColors.four && <ColorPicker color={brandColor5} onChange={brandColor => {
+              setChangedBrandColors({
+                ...changedBrandColors, 
+                five: true
+              })
+              setBrandColor5(brandColor)
+            }}/>}
           </div>
         </div>
         <div className='magicCheckoutQuestionContainer'>
@@ -197,7 +250,7 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
             <UploadDropzone 
               uploader={uploader}
               options={{ multi: true }}
-              onUpdate={files => alert(files.map(x => x.fileUrl).join("\n"))}
+              onUpdate={files => setGraphics(files)}
               width="600px"
               height="375px" 
             />
