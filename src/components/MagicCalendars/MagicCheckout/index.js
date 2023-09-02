@@ -97,12 +97,12 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
     const { chatGPTResponse } = await getChatGPTResponse({ prompt: magicGPTPrompt })
 
     setStatus("Creating your calendar.")
-    const { magicCalendarId, isSuccess, errors } = await createMagicCalendar({
+    const { magicCalendarId } = await createMagicCalendar({
       calendar: {
         email,
         brandName,
         magicSpeed,
-        chatGPTResponse: '',
+        chatGPTResponse,
         website,
         socialMedia1,
         socialMedia2,
