@@ -288,7 +288,10 @@ const MagicCalendars = ({ setMagicSpeed }) => {
             <h4>{t.innovateSection.websiteName}</h4>
           </div>
           <h1>{t.innovateSection.title}</h1>
-          <h2>{t.innovateSection.description}</h2>
+          <h2>
+            <p>{t.innovateSection.description1}</p>
+            <p>{t.innovateSection.description2}</p>
+          </h2>
           <button className='clickable'>{t.innovateSection.cta}</button>
         </div>
       </section>

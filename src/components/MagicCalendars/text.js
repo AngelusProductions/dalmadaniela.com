@@ -117,7 +117,7 @@ export default {
                 description: {
                     choice: 'The Smart Choice. ',
                     inbox: 'Your Magic Calendar will arrive in your inbox in ',
-                    time: '8 hours!'
+                    time: '12 hours!'
                 },
                 bullets: {
                     one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
@@ -132,11 +132,11 @@ export default {
                 description: {
                     choice: 'The Best Choice. ',
                     inbox: 'Your Magic Calendar will arrive in your inbox in ',
-                    time: '4 hours!'
+                    time: '8 hours!'
                 },
                 bullets: {
-                    one: 'Custom-made, attractive captions',
-                    two: 'Eye-catching graphics',
+                    one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
+                    two: 'Eye-catching graphics & videos',
                     three: 'Free photo enhancement',
                     four: "Did you know you have a brand archetype? We'll let you know what it is.",
                     five: "Free social media marketing tips 100% tailored to your brand goals."
@@ -147,8 +147,9 @@ export default {
     },
     innovateSection: {
         websiteName: 'dalmadaniela.com',
-        title: 'Innovate with us',
-        description: 'Automate your content and simplify your business operations with easy and consistent social media solutions.',
+        title: 'Social media for everyone',
+        description1: "As someone running a business, you don't deserve to be overwhelmed or overpay.",
+        description2: "Automate your content with our easy and innovative social media solutions!",
         cta: 'Start today with a 10% discount'
     }
 }

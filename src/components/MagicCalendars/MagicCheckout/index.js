@@ -94,7 +94,7 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
       ], [], specificTopics, useHolidays, country, wantsGraphics, graphics, email
     )
     setStatus("Loading your data.")
-    // const { chatGPTResponse } = await getChatGPTResponse({ prompt: magicGPTPrompt })
+    const { chatGPTResponse } = await getChatGPTResponse({ prompt: magicGPTPrompt })
 
     setStatus("Creating your calendar.")
     const { magicCalendarId, isSuccess, errors } = await createMagicCalendar({
@@ -124,7 +124,6 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
       })
     })
     setStatus("Magic Calendar Created.")
-    debugger
   }
 
   return (
