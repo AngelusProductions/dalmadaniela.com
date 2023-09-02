@@ -37,7 +37,9 @@ export const apiEndpoints = {
     saveInfo: '/superClass/saveInfo',
   },
   magicCalendars: {
-    checkout: '/magic-calendars/checkout'
+    create: '/magic-calendars/create',
+    saveGraphic: '/magic-calendars/saveGraphic',
+    chatGPT: '/magic-calendars/chatGPT',
   }
 }
 

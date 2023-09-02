@@ -20,7 +20,7 @@ import BackIcon from '../../UI/BackIcon'
 import { i } from '../../../constants/data/assets'
 import { paths } from '../../../constants/paths'
 import { setMagicSpeed } from '../../../actions/magicCalendars'
-import { checkoutMagicCalendar } from '../../../api/magicCalendars'
+import { createMagicCalendar, getChatGPTResponse, saveGraphic } from '../../../api/magicCalendars'
 
 import t from './text.js'
 import { getMagicGPTPrompt } from './prompts.js'
@@ -37,7 +37,7 @@ const emojiPickerProps = {
 }
 
 const uploader = Uploader({
-  apiKey: "free"
+  apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ"
 })
 
 const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
@@ -73,6 +73,8 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
 
   const [email, setEmail] = useState(t.test.email)
 
+  const [status, setStatus] = useState(null)
+
   const onSubmitClick = async () => {
     let brandColors = [brandColor1.hex]
     const brandColorTuples =  [[brandColor2, 'two'], [brandColor3, 'three'], [brandColor4, 'four'], [brandColor5, 'five']]
@@ -91,9 +93,38 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
         t.test.brandColor1, t.test.brandColor2, t.test.brandColor3
       ], [], specificTopics, useHolidays, country, wantsGraphics, graphics, email
     )
-    
-    const checkoutResponse = await checkoutMagicCalendar({ prompt: magicGPTPrompt })
-    // debugger
+    setStatus("Loading your data.")
+    // const { chatGPTResponse } = await getChatGPTResponse({ prompt: magicGPTPrompt })
+
+    setStatus("Creating your calendar.")
+    const { magicCalendarId, isSuccess, errors } = await createMagicCalendar({
+      calendar: {
+        email,
+        brandName,
+        magicSpeed,
+        chatGPTResponse: '',
+        website,
+        socialMedia1,
+        socialMedia2,
+        description,
+        objective,
+        brandColors: brandColors.join(','),
+        brandEmojis: brandEmojis.join(','),
+        specificTopics,
+        useHolidays,
+        country: country.name,
+        wantsGraphics,
+      }
+    })
+    setStatus("Uploading your graphics.")
+    graphics.forEach(({ fileUrl}) => {
+      saveGraphic({
+        fileUrl,
+        magicCalendarId
+      })
+    })
+    setStatus("Magic Calendar Created.")
+    debugger
   }
 
   return (
@@ -267,6 +298,7 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
       >
         {t.cta}
       </button>
+      {status && <p>{status}</p>}
     </main>
   )
 }
