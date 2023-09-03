@@ -20,10 +20,9 @@ import BackIcon from '../../UI/BackIcon'
 import { i } from '../../../constants/data/assets'
 import { paths } from '../../../constants/paths'
 import { setMagicSpeed } from '../../../actions/magicCalendars'
-import { createMagicCalendar, getChatGPTResponse, saveGraphic } from '../../../api/magicCalendars'
+import { createMagicCalendar, saveGraphic } from '../../../api/magicCalendars'
 
 import t from './text.js'
-import { getMagicGPTPrompt } from './prompts.js'
 import './styles/index.scss'
 
 const emojiPickerProps = {
@@ -87,22 +86,14 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
     const brandEmojis = [brandEmoji1, brandEmoji2, brandEmoji3, brandEmoji4, brandEmoji5]
       .filter(emoji => emoji !== null).map(e => e.emoji)
 
-    const magicGPTPrompt = getMagicGPTPrompt(
-      magicSpeed, brandName, website, socialMedia1, socialMedia2, description, objective,
-      [
-        t.test.brandColor1, t.test.brandColor2, t.test.brandColor3
-      ], [], specificTopics, useHolidays, country, wantsGraphics, graphics, email
-    )
-    setStatus("Loading your data.")
-    const { chatGPTResponse } = await getChatGPTResponse({ prompt: magicGPTPrompt })
-
     setStatus("Creating your calendar.")
+    
     const { magicCalendarId } = await createMagicCalendar({
       calendar: {
         email,
         brandName,
         magicSpeed,
-        chatGPTResponse,
+        chatGPTResponse: null,
         website,
         socialMedia1,
         socialMedia2,
@@ -116,13 +107,16 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
         wantsGraphics,
       }
     })
+
     setStatus("Uploading your graphics.")
+
     graphics.forEach(({ fileUrl}) => {
       saveGraphic({
         fileUrl,
         magicCalendarId
       })
     })
+
     setStatus("Magic Calendar Created.")
   }
 
