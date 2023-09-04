@@ -1,6 +1,6 @@
 
 export default {
-    magicCalendars: 'Magic Calendars',
+    getMagicCalendar: 'Get Magic Calendar',
     titleSection: {
         title: "Posting on social media doesn't have to feel like a nightmare",
         subtitle: 'Because consistency can be easy!',

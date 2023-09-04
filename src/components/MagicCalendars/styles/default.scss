@@ -29,6 +29,12 @@
             font-size: 2vw;
             width: 25%;
             margin: 25px auto;
+            cursor: pointer;
+
+            &:hover {
+                background: $yellow;
+                color: $pink;
+            }
         }
 
         h3 {
@@ -188,6 +194,12 @@
                 width: fit-content;
                 font-size: 1.7vw;
                 text-align: center;
+                cursor: pointer;
+                
+                &:hover {
+                    background: $yellow;
+                    color: $pink;
+                }
             }
 
             > h1 {

@@ -24,7 +24,12 @@ const MagicCalendars = ({ setMagicSpeed }) => {
       <HomeIcon />
       <section id='titleSection' className='magicCalendarsSection'>
         <h1>{t.titleSection.title}</h1>
-        <h2>{t.magicCalendars}</h2>
+        <h2
+          className='clickable'
+          onClick={() => onChooseClick('superfast')}
+        >
+          {t.getMagicCalendar}
+        </h2>
         <h3>{t.titleSection.subtitle}</h3>
         <img id='magicCalendarsTitleSectionComputerHands' src={i.stock.computerHands} />
         <div id='magicCalendarsTitleSectionWandContainer'>
@@ -80,7 +85,10 @@ const MagicCalendars = ({ setMagicSpeed }) => {
       </section>
       <section id='whatYouGetSection' className='magicCalendarsSection'>
         <div id='whatYouGetLeftSection'>
-          <span>{t.magicCalendars}</span>
+          <span
+            className='clickable'
+            onClick={() => onChooseClick('superfast')}
+          >{t.getMagicCalendar}</span>
           <h1>{t.whatYouGetSection.title}</h1>
           <div className='whatYouGetLeftSectionSection'>
             <h2>{t.whatYouGetSection.bullets.one.title}</h2>
