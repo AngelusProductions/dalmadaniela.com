@@ -14,11 +14,7 @@ import 'react-country-dropdown/dist/index.css'
 import { Uploader } from "uploader"
 import { UploadDropzone } from "react-uploader"
 
-import HomeIcon from '../../UI/HomeIcon'
-import BackIcon from '../../UI/BackIcon'
-
 import { i } from '../../../constants/data/assets'
-import { paths } from '../../../constants/paths'
 import { setMagicSpeed } from '../../../actions/magicCalendars'
 import { createMagicCalendar, saveGraphic } from '../../../api/magicCalendars'
 
@@ -122,105 +118,46 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
 
   return (
     <main id='magicCheckoutPage'>
-      <HomeIcon />
-      <BackIcon path={paths.magicCalendars.page} />
-      
       <h1>{t.title}</h1>
-      <img id='magicCheckoutMagic' src={i.stars.starSwirl} />
-      <div id='magicCheckoutMagicSpeedsContainer'>
-        <label>{t.yourMagicSpeed}</label>
-        <div id='magicCheckoutMagicSpeedsList'>
-          <button 
-            onClick={() => setMagicSpeed('standard')}
-            className={`magicSpeedButton ${magicSpeed === 'standard' ? 'active' : 'inactive'} clickable`}
-          >{t.magicSpeeds.standard}</button>
-          <button 
-            onClick={() => setMagicSpeed('fast')}
-            className={`magicSpeedButton ${magicSpeed === 'fast' ? 'active' : 'inactive'} clickable`}
-          >{t.magicSpeeds.fast}</button>
-          <button 
-            onClick={() => setMagicSpeed('superfast')}
-            className={`magicSpeedButton ${magicSpeed === 'superfast' ? 'active' : 'inactive'} clickable`}
-          >{t.magicSpeeds.superFast}</button>
-        </div>
+      <div id='magicCheckoutTitleSectionWandContainer'>
+        <img id='magicCheckoutTitleSectionWand' src={i.stock.wand} />
+        <img id='magicCheckoutTitleSectionWandMagic' src={i.stars.starTwinklesLarge} />
       </div>
       <div id='magicCheckoutQuestionsContainer'>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>1</h2>
-          <h3>{t.questions.one.intro}</h3>
-          <label>{t.questions.one.question}</label>
-          <input className='magicCheckoutInput' value={brandName} onChange={e => setBrandName(e.target.value)} />
-        </div>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>2</h2>
-          <h3>{t.questions.two.question}</h3>
-          <div className='magicCheckoutForm'>
-            <label>{t.questions.two.websiteLabel}</label>
-            <input className='magicCheckoutInput' value={website} onChange={e => setWebsite(e.target.value)} />
-          </div>
-          <div className='magicCheckoutForm'>
-            <label>{t.questions.two.socialMediaLabel1}</label>
-            <input className='magicCheckoutInput' value={socialMedia1} onChange={e => setSocialMedia1(e.target.value)} />
-          </div>
-          <div className='magicCheckoutForm'>
-            <label>{t.questions.two.socialMediaLabel1}</label>
-            <input className='magicCheckoutInput' value={socialMedia2} onChange={e => setSocialMedia2(e.target.value)} />
+        <div className='magicCheckoutQuestionContainer one'>
+          <h2>{t.questions.one.intro}</h2>
+          <div id='magicCheckoutQuestionOneInputContainer'>
+            <h2>{t.questions.one.question}</h2>
+            <input className='magicCheckoutInput' value={brandName} onChange={e => setBrandName(e.target.value)} />
           </div>
         </div>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>3</h2>
-          <h3>{t.questions.three.question}</h3>
-          <label>{t.questions.three.helper}</label>
-          <textarea className='magicCheckoutInput' value={description} onChange={e => setDescription(e.target.value)} />
+        <div className='magicCheckoutQuestionContainer two'>
+          <h2>{t.questions.two.question1}</h2>
+          <input className='magicCheckoutInput' value={website} onChange={e => setWebsite(e.target.value)} />
+          <h2>{t.questions.two.question2}</h2>
+          <input className='magicCheckoutInput' value={socialMedia1} onChange={e => setSocialMedia1(e.target.value)} />
+          <input className='magicCheckoutInput' value={socialMedia2} onChange={e => setSocialMedia2(e.target.value)} />
         </div>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>4</h2>
-          <h3>{t.questions.four.question}</h3>
-          <textarea className='magicCheckoutInput' value={objective} onChange={e => setObjective(e.target.value)} />
+        <div className='magicCheckoutQuestionContainer three'>
+          <h2>{t.questions.three.question}</h2>
+          <h2>{t.questions.three.helper}</h2>
+          <textarea className='magicCheckoutTextArea' value={description} onChange={e => setDescription(e.target.value)} />
         </div>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>5</h2>
-          <h3>{t.questions.five.question}</h3>
+        <div className='magicCheckoutQuestionContainer four'>
+          <h2>{t.questions.four.question}</h2>
+          <textarea className='magicCheckoutTextArea' value={objective} onChange={e => setObjective(e.target.value)} />
+        </div>
+        <div className='magicCheckoutQuestionContainer five'>
+          <h2>{t.questions.five.question}</h2>
           <div id='magicCheckoutColorPickersContainer'>
-            <ColorPicker color={brandColor1} onChange={brandColor => {
-              setChangedBrandColors({
-                ...changedBrandColors, 
-                one: true
-              })
-              setBrandColor1(brandColor)
-            }} />
-            {<ColorPicker color={brandColor2} onChange={brandColor => {
-              setChangedBrandColors({
-                ...changedBrandColors, 
-                two: true
-              })
-              setBrandColor2(brandColor)
-            }}/>}
-            {<ColorPicker color={brandColor3} onChange={brandColor => {
-              setChangedBrandColors({
-                ...changedBrandColors, 
-                three: true
-              })
-              setBrandColor3(brandColor)
-            }}/>}
-            {changedBrandColors.three && <ColorPicker color={brandColor4} onChange={brandColor => {
-              setChangedBrandColors({
-                ...changedBrandColors, 
-                four: true
-              })
-              setBrandColor4(brandColor)
-            }}/>}
-            {changedBrandColors.four && <ColorPicker color={brandColor5} onChange={brandColor => {
-              setChangedBrandColors({
-                ...changedBrandColors, 
-                five: true
-              })
-              setBrandColor5(brandColor)
-            }}/>}
+            <ColorPicker color={brandColor1} onChange={brandColor => setBrandColor1(brandColor)} />
+            <ColorPicker color={brandColor2} onChange={brandColor => setBrandColor2(brandColor)} />
+            <ColorPicker color={brandColor3} onChange={brandColor => setBrandColor3(brandColor)} />
+            <ColorPicker color={brandColor4} onChange={brandColor => setBrandColor4(brandColor)} />
+            <ColorPicker color={brandColor5} onChange={brandColor => setBrandColor5(brandColor)} />
           </div>
         </div>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>6</h2>
+        <div className='magicCheckoutQuestionContainer six'>
           <label>{t.questions.six.question}</label>
           <div id='magicCheckoutEmojiPickersContainer'>
             <div id='magicCheckoutEmojiSelectionsContainer'>
@@ -239,13 +176,11 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
             </div>
           </div>
         </div>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>7</h2>
+        <div className='magicCheckoutQuestionContainer seven'>
           <label>{t.questions.seven.question}</label>
-          <textarea className='magicCheckoutInput' value={specificTopics} onChange={e => setSpecificTopics(e.target.value)} />
+          <textarea className='magicCheckoutTextArea' value={specificTopics} onChange={e => setSpecificTopics(e.target.value)} />
         </div>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>8</h2>
+        <div className='magicCheckoutQuestionContainer eight'>
           <label>{t.questions.eight.question}</label>
           <Toggle
             id='toggleUseHolidays'
@@ -256,9 +191,8 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
             <ReactCountryDropdown onSelect={country => setCountry(country)} />
           )}
         </div>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>9</h2>
-          <h3>{t.questions.nine.question}</h3>
+        <div className='magicCheckoutQuestionContainer nine'>
+          <h2>{t.questions.nine.question}</h2>
           <label>{t.questions.nine.helper}</label>
           <div id='magicCheckoutWantGraphicsContainer'>
             <label>{t.questions.nine.graphics}</label>
@@ -278,8 +212,7 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
             />
           )}
         </div>
-        <div className='magicCheckoutQuestionContainer'>
-          <h2>10</h2>
+        <div className='magicCheckoutQuestionContainer ten'>
           <label>{t.questions.ten.question}</label>
           <input className='magicCheckoutInput' value={email} onChange={e => setEmail(e.target.value)} />
         </div>

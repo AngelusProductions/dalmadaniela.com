@@ -1,79 +1,90 @@
 @import '../../../colors.scss';
 
 #magicCheckoutPage {
+    padding: 7%;
+
     h1 {
-        text-align: center;
-        margin-top: 10%;
         font-size: 6vw;
         color: $pink;
+        font-family: 'Garbata';
+        font-weight: 300;
+        margin-bottom: 5%;
     }
 
-    #magicCheckoutMagic {
+    h2 {
+        font-family: 'Garet';
+        font-weight: 100;
+        color: $pink;
+        font-size: 1.9vw;
+    }
+
+    #magicCheckoutTitleSectionWandContainer {
         position: absolute;
-        right: 0;
-        width: 25vw;
-        top: 0;
-        z-index: -1;
-        filter: opacity(0.4);
-    }
+        top: 5vw;
+        left: 37vw;
 
-    #magicCheckoutMagicSpeedsContainer {
-        text-align: center;
-        margin: 50px auto;
-
-        label {
-            font-family: 'Garbata';
-            font-weight: bold;
-            font-size: 2.6vw;
+        #magicCheckoutTitleSectionWand {
+            width: 12vw;
         }
-
-        #magicCheckoutMagicSpeedsList {
-            width: 50%;
-            display: flex;
-            justify-content: space-evenly;
-            margin: 25px auto;
-
-            button {
-                font-size: 1.7vw;
-                text-transform: uppercase;
-                font-family: 'Garbata';
-                cursor: pointer;
-
-                &.active {
-                    background: $pink;
-                    color: $yellow;
-                    font-weight: bold;
-                    padding: 25px;
-                    font-style: italic;
-                }
-                &.inactive {
-                    padding: 13px;
-                    background: black;
-                    color: white;
-                }
-            }
+        
+        #magicCheckoutTitleSectionWandMagic {
+            width: 10vw;
+            transform: rotate(-112deg) scaleX(-1);
+            position: absolute;
+            right: -108%;
+            top: -31%;
         }
     }
 
     #magicCheckoutQuestionsContainer {
-        text-align: center;
         font-family: 'Garet';
-        font-weight: 300;
 
         .magicCheckoutQuestionContainer {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             margin: auto;
-            padding: 2%;
-            align-items: center;
+            padding: 2% 0%;
 
-            &:nth-child(odd) {
-                color: white;
-                background: $pink;
+            &.one {
+                #magicCheckoutQuestionOneInputContainer {
+                    display: flex;
+
+                    input {
+                        width: 25vw;
+                        margin-left: 2vw; 
+                    }
+                } 
+            }&.two {
+                h2 {
+                    margin: 1% 0;
+                }
+            
+                input:nth-of-type(2) {
+                    margin-bottom: 1%;
+                }
             }
-            &:nth-child(even) {
-                background: $yellow;
+            
+            &.five {
+                h2 {
+                    margin-bottom: 3%;
+                }
+
+                .rcp {
+                    width: 19% !important;
+                }
+                .rcp-fields-floor {
+                    display: unset !important;
+                }
+                .rcp-field {
+                    width: unset !important;
+                }
+            }
+
+            textarea {
+                width: 75%;
+                padding-top: 1%;
+                margin-top: 1%;
             }
 
             .magicCheckoutForm {
@@ -85,13 +96,22 @@
             }
 
             .magicCheckoutInput {
-                background: black;
-                color: white;
+                border: 1px solid black;
                 height: 25px;
                 border-radius: 15px;
-                font-family: 'Garbata';
-                font-weight: bold;
-                width: 50%;
+                font-family: 'Garet';
+                width: 66%;
+                padding: 0 2%;
+            }
+            
+            .magicCheckoutTextArea {
+                border: 1px solid black;
+                height: 25px;
+                border-radius: 15px;
+                font-family: 'Garet';
+                width: 66%;
+                padding: 1% 2%;
+                height: 150px;
             }
 
             #magicCheckoutColorPickersContainer,
