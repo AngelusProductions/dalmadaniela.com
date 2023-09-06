@@ -87,6 +87,56 @@
                 }
             }
 
+            &.eight {
+                #magicCheckoutQuestionEightContainer {
+                    display: flex;
+                    align-items: center;
+
+                    .react-toggle {
+                        margin-left: 1vw;
+                    }
+                }
+
+                #magicCheckoutQuestionEightCountryContainer {
+                    display: flex;
+                    margin-top: 1%;
+
+                    h2 {
+                        width: 25%;
+                    }
+
+                    ._1Lxpd {
+                        width: 25% !important;
+                        z-index: 99;
+
+                        ._30Ipg {
+                            background: $yellow !important;
+                            border: 1px solid $pink;
+                        }
+
+                        ._1KMXW {
+                            box-shadow: 0px 0px 0px 3px $pink, 10px 10px 15px -6px black;
+                            border-radius: 15px;
+
+                            ._34ETa {
+                                margin-bottom: unset !important;
+                                padding: 10px 0;
+
+                                &:hover {
+                                    background: $yellow;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &.nine {
+                .react-toggle {
+                    margin-left: 1vw;
+                }
+            }
+
             textarea {
                 width: 75%;
                 padding-top: 1%;
@@ -125,11 +175,12 @@
             #magicCheckoutWantGraphicsContainer {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                align-items: center;
             }
             
             #magicCheckoutColorPickersContainer {
                 width: 100%;
+                justify-content: space-between;
             }
 
             #magicCheckoutEmojiPickersContainer {
@@ -141,6 +192,7 @@
                     justify-content: space-around;
                     align-items: center;
                     margin: 1% 0;
+                    width: 100%;
             
                     .magicEmojiContainer {
                         width: 15vw;

@@ -32,11 +32,11 @@ export default {
             question: "Your brand emojis (Choose up to 5 emojis):"
         },
         seven: {
-            question: "Is there a specific topic you'd like us to include in your calendar this month?"
+            question: "Is there a specific topic you'd like us to include this month?"
         },
         eight: {
-            question: "Should we include national holiday posts if applicable?",
-            country: "Which country's holidays?"
+            question1: "Should we include national holiday posts if applicable?",
+            question2: "For which country?"
         },
         nine: {
             question: "Now upload up to 6 photos you'd like us to use.",

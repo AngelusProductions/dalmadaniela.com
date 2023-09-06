@@ -195,25 +195,30 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
           </div>
         </div>
         <div className='magicCheckoutQuestionContainer seven'>
-          <label>{t.questions.seven.question}</label>
+          <h2>{t.questions.seven.question}</h2>
           <textarea className='magicCheckoutTextArea' value={specificTopics} onChange={e => setSpecificTopics(e.target.value)} />
         </div>
         <div className='magicCheckoutQuestionContainer eight'>
-          <label>{t.questions.eight.question}</label>
-          <Toggle
-            id='toggleUseHolidays'
-            defaultChecked={t.test.useHolidays}
-            onChange={() => setUseHolidays(!useHolidays)} 
-          />
+          <div id='magicCheckoutQuestionEightContainer'>
+            <h2>{t.questions.eight.question1}</h2>
+            <Toggle
+              id='toggleUseHolidays'
+              defaultChecked={t.test.useHolidays}
+              onChange={() => setUseHolidays(!useHolidays)} 
+            />
+          </div>
           {useHolidays && (
-            <ReactCountryDropdown onSelect={country => setCountry(country)} />
+            <div id='magicCheckoutQuestionEightCountryContainer'>
+              <h2>{t.questions.eight.question2}</h2>
+              <ReactCountryDropdown onSelect={country => setCountry(country)} />
+            </div>
           )}
         </div>
         <div className='magicCheckoutQuestionContainer nine'>
           <h2>{t.questions.nine.question}</h2>
-          <label>{t.questions.nine.helper}</label>
+          <h2>{t.questions.nine.helper}</h2>
           <div id='magicCheckoutWantGraphicsContainer'>
-            <label>{t.questions.nine.graphics}</label>
+            <h2>{t.questions.nine.graphics}</h2>
             <Toggle
               id='toggleWantGraphics'
               defaultChecked={t.test.wantsGraphics}
@@ -231,7 +236,7 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
           )}
         </div>
         <div className='magicCheckoutQuestionContainer ten'>
-          <label>{t.questions.ten.question}</label>
+          <h2>{t.questions.ten.question}</h2>
           <input className='magicCheckoutInput' value={email} onChange={e => setEmail(e.target.value)} />
         </div>
       </div>
