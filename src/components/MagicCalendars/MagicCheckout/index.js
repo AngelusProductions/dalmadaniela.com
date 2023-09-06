@@ -29,6 +29,8 @@ const emojiPickerProps = {
     suggestedEmojisMode: SuggestionMode.RECENT,
     searchPlaceHolder: "What does your brand feel like?",
     defaultSkinTone: SkinTones.NEUTRAL,
+    width: '75%',
+    height: '400px'
 }
 
 const uploader = Uploader({
@@ -158,21 +160,37 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
           </div>
         </div>
         <div className='magicCheckoutQuestionContainer six'>
-          <label>{t.questions.six.question}</label>
+          <h2>{t.questions.six.question}</h2>
           <div id='magicCheckoutEmojiPickersContainer'>
-            <div id='magicCheckoutEmojiSelectionsContainer'>
-              {brandEmoji1 && <img src={brandEmoji1.getImageUrl()} />}
-              {brandEmoji2 && <img src={brandEmoji2.getImageUrl()} />}
-              {brandEmoji3 && <img src={brandEmoji3.getImageUrl()} />}
-              {brandEmoji4 && <img src={brandEmoji4.getImageUrl()} />}
-              {brandEmoji5 && <img src={brandEmoji5.getImageUrl()} />}
-            </div>
-            <div id='magicCheckoutEmojiPickersContainer'>
+            <div className='magicEmojiPickerContainer'>
+              <div className='magicEmojiContainer'>
+                {brandEmoji1 && <img src={brandEmoji1.getImageUrl()} />}
+              </div>
               <EmojiPicker onEmojiClick={emoji => setBrandEmoji1(emoji)} {...emojiPickerProps} />
-              {brandEmoji1 && <EmojiPicker onEmojiClick={emoji => setBrandEmoji2(emoji)} {...emojiPickerProps} />}
-              {brandEmoji1 && brandEmoji2 && <EmojiPicker onEmojiClick={emoji => setBrandEmoji3(emoji)} {...emojiPickerProps} />}
-              {brandEmoji1 && brandEmoji2 && brandEmoji3 && <EmojiPicker onEmojiClick={emoji => setBrandEmoji4(emoji)} {...emojiPickerProps} />}
-              {brandEmoji1 && brandEmoji2 && brandEmoji3 && brandEmoji4 && <EmojiPicker onEmojiClick={emoji => setBrandEmoji5(emoji)} {...emojiPickerProps} />}
+            </div>
+            <div className='magicEmojiPickerContainer'>
+              <div className='magicEmojiContainer'>
+                {brandEmoji2 && <img src={brandEmoji2.getImageUrl()} />}
+              </div>
+              <EmojiPicker onEmojiClick={emoji => setBrandEmoji2(emoji)} {...emojiPickerProps} />
+            </div>
+            <div className='magicEmojiPickerContainer'>
+              <div className='magicEmojiContainer'>
+                {brandEmoji3 && <img src={brandEmoji3.getImageUrl()} />}
+              </div>
+              <EmojiPicker onEmojiClick={emoji => setBrandEmoji3(emoji)} {...emojiPickerProps} />
+            </div>
+            <div className='magicEmojiPickerContainer'>
+              <div className='magicEmojiContainer'>
+                {brandEmoji4 && <img src={brandEmoji4.getImageUrl()} />}
+              </div>
+              <EmojiPicker onEmojiClick={emoji => setBrandEmoji4(emoji)} {...emojiPickerProps} />
+            </div>
+            <div className='magicEmojiPickerContainer'>
+              <div className='magicEmojiContainer'>
+                {brandEmoji5 && <img src={brandEmoji5.getImageUrl()} />}
+              </div>
+              <EmojiPicker onEmojiClick={emoji => setBrandEmoji5(emoji)} {...emojiPickerProps} />
             </div>
           </div>
         </div>

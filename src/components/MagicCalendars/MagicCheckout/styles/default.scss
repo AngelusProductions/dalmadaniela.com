@@ -81,6 +81,12 @@
                 }
             }
 
+            &.six {
+                h2 {
+                    margin-bottom: 3%;
+                }
+            }
+
             textarea {
                 width: 75%;
                 padding-top: 1%;
@@ -125,18 +131,32 @@
             #magicCheckoutColorPickersContainer {
                 width: 100%;
             }
-            
-            #magicCheckoutEmojiPickersContainer {
-                margin: auto;
-                width: 80%;
-                gap: 50px;
-            }
 
-            #magicCheckoutEmojiSelectionsContainer {
+            #magicCheckoutEmojiPickersContainer {
                 display: flex;
-                width: 50%;
-                justify-content: space-between;
-                margin: auto;
+                flex-direction: column;
+                
+                .magicEmojiPickerContainer {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin: 1% 0;
+            
+                    .magicEmojiContainer {
+                        width: 15vw;
+                        height: 15vw;
+                        background: $yellow;
+                        border: 1px solid $pink;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+
+                        img {
+                            height: 50%;
+                        }
+                    }
+                }
             }
         }
     }
