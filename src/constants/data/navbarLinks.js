@@ -11,7 +11,7 @@ export default [
   {
     id: 2,
     name: 'SuperClass',
-    path: paths.superClass,
+    path: paths.superClass.page,
     side: 'left',
     tooltip: null
   },

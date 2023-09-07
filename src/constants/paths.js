@@ -5,7 +5,8 @@ export const paths = {
   superClass: {
     page: '/superclass',
     videos: '/superclass/videos',
-    watch: '/superclass/watch/:id'
+    metaData: '/superclass/videos/data',
+    watch: '/superclass/videos/:id'
   },
   magicCalendars: '/magic-calendars',
   blog: {
