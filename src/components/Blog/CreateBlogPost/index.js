@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router'
+import { connect } from 'react-redux'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import getYouTubeID from 'get-youtube-id'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
@@ -32,7 +33,7 @@ const t = {
   youtubeRegex: /^(?:https?:\/\/)?(?:m\.|www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/
 }
 
-export const CreateBlogPost = props => {
+export const CreateBlogPost = ({ currentUser }) => {
   const navigate = useNavigate()
 
   const [blogPostName, setBlogPostName] = useState('')
@@ -43,6 +44,12 @@ export const CreateBlogPost = props => {
   const [isYoutubeLinkSubmitted, setIsYoutubeLinkSubmitted] = useState(false)
   const [isValidationError, setIsValidationError] = useState(false)
   const [file, setFile] = useState(null);
+  
+  useEffect(() => {
+    if(!currentUser.email) {
+      navigate(`${paths.auth.login}?redirect=${paths.blog.create}`)
+    }
+  })
   
   const onCreate = () => {
     if(!file || blogPostName.length === 0 
@@ -144,4 +151,14 @@ export const CreateBlogPost = props => {
   </div>
 )}
 
-export default CreateBlogPost
+const mapState = state => {
+  return {
+    currentUser: state.currentUser
+  }
+}
+
+const mapDispatch = dispatch => ({
+
+})
+
+export default connect(mapState, mapDispatch)(CreateBlogPost)

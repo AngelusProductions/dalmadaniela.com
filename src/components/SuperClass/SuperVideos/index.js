@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { connect } from 'react-redux'
 import ScrollToTop from 'react-scroll-to-top'
 
@@ -14,12 +14,20 @@ import './styles/index.scss'
 const t = {
   title: 'Welcome to',
   superclass: 'SuperClass',
-  thumbnailSource: (playbackId, thumbnailStart) => `https://image.mux.com/${playbackId}/animated.gif?start=${thumbnailStart}&fps=30`
+  thumbnailSource: (playbackId, thumbnailStart) => `https://image.mux.com/${playbackId}/animated.gif?start=${thumbnailStart}&fps=30`,
+  login: 'Click to Login'
 }
 
-export const SuperVideos = () => {
+export const SuperVideos = ({ currentUser }) => {
+  const navigate = useNavigate()
   
-  return (
+  useEffect(() => {
+    if(!currentUser.email) {
+      navigate(`${paths.auth.login}?redirect=${paths.superClass.videos}`)
+    }
+  })
+
+  return currentUser.email && (
     <div id='superVideosPageContainer'>
       <HomeIcon />
       <h1>{t.title} <span>{t.superclass}</span></h1>
@@ -36,7 +44,9 @@ export const SuperVideos = () => {
 }
 
 const mapState = state => {
-
+  return {
+    currentUser: state.currentUser
+  }
 }
 
 const mapDispatch = dispatch => ({
