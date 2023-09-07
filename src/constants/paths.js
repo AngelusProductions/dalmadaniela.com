@@ -2,7 +2,11 @@ import { configureApiRoot } from '../utils/config'
 
 export const paths = {
   home: '/',
-  superClass: '/superclass',
+  superClass: {
+    page: '/superclass',
+    videos: '/superclass/videos',
+    watch: '/superclass/watch/:id'
+  },
   magicCalendars: '/magic-calendars',
   blog: {
     page: '/blog',

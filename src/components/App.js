@@ -3,7 +3,11 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Home from './Home'
+
 import SuperClass from './SuperClass'
+import SuperVideos from './SuperClass/SuperVideos'
+import SuperWatch from './SuperClass/SuperWatch'
+
 import MagicCalendars from './MagicCalendars'
 
 import Blog from './Blog'
@@ -34,7 +38,11 @@ const App = ({ currentUser, onBoot }) => {
   return (
     <Routes>
       <Route index element={<Home />}/>
-      <Route path={paths.superClass} element={<SuperClass />} />
+
+      <Route path={paths.superClass.page} element={<SuperClass />} />
+      <Route path={paths.superClass.videos} element={<SuperVideos />} />
+      <Route path={paths.superClass.watch} element={<SuperWatch />} />
+      
       <Route path={paths.magicCalendars} element={<MagicCalendars />} />
 
       <Route path={paths.blog.page} element={<Blog />} />
