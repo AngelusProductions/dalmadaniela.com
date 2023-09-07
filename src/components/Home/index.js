@@ -73,7 +73,6 @@ const Home = () => {
       </section>
       <section id='bio' className='homeSection'>
         <div className='left'>
-          {/* <img id='bioLeftMagic' src={i.magic.magic5} />   */}
           <div id='bioLeft' className='centerText'>
             <h2>{t.bioTitle}</h2>
             <p>{t.bioText}</p>
@@ -155,7 +154,6 @@ const Home = () => {
                 </a>
               </div>
               <img id='socialMediaInstagramPhone' src={i.dalma.instagramPhone} />
-              {/* <img id='socialMediaMagic' src={i.magic.magic8} /> */}
             </div>
           </div>
         </div>
@@ -172,7 +170,6 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.garett.image} />
-          {/* <img className='testimonialMagic' src={i.magic.magic8} /> */}
         </div>
       </section>
       <section id='evanTestimonial' className='homeSection testimonial'>
@@ -187,7 +184,6 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.evan.image} />
-          {/* <img className='testimonialMagic' src={i.magic.magic9} /> */}
         </div>
       </section>
       <section id='alexTestimonial' className='homeSection testimonial'>
@@ -202,7 +198,6 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.alex.image} />
-          {/* <img className='testimonialMagic' src={i.magic.magic5} /> */}
         </div>
       </section>
       <section id='camiTestimonial' className='homeSection testimonial'>
@@ -217,7 +212,6 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.cami.image} />
-          {/* <img className='testimonialMagic' src={i.magic.magic5} /> */}
         </div>
       </section>
       <section id='teachYou' className='homeSection'>
