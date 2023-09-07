@@ -6,7 +6,7 @@ import Home from './Home'
 
 import SuperClass from './SuperClass'
 import SuperVideos from './SuperClass/SuperVideos'
-import SuperWatch from './SuperClass/SuperWatch'
+import SuperWatcher from './SuperClass/SuperWatcher'
 
 import MagicCalendars from './MagicCalendars'
 
@@ -41,7 +41,7 @@ const App = ({ currentUser, onBoot }) => {
 
       <Route path={paths.superClass.page} element={<SuperClass />} />
       <Route path={paths.superClass.videos} element={<SuperVideos />} />
-      <Route path={paths.superClass.watch} element={<SuperWatch />} />
+      <Route path={paths.superClass.watch} element={<SuperWatcher />} />
       
       <Route path={paths.magicCalendars} element={<MagicCalendars />} />
 
