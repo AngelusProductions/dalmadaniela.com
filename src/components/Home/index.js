@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 
+import FAQ from './FAQ'
 import Navbar from './Navbar'
 import SuperClassPopUp from '../UI/SuperClassPopUp'
 
-import { i } from '../../constants/data/assets'
-import { saveSuperClassSubscribeInfo } from '../../api/superClass'
-import testimonials from '../../constants/data/testimonials'
 import { paths } from '../../constants/paths'
+import { i } from '../../constants/data/assets'
+import testimonials from '../../constants/data/testimonials'
+import { saveSuperClassSubscribeInfo } from '../../api/superClass'
+
 import t from './text.js'
 import './styles/index.scss'
-import FAQ from './FAQ'
 
 const Home = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
   const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
 
-  const onSuperClassPopUpSubmitClick = async email => {
-    const res = await saveSuperClassSubscribeInfo({ email })
+  const onSuperClassPopUpSubmitClick = async (name, email) => {
+    const res = await saveSuperClassSubscribeInfo({ name, email })
     if (res.isSuccess) {
       setShowSuperClassPopUpThankYou(true)
       setTimeout(() => {
