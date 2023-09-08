@@ -1,0 +1,25 @@
+@import '../../../colors.scss';
+
+.superThumbnailContainer {
+    text-align: center;
+    height: 33%;
+    display: flex;
+    border: 1px solid;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5%;
+    padding-top: 5%;
+
+    p {
+        margin-bottom: 1%;
+    }
+
+    img {
+        width: 80%;
+        height: 50%;
+        object-fit: cover;
+        object-position: top;
+        margin: auto;
+        margin-bottom: 7%;
+    }
+}

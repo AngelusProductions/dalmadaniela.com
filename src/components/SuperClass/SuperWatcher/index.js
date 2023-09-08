@@ -7,6 +7,7 @@ import MuxPlayer from '@mux/mux-player-react'
 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
+import SuperThumbnail from '../SuperThumbnail'
 
 import { paths } from '../../../constants/paths'
 import videos from '../../../constants/data/videos'
@@ -46,13 +47,7 @@ export const SuperWatcher = () => {
           />
         </>
       )}
-      {otherVideos.map(({ id, name, playbackId, thumbnailStart, duration }) => (
-        <Link to={`${paths.superClass.videos}/${id}`} key={id} className='superVideoContainer clickable'>
-          <h2>{name}</h2>
-          <p>{getHumanizedDuration(duration)}</p>
-          <img src={t.thumbnailSource(playbackId, thumbnailStart)} />
-        </Link>
-      ))}
+      {otherVideos.map(video => <SuperThumbnail {...video} />)}
       <ScrollToTop smooth />
     </div>
   )

@@ -17,7 +17,7 @@
 
     h1 {
         font-size: 6vw;
-        margin-bottom: 15%;
+        margin-bottom: 12.5%;
         font-family: 'Garbata';
         font-weight: 100;
         text-align: center;
@@ -25,25 +25,6 @@
         span {
             color: $yellow;
             font-weight: 300;
-        }
-    }
-
-    .superVideoContainer {
-        text-align: center;
-        height: 33%;
-        display: flex;
-        border: 1px solid;
-        flex-direction: column;
-        justify-content: center;
-        margin: 5%;
-        padding-top: 5%;
-
-        img {
-            width: 80%;
-            height: 50%;
-            object-fit: cover;
-            object-position: top;
-            margin: auto;
         }
     }
 }
