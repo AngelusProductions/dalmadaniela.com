@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 import HomeIcon from '../../UI/HomeIcon'
 import { PasswordField, EmailField } from '../AuthTextFields'
@@ -20,6 +20,7 @@ const t = {
 
 const Login = props => {
   const navigate = useNavigate()
+  const [searchParams, _] = useSearchParams();
 
   const { 
     email, 
@@ -34,9 +35,9 @@ const Login = props => {
       email,
       password
     }).then(email => {
-      if (email)
-        navigate(paths.blog.page)
-    })
+      if (email) {
+        navigate(searchParams.get('redirect') ?? paths.home)
+    }})
   }
 
   const updateField = key => value => {

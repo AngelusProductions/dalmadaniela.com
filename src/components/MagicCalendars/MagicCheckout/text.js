@@ -44,32 +44,53 @@ export default {
             graphics: "I want graphics"
         },
         ten: {
+            question: 'Choose your style.',
+            options: [
+                {
+                    id: 1,
+                    name: 'Minimalist'
+                },
+                {
+                    id: 2,
+                    name: 'Aesthetic'
+                },
+                {
+                    id: 3,
+                    name: 'Business'
+                },
+                {
+                    id: 4,
+                    name: 'Surprise me!'
+                }
+            ]
+        },
+        eleven: {
             question: "What's a good email to send your calendar link to?"
         }
     },
     cta: "Create My Calendar",
 
     test: {
-        brandName: "Big Ben Lawyers",
-        website: "https://www.bigbenlawyers.com",
-        socialMedia1: "https://www.instagram.com/bigbenlawyers",
-        socialMedia2: "https://www.facebook.com/bigbenlawyers",
-        description: "We are a Glendale-based law firm with over 10 years of experience representing victims in personal injury cases such as car accidents, ride-share app incidents, and dog bites. What differentiates us from the rest is that Ben treats all of his clients like family, we provide them with the maximum possible compensation, and we'll do our best to give them justice.",
-        objective: "Our main business objective is to get new clients and convert the people who follow us on social media.",
+        brandName: "Angelus Productions",
+        website: "https://www.angelusproductions.com",
+        socialMedia1: "https://www.instagram.com/corey.angelus/",
+        socialMedia2: "https://www.facebook.com/coreyangelus/",
+        description: "Can your developer not seem to make your website look how you envisioned? Does your website look straight out of the 90's on mobile? Or is it just a few too many pixels off from the original design? At my web agency, Angelus Productions, we specialize in giving websites an optimized facelift that looks pretty and makes your brand more money.",
+        objective: "Our main business objective is to get new, paying clients and establish our brand as an authority in front-end development.",
 
-        brandColor1: "#3366ac",
-        brandColor2: "#ffbc00",
-        brandColor3: "#ffffff",
-        brandColor4: "#000000",
+        brandColor1: "#ff00c9",
+        brandColor2: "#5a00ff",
+        brandColor3: "#00ffeb",
+        brandColor4: "#ffffff",
         brandColor5: "#000000",
 
-        brandEmoji1: "",
-        brandEmoji2: "",
-        brandEmoji3: "",
-        brandEmoji4: "",
-        brandEmoji5: "",
+        brandEmoji1: "😇",
+        brandEmoji2: "👨‍💻",
+        brandEmoji3: "🤓",
+        brandEmoji4: "✨",
+        brandEmoji5: "😮",
 
-        specificTopics: "We've achieved a remarkable outcome for our client. After a slip and fall incident at a fast-food chain restaurant, we worked dilligently and managed to secure a substancial settlement of $700,000. We want this post to be called 'SETTLEMENT ALERT'",
+        specificTopics: "We want to talk about innovative best practices when writing React.js, HTML, CSS, little-known front-end development hacks, unusual aspects of the realities of being a front-end developer, and opinionated posts about common beliefs in front-end development.",
         useHolidays: true,
         country: {
             name: "United States of America", 
@@ -78,8 +99,9 @@ export default {
             region: "Americas", 
             latlng: [38, -97]
         },
-        wantsGraphics: false,
+        wantsGraphics: true,
         graphics: [],
-        email: "dalma@dalmadaniela.com"
+        styleId: 2,
+        email: "angelusproductions@gmail.com"
     }
 }

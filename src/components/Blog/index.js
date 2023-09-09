@@ -27,7 +27,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
   return (
     <div id="blogPageContainer">
       <HomeIcon />
-      <UserInfo backgroundColor='pink' />
+      <UserInfo redirect={paths.blog.page} backgroundColor='pink' />
       {adminEmails.includes(currentUser?.email) && (
         <Link to={paths.blog.create}>
           <img 

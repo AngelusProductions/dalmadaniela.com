@@ -137,6 +137,15 @@
                 }
             }
 
+            &.ten {
+                .MuiInputBase-root {
+                    width: 25%;
+                    background: $yellow;
+                    border: 1px solid $pink;
+                    font-family: 'Garet';
+                }
+            }
+
             textarea {
                 width: 75%;
                 padding-top: 1%;
@@ -224,6 +233,14 @@
         margin: 5%;
         width: 90%;
         border: 2px solid black;
+    }
+    
+    #magicCheckoutStatus {
+        position: absolute;
+        right: 25px;
+        font-family: 'Garet';
+        font-size: 3vw;
+        color: $pink;
     }
 }
 

@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router'
 import { connect } from 'react-redux'
 
 import HomeIcon from '../UI/HomeIcon'
+import UserInfo from '../Auth/UserInfo'
 
 import { paths } from '../../constants/paths'
 import { i } from '../../constants/data/assets'
+import { adminEmails } from '../../constants/data/admins'
 import { setMagicSpeed } from '../../actions/magicCalendars'
 
 import t from './text.js'
 import './styles/index.scss'
 
-const MagicCalendars = ({ setMagicSpeed }) => {
+const MagicCalendars = ({ setMagicSpeed, currentUser }) => {
   const navigate = useNavigate()
 
   const onChooseClick = speed => {
@@ -19,9 +21,16 @@ const MagicCalendars = ({ setMagicSpeed }) => {
     navigate(paths.magicCalendars.checkout)
   }
 
-  return (
+  useEffect(() => {
+    if(!currentUser.email) {
+      navigate(`${paths.auth.login}?redirect=${paths.magicCalendars.page}`)
+    }
+  })
+
+  return currentUser.email && adminEmails.includes(currentUser?.email) && (
     <main id='magicCalendarsPage'>
       <HomeIcon />
+      <UserInfo />
       <section id='titleSection' className='magicCalendarsSection'>
         <h1>{t.titleSection.title}</h1>
         <h2
@@ -307,10 +316,16 @@ const MagicCalendars = ({ setMagicSpeed }) => {
   )
 }
 
+const mapState = state => {
+  return {
+    currentUser: state.currentUser
+  }
+}
+
 const mapDispatch = dispatch => ({
   setMagicSpeed: async speed => {
     dispatch(setMagicSpeed(speed))
   }
 })
 
-export default connect(null, mapDispatch)(MagicCalendars);
+export default connect(mapState, mapDispatch)(MagicCalendars);

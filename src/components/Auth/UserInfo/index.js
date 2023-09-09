@@ -14,7 +14,7 @@ const t = {
   logout: 'Log Out',
 }
 
-const UserInfo = ({ currentUser, backgroundColor, onLogoutUser }) => {
+const UserInfo = ({ currentUser, backgroundColor, redirect, onLogoutUser }) => {
   return (
     <div id='userInfoContainer'>
       {currentUser.loggedIn ? (
@@ -33,7 +33,7 @@ const UserInfo = ({ currentUser, backgroundColor, onLogoutUser }) => {
         <>
           <Link 
             id='loginButton' 
-            to={paths.auth.login} 
+            to={`${paths.auth.login}${redirect ? `?redirect=${redirect}` : ''}`} 
             className={`clickable ${backgroundColor}Background login`}
           >
             {t.login}

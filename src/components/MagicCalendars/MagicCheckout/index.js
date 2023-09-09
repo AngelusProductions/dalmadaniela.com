@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
+import { useNavigate } from 'react-router'
 import { ColorPicker, useColor } from "react-color-palette"
 import "react-color-palette/css"
 import EmojiPicker, {
@@ -13,8 +14,15 @@ import { ReactCountryDropdown } from 'react-country-dropdown'
 import 'react-country-dropdown/dist/index.css'
 import { Uploader } from "uploader"
 import { UploadDropzone } from "react-uploader"
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 
+import UserInfo from '../../Auth/UserInfo'
+import BackIcon from '../../UI/BackIcon'
+
+import { paths } from '../../../constants/paths'
 import { i } from '../../../constants/data/assets'
+import { adminEmails } from '../../../constants/data/admins'
 import { setMagicSpeed } from '../../../actions/magicCalendars'
 import { createMagicCalendar, saveGraphic } from '../../../api/magicCalendars'
 
@@ -37,53 +45,50 @@ const uploader = Uploader({
   apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ"
 })
 
-const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
-  const [brandName, setBrandName] = useState(t.test.brandName)
-  const [website, setWebsite] = useState(t.test.website)
-  const [socialMedia1, setSocialMedia1] = useState(t.test.socialMedia1)
-  const [socialMedia2, setSocialMedia2] = useState(t.test.socialMedia2)
-  const [description, setDescription] = useState(t.test.description)
-  const [objective, setObjective] = useState(t.test.objective)
+const MagicCheckout = ({ magicSpeed, currentUser }) => {
+  const navigate = useNavigate()
 
-  const [brandColor1, setBrandColor1] = useColor(t.test.brandColor1)
-  const [brandColor2, setBrandColor2] = useColor(t.test.brandColor2)
-  const [brandColor3, setBrandColor3] = useColor(t.test.brandColor3)
-  const [brandColor4, setBrandColor4] = useColor(t.test.brandColor4)
-  const [brandColor5, setBrandColor5] = useColor(t.test.brandColor5)
-  const [changedBrandColors, setChangedBrandColors] = useState({
-    one: false, two: false, three: false, four: false, five: false
-  })
+  const [brandName, setBrandName] = useState('')
+  const [website, setWebsite] = useState('')
+  const [socialMedia1, setSocialMedia1] = useState('')
+  const [socialMedia2, setSocialMedia2] = useState('')
+  const [description, setDescription] = useState('')
+  const [objective, setObjective] = useState('')
 
-  const [brandEmoji1, setBrandEmoji1] = useState(t.test.brandEmoji1)
-  const [brandEmoji2, setBrandEmoji2] = useState(t.test.brandEmoji2)
-  const [brandEmoji3, setBrandEmoji3] = useState(t.test.brandEmoji3)
-  const [brandEmoji4, setBrandEmoji4] = useState(t.test.brandEmoji4)
-  const [brandEmoji5, setBrandEmoji5] = useState(t.test.brandEmoji5)
+  const [brandColor1, setBrandColor1] = useColor('#ffffff')
+  const [brandColor2, setBrandColor2] = useColor('#ffffff')
+  const [brandColor3, setBrandColor3] = useColor('#ffffff')
+  const [brandColor4, setBrandColor4] = useColor('#ffffff')
+  const [brandColor5, setBrandColor5] = useColor('#ffffff')
 
-  const [specificTopics, setSpecificTopics] = useState(t.test.specificTopics)
+  const [brandEmoji1, setBrandEmoji1] = useState(null)
+  const [brandEmoji2, setBrandEmoji2] = useState(null)
+  const [brandEmoji3, setBrandEmoji3] = useState(null)
+  const [brandEmoji4, setBrandEmoji4] = useState(null)
+  const [brandEmoji5, setBrandEmoji5] = useState(null)
 
-  const [useHolidays, setUseHolidays] = useState(t.test.useHolidays)
+  const [specificTopics, setSpecificTopics] = useState('')
+
+  const [useHolidays, setUseHolidays] = useState(true)
   const [country, setCountry] = useState(t.test.country)
   
-  const [wantsGraphics, setWantsGraphics] = useState(t.test.wantsGraphics)
+  const [wantsGraphics, setWantsGraphics] = useState(true)
   const [graphics, setGraphics] = useState(t.test.graphics)
 
-  const [email, setEmail] = useState(t.test.email)
+  const [styleId, setStyleId] = useState(3)
 
-  const [status, setStatus] = useState(null)
+  const [email, setEmail] = useState('')
+
+  const [status, setStatus] = useState("Magic Calendar Created.")
 
   const onSubmitClick = async () => {
-    let brandColors = [brandColor1.hex]
-    const brandColorTuples =  [[brandColor2, 'two'], [brandColor3, 'three'], [brandColor4, 'four'], [brandColor5, 'five']]
-    brandColorTuples.forEach(([brandColor, order]) => {
-      if(changedBrandColors[order]) {
-        brandColors.push(brandColor.hex)
-      }
-    })
+    let brandColors = [brandColor1.hex, brandColor2.hex, brandColor3.hex, brandColor4.hex, brandColor5.hex]
 
     const brandEmojis = [brandEmoji1, brandEmoji2, brandEmoji3, brandEmoji4, brandEmoji5]
       .filter(emoji => emoji !== null).map(e => e.emoji)
-
+    
+    const style = t.questions.ten.options.find(o => o.id === styleId)
+    
     setStatus("Creating your calendar.")
     
     const { magicCalendarId } = await createMagicCalendar({
@@ -103,12 +108,13 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
         useHolidays,
         country: country.name,
         wantsGraphics,
+        style: style.name
       }
     })
 
     setStatus("Uploading your graphics.")
 
-    graphics.forEach(({ fileUrl}) => {
+    graphics.forEach(({ fileUrl }) => {
       saveGraphic({
         fileUrl,
         magicCalendarId
@@ -118,8 +124,16 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
     setStatus("Magic Calendar Created.")
   }
 
-  return (
+  useEffect(() => {
+    if(!currentUser.email) {
+      navigate(`${paths.auth.login}?redirect=${paths.magicCalendars.checkout}`)
+    }
+  })
+
+  return currentUser.email && adminEmails.includes(currentUser?.email) && (
     <main id='magicCheckoutPage'>
+      <UserInfo />
+      <BackIcon path={paths.magicCalendars.page} />
       <h1>{t.title}</h1>
       <div id='magicCheckoutTitleSectionWandContainer'>
         <img id='magicCheckoutTitleSectionWand' src={i.stock.wand} />
@@ -237,6 +251,14 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
         </div>
         <div className='magicCheckoutQuestionContainer ten'>
           <h2>{t.questions.ten.question}</h2>
+          <Select id='magicCheckoutStyleDropdown' value={styleId} onChange={e => setStyleId(e.target.value)}>
+            {t.questions.ten.options.map(({ id, name }) => (
+              <MenuItem value={id}>{name}</MenuItem>
+            ))}
+          </Select>
+        </div>
+        <div className='magicCheckoutQuestionContainer eleven'>
+          <h2>{t.questions.eleven.question}</h2>
           <input className='magicCheckoutInput' value={email} onChange={e => setEmail(e.target.value)} />
         </div>
       </div>
@@ -247,13 +269,14 @@ const MagicCheckout = ({ magicSpeed, setMagicSpeed }) => {
       >
         {t.cta}
       </button>
-      {status && <p>{status}</p>}
+      {status && <p id='magicCheckoutStatus'>{status}</p>}
     </main>
   )
 }
 
 const mapState = state => {
   return {
+    currentUser: state.currentUser,
     magicSpeed: state.magicCalendars.magicSpeed
   }
 }
