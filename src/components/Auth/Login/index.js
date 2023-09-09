@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ import { PasswordField, EmailField } from '../AuthTextFields'
 import { paths } from '../../../constants/paths'
 import { loginWithPassword } from '../../../api/login'
 import { changeAuthFieldText } from '../../../actions/auth'
-import { loginFailure, loginSuccess, loginRequest } from '../../../actions/login'
+import { loginFailure, loginSuccess, loginRequest, clearLoginErrors } from '../../../actions/login'
 
 import './index.scss'
 import '../index.scss'
@@ -54,6 +54,10 @@ const Login = props => {
       handleLogIn()
     }
   }
+
+  useEffect(() => {
+    props.clearLoginErrors()
+  }, [])
 
   return (
     <div id='loginPageContainer' className='authPageContainer'>
@@ -113,7 +117,8 @@ const mapDispatch = dispatch => ({
       dispatch(loginFailure({ password: 'Incorrect email or password.' }))
       console.warn(e)
     }
-  }
+  },
+  clearLoginErrors: () => dispatch(clearLoginErrors)
 })
 
 export default connect(

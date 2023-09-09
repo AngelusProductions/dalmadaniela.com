@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 
 import HomeIcon from '../../UI/HomeIcon'
 import { PasswordField, PasswordConfField, EmailField } from '../AuthTextFields'
@@ -8,7 +8,7 @@ import { PasswordField, PasswordConfField, EmailField } from '../AuthTextFields'
 import { paths } from '../../../constants/paths'
 import { loginSuccess } from '../../../actions/login'
 import { changeAuthFieldText } from '../../../actions/auth'
-import { registerAccountSuccess, registerAccountFailure, registerAccountRequest } from '../../../actions/signup'
+import { registerAccountSuccess, registerAccountFailure, registerAccountRequest, clearSignupErrors } from '../../../actions/signup'
 import { sendUserRegistrationRequest } from '../../../api/signup'
 import { resolveSignupErrors } from '../../../utils/errorHandlers'
 
@@ -22,6 +22,7 @@ const t = {
 
 const Signup = props => {
   const navigate = useNavigate()
+  const [searchParams, _] = useSearchParams();
 
   const { 
     email, 
@@ -43,7 +44,7 @@ const Signup = props => {
       passwordConf
     }).then(email => {
       if (email) 
-        navigate(paths.blog)
+        navigate(searchParams.get('redirect') ?? paths.home)
     })
   }
 
@@ -57,6 +58,10 @@ const Signup = props => {
       handleSignUp()
     }
   }
+
+  useEffect(() => {
+    props.clearSignupErrors()
+  }, [])
 
   return (
     <div id='signupPageContainer' className='authPageContainer'>
@@ -133,7 +138,8 @@ const mapDispatchToProps = dispatch => ({
       const errors = resolveSignupErrors(e)
       dispatch(registerAccountFailure(errors))
     }
-  }
+  },
+  clearSignupErrors: () => dispatch(clearSignupErrors)
 })
 
 export default connect(

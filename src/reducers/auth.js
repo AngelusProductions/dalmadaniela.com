@@ -3,7 +3,9 @@ import {
   LOGIN_FAILURE,
   REGISTER_ACCOUNT_FAILURE,
   REGISTER_ACCOUNT_REQUEST,
-  LOGIN_REQUEST
+  LOGIN_REQUEST,
+  CLEAR_LOGIN_ERRORS,
+  CLEAR_SIGNUP_ERRORS
 } from '../constants'
 
 const login= {
@@ -85,6 +87,20 @@ export default (
         login: {
           ...state.login,
           loading: true
+        }
+      }
+    case CLEAR_LOGIN_ERRORS:
+      return {
+        ...state,
+        login: {
+          errors: {}
+        }
+      }
+    case CLEAR_SIGNUP_ERRORS:
+      return {
+        ...state,
+        signup: {
+          errors: {}
         }
       }
     default:

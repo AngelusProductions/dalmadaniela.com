@@ -40,7 +40,7 @@ const UserInfo = ({ currentUser, backgroundColor, redirect, onLogoutUser }) => {
           </Link>
           <Link 
             id='signupButton' 
-            to={paths.auth.signup} 
+            to={`${paths.auth.signup}${redirect ? `?redirect=${redirect}` : ''}`} 
             className={`clickable ${backgroundColor}Background signup`}
           >
             {t.signup}
