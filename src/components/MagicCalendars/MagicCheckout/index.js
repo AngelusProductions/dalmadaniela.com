@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router'
 import { ColorPicker, useColor } from "react-color-palette"
@@ -10,12 +10,11 @@ import EmojiPicker, {
   SkinTonePickerLocation
 } from "emoji-picker-react"
 import Toggle from 'react-toggle'
-import { ReactCountryDropdown } from 'react-country-dropdown'
-import 'react-country-dropdown/dist/index.css'
 import { Uploader } from "uploader"
 import { UploadDropzone } from "react-uploader"
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
+import { CountryDropdown } from 'react-country-region-selector';
 
 import UserInfo from '../../Auth/UserInfo'
 import BackIcon from '../../UI/BackIcon'
@@ -47,7 +46,7 @@ const uploader = Uploader({
 
 const MagicCheckout = ({ magicSpeed, currentUser }) => {
   const navigate = useNavigate()
-
+  
   const [brandName, setBrandName] = useState('')
   const [website, setWebsite] = useState('')
   const [socialMedia1, setSocialMedia1] = useState('')
@@ -70,7 +69,7 @@ const MagicCheckout = ({ magicSpeed, currentUser }) => {
   const [specificTopics, setSpecificTopics] = useState('')
 
   const [useHolidays, setUseHolidays] = useState(true)
-  const [country, setCountry] = useState(t.test.country)
+  const [country, setCountry] = useState('United States')
   
   const [wantsGraphics, setWantsGraphics] = useState(true)
   const [graphics, setGraphics] = useState(t.test.graphics)
@@ -106,7 +105,7 @@ const MagicCheckout = ({ magicSpeed, currentUser }) => {
         brandEmojis: brandEmojis.join(','),
         specificTopics,
         useHolidays,
-        country: country.name,
+        country,
         wantsGraphics,
         style: style.name
       }
@@ -224,7 +223,7 @@ const MagicCheckout = ({ magicSpeed, currentUser }) => {
           {useHolidays && (
             <div id='magicCheckoutQuestionEightCountryContainer'>
               <h2>{t.questions.eight.question2}</h2>
-              <ReactCountryDropdown onSelect={country => setCountry(country)} />
+              <CountryDropdown value={country} onChange={c => setCountry(c)} />
             </div>
           )}
         </div>
