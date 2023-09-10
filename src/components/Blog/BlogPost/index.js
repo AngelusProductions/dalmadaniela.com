@@ -139,10 +139,10 @@ const mapDispatch = dispatch => ({
   getBlogPost: async id => {
     dispatch(getBlogPostRequest)
     try {
-      debugger
       const { blogPost } = await getBlogPost(id)
 
       dispatch(getBlogPostSuccess(blogPost))
+      
       return blogPost
     } catch (e) {
       dispatch(getBlogPostFailure({ errors: [e] }))

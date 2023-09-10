@@ -10,7 +10,7 @@ import { getAllBlogPosts } from '../../api/blog'
 import { adminEmails } from '../../constants/data/admins'
 import { getAllBlogPostsRequest, getAllBlogPostsFailure, getAllBlogPostsSuccess } from '../../actions/blog'
 
-import './index.scss'
+import './styles/index.scss'
 import UserInfo from '../Auth/UserInfo'
 
 const t = {

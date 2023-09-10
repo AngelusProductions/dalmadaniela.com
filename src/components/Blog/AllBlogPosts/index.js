@@ -10,7 +10,7 @@ import { getAllBlogPostsRequest, getAllBlogPostsFailure, getAllBlogPostsSuccess 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
 
-import './index.scss'
+import './styles/index.scss'
 
 const t = {
   title: 'All Posts'
