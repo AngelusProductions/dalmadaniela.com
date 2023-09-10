@@ -37,9 +37,10 @@ const t = {
 
 const SuperClass = () => {
   const [showThankYou, setShowThankYou] = useState(false)
+  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
 
-  const onSubscribeClick = async email => {
-    const res = await saveSuperClassSubscribeInfo({ email })
+  const onSubscribeClick = async (name, email) => {
+    const res = await saveSuperClassSubscribeInfo({ name, email })
     if (res.isSuccess) {
       setShowThankYou(true)
     }
@@ -49,11 +50,13 @@ const SuperClass = () => {
     <main id='superClassPage'>
       <img id='superClassTvStatic' src={i.videos.tvStatic} />
       <h3>{t.title}</h3>
-        <SuperClassPopUp 
-          onSubscribeClick={onSubscribeClick}
-          showThankYou={showThankYou}
-          showCloseButton={false}
-        />
+        {showSuperClassPopUp && (
+          <SuperClassPopUp 
+            onCloseClick={() => setShowSuperClassPopUp(false)}
+            onSubscribeClick={onSubscribeClick}
+            showThankYou={showThankYou}
+          />
+        )}
         <div id='superClassNavigationContainer'>
           <span id='superClassDate'>{t.date}</span>
           <div id='superClassHomeText'>

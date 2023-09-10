@@ -5,7 +5,6 @@
         width: calc(75vw - 6px);
         left: 12.5vw;
         font-size: 1vmin;
-        height: 75vh;
 
         &.thankYou {
             height: 50vh;
@@ -17,10 +16,11 @@
 
         #superClassPopUpHeaderContainer {
             font-size: 4.3vmin;
-            margin-top: 6vmin;
+            margin-top: 3vmin;
         }
 
-        #superClassPopUpEmailContainer {
+        #superClassPopUpEmailContainer,
+        #superClassPopUpNameContainer {
             label {
                 font-size: 3.4vmin;
             }
@@ -32,7 +32,8 @@
         }
 
         #superClassPopUpSubscribeButton {
-            font-size: 3vw;
+            font-size: 2vw;
+            height: 75px;
         }
 
         #superClassPopUpValidationError {

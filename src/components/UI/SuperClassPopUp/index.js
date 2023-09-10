@@ -17,6 +17,7 @@ const t = {
         7: " when it's released!",
         8: 'ALMOST FULL!'
     },
+    name: 'Name',
     email: 'Email *',
     subscribe: 'Subscribe',
     thankYou1: 'Thank you for subscribing!',
@@ -24,6 +25,7 @@ const t = {
 }
 
 const SuperClassPopUp = ({ onCloseClick, onSubscribeClick, showThankYou, showCloseButton = true }) => {
+    const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [validationError, setValidationError] = useState(null)
     
@@ -65,6 +67,10 @@ const SuperClassPopUp = ({ onCloseClick, onSubscribeClick, showThankYou, showClo
                     </span>
                 ))}
             </div>
+            <div id='superClassPopUpNameContainer'>
+                <label>{t.name}</label>
+                <input value={name} onChange={e => setName(e.target.value)} />
+            </div>
             <div id='superClassPopUpEmailContainer'>
                 <label>{t.email}</label>
                 <input value={email} onChange={e => setEmail(e.target.value)} />
@@ -75,7 +81,7 @@ const SuperClassPopUp = ({ onCloseClick, onSubscribeClick, showThankYou, showClo
                 className='clickable'
                 onClick={() => {
                     if (email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/))
-                        onSubscribeClick(email)
+                        onSubscribeClick(name, email)
                     else 
                         setValidationError('Invalid email :/')
                 }}

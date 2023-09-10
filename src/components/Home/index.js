@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 
+import FAQ from './FAQ'
 import Navbar from './Navbar'
 import SuperClassPopUp from '../UI/SuperClassPopUp'
 
-import { i } from '../../constants/data/assets'
-import { saveSuperClassSubscribeInfo } from '../../api/superClass'
-import testimonials from '../../constants/data/testimonials'
 import { paths } from '../../constants/paths'
+import { i } from '../../constants/data/assets'
+import testimonials from '../../constants/data/testimonials'
+import { saveSuperClassSubscribeInfo } from '../../api/superClass'
+
 import t from './text.js'
 import './styles/index.scss'
-import FAQ from './FAQ'
 
 const Home = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
   const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
   const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
 
-  const onSuperClassPopUpSubmitClick = async email => {
-    const res = await saveSuperClassSubscribeInfo({ email })
+  const onSuperClassPopUpSubmitClick = async (name, email) => {
+    const res = await saveSuperClassSubscribeInfo({ name, email })
     if (res.isSuccess) {
       setShowSuperClassPopUpThankYou(true)
       setTimeout(() => {
@@ -73,7 +73,6 @@ const Home = () => {
       </section>
       <section id='bio' className='homeSection'>
         <div className='left'>
-          {/* <img id='bioLeftMagic' src={i.magic.magic5} />   */}
           <div id='bioLeft' className='centerText'>
             <h2>{t.bioTitle}</h2>
             <p>{t.bioText}</p>
@@ -155,7 +154,6 @@ const Home = () => {
                 </a>
               </div>
               <img id='socialMediaInstagramPhone' src={i.dalma.instagramPhone} />
-              {/* <img id='socialMediaMagic' src={i.magic.magic8} /> */}
             </div>
           </div>
         </div>
@@ -172,7 +170,6 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.garett.image} />
-          {/* <img className='testimonialMagic' src={i.magic.magic8} /> */}
         </div>
       </section>
       <section id='evanTestimonial' className='homeSection testimonial'>
@@ -187,7 +184,6 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.evan.image} />
-          {/* <img className='testimonialMagic' src={i.magic.magic9} /> */}
         </div>
       </section>
       <section id='alexTestimonial' className='homeSection testimonial'>
@@ -202,7 +198,6 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.alex.image} />
-          {/* <img className='testimonialMagic' src={i.magic.magic5} /> */}
         </div>
       </section>
       <section id='camiTestimonial' className='homeSection testimonial'>
@@ -217,7 +212,6 @@ const Home = () => {
         </div>
         <div className='right'>
           <img className='testimonialPhone' src={testimonials.cami.image} />
-          {/* <img className='testimonialMagic' src={i.magic.magic5} /> */}
         </div>
       </section>
       <section id='teachYou' className='homeSection'>

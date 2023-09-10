@@ -52,8 +52,8 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
     setIsLinkCopied(true)
   }
 
-  const onSuperClassPopUpSubmitClick = async email => {
-    const res = await saveSuperClassSubscribeInfo({ email })
+  const onSuperClassPopUpSubmitClick = async (name, email) => {
+    const res = await saveSuperClassSubscribeInfo({ name, email })
     if (res.isSuccess) {
       setShowSuperClassPopUpThankYou(true)
       setTimeout(() => {
@@ -127,7 +127,6 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
     </div>
   )
 }
-
 
 const mapState = state => {
   return {
