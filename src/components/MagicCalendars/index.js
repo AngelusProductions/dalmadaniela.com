@@ -22,6 +22,7 @@ const MagicCalendars = ({ setMagicSpeed, currentUser }) => {
   }
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
     if(!currentUser.email) {
       navigate(`${paths.auth.login}?redirect=${paths.magicCalendars.page}`)
     }

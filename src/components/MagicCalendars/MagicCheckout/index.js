@@ -79,7 +79,7 @@ const MagicCheckout = ({ magicSpeed, currentUser }) => {
 
   const [email, setEmail] = useState('')
 
-  const [status, setStatus] = useState("Magic Calendar Created.")
+  const [status, setStatus] = useState(null)
 
   const onSubmitClick = async () => {
     let brandColors = [brandColor1.hex, brandColor2.hex, brandColor3.hex, brandColor4.hex, brandColor5.hex]
@@ -253,7 +253,7 @@ const MagicCheckout = ({ magicSpeed, currentUser }) => {
           <h2>{t.questions.ten.question}</h2>
           <Select id='magicCheckoutStyleDropdown' value={styleId} onChange={e => setStyleId(e.target.value)}>
             {t.questions.ten.options.map(({ id, name }) => (
-              <MenuItem value={id}>{name}</MenuItem>
+              <MenuItem key={id} value={id}>{name}</MenuItem>
             ))}
           </Select>
         </div>
