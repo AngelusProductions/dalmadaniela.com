@@ -7,7 +7,7 @@ main#superClassPage {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    background: black;
+    background: $yellow;
 
     h1,
     h3 {
@@ -30,16 +30,20 @@ main#superClassPage {
         
     #superClassTvStatic {
         position: absolute;
-        top: -33%;
+        left: -20%;
+        object-fit: cover;
+        width: 80%;
+        height: 100%;
     }
 
     #superClassNavigationContainer {
         position: absolute;
         text-align: center;
         padding: 10px;
-        background: $yellow;
+        background: #FEFF7C;
         border-radius: 8px;
-        bottom: 5%;
+        top: 5%;
+        left: 5%;
         font-weight: 600;
         font-size: 3vw;
 
@@ -68,34 +72,21 @@ main#superClassPage {
     }
 
     section#classAboutContainer {
-        padding: 5%;
-        position: relative;
-        display: flex;
-        background: $yellow;
-        padding: 0 5%;
-        font-family: 'Garet';
-        position: relative;
+        font-family: "Garet";
         display: flex;
         flex-direction: column;
+        font-size: 1.2vw;
         justify-content: space-around;
-        font-size: 2.1vmin;
-
-        #magicAboutStars {
-            position: absolute;
-            left: -280px;
-            top: -94px;
-            transform: scaleX(-0.8) rotate(-17deg);
-        }
-
-        #mobileClassTitle {
-            display: none;
-        }
+        width: 33%;
+        height: 100%;
+        position: absolute;
+        right: 4%;
+        overflow: scroll;
 
         span {
             display: block;
 
             &.part1 {
-                margin-top: 5%;
                 font-weight: bold;
             }
 
@@ -138,6 +129,20 @@ main#superClassPage {
             &:active {
                 background: $pink;
                 color: $yellow;
+            }
+        }
+
+        button#classCta {
+            background: black;
+            color: yellow;
+            font-family: 'Garbata';
+            font-weight: 700;
+            height: 6vw;
+            font-size: 2vw;
+            cursor: pointer;
+
+            &:hover {
+                background: $pink;
             }
         }
     }

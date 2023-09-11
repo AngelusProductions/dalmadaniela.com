@@ -2,28 +2,30 @@
 
 @media (max-width: 640px) {
     main#superClassPage {
-        h1 {
-            font-size: 13vw !important;
+        flex-direction: column;
+
+        #superClassTvStatic,
+        #classAboutContainer {
+            position: relative !important;
         }
 
-        h3 {
-            text-align: center;
-            font-size: 5.5vw !important;
+        #classAboutContainer {
+            width: 90% !important;
+            font-size: 2.9vw !important;
+            right: 0 !important;
+            padding: 5%;
+            justify-content: space-between;
         }
 
         #superClassTvStatic {
-            transform: scaleX(0.6) scaleY(0.8);
+            left: unset !important;
+            width: unset !important;
+            height: unset !important;
         }
 
-        #superClassStarTwinkles {
-            right: 5vw;
-            bottom: 45vw;
-            width: 39vw;
-        }
-
-        #superClassNavigationContainer {
-            padding: 20px !important;
-            bottom: 8% !important;
+        button#classCta {
+            height: unset !important;
+            padding: 10px;
             font-size: 5vw !important;
         }
     }

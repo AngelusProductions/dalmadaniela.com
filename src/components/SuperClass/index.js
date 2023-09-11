@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 
+import HomeIcon from '../UI/HomeIcon'
 import SuperClassPopUp from '../UI/SuperClassPopUp'
 
 import { i } from '../../constants/data/assets'
 import { paths } from '../../constants/paths'
-import { checkForReoccuringIP, saveSuperClassSubscribeInfo } from '../../api/superClass'
+import { saveSuperClassSubscribeInfo } from '../../api/superClass'
 
 import './styles/index.scss'
 
@@ -42,6 +42,7 @@ const SuperClass = () => {
 
   return (
     <main id='superClassPage'>
+    <HomeIcon />
       <img id='superClassTvStatic' src={i.videos.tvStatic} />
       {showSuperClassPopUp && (
         <SuperClassPopUp 
@@ -52,7 +53,6 @@ const SuperClass = () => {
       )}
 
       <section id='classAboutContainer'>
-        <h2 id='mobileClassTitle'>{t.classTitle}</h2>
         <span className='part1'>{t.classDescription1}</span>
         <span className='part2'>{t.classDescription2}</span>
         <span className='part3'>{t.classDescription3}</span>
@@ -63,20 +63,23 @@ const SuperClass = () => {
             <li key={index} className='howTo'>{howTo}</li>
           ))}
         </ul>
-        <button onClick={() => showSuperClassPopUp(true)} id='classCta'>
+        <button 
+          id='classCta'
+          className='clickable'
+          onClick={() => setShowSuperClassPopUp(true)}    
+        >
           {t.classCta}
         </button>
       </section>
 
-      <div id='superClassNavigationContainer'>
-        <span id='superClassDate'>{t.date}</span>
+      {/* <div id='superClassNavigationContainer'>
         <div id='superClassHomeText'>
           <span>{t.home1}</span>
           <Link to={paths.home} id='superClassHomeLink'>
             {t.home2}
           </Link>
         </div>
-      </div>
+      </div> */}
     </main>
   )
 }
