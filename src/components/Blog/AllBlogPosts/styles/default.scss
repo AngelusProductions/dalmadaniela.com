@@ -1,8 +1,9 @@
-@import '../../colors.scss';
+@import '../../../colors.scss';
 
 #allBlogPostsPageContainer {
     background-color: $yellow;
     padding: 50px;
+    min-height: calc(100vh - 100px);
 
     #allBlogPostsPageTitleContainer {
         background-color: $pink;
@@ -27,14 +28,12 @@
 
     #allBlogPostsPageBlogPostsList {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        justify-content: space-around;
         padding: 50px;
         box-sizing: border-box;
-        flex-direction: column;
 
         a {
-            margin-bottom: 50px;
+            width: 31%;
 
             .allBlogPostsPageBlogPostContainer {
                 background: white;
@@ -44,7 +43,7 @@
                 box-sizing: border-box;
                 position: relative;
                 text-align: left;
-                font-size: 2vw;
+                font-size: 1.5vw;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
@@ -52,11 +51,11 @@
                 overflow: hidden;
                 z-index: 99;
                 max-width: 1000px;
-        
+
                 h2 {
                     margin-bottom: 25px;
                 }
-        
+
                 img {
                     width: 100%;
                 }

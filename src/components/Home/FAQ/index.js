@@ -25,8 +25,9 @@ const FlashCard = ({ questionId, question, answer }) => {
         <div 
             key={questionId}
             id={`cardFlipContainer-${questionId}`} 
-            isFlipped={isFlipped}
-            className='cardFlipContainer'
+            className={`cardFlipContainer ${
+                isFlipped ? 'flipped' : 'normal'
+            }`}
             onClick={() => setIsFlipped(!isFlipped)}
         >
                 <div 

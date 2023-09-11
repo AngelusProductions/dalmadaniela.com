@@ -3,6 +3,8 @@
 @media (max-width: 640px) {
     .minifiedPhoto {
         display: block !important;
+        border: 1px solid $yellow;
+        padding: 10px;
     }
 
     #homeBurgerIcon {
@@ -10,56 +12,71 @@
         width: 35px !important;
         height: 35px !important;
         position: absolute !important;
-        right: 35px !important;
+        left: 35px !important;
         top: 35px !important;
-        left: unset !important;
+        right: unset !important;
         cursor: pointer;
         z-index: 99;
     }
 
     section#landing {
+        flex-direction: column-reverse;
+
         .right {
             width: 100%;
 
-            #landingRight {
-                align-items: baseline;
-                justify-content: space-around;
+            #landingMinifiedBackground {
+                position: absolute;
+                object-fit: cover;
+                object-position: right;
+                right: -172%;
+            }
+            #dalmadanielaTitle {
+                width: 100%;
+                justify-content: center;
+                flex-direction: column;
 
-                #dalmaNameContainer {
-                    width: 63%;
+                #dalmadanielaLogoContainer {
+                    #dalmadanielaTitleFaceIcon {
+                        width: 10vw !important;
+                        margin-right: 2vw !important;
+                    }
+            
+                    h3 {
+                        font-size: 4.5vw;
+                    }
                 }
-            }
+            
+                p {
+                    font-weight: 300;
+                    text-align: center;
+                    line-height: 6vw;
+                    margin-top: 0 !important;
+                    font-size: 3.4vw;
+                    width: 60%;
+                }
 
-            h1 {
-                font-size: 17vw !important;
-            }
-
-            span {
-                font-size: 4.3vw !important;
-                width: 75%;
-            }
-
-            p {
-                font-size: 5vw !important;
-                line-height: 7vw !important;
-            }
-
-            img#landingStarsTwinkleSmall {
-                position: absolute !important;
-                top: 20vw !important;
-                width: 5vw !important;
-                right: 13vw !important;
-            }
-
-            img#landingStarsTwinkleLarge {
-                right: -31vw !important;
-                top: 30vw !important;
-                width: 30vw !important;
+                h1 {
+                    font-size: 11vw !important;
+                    text-align: center;
+                    font-weight: 300;
+                    width: 67%;
+                }
+    
+                #landingStarsTwinkleLarge {
+                    right: -25vw !important;
+                    top: -13vw !important;
+                    width: 25vw !important;
+                }
             }
         }
 
         .left {
-            display: none;
+            width: 100% !important;
+
+            span#angelusProductions {
+                font-size: 2.5vw !important;
+            }
         }
     }
 
@@ -82,6 +99,8 @@
         }
 
         div#bioLeft {
+            justify-content: space-evenly !important;
+
             h2 {
                 font-size: 10vw !important;
             }
@@ -89,10 +108,12 @@
             p {
                 font-size: 5vw !important;
                 line-height: 7vw !important;
+                margin: 0 !important;
             }
 
             #bioMinifiedPhoto {
-                transform: translateY(10%);
+                padding: 10px;
+                border: 1px solid $pink;
             }
         }
     }
@@ -133,6 +154,7 @@
     section#films {
         display: flex;
         flex-direction: column;
+        height: fit-content !important;
 
         .left,
         .right {
@@ -244,9 +266,27 @@
             left: 35vw !important;
         }
 
-        p {
-            font-size: 5vw !important;
-            right: 5vw !important;
+        #teachYouTextcontainer {
+            right: 20%;
+            top: unset !important;
+            bottom: 18%;
+            width: 50%;
+            padding: 3vw;
+            
+            #teachYouTeachYouText {
+                font-size: 6vw;
+            }
+        
+            p#teachYouClassName {
+                font-size: 4.5vw;
+            }
+        
+            a#teachYouClassCta {
+                width: 67%;
+                padding: 2vw 2vw;
+                margin-top: 3vw;
+                font-size: 3.7vw;
+            }
         }
     }
 

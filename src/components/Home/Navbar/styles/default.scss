@@ -1,9 +1,13 @@
+@import '../../../colors.scss';
+
 #navbar {
     position: absolute;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-top: 2vh;
+    padding: 2vh 0;
+    background: $yellow;
+    z-index: 97;
 
     &.burger {
         width: 85vw;

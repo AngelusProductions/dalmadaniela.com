@@ -1,12 +1,12 @@
-@import '../colors.scss';
+@import '../../colors.scss';
 
 #blogPageContainer {
     background: $pink;
     width: 100vw;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     text-align: center;
+    min-height: 100vh;
 
     #blogPageCreateBlogIcon {
         width: 5vw;
@@ -24,8 +24,8 @@
         margin: auto;
         margin-top: calc(100px + 4vw);
         position: relative;
-        padding: 0.5vw;
-        padding-top: 1.5vw;
+        padding: 1.5vw 1.5vw 1.2vw;
+        margin-bottom: 0;
 
         h1 {
             display: flex;
@@ -46,14 +46,12 @@
 
     #blogPageHilightsContainer {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        justify-content: space-around;
         padding: 50px;
         box-sizing: border-box;
-        flex-direction: column;
 
         a {
-            height: 100%;
+            width: 31%;
 
             .blogPageBlogPostContainer {
                 background: white;
@@ -63,7 +61,7 @@
                 box-sizing: border-box;
                 position: relative;
                 text-align: left;
-                font-size: 2vw;
+                font-size: 1.5vw;
                 cursor: pointer;
                 display: flex;
                 align-items: center;
@@ -82,9 +80,8 @@
                 }
             }
         }
-        
     }
-    
+
     #blogPageAllBlogPostsLink {
         position: absolute;
         bottom: 15px;

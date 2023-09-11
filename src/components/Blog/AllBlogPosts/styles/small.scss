@@ -1,0 +1,19 @@
+@import '../../../colors.scss';
+
+@media (max-width: 640px) {
+    #allBlogPostsPageContainer {
+            #allBlogPostsPageBlogPostsList {
+                flex-direction: column;
+                padding: 50px 0 !important;
+
+                a {
+                    width: 100% !important;
+                    margin-bottom: 50px;
+                }
+    
+                .allBlogPostsPageBlogPostContainer {
+                    font-size: 3vw !important;
+                }
+            }
+        }
+}

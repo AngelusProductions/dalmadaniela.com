@@ -1,0 +1,147 @@
+@import '../../colors.scss';
+
+@media (min-width: 640px) and  (max-width: 1024px) {
+    #magicCalendarsPage {
+        section#titleSection {
+            padding-top: 10%;
+
+            h1 {
+                font-size: 5vw;
+                width: 80%;
+            }
+
+            h2 {
+                padding: 12px;
+                font-size: 2vw;
+                width: 25%;
+            }
+
+            h3 {
+                font-size: 2vw;
+            }
+                        
+            #magicCalendarsTitleSectionWandContainer {
+                animation: hoverMedium infinite 10000ms ease-in-out;
+
+                #magicCalendarsTitleSectionWand {
+                    width: 50vw;
+                }
+
+                #magicCalendarsTitleSectionWandMagic {
+                    width: 20vw;
+                    position: absolute;
+                    top: 35%;
+                    right: -14%;
+                    z-index: -1;
+                }
+            }
+
+            #magicCalendarsTitleSectionComputerHands {
+                width: 50%;
+                left: 25%;
+            }
+        }
+    }
+
+    section#personalizationSection {
+        div {
+            h1 {
+                font-size: 6vw !important;
+            }
+        }
+
+        ul {
+            font-size: 4.3vw;
+        }
+    }
+
+    section#whatYouGetSection {
+        #whatYouGetLeftSection {
+            .whatYouGetLeftSectionSection {
+                h2 {
+                    font-size: 1.6vw !important;
+                }
+
+                .whatYouGetLeftSectionBodySection {
+                    .whatYouGetLeftSectionBodySectionBody {
+                        font-size: 1.3vw !important;
+                    }
+                }
+            }
+        }
+
+        #whatYouGetRightSection {
+            #whatYouGetRightSectionLeft {
+                height: 50% !important;
+                margin: 23% 5% !important;
+            }
+
+            #whatYouGetRightSectionRight {
+                .whatYouGetRightSectionRightTitleContainer {
+                    img {
+                        width: 2vw !important;
+                        height: 2vw !important;
+                        margin-top: 0.1vw !important;
+                        transform: translateX(-0.7vw) !important;
+                    }
+
+                    h2 {
+                        font-size: 1.6vw !important;
+                    }
+                }
+
+                .whatYouGetRightSectionBodySectionBody {
+                    font-size: 1.4vw !important;
+                }
+            }
+        }
+    }
+
+    section#chooseSection {
+        #chooseSectionSelectionsContainer {
+            .chooseSectionSelection {
+                .chooseSectionSelectionDescription {
+                    font-size: 2vw !important;
+                }
+
+                .chooseSectionSelectionBulletsContainer {
+                    .chooseSectionSelectionBullet {
+                        img {
+                            margin-top: 0.3vw;
+                            margin-right: 1vw !important;
+                        }
+                        p {
+                            font-size: 1.5vw !important;
+                        }
+                    }
+                }
+                
+                .chooseSectionSelectionCta {
+                    font-size: 1.5vw !important;
+                }
+            }
+        }
+    }
+}
+
+@keyframes hoverMedium {
+    0% {
+        left: -33%;
+        top: 25%;
+    }
+
+    40% {
+        left: 0%;
+        top: 55%;
+    }
+
+    60% {
+        left: 0%;
+        top: 55%;
+    }
+
+    100% {
+        left: -33%;
+        top: 25%;
+    }
+}

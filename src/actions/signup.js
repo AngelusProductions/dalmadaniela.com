@@ -1,7 +1,8 @@
 import {
   REGISTER_ACCOUNT_SUCCESS,
   REGISTER_ACCOUNT_FAILURE,
-  REGISTER_ACCOUNT_REQUEST
+  REGISTER_ACCOUNT_REQUEST,
+  CLEAR_SIGNUP_ERRORS
 } from '../constants'
 
 export const registerAccountRequest = {
@@ -16,3 +17,7 @@ export const registerAccountFailure = errors => ({
   type: REGISTER_ACCOUNT_FAILURE,
   errors
 })
+
+export const clearSignupErrors = {
+  type: CLEAR_SIGNUP_ERRORS
+}

@@ -10,7 +10,7 @@ import { getAllBlogPosts } from '../../api/blog'
 import { adminEmails } from '../../constants/data/admins'
 import { getAllBlogPostsRequest, getAllBlogPostsFailure, getAllBlogPostsSuccess } from '../../actions/blog'
 
-import './index.scss'
+import './styles/index.scss'
 import UserInfo from '../Auth/UserInfo'
 
 const t = {
@@ -27,7 +27,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
   return (
     <div id="blogPageContainer">
       <HomeIcon />
-      <UserInfo backgroundColor='pink' />
+      <UserInfo redirect={paths.blog.page} backgroundColor='pink' />
       {adminEmails.includes(currentUser?.email) && (
         <Link to={paths.blog.create}>
           <img 
@@ -47,7 +47,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
         {blogPosts.sort((a, b) => {
           return new Date(b.createdAt) - new Date(a.createdAt)
         }).map(({ id, name, photoUrl }) => (
-          <Link to={`${paths.blog.allBlogPosts}/${name.replace(/ /g,"_")}`}>
+          <Link key={id} to={`${paths.blog.allBlogPosts}/${name.replace(/ /g,"_")}`}>
             <div id={`blogPageBlogPost-${id}`} key={id} className='blogPageBlogPostContainer clickable'>
               <h2>{name}</h2>
               <img src={photoUrl} />

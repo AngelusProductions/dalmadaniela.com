@@ -18,9 +18,9 @@ export default [
   {
     id: 3,
     name: 'Magic calendars',
-    path: paths.magicCalendars,
+    path: paths.magicCalendars.page,
     side: 'left',
-    tooltip: 'Wow!\nMagic calendars coming soon. Get ready.'
+    tooltip: null
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ export default [
   },
   {
     id: 7,
-    name: 'Genius marketing services',
+    name: 'Angelus web services',
     path: paths.geniusMarketingServices,
     side: 'right',
     tooltip: 'Shh... Genius secrets await you. Stay tuned.'

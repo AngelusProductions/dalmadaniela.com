@@ -1,0 +1,600 @@
+@import '../../colors.scss';
+
+#magicCalendarsPage {
+    .magicCalendarsSection {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #userInfoContainer {
+        z-index: 99;
+        img {
+            width: 3vw;
+            margin: auto !important;
+        }
+        span, a {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            font-size: 1.5vw;
+            letter-spacing: -5px;
+            padding: 0;
+            margin: 0;
+            margin-top: 15px;
+        }
+    }
+    
+    section#titleSection {
+        text-align: center;
+        padding-top: 7%;
+        
+        h1 {
+            font-family: 'Garbata';
+            font-size: 6.8vw;
+            width: 80%;
+            margin: auto;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-family: 'Garet';
+            text-transform: uppercase;
+            background: $pink;
+            color: $yellow;
+            padding: 12px;
+            font-size: 2vw;
+            width: 25%;
+            margin: 25px auto;
+            cursor: pointer;
+
+            &:hover {
+                background: $yellow;
+                color: $pink;
+            }
+        }
+
+        h3 {
+            font-family: 'Garet';
+            font-size: 1.6vw;
+        }
+
+        #magicCalendarsTitleSectionWandContainer {
+            position: absolute;
+
+            #magicCalendarsTitleSectionWand {
+                width: 67vw;
+            }
+
+            #magicCalendarsTitleSectionWandMagic {
+                width: 30vw;
+                position: absolute;
+                top: 33%;
+                right: -17%;
+                z-index: -1;
+                animation: flash infinite 10000ms ease-in-out;
+            }
+        }
+
+        #magicCalendarsTitleSectionComputerHands {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -2;
+        }
+
+        #magicCalendarsTitleSectionWandBackgroundMagic {
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            transform: scaleX(-1);
+            top: 0;
+            width: 33vw;
+            filter: opacity(0.7);
+            right: -5vw;
+        }
+    }
+
+    section#smallBusinessSection {
+        display: flex;
+        height: fit-content;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    section#personalizationSection {
+        height: fit-content;
+
+        div {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10%;
+            padding-bottom: 0;
+
+            h1 {
+                width: 48%;
+                font-family: "Garbata";
+                font-weight: 300;
+                font-size: 8vw;
+            }
+
+            img {
+                width: 42vw;
+                height: 42vw;
+            }
+        }
+
+        ul {
+            margin: 10%;
+            font-family: 'Garet';
+            
+            li {
+                list-style: disc;
+                margin-bottom: 25px;
+
+                &.one {
+                    span.one {
+                        color: $pink;
+                    }
+                }
+
+                &.two {
+                    span.three {
+                        color: $pink;
+                    }
+                }
+                
+                &.three {
+                    span.three {
+                        color: $pink;
+                    }
+                }
+            }
+        }
+    }
+
+    section#feedSection {
+        display: flex;
+        height: fit-content;
+
+        img {
+            width: 50%;
+        }
+
+        #feedSectionRight {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .feedSectionRightSection {
+                padding: 0 10%;
+
+                h1 {
+                    font-family: 'Garbata';
+                    font-size: 2.2vw;
+                }
+
+                h2 {
+                    font-family: 'Garbata';
+                    font-size: 1.5vw;
+                    margin: 7px 0;
+                    color: $pink;
+                }
+
+                p {
+                    font-family: 'Garet';
+                    font-size: 1.3vw;
+                }
+            }
+        }
+    }
+
+    section#whatYouGetSection {
+        padding: 5%;
+        display: flex;
+        height: 100%;
+        width: calc(100vw - 12%);
+
+        #whatYouGetLeftSection {
+            > span {
+                background: #DA2A7D;
+                color: #FEFF7C;
+                padding: 1vw;
+                font-family: "Garet";
+                text-transform: uppercase;
+                font-weight: 600;
+                display: block;
+                width: fit-content;
+                font-size: 1.7vw;
+                text-align: center;
+                cursor: pointer;
+                
+                &:hover {
+                    background: $yellow;
+                    color: $pink;
+                }
+            }
+
+            > h1 {
+                margin: 25px 0;
+                font-family: 'Garbata';
+                font-size: 4.5vw;
+                position: absolute;
+            }
+
+            .whatYouGetLeftSectionSection {
+                display: flex;
+                flex-direction: column;
+
+                &:nth-of-type(1) {
+                    margin-bottom: 5vw;
+                    margin-top: 10.5vw;
+                }
+    
+                h2 {
+                    font-family: 'Garet';
+                    font-size: 1.9vw;
+                }
+    
+                .whatYouGetLeftSectionBodySection {
+                    display: flex;
+                    margin-top: 5px;
+                    
+                    img {
+                        width: 2vw;
+                        height: 2vw;
+                        margin-top: 0.5vw;
+                        margin-right: 1vw;
+                    }
+                    
+                    .whatYouGetLeftSectionBodySectionBody {
+                        font-family: 'Garet';
+                        font-size: 2vw;
+    
+                        span.two {
+                            color: $pink;
+                            font-weight: bold;
+                            font-style: italic;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        #whatYouGetRightSection {
+            display: flex;
+            position: relative;
+
+            #whatYouGetRightSectionLeft {
+                width: 40%;
+                margin: 22% 5%;
+                height: 19%;
+                padding: 2vw;
+                background: black;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                > img {
+                    width: 100%;
+                }
+                
+                #whatYouGetSectionContentCalendarSocialIconsContainer {
+                    display: flex;
+                    justify-content: space-around;
+
+                    img {
+                        width: 25%;
+                    }
+                }
+            }
+
+            #whatYouGetRightSectionRight {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .whatYouGetRightSectionRightTitleContainer {
+                    display: flex;
+
+                    img {
+                        width: 2vw;
+                        height: 2vw;
+                        margin-top: 0.4vw;
+                        transform: translateX(-1vw);
+                    }
+
+
+                    h2 {
+                        font-family: 'Garet';
+                        font-size: 1.9vw;
+                    }
+                }
+
+                hr {
+                    border: 1px #DA2A7D solid;
+                }
+
+                .whatYouGetRightSectionBodySectionBody {
+                    font-family: 'Garet';
+                    font-size: 2vw;
+                }
+            }
+        }
+    }
+
+    section#fillOutSection {
+        background: black;
+        height: fit-content;
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 10%;
+            font-size: 4vw;
+        }
+
+        #fillOutSectionStepsContainer {
+            padding: 10%;
+            display: flex;
+            justify-content: space-between;
+
+            .fillOutSectionStep {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+                .fillOutSectionStepBody {
+                    color: white;
+                    text-align: center;
+                    font-family: "Garet";
+                    margin-top: 25px;
+                    line-height: 2.5vw;
+                    font-size: 1.8vw;
+                }
+            }
+
+            .fillOutSectionStep:nth-of-type(1) {
+                img {
+                    width: 13vw;
+                }
+
+                .fillOutSectionStepBody {
+                    span:nth-of-type(1) {
+                        color: $yellow;
+                        display: block;
+                    }
+                }
+            }
+            
+            .fillOutSectionStep:nth-of-type(2) {
+                img {
+                    width: 23vw;
+                }
+
+                .fillOutSectionStepBody {
+                    width: 80%;
+
+                    span:nth-of-type(2) {
+                        color: $yellow;
+                        display: block;
+                    }
+                }
+            }
+            
+            .fillOutSectionStep:nth-of-type(3) {
+                img {
+                    width: 23vw;
+                }
+
+                span:nth-of-type(1) {
+                    color: $yellow;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    section#chooseSection {
+        background: linear-gradient($yellow, $pink);
+        height: fit-content;
+        
+        h1 {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            font-size: 4vw;
+            margin-top: 5%;
+        }
+
+        #chooseSectionSelectionsContainer {
+            display: flex;
+            justify-content: space-between;
+            padding: 5%;
+
+            .chooseSectionSelection {
+                width: 25%;
+                background: white;
+                padding: 2%;
+                border: 2px black solid;
+                border-radius: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                h3 {
+                    font-family: 'Garet';
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 1.4vw;
+                }
+
+                h2 {
+                    font-family: 'Garet';
+                    font-weight: unset;
+                    color: $green;
+                    font-size: 2.3vw;
+                }
+
+                hr {
+                    border: 1px solid black;
+                }
+
+                .chooseSectionSelectionDescription {
+                    font-family: 'Garet';
+                    font-size: 1.4vw;
+                    margin-top:10px;
+
+                    span:nth-of-type(1) {
+                        color: $pink;
+                        font-weight: 600;
+                    }
+
+                    span:nth-of-type(3) {
+                        font-weight: 600;
+                    }
+                }
+
+                .chooseSectionSelectionBulletsContainer {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    margin-top: 25px;
+
+                    .chooseSectionSelectionBullet {
+                        display: flex;
+                        font-family: 'Garet';
+                        margin: 10px 0;
+
+                        img {
+                            width: 1.5vw;
+                            height: 1.5vw;
+                            margin-right: 0.8vw;
+                        }
+
+                        p {
+                            font-size: 1vw;
+                        }
+                    }
+                }
+
+                .chooseSectionSelectionCta {
+                    background: black;
+                    width: 100%;
+                    padding: 5%;
+                    font-family: 'Garet';
+                    text-transform: uppercase;
+                    color: white;
+                    font-weight: 600;
+                    font-size: 1.3vw;
+                    cursor: pointer;
+                    border: none;
+                    margin-top: 25px;
+
+                    &:hover {
+                        background: $pink;
+                        color: black;
+                    }
+
+                    &:active {
+                        background: $yellow;
+                        color: $pink;
+                    }
+                }
+            }
+        }
+    }
+
+    section#innovateSection {
+        background: black;
+        display: flex;
+        flex-direction: column;
+        color: white;   
+
+        #innovateSectionWandContainer {
+            margin-left: 10vw;
+            margin-top: 10vw;
+            position: absolute;
+
+            #innovateSectionWand {
+                width: 33vw;
+            }
+            #innovateSectionMagic {
+                position: absolute;
+                right: -12vw;
+                bottom: -15vw;
+                width: 19vw;
+            }
+        }
+
+        #innovateSectionContentContainer {
+            margin: auto;
+            text-align: center;
+            margin-left: 50%;
+            margin-right: 10%;
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 5vw;
+                    margin-right: 1.5vw;
+                }
+                h4 {
+                    font-family: 'Garet';
+                }
+            }
+            h1 {
+                font-family: 'Garbata';
+                font-size: 3.1vw;
+            }
+            h2 {
+                font-family: 'Garet';
+                font-weight: 100;
+                margin: 25px;
+            }
+            button {
+                background: $pink;
+                font-family: 'Garet';
+                text-transform: uppercase;
+                width: 50%;
+                font-size: 1.5vw;
+                font-weight: 700;
+                padding: 1vw;
+                color: $yellow;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@keyframes flash {
+    0% {
+        filter: opacity(0);
+    }
+    40% {
+        filter: opacity(0);
+    }
+    50% {
+        filter: opacity(1);
+    }
+    60% {
+        filter: opacity(0);
+    }
+    100% {
+        filter: opacity(0);
+    }
+}

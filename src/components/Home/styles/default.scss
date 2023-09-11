@@ -6,7 +6,7 @@
     display: none;
 }
 
-#landingMinifiedPhoto,
+#landingMinifiedBackground,
 #bioMinifiedPhoto {
     display: none;
 }
@@ -66,53 +66,59 @@ img.halfSection {
 }
 
 section#landing {
-    #landingRight {
-        align-items: baseline;
-        justify-content: space-evenly;
-        height: 90%;
-        margin-top: 10%;
+    display: flex;
 
-        #dalmaNameContainer {
+    .right {
+        #dalmadanielaTitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
+            flex-direction: column;
+            height: 100%;
+            width: 75%;
+            margin: auto;
 
-            h1 {
-                font-size: 7vw;
-                color: $white;
-                font-family: 'Hatton';
-                font-weight: 400;
-            }
+            #dalmadanielaLogoContainer {
+                display: flex;
+                align-items: center;
+                position: relative;
 
-            #landingStarsTwinkleSmall {
-                position: absolute;
-                top: 19vw;
-                width: 6vw;
-                right: 42vw;
+                #dalmadanielaTitleFaceIcon {
+                    width: 3vw;
+                    margin-right: 1vw;
+                }
+
+                h3 {
+                    font-family: 'Garet';
+                    font-weight: 100;
+                    font-size: 1.4vw;
+                }
+        
             }
 
             #landingStarsTwinkleLarge {
                 position: absolute;
-                right: -4vw;
-                top: 30vw;
-                width: 30vw;
+                right: -22vw;
+                top: -6vw;
+                width: 15vw;
             }
-        }
 
-        span {
-            font-size: 1.5vw;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.4vw;
-            font-family: "Garet";
-            display: block;
-            color: $yellow;
-        }
-
-        p {
-            color: $white;
-            font-family: "Garbata";
-            font-weight: 700;
-            font-size: 2vw;
-            line-height: 2.5vw;
+            h1 {
+                font-size: 3vw;
+                font-family: 'Garbata';
+                color: $yellow;
+                margin-top: 2vh;
+            }
+        
+            p {
+                font-family: "Garbata";
+                font-weight: 300;
+                text-align: center;
+                line-height: 3vw;
+                margin-top: 2vh;
+                font-size: 1.8vw;
+            }
         }
     }
 
@@ -120,9 +126,9 @@ section#landing {
         position: absolute;
         left: 3vw;
         font-family: 'Hatton';
-        color: white;
+        color: $yellow;
         bottom: 2vh;
-        font-size: 0.8vw;
+        font-size: 1.3vw;
     }
 }
 
@@ -147,10 +153,9 @@ section#bio {
         p {
             color: $black;
             font-family: "Garbata";
-            font-weight: 700;
-            font-size: 1.3vw;
+            font-weight: 300;
+            font-size: 1.8vw;
             margin-top: 3vh;
-            line-height: 3vh;
         }
     }
 }
@@ -262,7 +267,8 @@ section#brands {
         width: 67%;
         margin: 4vh auto 0 auto;
         color: white;
-        font-size: 3.5vw;
+        font-size: 3vw;
+        color: $yellow;
     }
 
     .brandsSection {
@@ -280,6 +286,12 @@ section#films {
         width: 67%;
     }
 
+    #filmsContainer {
+        display: inline-flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
     #filmsLeft {
         h2 {
             font-family: 'Hatton';
@@ -292,20 +304,16 @@ section#films {
         p {
             color: $black;
             font-family: "Garbata";
-            font-weight: 700;
-            font-size: 1.4vw;
+            font-weight: 300;
+            font-size: 1.8vw;
             margin-top: 3vh;
-            line-height: 3vh;
         }
     }
 
     .film {
-        width: 50%;
         display: flex;
-        position: absolute;
         flex-direction: column;
         text-align: center;
-        top: 18%;
 
         img {
             height: 45vw;
@@ -317,7 +325,7 @@ section#films {
             font-family: 'Garbata';
             font-weight: 700;
             color: $pink;
-            font-size: 1.1vw;
+            font-size: 1.3vw;
         }
     }
 
@@ -327,7 +335,6 @@ section#films {
 }
 
 section#socialMedia {
-
     .left {
         width: 50%;
 
@@ -335,7 +342,6 @@ section#socialMedia {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: left;
         }
     }
 
@@ -349,10 +355,9 @@ section#socialMedia {
         p {
             color: $white;
             font-family: 'Garbata';
-            font-weight: 700;
+            font-weight: 300;
             width: 45%;
-            line-height: 3vh;
-            font-size: 1.6vw;
+            font-size: 1.8vw;
         }
     }
 
@@ -438,7 +443,7 @@ section#socialMedia {
     .testimonialLabel {
         display: flex;
         flex-direction: column;
-        font-size: 3vw;
+        font-size: 2vw;
         font-family: "Garbata";
         font-weight: 700;
         font-style: italic;
@@ -481,19 +486,49 @@ section#teachYou {
         left: 43vw;
     }
 
-    p {
+    #teachYouTextcontainer {
         position: absolute;
-        color: black;
-        font-family: "Hatton";
-        font-size: 4vw;
+        right: 5%;
+        top: 15%;
         display: flex;
         flex-direction: column;
-        right: 0%;
-        top: 33%;
-        text-align: center;
-        background: #FEFF7C;
-        padding: 2%;
+        background: $yellow;
+        width: 25%;
+        padding: 2vw;
+        border: 4px solid;
+        box-shadow: 2px 2px 8px 1px gray;
+        
+        #teachYouTeachYouText {
+            color: $pink;
+            font-family: "Hatton";
+            text-align: center;
+            padding: 2%;
+            display: flex;
+            flex-direction: column;
+            font-size: 3vw;
+        }
+    
+        p#teachYouClassName {
+            font-family: 'Garbata';
+            font-weight: 300;
+            text-align: center;
+            font-size: 2.1vw;
+        }
+    
+        a#teachYouClassCta {
+            font-family: 'Garbata';
+            font-weight: 700;
+            background: black;
+            width: 50%;
+            margin: auto;
+            color: $yellow;
+            padding: 1vw 2vw;
+            margin-top: 1vw;
+            font-size: 1.5vw;
+            text-align: center;
+        }
     }
+
 }
 
 section#classAbout {

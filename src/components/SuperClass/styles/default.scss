@@ -7,7 +7,7 @@ main#superClassPage {
     overflow: hidden;
     display: flex;
     justify-content: center;
-    background: black;
+    background: $yellow;
 
     h1,
     h3 {
@@ -30,148 +30,20 @@ main#superClassPage {
         
     #superClassTvStatic {
         position: absolute;
-        top: -33%;
-    }
-        
-    #superClassStarTwinkles {
-        position: absolute;
-        right: 15%;
-        bottom: 20%;
-        width: 20vw;
-    }
-
-    #superClassSignupContainer {
-        position: absolute;
-        z-index: 100;
-        width: calc(90vw - 6px);
-        height: calc(50vh - 6px);
-        background: $yellow;
-        left: 5vw;
-        top: 16vh;
-        min-height: 250px;
-        font-family: "Garet";
-        font-weight: 600;
-        animation: cubic-bezier(0.6, -0.28, 0.735, 0.045) 500ms slideDown;
-        border-radius: 15px;
-        border: 3px solid $pink;
-        padding: 5vw;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        &.thankYou {
-            height: 33vh;
-        }
-
-        #superClassPopUpCloseButton {
-            width: 3vw;
-            position: absolute;
-            right: 15px;
-            top: 15px;
-            cursor: pointer;
-        }
-
-        #superClassPopUpHeaderContainer {
-            font-size: 3vmin;
-            text-align: center;
-            margin-top: 4vmin;
-
-            span#\32 {
-                font-style: italic;
-            }
-
-            span#\33 {
-                display: inline-block;
-            }
-
-            span#\34 {
-                color: $pink;
-                margin: 0 0.2vmin 0 1vmin;
-            }
-
-            span#\36 {
-                color: $pink;
-            }
-
-            span#\38 {
-                display: block;
-                margin-top: 10px;
-                color: $pink;
-            }
-        }
-
-        #superClassPopUpEmailContainer {
-            height: 33%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            &:focus-visible {
-                outline: none !important;
-            }
-
-            label {
-                font-size: 2.4vmin;
-                font-family: 'Garbata';
-                margin-bottom: 10px;
-            }
-
-            input {
-                border: solid 1px black;
-                height: 25%;
-                font-family: 'Garbata';
-                font-weight: 600;
-                font-size: 2vw;
-                padding: 0 10px;
-            }
-        }
-    
-        #superClassPopUpValidationError {
-            color: $pink;
-            font-size: 3vw;
-            text-align: center;
-            margin-bottom: 10px;
-            font-family: 'Garbata';
-        }
-
-        #superClassPopUpSubscribeButton {
-            background: #DA2A7D;
-            border: none;
-            height: 15%;
-            font-family: 'Hatton';
-            color: white;
-            font-size: 3vw;
-            cursor: pointer;
-            padding-top: 0.6vw;
-
-            &:hover {
-                background: black;
-                color: $yellow;
-            }
-        }
-
-        .thankYou1 {
-            font-family: 'Hatton';
-            font-size: 5vw;
-            text-align: center;
-            color: $pink;
-        }
-
-        .thankYou2 {
-            font-size: 2.5vw;
-            font-weight: initial;
-            text-align: center;
-        }
+        left: -20%;
+        object-fit: cover;
+        width: 80%;
+        height: 100%;
     }
 
     #superClassNavigationContainer {
         position: absolute;
         text-align: center;
         padding: 10px;
-        background: $yellow;
+        background: #FEFF7C;
         border-radius: 8px;
-        bottom: 5%;
+        top: 5%;
+        left: 5%;
         font-weight: 600;
         font-size: 3vw;
 
@@ -195,6 +67,82 @@ main#superClassPage {
                     color: $pink;
                     transform: scale(0.98);
                 }
+            }
+        }
+    }
+
+    section#classAboutContainer {
+        font-family: "Garet";
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2vw;
+        justify-content: space-around;
+        width: 33%;
+        height: 100%;
+        position: absolute;
+        right: 4%;
+        overflow: scroll;
+
+        span {
+            display: block;
+
+            &.part1 {
+                font-weight: bold;
+            }
+
+            &.part3 {
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+
+            &.part4 {
+                font-weight: 700;
+            }
+        }
+
+        ul {
+            font-weight: 600;
+
+            li.howTo {
+                list-style: initial;
+            }
+        }
+
+        a {
+            background: black;
+            color: $yellow;
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 2vw;
+            font-weight: 600;
+            font-family: 'Garbata';
+            margin-bottom: 5%;
+            padding: 2% 0;
+
+            &:hover {
+                background: $pink;
+                color: black;
+            }
+
+            &:active {
+                background: $pink;
+                color: $yellow;
+            }
+        }
+
+        button#classCta {
+            background: black;
+            color: yellow;
+            font-family: 'Garbata';
+            font-weight: 700;
+            height: 6vw;
+            font-size: 2vw;
+            cursor: pointer;
+
+            &:hover {
+                background: $pink;
             }
         }
     }

@@ -8,7 +8,10 @@ export const paths = {
     metaData: '/superclass/videos/data',
     watch: '/superclass/videos/:id'
   },
-  magicCalendars: '/magic-calendars',
+  magicCalendars: {
+    page: '/magic-calendars',
+    checkout: '/magic-calendars/checkout',
+  },
   blog: {
     page: '/blog',
     allBlogPosts: '/blog/posts',
@@ -37,6 +40,11 @@ export const apiEndpoints = {
   superClass: {
     checkIP: '/superClass/checkIP',
     saveInfo: '/superClass/saveInfo',
+  },
+  magicCalendars: {
+    create: '/magic-calendars/create',
+    saveGraphic: '/magic-calendars/saveGraphic',
+    chatGPT: '/magic-calendars/chatGPT',
   }
 }
 

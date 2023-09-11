@@ -6,7 +6,7 @@ import { logoutUser } from '../../../actions/login'
 import { paths } from '../../../constants/paths'
 import { i } from '../../../constants/data/assets'
 
-import './index.scss'
+import './styles/index.scss'
 
 const t = {
   signup: 'Sign up',
@@ -14,7 +14,7 @@ const t = {
   logout: 'Log Out',
 }
 
-const UserInfo = ({ currentUser, backgroundColor, onLogoutUser }) => {
+const UserInfo = ({ currentUser, backgroundColor, redirect, onLogoutUser }) => {
   return (
     <div id='userInfoContainer'>
       {currentUser.loggedIn ? (
@@ -33,14 +33,14 @@ const UserInfo = ({ currentUser, backgroundColor, onLogoutUser }) => {
         <>
           <Link 
             id='loginButton' 
-            to={paths.auth.login} 
+            to={`${paths.auth.login}${redirect ? `?redirect=${redirect}` : ''}`} 
             className={`clickable ${backgroundColor}Background login`}
           >
             {t.login}
           </Link>
           <Link 
             id='signupButton' 
-            to={paths.auth.signup} 
+            to={`${paths.auth.signup}${redirect ? `?redirect=${redirect}` : ''}`} 
             className={`clickable ${backgroundColor}Background signup`}
           >
             {t.signup}
