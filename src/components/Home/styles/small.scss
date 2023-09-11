@@ -12,80 +12,71 @@
         width: 35px !important;
         height: 35px !important;
         position: absolute !important;
-        right: 35px !important;
+        left: 35px !important;
         top: 35px !important;
-        left: unset !important;
+        right: unset !important;
         cursor: pointer;
         z-index: 99;
     }
 
     section#landing {
+        flex-direction: column-reverse;
+
         .right {
             width: 100%;
 
-            #landingRight {
-                align-items: baseline;
-                justify-content: space-evenly;
+            #landingMinifiedBackground {
+                position: absolute;
+                object-fit: cover;
+                object-position: right;
+                right: -172%;
+            }
+            #dalmadanielaTitle {
+                width: 100%;
+                justify-content: center;
+                flex-direction: column;
 
-                #dalmadanielaTitle {
-                    width: 100%;
-                    justify-content: center;
-                    flex-direction: column;
-
+                #dalmadanielaLogoContainer {
                     #dalmadanielaTitleFaceIcon {
-                        width: 20vw !important;
-                        margin-right: 0 !important;
+                        width: 10vw !important;
+                        margin-right: 2vw !important;
                     }
             
                     h3 {
-                        font-size: 7vw;
+                        font-size: 4.5vw;
                     }
                 }
             
-                h1 {
-                    font-size: 13vw !important;
-                }
-            
                 p {
-                    font-family: "Garbata";
                     font-weight: 300;
                     text-align: center;
-                    line-height: 3vw;
+                    line-height: 6vw;
                     margin-top: 0 !important;
-                    font-size: 2vw;
+                    font-size: 3.4vw;
+                    width: 60%;
                 }
-            }
 
-            h1 {
-                font-size: 17vw !important;
-            }
-
-            span {
-                font-size: 4.3vw !important;
-                width: 75%;
-            }
-
-            p {
-                font-size: 5vw !important;
-                line-height: 7vw !important;
-            }
-
-            img#landingStarsTwinkleSmall {
-                position: absolute !important;
-                top: 20vw !important;
-                width: 5vw !important;
-                right: 13vw !important;
-            }
-
-            #landingStarsTwinkleLarge {
-                right: -5vw !important;
-                top: -32vw !important;
-                width: 37vw !important;
+                h1 {
+                    font-size: 11vw !important;
+                    text-align: center;
+                    font-weight: 300;
+                    width: 67%;
+                }
+    
+                #landingStarsTwinkleLarge {
+                    right: -25vw !important;
+                    top: -13vw !important;
+                    width: 25vw !important;
+                }
             }
         }
 
         .left {
-            display: none;
+            width: 100% !important;
+
+            span#angelusProductions {
+                font-size: 2.5vw !important;
+            }
         }
     }
 

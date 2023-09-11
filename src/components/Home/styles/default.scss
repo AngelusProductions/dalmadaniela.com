@@ -6,7 +6,7 @@
     display: none;
 }
 
-#landingMinifiedPhoto,
+#landingMinifiedBackground,
 #bioMinifiedPhoto {
     display: none;
 }
@@ -66,45 +66,59 @@ img.halfSection {
 }
 
 section#landing {
-    #landingRight {
+    display: flex;
+
+    .right {
         #dalmadanielaTitle {
             display: flex;
             align-items: center;
+            justify-content: center;
             position: relative;
+            flex-direction: column;
+            height: 100%;
+            width: 75%;
+            margin: auto;
 
-            #dalmadanielaTitleFaceIcon {
-                width: 5vw;
-                margin-right: 1vw;
-            }
+            #dalmadanielaLogoContainer {
+                display: flex;
+                align-items: center;
+                position: relative;
 
-            h3 {
-                font-family: 'Garet';
-                font-weight: 100;
-                font-size: 1.7vw;
+                #dalmadanielaTitleFaceIcon {
+                    width: 3vw;
+                    margin-right: 1vw;
+                }
+
+                h3 {
+                    font-family: 'Garet';
+                    font-weight: 100;
+                    font-size: 1.4vw;
+                }
+        
             }
 
             #landingStarsTwinkleLarge {
                 position: absolute;
-                right: -21vw;
-                top: -3vw;
+                right: -22vw;
+                top: -6vw;
                 width: 15vw;
             }
-        }
 
-        h1 {
-            font-size: 3vw;
-            font-family: 'Garbata';
-            color: $yellow;
-            margin-top: 2vh;
-        }
-
-        p {
-            font-family: "Garbata";
-            font-weight: 300;
-            text-align: center;
-            line-height: 3vw;
-            margin-top: 2vh;
-            font-size: 2vw;
+            h1 {
+                font-size: 3vw;
+                font-family: 'Garbata';
+                color: $yellow;
+                margin-top: 2vh;
+            }
+        
+            p {
+                font-family: "Garbata";
+                font-weight: 300;
+                text-align: center;
+                line-height: 3vw;
+                margin-top: 2vh;
+                font-size: 1.8vw;
+            }
         }
     }
 
@@ -112,9 +126,9 @@ section#landing {
         position: absolute;
         left: 3vw;
         font-family: 'Hatton';
-        color: white;
+        color: $yellow;
         bottom: 2vh;
-        font-size: 0.8vw;
+        font-size: 1.3vw;
     }
 }
 
@@ -253,7 +267,7 @@ section#brands {
         width: 67%;
         margin: 4vh auto 0 auto;
         color: white;
-        font-size: 3.5vw;
+        font-size: 3vw;
         color: $yellow;
     }
 
@@ -429,7 +443,7 @@ section#socialMedia {
     .testimonialLabel {
         display: flex;
         flex-direction: column;
-        font-size: 3vw;
+        font-size: 2vw;
         font-family: "Garbata";
         font-weight: 700;
         font-style: italic;

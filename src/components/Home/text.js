@@ -26,19 +26,5 @@ export default {
   classTeach2: 'we\'re going to',
   classTeach3: 'teach you:',
   className: 'How to be successful on social media without having to go viral',
-  classCta: 'Get SuperClass',
-  
-  classTitle: 'How to be successful on social without having to go viral',
-  classDescription1: 'I spent 10 years developing the only content system you\'ll ever need for your social media.',
-  classDescription2: 'Become successful on social and get exactly what you want: brand awareness, conversions, bookings, reach, and authority without having to go viral, have big numbers, or invest a lot of money.',
-  classDescription3: 'Only 1.1% of social videos go viral, And when they do, most of the time, they generate reach, NOT sales.',
-  classDescription4: 'When you focus on creating viral content, you burn out easily and get discouraged because you focus on the outcome, not the process, and why you\'re doing this in the first place.',
-  classDescription5: 'No more of that. It\'s time to destroy the myth and drop viral content off the pedestal. In this SuperClass, you\'ll learn:',
-  classHowTo: [
-    'How to be found by those who matter when it matters.',
-    'How to create a social media strategy that works for you.',
-    'How to post with purpose and provide value to your audience on autopilot.',
-    'How to leverage your social media presence to grow your business and personal brand in the real world.',
-  ],
-  classCta: 'Get SuperClass',
+  classCta: 'Get SuperClass'
 }

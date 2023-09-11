@@ -1,0 +1,64 @@
+@import '../../../colors.scss';
+
+#userInfoContainer {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    display: flex;
+    align-items: center;
+    font-family: 'Garbata';
+    font-weight: 600;
+    font-size: 3vw;
+
+    .userIcon {
+        width: 5vw;
+        margin-right: 3vw;
+    }
+
+    a {
+        cursor: pointer;
+        text-transform: capitalize;
+        border-radius: 5vw;
+        padding: 1vw 2vw;
+
+        &.pinkBackground {
+            color: $pink;
+            background: $yellow;
+
+            &.login {
+                color: $yellow;
+                background: none;
+            }
+
+            &.signup {
+                color: black;
+                background: none;
+            }
+
+            &:hover {
+                background: black;
+                color: $yellow;
+            }
+        }
+
+        &.yellowBackground {
+            color: $yellow;
+            background: $pink;
+
+            &.login {
+                color: $pink;
+                background: none;
+            }
+
+            &:hover {
+                background: black;
+                color: $pink;
+            }
+        }
+    }
+
+    #logoutButton,
+    #signupButton {
+        margin-left: 3vw;
+    }
+}

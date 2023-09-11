@@ -6,7 +6,7 @@ import { logoutUser } from '../../../actions/login'
 import { paths } from '../../../constants/paths'
 import { i } from '../../../constants/data/assets'
 
-import './index.scss'
+import './styles/index.scss'
 
 const t = {
   signup: 'Sign up',

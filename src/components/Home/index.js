@@ -60,9 +60,9 @@ const Home = () => {
           <span id='angelusProductions'>{t.angelusProductions}</span>
         </div>
         <div className='right'>
-          <div id='landingRight' className='centerText'>
-            <img id='landingMinifiedPhoto' className='minifiedPhoto' src={i.stock.groupOfPeopleInCircle} />
-            <div id='dalmadanielaTitle'>
+          <img id='landingMinifiedBackground' src={i.stock.groupOfPeopleInCircle} />
+          <div id='dalmadanielaTitle'>
+            <div id='dalmadanielaLogoContainer'>
               <img id='dalmadanielaTitleFaceIcon' src={i.icons.face} />
               <h3>{t.title}</h3>
               <img id='landingStarsTwinkleLarge' src={i.stars.starTwinklesLarge} />
@@ -230,29 +230,6 @@ const Home = () => {
             to={paths.superClass} 
             className='clickable'
           >{t.classCta}</Link>
-        </div>
-      </section>
-      <section id='classAbout' className='homeSection'>
-        <img id='magicAboutStars' src={i.stars.starTwinklesLarge} />
-        <div className='videoContainer left'>
-          <h2>{t.classTitle}</h2>
-          <img id='plantGrowing' src={i.videos.plantGrowing} />
-        </div>
-        <div className='right'>
-          <h2 id='mobileClassTitle'>{t.classTitle}</h2>
-          <span className='part1'>{t.classDescription1}</span>
-          <span className='part2'>{t.classDescription2}</span>
-          <span className='part3'>{t.classDescription3}</span>
-          <span className='part4'>{t.classDescription4}</span>
-          <span className='part5'>{t.classDescription5}</span>
-          <ul id='classHowTo'>
-            {t.classHowTo.map((howTo, index) => (
-              <li key={index} className='howTo'>{howTo}</li>
-            ))}
-          </ul>
-          <Link to={paths.superClass} id='classCta'>
-            {t.classCta}
-          </Link>
         </div>
       </section>
       <section id='faqHomeSection' className='homeSection'>
