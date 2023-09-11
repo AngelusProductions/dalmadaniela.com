@@ -45,7 +45,7 @@ export default [
   },
   {
     id: 7,
-    name: 'Genius marketing services',
+    name: 'Angelus web services',
     path: paths.geniusMarketingServices,
     side: 'right',
     tooltip: 'Shh... Genius secrets await you. Stay tuned.'

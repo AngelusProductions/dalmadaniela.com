@@ -15,7 +15,8 @@ import './styles/index.scss'
 
 const Home = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
+  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
+  /////////// make sure to turn on ////////////
   const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
 
   const onSuperClassPopUpSubmitClick = async (name, email) => {
@@ -55,19 +56,19 @@ const Home = () => {
       )}
       <section id='landing' className='homeSection' onClick={() => setShowMobileMenu(false)}>
         <div className='left'>
-          <img className='halfSection' src={i.dalma.landingPhoto} alt={t.dalmaName} />
+          <img className='halfSection' src={i.stock.groupOfPeopleInCircle} alt={t.title} />
           <span id='angelusProductions'>{t.angelusProductions}</span>
         </div>
         <div className='right'>
           <div id='landingRight' className='centerText'>
-            <img id='landingMinifiedPhoto' className='minifiedPhoto' src={i.dalma.landingPhoto} />
-            <div id='dalmaNameContainer'>
-              <h1>{t.dalmaName}</h1>
-              <img id='landingStarsTwinkleSmall' src={i.stars.starTwinkleSmall} />
+            <img id='landingMinifiedPhoto' className='minifiedPhoto' src={i.stock.groupOfPeopleInCircle} />
+            <div id='dalmadanielaTitle'>
+              <img id='dalmadanielaTitleFaceIcon' src={i.icons.face} />
+              <h3>{t.title}</h3>
               <img id='landingStarsTwinkleLarge' src={i.stars.starTwinklesLarge} />
             </div>
-            <span>{t.dalmaTaglines}</span>
-            <p>{t.dalmaIntro}</p>
+            <h1>{t.titleTagline}</h1>
+            <p>{t.titleDescription}</p>
           </div>
         </div>
       </section>
@@ -80,7 +81,7 @@ const Home = () => {
           </div>
         </div>
         <div className='right'>
-          <img className='halfSection' src={i.dalma.iVisaPhoto} alt={t.dalmaName} />
+          <img className='halfSection' src={i.dalma.iVisaPhoto} alt={t.title} />
         </div>
       </section>
       <section id='brands' className='homeSection'>
@@ -130,7 +131,7 @@ const Home = () => {
       </section>
       <section id='socialMedia' className='homeSection'>
         <div className='left'> 
-          <img src={i.dalma.linkedInLaptop} alt={t.dalmaName} />
+          <img src={i.stock.phoneAtCoffeeShop} alt={t.title} />
         </div>
         <div className='right'>
           <div id='socialMediaRight'>
@@ -153,7 +154,7 @@ const Home = () => {
                   <img className='clickable' src={i.icons.threads} />
                 </a>
               </div>
-              <img id='socialMediaInstagramPhone' src={i.dalma.instagramPhone} />
+              <img id='socialMediaInstagramPhone' src={i.stock.girlOnPhoneOverYellow} />
             </div>
           </div>
         </div>
@@ -217,11 +218,19 @@ const Home = () => {
       <section id='teachYou' className='homeSection'>
         <img id='whiteChick' src={i.stock.whiteChick} />
         <img id='whiteChickStars' src={i.stars.starTwinklesLarge} />
-        <p>
-          <span>{t.classTeach1}</span>
-          <span>{t.classTeach2}</span>
-          <span>{t.classTeach3}</span>
-        </p>
+        <div id='teachYouTextcontainer'>
+          <p id='teachYouTeachYouText'>
+            <span>{t.classTeach1}</span>
+            <span>{t.classTeach2}</span>
+            <span>{t.classTeach3}</span>
+          </p>
+          <p id='teachYouClassName'>{t.className}</p>
+          <Link 
+            id='teachYouClassCta'
+            to={paths.superClass} 
+            className='clickable'
+          >{t.classCta}</Link>
+        </div>
       </section>
       <section id='classAbout' className='homeSection'>
         <img id='magicAboutStars' src={i.stars.starTwinklesLarge} />

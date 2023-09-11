@@ -18,20 +18,6 @@
                         width: 14vw !important;
                 }
             }
-
-            h1 {
-                font-size: 5vw !important;
-                width: 50%;
-            }
-
-            span {
-                font-size: 1.5vw !important;
-                width: 67%;
-            }
-
-            p {
-                font-size: 1.6vw;
-            }
         }
     }
 
@@ -50,20 +36,6 @@
     section#films {
         #filmsLeft {
             top: 25%;
-        }
-
-        .film {
-            img {
-                height: 65vmin;
-            }
-        }
-    }
-
-    section#socialMedia {
-        div#socialMediaRight {
-            p {
-                transform: translateY(1vw);
-            }
         }
     }
 

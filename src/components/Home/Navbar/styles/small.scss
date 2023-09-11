@@ -1,5 +1,11 @@
 @import '../../../colors.scss';
 
 @media (max-width: 640px) {
-
+    #navbar {
+        background: none !important;
+        
+        .navbarSection a {
+            color: $yellow;
+        }
+    }
 }
