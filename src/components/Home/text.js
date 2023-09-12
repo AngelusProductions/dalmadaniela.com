@@ -14,7 +14,7 @@ export default {
   brandsFigures: 'Over 7 figures in revenue made for brands in the US and LatAm.',
 
   filmsTitle: 'As an actress and producer',
-  filmsText: 'Dalma has used her social media influence to promote the projects that have cast me as an actress and launched successful crowdfunding campaigns that have funded the entire pre and post production of her latest feature film.',
+  filmsText: 'Dalma has used her social media influence to promote the projects that have cast her as an actress and launched successful crowdfunding campaigns that have funded the entire pre and post production of her latest feature film.',
   limeAndVinegarCaption: 'Lime and Vinegar, directed by Evan Snyder',
   theSovereignCaption: 'The Sovereign, directed by Farah Y. Mourad Vera',
 
