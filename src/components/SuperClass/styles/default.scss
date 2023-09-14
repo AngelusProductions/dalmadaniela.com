@@ -3,11 +3,39 @@
 main#superClassPage {
     position: relative;
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     background: black;
+
+    iframe {
+        background: black;
+    }
+
+    #__next {
+        background-color: black;
+    }
+
+    sc-checkout {
+        width: 50%;
+        height: 100%;
+
+        #shadow-root {
+            background-color: black;
+        }
+
+        #sc-checkout-32f7e12d-168d-4cb1-b7f6-059172902044 {
+            background: black;
+        }
+
+        iframe {
+            background: black;
+        }
+
+        body {
+            background: black;
+        }
+    }
 
     h1,
     h3 {
@@ -72,15 +100,15 @@ main#superClassPage {
         flex-direction: column;
         font-size: 1.2vw;
         justify-content: space-around;
-        width: 33%;
+        width: 50%;
         height: 100%;
-        position: absolute;
-        right: 4%;
         overflow: scroll;
         color: white;
+        padding: 5%;
 
         span {
             display: block;
+            margin-bottom: 10px;
 
             &.part1 {
                 font-weight: bold;

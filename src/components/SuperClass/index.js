@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import $ from 'jquery'
 
 import HomeIcon from '../UI/HomeIcon'
 import SuperClassPopUp from '../UI/SuperClassPopUp'
@@ -40,10 +41,14 @@ const SuperClass = () => {
     }
   }
 
+  useEffect(() => {
+    const iframe = $('sc-checkout')
+  }, [])
+
   return (
     <main id='superClassPage'>
-    <HomeIcon />
-      <img id='superClassTvStatic' src={i.videos.tvStatic} />
+      <HomeIcon />
+      {/* <img id='superClassTvStatic' src={i.videos.tvStatic} /> */}
       {showSuperClassPopUp && (
         <SuperClassPopUp 
           onCloseClick={() => setShowSuperClassPopUp(false)}
@@ -51,6 +56,8 @@ const SuperClass = () => {
           showThankYou={showThankYou}
         />
       )}
+
+      <sc-checkout product="test-product" subdomain="dalmadaniela"></sc-checkout>
 
       <section id='classAboutContainer'>
         <span className='part1'>{t.classDescription1}</span>
@@ -71,15 +78,6 @@ const SuperClass = () => {
           {t.classCta}
         </button>
       </section>
-
-      {/* <div id='superClassNavigationContainer'>
-        <div id='superClassHomeText'>
-          <span>{t.home1}</span>
-          <Link to={paths.home} id='superClassHomeLink'>
-            {t.home2}
-          </Link>
-        </div>
-      </div> */}
     </main>
   )
 }
