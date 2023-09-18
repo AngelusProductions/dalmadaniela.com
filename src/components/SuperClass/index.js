@@ -1,83 +1,82 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import $ from 'jquery'
 
 import HomeIcon from '../UI/HomeIcon'
 import SuperClassPopUp from '../UI/SuperClassPopUp'
 
+import t from './text'
+import ht from '../Home/text'
 import { i } from '../../constants/data/assets'
 import { paths } from '../../constants/paths'
 import { saveSuperClassSubscribeInfo } from '../../api/superClass'
 
 import './styles/index.scss'
 
-const t = {
-  date: 'On 11/23',
-  home1: 'Go back ',
-  home2: 'home',
-  classTitle: 'How to be successful on social without having to go viral',
-  classDescription1: 'We spent 10 years developing the only content system you\'ll ever need for your social media.',
-  classDescription2: 'Become successful on social and get exactly what you want: brand awareness, conversions, bookings, reach, and authority without having to go viral, have big numbers, or invest a lot of money.',
-  classDescription3: 'Only 1.1% of social videos go viral, And when they do, most of the time, they generate reach, NOT sales.',
-  classDescription4: 'When you focus on creating viral content, you burn out easily and get discouraged because you focus on the outcome, not the process, and why you\'re doing this in the first place.',
-  classDescription5: 'No more of that. It\'s time to destroy the myth and drop viral content off the pedestal. In this SuperClass, you\'ll learn:',
-  classHowTo: [
-    'How to be found by those who matter when it matters.',
-    'How to create a social media strategy that works for you.',
-    'How to post with purpose and provide value to your audience on autopilot.',
-    'How to leverage your social media presence to grow your business and personal brand in the real world.',
-  ],
-  classCta: 'Download',
-}
-
 const SuperClass = () => {
   const [showThankYou, setShowThankYou] = useState(false)
-  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(false)
-
-  const onSubscribeClick = async (name, email) => {
-    const res = await saveSuperClassSubscribeInfo({ name, email })
-    if (res.isSuccess) {
-      setShowThankYou(true)
-    }
-  }
+  const checkoutRef = useRef()
 
   useEffect(() => {
-    const iframe = $('sc-checkout')
+    
   }, [])
+
+  const scrollToCheckout = () => {
+    checkoutRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' })
+  }
 
   return (
     <main id='superClassPage'>
       <HomeIcon />
-      {/* <img id='superClassTvStatic' src={i.videos.tvStatic} /> */}
-      {showSuperClassPopUp && (
-        <SuperClassPopUp 
-          onCloseClick={() => setShowSuperClassPopUp(false)}
-          onSubscribeClick={onSubscribeClick}
-          showThankYou={showThankYou}
-        />
-      )}
 
-      <sc-checkout product="test-product" subdomain="dalmadaniela"></sc-checkout>
+      <h1>{t.title}</h1>
+      <button id='superClassCta1' onClick={scrollToCheckout}>{t.cta1}</button>
+      <ul id='superClassFeaturesList'>
+        {t.superClassFeatureBullets.map(({ title, body }) => (
+          <li key={title} className='superClassFeatureContainer'>
+            <img src={i.icons.checkMark} />
+            <b>{title}</b>
+            <span>{body}</span>
+          </li>
+        ))}
+      </ul>
+          
+      <button id='superClassCta2' onClick={scrollToCheckout}>{t.cta2}</button>
 
-      <section id='classAboutContainer'>
-        <span className='part1'>{t.classDescription1}</span>
-        <span className='part2'>{t.classDescription2}</span>
-        <span className='part3'>{t.classDescription3}</span>
-        <span className='part4'>{t.classDescription4}</span>
-        <span className='part5'>{t.classDescription5}</span>
-        <ul id='classHowTo'>
-          {t.classHowTo.map((howTo, index) => (
-            <li key={index} className='howTo'>{howTo}</li>
-          ))}
-        </ul>
-        <button 
-          id='classCta'
-          className='clickable'
-          onClick={() => setShowSuperClassPopUp(true)}    
-        >
-          {t.classCta}
-        </button>
+      <img id='superClassSatisfactionGuarentee' src={i.icons.satisfactionGuarentee} />
+      
+      <h2>{t.withoutWasting}</h2>
+      
+      <section id='superClassBrands'>
+        <div id='brandsHelped' className='brandsSection'>
+          <h3>{ht.brandsHelped}</h3>
+          <div className='brandLogosContainer'>
+            {Object.keys(i.logos.brandsHelped).map(key => (
+              <img src={i.logos.brandsHelped[key]} className='brandHelped brandLogo' key={key} />
+            ))}
+          </div>
+        </div>
+        <div id='brandsCollaborated' className='brandsSection'>
+          <h3>{ht.brandsCollaborated}</h3>
+          <div className='brandLogosContainer'>
+            {Object.keys(i.logos.brandsCollaborated).map(key => (
+              <img src={i.logos.brandsCollaborated[key]} className='brandCollaborated brandLogo' key={key} />
+            ))}
+          </div>
+        </div>
+        <div id='brandsFeatured' className='brandsSection'>
+          <h3>{ht.brandsFeatured}</h3>
+          <div className='brandLogosContainer'>
+            {Object.keys(i.logos.brandsFeatured).map(key => (
+              <img src={i.logos.brandsFeatured[key]} className='brandFeatured brandLogo' key={key} />
+            ))}
+          </div>
+          <h4>{ht.brandsFigures}</h4>
+        </div>
       </section>
+
+      <div id='superClassSamCartWrapper' ref={checkoutRef}>
+        <sc-checkout product="test-product" subdomain="dalmadaniela"></sc-checkout>
+      </div>
     </main>
   )
 }

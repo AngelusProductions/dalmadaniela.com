@@ -227,11 +227,12 @@ const Home = () => {
           <p id='teachYouClassName'>{t.className}</p>
           <Link 
             id='teachYouClassCta'
-            to={paths.superClass} 
+            to={paths.superClass.page} 
             className='clickable'
           >{t.classCta}</Link>
         </div>
       </section>
+      <sc-checkout product="test-product" subdomain="dalmadaniela"></sc-checkout>
       <section id='faqHomeSection' className='homeSection'>
         <FAQ />
       </section>

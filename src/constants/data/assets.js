@@ -32,6 +32,7 @@ export const i = {
         instagram: `${bucketPrefix}/icons/instagram.svg`,
         instagramRealIcon: `${bucketPrefix}/icons/instagramRealIcon.png`,
         linkedIn: `${bucketPrefix}/icons/linkedIn.svg`,
+        satisfactionGuarentee: `${bucketPrefix}/icons/satisfactionGuarentee.png`,
         shareNeon: `${bucketPrefix}/icons/shareNeon.webp`,
         syringe: `${bucketPrefix}/icons/syringe.png`,
         threads: `${bucketPrefix}/icons/threads.svg`,
