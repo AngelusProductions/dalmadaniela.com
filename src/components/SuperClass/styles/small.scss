@@ -34,5 +34,51 @@
                 margin-top: 0 !important;
             }
         }
+        .superClassTestimonialContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+
+            p {
+                font-size: 3vw;
+                width: 90% !important;
+                margin: 5% 0px !important;
+            }
+
+            div {
+                h4 {
+                    font-size: 5vw;
+                }
+
+                h5 {
+                    font-size: 3vw;
+                    margin: 1% 0;
+                }
+
+                h6 {
+                    font-size: 2.5vw;
+                }
+            }
+        }
+
+        ul#superClassFeaturesList,
+        ul#superClassPerfectForList {
+            li {
+                font-size: 3.3vw;
+    
+                img {
+                    transform: translate(-1vw, 0.5vw);
+                    width: 3.5vw;
+                }
+            }
+        }
+
+        div#superClassPerfectForListContainer {
+            h2 {
+                font-size: 6vw;
+            }
+        }
     }
 }

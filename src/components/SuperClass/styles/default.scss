@@ -27,18 +27,19 @@ main#superClassPage {
         li {
             font-family: 'Garet';
             margin-bottom: 5%;
+            font-size: 2vw;
 
             &:nth-last-of-type(1) {
                 margin-bottom: 0;
             }
 
             img {
-                transform: translate(-5px, 5px);
-                width: 20px;
+                transform: translate(-1vw, 0.5vw);
+                width: 2.5vw;
             }
 
             b {
-                margin-right: 5px;
+                margin-right: 1vw;
             }
         }
     }
@@ -188,12 +189,54 @@ main#superClassPage {
             margin-bottom: 0;
         }
     }
-    
+
+    .react-multiple-carousel__arrow {
+        min-width: 75px !important;
+        min-height: 75px !important;
+        clip-path: circle(40%);
+        box-shadow: -8px 11px 2px 3px black;
+        background: $pink !important;
+    }
+
     .superClassTestimonialContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        height: 100%;
+
+        img {
+            height: 33vw;
+            width: 33vw;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid $pink;
+        }
+
+        p {
+            font-family: 'Garet';
+            font-size: 2vw;
+            width: 67%;
+            margin: 5% 0px;
+            font-style: italic;
+        }
+            
+        div {
+            text-align: center;
+            h4 {
+                color: $pink;
+                font-size: 3vw;
+            }
+
+            h5 {
+                font-size: 2vw;
+                margin: 1% 0;
+            }
+
+            h6 {
+                font-size: 1.5vw;
+            }
+        }
     }
 
     #superClassPerfectForListContainer {

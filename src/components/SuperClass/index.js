@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import Carousel from "react-multi-carousel"
+import "react-multi-carousel/lib/styles.css"
 
 import HomeIcon from '../UI/HomeIcon'
 
@@ -19,13 +18,28 @@ const SuperClass = () => {
     checkoutRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' })
   }
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4
-  };
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+      partialVisibilityGutter: 30
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
+      partialVisibilityGutter: 30
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      partialVisibilityGutter: 30
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      partialVisibilityGutter: 30
+    }
+  }
 
   return (
     <main id='superClassPage'>
@@ -73,19 +87,39 @@ const SuperClass = () => {
         </div>
       </section>
 
-      <Slider {...settings}>
+      <Carousel 
+        responsive={responsive}
+        swipeable
+        draggable
+        // showDots
+        infinite
+        // autoPlay
+        autoPlaySpeed={3000}
+        keyBoardControl
+        customTransition="all .5"
+        transitionDuration={1000}
+        containerClass="carousel-container"
+        // removeArrowOnDeviceType={["tablet", "mobile"]}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+        centerMode
+        // partialVisbile
+      >
         {Object.keys(testimonials).map(key => {
-          const { id, name, label1, headshot, quote } = testimonials[key] 
+          const { id, name, label1, label2, headshot, quote } = testimonials[key] 
           return (
             <div id={`superClassTestimonial.${id}`} className='superClassTestimonialContainer' key={id}>
               <img src={headshot} />
               <p>{quote}</p>
-              <h5>{name}</h5>
-              <h6>{label1}</h6>
+              <div>
+                <h4>{name}</h4>
+                <h5>{label1}</h5>
+                <h6>{label2}</h6>
+              </div>
             </div>
           ) 
         })}
-      </Slider>
+      </Carousel>
 
       <div id='superClassPerfectForListContainer'>
         <h2>{t.superClassPerfectForTitle}</h2>
