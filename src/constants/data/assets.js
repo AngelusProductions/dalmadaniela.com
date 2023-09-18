@@ -115,10 +115,14 @@ export const i = {
         juancho: `${bucketPrefix}/team/juancho.jpeg`,
     },
     testimonials: {
-        alexTestimonialPhone: `${bucketPrefix}/testimonials/alexTestimonialPhone.png`,
-        camiTestimonialPhone: `${bucketPrefix}/testimonials/camiTestimonialPhone.png`,
-        evanTestimonialPhone: `${bucketPrefix}/testimonials/evanTestimonialPhone.png`,
-        garretTestimonialPhone: `${bucketPrefix}/testimonials/garrettTestimonialPhone.png`,
+        alexPhone: `${bucketPrefix}/testimonials/alexPhone.png`,
+        alexHeadshot: `${bucketPrefix}/testimonials/alexHeadshot.jpg`,
+        camiPhone: `${bucketPrefix}/testimonials/camiPhone.png`,
+        camiHeadshot: `${bucketPrefix}/testimonials/camiHeadshot.jpg`,
+        evanPhone: `${bucketPrefix}/testimonials/evanPhone.png`,
+        evanHeadshot: `${bucketPrefix}/testimonials/evanHeadshot.jpg`,
+        garettPhone: `${bucketPrefix}/testimonials/garettPhone.png`,
+        garettHeadshot: `${bucketPrefix}/testimonials/garettHeadshot.jpg`,
     },
     videos: {
         lightbulbConstruction: `${bucketPrefix}/videos/lightbulbConstruction.gif`,

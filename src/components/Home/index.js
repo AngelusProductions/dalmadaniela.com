@@ -170,7 +170,7 @@ const Home = () => {
           </div>
         </div>
         <div className='right'>
-          <img className='testimonialPhone' src={testimonials.garett.image} />
+          <img className='testimonialPhone' src={testimonials.garett.phone} />
         </div>
       </section>
       <section id='evanTestimonial' className='homeSection testimonial'>
@@ -184,7 +184,7 @@ const Home = () => {
           </div>
         </div>
         <div className='right'>
-          <img className='testimonialPhone' src={testimonials.evan.image} />
+          <img className='testimonialPhone' src={testimonials.evan.phone} />
         </div>
       </section>
       <section id='alexTestimonial' className='homeSection testimonial'>
@@ -198,7 +198,7 @@ const Home = () => {
           </div>
         </div>
         <div className='right'>
-          <img className='testimonialPhone' src={testimonials.alex.image} />
+          <img className='testimonialPhone' src={testimonials.alex.phone} />
         </div>
       </section>
       <section id='camiTestimonial' className='homeSection testimonial'>
@@ -212,7 +212,7 @@ const Home = () => {
           </div>
         </div>
         <div className='right'>
-          <img className='testimonialPhone' src={testimonials.cami.image} />
+          <img className='testimonialPhone' src={testimonials.cami.phone} />
         </div>
       </section>
       <section id='teachYou' className='homeSection'>
@@ -232,7 +232,6 @@ const Home = () => {
           >{t.classCta}</Link>
         </div>
       </section>
-      <sc-checkout product="test-product" subdomain="dalmadaniela"></sc-checkout>
       <section id='faqHomeSection' className='homeSection'>
         <FAQ />
       </section>

@@ -6,126 +6,211 @@ main#superClassPage {
     min-height: 100vh;
     display: flex;
     scroll-behavior: smooth;
-
-    sc-checkout {
-        width: 50%;
-        height: 100%;
+    flex-direction: column;
+    
+    h1 {
+        color: $red;
+        width: 75%;
+        margin: auto;
+        font-size: 8vw;
+        text-align: center;
+        font-family: 'Garbata';
+        font-weight: 300;
+        margin-top: 10%;
     }
 
+    ul#superClassFeaturesList,
+    ul#superClassPerfectForList {
+        width: 80%;
+        margin: auto;
+
+        li {
+            font-family: 'Garet';
+            margin-bottom: 5%;
+
+            &:nth-last-of-type(1) {
+                margin-bottom: 0;
+            }
+
+            img {
+                transform: translate(-5px, 5px);
+                width: 20px;
+            }
+
+            b {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    button {
+        margin: 5% 0;
+        background: black;
+        color: white;
+        text-transform: uppercase;
+        padding: 2%;
+        font-size: 4vw;
+        font-family: 'Garet';
+        cursor: pointer;
+
+        &#superClassCta2 {
+            background: $red;
+        }
+        &#superClassCta3 {
+            background: $blue;
+        }
+    }
+    
+    img#superClassSatisfactionGuarentee {
+        width: 33%;
+        margin: auto;
+    }
+    
     section#superClassBrands {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         height: fit-content;
         padding-bottom: 10vh;
-
+        
         #brandsHelped .brandLogo {
             width: 12%;
         }
-
+        
         #brandsCollaborated .brandLogo {
             width: 10%;
         }
-
+        
         #brandsFeatured .brandLogo {
             width: 10%;
         }
-
+        
         .brandLogosContainer {
             display: flex;
             justify-content: space-around;
             align-items: center;
             flex-wrap: wrap;
         }
-
+        
         #brandsHelped .brandLogosContainer {
             padding: 0 10vw;
         }
-
+        
         #brandsCollaborated .brandLogosContainer {
             padding: 0 3vw;
         }
-
+        
         #brandsFeatured .brandLogosContainer {
             padding: 0 5vw;
         }
-
+        
         #brandsCollaborated>div>img:nth-child(1) {
             transform: scale(0.8);
         }
-
+        
         #brandsCollaborated>div>img:nth-child(2) {
             transform: scale(0.9);
+            filter: invert(1);
         }
-
+        
         #brandsCollaborated>div>img:nth-child(3) {
             transform: scale(0.8);
         }
-
+        
         #brandsCollaborated>div>img:nth-child(4) {
             transform: scale(0.5);
         }
-
+        
         #brandsCollaborated>div>img:nth-child(5) {
             filter: drop-shadow(1px 1px 1px 1px black)
         }
-
+        
         #brandsCollaborated>div>img:nth-child(6) {
             transform: scale(0.7);
         }
-
+        
         #brandsCollaborated>div>img:nth-child(7) {
             transform: scale(0.8);
         }
-
+        
         #brandsCollaborated>div>img:nth-child(8) {
             transform: scale(0.95);
         }
-
+        
         #brandsCollaborated>div>img:nth-child(9) {
             transform: scale(0.7);
+            filter: invert(1);
         }
-
+        
         #brandsCollaborated>div>img:nth-child(10) {
             transform: scale(0.8);
         }
-
+        
         #brandsFeatured>div>img:nth-child(3) {
             transform: scale(0.7);
         }
-
+        
         #brandsFeatured>div>img:nth-child(7) {
             transform: scale(0.7);
+            filter: invert(1)
         }
-
+        
+        #brandsFeatured>div>img:nth-child(8) {
+            filter: invert(1)
+        }
+        
         #brandsHelped h3,
         #brandsCollaborated h3,
         #brandsFeatured h3,
         #brandsFeatured h4 {
             font-family: "Hatton";
-            color: white;
             text-align: center;
             font-size: 1.8vw;
             margin-bottom: 3vh;
         }
-
+        
         #brandsFeatured h3,
         #brandsFeatured h4 {
             font-size: 3vw;
-            color: $yellow;
+            color: $pink;
         }
-
+        
         #brandsFeatured h4 {
             width: 67%;
             margin: 4vh auto 0 auto;
             color: white;
             font-size: 3vw;
-            color: $yellow;
+            color: $pink;
         }
-
+        
         .brandsSection {
             margin-top: 5vw;
             margin-bottom: 0;
+        }
+    }
+    
+    .superClassTestimonialContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #superClassPerfectForListContainer {
+        h2 {
+            text-align: center;
+            margin: 5% 0;
+            font-family: 'Garbata';
+            font-size: 4vw;
+        }
+    }
+
+    #superClassSamCartWrapper {
+        margin-top: 5%;
+
+        sc-checkout {
+            width: 50%;
+            height: 100%;
         }
     }
 }

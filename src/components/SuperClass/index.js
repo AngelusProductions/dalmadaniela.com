@@ -1,28 +1,31 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useRef } from 'react'
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 import HomeIcon from '../UI/HomeIcon'
-import SuperClassPopUp from '../UI/SuperClassPopUp'
 
 import t from './text'
 import ht from '../Home/text'
 import { i } from '../../constants/data/assets'
-import { paths } from '../../constants/paths'
-import { saveSuperClassSubscribeInfo } from '../../api/superClass'
+import testimonials from '../../constants/data/testimonials'
 
 import './styles/index.scss'
 
 const SuperClass = () => {
-  const [showThankYou, setShowThankYou] = useState(false)
   const checkoutRef = useRef()
-
-  useEffect(() => {
-    
-  }, [])
 
   const scrollToCheckout = () => {
     checkoutRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' })
   }
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4
+  };
 
   return (
     <main id='superClassPage'>
@@ -39,13 +42,9 @@ const SuperClass = () => {
           </li>
         ))}
       </ul>
-          
       <button id='superClassCta2' onClick={scrollToCheckout}>{t.cta2}</button>
-
       <img id='superClassSatisfactionGuarentee' src={i.icons.satisfactionGuarentee} />
-      
-      <h2>{t.withoutWasting}</h2>
-      
+      <button id='superClassCta3' onClick={scrollToCheckout}>{t.withoutWasting}</button>
       <section id='superClassBrands'>
         <div id='brandsHelped' className='brandsSection'>
           <h3>{ht.brandsHelped}</h3>
@@ -73,6 +72,32 @@ const SuperClass = () => {
           <h4>{ht.brandsFigures}</h4>
         </div>
       </section>
+
+      <Slider {...settings}>
+        {Object.keys(testimonials).map(key => {
+          const { id, name, label1, headshot, quote } = testimonials[key] 
+          return (
+            <div id={`superClassTestimonial.${id}`} className='superClassTestimonialContainer' key={id}>
+              <img src={headshot} />
+              <p>{quote}</p>
+              <h5>{name}</h5>
+              <h6>{label1}</h6>
+            </div>
+          ) 
+        })}
+      </Slider>
+
+      <div id='superClassPerfectForListContainer'>
+        <h2>{t.superClassPerfectForTitle}</h2>
+        <ul id='superClassPerfectForList'>
+          {t.superClassPerfectForBullets.map(bullet => (
+            <li key={bullet} className='superClassPerfectForContainer'>
+              <img src={i.icons.checkMark} />
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div id='superClassSamCartWrapper' ref={checkoutRef}>
         <sc-checkout product="test-product" subdomain="dalmadaniela"></sc-checkout>
