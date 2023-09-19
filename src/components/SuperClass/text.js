@@ -5,7 +5,7 @@ export default {
     superClassFeatureBullets: [
         {
             title: 'No BS Promises.',
-            body: 'Only 1.1% of social videos go viral, and when they do, they generate reach, notes.'
+            body: 'Only 1.1% of social videos go viral, and when they do, they generate reach, not sales.'
         },
         {
             title: 'A practical method for social media success!',
@@ -16,8 +16,8 @@ export default {
             body: 'Create a purposeful social media strategy that helps you achieve your personal goals in the real world.'
         },
         {
-            title: 'A guarenteed method for betterr jobs, bookings, and increased revenue.',
-            body: 'Influence the peple who really matter by increasing your online credibility on autpilot.'
+            title: 'A guarenteed method for better jobs, bookings, and increased revenue.',
+            body: 'Influence the people who really matter by increasing your online credibility on autpilot.'
         }
     ],
 
@@ -31,7 +31,7 @@ export default {
     superClassPerfectForBullets: [
         'Artists and creators with imposter syndrome',
         'Small business owners growing their social media on their own',
-        'Social media managers designing and running content strategies for thheir businesses',
+        'Social media managers designing and running content strategies for their businesses',
         'Multipotentialites having issues creating a successful social media strategy'
     ]
 }
