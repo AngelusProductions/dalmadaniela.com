@@ -114,10 +114,10 @@ export const i = {
         juancho: `${bucketPrefix}/team/juancho.jpeg`,
     },
     testimonials: {
-        alexTestimonialPhone: `${bucketPrefix}/testimonials/alexTestimonialPhone.png`,
-        camiTestimonialPhone: `${bucketPrefix}/testimonials/camiTestimonialPhone.png`,
-        evanTestimonialPhone: `${bucketPrefix}/testimonials/evanTestimonialPhone.png`,
-        garretTestimonialPhone: `${bucketPrefix}/testimonials/garrettTestimonialPhone.png`,
+        alexPhone: `${bucketPrefix}/testimonials/alexPhone.png`,
+        camiPhone: `${bucketPrefix}/testimonials/camiPhone.png`,
+        evanPhone: `${bucketPrefix}/testimonials/evanPhone.png`,
+        garettPhone: `${bucketPrefix}/testimonials/garettPhone.png`,
     },
     videos: {
         lightbulbConstruction: `${bucketPrefix}/videos/lightbulbConstruction.gif`,
