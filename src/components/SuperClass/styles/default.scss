@@ -45,7 +45,7 @@ main#superClassPage {
     }
 
     button {
-        margin: 5% 0;
+        margin: 10% 0;
         background: black;
         color: white;
         text-transform: uppercase;
@@ -196,6 +196,30 @@ main#superClassPage {
         clip-path: circle(40%);
         box-shadow: -8px 11px 2px 3px black;
         background: $pink !important;
+        transition: 300ms;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+        
+        &:active {
+            transform: scale(0.8);
+        }
+    }
+
+    .react-multi-carousel-item {
+        filter: blur(2px);
+    }
+
+    .react-multi-carousel-item--active {
+        filter: none !important;
+    }
+
+    .react-multi-carousel-list {
+        padding: 10px 0;
+        background: $yellow;
+        border-top: 1px solid $pink;
+        border-bottom: 1px solid $pink;
     }
 
     .superClassTestimonialContainer {
@@ -240,6 +264,8 @@ main#superClassPage {
     }
 
     #superClassPerfectForListContainer {
+        margin: 10% 0;
+
         h2 {
             text-align: center;
             margin: 5% 0;

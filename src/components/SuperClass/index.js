@@ -96,19 +96,14 @@ const SuperClass = () => {
         responsive={responsive}
         swipeable
         draggable
-        // showDots
         infinite
-        // autoPlay
+        autoPlay
         autoPlaySpeed={3000}
         keyBoardControl
-        customTransition="all .5"
-        transitionDuration={1000}
+        transitionDuration={2000}
         containerClass="carousel-container"
-        // removeArrowOnDeviceType={["tablet", "mobile"]}
-        dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         centerMode
-        // partialVisbile
       >
         {Object.keys(testimonials).map(key => {
           const { id, name, label1, label2, headshot, quote } = testimonials[key] 
