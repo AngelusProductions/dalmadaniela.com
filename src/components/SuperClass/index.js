@@ -56,7 +56,12 @@ const SuperClass = () => {
           </li>
         ))}
       </ul>
-      <button id='superClassCta2' onClick={scrollToCheckout}>{t.cta2}</button>
+      <button id='superClassCta2' onClick={scrollToCheckout}>
+        <s>{t.cta2One}</s>
+        <span>&nbsp;{t.cta2Two}</span>
+        <br/>
+        <span>{t.cta2Three}</span>
+      </button>
       <img id='superClassSatisfactionGuarentee' src={i.icons.satisfactionGuarentee} />
       <button id='superClassCta3' onClick={scrollToCheckout}>{t.withoutWasting}</button>
       <section id='superClassBrands'>
@@ -134,7 +139,7 @@ const SuperClass = () => {
       </div>
 
       <div id='superClassSamCartWrapper' ref={checkoutRef}>
-        <sc-checkout product="test-product" subdomain="dalmadaniela"></sc-checkout>
+        <sc-checkout product="superclass" subdomain="dalmadaniela"></sc-checkout>
       </div>
     </main>
   )
