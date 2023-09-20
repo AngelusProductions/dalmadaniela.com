@@ -1,0 +1,55 @@
+@import '../../../colors.scss';
+
+#superLoginPageContainer {
+    background: black;
+    color: white;
+    border: 1px solid #FFFFFF;
+    min-height: calc(100vh - 2px);
+    text-align: center;
+    
+    h1 {
+        margin: 10% auto;
+    }
+
+    div#superLoginFieldsContainer {
+        width: 50%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+        justify-content: space-between;
+
+        label {
+            font-family: 'Garet';
+        }
+
+        input {
+            height: 4vh;
+            width: 50vw;
+            outline: $pink;
+            border: solid 2px $pink;
+            border-radius: 50px;
+            padding: 0 10px;
+            font-family: 'Garbata';
+            font-weight: 600;
+            margin: 1vh auto;
+        }
+    }
+
+    button {
+        border: none;
+        padding: 2%;
+        font-family: "Garet";
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        width: 50%;
+        background: $yellow;
+        font-size: 2vw;
+
+        &:hover {
+            background: $pink;
+            color: white;
+        }
+    }
+}

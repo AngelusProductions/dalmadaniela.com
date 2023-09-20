@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { useParams } from 'react-router'
-import { Link } from 'react-router-dom'
 import ScrollToTop from "react-scroll-to-top"
 import MuxPlayer from '@mux/mux-player-react'
 
@@ -11,7 +10,6 @@ import SuperThumbnail from '../SuperThumbnail'
 
 import { paths } from '../../../constants/paths'
 import videos from '../../../constants/data/videos'
-import { getHumanizedDuration } from '../../../constants/time'
 
 import './styles/index.scss'
 
