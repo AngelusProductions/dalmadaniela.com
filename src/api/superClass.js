@@ -1,9 +1,12 @@
 import axios from 'axios'
 import { ROOT_API_URL, apiEndpoints } from '../constants/paths'
 
-export const checkForReoccuringIP = async IP => {
-  const res = await axios.get(`${ROOT_API_URL}${apiEndpoints.superClass.checkIP}/${IP}`)
-  return res.data.isReocurringIP
+export const superLogin = async payload => {
+  const res = await axios.post(
+    `${ROOT_API_URL}${apiEndpoints.superClass.login}`,
+    payload
+  )
+  return res.data
 }
 
 export const saveSuperClassSubscribeInfo = async payload => {

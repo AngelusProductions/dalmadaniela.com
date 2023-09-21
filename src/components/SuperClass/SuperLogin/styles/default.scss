@@ -9,6 +9,11 @@
     
     h1 {
         margin: 10% auto;
+        font-family: 'Garbata';
+
+        span {
+            color: $yellow;
+        }
     }
 
     div#superLoginFieldsContainer {
@@ -25,7 +30,7 @@
 
         input {
             height: 4vh;
-            width: 50vw;
+            width: calc(100% - 10px - 10px);
             outline: $pink;
             border: solid 2px $pink;
             border-radius: 50px;

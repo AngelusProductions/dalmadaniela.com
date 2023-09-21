@@ -11,7 +11,7 @@
     input {
         background-color: black;
         height: 4vh;
-        width: 50vw;    
+        width: calc(100% - 10px - 10px);
         outline: $pink;
         border-radius: 50px;
         padding: 0 10px;

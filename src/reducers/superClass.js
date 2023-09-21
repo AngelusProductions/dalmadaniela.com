@@ -2,13 +2,13 @@ import {
   SUPER_LOGIN_REQUEST,
   SUPER_LOGIN_SUCCESS,
   SUPER_LOGIN_FAILURE,
-  CLEAR_CURRENT_SUPER_USER 
+  CLEAR_CURRENT_SUPER_INFO
 } from '../constants'
 
 const initialState = {
   superUser: null,
   loading: false,
-  errors: null
+  error: null
 }
 
 export default (state = initialState, action) => {
@@ -22,20 +22,22 @@ export default (state = initialState, action) => {
       return {
         ...state,
         superUser: action.user,
-        errors: null,
+        error: null,
         loading: false
       }
     case SUPER_LOGIN_FAILURE:
       return {
         ...state,
         superUser: null,
-        errors: action.errors,
+        error: action.error,
         loading: false
       }
-    case CLEAR_CURRENT_SUPER_USER:
+    case CLEAR_CURRENT_SUPER_INFO:
       return {
         ...state, 
-        superUser: null
+        superUser: null,
+        loading: null,
+        error: null
       }
     default:
       return state

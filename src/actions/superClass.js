@@ -2,7 +2,7 @@ import {
   SUPER_LOGIN_REQUEST,
   SUPER_LOGIN_SUCCESS,
   SUPER_LOGIN_FAILURE,
-  CLEAR_CURRENT_SUPER_USER 
+  CLEAR_CURRENT_SUPER_INFO
 } from '../constants'
 
 export const superLoginRequest = () => ({
@@ -14,11 +14,11 @@ export const superLoginSuccess = user => ({
   user
 })
 
-export const superLoginFailure = errors => ({
+export const superLoginFailure = error => ({
   type: SUPER_LOGIN_FAILURE,
-  errors
+  error
 })
 
-export const clearCurrentSuperUser = () => ({
-  type: CLEAR_CURRENT_SUPER_USER
+export const clearCurrentSuperInfo = () => ({
+  type: CLEAR_CURRENT_SUPER_INFO
 })

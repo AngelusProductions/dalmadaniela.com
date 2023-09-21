@@ -39,7 +39,7 @@ export const apiEndpoints = {
     create: '/blogposts/create'
   },
   superClass: {
-    checkIP: '/superClass/checkIP',
+    login: '/superClass/login',
     saveInfo: '/superClass/saveInfo',
   },
   magicCalendars: {
