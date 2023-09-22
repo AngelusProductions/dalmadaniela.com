@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { connect, useDispatch } from 'react-redux'
+import PacmanLoader from "react-spinners/PacmanLoader"
 
 import HomeIcon from '../../UI/HomeIcon'
 
@@ -11,21 +12,25 @@ import { superLoginRequest, superLoginFailure, superLoginSuccess, clearCurrentSu
 import './styles/index.scss'
 
 const t = {
-  title: 'Please Log In to Watch',
+  title: 'Log In to',
   superClass: 'SuperClass',
   emailLabel: 'Email:',
   orderLabel: 'Order Number:',
   button: 'Log In'
 }
 
-export const SuperLogin = ({ onSuperSubmit, loading, error }) => {
+export const SuperLogin = ({ onSuperSubmit, superUser, loading, error }) => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const [email, setEmail] = useState('')
     const [orderNumber, setOrderNumber] = useState('')
 
     useEffect(() => {
-        dispatch(clearCurrentSuperInfo())
+        if(superUser) {
+            navigate(paths.superClass.videos)
+        } else {
+            dispatch(clearCurrentSuperInfo())
+        }
     }, [])
   
     const onSubmitClick = () => {
@@ -55,9 +60,11 @@ export const SuperLogin = ({ onSuperSubmit, loading, error }) => {
                 </div>
             </div>
                 
-            {!loading && <button onClick={onSubmitClick} className='clickable'>{t.button}</button>}
-            
-            {error && <p id='superClassLoginError'>{error}</p>}
+            <div id='superLoginButtonContainer'>
+                {<PacmanLoader id='superClassLoginLoader' color='#FEFF7C' loading={loading} />}
+                {!loading && <button onClick={onSubmitClick} className='clickable'>{t.button}</button>}
+                {error && <p id='superClassLoginError'>{error}</p>}
+            </div>
         </div>
     )
 }
