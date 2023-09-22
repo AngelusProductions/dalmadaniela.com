@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import { connect } from 'react-redux'
-import { useParams } from 'react-router'
+import { connect, useDispatch } from 'react-redux'
+import { useNavigate, useParams } from 'react-router'
 import ScrollToTop from "react-scroll-to-top"
 import MuxPlayer from '@mux/mux-player-react'
 
@@ -10,28 +10,41 @@ import SuperThumbnail from '../SuperThumbnail'
 
 import { paths } from '../../../constants/paths'
 import videos from '../../../constants/data/videos'
+import { clearCurrentSuperInfo } from '../../../actions/superClass'
 
 import './styles/index.scss'
 
 const t = {
   title: 'SuperWatcher',
+  logOut: 'Log Out',
   thumbnailSource: (playbackId, thumbnailStart) => `https://image.mux.com/${playbackId}/animated.gif?start=${thumbnailStart}&fps=30`
 }
 
-export const SuperWatcher = () => {
+export const SuperWatcher = ({ superUser }) => {
   const { id } = useParams()
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   
   const currentVideo = videos.find(video => video.id == id)
   const otherVideos = videos.filter(video => video.id > currentVideo.id)
   
   useEffect(() => {
+    if(!superUser) {
+      navigate(paths.superClass.login)
+    }
     window.scrollTo({ top: 0, left: 0 });
   }, [])
 
-  return (
+  const onLogoutClick = () => {
+    dispatch(clearCurrentSuperInfo())
+    navigate(paths.superClass.login)
+  }
+  
+  return superUser && (
     <div id='superWatcherPageContainer'>
       <HomeIcon />
       <BackIcon path={paths.superClass.videos} />
+      <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
       {currentVideo && (
         <>
           <h1>{currentVideo.name}</h1>
@@ -52,7 +65,9 @@ export const SuperWatcher = () => {
 }
 
 const mapState = state => {
-
+  return {
+    superUser: state.superClass.superUser
+  }
 }
 
 const mapDispatch = dispatch => ({

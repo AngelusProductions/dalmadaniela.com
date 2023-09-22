@@ -16,6 +16,17 @@
         top: 25px;
     }
 
+    .superClassLogoutButton {
+        color: $yellow;
+        font-family: 'Hatton';
+        background: none;
+        cursor: pointer;
+        font-size: 2vw;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+
     #backIcon {
         left: calc(25px + 5vw) !important;
         top: 5px !important;
