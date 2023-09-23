@@ -35,10 +35,14 @@ export const SuperLogin = ({ onSuperSubmit, superUser, loading, error }) => {
   
     const onSubmitClick = () => {
         onSuperSubmit(email, orderNumber).then(data => {
-            if(data.superUser) {
+            if(data && data.superUser) {
                 navigate(paths.superClass.videos)
             } else {
-                dispatch(superLoginFailure(data.error))
+                if(!data || !data.error) {
+                    dispatch(superLoginFailure('Something happened, sorry!'))
+                } else {
+                    dispatch(superLoginFailure(data.error))
+                }
             }
         })
     }
@@ -82,7 +86,12 @@ const mapDispatch = dispatch => ({
   onSuperSubmit: async (email, orderNumber) => {
     dispatch(superLoginRequest())
     try {
-        const { superUser, error } = await superLogin({ email, orderNumber })
+        const res = await superLogin({ email, orderNumber })
+
+        if(!res) throw('Server did not respond with anything.')
+
+        const { superUser, error } = res
+
         if(error) {
             dispatch(superLoginFailure(error))
             return { superUser: null, error }

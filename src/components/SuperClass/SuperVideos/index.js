@@ -15,6 +15,7 @@ import { paths } from '../../../constants/paths'
 const t = {
   title: 'Welcome to',
   superclass: 'SuperClass',
+  hello: name => `Hello, ${name}`,
   logOut: 'Log Out'
 }
 
@@ -36,9 +37,10 @@ export const SuperVideos = ({ superUser }) => {
   return  superUser && (
     <div id='superVideosPageContainer'>
       <HomeIcon />
+      <span id='superClassVideosHello'>{t.hello(superUser.first_name)}</span>
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
       <h1>{t.title} <span>{t.superclass}</span></h1>
-      {videos.map(video => <SuperThumbnail {...video} />)}
+      {videos.map(video => <SuperThumbnail {...video} key={video.id} />)}
       <ScrollToTop smooth />
     </div>
   )
