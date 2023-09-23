@@ -5,7 +5,7 @@ import ScrollToTop from 'react-scroll-to-top'
 
 import HomeIcon from '../../UI/HomeIcon'
 
-import videos from '../../../constants/data/videos'
+import superClassVideos from '../../../constants/data/superClassVideos'
 
 import './styles/index.scss'
 import SuperThumbnail from '../SuperThumbnail'
@@ -40,7 +40,7 @@ export const SuperVideos = ({ superUser }) => {
       <span id='superClassVideosHello'>{t.hello(superUser.first_name)}</span>
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
       <h1>{t.title} <span>{t.superclass}</span></h1>
-      {videos.map(video => <SuperThumbnail {...video} key={video.id} />)}
+      {superClassVideos.map(video => <SuperThumbnail {...video} key={video.id} />)}
       <ScrollToTop smooth />
     </div>
   )

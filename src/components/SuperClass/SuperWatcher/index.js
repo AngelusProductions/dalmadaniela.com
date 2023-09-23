@@ -9,7 +9,7 @@ import BackIcon from '../../UI/BackIcon'
 import SuperThumbnail from '../SuperThumbnail'
 
 import { paths } from '../../../constants/paths'
-import videos from '../../../constants/data/videos'
+import superClassVideos from '../../../constants/data/superClassVideos'
 import { clearCurrentSuperInfo } from '../../../actions/superClass'
 
 import './styles/index.scss'
@@ -25,8 +25,8 @@ export const SuperWatcher = ({ superUser }) => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   
-  const currentVideo = videos.find(video => video.id == id)
-  const otherVideos = videos.filter(video => video.id > currentVideo.id)
+  const currentVideo = superClassVideos.find(video => video.id == id)
+  const otherVideos = superClassVideos.filter(video => video.id > currentVideo.id)
   
   useEffect(() => {
     if(!superUser) {
