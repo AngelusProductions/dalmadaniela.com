@@ -42,7 +42,31 @@
     }
 
     h1 {
-        margin-bottom: 15%;
+        margin-bottom: 10%;
+    }
+
+    #superWatcherVideoContainer {
+        position: relative;
+        
+        #superWatcherCountdownContainer {
+            position: absolute;
+            top: -5vw;
+            background: black;
+            border-radius: 50%;
+            right: -4vw;
+            z-index: 100;
+
+            #superWatcherCountdownText {
+                font-family: 'Garet';
+                width: 67%;
+
+                svg {
+                    height: 30px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 
     video {

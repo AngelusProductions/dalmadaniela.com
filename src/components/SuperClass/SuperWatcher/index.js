@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router'
 import ScrollToTop from "react-scroll-to-top"
 import MuxPlayer from '@mux/mux-player-react'
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleStop } from '@fortawesome/free-solid-svg-icons'
 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
@@ -16,6 +19,7 @@ import './styles/index.scss'
 
 const t = {
   title: 'SuperWatcher',
+  countdown: remainingTime => `Next video starts in ${remainingTime} second${remainingTime === 1 ? '' : 's'}`,
   logOut: 'Log Out',
   thumbnailSource: (playbackId, thumbnailStart) => `https://image.mux.com/${playbackId}/animated.gif?start=${thumbnailStart}&fps=30`
 }
@@ -24,6 +28,7 @@ export const SuperWatcher = ({ superUser }) => {
   const { id } = useParams()
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const [showCountdown, setShowCountdown] = useState(false)
   
   const currentVideo = superClassVideos.find(video => video.id == id)
   const otherVideos = superClassVideos.filter(video => video.id > currentVideo.id)
@@ -48,15 +53,48 @@ export const SuperWatcher = ({ superUser }) => {
       {currentVideo && (
         <>
           <h1>{currentVideo.id}.&nbsp;{currentVideo.name}</h1>
-          <MuxPlayer
-            streamType="on-demand"
-            playbackId={currentVideo.playbackId}
-            metadataVideoTitle={currentVideo.name}
-            metadataViewerUserId="Test"
-            primaryColor="#DA2A7D"
-            secondaryColor="#FEFF7C"
-            thumbnailTime={currentVideo.thumbnailStart}
-          />
+          <div id='superWatcherVideoContainer'>
+            <MuxPlayer
+              streamType="on-demand"
+              playbackId={currentVideo.playbackId}
+              metadataVideoTitle={currentVideo.name}
+              metadataViewerUserId="Test"
+              primaryColor="#DA2A7D"
+              secondaryColor="#FEFF7C"
+              thumbnailTime={currentVideo.thumbnailStart}
+              onEnded={() => {
+                if (currentVideo.id !== 11)
+                  setShowCountdown(true)
+              }}
+            />
+            {showCountdown && (
+              <div id='superWatcherCountdownContainer'>
+                <CountdownCircleTimer
+                  isPlaying={showCountdown}
+                  duration={10}
+                  colors={['#FEFF7C', '#DA2A7D']}
+                  colorsTime={[10, 5]}
+                  onComplete={() => {
+                    setShowCountdown(false)
+                    navigate(`${paths.superClass.videos}/${currentVideo.id + 1}`)
+                  }}
+                >
+                  {({ remainingTime }) => 
+                    <p id='superWatcherCountdownText'>
+                      <FontAwesomeIcon 
+                        className='clickable'
+                        icon={faCircleStop} 
+                        color='#ffffff' 
+                        onClick={() => setShowCountdown(false)}
+                      />
+                      <br />
+                      {t.countdown(remainingTime)}
+                    </p>
+                  }
+                </CountdownCircleTimer>
+              </div>
+            )}
+          </div>
         </>
       )}
       {otherVideos.map(video => <SuperThumbnail {...video} />)}

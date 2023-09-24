@@ -14,9 +14,8 @@ export const SuperThumbnail = ({
   id, name, playbackId, thumbnailGIFStart, duration 
 }) => {
   return  (
-    <div className='superThumbnailContainer'>
+    <div className='superThumbnailContainer' key={id}>
       <Link 
-        key={id} 
         id={`superThumbnail.${id}`}
         to={`${paths.superClass.videos}/${id}`} 
         className='superThumbnail clickable'
@@ -24,7 +23,9 @@ export const SuperThumbnail = ({
         <img src={t.thumbnailSource(playbackId, thumbnailGIFStart)} />
       </Link>
       <div className='superThumbnailTitleContainer'>
-        <h2>{id}.&nbsp;{name}</h2>
+        <Link to={`${paths.superClass.videos}/${id}`}>
+          <h2>{id}.&nbsp;{name}</h2>
+        </Link>
         <p>{getHumanizedDuration(duration)}</p>
       </div>
     </div>

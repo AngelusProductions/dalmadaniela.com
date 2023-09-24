@@ -50,6 +50,7 @@
     "react-color-palette": "^7.0.4",
     "react-cool-inview": "^3.0.1",
     "react-countdown": "^2.3.5",
+    "react-countdown-circle-timer": "^3.2.1",
     "react-country-region-selector": "^3.6.1",
     "react-dom": "^18.0.2",
     "react-icons": "^4.10.1",
