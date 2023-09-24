@@ -7,23 +7,28 @@ import { getHumanizedDuration } from '../../../constants/time'
 import './styles/index.scss'
 
 const t = {
-  thumbnailSource: (playbackId, thumbnailStart) => `https://image.mux.com/${playbackId}/animated.gif?start=${thumbnailStart}&fps=30`
+  thumbnailSource: (playbackId, thumbnailGIFStart) => `https://image.mux.com/${playbackId}/animated.gif?start=${thumbnailGIFStart}&fps=30`
 }
 
 export const SuperThumbnail = ({ 
-  id, name, playbackId, thumbnailStart, duration 
+  id, name, playbackId, thumbnailGIFStart, duration 
 }) => {
   return  (
-    <Link 
-      key={id} 
-      id={`superThumbnail.${id}`}
-      to={`${paths.superClass.videos}/${id}`} 
-      className='superThumbnailContainer clickable'
-    >
-      <h2>{name}</h2>
-      <p>{getHumanizedDuration(duration)}</p>
-      <img src={t.thumbnailSource(playbackId, thumbnailStart)} />
-    </Link>
+    <div className='superThumbnailContainer'>
+      <Link 
+        key={id} 
+        id={`superThumbnail.${id}`}
+        to={`${paths.superClass.videos}/${id}`} 
+        className='superThumbnail clickable'
+      >
+        <img src={t.thumbnailSource(playbackId, thumbnailGIFStart)} />
+      </Link>
+      <div className='superThumbnailTitleContainer'>
+        <h2>{id}.&nbsp;{name}</h2>
+        <p>{getHumanizedDuration(duration)}</p>
+      </div>
+    </div>
+      
   )
 }
 

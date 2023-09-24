@@ -40,7 +40,9 @@ export const SuperVideos = ({ superUser }) => {
       <span id='superClassVideosHello'>{t.hello(superUser.first_name)}</span>
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
       <h1>{t.title} <span>{t.superclass}</span></h1>
-      {superClassVideos.map(video => <SuperThumbnail {...video} key={video.id} />)}
+      <div className='superClassVideosContainer'>
+        {superClassVideos.map(video => <SuperThumbnail {...video} key={video.id} />)}
+      </div> 
       <ScrollToTop smooth />
     </div>
   )

@@ -47,7 +47,7 @@ export const SuperWatcher = ({ superUser }) => {
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
       {currentVideo && (
         <>
-          <h1>{currentVideo.name}</h1>
+          <h1>{currentVideo.id}.&nbsp;{currentVideo.name}</h1>
           <MuxPlayer
             streamType="on-demand"
             playbackId={currentVideo.playbackId}
@@ -55,6 +55,7 @@ export const SuperWatcher = ({ superUser }) => {
             metadataViewerUserId="Test"
             primaryColor="#DA2A7D"
             secondaryColor="#FEFF7C"
+            thumbnailTime={currentVideo.thumbnailStart}
           />
         </>
       )}
