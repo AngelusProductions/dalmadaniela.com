@@ -58,7 +58,7 @@ export const SuperWatcher = ({ superUser }) => {
               streamType="on-demand"
               playbackId={currentVideo.playbackId}
               metadataVideoTitle={currentVideo.name}
-              metadataViewerUserId="Test"
+              metadataViewerUserId={superUser.email}
               primaryColor="#DA2A7D"
               secondaryColor="#FEFF7C"
               thumbnailTime={currentVideo.thumbnailStart}
