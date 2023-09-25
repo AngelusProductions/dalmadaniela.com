@@ -64,13 +64,13 @@ const FAQ = () => {
             <FlashCard questionId='one' question={t.questions.one} answer={() => (
                 <div id='faqAnswer-one' className='faqAnswer'>
                     <span className='one'>
-                        We are a
+                        We are a&nbsp;
                     </span>
                     <span className='two'>
-                        one-stop content creation shop
+                        one-stop content creation shop&nbsp;
                     </span>
                     <span className='three'>
-                        for small businesses, personal brands, artists, and solopreneurs
+                        for small businesses, personal brands, artists, and solopreneurs&nbsp;
                     </span>
                     <span className='four'>
                          looking to optimize their social media experience.
@@ -80,19 +80,19 @@ const FAQ = () => {
             <FlashCard questionId='two' question={t.questions.two} answer={() => (
                 <div id='faqAnswer-two' className='faqAnswer'>
                     <span className='one'>
-                        It depends on your journey. If you want to master how to create your own social media strategy and produce content that aligns with your goals,
+                        It depends on your journey. If you want to master how to create your own social media strategy and produce content that aligns with your goals,&nbsp;
                     </span>
                     <span className='two'>
-                        sign up for
+                        sign up for&nbsp;
                     </span>
                     <span className='three'>
-                        <Link to={paths.superClass}>SuperClass.</Link>
+                        <Link to={paths.superClass}>SuperClass.</Link>&nbsp;
                     </span>
                     <span className='four'>
-                        If you are busy running a business, you can get a
+                        If you are busy running a business, you can get a&nbsp;
                     </span>
                     <span className='five'>
-                         Magic Calendar
+                         Magic Calendar&nbsp;
                     </span>
                     <span className='six'>
                          that creates your monthly social media content for you.
@@ -102,22 +102,22 @@ const FAQ = () => {
             <FlashCard questionId='three' question={t.questions.three} answer={() => (
                 <div id='faqAnswer-three' className='faqAnswer'>
                     <span className='one'>
-                        With
+                        With&nbsp;
                     </span>
                     <span className='two'>
-                        Magic Calendars
+                        Magic Calendars&nbsp;
                     </span>
                     <span className='three'>
-                       you can have high-quality social media posts for your brand or business in an
+                       you can have high-quality social media posts for your brand or business in an&nbsp;
                     </span>
                     <span className='four'>
-                        easy, affordable, and innovative way. 
+                        easy, affordable, and innovative way.&nbsp;
                     </span>
                     <span className='five'>
-                         The content will be in your email in less than 24 hours.
+                         The content will be in your email in less than 24 hours.&nbsp;
                     </span>
                     <span className='six'>
-                         Learn how to automate your monthly social media content creation
+                         Learn how to automate your monthly social media content creation&nbsp;
                     </span>
                     <span className='seven'>
                          here.
@@ -127,16 +127,16 @@ const FAQ = () => {
             <FlashCard questionId='four' question={t.questions.four} answer={() => (
                 <div id='faqAnswer-four' className='faqAnswer'>
                     <span className='one'>
-                        <Link to={paths.superClass}>SuperClass</Link>
+                        <Link to={paths.superClass}>SuperClass</Link>&nbsp;
                     </span>
                     <span className='two'>
-                        teaches you the only content creation system you need for social media. 
+                        teaches you the only content creation system you need for social media.&nbsp;
                     </span>
                     <span className='three'>
-                       Only 1.1% of social media posts go viral,
+                       Only 1.1% of social media posts go viral,&nbsp;
                     </span>
                     <span className='four'>
-                        so you need the best skills to make an impact.
+                        so you need the best skills to make an impact.&nbsp;
                     </span>
                     <span className='five'>
                          SuperClass will help you use social media to accomplish your real-world goals.
@@ -146,13 +146,13 @@ const FAQ = () => {
             <FlashCard questionId='five' question={t.questions.five} answer={() => (
                 <div id='faqAnswer-five' className='faqAnswer'>
                     <span className='one'>
-                        We realize that social media can be stressful. 
+                        We realize that social media can be stressful.&nbsp;
                     </span>
                     <span className='two'>
-                       In 10+ years of experience
+                       In 10+ years of experience&nbsp;
                     </span>
                     <span className='three'>
-                        our team has faced the troubles that brands and creators encounter on social media.  
+                        our team has faced the troubles that brands and creators encounter on social media.&nbsp;  
                     </span>
                     <span className='four'>
                          We want to make social media better for everyone by making content creation easy, simple, and affordable.
@@ -162,13 +162,13 @@ const FAQ = () => {
             <FlashCard questionId='six' question={t.questions.six} answer={() => (
                  <div id='faqAnswer-six' className='faqAnswer'>
                     <span className='one'>
-                        Our multipotentialite marketing team is based in
+                        Our multipotentialite marketing team is based in&nbsp;
                     </span>
                     <span className='two'>
-                        Los Angeles, CA
+                        Los Angeles, CA&nbsp;
                     </span>
                     <span className='three'>
-                       and
+                       and&nbsp;
                     </span>
                     <span className='four'>
                         London, England.
