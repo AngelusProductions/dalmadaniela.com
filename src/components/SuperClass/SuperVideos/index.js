@@ -4,6 +4,7 @@ import { connect, useDispatch } from 'react-redux'
 import ScrollToTop from 'react-scroll-to-top'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader"
 
 import HomeIcon from '../../UI/HomeIcon'
 import SuperThumbnail from '../SuperThumbnail'
@@ -62,7 +63,7 @@ export const SuperVideos = ({ superUser }) => {
           <p>{t.continue(superProgress.videoId)}</p>
         </div>
       ) : (
-        <PacmanLoader id='superClassProgressLoader' color='#FEFF7C' loading />
+        <ClimbingBoxLoader id='superClassProgressLoader' color='#FEFF7C' loading />
       )}
 
       <div className='superClassVideosContainer'>

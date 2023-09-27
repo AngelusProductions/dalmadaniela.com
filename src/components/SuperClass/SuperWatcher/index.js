@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router'
-import { useLocation } from 'react-router-dom';
 import ScrollToTop from "react-scroll-to-top"
 import MuxPlayer from '@mux/mux-player-react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
@@ -127,7 +126,7 @@ export const SuperWatcher = ({ superUser }) => {
           </div>
         </>
       )}
-      {otherVideos.map(video => <SuperThumbnail {...video} />)}
+      {otherVideos.map(video => <SuperThumbnail key={video.id} {...video} />)}
       <ScrollToTop smooth />
     </div>
   )

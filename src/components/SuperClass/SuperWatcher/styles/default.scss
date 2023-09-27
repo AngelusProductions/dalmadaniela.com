@@ -18,6 +18,10 @@
 
     mux-player {
         margin-bottom: 10%;
+        border: 2px solid $yellow;
+        box-shadow: 0px 0px 80px -25px white;
+        border-radius: 15px;
+        overflow: hidden;
     }
 
     .superClassLogoutButton {
@@ -42,7 +46,9 @@
     }
 
     h1 {
+        margin-top: 5%;
         margin-bottom: 10%;
+        font-size: 4vw;
     }
 
     #superWatcherVideoContainer {
