@@ -40,6 +40,8 @@ export const apiEndpoints = {
   },
   superClass: {
     login: '/superClass/login',
+    progress: '/superClass/progress',
+    complete: '/superClass/complete',
     saveInfo: '/superClass/saveInfo',
   },
   magicCalendars: {

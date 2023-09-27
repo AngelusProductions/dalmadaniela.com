@@ -17,6 +17,7 @@
         right: unset !important;
         cursor: pointer;
         z-index: 99;
+        filter: brightness(0);
     }
 
     section#landing {
@@ -52,14 +53,14 @@
                     text-align: center;
                     line-height: 6vw;
                     margin-top: 0 !important;
-                    font-size: 3.4vw;
-                    width: 60%;
+                    font-size: 5vw;
+                    width: 67%;
                 }
 
                 h1 {
-                    font-size: 11vw !important;
+                    margin-top: 5vh !important;
+                    font-size: 10vw !important;
                     text-align: center;
-                    font-weight: 300;
                     width: 67%;
                     margin-bottom: 3vw;
                 }

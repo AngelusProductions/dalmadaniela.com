@@ -18,7 +18,7 @@ export default {
   limeAndVinegarCaption: 'Lime and Vinegar, directed by Evan Snyder',
   theSovereignCaption: 'The Sovereign, directed by Farah Y. Mourad Vera',
 
-  socialMedia: 'Social media is the new frontier. Our content strategies are crafted to make sure your potential followers enjoy the vibe of your profile with every scroll.',
+  socialMedia: 'Social media is the new frontier. Our social media products are crafted to make sure your potential followers enjoy the vibe of your profile with every scroll.',
   
   testimonialsTitle: 'Testimonials',
   

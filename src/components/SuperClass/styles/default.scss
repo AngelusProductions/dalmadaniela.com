@@ -9,7 +9,7 @@ main#superClassPage {
     flex-direction: column;
     
     h1 {
-        color: $red;
+        color: $black;
         width: 75%;
         margin: auto;
         font-size: 8vw;
@@ -46,7 +46,7 @@ main#superClassPage {
 
     button {
         margin: 10% 0;
-        background: black;
+        background: $yellow;
         color: white;
         text-transform: uppercase;
         padding: 2%;
@@ -54,6 +54,13 @@ main#superClassPage {
         font-family: 'Garet';
         cursor: pointer;
 
+        &#superClassCta1 {
+            color: black;
+            font-family: 'Garbata';
+            font-weight: 300;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+        }
         &#superClassCta2 {
             background: $red;
         }

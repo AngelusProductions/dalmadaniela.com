@@ -42,7 +42,7 @@
 
     h1 {
         font-size: 6vw;
-        margin-bottom: 12.5%;
+        margin-bottom: 10%;
         font-family: 'Garbata';
         font-weight: 100;
         text-align: center;
@@ -50,6 +50,26 @@
         span {
             color: $yellow;
             font-weight: 300;
+        }
+    }
+
+    div#superVideosContinueContainer {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 10%;
+        display: flex;
+        border: 1px solid;
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+        cursor: pointer;
+        font-size: 2.5vw;
+        font-family: 'Hatton';
+        color: $yellow;
+
+        svg {
+            height: 6vw;
+            margin-bottom: 5%;
         }
     }
 }

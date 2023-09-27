@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router'
+import { useLocation } from 'react-router-dom';
 import ScrollToTop from "react-scroll-to-top"
 import MuxPlayer from '@mux/mux-player-react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
@@ -14,6 +15,7 @@ import SuperThumbnail from '../SuperThumbnail'
 import { paths } from '../../../constants/paths'
 import superClassVideos from '../../../constants/data/superClassVideos'
 import { clearCurrentSuperInfo } from '../../../actions/superClass'
+import { getSuperVideoProgress, saveSuperVideoProgress, saveSuperVideoCompletion } from '../../../api/superClass'
 
 import './styles/index.scss'
 
@@ -28,16 +30,29 @@ export const SuperWatcher = ({ superUser }) => {
   const { id } = useParams()
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const [startTime, setStartTime] = useState(null)
+
   const [showCountdown, setShowCountdown] = useState(false)
   
   const currentVideo = superClassVideos.find(video => video.id == id)
   const otherVideos = superClassVideos.filter(video => video.id > currentVideo.id)
   
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 })
+
     if(!superUser) {
       navigate(paths.superClass.login)
     }
-    window.scrollTo({ top: 0, left: 0 });
+
+    if(superUser) {
+      getSuperVideoProgress(superUser.email, currentVideo.id).then(data => {
+        setStartTime(data.timestamp)
+      })
+    }
+
+    return () => {
+      setStartTime(null)
+    }
   }, [])
 
   const onLogoutClick = () => {
@@ -54,19 +69,34 @@ export const SuperWatcher = ({ superUser }) => {
         <>
           <h1>{currentVideo.id}.&nbsp;{currentVideo.name}</h1>
           <div id='superWatcherVideoContainer'>
-            <MuxPlayer
+            {startTime !== null && <MuxPlayer
               streamType="on-demand"
               playbackId={currentVideo.playbackId}
               metadataVideoTitle={currentVideo.name}
               metadataViewerUserId={superUser.email}
               primaryColor="#DA2A7D"
               secondaryColor="#FEFF7C"
+              startTime={startTime}
               thumbnailTime={currentVideo.thumbnailStart}
+              onTimeUpdate={e => {
+                const { currentTime } = e.target
+                if(currentTime >= 10 && currentTime % 10 < 0.25) {
+                  saveSuperVideoProgress({
+                    email: superUser.email,
+                    videoId: currentVideo.id,
+                    timestamp: Math.floor(currentTime)
+                  })
+                }
+              }}
               onEnded={() => {
+                saveSuperVideoCompletion({ 
+                  email: superUser.email, 
+                  videoId: currentVideo.id 
+                })
                 if (currentVideo.id !== 11)
                   setShowCountdown(true)
               }}
-            />
+            />}
             {showCountdown && (
               <div id='superWatcherCountdownContainer'>
                 <CountdownCircleTimer
