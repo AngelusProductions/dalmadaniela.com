@@ -62,11 +62,11 @@ const Home = () => {
         <div className='right'>
           <img id='landingMinifiedBackground' src={i.stock.groupOfPeopleInCircle} />
           <div id='dalmadanielaTitle'>
-            {/* <div id='dalmadanielaLogoContainer'>
+            <div id='dalmadanielaLogoContainer'>
               <img id='dalmadanielaTitleFaceIcon' src={i.icons.face} />
-              <h3>{t.title}</h3>
-              <img id='landingStarsTwinkleLarge' src={i.stars.starTwinklesLarge} />
-            </div> */}
+              {/* <h3>{t.title}</h3> */}
+              {/* <img id='landingStarsTwinkleLarge' src={i.stars.starTwinklesLarge} /> */}
+            </div>
             <h1>{t.titleTagline}</h1>
             <p>{t.titleDescription}</p>
           </div>

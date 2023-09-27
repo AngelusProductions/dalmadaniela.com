@@ -5,7 +5,7 @@ import ScrollToTop from "react-scroll-to-top"
 import MuxPlayer from '@mux/mux-player-react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleStop } from '@fortawesome/free-solid-svg-icons'
+import { faCircleStop, faBackward, faForward } from '@fortawesome/free-solid-svg-icons'
 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
@@ -68,6 +68,12 @@ export const SuperWatcher = ({ superUser }) => {
         <>
           <h1>{currentVideo.id}.&nbsp;{currentVideo.name}</h1>
           <div id='superWatcherVideoContainer'>
+            {currentVideo.id !== 1 && <FontAwesomeIcon 
+              icon={faBackward} 
+              color='#ffffff' 
+              className='clickable'
+              onClick={() => navigate(`${paths.superClass.videos}/${currentVideo.id - 1}`)}
+            />}
             {startTime !== null && <MuxPlayer
               streamType="on-demand"
               playbackId={currentVideo.playbackId}
@@ -95,6 +101,12 @@ export const SuperWatcher = ({ superUser }) => {
                 if (currentVideo.id !== 11)
                   setShowCountdown(true)
               }}
+            />}
+            {currentVideo.id !== 11 && <FontAwesomeIcon 
+              icon={faForward} 
+              color='#ffffff' 
+              className='clickable'
+              onClick={() => navigate(`${paths.superClass.videos}/${currentVideo.id + 1}`)}
             />}
             {showCountdown && (
               <div id='superWatcherCountdownContainer'>

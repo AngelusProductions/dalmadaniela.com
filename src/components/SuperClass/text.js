@@ -16,7 +16,7 @@ export default {
             body: 'Create a purposeful social media strategy that helps you achieve your personal goals in the real world.'
         },
         {
-            title: 'A guarenteed method for better jobs, bookings, and increased revenue.',
+            title: 'A guaranteed method for better jobs, bookings, and increased revenue.',
             body: 'Influence the people who really matter by increasing your online credibility on autpilot.'
         }
     ],

@@ -43,10 +43,10 @@ const SuperClass = () => {
 
   return (
     <main id='superClassPage'>
-      <HomeIcon />
+      {/* <HomeIcon /> */}
 
       <h1>{t.title}</h1>
-      <button id='superClassCta1' onClick={scrollToCheckout}>{t.cta1}</button>
+      <button id='superClassCta1' className='clickable' onClick={scrollToCheckout}>{t.cta1}</button>
       <ul id='superClassFeaturesList'>
         {t.superClassFeatureBullets.map(({ title, body }) => (
           <li key={title} className='superClassFeatureContainer'>
@@ -56,11 +56,11 @@ const SuperClass = () => {
           </li>
         ))}
       </ul>
-      <button id='superClassCta2' onClick={scrollToCheckout}>
+      <button id='superClassCta2' className='clickable' onClick={scrollToCheckout}>
+        <span>{t.cta2Three}</span>
+        <br/>
         <s>{t.cta2One}</s>
         <span>&nbsp;{t.cta2Two}</span>
-        <br/>
-        <span>{t.cta2Three}</span>
       </button>
       <img id='superClassSatisfactionGuarentee' src={i.icons.satisfactionGuarentee} />
       <button id='superClassCta3' onClick={scrollToCheckout}>{t.withoutWasting}</button>

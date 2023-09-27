@@ -20,7 +20,7 @@
             #brandsHelped h3,
             #brandsCollaborated h3,
             #brandsFeatured h3 {
-                font-family: "Hatton";
+                font-family: "Garbata";
                 text-align: center;
                 font-size: 3.5vw !important;
                 margin-bottom: 5vw !important;
@@ -32,6 +32,11 @@
     
             #brandsFeatured {
                 margin-top: 0 !important;
+
+                h3 {
+                    font-family: 'Garbata';
+                    margin-top: 5vw !important;
+                }
             }
         }
 
