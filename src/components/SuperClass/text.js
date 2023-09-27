@@ -31,7 +31,7 @@ export default {
     superClassPerfectForBullets: [
         'Artists and creators with imposter syndrome',
         'Small business owners growing their social media on their own',
-        'Social media managers designing and running content strategies for their businesses',
+        'Social media managers designing and running content strategies for other businesses',
         'Multipotentialites having issues creating a successful social media strategy'
     ]
 }

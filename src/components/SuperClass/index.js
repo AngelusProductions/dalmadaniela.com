@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 
@@ -12,11 +12,16 @@ import testimonials from '../../constants/data/testimonials'
 import './styles/index.scss'
 
 const SuperClass = () => {
+  const containerRef = useRef()
   const checkoutRef = useRef()
 
   const scrollToCheckout = () => {
     checkoutRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' })
   }
+  
+  useEffect(() => {
+    containerRef.current.scrollIntoView(true)
+  }, [])
 
   const responsive = {
     superLargeDesktop: {
@@ -42,7 +47,7 @@ const SuperClass = () => {
   }
 
   return (
-    <main id='superClassPage'>
+    <main id='superClassPage' ref={containerRef}>
       {/* <HomeIcon /> */}
 
       <h1>{t.title}</h1>
