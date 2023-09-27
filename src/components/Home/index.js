@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import FAQ from './FAQ'
@@ -18,6 +18,10 @@ const Home = () => {
   const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
   /////////// make sure to turn on ////////////
   const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 })
+  }, [])
 
   const onSuperClassPopUpSubmitClick = async (name, email) => {
     const res = await saveSuperClassSubscribeInfo({ name, email })

@@ -17,7 +17,7 @@ export default {
         },
         {
             title: 'A guaranteed method for better jobs, bookings, and increased revenue.',
-            body: 'Influence the people who really matter by increasing your online credibility on autpilot.'
+            body: 'Influence the people who really matter by increasing your online credibility on autopilot.'
         }
     ],
 
