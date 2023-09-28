@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { connect, useDispatch } from 'react-redux'
 import ScrollToTop from 'react-scroll-to-top'
@@ -27,18 +27,18 @@ const t = {
 export const SuperVideos = ({ superUser }) => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const containerRef = useRef()
+
   const [superProgress, setSuperProgress] = useState(null)
 
   useEffect(() => {
     if(!superUser) {
       navigate(paths.superClass.login)
     }
-    
-    if(superUser) {
-      getSuperUserProgress(superUser.email).then(progress => {
-        setSuperProgress(progress)
-      })
-    }
+    containerRef.current.scrollIntoView(true)
+    getSuperUserProgress(superUser.email).then(progress => {
+      setSuperProgress(progress)
+    })
   }, [])
   
   const onLogoutClick = () => {
@@ -47,7 +47,7 @@ export const SuperVideos = ({ superUser }) => {
   }
 
   return  superUser && (
-    <div id='superVideosPageContainer'>
+    <div id='superVideosPageContainer' ref={containerRef}>
       <HomeIcon />
       <span id='superClassVideosHello'>{t.hello(superUser.first_name)}</span>
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
@@ -69,7 +69,7 @@ export const SuperVideos = ({ superUser }) => {
       <div className='superClassVideosContainer'>
         {superClassVideos.map(video => <SuperThumbnail {...video} key={video.id} />)}
       </div> 
-      <ScrollToTop smooth />
+      <ScrollToTop smooth className='clickable' />
     </div>
   )
 }

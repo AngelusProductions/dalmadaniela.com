@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router'
 import ScrollToTop from "react-scroll-to-top"
@@ -29,6 +29,7 @@ export const SuperWatcher = ({ superUser }) => {
   const { id } = useParams()
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const containerRef = useRef()
   
   const [startTime, setStartTime] = useState(null)
   const [showCountdown, setShowCountdown] = useState(false)
@@ -36,29 +37,24 @@ export const SuperWatcher = ({ superUser }) => {
   const currentVideo = superClassVideos.find(video => video.id == id)
   const otherVideos = superClassVideos.filter(video => video.id > currentVideo.id)
   
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0 })
+  const updateStartTime = (email, videoId) =>{
+    getSuperVideoProgress(email, videoId).then(data => {
+      setStartTime(data.timestamp)
+    })
+  }
 
+  useEffect(() => {
     if(!superUser) {
       navigate(paths.superClass.login)
     }
-
-    getSuperVideoProgress(superUser.email, currentVideo.id).then(data => {
-      setStartTime(data.timestamp)
-    })
-
-    return () => {
-      setStartTime(null)
-    }
+    containerRef.current.scrollIntoView(true)
+    updateStartTime(superUser.email, currentVideo.id)
+    return () => setStartTime(null)
   }, [])
   
   useEffect(() => {
-    getSuperVideoProgress(superUser.email, currentVideo.id).then(data => {
-      setStartTime(data.timestamp)
-    })
-    return () => {
-      setStartTime(null)
-    }
+    updateStartTime(superUser.email, currentVideo.id)
+    return () => setStartTime(null)
   }, [id])
 
   const onLogoutClick = () => {
@@ -67,7 +63,7 @@ export const SuperWatcher = ({ superUser }) => {
   }
   
   return superUser && (
-    <div id='superWatcherPageContainer'>
+    <div id='superWatcherPageContainer' ref={containerRef}>
       <HomeIcon />
       <BackIcon path={paths.superClass.videos} />
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
@@ -146,7 +142,7 @@ export const SuperWatcher = ({ superUser }) => {
         </>
       )}
       {otherVideos.map(video => <SuperThumbnail key={video.id} {...video} />)}
-      <ScrollToTop smooth />
+      <ScrollToTop smooth className='clickable' />
     </div>
   )
 }
