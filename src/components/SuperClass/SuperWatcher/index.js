@@ -29,8 +29,8 @@ export const SuperWatcher = ({ superUser }) => {
   const { id } = useParams()
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  
   const [startTime, setStartTime] = useState(null)
-
   const [showCountdown, setShowCountdown] = useState(false)
   
   const currentVideo = superClassVideos.find(video => video.id == id)
@@ -43,16 +43,23 @@ export const SuperWatcher = ({ superUser }) => {
       navigate(paths.superClass.login)
     }
 
-    if(superUser) {
-      getSuperVideoProgress(superUser.email, currentVideo.id).then(data => {
-        setStartTime(data.timestamp)
-      })
-    }
+    getSuperVideoProgress(superUser.email, currentVideo.id).then(data => {
+      setStartTime(data.timestamp)
+    })
 
     return () => {
       setStartTime(null)
     }
   }, [])
+  
+  useEffect(() => {
+    getSuperVideoProgress(superUser.email, currentVideo.id).then(data => {
+      setStartTime(data.timestamp)
+    })
+    return () => {
+      setStartTime(null)
+    }
+  }, [id])
 
   const onLogoutClick = () => {
     dispatch(clearCurrentSuperInfo())
@@ -85,7 +92,7 @@ export const SuperWatcher = ({ superUser }) => {
               thumbnailTime={currentVideo.thumbnailStart}
               onTimeUpdate={e => {
                 const { currentTime } = e.target
-                if(currentTime >= 30 && currentTime % 30 < 0.25) {
+                if(currentTime >= 30 && currentTime % 30 < 0.3) {
                   saveSuperVideoProgress({
                     email: superUser.email,
                     videoId: currentVideo.id,
