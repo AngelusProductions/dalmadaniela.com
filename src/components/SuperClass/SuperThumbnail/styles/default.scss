@@ -5,9 +5,17 @@
 
     .superThumbnail {
         margin-bottom: 25px; 
+        position: relative;
         img {
             width: 33vw;
             border: 1px solid;
+        }
+        svg {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 3vw;
+            height: 3vw;
         }
     }
 

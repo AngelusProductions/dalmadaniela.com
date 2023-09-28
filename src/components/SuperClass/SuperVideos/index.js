@@ -40,7 +40,7 @@ export const SuperVideos = ({ superUser }) => {
       setSuperProgress(progress)
     })
   }, [])
-  
+
   const onLogoutClick = () => {
     dispatch(clearCurrentSuperInfo())
     navigate(paths.superClass.login)
@@ -54,21 +54,25 @@ export const SuperVideos = ({ superUser }) => {
       <h1>{t.title} <span>{t.superclass}</span></h1>
 
       {superProgress ? (
-        <div 
-          id='superVideosContinueContainer' 
-          className='clickable'
-          onClick={() => navigate(`${paths.superClass.videos}/${superProgress.videoId}`)}
-        >
-          <FontAwesomeIcon icon={faGraduationCap} />
-          <p>{t.continue(superProgress.videoId)}</p>
-        </div>
+        <>
+          <div 
+            id='superVideosContinueContainer' 
+            className='clickable'
+            onClick={() => navigate(`${paths.superClass.videos}/${superProgress.videoId}`)}
+          >
+            <FontAwesomeIcon icon={faGraduationCap} />
+            <p>{t.continue(superProgress.videoId)}</p>
+          </div>
+          <div className='superClassVideosContainer'>
+            {superClassVideos.map(video => (
+              <SuperThumbnail {...video} key={video.id} isCompleted={superProgress.completedVideoIds.includes(video.id)} />)
+            )}
+          </div> 
+        </>
       ) : (
         <ClimbingBoxLoader id='superClassProgressLoader' color='#FEFF7C' loading />
       )}
-
-      <div className='superClassVideosContainer'>
-        {superClassVideos.map(video => <SuperThumbnail {...video} key={video.id} />)}
-      </div> 
+      
       <ScrollToTop smooth className='clickable' />
     </div>
   )

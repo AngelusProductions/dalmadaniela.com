@@ -32,6 +32,7 @@ export const SuperWatcher = ({ superUser }) => {
   const containerRef = useRef()
   
   const [startTime, setStartTime] = useState(null)
+  const [completedVideoIds, setCompletedVideoIds] = useState([])
   const [showCountdown, setShowCountdown] = useState(false)
   
   const currentVideo = superClassVideos.find(video => video.id == id)
@@ -40,6 +41,7 @@ export const SuperWatcher = ({ superUser }) => {
   const updateStartTime = (email, videoId) =>{
     getSuperVideoProgress(email, videoId).then(data => {
       setStartTime(data.timestamp)
+      setCompletedVideoIds(data.completedVideoIds)
     })
   }
 
@@ -141,7 +143,7 @@ export const SuperWatcher = ({ superUser }) => {
           </div>
         </>
       )}
-      {otherVideos.map(video => <SuperThumbnail key={video.id} {...video} />)}
+      {otherVideos.map(video => <SuperThumbnail key={video.id} {...video} isCompleted={completedVideoIds.includes(video.id)} />)}
       <ScrollToTop smooth className='clickable' />
     </div>
   )

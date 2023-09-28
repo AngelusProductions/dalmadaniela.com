@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 
 import { paths } from '../../../constants/paths'
 import { getHumanizedDuration } from '../../../constants/time'
@@ -11,7 +13,7 @@ const t = {
 }
 
 export const SuperThumbnail = ({ 
-  id, name, playbackId, thumbnailGIFStart, duration 
+  id, name, playbackId, thumbnailGIFStart, duration, isCompleted
 }) => {
   return  (
     <div className='superThumbnailContainer' key={id}>
@@ -21,6 +23,7 @@ export const SuperThumbnail = ({
         className='superThumbnail clickable'
       >
         <img src={t.thumbnailSource(playbackId, thumbnailGIFStart)} />
+        {isCompleted && <FontAwesomeIcon id='superThumbnailCompletedCheckIcon' icon={faCheckSquare} color={'#FFFFFF'} />}
       </Link>
       <div className='superThumbnailTitleContainer'>
         <Link to={`${paths.superClass.videos}/${id}`}>

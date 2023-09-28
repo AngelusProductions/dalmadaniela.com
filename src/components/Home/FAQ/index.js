@@ -108,7 +108,7 @@ const FAQ = () => {
                         Magic Calendars&nbsp;
                     </span>
                     <span className='three'>
-                       you can have high-quality social media posts for your brand or business in an&nbsp;
+                       you can have high-quality social media posts for your brand or business in an
                     </span>
                     <span className='four'>
                         easy, affordable, and innovative way.&nbsp;
