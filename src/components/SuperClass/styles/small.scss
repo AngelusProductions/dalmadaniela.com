@@ -3,7 +3,7 @@
 @media (max-width: 640px) {
     main#superClassPage {
         section#superClassBrands {
-            padding-bottom: 15% !important;
+            padding-bottom: 10% !important;
     
             #brandsHelped .brandLogo {
                 width: 17% !important;
@@ -36,6 +36,10 @@
                 h3 {
                     font-family: 'Garbata';
                     margin-top: 5vw !important;
+                }
+
+                h4 {
+                    width: 80%;
                 }
             }
         }

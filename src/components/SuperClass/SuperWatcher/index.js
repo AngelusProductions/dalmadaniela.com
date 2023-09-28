@@ -85,7 +85,7 @@ export const SuperWatcher = ({ superUser }) => {
               thumbnailTime={currentVideo.thumbnailStart}
               onTimeUpdate={e => {
                 const { currentTime } = e.target
-                if(currentTime >= 10 && currentTime % 10 < 0.25) {
+                if(currentTime >= 30 && currentTime % 30 < 0.25) {
                   saveSuperVideoProgress({
                     email: superUser.email,
                     videoId: currentVideo.id,

@@ -1,6 +1,6 @@
 export default {
     title: 'Why go viral when you can make money instead?',
-    cta1: 'GET SUPERCLASS',
+    cta1: 'Get SuperClass',
 
     superClassFeatureBullets: [
         {
@@ -25,7 +25,7 @@ export default {
     cta2Two: '$79.99',
     cta2Three: '70% Off Limited Time Offer',
 
-    withoutWasting: 'All Without Wasting Time, Money, And Effort Trying to Go Viral!',
+    withoutWasting: 'All without wasting time, money, and effort trying to go viral!',
 
     superClassPerfectForTitle: 'Perfect for:',
     superClassPerfectForBullets: [

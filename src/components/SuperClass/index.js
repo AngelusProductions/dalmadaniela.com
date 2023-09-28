@@ -63,12 +63,14 @@ const SuperClass = () => {
       </ul>
       <button id='superClassCta2' className='clickable' onClick={scrollToCheckout}>
         <span>{t.cta2Three}</span>
-        <br/>
-        <s>{t.cta2One}</s>
-        <span>&nbsp;{t.cta2Two}</span>
       </button>
+      <div id='superClassPriceContainer'>
+        <s>{t.cta2One}</s>
+        <br />
+        <span>&nbsp;{t.cta2Two}</span>
+      </div>
       <img id='superClassSatisfactionGuarentee' src={i.icons.satisfactionGuarentee} />
-      <button id='superClassCta3' onClick={scrollToCheckout}>{t.withoutWasting}</button>
+      <button id='superClassCta3' className='clickable' onClick={scrollToCheckout}>{t.withoutWasting}</button>
       <section id='superClassBrands'>
         <div id='brandsHelped' className='brandsSection'>
           <h3>{ht.brandsHelped}</h3>

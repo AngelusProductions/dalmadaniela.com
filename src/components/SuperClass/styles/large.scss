@@ -1,5 +1,146 @@
 @import '../../colors.scss';
 
 @media (min-width: 1024px) {
-    
+    main#superClassPage {
+        h1 {
+            width: 50% !important;
+            font-size: 4vw !important;
+            margin-top: 2.5% !important;
+        }
+
+        ul#superClassFeaturesList,
+        ul#superClassPerfectForList {
+            width: 50%;
+
+            li {
+                margin-bottom: 2.5%;
+                font-size: 1.3vw;
+
+                img {
+                    transform: translate(-0.5vw, 0.3vw) !important;
+                    width: 1.6vw !important;
+                }
+
+                b {
+                    margin-right: 0.5vw;
+                }
+            }
+        }
+
+        button {
+            margin: 5% auto !important;
+            padding: 1% !important;
+            font-size: 2vw;
+
+            &#superClassCta1 {
+                width: 20% !important;
+                margin: 5% auto !important;
+            }
+
+            &#superClassCta2 {
+                width: 50%;
+                border: solid 2px black;
+                margin-bottom: 2.5% !important;
+            }
+
+            &#superClassCta3 {
+                width: 50% !important;
+            }
+        }
+
+        #superClassPriceContainer {
+            margin: 0 auto 2.5% auto;
+            font-size: 3vw;
+        }
+
+        img#superClassSatisfactionGuarentee {
+            width: 17%;
+        }
+
+        section#superClassBrands {
+            padding-bottom: 0 !important;
+
+            .brandLogosContainer {
+                padding: 0 !important;
+            }
+            
+            #brandsHelped h3,
+            #brandsCollaborated h3,
+            #brandsFeatured h3,
+            #brandsFeatured h4 {
+                margin-bottom: 2vw !important; 
+            }
+
+            #brandsFeatured h3,
+            #brandsFeatured h4 {
+                font-size: 2vw;
+            }
+
+            #brandsFeatured h4 {
+                font-size: 1.8vw;
+            }
+
+            .brandsSection {
+                width: 75%;
+                margin: 0 auto 2.5% auto;
+
+                h3 {
+                    font-size: 1.75vw !important;
+                }
+            }
+        }
+
+        .react-multi-carousel-list {
+            padding: 40px 0;
+        }
+
+        .superClassTestimonialContainer {
+            img {
+                height: 15vw;
+                width: 15vw;
+                border: 2px solid $pink;
+            }
+
+            p {
+                font-size: 1.5vw;
+                width: 67%;
+                margin: 2% 0px;
+            }
+
+            div {
+                text-align: center;
+
+                h4 {
+                    color: $pink;
+                    font-size: 2vw;
+                }
+
+                h5 {
+                    font-size: 1.5vw;
+                    margin: 1% 0;
+                }
+
+                h6 {
+                    font-size: 1.25vw;
+                }
+            }
+        }
+
+        #superClassPerfectForListContainer {
+            margin: 0;
+
+            h2 {
+                margin: 5% 0;
+                font-size: 3vw;
+            }
+        }
+
+        #superClassSamCartWrapper {
+            margin-top: 2.5%;
+
+            sc-checkout {
+                width: 100% !important;
+            }
+        }
+    }
 }

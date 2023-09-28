@@ -11,7 +11,7 @@ export default {
   brandsHelped: 'Some brands we\'ve helped across the globe:',
   brandsCollaborated: 'Some brands we\'ve collaborated with on social:',
   brandsFeatured: 'As featured in:',
-  brandsFigures: 'Over 7 figures in revenue made for brands in the US and LatAm.',
+  brandsFigures: 'Over 7 figures in revenue made for brands in the US and Latin America.',
 
   filmsTitle: 'As an actress and producer',
   filmsText: 'Dalma has used her social media influence to promote the projects that have cast her as an actress and launched successful crowdfunding campaigns that have funded the entire pre and post production of her latest feature film.',
