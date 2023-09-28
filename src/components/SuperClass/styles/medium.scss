@@ -38,6 +38,7 @@
 
             &#superClassCta2 {
                 width: 50% !important;
+                margin-bottom: 0 !important;
             }
 
             &#superClassCta3 {
@@ -46,7 +47,7 @@
         }
 
         #superClassPriceContainer {
-            margin: 2.5% auto 2.5% auto;
+            margin: 2.5% auto 2.5% auto !important;
             font-size: 3vw;
         }
 
@@ -74,7 +75,7 @@
             }
 
             #brandsFeatured h4 {
-                font-size: 2.4vw !important;
+                font-size: 1.8vw !important;
             }
 
             .brandsSection {
@@ -89,8 +90,6 @@
 
         .react-multi-carousel-list {
             padding: 40px 0;
-            border-top: 5px solid $pink;
-            border-bottom: 5px solid $pink;
         }
 
         .superClassTestimonialContainer {

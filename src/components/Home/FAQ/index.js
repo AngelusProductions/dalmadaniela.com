@@ -7,7 +7,7 @@ import './styles/index.scss'
 
 const t = {
     faqShort: 'FAQ',
-    faqLong: 'Frequenty Asked Questions',
+    faqLong: 'Frequently Asked Questions',
     questions: {
         one: 'What is dalmadaniela.com?',
         two: 'What products & services can I buy on dalmadaniela.com?',
