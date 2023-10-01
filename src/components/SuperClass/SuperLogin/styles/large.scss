@@ -2,16 +2,9 @@
 
 @media (min-width: 1024px) {
     #superLoginPageContainer {
-        min-height: calc(100vh - 2px);
-        
         h1 {
             margin: 5% auto 5% auto;
-            font-family: 'Garbata';
             font-size: 3vw;
-
-            span {
-                color: $yellow;
-            }
         }
 
         div#superLoginFieldsContainer {
@@ -42,23 +35,9 @@
                 border: none;
                 padding: 1%;
                 padding-top: 1.2%;
-                font-family: "Garet";
-                text-transform: uppercase;
-                font-weight: 600;
-                cursor: pointer;
                 width: 15%;
                 background: $yellow;
                 font-size: 1.5vw;
-
-                &:hover {
-                    background: $pink;
-                    color: white;
-                }
-            }
-
-            #superClassLoginLoader {
-                margin: auto;
-                transform: translateX(-25px);
             }
 
             p#superClassLoginError {
