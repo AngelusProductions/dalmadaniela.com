@@ -53,6 +53,7 @@
     "react-countdown-circle-timer": "^3.2.1",
     "react-country-region-selector": "^3.6.1",
     "react-dom": "^18.0.2",
+    "react-https-redirect": "^1.1.0",
     "react-icons": "^4.10.1",
     "react-lite-youtube-embed": "^2.3.52",
     "react-multi-carousel": "^2.8.4",
