@@ -64,7 +64,7 @@ export const SuperVideos = ({ superUser }) => {
             <p>{t.continue(superProgress.videoId)}</p>
           </div>
           <div className='superClassVideosContainer'>
-            {superClassVideos.map(video => (
+            {superProgress && superClassVideos.map(video => (
               <SuperThumbnail {...video} key={video.id} isCompleted={superProgress.completedVideoIds.includes(video.id)} />)
             )}
           </div> 

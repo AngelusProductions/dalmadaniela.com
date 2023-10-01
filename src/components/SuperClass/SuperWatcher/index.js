@@ -76,7 +76,7 @@ export const SuperWatcher = ({ superUser }) => {
             {currentVideo.id !== 1 && <FontAwesomeIcon 
               icon={faBackward} 
               color='#ffffff' 
-              className='clickable'
+              className='watcherArrow clickable'
               onClick={() => navigate(`${paths.superClass.videos}/${currentVideo.id - 1}`)}
             />}
             {startTime !== null && <MuxPlayer
@@ -110,7 +110,7 @@ export const SuperWatcher = ({ superUser }) => {
             {currentVideo.id !== 11 && <FontAwesomeIcon 
               icon={faForward} 
               color='#ffffff' 
-              className='clickable'
+              className='watcherArrow clickable'
               onClick={() => navigate(`${paths.superClass.videos}/${currentVideo.id + 1}`)}
             />}
             {showCountdown && (
@@ -143,7 +143,10 @@ export const SuperWatcher = ({ superUser }) => {
           </div>
         </>
       )}
-      {otherVideos.map(video => <SuperThumbnail key={video.id} {...video} isCompleted={completedVideoIds.includes(video.id)} />)}
+      <div className='superClassVideosContainer'>
+        {completedVideoIds && otherVideos.map(video => 
+          <SuperThumbnail key={video.id} {...video} isCompleted={completedVideoIds.includes(video.id)} />)}
+      </div>
       <ScrollToTop smooth className='clickable' />
     </div>
   )

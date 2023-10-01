@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { connect, useDispatch } from 'react-redux'
 import PacmanLoader from "react-spinners/PacmanLoader"
+import * as Yup from 'yup'
 
 import HomeIcon from '../../UI/HomeIcon'
 
@@ -14,8 +15,8 @@ import './styles/index.scss'
 const t = {
   title: 'Log In to',
   superClass: 'SuperClass',
-  emailLabel: 'Email:',
-  orderLabel: 'Order Number:',
+  emailLabel: 'Email',
+  orderLabel: 'Order #',
   button: 'Log In'
 }
 
@@ -32,8 +33,27 @@ export const SuperLogin = ({ onSuperSubmit, superUser, loading, error }) => {
             dispatch(clearCurrentSuperInfo())
         }
     }, [])
+
+    const schema = Yup.object().shape({
+        email: Yup.string().email().required(),
+        orderNumber: Yup.number().positive().required()
+    });
+
+    const validateEmail = (emailString, orderNumberString) => {
+        try {
+            schema.validateSync({ 
+                email: emailString, 
+                orderNumber: parseInt(orderNumberString) 
+            });
+            return true;
+        } catch (e) {
+            dispatch(superLoginFailure('Invalid values given, sorry!'))
+            return false;
+        }
+    }
   
     const onSubmitClick = () => {
+        if(!validateEmail(email, orderNumber)) return
         onSuperSubmit(email, orderNumber).then(data => {
             if(data && data.superUser) {
                 navigate(paths.superClass.videos)
@@ -49,7 +69,7 @@ export const SuperLogin = ({ onSuperSubmit, superUser, loading, error }) => {
 
     return (
         <div id='superLoginPageContainer'>
-            <HomeIcon />
+            {/* <HomeIcon /> */}
             
             <h1>{t.title}&nbsp;<span>{t.superClass}</span></h1>
 

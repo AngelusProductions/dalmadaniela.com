@@ -2,6 +2,54 @@
 
 @media (min-width: 1024px) {
     #superWatcherPageContainer {
-        
+        padding: 5% 10%;
+
+        mux-player {
+            width: 50%;
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 5%;
+            font-size: 2.5vw;
+        }
+
+        #superWatcherVideoContainer {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 7.5%;
+            justify-content: center;
+
+            .watcherArrow {
+                width: 1.5vw;
+                height: 1.5vw;
+            }
+            
+            #superWatcherCountdownContainer {
+                position: absolute;
+                top: -5vw;
+                background: black;
+                border-radius: 50%;
+                right: -4vw;
+
+                #superWatcherCountdownText {
+                    width: 67%;
+
+                    svg {
+                        height: 30px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        video {
+            width: 100%;
+        }
+
+        .scroll-to-top {
+            background: $yellow;
+        }
     }
 }

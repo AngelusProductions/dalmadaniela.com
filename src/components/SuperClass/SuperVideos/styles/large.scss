@@ -2,6 +2,32 @@
 
 @media (min-width: 1024px) {
     #superVideosPageContainer {
+        padding: 5% 10%;
+
+        h1 {
+            font-size: 4vw;
+            margin-bottom: 5%;
+        }
         
+        span#superClassProgressLoader {
+            margin-bottom: 5%;
+        }
+        
+        div#superVideosContinueContainer {
+            width: 33%;
+            padding: 2%;
+            font-size: 1.5vw;
+            margin-bottom: 7.5%;
+
+            svg {
+                height: 3vw;
+            }
+        }
+
+        .superClassVideosContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 }
