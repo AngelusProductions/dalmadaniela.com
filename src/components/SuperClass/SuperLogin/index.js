@@ -45,6 +45,7 @@ export const SuperLogin = ({ onSuperSubmit, superUser, loading, error }) => {
                 email: emailString, 
                 orderNumber: parseInt(orderNumberString) 
             });
+            debugger
             return true;
         } catch (e) {
             dispatch(superLoginFailure('Invalid values given, sorry!'))

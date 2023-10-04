@@ -2,6 +2,38 @@
 
 @media (max-width: 640px) {
     #superWatcherPageContainer {
-        
+        .superClassLogoutButton {
+            font-size: 3.5vw;
+            top: 2.5%;
+            right: 10%;
+        }
+
+        #superWatcherGoBackButton {
+            left: 10% !important;
+            top: 2.5% !important;
+            font-size: 3.5vw !important;
+        }
+
+        #superWatcherVideoContainer {
+            width: calc(138% - 2px);
+            left: calc(-19% + 1px);
+        }
+
+        #backIcon {
+            width: 7vw;
+            height: 7vw;
+        }
+
+        mux-player {
+            width: 100%;
+
+            media-theme {
+                width: 100%;
+            }
+
+            video {
+                width: 100%;
+            }
+        }
     }
 }

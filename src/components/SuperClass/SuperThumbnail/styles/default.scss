@@ -25,10 +25,17 @@
 
         h2 {
             font-size: 2.2vw;
+            font-family: 'Garbata';
 
             &:hover {
                 text-decoration: underline;
             }
+
+            .superThumbnailTitleNumber {
+                font-family: 'Hatton';
+                color: $yellow;
+            }
+            font-size: 2.5vw;
         }
 
         p {

@@ -7,13 +7,18 @@
     padding: 10%;
     text-align: center;
     min-height: 100vh;
+    position: relative;
 
-    > a:nth-of-type(1),
-    > a:nth-of-type(2) {
-        filter: drop-shadow(0px 1px 3px $white);
+    a#superWatcherGoBackButton {
+        font-family: 'Hatton';
         position: absolute;
-        left: 50px;
-        top: 25px;
+        left: 10%;
+        top: 3%;
+        font-size: 2vw;
+    }
+        
+    #superWatcherLoading {
+        margin: auto;
     }
 
     mux-player {
@@ -36,20 +41,17 @@
         right: 5%;
     }
 
-    #backIcon {
-        left: calc(25px + 5vw) !important;
-        top: 5px !important;
-    }
-
-    #homeIcon {
-        left: unset !important;
-        top: unset !important;
-    }
-
     h1 {
         margin-top: 5%;
         margin-bottom: 10%;
-        font-size: 4vw;
+        font-size: 5vw;
+        font-family: 'Garbata';
+
+        #superWatcherTitleNumber {
+            font-family: 'Hatton';
+            font-size: 4.8vw;
+            color: $yellow;
+        }
     }
 
     #superWatcherVideoContainer {

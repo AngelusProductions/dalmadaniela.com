@@ -2,6 +2,17 @@
 
 @media (max-width: 640px) {
     .superThumbnailContainer {
-        
+        .superThumbnailTitleContainer {
+            h2 {
+                font-size: 3.5vw !important;
+
+                .superThumbnailTitleNumber {
+                    font-size: 3.2vw !important;
+                }
+            }
+            p {
+                font-size: 2.5vw !important;
+            }
+        }
     }
 }

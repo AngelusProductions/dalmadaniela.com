@@ -27,7 +27,7 @@ export const SuperThumbnail = ({
       </Link>
       <div className='superThumbnailTitleContainer'>
         <Link to={`${paths.superClass.videos}/${id}`}>
-          <h2>{id}.&nbsp;{name}</h2>
+          <h2><span className='superThumbnailTitleNumber'>{id}.&nbsp;</span>{name}</h2>
         </Link>
         <p>{getHumanizedDuration(duration)}</p>
       </div>
