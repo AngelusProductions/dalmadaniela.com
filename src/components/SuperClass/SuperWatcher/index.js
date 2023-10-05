@@ -76,11 +76,6 @@ export const SuperWatcher = ({ superUser }) => {
     navigate(paths.superClass.login)
   }
 
-  const onLoadedVideo = () => {
-    setIsVideoLoading(false)
-    debugger
-  }
-  
   return superUser && (
     <div id='superWatcherPageContainer' ref={containerRef}>
       {/* <HomeIcon /> */}
@@ -104,7 +99,7 @@ export const SuperWatcher = ({ superUser }) => {
               playbackId={currentVideo.playbackId}
               metadataVideoTitle={currentVideo.name}
               metadataViewerUserId={superUser.email}
-              onLoadedMetadata={onLoadedVideo}
+              onLoadedMetadata={() => setIsVideoLoading(false)}
               startTime={startTime}
               thumbnailTime={currentVideo.thumbnailStart}
               onTimeUpdate={e => {

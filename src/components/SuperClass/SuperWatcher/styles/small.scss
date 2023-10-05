@@ -15,8 +15,12 @@
         }
 
         #superWatcherVideoContainer {
-            width: calc(138% - 2px);
-            left: calc(-19% + 1px);
+            width: calc(125% - 2px);
+            left: calc(-12.5% + 1px);
+
+            svg {
+                display: none;
+            }
         }
 
         #backIcon {
@@ -26,6 +30,7 @@
 
         mux-player {
             width: 100%;
+            margin: 0;
 
             media-theme {
                 width: 100%;

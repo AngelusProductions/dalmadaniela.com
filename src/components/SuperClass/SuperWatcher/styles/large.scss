@@ -12,6 +12,10 @@
             margin-top: 0;
             margin-bottom: 5%;
             font-size: 2.5vw;
+
+            #superWatcherTitleNumber {
+                font-size: 2.2vw;   
+            }
         }
 
         #superWatcherVideoContainer {
@@ -25,7 +29,7 @@
                 width: 1.5vw;
                 height: 1.5vw;
             }
-            
+
             #superWatcherCountdownContainer {
                 position: absolute;
                 top: -5vw;
