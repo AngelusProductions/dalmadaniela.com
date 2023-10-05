@@ -21,9 +21,9 @@ export default {
         }
     ],
 
-    cta2One: '$249.99',
-    cta2Two: '$79.99',
-    cta2Three: '70% Off Limited Time Offer',
+    cta2One: '$249',
+    cta2Two: '$97',
+    cta2Three: 'Limited Time Offer',
 
     withoutWasting: 'All without wasting time, money, and effort trying to go viral!',
 

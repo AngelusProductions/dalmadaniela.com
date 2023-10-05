@@ -81,8 +81,6 @@ export const SuperWatcher = ({ superUser }) => {
     debugger
   }
   
-
-
   return superUser && (
     <div id='superWatcherPageContainer' ref={containerRef}>
       {/* <HomeIcon /> */}
