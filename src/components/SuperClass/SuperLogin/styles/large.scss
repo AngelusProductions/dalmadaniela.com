@@ -4,11 +4,11 @@
     #superLoginPageContainer {
         h1 {
             margin: 5% auto 5% auto;
-            font-size: 3vw;
+            font-size: 5vw;
         }
 
         div#superLoginFieldsContainer {
-            width: 50%;
+            width: 75%;
             margin-bottom: 5%;
 
             .superLoginField {
@@ -17,13 +17,14 @@
                 }
 
                 label {
-                    font-size: 2vw;
+                    font-size: 3vw;
                 }
 
                 input {
-                    min-height: 40px;
-                    width: 33vw;
-                    font-size: 1.5vw;
+                    min-height: 70px;
+                    width: 75%;
+                    font-size: 2.5vw;
+                    padding: 0 20px;
                 }
             }
         }
@@ -32,12 +33,7 @@
             position: relative;
 
             button {
-                border: none;
-                padding: 1%;
-                padding-top: 1.2%;
-                width: 15%;
-                background: $yellow;
-                font-size: 1.5vw;
+                font-size: 2.5vw;
             }
 
             p#superClassLoginError {

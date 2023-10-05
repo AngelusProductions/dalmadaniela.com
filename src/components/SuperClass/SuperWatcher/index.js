@@ -92,15 +92,12 @@ export const SuperWatcher = ({ superUser }) => {
         <>
           <h1><span id='superWatcherTitleNumber'>{currentVideo.id}.&nbsp;</span>{currentVideo.name}</h1>
           <div id='superWatcherVideoContainer'>
-            {/* {!isVideoLoading && currentVideo.id !== 1 && <FontAwesomeIcon 
+            {!isVideoLoading && currentVideo.id !== 1 && <FontAwesomeIcon 
               icon={faBackward} 
               color='#ffffff' 
               className='watcherArrow clickable'
               onClick={() => navigate(`${paths.superClass.videos}/${currentVideo.id - 1}`)}
-            />} */}
-            {/* {isVideoLoading && (
-              <HashLoader id='superWatcherLoading' color='#FEFF7C' loading />
-            )} */}
+            />}
             {startTime !== null && <MuxPlayer
               streamType="on-demand"
               primaryColor="#DA2A7D"
@@ -109,18 +106,7 @@ export const SuperWatcher = ({ superUser }) => {
               playbackId={currentVideo.playbackId}
               metadataVideoTitle={currentVideo.name}
               metadataViewerUserId={superUser.email}
-              onLoadStart={() => setIsVideoLoading(true)}
-              onLoadedData={onLoadedVideo}
               onLoadedMetadata={onLoadedVideo}
-              onCanPlayThrough={onLoadedVideo}
-              onCanPlay={onLoadedVideo}
-              onWaiting={onLoadedVideo}
-              onSuspend={onLoadedVideo}
-              onCuePointChange={onLoadedVideo}
-              onCuePointsChange={onLoadedVideo}
-              onStalled={onLoadedVideo}
-              onSeeking={onLoadedVideo}
-              ref={videoPlayerRef}
               startTime={startTime}
               thumbnailTime={currentVideo.thumbnailStart}
               onTimeUpdate={e => {

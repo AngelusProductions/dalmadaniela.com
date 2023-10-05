@@ -4,8 +4,6 @@ import { connect, useDispatch } from 'react-redux'
 import PacmanLoader from "react-spinners/PacmanLoader"
 import * as Yup from 'yup'
 
-import HomeIcon from '../../UI/HomeIcon'
-
 import { paths } from '../../../constants/paths'
 import { superLogin } from '../../../api/superClass'
 import { superLoginRequest, superLoginFailure, superLoginSuccess, clearCurrentSuperInfo } from '../../../actions/superClass'
@@ -45,7 +43,6 @@ export const SuperLogin = ({ onSuperSubmit, superUser, loading, error }) => {
                 email: emailString, 
                 orderNumber: parseInt(orderNumberString) 
             });
-            debugger
             return true;
         } catch (e) {
             dispatch(superLoginFailure('Invalid values given, sorry!'))
@@ -70,8 +67,6 @@ export const SuperLogin = ({ onSuperSubmit, superUser, loading, error }) => {
 
     return (
         <div id='superLoginPageContainer'>
-            {/* <HomeIcon /> */}
-            
             <h1>{t.title}&nbsp;<span>{t.superClass}</span></h1>
 
             <div id='superLoginFieldsContainer'>
