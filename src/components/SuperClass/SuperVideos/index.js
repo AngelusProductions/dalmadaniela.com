@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader"
 
-import HomeIcon from '../../UI/HomeIcon'
+// import HomeIcon from '../../UI/HomeIcon'
 import SuperThumbnail from '../SuperThumbnail'
 
 import { paths } from '../../../constants/paths'
@@ -48,7 +48,7 @@ export const SuperVideos = ({ superUser }) => {
 
   return  superUser && (
     <div id='superVideosPageContainer' ref={containerRef}>
-      <HomeIcon />
+      {/* <HomeIcon /> */}
       <span id='superClassVideosHello'>{t.hello(superUser.first_name)}</span>
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
       <h1>{t.title} <span>{t.superclass}</span></h1>
@@ -64,7 +64,7 @@ export const SuperVideos = ({ superUser }) => {
             <p>{t.continue(superProgress.videoId)}</p>
           </div>
           <div className='superClassVideosContainer'>
-            {superClassVideos.map(video => (
+            {superProgress && superClassVideos.map(video => (
               <SuperThumbnail {...video} key={video.id} isCompleted={superProgress.completedVideoIds.includes(video.id)} />)
             )}
           </div> 

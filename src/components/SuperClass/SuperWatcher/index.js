@@ -3,9 +3,11 @@ import { connect, useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router'
 import ScrollToTop from "react-scroll-to-top"
 import MuxPlayer from '@mux/mux-player-react'
+// import muxBlurHash from "@mux/blurhash";
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleStop, faBackward, faForward } from '@fortawesome/free-solid-svg-icons'
+import HashLoader from "react-spinners/HashLoader"
 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
@@ -17,11 +19,13 @@ import { clearCurrentSuperInfo } from '../../../actions/superClass'
 import { getSuperVideoProgress, saveSuperVideoProgress, saveSuperVideoCompletion } from '../../../api/superClass'
 
 import './styles/index.scss'
+import { Link } from 'react-router-dom'
 
 const t = {
   title: 'SuperWatcher',
   countdown: remainingTime => `Next video starts in ${remainingTime} second${remainingTime === 1 ? '' : 's'}`,
   logOut: 'Log Out',
+  back: 'Go Back',
   thumbnailSource: (playbackId, thumbnailStart) => `https://image.mux.com/${playbackId}/animated.gif?start=${thumbnailStart}&fps=30`
 }
 
@@ -30,10 +34,12 @@ export const SuperWatcher = ({ superUser }) => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const containerRef = useRef()
+  const videoPlayerRef = useRef()
   
   const [startTime, setStartTime] = useState(null)
   const [completedVideoIds, setCompletedVideoIds] = useState([])
   const [showCountdown, setShowCountdown] = useState(false)
+  const [isVideoLoading, setIsVideoLoading] = useState(true)
   
   const currentVideo = superClassVideos.find(video => video.id == id)
   const otherVideos = superClassVideos.filter(video => video.id > currentVideo.id)
@@ -51,41 +57,49 @@ export const SuperWatcher = ({ superUser }) => {
     }
     containerRef.current.scrollIntoView(true)
     updateStartTime(superUser.email, currentVideo.id)
-    return () => setStartTime(null)
+    return () => {
+      setStartTime(null)
+      setIsVideoLoading(false)
+    }
   }, [])
   
   useEffect(() => {
     updateStartTime(superUser.email, currentVideo.id)
-    return () => setStartTime(null)
+    return () => {
+      setStartTime(null)
+      setIsVideoLoading(false)
+    }
   }, [id])
 
   const onLogoutClick = () => {
     dispatch(clearCurrentSuperInfo())
     navigate(paths.superClass.login)
   }
-  
+
   return superUser && (
     <div id='superWatcherPageContainer' ref={containerRef}>
-      <HomeIcon />
-      <BackIcon path={paths.superClass.videos} />
+      {/* <HomeIcon /> */}
+      <Link id='superWatcherGoBackButton' className='clickable' to={paths.superClass.videos}>{t.back}</Link>
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
       {currentVideo && (
         <>
-          <h1>{currentVideo.id}.&nbsp;{currentVideo.name}</h1>
+          <h1><span id='superWatcherTitleNumber'>{currentVideo.id}.&nbsp;</span>{currentVideo.name}</h1>
           <div id='superWatcherVideoContainer'>
-            {currentVideo.id !== 1 && <FontAwesomeIcon 
+            {!isVideoLoading && currentVideo.id !== 1 && <FontAwesomeIcon 
               icon={faBackward} 
               color='#ffffff' 
-              className='clickable'
+              className='watcherArrow clickable'
               onClick={() => navigate(`${paths.superClass.videos}/${currentVideo.id - 1}`)}
             />}
             {startTime !== null && <MuxPlayer
               streamType="on-demand"
+              primaryColor="#DA2A7D"
+              secondaryColor="#FEFF7C"
+              title={currentVideo.title}
               playbackId={currentVideo.playbackId}
               metadataVideoTitle={currentVideo.name}
               metadataViewerUserId={superUser.email}
-              primaryColor="#DA2A7D"
-              secondaryColor="#FEFF7C"
+              onLoadedMetadata={() => setIsVideoLoading(false)}
               startTime={startTime}
               thumbnailTime={currentVideo.thumbnailStart}
               onTimeUpdate={e => {
@@ -97,7 +111,11 @@ export const SuperWatcher = ({ superUser }) => {
                     timestamp: Math.floor(currentTime)
                   })
                 }
-              }}
+              }}  
+              style={{ aspectRatio: 16/9 }}
+              placeholder={
+                <HashLoader id='superWatcherLoading' color='#FEFF7C' loading />
+              }
               onEnded={() => {
                 saveSuperVideoCompletion({ 
                   email: superUser.email, 
@@ -107,10 +125,10 @@ export const SuperWatcher = ({ superUser }) => {
                   setShowCountdown(true)
               }}
             />}
-            {currentVideo.id !== 11 && <FontAwesomeIcon 
+            {!isVideoLoading && currentVideo.id !== 11 && <FontAwesomeIcon 
               icon={faForward} 
               color='#ffffff' 
-              className='clickable'
+              className='watcherArrow clickable'
               onClick={() => navigate(`${paths.superClass.videos}/${currentVideo.id + 1}`)}
             />}
             {showCountdown && (
@@ -143,7 +161,10 @@ export const SuperWatcher = ({ superUser }) => {
           </div>
         </>
       )}
-      {otherVideos.map(video => <SuperThumbnail key={video.id} {...video} isCompleted={completedVideoIds.includes(video.id)} />)}
+      <div className='superClassVideosContainer'>
+        {completedVideoIds && otherVideos.map(video => 
+          <SuperThumbnail key={video.id} {...video} isCompleted={completedVideoIds.includes(video.id)} />)}
+      </div>
       <ScrollToTop smooth className='clickable' />
     </div>
   )

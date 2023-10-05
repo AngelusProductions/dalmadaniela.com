@@ -2,6 +2,37 @@
 
 @media (min-width: 1024px) {
     .superThumbnailContainer {
+        width: 50%;
 
+        .superThumbnail {
+            margin-bottom: 25px;
+            position: relative;
+    
+            img {
+                width: 20vw;
+                border: 1px solid;
+            }
+    
+            svg {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 3vw;
+                height: 3vw;
+            }
+        }
+    
+        .superThumbnailTitleContainer {
+            margin-left: 25px;
+    
+            h2 {
+                font-size: 1.3vw;
+            }
+    
+            p {
+                font-family: 'Garet';
+                font-size: 1vw;
+            }
+        }
     }
 }

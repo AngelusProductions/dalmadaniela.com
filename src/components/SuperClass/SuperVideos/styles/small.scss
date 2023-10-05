@@ -2,6 +2,24 @@
 
 @media (max-width: 640px) {
     #superVideosPageContainer {
-        
+        #superClassVideosHello {
+            left: 10%;
+            top: 3%;
+            font-size: 3.5vw;
+        }
+
+        .superClassLogoutButton {
+            font-size: 3.5vw;
+            top: 3%;
+            right: 10%;
+        }
+
+        #superVideosContinueContainer {
+            font-size: 3.5vw !important;
+            // padding: 10% !important;
+            svg {
+                height: 9vw !important;
+            }
+        }
     }
 }

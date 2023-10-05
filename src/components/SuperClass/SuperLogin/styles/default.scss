@@ -3,20 +3,14 @@
 #superLoginPageContainer {
     background: black;
     color: white;
-    border: 1px solid #FFFFFF;
+    border: 1px solid white;
     min-height: calc(100vh - 2px);
     text-align: center;
-
-    a:nth-of-type(1) {
-        filter: drop-shadow(0px 1px 3px $white);
-        position: absolute;
-        left: 25px;
-        top: 25px;
-    }
     
     h1 {
-        margin: 10% auto;
+        margin: 10% auto 5% auto;
         font-family: 'Garbata';
+        font-size: 4vw;
 
         span {
             color: $yellow;
@@ -28,23 +22,36 @@
         margin: auto;
         display: flex;
         flex-direction: column;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
         justify-content: space-between;
 
-        label {
-            font-family: 'Garet';
-        }
+        .superLoginField {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
 
-        input {
-            height: 4vh;
-            width: calc(100% - 10px - 10px);
-            outline: $pink;
-            border: solid 2px $pink;
-            border-radius: 50px;
-            padding: 0 10px;
-            font-family: 'Garet';
-            font-weight: 600;
-            margin: 1vh auto;
+            &:nth-of-type(1) {
+                margin-bottom: 25px;
+            }
+
+            label {
+                font-family: 'Garet';
+                font-size: 2.5vw;
+            }
+
+            input {
+                height: 1.5vh;
+                min-height: 25px;
+                width: 33vw;
+                outline: $pink;
+                border: solid 2px $pink;
+                border-radius: 50px;
+                padding: 0 10px;
+                font-family: 'Garet';
+                font-weight: 600;
+                font-size: 1.5vw;
+            }
         }
     }
 
@@ -53,12 +60,13 @@
 
         button {
             border: none;
-            padding: 2%;
+            padding: 1%;
+            padding-top: 1.2%;
             font-family: "Garet";
             text-transform: uppercase;
             font-weight: 600;
             cursor: pointer;
-            width: 25%;
+            width: 15%;
             background: $yellow;
             font-size: 2vw;
 
@@ -74,13 +82,12 @@
         }
 
         p#superClassLoginError {
-            position: absolute;
-            left: 34%;
-            bottom: 150%;
-            font-size: 3vw;
+            font-size: 2.5vw;
             font-family: "Garbata";
             color: $pink;
             font-weight: 300;
+            margin-top: 5%;
+            font-style: italic;
         }
     }
 }

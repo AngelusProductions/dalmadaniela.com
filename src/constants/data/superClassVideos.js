@@ -41,7 +41,7 @@ export default [
     },
     {
         id: 6,
-        name: 'Leveraging Your Social Media',
+        name: 'Leveraging Your Presence',
         playbackId: '6jsBTRK8rBtgVf1saxEWO02SwcIq2YM4VuS4PS7aVkeQ',
         thumbnailStart: 6,
         thumbnailGIFStart: 0,
@@ -65,7 +65,7 @@ export default [
     },
     {
         id: 9,
-        name: 'Burnout & Motivation on Social Media',
+        name: 'Burnout & Motivation',
         playbackId: 'DtSnXNB001zb24GrfhHYjFiukIqTOhGPuI6EuNTooXyE',
         thumbnailStart: 6,
         thumbnailGIFStart: 0,
