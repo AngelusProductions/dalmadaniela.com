@@ -86,7 +86,7 @@ const FAQ = () => {
                         sign up for&nbsp;
                     </span>
                     <span className='three'>
-                        <Link to={paths.superClass}>SuperClass.</Link>&nbsp;
+                        <Link to={paths.superClass.page}>SuperClass.</Link>&nbsp;
                     </span>
                     <span className='four'>
                         If you are busy running a business, you can get a&nbsp;
@@ -127,7 +127,7 @@ const FAQ = () => {
             <FlashCard questionId='four' question={t.questions.four} answer={() => (
                 <div id='faqAnswer-four' className='faqAnswer'>
                     <span className='one'>
-                        <Link to={paths.superClass}>SuperClass</Link>&nbsp;
+                        <Link to={paths.superClass.page}>SuperClass</Link>&nbsp;
                     </span>
                     <span className='two'>
                         teaches you the only content creation system you need for social media.&nbsp;
