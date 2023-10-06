@@ -3,7 +3,7 @@ export default [
         id: 1,
         name: 'The "Why" of This SuperClass',
         playbackId: 'rS8PAPm8XcKSb3c5Q87VpE3weIQ02nSh1ouWcodJ0000Ow',
-        thumbnailStart: 6,
+        thumbnailStart: 68,
         thumbnailGIFStart: 0,
         duration: 314000
     },
@@ -11,7 +11,7 @@ export default [
         id: 2,
         name: 'Niche, Boutique Audience, & Value Prop',
         playbackId: 'drTLrp4gIZ1200Js83004Bh97yRAtHYx02Zdz00r00Lw1ZBg',
-        thumbnailStart: 6,
+        thumbnailStart: 315,
         thumbnailGIFStart: 0,
         duration: 601000
     },
@@ -19,7 +19,7 @@ export default [
         id: 3,
         name: 'Engaging Content on Autopilot',
         playbackId: 'c94Go5gQ6QUUfnQHuvkheCjWxRcj01xJgGlJgz6eAbSw',
-        thumbnailStart: 6,
+        thumbnailStart: 742,
         thumbnailGIFStart: 0,
         duration: 970000
     },
@@ -27,7 +27,7 @@ export default [
         id: 4,
         name: 'Optimization for Reach & Engagement',
         playbackId: 'Tog6cdY7agytdTwrSJ4XArNussn00YGUr6KJ9gN7Viko',
-        thumbnailStart: 6,
+        thumbnailStart: 770,
         thumbnailGIFStart: 0,
         duration: 1095000
     },
@@ -35,7 +35,7 @@ export default [
         id: 5,
         name: 'Measuring Performance & Adjusting Strategy',
         playbackId: 'yBS8Xjg3022gNOXxJ01pSBOb5cDCwx4WwiEEEhaPAgpC4',
-        thumbnailStart: 6,
+        thumbnailStart: 60,
         thumbnailGIFStart: 0,
         duration: 1468000
     },
@@ -43,7 +43,7 @@ export default [
         id: 6,
         name: 'Leveraging Your Presence',
         playbackId: '6jsBTRK8rBtgVf1saxEWO02SwcIq2YM4VuS4PS7aVkeQ',
-        thumbnailStart: 6,
+        thumbnailStart: 83,
         thumbnailGIFStart: 0,
         duration: 336000
     },
@@ -51,7 +51,7 @@ export default [
         id: 7,
         name: 'Networking with Potential Partners',
         playbackId: 'JD029jbkS9oJnUJ023IzgFvaLMAKw01TU00z1onmGho015iI',
-        thumbnailStart: 6,
+        thumbnailStart: 249,
         thumbnailGIFStart: 0,
         duration: 274000
     },
@@ -59,7 +59,7 @@ export default [
         id: 8,
         name: 'Monetizing Your Personal Brand',
         playbackId: 'R7EjyeFCwR11mO7qxBNKeg2M302UgEI9LwrZW83JyQAk',
-        thumbnailStart: 6,
+        thumbnailStart: 205,
         thumbnailGIFStart: 0,
         duration: 551000
     },
@@ -67,7 +67,7 @@ export default [
         id: 9,
         name: 'Burnout & Motivation',
         playbackId: 'DtSnXNB001zb24GrfhHYjFiukIqTOhGPuI6EuNTooXyE',
-        thumbnailStart: 6,
+        thumbnailStart: 309,
         thumbnailGIFStart: 0,
         duration: 346000
     },
@@ -75,7 +75,7 @@ export default [
         id: 10,
         name: 'Creating Content with AI',
         playbackId: 'DV02TlQvvydHFUL3d4Zdwa012yZ7EjWzTAc1llhLJfKJY',
-        thumbnailStart: 6,
+        thumbnailStart: 211,
         thumbnailGIFStart: 0,
         duration: 570000
     },
@@ -83,7 +83,7 @@ export default [
         id: 11,
         name: 'Final Tricks ',
         playbackId: 'tBJfGsW1fXp02sLgiFLO00CQq73rvWom01tqhL1z797UxI',
-        thumbnailStart: 6,
+        thumbnailStart: 157,
         thumbnailGIFStart: 0,
         duration: 375000
     },

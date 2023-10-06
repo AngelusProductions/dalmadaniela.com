@@ -33,7 +33,6 @@ export const SuperWatcher = ({ superUser }) => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const containerRef = useRef()
-  const videoPlayerRef = useRef()
   
   const [startTime, setStartTime] = useState(null)
   const [completedVideoIds, setCompletedVideoIds] = useState([])
@@ -77,7 +76,6 @@ export const SuperWatcher = ({ superUser }) => {
 
   return superUser && (
     <div id='superWatcherPageContainer' ref={containerRef}>
-      {/* <HomeIcon /> */}
       <Link id='superWatcherGoBackButton' className='clickable' to={paths.superClass.videos}>{t.back}</Link>
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
       {currentVideo && (
@@ -92,8 +90,8 @@ export const SuperWatcher = ({ superUser }) => {
             />}
             {startTime !== null && <MuxPlayer
               streamType="on-demand"
-              primaryColor="#DA2A7D"
-              secondaryColor="#FEFF7C"
+              primaryColor="#FEFF7C"
+              secondaryColor="#000000"
               title={currentVideo.title}
               playbackId={currentVideo.playbackId}
               metadataVideoTitle={currentVideo.name}
@@ -112,7 +110,6 @@ export const SuperWatcher = ({ superUser }) => {
                 }
               }}  
               style={{ aspectRatio: 16/9 }}
-              defaultHiddenCaptions={false}
               onEnded={() => {
                 saveSuperVideoCompletion({ 
                   email: superUser.email, 
