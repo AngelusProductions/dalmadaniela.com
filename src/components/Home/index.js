@@ -3,48 +3,23 @@ import { Link } from 'react-router-dom'
 
 import FAQ from './FAQ'
 import Navbar from './Navbar'
-import SuperClassPopUp from '../UI/SuperClassPopUp'
 
 import { paths } from '../../constants/paths'
 import { i } from '../../constants/data/assets'
 import testimonials from '../../constants/data/testimonials'
-import { saveSuperClassSubscribeInfo } from '../../api/superClass'
 
 import t from './text.js'
 import './styles/index.scss'
 
 const Home = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false)
-  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
-  /////////// make sure to turn on ////////////
-  const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0 })
   }, [])
 
-  const onSuperClassPopUpSubmitClick = async (name, email) => {
-    const res = await saveSuperClassSubscribeInfo({ name, email })
-    if (res.isSuccess) {
-      setShowSuperClassPopUpThankYou(true)
-      setTimeout(() => {
-        setShowSuperClassPopUp(false)
-      }, 2000)
-    }
-  }
-
   return (
     <main id='homePageContainer'>
-      {showSuperClassPopUp && (
-        <>
-          <SuperClassPopUp 
-            onCloseClick={() => setShowSuperClassPopUp(false)}
-            onSubscribeClick={onSuperClassPopUpSubmitClick}
-            showThankYou={showSuperClassPopUpThankYou}
-          />
-          <div id='mobileMenuShadow'/>
-        </>
-      )}
       <img 
         id='homeBurgerIcon' 
         src={i.icons.burger} 

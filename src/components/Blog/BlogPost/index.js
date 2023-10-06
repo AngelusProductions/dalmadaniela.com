@@ -16,17 +16,14 @@ import {
   WhatsappShareButton,
   WhatsappIcon
 } from 'react-share'
-import axios from 'axios'
 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
-import SuperClassPopUp from '../../UI/SuperClassPopUp'
 
 import { paths } from '../../../constants/paths'
 import { getBlogPost } from '../../../api/blog'
 import { HOST_URL } from '../../../constants/config'
 import { i } from '../../../constants/data/assets'
-import { saveSuperClassSubscribeInfo } from '../../../api/superClass'
 import { getBlogPostRequest, getBlogPostFailure, getBlogPostSuccess } from '../../../actions/blog'
 
 import './styles/index.scss'
@@ -39,8 +36,6 @@ const t = {
 export const BlogPost = ({ blogPost, getBlogPost }) => {
   const { name } = useParams()
   const [isLinkCopied, setIsLinkCopied] = useState(false)
-  const [showSuperClassPopUp, setShowSuperClassPopUp] = useState(true)
-  const [showSuperClassPopUpThankYou, setShowSuperClassPopUpThankYou] = useState(false)
   const currentUrl = `${HOST_URL}${window.location.pathname}`
 
   useEffect(() => {
@@ -52,30 +47,10 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
     setIsLinkCopied(true)
   }
 
-  const onSuperClassPopUpSubmitClick = async (name, email) => {
-    const res = await saveSuperClassSubscribeInfo({ name, email })
-    if (res.isSuccess) {
-      setShowSuperClassPopUpThankYou(true)
-      setTimeout(() => {
-        setShowSuperClassPopUp(false)
-      }, 2000)
-    }
-  }
-
   return (
     <div id='blogPostPageContainer'>
       <HomeIcon />
       <BackIcon path={paths.blog.page} pink />
-      {showSuperClassPopUp && (
-        <>
-          <SuperClassPopUp 
-            onCloseClick={() => setShowSuperClassPopUp(false)}
-            onSubscribeClick={onSuperClassPopUpSubmitClick}
-            showThankYou={showSuperClassPopUpThankYou}
-          />
-          <div id='mobileMenuShadow'/>
-        </>
-      )}
       {blogPost && (
         <div id='blogPostContainer'>
           <h1 id='blogPostName'>{blogPost.name}</h1>
