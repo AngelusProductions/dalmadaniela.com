@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 
-import HomeIcon from '../UI/HomeIcon'
-
 import t from './text'
 import ht from '../Home/text'
 import { i } from '../../constants/data/assets'
@@ -23,35 +21,10 @@ const SuperClass = () => {
     containerRef.current.scrollIntoView(true)
   }, [])
 
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3,
-      partialVisibilityGutter: 30
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      partialVisibilityGutter: 30
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-      partialVisibilityGutter: 30
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      partialVisibilityGutter: 30
-    }
-  }
-
   return (
     <main id='superClassPage' ref={containerRef}>
-      {/* <HomeIcon /> */}
-
       <h1>{t.title}</h1>
-      <button id='superClassCta1' className='clickable' onClick={scrollToCheckout}>{t.cta1}</button>
+      <img id='superClassAdTrailerStill' src={i.superClass.adTrailerStill} />
       <ul id='superClassFeaturesList'>
         {t.superClassFeatureBullets.map(({ title, body }) => (
           <li key={title} className='superClassFeatureContainer'>
@@ -61,7 +34,7 @@ const SuperClass = () => {
           </li>
         ))}
       </ul>
-      <button id='superClassCta2' className='clickable' onClick={scrollToCheckout}>
+      {/* <button id='superClassCta2' className='clickable' onClick={scrollToCheckout}>
         <span>{t.cta2Three}</span>
       </button>
       <div id='superClassPriceContainer'>
@@ -70,7 +43,8 @@ const SuperClass = () => {
         <span>&nbsp;{t.cta2Two}</span>
       </div>
       <img id='superClassSatisfactionGuarentee' src={i.icons.satisfactionGuarentee} />
-      <button id='superClassCta3' className='clickable' onClick={scrollToCheckout}>{t.withoutWasting}</button>
+      <button id='superClassCta3' className='clickable' onClick={scrollToCheckout}>{t.withoutWasting}</button> */}
+      <button id='superClassCta1' className='clickable' onClick={scrollToCheckout}>{t.cta1}</button>
       <section id='superClassBrands'>
         <div id='brandsHelped' className='brandsSection'>
           <h3>{ht.brandsHelped}</h3>
@@ -98,9 +72,29 @@ const SuperClass = () => {
           <h4>{ht.brandsFigures}</h4>
         </div>
       </section>
-
       <Carousel 
-        responsive={responsive}
+        responsive={{
+          superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 3,
+            partialVisibilityGutter: 30
+          },
+          desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1,
+            partialVisibilityGutter: 30
+          },
+          tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1,
+            partialVisibilityGutter: 30
+          },
+          mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+            partialVisibilityGutter: 30
+          }
+        }}
         swipeable
         draggable
         infinite

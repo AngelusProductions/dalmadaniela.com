@@ -19,10 +19,18 @@ main#superClassPage {
         margin-top: 10%;
     }
 
+    #superClassAdTrailerStill {
+        width: 75%;
+        margin: 5% auto;
+        border-radius: 15px;
+        box-shadow: 2px 2px 3px 1px black;
+    }
+
     ul#superClassFeaturesList,
     ul#superClassPerfectForList {
         width: 80%;
         margin: auto;
+        text-align: justify;
 
         li {
             font-family: 'Garet';
@@ -47,7 +55,7 @@ main#superClassPage {
     button {
         margin: 10% 0;
         padding: 2%;
-        font-size: 4vw;
+        font-size: 4.5vw;
         font-family: 'Garet';
         cursor: pointer;
 
@@ -56,9 +64,10 @@ main#superClassPage {
             color: $yellow;
             font-family: "Garbata";
             font-weight: 600;
-            width: 40%;
+            width: 45%;
             margin: 10% auto;
             padding-top: 1.4%;
+            margin-top: 5%;
         }
         &#superClassCta2 {
             color: white;
@@ -179,7 +188,11 @@ main#superClassPage {
         #brandsFeatured>div>img:nth-child(3) {
             transform: scale(0.7);
         }
-        
+
+        #brandsFeatured>div>img:nth-child(6) {
+            transform: scale(1.3);
+        }
+
         #brandsFeatured>div>img:nth-child(7) {
             transform: scale(0.7);
             filter: invert(1)
@@ -207,9 +220,8 @@ main#superClassPage {
         #brandsFeatured h4 {
             margin: 4vh auto 0 auto;
             font-family: 'Hatton';
-            color: white;
+            color: black;
             font-size: 4vw;
-            color: $pink;
         }
         
         .brandsSection {
@@ -290,6 +302,10 @@ main#superClassPage {
 
     #superClassPerfectForListContainer {
         margin: 10% 0;
+
+        #superClassPerfectForList {
+            transform: translateX(4%);
+        }
 
         h2 {
             text-align: center;

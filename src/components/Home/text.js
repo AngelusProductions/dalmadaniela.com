@@ -8,7 +8,7 @@ export default {
   bioTitle: 'As a digital marketer and social media strategist',
   bioText: 'Dalma has helped brands in the US and Latin America boost their online visibility and achieve their business objectives by creating and implementing customized social media strategies that have enhanced their engagement, conversions, and revenue from social— and more importantly, improved the image they projected to their target audience.',
   
-  brandsHelped: 'Some brands we\'ve helped across the globe:',
+  brandsHelped: 'Some brands Dalma has helped across the globe:',
   brandsCollaborated: 'Some brands we\'ve collaborated with on social:',
   brandsFeatured: 'As featured in:',
   brandsFigures: 'Over 7 figures in revenue made for brands in the US and Latin America.',

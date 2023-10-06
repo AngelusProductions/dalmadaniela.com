@@ -14,7 +14,7 @@
             }
     
             #brandsFeatured .brandLogo {
-                width: 18% !important;
+                width: 23% !important;
             }
     
             #brandsHelped h3,
@@ -23,7 +23,7 @@
                 font-family: "Garbata";
                 text-align: center;
                 font-size: 3.5vw !important;
-                margin-bottom: 5vw !important;
+                margin-bottom: 5% !important;
             }
     
             #brandsCollaborated h3 {
@@ -35,7 +35,7 @@
 
                 h3 {
                     font-family: 'Garbata';
-                    margin-top: 5vw !important;
+                    margin-top: 5% !important;
                 }
 
                 h4 {
@@ -86,6 +86,11 @@
         }
 
         div#superClassPerfectForListContainer {
+
+            #superClassPerfectForList {
+                transform: none;
+            }
+
             h2 {
                 font-size: 6vw;
             }
