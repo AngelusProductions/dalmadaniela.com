@@ -7,7 +7,6 @@ import MuxPlayer from '@mux/mux-player-react'
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleStop, faBackward, faForward } from '@fortawesome/free-solid-svg-icons'
-import HashLoader from "react-spinners/HashLoader"
 
 import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
@@ -113,9 +112,7 @@ export const SuperWatcher = ({ superUser }) => {
                 }
               }}  
               style={{ aspectRatio: 16/9 }}
-              placeholder={
-                <HashLoader id='superWatcherLoading' color='#FEFF7C' loading />
-              }
+              defaultHiddenCaptions={false}
               onEnded={() => {
                 saveSuperVideoCompletion({ 
                   email: superUser.email, 
