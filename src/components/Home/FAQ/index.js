@@ -67,7 +67,7 @@ const FAQ = () => {
                         We are a&nbsp;
                     </span>
                     <span className='two'>
-                        one-stop content creation shop&nbsp;
+                        <Link to={paths.superClass.page}>one-stop content creation shop</Link>&nbsp;
                     </span>
                     <span className='three'>
                         for small businesses, personal brands, artists, and solopreneurs&nbsp;
@@ -133,7 +133,7 @@ const FAQ = () => {
                         teaches you the only content creation system you need for social media.&nbsp;
                     </span>
                     <span className='three'>
-                       Only 1.1% of social media posts go viral,&nbsp;
+                       <Link to={paths.superClass.page}>Only 1.1% of social media posts go viral,</Link>&nbsp;
                     </span>
                     <span className='four'>
                         so you need the best skills to make an impact.&nbsp;
@@ -146,7 +146,7 @@ const FAQ = () => {
             <FlashCard questionId='five' question={t.questions.five} answer={() => (
                 <div id='faqAnswer-five' className='faqAnswer'>
                     <span className='one'>
-                        We realize that social media can be stressful.&nbsp;
+                        <Link to={paths.superClass.page}>We realize that social media can be stressful.</Link>&nbsp;
                     </span>
                     <span className='two'>
                        In 10+ years of experience&nbsp;
@@ -155,7 +155,7 @@ const FAQ = () => {
                         our team has faced the troubles that brands and creators encounter on social media.&nbsp;  
                     </span>
                     <span className='four'>
-                         We want to make social media better for everyone by making content creation easy, simple, and affordable.
+                         <Link to={paths.superClass.page}>We want to make social media better for everyone by making content creation easy, simple, and affordable.</Link>
                     </span>
                 </div>
             )} />

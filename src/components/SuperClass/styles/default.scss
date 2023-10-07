@@ -19,6 +19,11 @@ main#superClassPage {
         margin-top: 10%;
     }
 
+    mux-player {
+        width: 66%;
+        margin: 5% auto;
+    }
+
     #superClassAdTrailerStill {
         width: 75%;
         margin: 5% auto;
@@ -64,10 +69,9 @@ main#superClassPage {
             color: $yellow;
             font-family: "Garbata";
             font-weight: 600;
-            width: 45%;
+            width: 56%;
             margin: 10% auto;
             padding-top: 1.4%;
-            margin-top: 5%;
         }
         &#superClassCta2 {
             color: white;

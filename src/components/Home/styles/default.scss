@@ -163,6 +163,14 @@ section#bio {
             font-weight: 300;
             font-size: 1.8vw;
             margin-top: 3vh;
+
+            a {
+                text-decoration: underline;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
         }
     }
 }
@@ -376,6 +384,14 @@ section#socialMedia {
             font-weight: 300;
             width: 45%;
             font-size: 1.8vw;
+
+            a {
+                text-decoration: underline;
+
+                &:hover {
+                    color: $pink;
+                }
+            }
         }
     }
 
@@ -542,7 +558,7 @@ section#teachYou {
             font-family: 'Garbata';
             font-weight: 700;
             background: black;
-            width: 50%;
+            width: 67%;
             margin: auto;
             color: $yellow;
             padding: 1vw 2vw;

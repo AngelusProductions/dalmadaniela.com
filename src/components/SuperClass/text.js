@@ -1,23 +1,24 @@
 export default {
     title: 'Why go viral when you can make money instead?',
-    cta1: 'Get SuperClass',
+    cta1: 'Download SuperClass',
+    superClassAdTrailerTitle: 'SuperClass Ad Trailer',
 
     superClassFeatureBullets: [
         {
             title: 'No BS Promises.',
-            body: 'Only 1.1% of social videos go viral, and when they do, they generate reach, not sales.'
+            body: 'We don\'t sell virality. We sell a revenue-oriented system that increases credibility so the people who really matter find you without you looking for them.'
         },
         {
             title: 'A practical method for social media success!',
-            body: 'Monetize your social channels by relying on consistency and a professional content system using AI.'
+            body: 'Monetize your social channels by relying on a proven strategy that\'s generated over 7 figures in revenue for English and Spanish-speaking businesses.'
         },
         {
             title: 'Increase your confidence by always knowing what to post.',
-            body: 'Create a purposeful social media strategy that helps you achieve your personal goals in the real world.'
+            body: 'Are you an artist? Create purposefully authentic content that helps you achieve your goals in the real world on autopilot!'
         },
         {
-            title: 'A guaranteed method for better jobs, bookings, and increased revenue.',
-            body: 'Influence the people who really matter by increasing your online credibility on autopilot.'
+            title: 'Money-back guarantee.',
+            body: 'We\'re so sure of our method that if you don\'t get results in 3 months, you\'ll get your money back. PS. We\'re not really worried about that ;)'
         }
     ],
 

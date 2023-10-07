@@ -3,13 +3,10 @@ import { connect, useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router'
 import ScrollToTop from "react-scroll-to-top"
 import MuxPlayer from '@mux/mux-player-react'
-// import muxBlurHash from "@mux/blurhash";
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleStop, faBackward, faForward } from '@fortawesome/free-solid-svg-icons'
 
-import HomeIcon from '../../UI/HomeIcon'
-import BackIcon from '../../UI/BackIcon'
 import SuperThumbnail from '../SuperThumbnail'
 
 import { paths } from '../../../constants/paths'

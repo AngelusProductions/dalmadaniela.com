@@ -1,9 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import MuxPlayer from '@mux/mux-player-react'
 
 import t from './text'
-import ht from '../Home/text'
+// import ht from '../Home/text'
 import { i } from '../../constants/data/assets'
 import testimonials from '../../constants/data/testimonials'
 
@@ -24,7 +25,20 @@ const SuperClass = () => {
   return (
     <main id='superClassPage' ref={containerRef}>
       <h1>{t.title}</h1>
-      <img id='superClassAdTrailerStill' src={i.superClass.adTrailerStill} />
+
+      {/* <img id='superClassAdTrailerStill' src={i.superClass.adTrailerStill} /> */}
+      
+      <MuxPlayer
+        streamType="on-demand"
+        primaryColor="#FFFFFF"
+        secondaryColor="#000000"
+        playbackId={'u01WKwIml02HnFJk6iMyt8Dan00sb00Bt2jGF6tY3mxEzJs'}
+        metadataVideoTitle={t.superClassAdTrailerTitle}
+        thumbnailTime={2.5}
+        style={{ aspectRatio: 16/9 }}
+        volume={1}
+      />
+
       <ul id='superClassFeaturesList'>
         {t.superClassFeatureBullets.map(({ title, body }) => (
           <li key={title} className='superClassFeatureContainer'>
@@ -45,7 +59,7 @@ const SuperClass = () => {
       <img id='superClassSatisfactionGuarentee' src={i.icons.satisfactionGuarentee} />
       <button id='superClassCta3' className='clickable' onClick={scrollToCheckout}>{t.withoutWasting}</button> */}
       <button id='superClassCta1' className='clickable' onClick={scrollToCheckout}>{t.cta1}</button>
-      <section id='superClassBrands'>
+      {/* <section id='superClassBrands'>
         <div id='brandsHelped' className='brandsSection'>
           <h3>{ht.brandsHelped}</h3>
           <div className='brandLogosContainer'>
@@ -71,7 +85,7 @@ const SuperClass = () => {
           </div>
           <h4>{ht.brandsFigures}</h4>
         </div>
-      </section>
+      </section> */}
       <Carousel 
         responsive={{
           superLargeDesktop: {
@@ -122,7 +136,7 @@ const SuperClass = () => {
         })}
       </Carousel>
 
-      <div id='superClassPerfectForListContainer'>
+      {/* <div id='superClassPerfectForListContainer'>
         <h2>{t.superClassPerfectForTitle}</h2>
         <ul id='superClassPerfectForList'>
           {t.superClassPerfectForBullets.map(bullet => (
@@ -132,7 +146,7 @@ const SuperClass = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
       <div id='superClassSamCartWrapper' ref={checkoutRef}>
         <sc-checkout product="superclass" subdomain="dalmadaniela"></sc-checkout>

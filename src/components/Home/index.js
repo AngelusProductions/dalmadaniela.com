@@ -55,7 +55,13 @@ const Home = () => {
         <div className='left'>
           <div id='bioLeft' className='centerText'>
             <h2>{t.bioTitle}</h2>
-            <p>{t.bioText}</p>
+            <p>
+              {t.bioText1}
+              <Link to={paths.superClass.page}>
+                {t.bioText2}
+              </Link>
+              {t.bioText3}
+            </p>
             <img id='bioMinifiedPhoto' className='minifiedPhoto' src={i.dalma.iVisaPhoto} />
           </div>
         </div>
@@ -114,7 +120,13 @@ const Home = () => {
         </div>
         <div className='right'>
           <div id='socialMediaRight'>
-            <p>{t.socialMedia}</p>
+            <p>
+              {t.socialMediaText1}
+              <Link to={paths.superClass.page}>
+                {t.socialMediaText2}
+              </Link>
+              {t.socialMediaText3}
+            </p>
             <div id='socialMediaPhone'>
               <div>
                 <a href='https://www.youtube.com/user/TheDalma725' target='_blank'>
