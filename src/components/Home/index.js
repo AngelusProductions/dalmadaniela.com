@@ -93,7 +93,7 @@ const Home = () => {
               <img src={i.logos.brandsFeatured[key]} className='brandFeatured brandLogo' key={key} />
             ))}
           </div>
-          <h4>{t.brandsFigures}</h4>
+          <h4><Link to={paths.superClass.page}>{t.brandsFigures}</Link></h4>
         </div>
       </section>
       <section id='films' className='homeSection'>

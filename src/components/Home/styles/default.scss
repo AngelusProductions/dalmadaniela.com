@@ -178,7 +178,7 @@ section#bio {
 section#brands {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: fit-content;
     padding-bottom: 10vh;
     background: white;
@@ -292,7 +292,10 @@ section#brands {
         margin: 4vh auto 0 auto;
         font-size: 1.9vw;
         font-family: 'Hatton';
-        color: $pink;
+
+        a:hover {
+            text-decoration: underline;
+        }
     }
 
     .brandsSection {
