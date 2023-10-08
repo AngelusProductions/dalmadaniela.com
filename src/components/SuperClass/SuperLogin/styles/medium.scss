@@ -3,8 +3,8 @@
 @media (min-width: 640px) and  (max-width: 1024px) {
     #superLoginPageContainer {
         h1 {
-            margin: 25vh auto 5% auto;
-            font-size: 8vw;
+            margin: 20vh auto 5% auto;
+            font-size: 5vw;
         }
 
         div#superLoginFieldsContainer {
@@ -14,24 +14,24 @@
                 display: flex;
                 flex-direction: column;
                 label {
-                    font-size: 5vw;
+                    font-size: 3vw;
                 }
                 input {
                     width: 80%;
-                    height: 60px;
-                    font-size: 4vw;
+                    height: 50px;
+                    font-size: 2.5vw;
                 }
             }
         }
 
         #superLoginButtonContainer {
             button {
-                width: 33% !important;
-                font-size: 5vw !important;
+                width: 20% !important;
+                font-size: 3vw !important;
             }
 
             p#superClassLoginError {
-                font-size: 5.5vw !important;
+                font-size: 3vw !important;
             }
         }
     }
