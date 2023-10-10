@@ -1,5 +1,5 @@
 export default {
-    title: 'How to be Successful on Social Media Without Having to Go Viral',
+    title: 'How To Be Successful On Social Media Without Having To Go Viral',
     cta1: 'Download SuperClass',
     superClassAdTrailerTitle: 'SuperClass Ad Trailer',
 
