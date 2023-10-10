@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 import { paths } from '../../../constants/paths'
 import { i } from '../../../constants/data/assets'
@@ -55,9 +56,13 @@ const FAQ = () => {
   return (
     <main id='faq'>
       <div id='faqTitleContainer'>
+      <div>
         <h1>{t.faqShort}</h1>
         <h2>{t.faqLong}</h2>
-        <img src={i.dalma.pointingUp} />
+      </div>
+        <AnimationOnScroll animateIn='animate__heartBeat'>
+            <img src={i.dalma.pointingUp} />
+        </AnimationOnScroll>
       </div>
       <div id='faqContainer'>
         <div className='faqQuestionContainer'>

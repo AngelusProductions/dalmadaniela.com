@@ -13,32 +13,35 @@
         overflow: hidden;
         height: 100%;
         position: relative;
-        display: inline-block;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-        h1 {
-            font-family: 'Garbata';
-            color: $yellow;
-            font-size: 6vw;
-            padding-bottom: 25px;
-            z-index: 99;
-        }
+        > div:first-child {
+            margin-top: 25px;
+            h1 {
+                font-family: 'Garbata';
+                color: $yellow;
+                font-size: 6vw;
+                padding-bottom: 25px;
+                z-index: 99;
+            }
 
-        h2 {
-            font-family: 'Garbata';
-            color: white;
-            font-size: 2vw;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            z-index: 99;
+            h2 {
+                font-family: 'Garbata';
+                color: white;
+                font-size: 2vw;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                z-index: 99;
+            }
         }
 
         img {
             width: 100%;
-            position: absolute;
-            right: 0;
-            bottom: 0;
             max-width: 500px;
             z-index: 1;
+            transform: translateY(10px);
         }
     }
 
