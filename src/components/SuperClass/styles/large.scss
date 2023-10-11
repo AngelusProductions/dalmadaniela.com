@@ -89,7 +89,7 @@
         }
 
         .react-multi-carousel-list {
-            padding: 40px 0;
+            padding: 5% 0;
         }
 
         .superClassTestimonialContainer {
@@ -130,6 +130,26 @@
             h2 {
                 margin: 2% 0;
                 font-size: 3vw;
+            }
+        }
+
+        div#superClassClassContentContainer {
+            h2 {
+                margin: 2% 0;
+                font-size: 3vw;
+            }
+
+            h3 {
+                margin: 2% 0;
+                font-size: 2vw;
+            }
+
+            li {
+                font-size: 1.3vw;
+                img {
+                    transform: translate(-0.5vw, 0.3vw) !important;
+                    width: 1.6vw !important;
+                }
             }
         }
 

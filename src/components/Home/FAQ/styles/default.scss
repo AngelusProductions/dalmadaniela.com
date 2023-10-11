@@ -17,6 +17,11 @@
         flex-direction: column;
         justify-content: space-between;
 
+        .animate__animated {
+            display: flex;
+            justify-content: flex-end;
+        }
+
         > div:first-child {
             margin-top: 25px;
             h1 {

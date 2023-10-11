@@ -78,19 +78,20 @@
         }
 
         ul#superClassFeaturesList,
-        ul#superClassPerfectForList {
+        ul#superClassPerfectForList,
+        #superClassClassContentTechnicalitiesContainer,
+        #superClassClassContentImportantiesContainer {
             li {
                 font-size: 3.3vw;
     
                 img {
                     transform: translate(-1vw, 0.5vw);
-                    width: 3.5vw;
+                    width: 3.5vw !important;
                 }
             }
         }
 
         div#superClassPerfectForListContainer {
-
             #superClassPerfectForList {
                 transform: none;
             }

@@ -9,7 +9,9 @@
         }
 
         ul#superClassFeaturesList,
-        ul#superClassPerfectForList {
+        ul#superClassPerfectForList,
+        #superClassClassContentTechnicalitiesContainer,
+        #superClassClassContentImportantiesContainer {
             li {
                 margin-bottom: 2.5% !important;
                 font-size: 1.3vw;
@@ -87,7 +89,7 @@
         }
 
         .react-multi-carousel-list {
-            padding: 40px 0;
+            padding: 5% 0;
         }
 
         .superClassTestimonialContainer {

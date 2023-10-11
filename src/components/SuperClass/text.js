@@ -6,19 +6,19 @@ export default {
     superClassFeatureBullets: [
         {
             title: 'No BS Promises.',
-            body: 'I don\'t sell virality. I sell a revenue-oriented system that increases credibility so the people who really matter find you without you looking for them.'
+            body: 'A guaranteed method for better jobs, bookings, and making money on social.'
+        },
+        {   
+            title: 'Say goodbye to burnout.',
+            body: 'No more consistency struggles, not knowing what to post, or chasing the algorithm.'
         },
         {
-            title: 'A practical method for social media success!',
-            body: 'Monetize your social channels by relying on a proven strategy that\'s generated over 7 figures in revenue for all of the businesses I\'ve worked for.'
-        },
-        {
-            title: 'Increase your confidence by always knowing what to post.',
-            body: 'Are you also an artist? Create purposefully authentic content that helps you achieve your goals on autopilot!'
+            title: 'Create your content using AI.',
+            body: 'SuperClass includes free prompts and templates to help you create content that your audience will love.'
         },
         {
             title: 'Money-back guarantee.',
-            body: 'I\'m so sure of this strategy that if you don\'t get results in 3 months, you\'ll get your money back. PS. I\'m not really worried about that ;)'
+            body: 'If you don\'t get results in 3 months, you\'ll get your money back but we\'re not worried about that 😏'
         }
     ],
 
@@ -30,9 +30,27 @@ export default {
 
     superClassPerfectForTitle: 'Perfect for:',
     superClassPerfectForBullets: [
-        'Artists and creators who never know what to post.',
-        'Small business owners growing their social media on their own.',
-        'Social media managers designing and running content strategies for other businesses.',
-        'Multipotentialites having issues creating a successful social media strategy.'
-    ]
+        'Artists and creators struggling with consistent posting.',
+        'Small business owners doing social media on their own.',
+        'Multipotentialites trying to find their niche.'
+    ],
+
+    classContent: {
+        title: 'In this SuperClass, you will learn:',
+        subtitle1: 'THE TECHNICALITIES:',
+        technicalities: [
+            'How to define your niche, your avatar, and your value proposition in 25 minutes 🔎',
+            'How to create engaging content that showcases your personality and expertise on autopilot',
+            'How to optimize your profile and posts for maximum reach and engagement so the people who really matter find you (without you looking for them) 🚀',
+            'How to measure your social media performance and adjust your strategy accordingly'
+        ], 
+        subtitle2: 'AND WHAT\'S IMPORTANT:',
+        importanties: [
+            'How to leverage your social media presence to grow your business and personal brand in the real world (where it matters)',
+            'How to network with potential partners in your industry online and in real life 💯',
+            'How to monetize your personal brand using different strategies and get your dream job 💰',
+            'The secret to avoiding burnout and staying motivated on social media',
+            'How to create all your content using AI with free prompts'
+        ]
+    }
 }

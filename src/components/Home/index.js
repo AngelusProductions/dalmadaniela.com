@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Animator, ScrollContainer, ScrollPage, batch, Fade, MoveIn, MoveOut, Zoom } from "react-scroll-motion"
-import "animate.css/animate.min.css"
+import { Animator, ScrollContainer, ScrollPage } from "react-scroll-motion"
 import { AnimationOnScroll } from 'react-animation-on-scroll'
+import "animate.css/animate.min.css"
 
 import FAQ from './FAQ'
 import Navbar from './Navbar'
@@ -11,15 +11,11 @@ import { paths } from '../../constants/paths'
 import { i } from '../../constants/data/assets'
 import { useWindowDimensions } from '../../constants/hooks'
 import testimonials from '../../constants/data/testimonials'
+import { ZoomInUp, SlideInOutLeft, SlideInOutRight, SlideUp, SlideDown } from '../../constants/animations'
 
 import t from './text.js'
 import './styles/index.scss'
 
-const ZoomInUp = batch(Fade(10), Zoom(0), MoveOut(0, -300))
-const SlideInOutLeft = batch(MoveIn(-100, 0), MoveOut(100, 0))
-const SlideInOutRight = batch(MoveIn(100, 0), MoveOut(-100, 0))
-const SlideUp = batch(MoveIn(0, 200), MoveOut(0, -200))
-const SlideDown = batch(MoveIn(0, -200), MoveOut(0, 200))
 
 const Home = () => {
   const { width } = useWindowDimensions();
@@ -27,6 +23,8 @@ const Home = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0 })
+
+    
   }, [])
 
   return (

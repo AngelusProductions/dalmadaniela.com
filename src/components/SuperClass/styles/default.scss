@@ -7,6 +7,12 @@ main#superClassPage {
     display: flex;
     scroll-behavior: smooth;
     flex-direction: column;
+
+    > .animate__animated {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     
     h1 {
         color: $black;
@@ -21,18 +27,13 @@ main#superClassPage {
 
     mux-player {
         width: 80%;
-        margin: 5% auto;
-    }
-
-    #superClassAdTrailerStill {
-        width: 75%;
-        margin: 5% auto;
-        border-radius: 15px;
-        box-shadow: 2px 2px 3px 1px black;
+        margin: 5% auto 0 auto;
     }
 
     ul#superClassFeaturesList,
-    ul#superClassPerfectForList {
+    ul#superClassPerfectForList,
+    #superClassClassContentTechnicalitiesContainer,
+    #superClassClassContentImportantiesContainer {
         width: 80%;
         margin: auto;
         text-align: justify;
@@ -58,11 +59,12 @@ main#superClassPage {
     }
 
     button {
-        margin: 10% 0;
+        margin: 0 0 10% 0;
         padding: 2%;
         font-size: 4.5vw;
         font-family: 'Garet';
         cursor: pointer;
+        z-index: 99;
 
         &#superClassCta1 {
             background: $black;
@@ -72,24 +74,11 @@ main#superClassPage {
             width: 56%;
             margin: 10% auto;
             padding-top: 1.4%;
-        }
-        &#superClassCta2 {
-            color: white;
-            background: $red;
-            width: 75%;
-            margin: 10% auto 0 auto;
-            text-transform: uppercase;
-            border: 3px solid black;
-            font-weight: 600;
-        }
-        &#superClassCta3 {
-            color: $yellow;
-            background: $black;
-            border: 3px solid black;
-            width: 75%;
-            margin: 10% auto;
-            font-family: 'Garbata';
-            font-weight: 600;
+            
+            &:hover {
+                color: $yellow;
+                background: $pink;
+            }
         }
     }
 
@@ -260,7 +249,7 @@ main#superClassPage {
     }
 
     .react-multi-carousel-list {
-        padding: 10px 0;
+        padding: 10% 0;
     }
 
     .superClassTestimonialContainer {
@@ -325,6 +314,45 @@ main#superClassPage {
         sc-checkout {
             width: 50%;
             height: 100%;
+        }
+    }
+
+    div#superClassClassContentContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2, h3 {
+            font-family: 'Garbata';
+        }
+
+        h2 {
+            font-weight: bold;
+            margin: 5% 0;
+            font-size: 4vw;
+        }
+
+        h3 {
+            margin: 5% 0;
+            font-size: 2.5vw;
+        }
+
+        li {
+            font-family: 'Garet';
+
+            img {
+                // width: 3vw;
+            }
+        }
+
+        #superClassClassContentTechnicalitiesContainer,
+        #superClassClassContentImportantiesContainer {
+            width: 75%;
+        }
+
+        #superClassClassContentImportantiesContainer {
+            margin-bottom: 5%;
         }
     }
 }
