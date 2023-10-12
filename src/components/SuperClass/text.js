@@ -1,37 +1,56 @@
 export default {
-    title: 'Why go viral when you can make money instead?',
-    cta1: 'Get SuperClass',
+    title: 'How To Be Successful On Social Media Without Having To Go Viral',
+    cta1: 'Download SuperClass',
+    superClassAdTrailerTitle: 'SuperClass Ad Trailer',
 
     superClassFeatureBullets: [
         {
             title: 'No BS Promises.',
-            body: 'Only 1.1% of social videos go viral, and when they do, they generate reach, not sales.'
+            body: 'A guaranteed method for better jobs, bookings, and making money on social.'
+        },
+        {   
+            title: 'Say goodbye to burnout.',
+            body: 'No more consistency struggles, not knowing what to post, or chasing the algorithm.'
         },
         {
-            title: 'A practical method for social media success!',
-            body: 'Monetize your social channels by relying on consistency and a professional content system using AI.'
+            title: 'Create your content using AI.',
+            body: 'SuperClass includes free prompts and templates to help you create content that your audience will love.'
         },
         {
-            title: 'Increase your confidence by always knowing what to post.',
-            body: 'Create a purposeful social media strategy that helps you achieve your personal goals in the real world.'
-        },
-        {
-            title: 'A guaranteed method for better jobs, bookings, and increased revenue.',
-            body: 'Influence the people who really matter by increasing your online credibility on autopilot.'
+            title: 'Money-back guarantee.',
+            body: 'If you don\'t get results in 3 months, you\'ll get your money back but we\'re not worried about that 😏'
         }
     ],
 
-    cta2One: '$249.99',
-    cta2Two: '$79.99',
-    cta2Three: '70% Off Limited Time Offer',
+    cta2One: '$249',
+    cta2Two: '$97',
+    cta2Three: 'Limited Time Offer',
 
     withoutWasting: 'All without wasting time, money, and effort trying to go viral!',
 
     superClassPerfectForTitle: 'Perfect for:',
     superClassPerfectForBullets: [
-        'Artists and creators with imposter syndrome',
-        'Small business owners growing their social media on their own',
-        'Social media managers designing and running content strategies for other businesses',
-        'Multipotentialites having issues creating a successful social media strategy'
-    ]
+        'Artists and creators struggling with consistent posting.',
+        'Small business owners doing social media on their own.',
+        'Multipotentialites trying to find their niche.'
+    ],
+
+    classContent: {
+        title: 'In this SuperClass, you will learn:',
+        subtitle1: 'THE TECHNICALITIES:',
+        technicalities: [
+            'How to define your niche, your avatar, and your value proposition in 25 minutes 🔎',
+            'How to create engaging content that showcases your personality and expertise on autopilot',
+            'How to optimize your profile and posts for maximum reach and engagement so the people who really matter find you (without you looking for them) 🚀',
+            'How to measure your social media performance and adjust your strategy accordingly'
+        ], 
+        subtitle2: 'AND WHAT\'S IMPORTANT:',
+        importanties: [
+            'How to leverage your social media presence to grow your business and personal brand in the real world (where it matters)',
+            'How to network with potential partners in your industry online and in real life 💯',
+            'How to monetize your personal brand using different strategies and get your dream job 💰',
+            'The secret to avoiding burnout and staying motivated on social media',
+            'How to create all your content using AI with free prompts'
+        ]
+    }
 }

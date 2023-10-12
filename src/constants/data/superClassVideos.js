@@ -2,89 +2,89 @@ export default [
     {
         id: 1,
         name: 'The "Why" of This SuperClass',
-        playbackId: 'rS8PAPm8XcKSb3c5Q87VpE3weIQ02nSh1ouWcodJ0000Ow',
-        thumbnailStart: 6,
+        playbackId: 'iIhKJxssyMF1f7h7zXJLZHl2yeZrCSBZIAK008vkAJXo',
+        thumbnailStart: 238,
         thumbnailGIFStart: 0,
-        duration: 314000
+        duration: 298000
     },
     {
         id: 2,
         name: 'Niche, Boutique Audience, & Value Prop',
-        playbackId: 'drTLrp4gIZ1200Js83004Bh97yRAtHYx02Zdz00r00Lw1ZBg',
-        thumbnailStart: 6,
+        playbackId: 'wJGOpryXFv6iWXwu52peSw00fsB01uPB4bKxbDfZ2K4g4',
+        thumbnailStart: 315,
         thumbnailGIFStart: 0,
         duration: 601000
     },
     {
         id: 3,
         name: 'Engaging Content on Autopilot',
-        playbackId: 'c94Go5gQ6QUUfnQHuvkheCjWxRcj01xJgGlJgz6eAbSw',
-        thumbnailStart: 6,
+        playbackId: 'Ld6JXPAdRdNIICHg4EhBpkjGZjJ011YZ5s02rn00sS1pns',
+        thumbnailStart: 742,
         thumbnailGIFStart: 0,
-        duration: 970000
+        duration: 969000
     },
     {
         id: 4,
         name: 'Optimization for Reach & Engagement',
-        playbackId: 'Tog6cdY7agytdTwrSJ4XArNussn00YGUr6KJ9gN7Viko',
-        thumbnailStart: 6,
+        playbackId: 'JNwspcZk02glkj6Com7ui00BQuhF4LqzG02ePLV8Z00MSB8',
+        thumbnailStart: 770,
         thumbnailGIFStart: 0,
-        duration: 1095000
+        duration: 1094000
     },
     {
         id: 5,
         name: 'Measuring Performance & Adjusting Strategy',
-        playbackId: 'yBS8Xjg3022gNOXxJ01pSBOb5cDCwx4WwiEEEhaPAgpC4',
-        thumbnailStart: 6,
+        playbackId: 'EuTbwpuxHoB9OaOv8VVFZyopXP7vtIt5Jq101Fyk3DxA',
+        thumbnailStart: 60,
         thumbnailGIFStart: 0,
-        duration: 1468000
+        duration: 1470000
     },
     {
         id: 6,
-        name: 'Leveraging Your Social Media',
-        playbackId: '6jsBTRK8rBtgVf1saxEWO02SwcIq2YM4VuS4PS7aVkeQ',
-        thumbnailStart: 6,
+        name: 'Leveraging Your Presence',
+        playbackId: 'zStRmsti02tU5LHmKhfF1W33YTxzgi02QuIe5Gw8Bq102U',
+        thumbnailStart: 83,
         thumbnailGIFStart: 0,
         duration: 336000
     },
     {
         id: 7,
         name: 'Networking with Potential Partners',
-        playbackId: 'JD029jbkS9oJnUJ023IzgFvaLMAKw01TU00z1onmGho015iI',
-        thumbnailStart: 6,
+        playbackId: '01pM3XR6j6VNhTRcIDzHPkXlNBYZdtB1JB79eVGCb01gI',
+        thumbnailStart: 92,
         thumbnailGIFStart: 0,
-        duration: 274000
+        duration: 276000
     },
     {
         id: 8,
         name: 'Monetizing Your Personal Brand',
-        playbackId: 'R7EjyeFCwR11mO7qxBNKeg2M302UgEI9LwrZW83JyQAk',
-        thumbnailStart: 6,
+        playbackId: 'SG78LD6ckzVA9ujcDbY8HghKv00DJl91v0012QGxy01VpY',
+        thumbnailStart: 205,
         thumbnailGIFStart: 0,
-        duration: 551000
+        duration: 553000
     },
     {
         id: 9,
-        name: 'Burnout & Motivation on Social Media',
-        playbackId: 'DtSnXNB001zb24GrfhHYjFiukIqTOhGPuI6EuNTooXyE',
-        thumbnailStart: 6,
+        name: 'Burnout & Motivation',
+        playbackId: 'qInon0056b02016hujxNOcjNeNbFyRE00D3CuVNOoagJX0100',
+        thumbnailStart: 309,
         thumbnailGIFStart: 0,
-        duration: 346000
+        duration: 349000
     },
     {
         id: 10,
         name: 'Creating Content with AI',
-        playbackId: 'DV02TlQvvydHFUL3d4Zdwa012yZ7EjWzTAc1llhLJfKJY',
-        thumbnailStart: 6,
+        playbackId: 'Y02V9Owohct008qNFhroOz1zD02DNX8b00Qz1HcUBjN6x9E',
+        thumbnailStart: 215,
         thumbnailGIFStart: 0,
-        duration: 570000
+        duration: 575000
     },
     {
         id: 11,
         name: 'Final Tricks ',
-        playbackId: 'tBJfGsW1fXp02sLgiFLO00CQq73rvWom01tqhL1z797UxI',
-        thumbnailStart: 6,
+        playbackId: 'c2uHqmBDyKcLQtcuANGMVKK00301AW11dgzx00v0101mRxPk',
+        thumbnailStart: 167,
         thumbnailGIFStart: 0,
-        duration: 375000
+        duration: 385000
     },
 ]

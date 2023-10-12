@@ -108,6 +108,9 @@ export const i = {
         wand: `${bucketPrefix}/stock/wand.png`,
         whiteChick: `${bucketPrefix}/stock/whiteChick.png`,
     },
+    superClass: {
+        adTrailerStill: `${bucketPrefix}/superclass/superClassAdTrailerStill.png`
+    },
     team: {
         cami: `${bucketPrefix}/team/cami.jpeg`,
         corey: `${bucketPrefix}/team/corey.jpeg`,

@@ -7,8 +7,6 @@ import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleStop, faBackward, faForward } from '@fortawesome/free-solid-svg-icons'
 
-import HomeIcon from '../../UI/HomeIcon'
-import BackIcon from '../../UI/BackIcon'
 import SuperThumbnail from '../SuperThumbnail'
 
 import { paths } from '../../../constants/paths'
@@ -17,11 +15,13 @@ import { clearCurrentSuperInfo } from '../../../actions/superClass'
 import { getSuperVideoProgress, saveSuperVideoProgress, saveSuperVideoCompletion } from '../../../api/superClass'
 
 import './styles/index.scss'
+import { Link } from 'react-router-dom'
 
 const t = {
   title: 'SuperWatcher',
   countdown: remainingTime => `Next video starts in ${remainingTime} second${remainingTime === 1 ? '' : 's'}`,
   logOut: 'Log Out',
+  back: 'Go Back',
   thumbnailSource: (playbackId, thumbnailStart) => `https://image.mux.com/${playbackId}/animated.gif?start=${thumbnailStart}&fps=30`
 }
 
@@ -34,6 +34,7 @@ export const SuperWatcher = ({ superUser }) => {
   const [startTime, setStartTime] = useState(null)
   const [completedVideoIds, setCompletedVideoIds] = useState([])
   const [showCountdown, setShowCountdown] = useState(false)
+  const [isVideoLoading, setIsVideoLoading] = useState(true)
   
   const currentVideo = superClassVideos.find(video => video.id == id)
   const otherVideos = superClassVideos.filter(video => video.id > currentVideo.id)
@@ -51,29 +52,34 @@ export const SuperWatcher = ({ superUser }) => {
     }
     containerRef.current.scrollIntoView(true)
     updateStartTime(superUser.email, currentVideo.id)
-    return () => setStartTime(null)
+    return () => {
+      setStartTime(null)
+      setIsVideoLoading(false)
+    }
   }, [])
   
   useEffect(() => {
     updateStartTime(superUser.email, currentVideo.id)
-    return () => setStartTime(null)
+    return () => {
+      setStartTime(null)
+      setIsVideoLoading(false)
+    }
   }, [id])
 
   const onLogoutClick = () => {
     dispatch(clearCurrentSuperInfo())
     navigate(paths.superClass.login)
   }
-  
+
   return superUser && (
     <div id='superWatcherPageContainer' ref={containerRef}>
-      <HomeIcon />
-      <BackIcon path={paths.superClass.videos} />
+      <Link id='superWatcherGoBackButton' className='clickable' to={paths.superClass.videos}>{t.back}</Link>
       <button className='superClassLogoutButton clickable' onClick={onLogoutClick}>{t.logOut}</button>
       {currentVideo && (
         <>
-          <h1>{currentVideo.id}.&nbsp;{currentVideo.name}</h1>
+          <h1><span id='superWatcherTitleNumber'>{currentVideo.id}.&nbsp;</span>{currentVideo.name}</h1>
           <div id='superWatcherVideoContainer'>
-            {currentVideo.id !== 1 && <FontAwesomeIcon 
+            {!isVideoLoading && currentVideo.id !== 1 && <FontAwesomeIcon 
               icon={faBackward} 
               color='#ffffff' 
               className='watcherArrow clickable'
@@ -81,11 +87,13 @@ export const SuperWatcher = ({ superUser }) => {
             />}
             {startTime !== null && <MuxPlayer
               streamType="on-demand"
+              primaryColor="#FEFF7C"
+              secondaryColor="#000000"
+              title={currentVideo.title}
               playbackId={currentVideo.playbackId}
               metadataVideoTitle={currentVideo.name}
               metadataViewerUserId={superUser.email}
-              primaryColor="#DA2A7D"
-              secondaryColor="#FEFF7C"
+              onLoadedMetadata={() => setIsVideoLoading(false)}
               startTime={startTime}
               thumbnailTime={currentVideo.thumbnailStart}
               onTimeUpdate={e => {
@@ -97,7 +105,8 @@ export const SuperWatcher = ({ superUser }) => {
                     timestamp: Math.floor(currentTime)
                   })
                 }
-              }}
+              }}  
+              style={{ aspectRatio: 16/9 }}
               onEnded={() => {
                 saveSuperVideoCompletion({ 
                   email: superUser.email, 
@@ -107,7 +116,7 @@ export const SuperWatcher = ({ superUser }) => {
                   setShowCountdown(true)
               }}
             />}
-            {currentVideo.id !== 11 && <FontAwesomeIcon 
+            {!isVideoLoading && currentVideo.id !== 11 && <FontAwesomeIcon 
               icon={faForward} 
               color='#ffffff' 
               className='watcherArrow clickable'

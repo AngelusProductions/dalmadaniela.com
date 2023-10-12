@@ -7,6 +7,12 @@ main#superClassPage {
     display: flex;
     scroll-behavior: smooth;
     flex-direction: column;
+
+    > .animate__animated {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     
     h1 {
         color: $black;
@@ -19,10 +25,18 @@ main#superClassPage {
         margin-top: 10%;
     }
 
+    mux-player {
+        width: 80%;
+        margin: 5% auto 0 auto;
+    }
+
     ul#superClassFeaturesList,
-    ul#superClassPerfectForList {
+    ul#superClassPerfectForList,
+    #superClassClassContentTechnicalitiesContainer,
+    #superClassClassContentImportantiesContainer {
         width: 80%;
         margin: auto;
+        text-align: justify;
 
         li {
             font-family: 'Garet';
@@ -45,38 +59,26 @@ main#superClassPage {
     }
 
     button {
-        margin: 10% 0;
+        margin: 0 0 10% 0;
         padding: 2%;
-        font-size: 4vw;
+        font-size: 4.5vw;
         font-family: 'Garet';
         cursor: pointer;
+        z-index: 99;
 
         &#superClassCta1 {
             background: $black;
             color: $yellow;
             font-family: "Garbata";
             font-weight: 600;
-            width: 40%;
+            width: 56%;
             margin: 10% auto;
             padding-top: 1.4%;
-        }
-        &#superClassCta2 {
-            color: white;
-            background: $red;
-            width: 75%;
-            margin: 10% auto 0 auto;
-            text-transform: uppercase;
-            border: 3px solid black;
-            font-weight: 600;
-        }
-        &#superClassCta3 {
-            color: $yellow;
-            background: $black;
-            border: 3px solid black;
-            width: 75%;
-            margin: 10% auto;
-            font-family: 'Garbata';
-            font-weight: 600;
+            
+            &:hover {
+                color: $yellow;
+                background: $pink;
+            }
         }
     }
 
@@ -179,7 +181,11 @@ main#superClassPage {
         #brandsFeatured>div>img:nth-child(3) {
             transform: scale(0.7);
         }
-        
+
+        #brandsFeatured>div>img:nth-child(6) {
+            transform: scale(1.3);
+        }
+
         #brandsFeatured>div>img:nth-child(7) {
             transform: scale(0.7);
             filter: invert(1)
@@ -207,9 +213,8 @@ main#superClassPage {
         #brandsFeatured h4 {
             margin: 4vh auto 0 auto;
             font-family: 'Hatton';
-            color: white;
+            color: black;
             font-size: 4vw;
-            color: $pink;
         }
         
         .brandsSection {
@@ -244,7 +249,7 @@ main#superClassPage {
     }
 
     .react-multi-carousel-list {
-        padding: 10px 0;
+        padding: 10% 0;
     }
 
     .superClassTestimonialContainer {
@@ -291,6 +296,10 @@ main#superClassPage {
     #superClassPerfectForListContainer {
         margin: 10% 0;
 
+        #superClassPerfectForList {
+            transform: translateX(4%);
+        }
+
         h2 {
             text-align: center;
             margin: 5% 0;
@@ -305,6 +314,45 @@ main#superClassPage {
         sc-checkout {
             width: 50%;
             height: 100%;
+        }
+    }
+
+    div#superClassClassContentContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2, h3 {
+            font-family: 'Garbata';
+        }
+
+        h2 {
+            font-weight: bold;
+            margin: 5% 0;
+            font-size: 4vw;
+        }
+
+        h3 {
+            margin: 5% 0;
+            font-size: 2.5vw;
+        }
+
+        li {
+            font-family: 'Garet';
+
+            img {
+                // width: 3vw;
+            }
+        }
+
+        #superClassClassContentTechnicalitiesContainer,
+        #superClassClassContentImportantiesContainer {
+            width: 75%;
+        }
+
+        #superClassClassContentImportantiesContainer {
+            margin-bottom: 5%;
         }
     }
 }

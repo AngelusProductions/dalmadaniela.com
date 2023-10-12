@@ -1,18 +1,23 @@
 @import '../../colors.scss';
 
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
     main#superClassPage {
         h1 {
-            width: 80% !important;
-            font-size: 4vw !important;
-            margin-top: 2.5% !important;
+            width: 55% !important;
+            font-size: 3vw !important;
+        }
+
+        mux-player {
+            width: 50%;
+            margin: 2.5% auto;
         }
 
         ul#superClassFeaturesList,
         ul#superClassPerfectForList {
+            width: 50%;
             li {
                 margin-bottom: 2.5%;
-                font-size: 1.7vw;
+                font-size: 1.3vw;
 
                 img {
                     transform: translate(-0.5vw, 0.3vw) !important;
@@ -26,23 +31,13 @@
         }
 
         button {
-            margin: 5% auto !important;
+            margin: 2.5% auto !important;
             padding: 1% !important;
             font-size: 2vw;
 
             &#superClassCta1 {
                 width: 33% !important;
-                margin: 5% auto !important;
-            }
-
-            &#superClassCta2 {
-                width: 50%;
-                border: solid 2px black;
-                margin-bottom: 2.5% !important;
-            }
-
-            &#superClassCta3 {
-                width: 50% !important;
+                margin: 2.5% auto !important;
             }
         }
 
@@ -89,7 +84,7 @@
         }
 
         .react-multi-carousel-list {
-            padding: 5% 0;
+            padding: 20px 0;
         }
 
         .superClassTestimonialContainer {
@@ -130,26 +125,6 @@
             h2 {
                 margin: 2% 0;
                 font-size: 3vw;
-            }
-        }
-
-        div#superClassClassContentContainer {
-            h2 {
-                margin: 2% 0;
-                font-size: 3vw;
-            }
-
-            h3 {
-                margin: 2% 0;
-                font-size: 2vw;
-            }
-
-            li {
-                font-size: 1.3vw;
-                img {
-                    transform: translate(-0.5vw, 0.3vw) !important;
-                    width: 1.6vw !important;
-                }
             }
         }
 

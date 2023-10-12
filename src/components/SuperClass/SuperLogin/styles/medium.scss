@@ -2,6 +2,37 @@
 
 @media (min-width: 640px) and  (max-width: 1024px) {
     #superLoginPageContainer {
-        
+        h1 {
+            margin: 20vh auto 5% auto;
+            font-size: 5vw;
+        }
+
+        div#superLoginFieldsContainer {
+            width: 100% !important;
+
+            .superLoginField {
+                display: flex;
+                flex-direction: column;
+                label {
+                    font-size: 3vw;
+                }
+                input {
+                    width: 80%;
+                    height: 50px;
+                    font-size: 2.5vw;
+                }
+            }
+        }
+
+        #superLoginButtonContainer {
+            button {
+                width: 20% !important;
+                font-size: 3vw !important;
+            }
+
+            p#superClassLoginError {
+                font-size: 3vw !important;
+            }
+        }
     }
 }
