@@ -59,6 +59,22 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
             {parse(blogPost.introHtml)}
           </div>
 
+          
+
+          <img id='blogPostPhoto' src={blogPost.photoUrl}  />
+          
+          <div id='bodyContainer'>
+            {parse(blogPost.bodyHtml)}
+          </div>
+            
+          <div id='youtubeEmbedContainer'>
+            <LiteYouTubeEmbed id={getYouTubeID(blogPost.youtubeLink)} />
+          </div>
+
+          <div id='conclusionContainer'>
+            {parse(blogPost.conclusionHtml)}
+          </div>
+
           <div id='blogPostShareIconsContainer'>
             <FacebookShareButton url={currentUrl} className='clickable'>
               <FacebookIcon size={50} round />
@@ -77,20 +93,6 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
             ) : (
               <img id='blogPostCopyIcon' src={i.icons.copy} className='clickable' onClick={onCopyClick} />
             )}
-          </div>
-
-          <img id='blogPostPhoto' src={blogPost.photoUrl}  />
-          
-          <div id='bodyContainer'>
-            {parse(blogPost.bodyHtml)}
-          </div>
-            
-          <div id='youtubeEmbedContainer'>
-            <LiteYouTubeEmbed id={getYouTubeID(blogPost.youtubeLink)} />
-          </div>
-
-          <div id='conclusionContainer'>
-            {parse(blogPost.conclusionHtml)}
           </div>
         </div>
       )}
