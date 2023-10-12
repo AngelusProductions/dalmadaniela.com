@@ -35,10 +35,27 @@
         right: 10%;
     }
 
+    #superClassWorkbookDownload {
+        position: absolute;
+        display: flex;
+        top: -25px;
+
+        p {
+            margin-left: 10px;
+            font-family: 'Garbata';
+            font-size: 15px;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+
     .superClassVideosContainer {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        position: relative;
     }
 
     h1 {

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { connect, useDispatch } from 'react-redux'
 import ScrollToTop from 'react-scroll-to-top'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap, faP, faPaperclip } from '@fortawesome/free-solid-svg-icons'
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader"
 
 // import HomeIcon from '../../UI/HomeIcon'
@@ -20,6 +20,7 @@ const t = {
   title: 'Welcome to',
   superclass: 'SuperClass',
   hello: name => `Hello, ${name}`,
+  downloadWorkbook: 'Download Workbook',
   continue: currentVideoId => `Continue Section ${currentVideoId}`,
   logOut: 'Log Out'
 }
@@ -64,6 +65,15 @@ export const SuperVideos = ({ superUser }) => {
             <p>{t.continue(superProgress.videoId)}</p>
           </div>
           <div className='superClassVideosContainer'>
+            <a 
+              id='superClassWorkbookDownload' 
+              target='_blank' 
+              className='clickable' 
+              href='https://storage.googleapis.com/dalmadaniela.com/assets/superclass/SuperClass%20Workbook.pdf'
+            >
+              <FontAwesomeIcon icon={faPaperclip} color='#FEFF7C' />
+              <p>{t.downloadWorkbook}</p>
+            </a>
             {superProgress && superClassVideos.map(video => (
               <SuperThumbnail {...video} key={video.id} isCompleted={superProgress.completedVideoIds.includes(video.id)} />)
             )}
