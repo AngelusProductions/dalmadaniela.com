@@ -1,0 +1,42 @@
+@import '../../colors.scss';
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    #contactUsPage {
+        h1#contactUsPageTitle {
+            
+        }
+
+        div#contactUsFormContainer {
+            section {
+
+                .contactUsFormGroup {
+                    
+                    label {
+
+                    }
+
+                    input {
+                        
+                    }
+
+                    textarea {
+                        
+                    }
+                }
+
+                button {
+                    
+                }
+
+                p {
+                    font-size: 2vw;
+                }
+            }
+
+            img {
+                width: 25vw;
+                height: 25vw;
+            }
+        }
+    }
+}

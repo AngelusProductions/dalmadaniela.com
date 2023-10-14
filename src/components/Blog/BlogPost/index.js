@@ -58,9 +58,7 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
           <div id='introContainer'>
             {parse(blogPost.introHtml)}
           </div>
-
           
-
           <img id='blogPostPhoto' src={blogPost.photoUrl}  />
           
           <div id='bodyContainer'>

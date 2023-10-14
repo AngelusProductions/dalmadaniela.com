@@ -1,0 +1,97 @@
+@import '../../colors.scss';
+
+#contactUsPage {
+    h1#contactUsPageTitle {
+        margin-top: 10%;
+        margin-left: 33%;
+        font-family: 'Garbata';
+        font-size: 4vw;
+    }
+
+    div#contactUsFormContainer {
+        display: flex;
+        height: 100%;
+        justify-content: space-around;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            width: 50%;
+
+            .contactUsFormGroup {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 5%;
+                label {
+                    font-family: 'Garet';
+                    font-size: 2vw;
+                    margin-bottom: 2%;
+                }
+                input {
+                    border: 1px solid $black;
+                    border-radius: 15px;
+                    height: 5vh;
+                    padding-left: 2%;
+                    font-family: 'Garet';
+                    font-size: 1.5vw;
+                }
+                textarea {
+                    border: 1px solid $black;
+                    border-radius: 15px;
+                    height: 20vh;
+                    padding-left: 2%;
+                    font-family: 'Garet';
+                    font-size: 1.5vw;
+                }
+            }
+            button {
+                cursor: pointer;
+                border: 1px solid $black;
+                border-radius: 15px;
+                padding: 2.5%;
+                font-family: 'Garbata';
+                font-size: 1.5vw;
+                background-color: $yellow;
+                color: $pink;
+                font-weight: bold;  
+                font-size: 3vw;
+                width: 50%;
+                margin: auto;
+
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+
+            p {
+                margin: auto;
+                color: $pink;
+                font-size: 3vw;
+                margin-top: 5%;
+                font-family: 'Garbata';
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+
+        div#thankYouContainer {
+            font-size: 3vw;
+            margin-top: 5%;
+            font-family: 'Garet';
+            color: $pink;
+            font-style: italic;
+        }
+        svg#contactUsResetButton {
+            height: 6vw;
+            color: $pink;
+            cursor: pointer;
+        }
+
+        img {
+            width: 33vw;
+            height: 33vw;
+        }
+    }
+}

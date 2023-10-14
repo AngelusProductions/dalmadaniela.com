@@ -1,0 +1,55 @@
+@import '../../colors.scss';
+
+@media (max-width: 640px) {
+    #contactUsPage {
+        h1#contactUsPageTitle {
+            margin-bottom: 5%;
+            font-size: 7vw;
+        }
+    
+        div#contactUsFormContainer {
+            flex-direction: column;
+            align-items: center;
+    
+            section {
+                width: 80%;
+    
+                .contactUsFormGroup {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 5%;
+    
+                    label {
+                        font-size: 4vw;
+                        margin-bottom: 2%;
+                    }
+    
+                    input {
+                        height: 5vh;
+                        padding-left: 2%;
+                        font-size: 3.5vw;
+                    }
+    
+                    textarea {
+                        height: 20vh;
+                        padding-left: 2%;
+                        font-size: 3.5vw;
+                    }
+                }
+    
+                button {
+                    padding: 2.5%;
+                    font-size: 4vw;
+                }
+            }
+    
+            img {
+                position: absolute;
+                top: 5%;
+                right: 10%;
+                width: 15vw;
+                height: 15vw;
+            }
+        }
+    }
+}

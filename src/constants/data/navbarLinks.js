@@ -41,7 +41,7 @@ export default [
     name: 'Contact us',
     path: paths.contactUs,
     side: 'right',
-    tooltip: 'Yay!\nLet\'s chat soon. I\'d love to hear from you.'
+    tooltip: null
   },
   {
     id: 7,
