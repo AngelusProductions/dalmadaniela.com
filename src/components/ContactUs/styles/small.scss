@@ -3,12 +3,14 @@
 @media (max-width: 640px) {
     #contactUsPage {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+
         #contactUsPageLeft {
             width: 100% !important;
             h1#contactUsPageTitle {
                 font-size: 7vw;
-                margin-top: 20%;
+                margin-top: 10%;
             }
     
             section {
