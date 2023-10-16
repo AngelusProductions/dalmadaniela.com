@@ -1,6 +1,7 @@
 export default {
-    title: 'How To Be Successful On Social Media Without Having To Go Viral',
-    cta1: 'Download SuperClass',
+    samcartUrl: 'https://dalmadaniela.samcart.com/products/superclass/',
+    title: 'How to Be Successful on Social Media Without Having to Go Viral',
+    cta1: 'Monetize Your Passion',
     superClassAdTrailerTitle: 'SuperClass Ad Trailer',
 
     superClassFeatureBullets: [
@@ -22,9 +23,7 @@ export default {
         }
     ],
 
-    cta2One: '$249',
-    cta2Two: '$97',
-    cta2Three: 'Limited Time Offer',
+    cta2: 'Use Social Media to Reach Your Goals',
 
     withoutWasting: 'All without wasting time, money, and effort trying to go viral!',
 

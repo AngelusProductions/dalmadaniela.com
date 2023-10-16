@@ -2,14 +2,12 @@ import React, { useEffect, useRef } from 'react'
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import MuxPlayer from '@mux/mux-player-react'
-import { Animator, ScrollContainer, ScrollPage } from "react-scroll-motion"
 import { AnimationOnScroll } from 'react-animation-on-scroll'
 import "animate.css/animate.min.css"
 
 import t from './text'
 import { i } from '../../constants/data/assets'
 import testimonials from '../../constants/data/testimonials'
-import { ZoomInUp, SlideInOutLeft, SlideInOutRight, SlideUp, SlideDown } from '../../constants/animations'
 
 import './styles/index.scss'
 
@@ -39,19 +37,16 @@ const SuperClass = () => {
           style={{ aspectRatio: 16/9 }}
           volume={1}
         />
-      </AnimationOnScroll>
       
-      <button id='superClassCta1' className='clickable' onClick={scrollToCheckout}>{t.cta1}</button>
+      <a href={t.samcartUrl} id='superClassCta1' className='clickable' target="_blank">{t.cta1}</a>
 
       <ul id='superClassFeaturesList'>
         {t.superClassFeatureBullets.map(({ title, body }, index) => (
-          <AnimationOnScroll animateIn={index % 2 === 0 ? 'animate__fadeInLeftBig' : 'animate__fadeInRightBig'} key={title}>
-            <li key={title} className='superClassFeatureContainer'>
-              <img src={i.icons.checkMark} />
-              <b>{title}</b>
-              <span>{body}</span>
-            </li>
-          </AnimationOnScroll>
+          <li key={title} className='superClassFeatureContainer'>
+            <img src={i.icons.checkMark} />
+            <b>{title}</b>
+            <span>{body}</span>
+          </li>
         ))}
       </ul>
       
@@ -72,26 +67,24 @@ const SuperClass = () => {
         <h3>{t.classContent.subtitle1}</h3>
         <div id='superClassClassContentTechnicalitiesContainer'>
           {t.classContent.technicalities.map((technicality, index) => (
-            <AnimationOnScroll animateIn={'animate__fadeInLeftBig'} key={technicality}>
-              <li className='superClassClassContentTechnicality'>
-                <img src={i.icons.checkMark} />
-                {technicality}
-              </li>
-            </AnimationOnScroll>
+            <li className='superClassClassContentTechnicality'>
+              <img src={i.icons.checkMark} />
+              {technicality}
+            </li>
           ))}
         </div>
         <h3>{t.classContent.subtitle2}</h3>
         <div id='superClassClassContentImportantiesContainer'>
           {t.classContent.importanties.map((importanty, index) => (
-            <AnimationOnScroll animateIn={'animate__fadeInLeftBig'} key={importanty}>
-              <li className='superClassClassContentImportanty'>
-                <img src={i.icons.checkMark} />
-                {importanty}
-              </li>
-            </AnimationOnScroll>
+            <li className='superClassClassContentImportanty'>
+              <img src={i.icons.checkMark} />
+              {importanty}
+            </li>
           ))}
         </div>
       </div>
+
+      <a href={t.samcartUrl} id='superClassCta2' className='clickable' target="_blank">{t.cta2}</a>
 
       {/* <button id='superClassCta2' className='clickable' onClick={scrollToCheckout}>
         <span>{t.cta2Three}</span>
@@ -182,10 +175,8 @@ const SuperClass = () => {
           })}
         </Carousel>
       </AnimationOnScroll>
-
-      <div id='superClassSamCartWrapper' ref={checkoutRef}>
-        <sc-checkout product="superclass" subdomain="dalmadaniela"></sc-checkout>
-      </div>
+      
+      </AnimationOnScroll>
     </main>
   )
 }

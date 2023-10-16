@@ -13,7 +13,9 @@
         }
 
         ul#superClassFeaturesList,
-        ul#superClassPerfectForList {
+        ul#superClassPerfectForList,
+        #superClassClassContentTechnicalitiesContainer,
+        #superClassClassContentImportantiesContainer {
             width: 50%;
             li {
                 margin-bottom: 2.5%;
@@ -30,14 +32,17 @@
             }
         }
 
-        button {
+        a {
             margin: 2.5% auto !important;
             padding: 1% !important;
             font-size: 2vw;
 
             &#superClassCta1 {
-                width: 33% !important;
+                width: 25% !important;
                 margin: 2.5% auto !important;
+            }
+            &#superClassCta2 {
+                width: 40%;
             }
         }
 
