@@ -22,7 +22,7 @@
             .contactUsFormGroup {
                 display: flex;
                 flex-direction: column;
-                margin-bottom: 5%;
+                margin-bottom: 2.5%;
                 label {
                     font-family: 'Garet';
                     font-size: 2vw;
@@ -58,6 +58,7 @@
                 font-size: 3vw;
                 width: 50%;
                 margin: auto;
+                margin-bottom: 5%;
 
                 &:hover {
                     background-color: $white;
