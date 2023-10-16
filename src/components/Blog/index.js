@@ -26,7 +26,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
 
   return (
     <div id="blogPageContainer">
-      <HomeIcon />
+      <HomeIcon text yellow />
       <UserInfo redirect={paths.blog.page} backgroundColor='pink' />
       {adminEmails.includes(currentUser?.email) && (
         <Link to={paths.blog.create}>
@@ -44,7 +44,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
       </div>
 
       <div id='blogPageHilightsContainer'>
-        {blogPosts.sort((a, b) => {
+        {blogPosts && blogPosts.sort((a, b) => {
           return new Date(b.createdAt) - new Date(a.createdAt)
         }).map(({ id, name, photoUrl }) => (
           <Link key={id} to={`${paths.blog.allBlogPosts}/${name.replace(/ /g,"_")}`}>
@@ -56,7 +56,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
         ))}
       </div>
 
-      {blogPosts.length  > 3 && (
+      {blogPosts && blogPosts.length  > 3 && (
         <Link id='blogPageAllBlogPostsLink' to={paths.blog.allBlogPosts} className='clickable'>
           <span>{t.morePosts}</span>
         </Link>

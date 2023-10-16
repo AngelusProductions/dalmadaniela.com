@@ -65,7 +65,7 @@ const Signup = props => {
 
   return (
     <div id='signupPageContainer' className='authPageContainer'>
-      <HomeIcon />
+      <HomeIcon text yellow />
       <h1>{t.title}</h1>
       <div className='authFieldContainer' onKeyDown={watchForEnter}>
         <EmailField

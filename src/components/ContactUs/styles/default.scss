@@ -1,50 +1,55 @@
 @import '../../colors.scss';
 
 #contactUsPage {
+    min-height: 100vh;
+    display: flex;
+
     h1#contactUsPageTitle {
-        margin-top: 10%;
-        margin-left: 33%;
         font-family: 'Garbata';
-        font-size: 4vw;
+        font-size: 3vw;
+        color: $pink;
+        margin-bottom: 10%;
     }
 
-    div#contactUsFormContainer {
-        display: flex;
-        height: 100%;
+    div#contactUsPageLeft {
+        width: 50%;
+        display: inline-flex;
         justify-content: space-around;
+        flex-direction: column;
+        padding: 0 10%;
+        box-sizing: border-box;
 
-        section {
+        .contactUsFormGroup {
             display: flex;
             flex-direction: column;
-            height: 90%;
-            width: 50%;
-
-            .contactUsFormGroup {
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 2.5%;
-                label {
-                    font-family: 'Garet';
-                    font-size: 2vw;
-                    margin-bottom: 2%;
-                }
-                input {
-                    border: 1px solid $black;
-                    border-radius: 15px;
-                    height: 5vh;
-                    padding-left: 2%;
-                    font-family: 'Garet';
-                    font-size: 1.5vw;
-                }
-                textarea {
-                    border: 1px solid $black;
-                    border-radius: 15px;
-                    height: 20vh;
-                    padding-left: 2%;
-                    font-family: 'Garet';
-                    font-size: 1.5vw;
-                }
+            margin-bottom: 2.5%;
+            label {
+                font-family: 'Garet';
+                font-size: 1.5vw;
+                margin-bottom: 2%;
             }
+            input {
+                border: 1px solid $black;
+                border-radius: 15px;
+                height: 5vh;
+                padding-left: 2%;
+                font-family: 'Garet';
+                font-size: 1.5vw;
+            }
+            textarea {
+                border: 1px solid $black;
+                border-radius: 15px;
+                height: 20vh;
+                padding-left: 2%;
+                font-family: 'Garet';
+                font-size: 1.5vw;
+            }
+        }
+        #contactUsButtonContainer {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
             button {
                 cursor: pointer;
                 border: 1px solid $black;
@@ -55,10 +60,9 @@
                 background-color: $yellow;
                 color: $pink;
                 font-weight: bold;  
-                font-size: 3vw;
+                font-size: 2vw;
                 width: 50%;
-                margin: auto;
-                margin-bottom: 5%;
+                margin: 10% auto;
 
                 &:hover {
                     background-color: $white;
@@ -69,30 +73,42 @@
             p {
                 margin: auto;
                 color: $pink;
-                font-size: 3vw;
+                font-size: 1.5vw;
                 margin-top: 5%;
                 font-family: 'Garbata';
                 font-weight: bold;
                 font-style: italic;
             }
         }
+        
+        #contactUsThankYouContainer {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
 
-        div#thankYouContainer {
-            font-size: 3vw;
-            margin-top: 5%;
-            font-family: 'Garet';
-            color: $pink;
-            font-style: italic;
+            p {
+                font-size: 2vw;
+                margin-top: 5%;
+                font-family: 'Garet';
+                color: $pink;
+                font-style: italic;
+            }
+            svg#contactUsResetButton {
+                height: 6vw;
+                color: $pink;
+                cursor: pointer;
+            }
         }
-        svg#contactUsResetButton {
-            height: 6vw;
-            color: $pink;
-            cursor: pointer;
-        }
+    }
+
+    div#contactUsPageRight {
+        width: 50%;
+        display: inline-block;
 
         img {
-            width: 33vw;
-            height: 33vw;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }

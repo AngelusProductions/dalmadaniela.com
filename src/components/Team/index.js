@@ -18,7 +18,7 @@ const t = {
 const MeetTheTeam = () => {
   return (
     <main id='meetTheTeamPage'>
-      <HomeIcon />
+      <HomeIcon text pink />
       <div id='teamTitleContainer' className='left'>
         <span>{t.title1[0]}</span>
         <span>{t.title1[1]}</span>

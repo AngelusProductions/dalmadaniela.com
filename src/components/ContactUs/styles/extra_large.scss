@@ -3,12 +3,12 @@
 @media (min-width: 1440px) {
     #contactUsPage {
         h1#contactUsPageTitle {
-            margin-top: 5%;
+
         }
 
-        div#contactUsFormContainer {
+        div#contactUsPageLeft {
             section {
-                width: 33%;
+                
                 .contactUsFormGroup {
                     margin-bottom: 1%;
                     label {
@@ -25,20 +25,16 @@
                     }
                 }
 
-                button {
-                    margin-top: 5%;
-                    font-size: 2vw;
-                }
+                #contactUsButtonContainer {
+                    button {
+                        font-size: 2vw;
+                    }
 
-                p {
-                    margin-top: 5%;
-                    font-size: 1.5vw;
+                    p {
+                        margin-top: 5%;
+                        font-size: 1.5vw;
+                    }
                 }
-            }
-
-            img {
-                width: 15vw;
-                height: 15vw;
             }
         }
 

@@ -61,7 +61,7 @@ const Login = props => {
 
   return (
     <div id='loginPageContainer' className='authPageContainer'>
-      <HomeIcon />
+      <HomeIcon text yellow />
       <h1>{t.title}</h1>
       <div className='authFieldContainer' onKeyDown={watchForEnter}>
         <EmailField

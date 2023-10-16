@@ -5,7 +5,6 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import getYouTubeID from 'get-youtube-id'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
-import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
 import TipTap from '../../UI/tiptap/TipTap'
 
@@ -87,8 +86,7 @@ export const CreateBlogPost = ({ currentUser }) => {
 
   return (
     <div id='createBlogPostContainer'>
-      <HomeIcon />
-      <BackIcon path={paths.blog.page} />
+      <BackIcon text yellow path={paths.blog.page} />
       <div id='createBlogPostTitleContainer'>
         <h1>{t.title}</h1>
         <img src={i.icons.document} />

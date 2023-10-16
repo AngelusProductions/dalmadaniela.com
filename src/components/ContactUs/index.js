@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import HomeIcon from '../UI/HomeIcon'
 
 import { i } from '../../constants/data/assets'
-import { emailContactMessage } from '../../api/contact'
+import { sendContactForm } from '../../api/contact'
 
 import './styles/index.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -42,18 +42,17 @@ const ContactUs = () => {
       setError('Please enter a message!')
     } else {
       setError(null)
-      await emailContactMessage(contactForm)
+      await sendContactForm(contactForm)
       setShowThankYou(true)
     }
   }
 
   return (
     <main id='contactUsPage'>
-      <HomeIcon />
-      <h1 id='contactUsPageTitle'>{t.title}</h1>
-      <div id='contactUsFormContainer'>
+      <HomeIcon text pink />
+      <div id='contactUsPageLeft'>
         {showThankYou ? (
-          <>
+          <div id='contactUsThankYouContainer'>
             <FontAwesomeIcon id='contactUsResetButton' className='clickable' icon={faUndo} onClick={() => {
               setShowThankYou(false)
               setContactForm({
@@ -62,43 +61,48 @@ const ContactUs = () => {
                 message: ''
               })
             }} />
-            <div id='thankYouContainer'>
-              {t.thankYou}
-            </div>
-          </>
+            <p>{t.thankYou}</p>
+          </div>
         ) : (
           <section>
-            <div className='contactUsFormGroup'>
-              <label>{t.name}</label>
-              <input
-                type="text"
-                name="name"
-                value={contactForm.name}
-                onChange={handleInputChange}
-              />
+            <h1 id='contactUsPageTitle'>{t.title}</h1>
+            <div id='contactUsForm'>
+              <div className='contactUsFormGroup'>
+                <label>{t.name}</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={contactForm.name}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className='contactUsFormGroup'>
+                <label>{t.email}</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={contactForm.email}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className='contactUsFormGroup'>
+                <label>{t.message}</label>
+                <textarea
+                  name="message"
+                  value={contactForm.message}
+                  onChange={handleInputChange}
+                />
+              </div>
             </div>
-            <div className='contactUsFormGroup'>
-              <label>{t.email}</label>
-              <input
-                type="email"
-                name="email"
-                value={contactForm.email}
-                onChange={handleInputChange}
-              />
+            <div id='contactUsButtonContainer'>
+              <button className='clickable' onClick={handleSubmit}>{t.submit}</button>
+              {error && <p>{error}</p>} 
             </div>
-            <div className='contactUsFormGroup'>
-              <label>{t.message}</label>
-              <textarea
-                name="message"
-                value={contactForm.message}
-                onChange={handleInputChange}
-              />
-            </div>
-            <button className='clickable' onClick={handleSubmit}>{t.submit}</button>
-            {error && <p>{error}</p>}
           </section>
         )}
-        <img src={i.stock.wand} />
+      </div>
+      <div id='contactUsPageRight'>
+        <img src={i.dalma.onPhone} />
       </div>
     </main>
   )

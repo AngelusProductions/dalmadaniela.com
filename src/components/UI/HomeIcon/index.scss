@@ -1,8 +1,25 @@
-#homeIcon {
+@import '../../colors.scss';
+
+#homeIcon,
+#homeText {
     position: absolute;
-    height: 5vw;
-    width: 5vw;
     left: 25px;
     top: 25px;
     z-index: 98;
+}
+
+#homeIcon {
+    height: 5vw;
+    width: 5vw; 
+}
+
+#homeText {
+    font-family: 'Hatton';
+    font-size: 2vw;
+}
+
+@media (max-width: 640px) {
+    #homeText {
+        font-size: 4vw;
+    }
 }

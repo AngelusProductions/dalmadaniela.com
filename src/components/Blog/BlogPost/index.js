@@ -49,8 +49,7 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
 
   return (
     <div id='blogPostPageContainer'>
-      <HomeIcon />
-      <BackIcon path={paths.blog.page} pink />
+      <BackIcon text pink path={paths.blog.page} />
       {blogPost && (
         <div id='blogPostContainer'>
           <h1 id='blogPostName'>{blogPost.name}</h1>

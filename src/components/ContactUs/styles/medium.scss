@@ -3,8 +3,7 @@
 @media (min-width: 640px) and  (max-width: 1023px) {
     #contactUsPage {
         h1#contactUsPageTitle {
-            margin-bottom: 5%;
-            font-size: 7vw;
+            font-size: 4vw;
         }
 
         div#contactUsFormContainer {
@@ -42,14 +41,6 @@
                     font-size: 4vw;
                     margin-top: 2.5%;
                 }
-            }
-
-            img {
-                position: absolute;
-                top: 5%;
-                right: 10%;
-                width: 20vw;
-                height: 20vw;
             }
         }
     }

@@ -30,7 +30,7 @@ const MagicCalendars = ({ setMagicSpeed, currentUser }) => {
 
   return currentUser.email && adminEmails.includes(currentUser?.email) && (
     <main id='magicCalendarsPage'>
-      <HomeIcon />
+      <HomeIcon text pink />
       <UserInfo />
       <section id='titleSection' className='magicCalendarsSection'>
         <h1>{t.titleSection.title}</h1>

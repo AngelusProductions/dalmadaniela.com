@@ -24,8 +24,7 @@ export const AllBlogPosts = ({ blogPosts, getAllBlogPosts }) => {
   
   return (
     <div id="allBlogPostsPageContainer">
-      <HomeIcon />
-      <BackIcon path={paths.blog.page} pink />
+      <BackIcon text pink path={paths.blog.page} />
 
       <div id='allBlogPostsPageTitleContainer'>
         <h1>{t.title}</h1>
