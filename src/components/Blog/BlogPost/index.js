@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { connect } from 'react-redux'
-import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import parse from 'html-react-parser'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
@@ -17,12 +16,10 @@ import {
   WhatsappIcon
 } from 'react-share'
 
-import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
 
 import { paths } from '../../../constants/paths'
 import { getBlogPost } from '../../../api/blog'
-import { HOST_URL } from '../../../constants/config'
 import { i } from '../../../constants/data/assets'
 import { getBlogPostRequest, getBlogPostFailure, getBlogPostSuccess } from '../../../actions/blog'
 
@@ -34,21 +31,26 @@ const t = {
 }
 
 export const BlogPost = ({ blogPost, getBlogPost }) => {
-  const { name } = useParams()
+  const containerRef = useRef()
   const [isLinkCopied, setIsLinkCopied] = useState(false)
-  const currentUrl = `${HOST_URL}${window.location.pathname}`
+  const currentUrl = window.location.href
 
   useEffect(() => {
-    getBlogPost(name.replace(/_/g,' '))
+    containerRef.current.scrollIntoView(true)
+    const blogName = currentUrl
+      .split('/posts/')[1]
+      .replace(/_/g, ' ')
+      .replace("?", "%3F")
+    getBlogPost(blogName)
   }, [])
 
   const onCopyClick = async () => {
     await navigator.clipboard.writeText(currentUrl);
     setIsLinkCopied(true)
   }
-
+  
   return (
-    <div id='blogPostPageContainer'>
+    <div id='blogPostPageContainer' ref={containerRef}>
       <BackIcon text pink path={paths.blog.page} />
       {blogPost && (
         <div id='blogPostContainer'>

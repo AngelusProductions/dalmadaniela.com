@@ -13,7 +13,6 @@ import MagicCalendars from './MagicCalendars'
 import MagicCheckout from './MagicCalendars/MagicCheckout'
 
 import Blog from './Blog'
-import AllBlogPosts from './Blog/AllBlogPosts'
 import BlogPost from './Blog/BlogPost'
 import CreateBlogPost from './Blog/CreateBlogPost'
 
@@ -49,7 +48,6 @@ const App = ({ currentUser, onBoot }) => {
       <Route path={paths.magicCalendars.checkout} element={<MagicCheckout />} />
 
       <Route path={paths.blog.page} element={<Blog />} />
-      <Route path={paths.blog.allBlogPosts} element={<AllBlogPosts />} />
       <Route path={paths.blog.blogPost} element={<BlogPost />} />
       <Route path={paths.blog.create} element={<CreateBlogPost />} />
       

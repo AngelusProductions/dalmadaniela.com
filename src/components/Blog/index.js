@@ -55,12 +55,6 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
           </Link>
         ))}
       </div>
-
-      {blogPosts && blogPosts.length  > 3 && (
-        <Link id='blogPageAllBlogPostsLink' to={paths.blog.allBlogPosts} className='clickable'>
-          <span>{t.morePosts}</span>
-        </Link>
-      )}
     </div>
 )}
 

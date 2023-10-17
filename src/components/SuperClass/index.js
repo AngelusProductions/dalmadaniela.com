@@ -13,11 +13,6 @@ import './styles/index.scss'
 
 const SuperClass = () => {
   const containerRef = useRef()
-  const checkoutRef = useRef()
-
-  const scrollToCheckout = () => {
-    checkoutRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' })
-  }
   
   useEffect(() => {
     containerRef.current.scrollIntoView(true)
