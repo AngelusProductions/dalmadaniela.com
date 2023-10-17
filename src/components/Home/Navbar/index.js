@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './styles/index.scss'
 
 import NavbarLink from './NavbarLink'
 
-import { i } from '../../../constants/data/assets'
 import navbarLinks from '../../../constants/data/navbarLinks'
 
 const Navbar = ({ burgerMenu = false }) => {

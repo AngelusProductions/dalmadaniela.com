@@ -46,8 +46,8 @@ export default [
   {
     id: 7,
     name: 'Angelus Productions',
-    path: paths.geniusMarketingServices,
+    path: 'https://angelusproductions.com',
     side: 'right',
-    tooltip: 'Shh... Genius secrets await you. Stay tuned.'
+    tooltip: null
   }
 ]
