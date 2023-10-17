@@ -53,8 +53,8 @@
         gap: 10px;
 
         a {
-            width: 31%;
-
+            width: 50%;
+            margin: auto;
             .blogPageBlogPostContainer {
                 background: white;
                 height: 100%;
@@ -72,6 +72,14 @@
                 z-index: 99;
                 max-width: 1000px;
                 margin-bottom: 50px;
+                transition: 300ms;
+
+                &:hover {
+                    background: $yellow;
+                }
+                &:active {
+                    transform: scale(0.9);
+                }
 
                 h2 {
                     margin-bottom: 25px;
@@ -79,6 +87,7 @@
 
                 img {
                     width: 100%;
+                    border: 2px solid black;
                 }
             }
         }

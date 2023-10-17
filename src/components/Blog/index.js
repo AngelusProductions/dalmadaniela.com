@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -19,13 +19,14 @@ const t = {
 }
 
 export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
-
+  const containerRef = useRef()
   useEffect(() => {
+    containerRef.current.scrollIntoView(true)
     getAllBlogPosts()
   }, [])
 
   return (
-    <div id="blogPageContainer">
+    <div id="blogPageContainer" ref={containerRef}>
       <HomeIcon text yellow />
       <UserInfo redirect={paths.blog.page} backgroundColor='pink' />
       {adminEmails.includes(currentUser?.email) && (
@@ -48,7 +49,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
           return new Date(b.createdAt) - new Date(a.createdAt)
         }).map(({ id, name, photoUrl }) => (
           <Link key={id} to={`${paths.blog.allBlogPosts}/${name.replace(/ /g,"_")}`}>
-            <div id={`blogPageBlogPost-${id}`} key={id} className='blogPageBlogPostContainer clickable'>
+            <div id={`blogPageBlogPost-${id}`} key={id} className='blogPageBlogPostContainer'>
               <h2>{name}</h2>
               <img src={photoUrl} />
             </div>

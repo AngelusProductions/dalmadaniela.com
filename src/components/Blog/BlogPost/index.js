@@ -98,7 +98,7 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
 
       <div id='blogPostNavContainer'>
         <Link to={paths.home} className='clickable'>{t.homeLink}</Link>
-        <Link to={paths.blog.allBlogPosts} className='clickable'>{t.morePosts}</Link>
+        <Link to={paths.blog.page} className='clickable'>{t.morePosts}</Link>
       </div>
     </div>
   )
