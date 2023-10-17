@@ -68,6 +68,10 @@ export const CreateBlogPost = ({ currentUser }) => {
         bodyHtml: bodyEditor.getHTML(),
         photoUrl: `${BUCKET_URL}/${file.data.name}`,
         conclusionHtml: conclusionEditor.getHTML(),
+        slug: blogPostName
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '')
+          .replace(/\s+/g, '_')
       })
       setIsValidationError(false)
       navigate(paths.blog.page)

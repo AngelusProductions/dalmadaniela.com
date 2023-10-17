@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import parse from 'html-react-parser'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import getYouTubeID from 'get-youtube-id'
@@ -32,16 +32,14 @@ const t = {
 
 export const BlogPost = ({ blogPost, getBlogPost }) => {
   const containerRef = useRef()
+  const location = useLocation()
   const [isLinkCopied, setIsLinkCopied] = useState(false)
   const currentUrl = window.location.href
 
   useEffect(() => {
     containerRef.current.scrollIntoView(true)
-    const blogName = currentUrl
-      .split('/posts/')[1]
-      .replace(/_/g, ' ')
-      .replace("?", "%3F")
-    getBlogPost(blogName)
+    const slug = location.pathname.split('/posts/')[1]
+    getBlogPost(slug)
   }, [])
 
   const onCopyClick = async () => {

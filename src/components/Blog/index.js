@@ -47,8 +47,8 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
       <div id='blogPageHilightsContainer'>
         {blogPosts && blogPosts.sort((a, b) => {
           return new Date(b.createdAt) - new Date(a.createdAt)
-        }).map(({ id, name, photoUrl }) => (
-          <Link key={id} to={`${paths.blog.allBlogPosts}/${name.replace(/ /g,"_")}`}>
+        }).map(({ id, name, photoUrl, slug }) => (
+          <Link key={id} to={`${paths.blog.allBlogPosts}/${slug}`}>
             <div id={`blogPageBlogPost-${id}`} key={id} className='blogPageBlogPostContainer'>
               <h2>{name}</h2>
               <img src={photoUrl} />
