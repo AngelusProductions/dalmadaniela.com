@@ -1,8 +1,23 @@
-#backIcon {
+#backIcon,
+#backText {
     position: absolute;
-    height: 5vw;
-    width: 5vw;
-    left: calc(25px + 10vw);
+    left: 25px;
     top: 25px;
     z-index: 98;
+}
+
+#backIcon {
+    height: 5vw;
+    width: 5vw;
+}
+
+#backText {
+    font-family: 'Hatton';
+    font-size: 2vw;
+}
+
+@media (max-width: 640px) {
+    #backText {
+        font-size: 4vw;
+    }
 }

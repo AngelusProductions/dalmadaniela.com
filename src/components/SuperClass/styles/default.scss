@@ -40,7 +40,6 @@ main#superClassPage {
 
         li {
             font-family: 'Garet';
-            margin-bottom: 5%;
             font-size: 2vw;
 
             &:nth-last-of-type(1) {
@@ -58,27 +57,25 @@ main#superClassPage {
         }
     }
 
-    button {
-        margin: 0 0 10% 0;
+    a {
+        background: $black;
+        color: $yellow;
+        font-family: "Garbata";
+        font-weight: 600;
+        width: 35%;
+        margin: 5% auto;
         padding: 2%;
-        font-size: 4.5vw;
-        font-family: 'Garet';
-        cursor: pointer;
-        z-index: 99;
+        padding-top: 1.4%;
+        font-size: 2.5vw;
+        text-align: center;
 
-        &#superClassCta1 {
-            background: $black;
+        &#superClassCta2 {
+            width: 67%;
+        }
+        
+        &:hover {
             color: $yellow;
-            font-family: "Garbata";
-            font-weight: 600;
-            width: 56%;
-            margin: 10% auto;
-            padding-top: 1.4%;
-            
-            &:hover {
-                color: $yellow;
-                background: $pink;
-            }
+            background: $pink;
         }
     }
 
@@ -294,8 +291,6 @@ main#superClassPage {
     }
 
     #superClassPerfectForListContainer {
-        margin: 10% 0;
-
         #superClassPerfectForList {
             transform: translateX(4%);
         }
@@ -305,15 +300,6 @@ main#superClassPage {
             margin: 5% 0;
             font-family: 'Garbata';
             font-size: 4vw;
-        }
-    }
-
-    #superClassSamCartWrapper {
-        margin-top: 5%;
-
-        sc-checkout {
-            width: 50%;
-            height: 100%;
         }
     }
 
@@ -335,7 +321,7 @@ main#superClassPage {
 
         h3 {
             margin: 5% 0;
-            font-size: 2.5vw;
+            font-size: 3.5vw;
         }
 
         li {

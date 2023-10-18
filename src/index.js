@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { AppProvider as PolarisProvider } from '@shopify/polaris'
@@ -14,7 +14,9 @@ import registerServiceWorker from './registerServiceWorker'
 const history = createMemoryHistory();
 const { store, persistor } = configureStore()
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'))
+
+root.render(
   <HttpsRedirect>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
@@ -25,8 +27,7 @@ ReactDOM.render(
         </PolarisProvider>
       </PersistGate>
     </Provider>
-  </HttpsRedirect>,
-  document.getElementById('root')
+  </HttpsRedirect>
 )
 
 registerServiceWorker()

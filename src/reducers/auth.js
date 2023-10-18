@@ -8,7 +8,7 @@ import {
   CLEAR_SIGNUP_ERRORS
 } from '../constants'
 
-const login= {
+const login = {
   email: '',
   password: '',
   loading: false,

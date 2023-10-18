@@ -41,13 +41,13 @@ export default [
     name: 'Contact us',
     path: paths.contactUs,
     side: 'right',
-    tooltip: 'Yay!\nLet\'s chat soon. I\'d love to hear from you.'
+    tooltip: null
   },
   {
     id: 7,
     name: 'Angelus Productions',
-    path: paths.geniusMarketingServices,
+    path: 'https://angelusproductions.com',
     side: 'right',
-    tooltip: 'Shh... Genius secrets await you. Stay tuned.'
+    tooltip: null
   }
 ]

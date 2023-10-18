@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { connect } from 'react-redux'
-import { useParams } from 'react-router'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import parse from 'html-react-parser'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import getYouTubeID from 'get-youtube-id'
@@ -17,12 +16,10 @@ import {
   WhatsappIcon
 } from 'react-share'
 
-import HomeIcon from '../../UI/HomeIcon'
 import BackIcon from '../../UI/BackIcon'
 
 import { paths } from '../../../constants/paths'
 import { getBlogPost } from '../../../api/blog'
-import { HOST_URL } from '../../../constants/config'
 import { i } from '../../../constants/data/assets'
 import { getBlogPostRequest, getBlogPostFailure, getBlogPostSuccess } from '../../../actions/blog'
 
@@ -34,23 +31,25 @@ const t = {
 }
 
 export const BlogPost = ({ blogPost, getBlogPost }) => {
-  const { name } = useParams()
+  const containerRef = useRef()
+  const location = useLocation()
   const [isLinkCopied, setIsLinkCopied] = useState(false)
-  const currentUrl = `${HOST_URL}${window.location.pathname}`
+  const currentUrl = window.location.href
 
   useEffect(() => {
-    getBlogPost(name.replace(/_/g,' '))
+    containerRef.current.scrollIntoView(true)
+    const slug = location.pathname.split('/posts/')[1]
+    getBlogPost(slug)
   }, [])
 
   const onCopyClick = async () => {
     await navigator.clipboard.writeText(currentUrl);
     setIsLinkCopied(true)
   }
-
+  
   return (
-    <div id='blogPostPageContainer'>
-      <HomeIcon />
-      <BackIcon path={paths.blog.page} pink />
+    <div id='blogPostPageContainer' ref={containerRef}>
+      <BackIcon text pink path={paths.blog.page} />
       {blogPost && (
         <div id='blogPostContainer'>
           <h1 id='blogPostName'>{blogPost.name}</h1>
@@ -58,9 +57,7 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
           <div id='introContainer'>
             {parse(blogPost.introHtml)}
           </div>
-
           
-
           <img id='blogPostPhoto' src={blogPost.photoUrl}  />
           
           <div id='bodyContainer'>
@@ -99,7 +96,7 @@ export const BlogPost = ({ blogPost, getBlogPost }) => {
 
       <div id='blogPostNavContainer'>
         <Link to={paths.home} className='clickable'>{t.homeLink}</Link>
-        <Link to={paths.blog.allBlogPosts} className='clickable'>{t.morePosts}</Link>
+        <Link to={paths.blog.page} className='clickable'>{t.morePosts}</Link>
       </div>
     </div>
   )

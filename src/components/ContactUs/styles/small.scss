@@ -1,0 +1,72 @@
+@import '../../colors.scss';
+
+@media (max-width: 640px) {
+    #contactUsPage {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+
+        #contactUsPageLeft {
+            width: 100% !important;
+            h1#contactUsPageTitle {
+                font-size: 7vw;
+                margin-top: 10%;
+            }
+    
+            section {
+                width: 100%;
+    
+                .contactUsFormGroup {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 5%;
+    
+                    label {
+                        font-size: 4vw !important;
+                        margin-bottom: 2%;
+                    }
+    
+                    input {
+                        height: 5vh;
+                        padding-left: 2%;
+                        font-size: 3.5vw;
+                    }
+    
+                    textarea {
+                        height: 20vh;
+                        padding-left: 2%;
+                        font-size: 3.5vw;
+                    }
+                    
+                }
+                #contactUsButtonContainer {
+                    button {
+                        padding: 2.5%;
+                        font-size: 5vw;
+                    }
+                    p {
+                        margin-top: unset;
+                        margin-bottom: 5%;
+                        font-size: 4vw;
+                    }
+                }
+    
+            }
+
+            #contactUsThankYouContainer {
+                height: 50vh;
+
+                p {
+                    font-size: 5vw !important;
+                }
+                svg {
+                    height: 8vw !important;
+                }
+            }
+        }
+        div#contactUsPageRight {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

@@ -20,7 +20,7 @@ export const paths = {
     create: '/blog/create'
   },
   team: '/team',
-  contactUs: '/contact',
+  contactUs: '/contact-us',
   geniusMarketingServices: '/services',
   auth: {
     login: '/auth/login',
@@ -34,6 +34,7 @@ export const apiEndpoints = {
   signup: '/signup',
   payment: '/stripe',
   upload: '/upload',
+  contact: '/contact',
   blogPosts: {
     getAll: '/blogposts',
     create: '/blogposts/create'

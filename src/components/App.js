@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import Home from './Home'
@@ -13,13 +13,11 @@ import MagicCalendars from './MagicCalendars'
 import MagicCheckout from './MagicCalendars/MagicCheckout'
 
 import Blog from './Blog'
-import AllBlogPosts from './Blog/AllBlogPosts'
 import BlogPost from './Blog/BlogPost'
 import CreateBlogPost from './Blog/CreateBlogPost'
 
 import Team from './Team'
 import ContactUs from './ContactUs'
-import GeniusMarketingServices from './GeniusMarketingServices'
 import Signup from './Auth/Signup'
 import Login from './Auth/Login'
 
@@ -50,13 +48,11 @@ const App = ({ currentUser, onBoot }) => {
       <Route path={paths.magicCalendars.checkout} element={<MagicCheckout />} />
 
       <Route path={paths.blog.page} element={<Blog />} />
-      <Route path={paths.blog.allBlogPosts} element={<AllBlogPosts />} />
       <Route path={paths.blog.blogPost} element={<BlogPost />} />
       <Route path={paths.blog.create} element={<CreateBlogPost />} />
       
       <Route path={paths.team} element={<Team />} />
       <Route path={paths.contactUs} element={<ContactUs />} />
-      <Route path={paths.geniusMarketingServices} element={<GeniusMarketingServices />} />
 
       <Route path={paths.auth.login} element={<Login />} />
       <Route path={paths.auth.signup} element={<Signup />} />

@@ -1,0 +1,45 @@
+@import '../../colors.scss';
+
+@media (min-width: 1440px) {
+    #contactUsPage {
+        h1#contactUsPageTitle {
+
+        }
+
+        div#contactUsPageLeft {
+            section {
+                
+                .contactUsFormGroup {
+                    margin-bottom: 1%;
+                    label {
+                        font-size: 1.5vw;
+                        margin-bottom: 1%;
+                    }
+
+                    input {
+                        font-size: 1vw;
+                    }
+
+                    textarea {
+                        font-size: 1vw;
+                    }
+                }
+
+                #contactUsButtonContainer {
+                    button {
+                        font-size: 2vw;
+                    }
+
+                    p {
+                        margin-top: 5%;
+                        font-size: 1.5vw;
+                    }
+                }
+            }
+        }
+
+        svg#contactUsResetButton {
+            height: 4vw !important;
+        }
+    }
+}

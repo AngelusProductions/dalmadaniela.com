@@ -132,7 +132,7 @@ const MagicCheckout = ({ magicSpeed, currentUser }) => {
   return currentUser.email && adminEmails.includes(currentUser?.email) && (
     <main id='magicCheckoutPage'>
       <UserInfo />
-      <BackIcon path={paths.magicCalendars.page} />
+      <BackIcon text pink path={paths.magicCalendars.page} />
       <h1>{t.title}</h1>
       <div id='magicCheckoutTitleSectionWandContainer'>
         <img id='magicCheckoutTitleSectionWand' src={i.stock.wand} />

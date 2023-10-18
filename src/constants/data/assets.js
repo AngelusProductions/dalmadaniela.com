@@ -5,6 +5,7 @@ export const i = {
         instagramPhone: `${bucketPrefix}/dalma/instagramPhone.png`,
         landingPhoto: `${bucketPrefix}/dalma/landingPhoto.png`,
         linkedInLaptop: `${bucketPrefix}/dalma/linkedInLaptop.png`,
+        onPhone: `${bucketPrefix}/dalma/onPhone.png`,
         pointingUp: `${bucketPrefix}/dalma/pointingUp.png`,
         iVisaPhoto: `${bucketPrefix}/dalma/iVisaPhoto.JPG`,
     },
