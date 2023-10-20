@@ -28,98 +28,49 @@
     section#titleSection {
         text-align: center;
         padding-top: 7%;
+        background: url("https://storage.googleapis.com/dalmadaniela.com/assets/magicCalendars/landingPhoto.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
         
-        h1 {
-            font-family: 'Garbata';
-            font-size: 6.8vw;
-            width: 80%;
-            margin: auto;
-            font-weight: 300;
+        #magicCalendarsTitle {
+            width: 33vw;
+            margin-top: 5%;
         }
 
         h2 {
             font-family: 'Garet';
             text-transform: uppercase;
-            background: $pink;
-            color: $yellow;
+            background: $green;
+            color: $white;
             padding: 12px;
             font-size: 2vw;
             width: 25%;
-            margin: 25px auto;
+            margin: 2.5% auto;
             cursor: pointer;
 
             &:hover {
-                background: $yellow;
-                color: $pink;
+                background: $black;
             }
         }
 
-        h3 {
-            font-family: 'Garet';
-            font-size: 1.6vw;
-        }
-
-        #magicCalendarsTitleSectionWandContainer {
-            position: absolute;
-
-            #magicCalendarsTitleSectionWand {
-                width: 67vw;
-            }
-
-            #magicCalendarsTitleSectionWandMagic {
-                width: 30vw;
-                position: absolute;
-                top: 33%;
-                right: -17%;
-                z-index: -1;
-                animation: flash infinite 10000ms ease-in-out;
-            }
-        }
-
-        #magicCalendarsTitleSectionComputerHands {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: -2;
-        }
-
-        #magicCalendarsTitleSectionWandBackgroundMagic {
-            position: absolute;
-            z-index: -1;
-            right: 0;
-            transform: scaleX(-1);
-            top: 0;
-            width: 33vw;
-            filter: opacity(0.7);
-            right: -5vw;
-        }
-    }
-
-    section#smallBusinessSection {
-        display: flex;
-        height: fit-content;
-
-        img {
-            width: 100%;
+        #magicCalendarsSubtitle {
+            width: 55vw;
         }
     }
 
     section#personalizationSection {
-        height: fit-content;
-
-        div {
-            width: 80%;
-            display: flex;
-            justify-content: space-between;
-            padding: 10%;
-            padding-bottom: 0;
+        height: 100%;
+        #personalizationSectionLeft {
+            width: 50%;
+            display: inline-block;
+            padding: 5%;
+            box-sizing: border-box;
 
             h1 {
-                width: 48%;
                 font-family: "Garbata";
                 font-weight: 300;
-                font-size: 8vw;
+                font-size: 5.5vw;
             }
 
             img {
@@ -129,8 +80,9 @@
         }
 
         ul {
-            margin: 10%;
+            margin: 5%;
             font-family: 'Garet';
+            font-size: 2vw;
             
             li {
                 list-style: disc;
@@ -143,7 +95,7 @@
                 }
 
                 &.two {
-                    span.three {
+                    span.one, span.three {
                         color: $pink;
                     }
                 }
@@ -153,6 +105,15 @@
                         color: $pink;
                     }
                 }
+            }
+        }
+
+        #personalizationSectionRight {
+            width: 50%;
+            display: inline-block;
+            img {
+                width: 90%;
+                transform: translateY(-25%);
             }
         }
     }
@@ -201,8 +162,8 @@
 
         #whatYouGetLeftSection {
             > span {
-                background: #DA2A7D;
-                color: #FEFF7C;
+                background: $green;
+                color: white;
                 padding: 1vw;
                 font-family: "Garet";
                 text-transform: uppercase;
@@ -214,8 +175,7 @@
                 cursor: pointer;
                 
                 &:hover {
-                    background: $yellow;
-                    color: $pink;
+                    background: $black;
                 }
             }
 
@@ -292,6 +252,7 @@
 
                     img {
                         width: 25%;
+                        border-radius: 15px;
                     }
                 }
             }
@@ -320,7 +281,7 @@
                 }
 
                 hr {
-                    border: 1px #DA2A7D solid;
+                    border: 1px black solid;
                 }
 
                 .whatYouGetRightSectionBodySectionBody {
@@ -332,11 +293,9 @@
     }
 
     section#fillOutSection {
-        background: black;
         height: fit-content;
 
         h1 {
-            color: white;
             text-align: center;
             margin-top: 10%;
             font-size: 4vw;
@@ -354,7 +313,6 @@
                 width: 100%;
 
                 .fillOutSectionStepBody {
-                    color: white;
                     text-align: center;
                     font-family: "Garet";
                     margin-top: 25px;
@@ -370,7 +328,6 @@
 
                 .fillOutSectionStepBody {
                     span:nth-of-type(1) {
-                        color: $yellow;
                         display: block;
                     }
                 }
@@ -385,7 +342,6 @@
                     width: 80%;
 
                     span:nth-of-type(2) {
-                        color: $yellow;
                         display: block;
                     }
                 }
@@ -397,7 +353,6 @@
                 }
 
                 span:nth-of-type(1) {
-                    color: $yellow;
                     display: block;
                 }
             }

@@ -6,7 +6,7 @@ export default {
         subtitle: 'Because consistency can be easy!',
     },    
     personalizationSection: {
-        title: "A month's worth of social media posts with Magic Calendars",
+        title: "Consistency is easy with a year's worth of social media content!",
         bullets: {
             one: {
                 one: '100% personalized ',
@@ -19,8 +19,7 @@ export default {
             },
             three: {
                 one: 'Fill out our magic form in 5 minutes, and ',
-                two: "we'll take care of your social media posts. ",
-                three: 'Graphics included.'
+                two: "we'll take care of your social media posts Graphics and videos included."
             }
         }   
     },

@@ -38,6 +38,7 @@ export const i = {
         syringe: `${bucketPrefix}/icons/syringe.png`,
         threads: `${bucketPrefix}/icons/threads.svg`,
         threadsRealIcon: `${bucketPrefix}/icons/threadsRealIcon.png`,
+        tikTok: `${bucketPrefix}/icons/tikTok.png`,
         user: `${bucketPrefix}/icons/user.png`,
         youtube: `${bucketPrefix}/icons/youtube.svg`,
     },
@@ -84,6 +85,12 @@ export const i = {
         magic9: `${bucketPrefix}/magic/magic9.webp`,
         magic10: `${bucketPrefix}/magic/magic10.webp`,
         magicCloud: `${bucketPrefix}/magic/magicCloud.png`,
+    },
+    magicCalendars: {
+        landingPhoto: `${bucketPrefix}/magicCalendars/landingPhoto.png`,
+        smallBusinessGuy: `${bucketPrefix}/magicCalendars/smallBusinessGuy.png`,
+        subtitle: `${bucketPrefix}/magicCalendars/subtitle.png`,
+        title: `${bucketPrefix}/magicCalendars/title.png`,
     },
     stars: {
         starDownwardSpiral: `${bucketPrefix}/stars/starDownwardSpiral.webp`,
