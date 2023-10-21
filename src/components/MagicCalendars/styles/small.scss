@@ -5,19 +5,19 @@
         section#titleSection {
             padding-top: 10%;
 
-            h1 {
-                font-size: 7vw;
-                width: 70%;
+            #magicCalendarsTitle {
+                width: 80%;
             }
 
             h2 {
                 padding: 12px;
                 font-size: 4vw;
-                width: 50%;
+                width: 55%;
+                margin: 10% auto;
             }
 
-            h3 {
-                font-size: 4vw;
+            #magicCalendarsSubtitle {
+                width: 90%;
             }
 
             #magicCalendarsTitleSectionWandContainer {
@@ -45,14 +45,27 @@
     }
 
     section#personalizationSection {
-        div {
+        display: flex;
+        flex-direction: column;
+        div#personalizationSectionLeft {
+            width: 100% !important;
             h1 {
                 font-size: 6vw !important;
             }
+    
+            ul {
+                font-size: 3.5vw;
+            }
         }
-
-        ul {
-            font-size: 4.2vw;
+        div#personalizationSectionRight {
+            width: 100% !important;
+            margin-bottom: 15% !important;
+            display: flex !important;
+            justify-content: center;
+            img {
+                width: 67% !important;
+                transform: none !important;
+            }
         }
     }
 

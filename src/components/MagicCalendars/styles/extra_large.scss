@@ -1,0 +1,219 @@
+@import '../../colors.scss';
+
+@media (min-width: 1440px) {
+    #magicCalendarsPage {
+        section#titleSection {
+            padding-top: 0;
+
+            #magicCalendarsTitle {
+                width: 37%;
+                margin-top: 0;
+            }
+
+            h2 {
+                padding: 12px;
+                font-size: 2vw;
+                width: 29%;
+            }
+
+            h3 {
+                font-size: 2vw;
+            }
+
+            #magicCalendarsTitleSectionWandContainer {
+                animation: hoverLarge infinite 10000ms ease-in-out;
+
+                #magicCalendarsTitleSectionWand {
+                    width: 33vw;
+                }
+
+                #magicCalendarsTitleSectionWandMagic {
+                    width: 14vw;
+                    position: absolute;
+                    top: 34%;
+                    right: -15%;
+                    z-index: -1;
+                }
+            }
+
+            #magicCalendarsTitleSectionComputerHands {
+                width: 33%;
+                left: 33%;
+            }
+        }
+
+        section#personalizationSection {
+            height: 100%;
+            div#personalizationSectionLeft {
+                padding: 5% 3% 0% 3%;
+                h1 {
+                    font-size: 3.5vw !important;
+                }
+                ul {
+                    font-size:1.2vw !important;
+                }
+            }
+            div#personalizationSectionRight {
+                img {
+                    transform: none !important;
+                }
+            }
+        }
+
+        section#whatYouGetSection {
+            height: 100%;
+            width: calc(100vw - 12%);
+
+            #whatYouGetLeftSection {
+                width: 33%;
+
+                >span {
+                    width: 23vw !important;
+                }
+
+                >h1 {
+                    font-size: 4vw;
+                        margin-top: 2.4%;
+                }
+
+                .whatYouGetLeftSectionSection {
+                    h2 {
+                        font-size: 1.2vw !important;
+                    }
+
+                    .whatYouGetLeftSectionBodySection {
+                        .whatYouGetLeftSectionBodySectionBody {
+                            font-size: 1.1vw !important;
+                        }
+                    }
+                }
+            }
+
+            #whatYouGetRightSection {
+                #whatYouGetRightSectionLeft {
+                    height: 58% !important;
+                    margin: 13% 5%;
+                }
+
+                #whatYouGetRightSectionRight {
+                    .whatYouGetRightSectionRightTitleContainer {
+                        img {
+                            width: 1.5vw !important;
+                            height: 1.5vw !important;
+                            margin-top: 0.1vw !important;
+                            transform: translateX(-0.5vw) !important;
+                        }
+
+                        h2 {
+                            font-size: 1.2vw !important;
+                        }
+                    }
+                    .whatYouGetRightSectionBodySectionBody {
+                        font-size: 1.1vw !important;
+                    }
+                }
+            }
+        }
+
+        section#feedSection {
+            div#feedSectionRight {
+                width: 60%;
+                .feedSectionRightSection {
+                    padding: 0;
+                    padding-right: 15%; 
+                    p {
+                        font-size: 1.1vw;
+                    }
+                }
+            }
+        }
+
+        section#fillOutSection {
+            h1 {
+                margin-top: 5%;
+                font-size: 2.5vw;
+            }
+
+            #fillOutSectionStepsContainer {
+                padding: 5% !important;
+
+                .fillOutSectionStep:nth-of-type(1) img {
+                    width: 10vw !important;
+                }
+                
+                .fillOutSectionStep:nth-of-type(2) img,
+                .fillOutSectionStep:nth-of-type(3) img {
+                    width: 18vw !important;
+                }
+
+                .fillOutSectionStep {
+                    .fillOutSectionStepBody {
+                        line-height: 2.2vw;
+                        font-size: 1.5vw;
+                    }
+                }
+            }
+        }
+
+        section#chooseSection {
+            h1 {
+                width: 55%;
+                font-size: 2.5vw;
+            }
+
+            .chooseSectionSelection {
+                .chooseSectionSelectionTitleContainer {
+                    h3 {
+                        font-size: 1.6vw;
+                    }
+
+                    h2 {
+                        font-size: 3vw !important;
+                    }
+
+                    .chooseSectionSelectionDescription {
+                        font-size: 1vw !important;
+                    }
+                }
+
+                .chooseSectionSelectionBulletsContainer {
+                    .chooseSectionSelectionBullet {
+                        img {
+                            width: 1vw;
+                            height: 1vw;
+                            margin-right: 0.5vw;
+                            transform: translateY(0.2vw);
+                        }
+                        p {
+                            font-size: 0.9vw;
+                        }
+                    }
+                }
+
+                .chooseSectionSelectionCta {
+                    padding: 2%;
+                    font-size: 1.1vw;
+                }
+            }
+        }
+
+        section#innovateSection {
+            #innovateSectionWandContainer {
+                margin-top: 0;
+                #innovateSectionWand {
+                    width: 20vw;
+                }
+                #innovateSectionMagic {
+                    right: -16vw !important;
+                    bottom: -27vw !important;
+                    width: 22vw !important;
+                }
+            }
+            #innovateSectionContentContainer {
+                button {
+                    width: 62%;
+                }
+            }
+        }
+    }
+}
