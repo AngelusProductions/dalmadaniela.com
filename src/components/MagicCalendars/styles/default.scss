@@ -121,6 +121,7 @@
     section#feedSection {
         display: flex;
         height: fit-content;
+        padding: 2% 0;
 
         img {
             width: 50%;
@@ -143,7 +144,7 @@
                     font-family: 'Garbata';
                     font-size: 1.5vw;
                     margin: 7px 0;
-                    color: $pink;
+                    font-weight: 300;
                 }
 
                 p {
@@ -294,11 +295,13 @@
 
     section#fillOutSection {
         height: fit-content;
+        background: black;
 
         h1 {
             text-align: center;
             margin-top: 10%;
             font-size: 4vw;
+            color: white;
         }
 
         #fillOutSectionStepsContainer {
@@ -318,6 +321,7 @@
                     margin-top: 25px;
                     line-height: 2.5vw;
                     font-size: 1.8vw;
+                    color: white;
                 }
             }
 
@@ -360,7 +364,6 @@
     }
 
     section#chooseSection {
-        background: linear-gradient($yellow, $pink);
         height: fit-content;
         
         h1 {
@@ -373,11 +376,11 @@
 
         #chooseSectionSelectionsContainer {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             padding: 5%;
 
             .chooseSectionSelection {
-                width: 25%;
+                width: 33%;
                 background: white;
                 padding: 2%;
                 border: 2px black solid;
@@ -390,18 +393,21 @@
                     font-family: 'Garet';
                     text-transform: uppercase;
                     font-weight: 600;
-                    font-size: 1.4vw;
+                    font-size: 1.7vw;
+                    text-align: center;
                 }
 
                 h2 {
                     font-family: 'Garet';
                     font-weight: unset;
                     color: $green;
-                    font-size: 2.3vw;
+                    font-size: 4vw;
+                    text-align: center;
                 }
 
                 hr {
                     border: 1px solid black;
+                    margin-top: 0;
                 }
 
                 .chooseSectionSelectionDescription {
@@ -429,22 +435,22 @@
                     .chooseSectionSelectionBullet {
                         display: flex;
                         font-family: 'Garet';
-                        margin: 10px 0;
 
                         img {
                             width: 1.5vw;
                             height: 1.5vw;
-                            margin-right: 0.8vw;
+                            margin-right: 0.6vw;
+                            transform: translateY(0.2vw);
                         }
 
                         p {
-                            font-size: 1vw;
+                            font-size: 1.3vw;
                         }
                     }
                 }
 
                 .chooseSectionSelectionCta {
-                    background: black;
+                    background: $green;
                     width: 100%;
                     padding: 5%;
                     font-family: 'Garet';
@@ -457,13 +463,11 @@
                     margin-top: 25px;
 
                     &:hover {
-                        background: $pink;
-                        color: black;
+                        background: $black;
                     }
 
                     &:active {
-                        background: $yellow;
-                        color: $pink;
+                        background: $pink;
                     }
                 }
             }
@@ -471,10 +475,8 @@
     }
 
     section#innovateSection {
-        background: black;
         display: flex;
         flex-direction: column;
-        color: white;   
 
         #innovateSectionWandContainer {
             margin-left: 10vw;
@@ -514,21 +516,23 @@
             h1 {
                 font-family: 'Garbata';
                 font-size: 3.1vw;
+                font-weight: 300;
             }
-            h2 {
+            p {
                 font-family: 'Garet';
                 font-weight: 100;
                 margin: 25px;
+                font-size: 1.5vw;
             }
             button {
-                background: $pink;
+                background: $green;
                 font-family: 'Garet';
                 text-transform: uppercase;
                 width: 50%;
                 font-size: 1.5vw;
                 font-weight: 700;
                 padding: 1vw;
-                color: $yellow;
+                color: $white;
                 border: none;
                 cursor: pointer;
             }

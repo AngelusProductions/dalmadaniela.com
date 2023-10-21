@@ -135,7 +135,7 @@ const MagicCalendars = ({ setMagicSpeed, currentUser }) => {
         </div>
       </section>
       <section id='feedSection' className='magicCalendarsSection'>
-        <img src={i.stock.bigBenContentCalendar} />
+        <img src={i.magicCalendars.inimtableGrid} />
         <div id='feedSectionRight'>
           <div className='feedSectionRightSection'>
             <h1>{t.feedSection.one.title}</h1>
@@ -172,7 +172,7 @@ const MagicCalendars = ({ setMagicSpeed, currentUser }) => {
             </div>
           </div>
           <div className='fillOutSectionStep'>
-            <img src={i.videos.lightbulbConstruction} />
+            <img src={i.magicCalendars.lightbulbConstruction} />
             <div className='fillOutSectionStepBody'>
               <span>{t.fillOutSection.steps.three.one}</span>
               <span>{t.fillOutSection.steps.three.two}</span>
@@ -195,17 +195,15 @@ const MagicCalendars = ({ setMagicSpeed, currentUser }) => {
               </div>
             </div>
             <ul className='chooseSectionSelectionBulletsContainer'>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.one.bullets.one}</p>
-              </li>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.one.bullets.two}</p>
-              </li>
+              {Object.keys(t.chooseSection.options.one.bullets).map((bullet, index) => (
+                <li key={index} className='chooseSectionSelectionBullet'>
+                  <img src={i.icons.checkMark} />
+                  <p>{t.chooseSection.options.one.bullets[bullet]}</p>
+                </li>
+              ))}
             </ul>
             <button 
-              onClick={() => onChooseClick('standard')}
+              onClick={() => onChooseClick('month')}
               className='chooseSectionSelectionCta clickable'
             >
               {t.chooseSection.options.one.cta}
@@ -223,64 +221,18 @@ const MagicCalendars = ({ setMagicSpeed, currentUser }) => {
               </div>
             </div>
             <ul className='chooseSectionSelectionBulletsContainer'>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.two.bullets.one}</p>
-              </li>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.two.bullets.two}</p>
-              </li>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.two.bullets.three}</p>
-              </li>
+              {Object.keys(t.chooseSection.options.two.bullets).map((bullet, index) => (
+                <li key={index} className='chooseSectionSelectionBullet'>
+                  <img src={i.icons.checkMark} />
+                  <p>{t.chooseSection.options.two.bullets[bullet]}</p>
+                </li>
+              ))}
             </ul>
             <button 
-              onClick={() => onChooseClick('fast')}
+              onClick={() => onChooseClick('year')}
               className='chooseSectionSelectionCta clickable'
             >
               {t.chooseSection.options.two.cta}
-            </button>
-          </div>
-          <div className='chooseSectionSelection'>
-            <div className='chooseSectionSelectionTitleContainer'>
-              <h3>{t.chooseSection.options.three.title}</h3>
-              <h2>{t.chooseSection.options.three.price}</h2>
-              <hr />
-              <div className='chooseSectionSelectionDescription'>
-                <span>{t.chooseSection.options.three.description.choice}</span>
-                <span>{t.chooseSection.options.three.description.inbox}</span>
-                <span>{t.chooseSection.options.three.description.time}</span>
-              </div>
-            </div>
-            <ul className='chooseSectionSelectionBulletsContainer'>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.three.bullets.one}</p>
-              </li>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.three.bullets.two}</p>
-              </li>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.three.bullets.three}</p>
-              </li>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.three.bullets.four}</p>
-              </li>
-              <li className='chooseSectionSelectionBullet'>
-                <img src={i.icons.checkMark} />
-                <p>{t.chooseSection.options.three.bullets.five}</p>
-              </li>
-            </ul>
-            <button 
-              onClick={() => onChooseClick('superfast')}
-              className='chooseSectionSelectionCta clickable'
-            >
-              {t.chooseSection.options.three.cta}
             </button>
           </div>
         </div>
@@ -291,16 +243,14 @@ const MagicCalendars = ({ setMagicSpeed, currentUser }) => {
         <img id='innovateSectionMagic' src={i.stars.starTwinklesLarge} />
         </div>
         <div id='innovateSectionContentContainer'>
-          <div>
-            <img src={i.icons.face} />
-            <h4>{t.innovateSection.websiteName}</h4>
-          </div>
           <h1>{t.innovateSection.title}</h1>
-          <h2>
-            <p>{t.innovateSection.description1}</p>
-            <p>{t.innovateSection.description2}</p>
-          </h2>
-          <button className='clickable'>{t.innovateSection.cta}</button>
+          <p>{t.innovateSection.description}</p>
+          <button  
+            className='clickable'
+            onClick={() => onChooseClick('month')}
+          >
+            {t.innovateSection.cta}
+          </button>
         </div>
       </section>
     </main>

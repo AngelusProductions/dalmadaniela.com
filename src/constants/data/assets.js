@@ -87,7 +87,9 @@ export const i = {
         magicCloud: `${bucketPrefix}/magic/magicCloud.png`,
     },
     magicCalendars: {
+        inimtableGrid: `${bucketPrefix}/magicCalendars/inimtableGrid.png`,
         landingPhoto: `${bucketPrefix}/magicCalendars/landingPhoto.png`,
+        lightbulbConstruction: `${bucketPrefix}/magicCalendars/lightbulbConstruction.gif`,
         smallBusinessGuy: `${bucketPrefix}/magicCalendars/smallBusinessGuy.png`,
         subtitle: `${bucketPrefix}/magicCalendars/subtitle.png`,
         title: `${bucketPrefix}/magicCalendars/title.png`,
@@ -109,6 +111,7 @@ export const i = {
         groupOfPeopleInCircle: `${bucketPrefix}/stock/groupOfPeopleInCircle.png`,
         instagramFeed: `${bucketPrefix}/stock/instagramFeed.png`,
         jayShettyVideo: `${bucketPrefix}/stock/jayShettyVideo.png`,
+        lightbulbConstruction: `${bucketPrefix}/stock/lightbulbConstruction.svg`,
         phoneAtCoffeeShop: `${bucketPrefix}/stock/phoneAtCoffeeShop.png`,
         purpose: `${bucketPrefix}/stock/purpose.webp`,
         smallBusinessOwner: `${bucketPrefix}/stock/smallBusinessOwner.png`,
@@ -137,7 +140,5 @@ export const i = {
     },
     videos: {
         lightbulbConstruction: `${bucketPrefix}/videos/lightbulbConstruction.gif`,
-        plantGrowing: `${bucketPrefix}/videos/plantGrowing.gif`,
-        tvStatic: `${bucketPrefix}/videos/tvStatic.gif`,
     }
 }

@@ -97,58 +97,45 @@ export default {
         title: 'Step 2: Choose the Magic Calendar that best suits your needs',
         options: {
             one: {
-                title: 'Standard Magic',
-                price: '$74.99',
+                title: 'Magic Month',
+                price: '$99',
                 description: {
-                    choice: 'The Cool Choice. ',
+                    choice: 'The Smart Choice. ',
                     inbox: 'Your Magic Calendar will arrive in your inbox in ',
                     time: '24 hours!'
                 },
                 bullets: {
                     one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
-                    two: 'Eye-catching graphics'
-                },
-                cta: 'Get Standard Magic'
-            },
-            two: {
-                title: 'Fast Magic',
-                price: '$77.99',
-                description: {
-                    choice: 'The Smart Choice. ',
-                    inbox: 'Your Magic Calendar will arrive in your inbox in ',
-                    time: '12 hours!'
-                },
-                bullets: {
-                    one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
-                    two: 'Eye-catching graphics',
-                    three: 'Free photo enhancement'
-                },
-                cta: 'Get Fast Magic'
-            },
-            three: {
-                title: 'SuperFast Magic',
-                price: '$84.99',
-                description: {
-                    choice: 'The Best Choice. ',
-                    inbox: 'Your Magic Calendar will arrive in your inbox in ',
-                    time: '8 hours!'
-                },
-                bullets: {
-                    one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
-                    two: 'Eye-catching graphics & videos',
-                    three: 'Free photo enhancement',
+                    two: 'Eye-catching graphics & Reels/TikToks',
+                    three: 'Picture enhancement',
                     four: "Did you know you have a brand archetype? We'll let you know what it is.",
                     five: "Free social media marketing tips 100% tailored to your brand goals."
                 },
-                cta: 'Get SuperFast Magic'
+                cta: 'Order a Magic Month'
+            },
+            two: {
+                title: 'Magic Year',
+                price: '$499',
+                description: {
+                    choice: 'The Best Choice. ',
+                    inbox: 'Your Magic Calendar will arrive in your inbox ',
+                    time: 'every month for a year within the next 24 hours!'
+                },
+                bullets: {
+                    one: 'Custom-made, attractive captions optimized for Instagram & Facebook (and recyclable for the rest!)',
+                    two: 'Eye-catching graphics & Reels/TikToks',
+                    three: 'Picture enhancement',
+                    four: "Did you know you have a brand archetype? We'll let you know what it is.",
+                    five: "Free social media marketing tips 100% tailored to your brand goals."
+                },
+                cta: 'Order a Magic Year'
             }
         }
     },
     innovateSection: {
         websiteName: 'dalmadaniela.com',
-        title: 'Social media for everyone',
-        description1: "As someone running a business, you don't deserve to be overwhelmed or overpay.",
-        description2: "Automate your content with our easy and innovative social media solutions!",
-        cta: 'Start today with a 10% discount'
+        title: 'You deserve magic!',
+        description: "No need to break the bank to promote your business online. Stay social, stay consistent, stay happy, and automate your content with our social media game-changer.",
+        cta: 'Order a Magic Calendar'
     }
 }
