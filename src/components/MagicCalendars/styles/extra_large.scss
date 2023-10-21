@@ -54,8 +54,11 @@
                 }
             }
             div#personalizationSectionRight {
+                display: inline-flex !important;
+                justify-content: center;
                 img {
                     transform: none !important;
+                    width: 50%;
                 }
             }
         }
