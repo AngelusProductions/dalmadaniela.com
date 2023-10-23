@@ -1,15 +1,15 @@
-import { SET_MAGIC_SPEED } from '../constants'
+import { SET_MAGIC_LENGTH } from '../constants'
 
 const initialState = {
-  magicSpeed: null
+  magicLength: null
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SET_MAGIC_SPEED:
+    case SET_MAGIC_LENGTH:
       return {
         ...state,
-        magicSpeed: action.magicSpeed
+        magicLength: action.magicLength
       }
     default:
       return state

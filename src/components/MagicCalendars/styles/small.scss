@@ -6,14 +6,20 @@
             padding-top: 10%;
 
             #magicCalendarsTitle {
-                width: 80%;
+                width: 80% !important;
+            }
+            
+            img#magicCalendarsTitleWand {
+                top: 15% !important;
+                right: 3% !important;
+                width: 26vw !important;
             }
 
             h2 {
-                padding: 12px;
+                padding: 10px;
                 font-size: 4vw;
-                width: 55%;
-                margin: 10% auto;
+                width: 50%;
+                margin: 5% auto;
             }
 
             #magicCalendarsSubtitle {
@@ -59,7 +65,7 @@
         }
         div#personalizationSectionRight {
             width: 100% !important;
-            margin-bottom: 15% !important;
+            margin-bottom: 5% !important;
             display: flex !important;
             justify-content: center;
             img {
@@ -73,6 +79,7 @@
         display: flex;
         height: fit-content;
         flex-direction: column;
+        padding-top: 0 !important;
 
         img {
             width: 100% !important;
@@ -80,7 +87,6 @@
         }
 
         #feedSectionRight {
-
             .feedSectionRightSection {
                 padding: 0 5% !important;
                 margin-bottom: 25px;
@@ -90,7 +96,7 @@
                 }
 
                 h2 {
-                    font-size: 3.2vw !important;
+                    font-size: 3.6vw !important;
                 }
 
                 p {
@@ -104,6 +110,7 @@
     section#whatYouGetSection {
         flex-direction: column;
         padding-top: 0 !important;
+        padding-bottom: 0 !important;
 
         #whatYouGetLeftSection {
             width: 100% !important;
@@ -113,8 +120,9 @@
             }
 
             >span {
-                font-size: 3vw !important;
-                padding: 2vw !important;
+                font-size: 4vw !important;
+                padding: 10px !important;
+                margin: auto;
             }
 
             >h1 {
@@ -146,6 +154,7 @@
             #whatYouGetRightSectionLeft {
                 height: 50% !important;
                 margin: 5% auto !important;
+                width: 80% !important;
 
                 > img {
                     margin-bottom: 12.5px;
@@ -181,6 +190,10 @@
             flex-direction: column;
             height: 100%;
             justify-content: space-around !important;
+
+            h1 {
+                font-size: 5vw !important;
+            }
 
             .fillOutSectionStep {
                 .fillOutSectionStepBody {
@@ -218,6 +231,10 @@
     }
 
     section#chooseSection {
+        h1 {
+            font-size: 5vw !important;
+        }
+        
         #chooseSectionSelectionsContainer {
             padding: 5%;
             flex-direction: column;
@@ -233,11 +250,11 @@
                 }
 
                 h3 {
-                    font-size: 3.3vw !important;
+                    font-size: 4.6vw !important;
                 }
 
                 h2 {
-                    font-size: 5.4vw !important;
+                    font-size: 9vw !important;
                 }
 
                 .chooseSectionSelectionDescription {
@@ -272,9 +289,9 @@
             margin-top: 10vw !important;
 
             #innovateSectionMagic {
-                right: -15vw !important;
-                bottom: -22vw !important;
-                width: 23vw !important;
+                right: -21vw !important;
+                bottom: -34vw !important;
+                width: 31vw !important;
             }
         }
 
@@ -294,13 +311,13 @@
             h1 {
                 font-size: 10vw !important;
             }
-            h2 {
-                font-size: 5vw !important;
+            p {
+                font-size: 3.8vw !important;
             }
             button {
-                width: 67% !important;
-                font-size: 5vw !important;
-                padding: 5vw !important;
+                width: 75% !important;
+                font-size: 4.5vw !important;
+                padding: 3.5vw !important;
             }
         }
     }

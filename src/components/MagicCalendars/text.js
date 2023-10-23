@@ -1,6 +1,6 @@
 
 export default {
-    getMagicCalendar: 'Get a Magic Calendar',
+    getMagicCalendar: 'Get Magic Calendar',
     titleSection: {
         title: "Posting on social media doesn't have to feel like a nightmare",
         subtitle: 'Because consistency can be easy!',
@@ -19,7 +19,7 @@ export default {
             },
             three: {
                 one: 'Fill out our magic form in 5 minutes, and ',
-                two: "we'll take care of your social media posts Graphics and videos included."
+                two: "we'll take care of your social media posts. Graphics and videos included."
             }
         }   
     },
@@ -46,7 +46,7 @@ export default {
             one: {
                 title: 'A month worth of posts',
                 body: {
-                    one: '6 custom-made, professional posts with captions, graphics, edited photos, post objectives, and hashtags, ',
+                    one: '9 custom-made, professional posts with captions, graphics, edited photos, post objectives, and hashtags, ',
                     two: 'all included.'
                 }
             },
@@ -71,7 +71,7 @@ export default {
             five: {
                 title: 'Purchase on the go or subscribe',
                 body: {
-                    one: "You can choose to buy month to month or fully automate your content creation with out yearly subscribtion. Either way, you'll enjoy awesome content that fits your needs and goals. Don't miss this opportunity to save time, money, and effort with our Magic Calendars!"
+                    one: "You can choose to buy month to month or fully automate your content creation with out yearly subscribtion. Either way, you'll enjoy awesome content that fits your needs and goals. Save time, money, and effort with our Magic Calendars!"
                 }
             }
         }

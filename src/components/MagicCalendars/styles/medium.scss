@@ -3,11 +3,17 @@
 @media (min-width: 640px) and  (max-width: 1024px) {
     #magicCalendarsPage {
         section#titleSection {
-            padding-top: 10%;
+            padding-top: 5%;
+            
+            #magicCalendarsTitle {
+                width: 50% !important;
+                margin-top: 0%;
+            }
 
-            h1 {
-                font-size: 5vw;
-                width: 80%;
+            img#magicCalendarsTitleWand {
+                top: 12% !important;
+                right: 19% !important;
+                width: 17vw !important;
             }
 
             h2 {
@@ -16,8 +22,8 @@
                 width: 29%;
             }
 
-            h3 {
-                font-size: 2vw;
+            #magicCalendarsSubtitle {
+                width: 67%;
             }
                         
             #magicCalendarsTitleSectionWandContainer {
@@ -46,17 +52,26 @@
     section#personalizationSection {
         div {
             h1 {
-                font-size: 6vw !important;
+                font-size: 4.8vw !important;
             }
         }
 
         ul {
-            font-size: 4.3vw;
+            font-size: 2vw !important;
+        }
+
+        #personalizationSectionRight {
+            img {
+                transform: translate(-5%, -15%) !important;
+            }
         }
     }
 
     section#whatYouGetSection {
         #whatYouGetLeftSection {
+            > span {
+                width: 100% !important;
+            }
             .whatYouGetLeftSectionSection {
                 h2 {
                     font-size: 1.6vw !important;
@@ -72,8 +87,8 @@
 
         #whatYouGetRightSection {
             #whatYouGetRightSectionLeft {
-                height: 50% !important;
-                margin: 23% 5% !important;
+                height: 42% !important;
+                margin: 30% 5% 15% !important;
             }
 
             #whatYouGetRightSectionRight {
@@ -97,21 +112,41 @@
         }
     }
 
+    section#feedSection {
+        img {
+            margin-left: 3% !important;
+            margin-right: -2% !important;
+        }
+    }
+
+    section#fillOutSection {
+        #fillOutSectionStepsContainer {
+            .fillOutSectionStep {
+                .fillOutSectionStepBody {
+                    font-size: 1.6vw !important;
+                }
+            }
+        } 
+    }
+
     section#chooseSection {
+        h1 {
+            width: 90% !important;
+        }
         #chooseSectionSelectionsContainer {
             .chooseSectionSelection {
                 .chooseSectionSelectionDescription {
-                    font-size: 2vw !important;
+                    font-size: 1.4vw !important;
                 }
 
                 .chooseSectionSelectionBulletsContainer {
                     .chooseSectionSelectionBullet {
                         img {
-                            margin-top: 0.3vw;
-                            margin-right: 1vw !important;
+                            margin-top: 0vw;
+                            margin-right: 0.7vw !important;
                         }
                         p {
-                            font-size: 1.5vw !important;
+                            font-size: 1.3vw !important;
                         }
                     }
                 }
@@ -119,6 +154,32 @@
                 .chooseSectionSelectionCta {
                     font-size: 1.5vw !important;
                 }
+            }
+        }
+    }
+
+    section#innovateSection {
+        #innovateSectionWandContainer {
+            #innovateSectionWand {
+                width: 25vw !important;
+            }
+            #innovateSectionMagic {
+                right: -12vw !important;
+                bottom: -19vw !important;
+                width: 19vw !important;
+            }
+        }
+        #innovateSectionContentContainer {
+            margin-left: 47% !important;
+            h1 {
+                font-size: 4.5vw !important;
+            }
+            p {
+                font-size: 1.9vw !important;
+            }
+            button {
+                width: 75% !important;
+                font-size: 2vw !important;
             }
         }
     }

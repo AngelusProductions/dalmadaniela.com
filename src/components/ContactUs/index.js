@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUndo } from '@fortawesome/free-solid-svg-icons'
 
 import HomeIcon from '../UI/HomeIcon'
 
@@ -6,8 +8,6 @@ import { i } from '../../constants/data/assets'
 import { sendContactForm } from '../../api/contact'
 
 import './styles/index.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUndo } from '@fortawesome/free-solid-svg-icons'
 
 const t = {
   title: 'Contact Us',

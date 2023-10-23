@@ -1,40 +1,42 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router'
 import { connect } from 'react-redux'
 
-import HomeIcon from '../UI/HomeIcon'
 import UserInfo from '../Auth/UserInfo'
 
 import { paths } from '../../constants/paths'
 import { i } from '../../constants/data/assets'
 import { adminEmails } from '../../constants/data/admins'
-import { setMagicSpeed } from '../../actions/magicCalendars'
+import { setMagicLength } from '../../actions/magicCalendars'
 
 import t from './text.js'
 import './styles/index.scss'
 
-const MagicCalendars = ({ setMagicSpeed, currentUser }) => {
+const MagicCalendars = ({ setMagicLength, currentUser }) => {
   const navigate = useNavigate()
+  const containerRef = useRef()
 
-  const onChooseClick = speed => {
-    setMagicSpeed(speed)
+  const onChooseClick = length => {
+    setMagicLength(length)
     navigate(paths.magicCalendars.checkout)
   }
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0 });
+    containerRef.current.scrollIntoView(true)
     if(!currentUser.email) {
       navigate(`${paths.auth.login}?redirect=${paths.magicCalendars.page}`)
     }
   })
 
   return currentUser.email && adminEmails.includes(currentUser?.email) && (
-    <main id='magicCalendarsPage'>
-      <HomeIcon text pink />
+    <main id='magicCalendarsPage' ref={containerRef}>
       <UserInfo />
       <section id='titleSection' className='magicCalendarsSection'>
-        <img id='magicCalendarsTitle' src={i.magicCalendars.title} />
-        <h2 className='clickable' onClick={() => onChooseClick('superfast')}>
+        <div id='magicCalendarsTitleContainer'>
+          <img id='magicCalendarsTitle' src={i.magicCalendars.title} />
+          <img id='magicCalendarsTitleWand' src={i.stock.wand} />
+       </div>
+       <h2 className='clickable' onClick={() => onChooseClick('superfast')}>
           {t.getMagicCalendar}
         </h2>
         <img id='magicCalendarsSubtitle' src={i.magicCalendars.subtitle} />
@@ -264,8 +266,8 @@ const mapState = state => {
 }
 
 const mapDispatch = dispatch => ({
-  setMagicSpeed: async speed => {
-    dispatch(setMagicSpeed(speed))
+  setMagicLength: async speed => {
+    dispatch(setMagicLength(speed))
   }
 })
 

@@ -1,8 +1,8 @@
 import {
-  SET_MAGIC_SPEED
+  SET_MAGIC_LENGTH
 } from '../constants'
 
-export const setMagicSpeed = magicSpeed => ({
-  type: SET_MAGIC_SPEED,
-  magicSpeed
+export const setMagicLength = magicLength => ({
+  type: SET_MAGIC_LENGTH,
+  magicLength
 })

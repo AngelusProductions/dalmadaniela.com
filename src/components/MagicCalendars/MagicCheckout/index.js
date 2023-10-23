@@ -22,7 +22,7 @@ import BackIcon from '../../UI/BackIcon'
 import { paths } from '../../../constants/paths'
 import { i } from '../../../constants/data/assets'
 import { adminEmails } from '../../../constants/data/admins'
-import { setMagicSpeed } from '../../../actions/magicCalendars'
+import { setMagicLength } from '../../../actions/magicCalendars'
 import { createMagicCalendar, saveGraphic } from '../../../api/magicCalendars'
 
 import t from './text.js'
@@ -281,8 +281,8 @@ const mapState = state => {
 }
 
 const mapDispatch = dispatch => ({
-  setMagicSpeed: async speed => {
-    dispatch(setMagicSpeed(speed))
+  setMagicLength: async speed => {
+    dispatch(setMagicLength(speed))
   }
 })
 
