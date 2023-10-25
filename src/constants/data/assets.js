@@ -93,6 +93,16 @@ export const i = {
         smallBusinessGuy: `${bucketPrefix}/magicCalendars/smallBusinessGuy.png`,
         subtitle: `${bucketPrefix}/magicCalendars/subtitle.png`,
         title: `${bucketPrefix}/magicCalendars/title.png`,
+        questions: {
+            question1: `${bucketPrefix}/magicCalendars/questions/question1.png`,
+            question2: `${bucketPrefix}/magicCalendars/questions/question2.png`,
+            question3: `${bucketPrefix}/magicCalendars/questions/question3.png`,
+            question4: `${bucketPrefix}/magicCalendars/questions/question4.png`,
+            question5: `${bucketPrefix}/magicCalendars/questions/question5.png`,
+            question8: `${bucketPrefix}/magicCalendars/questions/question8.png`,
+            question9: `${bucketPrefix}/magicCalendars/questions/question9.png`,
+            question10: `${bucketPrefix}/magicCalendars/questions/question10.png`,
+        }
     },
     stars: {
         starDownwardSpiral: `${bucketPrefix}/stars/starDownwardSpiral.webp`,

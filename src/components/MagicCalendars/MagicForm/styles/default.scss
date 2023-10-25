@@ -1,7 +1,9 @@
 @import '../../../colors.scss';
 
 #magicFormContainer {
-    padding: 5%;
+    padding: 5vh 5%;
+    min-height: 90vh;
+    position: relative;
 
     h2, h3, input {
         font-family: 'Garbata';
@@ -38,22 +40,32 @@
     }
         
     .magicQuestion {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
         h2 {
             font-family: 'Garbata';
         }
 
-        .magicFormInput {
-            border: 1px solid black;
-            font-weight: 300;
-            height: 30px;
-            border-radius: 15px;
+        .magicQuestionFormContainer {
             width: 50%;
-            padding: 0 2%;
+
+            .magicFormInput {
+                border: 1px solid black;
+                font-weight: 300;
+                height: 30px;
+                border-radius: 15px;
+                width: 67%;
+                padding: 0 2%;
+            }
+        }
+
+        .magicQuestionImage {
+            width: 33%;
         }
 
         &.one {
-            margin-left: 25%;
-
             h2 {
                 font-weight: bold;
             }
@@ -61,14 +73,7 @@
                 margin: 2% 0;
             }
 
-            #magicCheckoutQuestionOneInputContainer {
-                display: flex;
 
-                input {
-                    width: 25vw;
-                    margin-left: 2vw;
-                }
-            }
         }
     }
 
@@ -94,6 +99,29 @@
             font-family: 'Garet';
             font-weight: bold;
             padding: 5px 15px;
+        }
+    }
+
+    div#magicFormProgressBarContainer {
+        width: 20%;
+        position: absolute;
+        left: 40%;
+        bottom: 10%;
+
+        .CircularProgressbar-path {
+            stroke: $green;
+            stroke-linecap: round;
+            transition: 0.5s ease 0s;
+        }
+
+        .CircularProgressbar-trail {
+            stroke: $blackFaded;
+            stroke-width: 3px;
+        }
+
+        .CircularProgressbar-text {
+            font-family: 'Hatton';
+            fill: $green;
         }
     }
 }
