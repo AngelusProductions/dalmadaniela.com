@@ -18,7 +18,7 @@ const MagicCalendars = ({ setMagicLength, currentUser }) => {
 
   const onChooseClick = length => {
     setMagicLength(length)
-    navigate(paths.magicCalendars.checkout)
+    navigate(`${paths.magicCalendars.page}/form/1`)
   }
 
   useEffect(() => {

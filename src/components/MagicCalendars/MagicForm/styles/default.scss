@@ -1,0 +1,99 @@
+@import '../../../colors.scss';
+
+#magicFormContainer {
+    padding: 5%;
+
+    h2, h3, input {
+        font-family: 'Garbata';
+    }
+
+    h3 {
+        font-weight: 300;
+    }
+
+    #magicFormTitleContainer {
+        position: relative;
+
+        h1 {
+            font-size: 6vw;
+            font-family: 'Garbata';
+            font-weight: 300;
+            margin-bottom: 5%;
+        }
+
+        img#magicFormTitleWand {
+            width: 8%;
+            position: absolute;
+            top: 10%;
+            left: 35%;
+        }
+
+        img#magicFormTitleWandMagic {
+            width: 15%;
+            transform: rotate(-112deg) scaleX(-1);
+            position: absolute;
+            top: -125%;
+            left: 50%;
+        }
+    }
+        
+    .magicQuestion {
+        h2 {
+            font-family: 'Garbata';
+        }
+
+        .magicFormInput {
+            border: 1px solid black;
+            font-weight: 300;
+            height: 30px;
+            border-radius: 15px;
+            width: 50%;
+            padding: 0 2%;
+        }
+
+        &.one {
+            margin-left: 25%;
+
+            h2 {
+                font-weight: bold;
+            }
+            h3 {
+                margin: 2% 0;
+            }
+
+            #magicCheckoutQuestionOneInputContainer {
+                display: flex;
+
+                input {
+                    width: 25vw;
+                    margin-left: 2vw;
+                }
+            }
+        }
+    }
+
+    .magicButton {
+        font-family: 'Garbata';
+        color: $pink;
+        background: none;
+        cursor: pointer;
+        position: absolute;
+        bottom: 5%;
+        font-size: 3vw;
+        
+        &#magicFormBackButton {
+            left: 5%;
+            color: $pink;
+            font-weight: 600;
+        }
+
+        &#magicFormNextButton {
+            right: 5%;
+            background: $green;
+            color: white;
+            font-family: 'Garet';
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+    }
+}

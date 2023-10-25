@@ -11,7 +11,8 @@ export const paths = {
   },
   magicCalendars: {
     page: '/magic-calendars',
-    checkout: '/magic-calendars/checkout',
+    form: '/magic-calendars/form/:question',
+    checkout: '/magic-calendars/form/checkout',
   },
   blog: {
     page: '/blog',
