@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+
+import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { Chrome } from '@uiw/react-color'
 
 import { paths } from '../../../constants/paths'
 import { setMagicValues } from '../../../actions/magicCalendars'
@@ -22,6 +24,16 @@ const ProgressProvider = ({ valueStart, valueEnd, children }) => {
 
 const MagicForm = ({ 
   brandName,
+  website,
+  socialMedia1,
+  socialMedia2,
+  description,
+  objective,
+  brandColor1,
+  brandColor2,
+  brandColor3,
+  brandColor4,
+  brandColor5,
   setMagicValues
 }) => {
   const navigate = useNavigate()
@@ -53,6 +65,79 @@ const MagicForm = ({
             <img className='magicQuestionImage' src={i.magicCalendars.questions.question1} />
         </div>
       )}
+      {questionNumber === 2 && (
+        <div className='magicQuestion two'>
+          <div className='magicQuestionFormContainer two'>
+            <h2>{t.questions.two.question1}</h2>
+            <h3>{t.questions.two.question2}</h3>
+            <input 
+              className='magicFormInput' 
+              value={website} 
+              onChange={e => setMagicValues({ website:  e.target.value })} 
+              />
+            </div>
+            <img className='magicQuestionImage' src={i.magicCalendars.questions.question2} />
+        </div>
+      )}
+      {questionNumber === 3 && (
+        <div className='magicQuestion three'>
+          <div className='magicQuestionFormContainer three'>
+            <h2>{t.questions.three.question}</h2>
+            <input 
+              className='magicFormInput' 
+              value={socialMedia1} 
+              onChange={e => setMagicValues({ socialMedia1:  e.target.value })} 
+              />
+            <input 
+              className='magicFormInput' 
+              value={socialMedia2} 
+              onChange={e => setMagicValues({ socialMedia2:  e.target.value })} 
+              />
+            </div>
+            <img className='magicQuestionImage' src={i.magicCalendars.questions.question3} />
+        </div>
+      )}
+      {questionNumber === 4 && (
+        <div className='magicQuestion four'>
+          <div className='magicQuestionFormContainer four'>
+            <h2>{t.questions.four.question1}</h2>
+            <h2>{t.questions.four.question2}</h2>
+            <h3>{t.questions.four.question3}</h3>
+            <textarea 
+              className='magicFormTextarea' 
+              value={description} 
+              onChange={e => setMagicValues({ description:  e.target.value })} 
+              />
+            </div>
+            <img className='magicQuestionImage' src={i.magicCalendars.questions.question4} />
+        </div>
+      )}
+      {questionNumber === 5 && (
+        <div className='magicQuestion five'>
+          <div className='magicQuestionFormContainer five'>
+            <h2>{t.questions.five.question}</h2>
+            <textarea 
+              className='magicFormTextarea' 
+              value={objective} 
+              onChange={e => setMagicValues({ objective:  e.target.value })} 
+              />
+            </div>
+            <img className='magicQuestionImage' src={i.magicCalendars.questions.question5} />
+        </div>
+      )}
+      {questionNumber === 6 && (
+        <div className='magicQuestion six'>
+          <h2>{t.questions.six.question}</h2>
+          
+          <div id='magicCheckoutColorPickersContainer'>
+            <Chrome color={brandColor1} onChange={brandColor => setMagicValues({ brandColor1: brandColor.hex })} />
+            <Chrome color={brandColor2} onChange={brandColor => setMagicValues({ brandColor2: brandColor.hex })} />
+            <Chrome color={brandColor3} onChange={brandColor => setMagicValues({ brandColor3: brandColor.hex })} />
+            <Chrome color={brandColor4} onChange={brandColor => setMagicValues({ brandColor4: brandColor.hex })} />
+            <Chrome color={brandColor5} onChange={brandColor => setMagicValues({ brandColor5: brandColor.hex })} />
+          </div>
+        </div>
+      )}
 
         <div id='magicFormProgressBarContainer'>
           <ProgressProvider id='magicFormProgressBarContainer' valueStart={0} valueEnd={(questionNumber / 10) * 100}>
@@ -61,15 +146,6 @@ const MagicForm = ({
                 id='magicFormProgressBar'
                 value={value} 
                 text={`${value}%`}
-                strokeWidth={8}
-                style={buildStyles({
-                  strokeLinecap: 'butt',
-                  pathTransitionDuration: 0.5,
-                  pathColor: `#56c035`,
-                  textColor: '#f88',
-                  trailColor: '#56c035',
-                  backgroundColor: '#56c035',
-                })}
               />
             )}
           </ProgressProvider>
@@ -103,7 +179,17 @@ const MagicForm = ({
 
 const mapState = state => {
   return {
-    brandName: state.magicCalendars.brandName
+    brandName: state.magicCalendars.brandName,
+    website: state.magicCalendars.website,
+    socialMedia1: state.magicCalendars.socialMedia1,
+    socialMedia2: state.magicCalendars.socialMedia2,
+    description: state.magicCalendars.description,
+    objective: state.magicCalendars.objective,
+    brandColor1: state.magicCalendars.brandColor1,
+    brandColor2: state.magicCalendars.brandColor2,
+    brandColor3: state.magicCalendars.brandColor3,
+    brandColor4: state.magicCalendars.brandColor4,
+    brandColor5: state.magicCalendars.brandColor5,
   }
 }
 

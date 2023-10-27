@@ -44,14 +44,23 @@
         justify-content: space-evenly;
         align-items: center;
 
-        h2 {
+        h2, h3 {
             font-family: 'Garbata';
+        }
+
+        h2 {
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 2% 0;
         }
 
         .magicQuestionFormContainer {
             width: 50%;
 
             .magicFormInput {
+                font-family: 'Garet';
                 border: 1px solid black;
                 font-weight: 300;
                 height: 30px;
@@ -59,21 +68,48 @@
                 width: 67%;
                 padding: 0 2%;
             }
+
+            .magicFormTextarea {
+                font-family: 'Garet';
+                border: 1px solid black;
+                height: 150px;
+                border-radius: 15px;
+                width: 66%;
+                padding: 1% 2%;
+            }
         }
 
         .magicQuestionImage {
             width: 33%;
         }
 
-        &.one {
-            h2 {
-                font-weight: bold;
-            }
-            h3 {
+        &.three {
+            input:nth-of-type(1) {
                 margin: 2% 0;
             }
+        }
 
+        &.five {
+            textarea {
+                margin-top: 2%;
+            }
+        }
 
+        &.six {
+            flex-direction: column;
+            input {
+                font-family: 'Hatton';
+                padding-top: 1%;
+            }
+            #magicCheckoutColorPickersContainer {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 2%;
+
+                .w-color-alpha:nth-of-type(2) {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -124,4 +160,37 @@
             fill: $green;
         }
     }
+}
+
+.w-color-block {
+  --block-background-color: black !important;
+  --block-box-shadow: rgb(0 0 0 / 10%) 0 1px !important;
+}
+
+.w-color-editable-input {
+    font-family: 'Garet';
+  --editable-input-label-color: #DA2A7D !important;
+  --editable-input-box-shadow: #616161 0px 0px 0px 1px inset !important;
+  --editable-input-color: #DA2A7D !important;
+}
+
+.w-color-github {
+  --github-border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  --github-background-color: #ffffff !important;
+  --github-box-shadow: rgb(0 0 0 / 15%) 0px 3px 12px !important;
+  --github-arrow-border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.w-color-compact {
+  --compact-background-color: $pink !important;
+}
+
+.w-color-material {
+  --material-background-color: #323232 !important;
+  --material-border-bottom-color: #707070 !important;
+}
+
+.w-color-alpha {
+  --alpha-pointer-background-color: #6a6a6a !important;
+  --alpha-pointer-box-shadow: rgb(0 0 0 / 37%) 0px 1px 4px 0px !important;
 }

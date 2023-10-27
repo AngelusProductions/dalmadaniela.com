@@ -12,39 +12,39 @@ export default {
             question: "Tell us your brand name:"
         },
         two: {
-            question1: "Let's check out your website (if you have one):",
-            websiteLabel: "Website:",
-            question2: "and main social media accounts:",
-            socialMediaLabel1: "Social Media:",
-            socialMediaLabel2: "Social Media:"
+            question1: "Let's check out your website",
+            question2: "(if you have one):",
         },
         three: {
-            question: "Tell us about your brand or business (There's no wrong answer!).",
-            helper: "Feel free to share your brand's mission and vision if you have them:"
+            question: "And main social media accounts:"
         },
         four: {
-            question: "What's your main business objective?"
+            question1: "Tell us about your brand or business",
+            question2: "(There's no wrong answer!)",
+            question3: "Share your brand's mission and vision if you have them:"
         },
         five: {
-            question: "What are your brand colors? Choose up to 5:"
+            question: "What's your main business objective?"
         },
         six: {
-            question: "Your brand emojis (Choose up to 5 emojis):"
+            question: "What are your brand colors? Choose up to five."
         },
         seven: {
-            question: "Is there a specific topic you'd like us to include this month?"
+            question: "What are your brand emojis? Choose up to five."
         },
         eight: {
-            question1: "Should we include national holiday posts if applicable?",
-            question2: "For which country?"
+            question1: "Is there a specific topic you'd like us to include this month?",
+            question2: "Should we include national holiday posts if applicable?",
         },
         nine: {
-            question: "Now upload up to 6 photos you'd like us to use.",
-            helper: "No pics? No problem! Just choose \"I want graphics\", and you're all set!",
-            graphics: "I want graphics"
+            question1: "Upload up to 6 photos or videos you'd like us to use. No pics or vids? No problem!",
+            question2: "Choose ",
+            question3: "Create From Scratch",
+            question4: "and you're all set!",
+            createFromScratch: "Create from Scratch"
         },
         ten: {
-            question: 'Choose your style.',
+            question1: 'Choose your style.',
             options: [
                 {
                     id: 1,
@@ -62,10 +62,8 @@ export default {
                     id: 4,
                     name: 'Surprise me!'
                 }
-            ]
-        },
-        eleven: {
-            question: "What's a good email to send your calendar link to?"
+            ],
+            question2: "Last thing! What's a good email to send your Magic Calendar to?"
         }
     },
     cta: "Create My Calendar",

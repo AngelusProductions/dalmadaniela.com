@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router'
-import { ColorPicker, useColor } from "react-color-palette"
-import "react-color-palette/css"
+// import { ColorPicker, useColor } from "react-color-palette"
+// import "react-color-palette/css"
 import EmojiPicker, {
   SkinTones,
   Theme,
@@ -54,11 +54,11 @@ const MagicCheckout = ({ magicSpeed, currentUser }) => {
   const [description, setDescription] = useState('')
   const [objective, setObjective] = useState('')
 
-  const [brandColor1, setBrandColor1] = useColor('#ffffff')
-  const [brandColor2, setBrandColor2] = useColor('#ffffff')
-  const [brandColor3, setBrandColor3] = useColor('#ffffff')
-  const [brandColor4, setBrandColor4] = useColor('#ffffff')
-  const [brandColor5, setBrandColor5] = useColor('#ffffff')
+  // const [brandColor1, setBrandColor1] = useColor('#ffffff')
+  // const [brandColor2, setBrandColor2] = useColor('#ffffff')
+  // const [brandColor3, setBrandColor3] = useColor('#ffffff')
+  // const [brandColor4, setBrandColor4] = useColor('#ffffff')
+  // const [brandColor5, setBrandColor5] = useColor('#ffffff')
 
   const [brandEmoji1, setBrandEmoji1] = useState(null)
   const [brandEmoji2, setBrandEmoji2] = useState(null)
@@ -165,11 +165,11 @@ const MagicCheckout = ({ magicSpeed, currentUser }) => {
         <div className='magicCheckoutQuestionContainer five'>
           <h2>{t.questions.five.question}</h2>
           <div id='magicCheckoutColorPickersContainer'>
-            <ColorPicker color={brandColor1} onChange={brandColor => setBrandColor1(brandColor)} />
+            {/* <ColorPicker color={brandColor1} onChange={brandColor => setBrandColor1(brandColor)} />
             <ColorPicker color={brandColor2} onChange={brandColor => setBrandColor2(brandColor)} />
             <ColorPicker color={brandColor3} onChange={brandColor => setBrandColor3(brandColor)} />
             <ColorPicker color={brandColor4} onChange={brandColor => setBrandColor4(brandColor)} />
-            <ColorPicker color={brandColor5} onChange={brandColor => setBrandColor5(brandColor)} />
+            <ColorPicker color={brandColor5} onChange={brandColor => setBrandColor5(brandColor)} /> */}
           </div>
         </div>
         <div className='magicCheckoutQuestionContainer six'>
