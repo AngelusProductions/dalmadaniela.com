@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
 
 import EmojiPicker, { SkinTones, Theme, SuggestionMode, SkinTonePickerLocation } from "emoji-picker-react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -52,7 +51,7 @@ const MagicEmojiPicker = ({
                     defaultSkinTone={SkinTones.NEUTRAL}
                     searchPlaceHolder={"What does your brand feel like?"}
                     width='75%'
-                    height='400px'
+                    height='500px'
                     lazyLoadEmojis
                     autoFocusSearch={false}
                 />
@@ -62,14 +61,4 @@ const MagicEmojiPicker = ({
   )
 }
 
-const mapState = state => {
-    return {
-
-    }
-}
-
-const mapDispatch = dispatch => ({
-
-})
-
-export default connect(mapState, mapDispatch)(MagicEmojiPicker)
+export default MagicEmojiPicker

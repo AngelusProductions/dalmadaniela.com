@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose, faPencil, faCheckCircle, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
@@ -40,14 +39,4 @@ const MagicColorPicker = ({
   )
 }
 
-const mapState = state => {
-    return {
-
-    }
-}
-
-const mapDispatch = dispatch => ({
-
-})
-
-export default connect(mapState, mapDispatch)(MagicColorPicker)
+export default MagicColorPicker
