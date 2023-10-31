@@ -6,6 +6,8 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { Chrome } from '@uiw/react-color'
 
+import MagicEmojiPicker from './MagicEmojiPicker'
+
 import { paths } from '../../../constants/paths'
 import { setMagicValues } from '../../../actions/magicCalendars'
 import { i } from '../../../constants/data/assets'
@@ -34,11 +36,17 @@ const MagicForm = ({
   brandColor3,
   brandColor4,
   brandColor5,
+  brandEmoji1,
+  brandEmoji2,
+  brandEmoji3,
+  brandEmoji4,
+  brandEmoji5,
   setMagicValues
 }) => {
   const navigate = useNavigate()
   const { question } = useParams()
   const [questionNumber, setQuestionNumber] = useState(parseInt(question))
+  const [showEmojiPicker1, setShowEmojiPicker1] = useState(false)
 
   useEffect(() => {
     setQuestionNumber(parseInt(question))
@@ -128,13 +136,44 @@ const MagicForm = ({
       {questionNumber === 6 && (
         <div className='magicQuestion six'>
           <h2>{t.questions.six.question}</h2>
-          
-          <div id='magicCheckoutColorPickersContainer'>
+          <div id='magicFormColorPickersContainer'>
             <Chrome color={brandColor1} onChange={brandColor => setMagicValues({ brandColor1: brandColor.hex })} />
             <Chrome color={brandColor2} onChange={brandColor => setMagicValues({ brandColor2: brandColor.hex })} />
             <Chrome color={brandColor3} onChange={brandColor => setMagicValues({ brandColor3: brandColor.hex })} />
             <Chrome color={brandColor4} onChange={brandColor => setMagicValues({ brandColor4: brandColor.hex })} />
             <Chrome color={brandColor5} onChange={brandColor => setMagicValues({ brandColor5: brandColor.hex })} />
+          </div>
+        </div>
+      )}
+      {questionNumber === 7 && (
+        <div className='magicQuestion seven'>
+          <h2>{t.questions.seven.question}</h2>
+          <div id='magicFormEmojiPickersContainer'>
+            <MagicEmojiPicker 
+              emoji={brandEmoji1} 
+              onEmojiClick={e => setMagicValues({ brandEmoji1: e })}
+              onEmojiClear={() => setMagicValues({ brandEmoji1: null })}
+            />
+            <MagicEmojiPicker 
+              emoji={brandEmoji2} 
+              onEmojiClick={e => setMagicValues({ brandEmoji2: e })}
+              onEmojiClear={() => setMagicValues({ brandEmoji2: null })}
+            />
+            <MagicEmojiPicker 
+              emoji={brandEmoji3} 
+              onEmojiClick={e => setMagicValues({ brandEmoji3: e })}
+              onEmojiClear={() => setMagicValues({ brandEmoji3: null })}
+            />
+            <MagicEmojiPicker 
+              emoji={brandEmoji4} 
+              onEmojiClick={e => setMagicValues({ brandEmoji4: e })}
+              onEmojiClear={() => setMagicValues({ brandEmoji4: null })}
+            />
+            <MagicEmojiPicker 
+              emoji={brandEmoji5} 
+              onEmojiClick={e => setMagicValues({ brandEmoji5: e })}
+              onEmojiClear={() => setMagicValues({ brandEmoji5: null })}
+            />
           </div>
         </div>
       )}
@@ -190,6 +229,11 @@ const mapState = state => {
     brandColor3: state.magicCalendars.brandColor3,
     brandColor4: state.magicCalendars.brandColor4,
     brandColor5: state.magicCalendars.brandColor5,
+    brandEmoji1: state.magicCalendars.brandEmoji1,
+    brandEmoji2: state.magicCalendars.brandEmoji2,
+    brandEmoji3: state.magicCalendars.brandEmoji3,
+    brandEmoji4: state.magicCalendars.brandEmoji4,
+    brandEmoji5: state.magicCalendars.brandEmoji5,
   }
 }
 

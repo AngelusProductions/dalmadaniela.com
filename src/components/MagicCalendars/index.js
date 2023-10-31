@@ -13,8 +13,8 @@ import t from './text.js'
 import './styles/index.scss'
 
 const MagicCalendars = ({ setMagicLength, currentUser }) => {
-  const navigate = useNavigate()
   const containerRef = useRef()
+  const navigate = useNavigate()
 
   const onChooseClick = length => {
     setMagicLength(length)
@@ -22,7 +22,8 @@ const MagicCalendars = ({ setMagicLength, currentUser }) => {
   }
 
   useEffect(() => {
-    containerRef.current.scrollIntoView(true)
+    debugger
+    containerRef.current?.scrollIntoView(true)
     if(!currentUser.email) {
       navigate(`${paths.auth.login}?redirect=${paths.magicCalendars.page}`)
     }

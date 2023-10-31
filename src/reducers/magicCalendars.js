@@ -17,6 +17,11 @@ const initialState = {
   brandColor3: '#FFFFFF',
   brandColor4: '#FFFFFF',
   brandColor5: '#FFFFFF',
+  brandEmoji1: null,
+  brandEmoji2: null,
+  brandEmoji3: null,
+  brandEmoji4: null,
+  brandEmoji5: null,
   country: {
       name: "United States of America", 
       code: "US", 

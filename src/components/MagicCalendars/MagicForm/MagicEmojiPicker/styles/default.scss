@@ -1,0 +1,51 @@
+@import '../../../../colors.scss';
+
+.magicEmojiPickerContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: 1% 0;
+    width: 100%;
+
+    .magicEmojiContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-bottom: 2%;
+        position: relative;
+
+        .magicEmoji {
+            font-size: 50px;
+        }
+
+        svg.magicEmojiAddIcon {
+            height: 50px;
+        }
+
+        svg.magicEmojiCloseIcon {
+            top: -20px;
+            height: 20px;
+            right: -20px;
+        }
+
+        svg.magicEmojiCloseIcon,
+        svg.magicEmojiAddIcon {
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+
+    .magicEmojiPickerContainer {
+        position: absolute;
+        z-index: 99;
+        width: 500px;
+        left: 25%;
+        width: 50%;
+    }
+
+    aside {
+        width: 100% !important;
+    }
+}
