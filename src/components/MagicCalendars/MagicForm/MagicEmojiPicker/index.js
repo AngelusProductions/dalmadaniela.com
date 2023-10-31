@@ -5,8 +5,6 @@ import EmojiPicker, { SkinTones, Theme, SuggestionMode, SkinTonePickerLocation }
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
-import { setMagicValues } from '../../../../actions/magicCalendars'
-
 import './styles/index.scss'
 
 const MagicEmojiPicker = ({
@@ -21,7 +19,6 @@ const MagicEmojiPicker = ({
         <div className='magicEmojiContainer'>
             {emoji ? (
                 <div className='magicEmojiSelectionContainer'>
-                    {/* <img src={emoji.getImageUrl()} /> */}
                     <div className='magicEmoji'>{emoji.emoji}</div>
                     <FontAwesomeIcon 
                         icon={faClose} 
@@ -72,9 +69,7 @@ const mapState = state => {
 }
 
 const mapDispatch = dispatch => ({
-  setMagicValues: async valuePairs => {
-    dispatch(setMagicValues(valuePairs))
-  }
+
 })
 
 export default connect(mapState, mapDispatch)(MagicEmojiPicker)

@@ -6,6 +6,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { Chrome } from '@uiw/react-color'
 
+import MagicColorPicker from './MagicColorPicker'
 import MagicEmojiPicker from './MagicEmojiPicker'
 
 import { paths } from '../../../constants/paths'
@@ -137,11 +138,31 @@ const MagicForm = ({
         <div className='magicQuestion six'>
           <h2>{t.questions.six.question}</h2>
           <div id='magicFormColorPickersContainer'>
-            <Chrome color={brandColor1} onChange={brandColor => setMagicValues({ brandColor1: brandColor.hex })} />
-            <Chrome color={brandColor2} onChange={brandColor => setMagicValues({ brandColor2: brandColor.hex })} />
-            <Chrome color={brandColor3} onChange={brandColor => setMagicValues({ brandColor3: brandColor.hex })} />
-            <Chrome color={brandColor4} onChange={brandColor => setMagicValues({ brandColor4: brandColor.hex })} />
-            <Chrome color={brandColor5} onChange={brandColor => setMagicValues({ brandColor5: brandColor.hex })} />
+            <MagicColorPicker 
+              color={brandColor1} 
+              onColorClick={c => setMagicValues({ brandColor1: c.hex })}
+              onColorClear={() => setMagicValues({ brandColor1: null })}
+            />
+            <MagicColorPicker 
+              color={brandColor2} 
+              onColorClick={c => setMagicValues({ brandColor2: c.hex })}
+              onColorClear={() => setMagicValues({ brandColor2: null })}
+            />
+            <MagicColorPicker 
+              color={brandColor3} 
+              onColorClick={c => setMagicValues({ brandColor3: c.hex })}
+              onColorClear={() => setMagicValues({ brandColor3: null })}
+            />
+            <MagicColorPicker 
+              color={brandColor4} 
+              onColorClick={c => setMagicValues({ brandColor4: c.hex })}
+              onColorClear={() => setMagicValues({ brandColor4: null })}
+            />
+            <MagicColorPicker 
+              color={brandColor5} 
+              onColorClick={c => setMagicValues({ brandColor5: c.hex })}
+              onColorClear={() => setMagicValues({ brandColor5: null })}
+            />
           </div>
         </div>
       )}

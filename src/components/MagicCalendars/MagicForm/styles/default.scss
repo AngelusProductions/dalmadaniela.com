@@ -104,11 +104,23 @@
             #magicFormColorPickersContainer {
                 display: flex;
                 justify-content: space-between;
-                margin-top: 2%;
+                margin-top: 5%;
                 position: relative;
+                width: 100%;
 
                 .w-color-alpha:nth-of-type(2) {
                     display: none;
+                }
+
+                .magicColorPickerContainer:nth-of-type(1) {
+                    .magicColorPicker {
+                        left: 0;
+                    }
+                }
+                .magicColorPickerContainer:nth-of-type(5) {
+                    .magicColorPicker {
+                        right: 0;
+                    }
                 }
             }
         }

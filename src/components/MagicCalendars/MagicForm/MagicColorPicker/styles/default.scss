@@ -1,0 +1,63 @@
+@import '../../../../colors.scss';
+
+.magicColorPickerContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: 1% 0;
+    width: 100%;
+
+    svg.magicColorAddIcon {
+        height: 50px;
+        cursor: pointer;
+    }
+
+    svg.magicColorSaveIcon {
+        height: 25px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+    }
+
+    .magicColorContainer {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $pink;
+        position: relative;
+
+        svg.magicColorEditIcon {
+            height: 20px;
+            cursor: pointer;
+            filter: drop-shadow(2px 5px 5px black);
+        }
+
+        svg.magicColorCloseIcon {
+            top: -20px;
+            height: 20px;
+            right: -20px;
+            position: absolute;
+            cursor: pointer;
+        }
+    }
+
+    .magicColorPicker {
+        position: absolute;
+        z-index: 99;
+        top: 75px;
+        width: 230px;
+
+        &:nth-of-type(1) {
+            left: 0;
+        }
+    }
+
+    aside {
+        width: 100% !important;
+    }
+}
