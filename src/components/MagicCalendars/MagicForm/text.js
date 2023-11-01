@@ -37,10 +37,10 @@ export default {
             question2: "Should we include national holiday posts if applicable?",
         },
         nine: {
-            question1: "Upload up to 6 photos or videos you'd like us to use. No pics or vids? No problem!",
+            question1: "Upload up to six photos or videos you'd like us to use. No pics or vids? No problem!",
             question2: "Choose ",
             question3: "Create From Scratch",
-            question4: "and you're all set!",
+            question4: " and you're all set!",
             createFromScratch: "Create from Scratch"
         },
         ten: {

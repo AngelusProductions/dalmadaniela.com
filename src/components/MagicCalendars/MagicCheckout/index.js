@@ -14,7 +14,7 @@ import { Uploader } from "uploader"
 import { UploadDropzone } from "react-uploader"
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import { CountryDropdown } from 'react-country-region-selector';
+// import { CountryDropdown } from 'react-country-region-selector';
 
 import UserInfo from '../../Auth/UserInfo'
 import BackIcon from '../../UI/BackIcon'
@@ -220,12 +220,12 @@ const MagicCheckout = ({ magicSpeed, currentUser }) => {
               onChange={() => setUseHolidays(!useHolidays)} 
             />
           </div>
-          {useHolidays && (
+          {/* {useHolidays && (
             <div id='magicCheckoutQuestionEightCountryContainer'>
               <h2>{t.questions.eight.question2}</h2>
               <CountryDropdown value={country} onChange={c => setCountry(c)} />
             </div>
-          )}
+          )} */}
         </div>
         <div className='magicCheckoutQuestionContainer nine'>
           <h2>{t.questions.nine.question}</h2>

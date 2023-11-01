@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
-import { Chrome } from '@uiw/react-color'
+import { CircularProgressbar } from 'react-circular-progressbar'
+import 'react-circular-progressbar/dist/styles.css'
+import Toggle from 'react-toggle'
+import ReactFlagsSelect from "react-flags-select"
+import { Uploader } from "uploader"
+import { UploadDropzone } from "react-uploader"
 
 import MagicColorPicker from './MagicColorPicker'
 import MagicEmojiPicker from './MagicEmojiPicker'
@@ -15,6 +18,10 @@ import { i } from '../../../constants/data/assets'
 
 import t from './text'
 import './styles/index.scss'
+
+const graphicUploader = Uploader({
+  apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ"
+})
 
 const ProgressProvider = ({ valueStart, valueEnd, children }) => {
   const [value, setValue] = useState(valueStart);
@@ -42,12 +49,16 @@ const MagicForm = ({
   brandEmoji3,
   brandEmoji4,
   brandEmoji5,
+  specificTopics,
+  useHolidays,
+  country,
+  createFromScratch,
+  graphics,
   setMagicValues
 }) => {
   const navigate = useNavigate()
   const { question } = useParams()
   const [questionNumber, setQuestionNumber] = useState(parseInt(question))
-  const [showEmojiPicker1, setShowEmojiPicker1] = useState(false)
 
   useEffect(() => {
     setQuestionNumber(parseInt(question))
@@ -198,18 +209,85 @@ const MagicForm = ({
           </div>
         </div>
       )}
-
-        <div id='magicFormProgressBarContainer'>
-          <ProgressProvider id='magicFormProgressBarContainer' valueStart={0} valueEnd={(questionNumber / 10) * 100}>
-            {value => (
-              <CircularProgressbar
-                id='magicFormProgressBar'
-                value={value} 
-                text={`${value}%`}
+      {questionNumber === 8 && (
+        <div className='magicQuestion eight'>
+          <div className='magicQuestionFormContainer eight'>
+            <div className='magicFormQuestionEightContainer'>  
+              <h2>{t.questions.eight.question1}</h2>
+              <textarea 
+                className='magicFormTextarea' 
+                value={specificTopics} 
+                onChange={e => setMagicValues({ specificTopics:  e.target.value })} 
               />
-            )}
-          </ProgressProvider>
+            </div>
+            <div className='magicFormQuestionEightContainer'>  
+              <h3>{t.questions.eight.question2}</h3>
+              <div id='magicFormQuestionEightToggleContainer'>
+                <Toggle
+                  id='toggleUseHolidays'
+                  onChange={() => setMagicValues({ useHolidays:  !useHolidays })} 
+                  defaultChecked={useHolidays}
+                />
+                {useHolidays && (
+                    <ReactFlagsSelect
+                      selected={country}
+                      onSelect={(code) => setMagicValues({ country: code })}
+                    />
+                )}
+              </div>
+            </div>
+          </div>
+          <img className='magicQuestionImage' src={i.magicCalendars.questions.question8} />
         </div>
+      )}
+      {questionNumber === 9 && (
+        <div className='magicQuestion nine'>
+          <div className='magicQuestionFormContainer nine'>
+            <h2>{t.questions.nine.question1}</h2>
+            <h3>
+              {t.questions.nine.question2}
+              <b>{t.questions.nine.question3}</b>
+              {t.questions.nine.question4}
+            </h3>
+            <div id='magicFormQuestionNineToggleContainer'>
+              <label>{t.questions.nine.createFromScratch}</label>
+              <Toggle
+                id='toggleCreateFromScratch'
+                onChange={() => setMagicValues({ createFromScratch: !createFromScratch })} 
+                defaultChecked={createFromScratch}
+              />
+            </div>
+            
+            <input type='file' name='file' onChange={handleFileChange}/>
+
+            {/* {!createFromScratch && (
+                <UploadDropzone 
+                  uploader={graphicUploader}
+                  options={{ multi: true }}
+                  onUpdate={graphics => {
+                    debugger
+                    setMagicValues({ graphics })
+                  }}
+                  width="100%"
+                  height="100%" 
+                />
+            )} */}
+          </div>
+          <img className='magicQuestionImage' src={i.magicCalendars.questions.question9} />
+        </div>
+      )}
+
+      <div id='magicFormProgressBarContainer'>
+        <ProgressProvider id='magicFormProgressBarContainer' valueStart={0} valueEnd={(questionNumber / 10) * 100}>
+          {value => (
+            <CircularProgressbar
+              id='magicFormProgressBar'
+              value={value} 
+              text={`${value}%`}
+            />
+          )}
+        </ProgressProvider>
+      </div>
 
       {questionNumber !== 1 && (
         <button 
@@ -255,6 +333,11 @@ const mapState = state => {
     brandEmoji3: state.magicCalendars.brandEmoji3,
     brandEmoji4: state.magicCalendars.brandEmoji4,
     brandEmoji5: state.magicCalendars.brandEmoji5,
+    specificTopics: state.magicCalendars.specificTopics,
+    useHolidays: state.magicCalendars.useHolidays,
+    country: state.magicCalendars.country,
+    createFromScratch: state.magicCalendars.createFromScratch,
+    graphics: state.magicCalendars.graphics,
   }
 }
 
