@@ -25,6 +25,7 @@ const initialState = {
   country: 'US',  
   createFromScratch: false,
   graphics: [],
+  styleId: 4
 }
 
 export default (state = initialState, action) => {

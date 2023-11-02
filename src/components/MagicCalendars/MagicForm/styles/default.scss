@@ -42,7 +42,7 @@
     .magicQuestion {
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: flex-start;
 
         h2, h3 {
             font-family: 'Garbata';
@@ -80,7 +80,8 @@
         }
 
         .magicQuestionImage {
-            width: 33%;
+            height: 33vh;
+            max-width: 50%;
         }
 
         &.three {
@@ -215,6 +216,50 @@
                 }
             }
         }
+        
+        &.ten {
+            #magicFormQuestionTenRadioContainer {
+                display: flex;
+                justify-content: space-between;
+                margin: 2% 0;
+
+                .magicFormQuestionTenRadio {
+                    display: flex;
+                    flex-direction: column;
+                    font-family: 'Hatton';
+                    justify-content: space-between;
+                    text-align: center;
+                    cursor: pointer;
+
+                    img {
+                        width: 8vw;
+                        border-radius: 15px;
+                        border: 1px solid $pink;
+                    }
+
+                    label {
+                        margin: 5% 0 2%;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color: $pink;
+                    }
+
+                    input {
+                        width: 2vw;
+                        height: 2vw;
+                        margin: auto;
+                        filter: hue-rotate(110deg);
+                        &::after {
+                            background: $pink;
+                        }
+                    }
+                }
+            }
+
+            .magicFormInput {
+                margin-top: 2%;
+            }
+        }
     }
 
     .magicButton {
@@ -232,7 +277,8 @@
             font-weight: 600;
         }
 
-        &#magicFormNextButton {
+        &#magicFormNextButton,
+        &#magicFormCheckoutButton {
             right: 5%;
             background: $green;
             color: white;
@@ -240,12 +286,16 @@
             font-weight: bold;
             padding: 5px 15px;
         }
+
+        &#magicFormCheckoutButton {
+            font-size: 2vw;
+        }
     }
 
     div#magicFormProgressBarContainer {
-        width: 20%;
         position: absolute;
-        left: 40%;
+        width: 10%;
+        left: 45%;
         bottom: 10%;
 
         .CircularProgressbar-path {

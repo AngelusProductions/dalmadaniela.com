@@ -1,3 +1,5 @@
+import { bucketPrefix } from "../../../constants/data/assets"
+
 export default {
     title: "Magic Form",
     yourMagicSpeed: "Speed:",
@@ -49,19 +51,23 @@ export default {
             options: [
                 {
                     id: 1,
-                    name: 'Minimalist'
+                    name: 'Minimalistic',
+                    url: `${bucketPrefix}/magicCalendars/styles/minimalistic.jpg`
                 },
                 {
                     id: 2,
-                    name: 'Aesthetic'
+                    name: 'Aesthetic',
+                    url: `${bucketPrefix}/magicCalendars/styles/aesthetic.jpg`
                 },
                 {
                     id: 3,
-                    name: 'Business'
+                    name: 'Business',
+                    url: `${bucketPrefix}/magicCalendars/styles/business.jpg`
                 },
                 {
                     id: 4,
-                    name: 'Surprise me!'
+                    name: 'Surprise me!',
+                    url: `${bucketPrefix}/magicCalendars/styles/surpriseMe.jpg`
                 }
             ],
             question2: "Last thing! What's a good email to send your Magic Calendar to?"

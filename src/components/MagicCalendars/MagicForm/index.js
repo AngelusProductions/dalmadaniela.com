@@ -56,6 +56,8 @@ const MagicForm = ({
   country,
   createFromScratch,
   graphics,
+  styleId,
+  email,
   setMagicValues
 }) => {
   const navigate = useNavigate()
@@ -65,13 +67,6 @@ const MagicForm = ({
   useEffect(() => {
     setQuestionNumber(parseInt(question))
   }, [question])
-
-  
-  const handleFileChange = e =>
-    setMagicValues({ graphics: {
-      preview: URL.createObjectURL(e.target.files[0]),
-      data: e.target.files[0],
-  }})
 
   return (
     <main id='magicFormContainer'>
@@ -310,6 +305,29 @@ const MagicForm = ({
           <img className='magicQuestionImage' src={i.magicCalendars.questions.question9} />
         </div>
       )}
+      {questionNumber === 10 && (
+        <div className='magicQuestion ten'>
+          <div className='magicQuestionFormContainer ten'>
+            <h2>{t.questions.ten.question1}</h2>
+            <div id='magicFormQuestionTenRadioContainer'>
+             {t.questions.ten.options.map(o => (
+              <div className='magicFormQuestionTenRadio clickable' onClick={() => setMagicValues({ styleId: o.id })}> 
+                <img src={o.url} />
+                <label htmlFor={o.id}>{o.name}</label>  
+                <input type='radio' name='style' value={o.id} checked={styleId === o.id} />
+              </div>
+             ))}
+            </div>
+            <h2>{t.questions.ten.question2}</h2>
+            <input 
+              className='magicFormInput' 
+              value={email} 
+              onChange={e => setMagicValues({ email:  e.target.value })} 
+            />
+          </div>
+          <img className='magicQuestionImage' src={i.magicCalendars.questions.question10} />
+        </div>
+      )}
 
       <div id='magicFormProgressBarContainer'>
         <ProgressProvider id='magicFormProgressBarContainer' valueStart={0} valueEnd={(questionNumber / 10) * 100}>
@@ -342,7 +360,7 @@ const MagicForm = ({
         >Next Question</button>
       )}
       {questionNumber === 10 && (
-        <button id='magicFormCheckoutButton' className='clickable' 
+        <button id='magicFormCheckoutButton' className='magicButton clickable' 
         ><Link to={paths.magicCalendars.checkout}>Review in Magic Checkout</Link></button>
       )}
     </main>
@@ -372,6 +390,8 @@ const mapState = state => {
     country: state.magicCalendars.country,
     createFromScratch: state.magicCalendars.createFromScratch,
     graphics: state.magicCalendars.graphics,
+    styleId: state.magicCalendars.styleId,
+    email: state.magicCalendars.email
   }
 }
 
