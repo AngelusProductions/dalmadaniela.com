@@ -29,7 +29,7 @@ const MagicColorPicker = ({
             <div className='magicColorPicker'>
                 <Chrome 
                     onChange={onColorClick} 
-                    color={color || '#000000'}
+                    color={color || '#DA2A7D'}
                     placement={'topLeft'}
                 />
                 <FontAwesomeIcon icon={faCheckCircle} onClick={() => setShowColorPicker(false)} className='magicColorSaveIcon clickable' color='#DA2A7D' />
