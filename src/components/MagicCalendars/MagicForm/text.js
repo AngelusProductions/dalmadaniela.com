@@ -41,7 +41,8 @@ export default {
             question2: "Choose ",
             question3: "Create From Scratch",
             question4: " and you're all set!",
-            createFromScratch: "Create from Scratch"
+            createFromScratch: "Create from Scratch",
+            upload:  "Click here to upload..."
         },
         ten: {
             question1: 'Choose your style.',

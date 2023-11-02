@@ -7,7 +7,9 @@ import 'react-circular-progressbar/dist/styles.css'
 import Toggle from 'react-toggle'
 import ReactFlagsSelect from "react-flags-select"
 import { Uploader } from "uploader"
-import { UploadDropzone } from "react-uploader"
+import { UploadButton } from "react-uploader"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClose } from '@fortawesome/free-solid-svg-icons'
 
 import MagicColorPicker from './MagicColorPicker'
 import MagicEmojiPicker from './MagicEmojiPicker'
@@ -63,6 +65,13 @@ const MagicForm = ({
   useEffect(() => {
     setQuestionNumber(parseInt(question))
   }, [question])
+
+  
+  const handleFileChange = e =>
+    setMagicValues({ graphics: {
+      preview: URL.createObjectURL(e.target.files[0]),
+      data: e.target.files[0],
+  }})
 
   return (
     <main id='magicFormContainer'>
@@ -257,21 +266,46 @@ const MagicForm = ({
                 defaultChecked={createFromScratch}
               />
             </div>
-            
-            <input type='file' name='file' onChange={handleFileChange}/>
-
-            {/* {!createFromScratch && (
-                <UploadDropzone 
+            {!createFromScratch && graphics.length < 6 && (
+                <UploadButton 
                   uploader={graphicUploader}
-                  options={{ multi: true }}
-                  onUpdate={graphics => {
-                    debugger
-                    setMagicValues({ graphics })
+                  options={{ 
+                    multi: true, 
+                    maxFileCount: 6 - graphics.length,
+                    maxFileSizeBytes: 524288000,
+                    mimeTypes: ['image/*', 'video/*']
+                  }}
+                  onComplete={newGraphics => {
+                    const existingUploadIds = graphics.map(g => g.originalFile.metadata.uploadId)
+                    newGraphics = newGraphics.filter(g => !existingUploadIds.includes(g.originalFile.metadata.uploadId))
+                    setMagicValues({ graphics: [...graphics, ...newGraphics] })
                   }}
                   width="100%"
                   height="100%" 
-                />
-            )} */}
+                >
+                  {({ onClick }) => <button onClick={onClick} className='clickable'>
+                    {t.questions.nine.upload}
+                  </button>}
+                </UploadButton>
+            )}
+            {!createFromScratch && graphics.map(g => {
+              return (
+                <div key={g.originalFile.metadata.uploadId} className='magicFormGraphicContainer'>
+                  {g.originalFile.mime.includes('image') && <img src={g.fileUrl} />}
+                  {g.originalFile.mime.includes('video') && <video src={g.fileUrl} />}
+                  <h4>{g.originalFile.originalFileName}</h4>
+                  <FontAwesomeIcon 
+                    icon={faClose} 
+                    color={'#DA2A7D'} 
+                    className='magicFormGraphicCloseIcon clickable' 
+                    onClick={() => {
+                      setMagicValues({ graphics: graphics.filter(graphic => 
+                      graphic.originalFile.metadata.uploadId !== g.originalFile.metadata.uploadId) 
+                    })}}
+                  />
+                </div>
+              )
+            })}
           </div>
           <img className='magicQuestionImage' src={i.magicCalendars.questions.question9} />
         </div>

@@ -22,7 +22,6 @@ const MagicCalendars = ({ setMagicLength, currentUser }) => {
   }
 
   useEffect(() => {
-    debugger
     containerRef.current?.scrollIntoView(true)
     if(!currentUser.email) {
       navigate(`${paths.auth.login}?redirect=${paths.magicCalendars.page}`)

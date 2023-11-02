@@ -174,7 +174,7 @@
                 #magicFormQuestionNineToggleContainer {
                     display: flex;
                     align-items: center;
-                    margin: 5% 0 2%;
+                    margin: 5% 0;
 
                     .react-toggle {
                         margin-left: 2%;
@@ -183,6 +183,35 @@
                     label {
                         font-family: 'Garet';
                     }
+                }
+
+                button {
+                    background: $pink;
+                    color: white;
+                    font-family: 'Hatton';
+                    font-weight: 600;
+                    padding: 12px 10px 10px;
+                    cursor: pointer;
+                }
+
+                .magicFormGraphicContainer {
+                    display: flex;
+                    align-items: center;
+                    margin: 20px 0;
+
+                    img, video {
+                        height: 50px;
+                        margin-right: 10px;
+                    }
+
+                    svg {
+                        cursor: pointer;
+                        margin-left: 10px;
+                    }
+                }
+
+                .uploader__submitted-file__container {
+                    display: none;
                 }
             }
         }
@@ -268,4 +297,57 @@
 .w-color-alpha {
   --alpha-pointer-background-color: #6a6a6a !important;
   --alpha-pointer-box-shadow: rgb(0 0 0 / 37%) 0px 1px 4px 0px !important;
+}
+
+.uploader__widget-base__children {
+    font-family: 'Garbata';
+    font-weight: 300;
+
+    .btn {
+        font-weight: bold;
+        font-family: 'Garbata';
+    }
+
+    .btn--primary {
+        background: $pink;
+        border: none;
+        border-radius: 0;
+        font-family: 'Garbata';
+
+        input {
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: $pink !important;
+            transform: scale(1.05);
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+.uploader__modal__close svg {
+    color: $pink !important;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.uploader__submitted-file__name {
+    font-family: 'Hatton';
+    font-weight: bold;
+}
+
+.uploader__submitted-file__container {
+    background: $pinkFaded;
+}
+
+.uploader__submitted-file__inner {
+    filter: hue-rotate(267deg);
 }
