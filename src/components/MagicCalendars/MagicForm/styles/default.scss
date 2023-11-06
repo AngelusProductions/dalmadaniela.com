@@ -43,6 +43,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: flex-start;
+        min-height: 500px;
 
         h2, h3 {
             font-family: 'Garbata';
@@ -54,6 +55,12 @@
 
         h3 {
             margin: 2% 0;
+        }
+
+        h4.magicFormError {
+            color: $pink;
+            font-size: 1em;
+            margin-top: 2%;
         }
 
         .magicQuestionFormContainer {
@@ -98,6 +105,8 @@
 
         &.six {
             flex-direction: column;
+            justify-content: flex-start;
+
             input {
                 font-family: 'Hatton';
                 padding-top: 1%;
@@ -130,6 +139,8 @@
         &.seven {
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
+
             #magicFormEmojiPickersContainer {
                 display: flex;
                 margin-top: 5%;
@@ -169,6 +180,8 @@
 
         &.nine {
             align-items: flex-start;
+            min-height: 700px;
+
             .magicQuestionFormContainer {
                 height: 250px;
 
@@ -218,10 +231,17 @@
         }
         
         &.ten {
+            .styleTooltip {
+                font-family: 'Garet' !important;
+            }
             #magicFormQuestionTenRadioContainer {
                 display: flex;
                 justify-content: space-between;
-                margin: 2% 0;
+                margin: 3% 0;
+
+                .styleTooltip {
+                    font-family: 'Garet' !important;
+                }
 
                 .magicFormQuestionTenRadio {
                     display: flex;
@@ -231,24 +251,28 @@
                     text-align: center;
                     cursor: pointer;
 
-                    img {
-                        width: 8vw;
-                        border-radius: 15px;
-                        border: 1px solid $pink;
-                    }
-
                     label {
                         margin: 5% 0 2%;
                         font-weight: bold;
                         text-transform: uppercase;
                         color: $pink;
+                        cursor: pointer;
+                    }
+
+                    hr {
+                        width: 100%;
+                        margin-bottom: 15px;
+                        background: $pink;
+                        border: 1px solid $pink;
+                        height: 0px;
                     }
 
                     input {
                         width: 2vw;
                         height: 2vw;
-                        margin: auto;
+                        margin: 5% auto 0;
                         filter: hue-rotate(110deg);
+                        cursor: pointer;
                         &::after {
                             background: $pink;
                         }
@@ -287,8 +311,13 @@
             padding: 5px 15px;
         }
 
-        &#magicFormCheckoutButton {
-            font-size: 2vw;
+        &.disabled {
+            background: $blackFaded !important;
+            cursor: not-allowed !important;
+        }
+
+        &.magicFormNextButtonReview {
+            font-size: 2vw !important;
         }
     }
 
@@ -389,6 +418,8 @@
     }
 }
 
+.uploader__main-screen__info,
+.uploader__image-editor__header,
 .uploader__submitted-file__name {
     font-family: 'Hatton';
     font-weight: bold;
@@ -400,4 +431,10 @@
 
 .uploader__submitted-file__inner {
     filter: hue-rotate(267deg);
+}
+
+.tippy-popper {
+    font-family: 'Garet' !important;
+    font-weight: 300 !important;
+    font-size: 10px !important;
 }

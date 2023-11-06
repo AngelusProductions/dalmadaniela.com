@@ -10,6 +10,8 @@ import { Uploader } from "uploader"
 import { UploadButton } from "react-uploader"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
+import { Tooltip } from 'react-tippy'
+import 'react-tippy/dist/tippy.css'
 
 import MagicColorPicker from './MagicColorPicker'
 import MagicEmojiPicker from './MagicEmojiPicker'
@@ -17,6 +19,7 @@ import MagicEmojiPicker from './MagicEmojiPicker'
 import { paths } from '../../../constants/paths'
 import { setMagicValues } from '../../../actions/magicCalendars'
 import { i } from '../../../constants/data/assets'
+import { isValidUrl, isValidEmail } from '../../../utils/validators'
 
 import t from './text'
 import './styles/index.scss'
@@ -62,11 +65,57 @@ const MagicForm = ({
 }) => {
   const navigate = useNavigate()
   const { question } = useParams()
+  
   const [questionNumber, setQuestionNumber] = useState(parseInt(question))
+  const [isErrorInitialized, setIsErrorInitialized] = useState(false)
+  const [error, setError] = useState(null)
+
+  const Error = () => isErrorInitialized && error && (
+    <h4 className='magicFormError'>{error}</h4>
+  )
+
+  const getErrorText = () => {
+    switch (questionNumber) {
+      case 1:
+        return !brandName ? t.questions.one.error : null
+      case 2:
+        return !website || !isValidUrl(website) ? t.questions.two.error : null
+      case 3:
+        const isError = (socialMedia1.length === 0 && socialMedia2.length === 0)
+          || (socialMedia1.length > 0 && !isValidUrl(socialMedia1)) 
+          || (socialMedia2.length > 0 && !isValidUrl(socialMedia2)) 
+        return isError ? t.questions.three.error : null
+      case 4:
+        return !description ? t.questions.four.error : null
+      case 5:
+        return !objective ? t.questions.five.error : null
+      case 6:
+        return !brandColor1 && !brandColor2 && !brandColor3 && !brandColor4 && !brandColor5 ? t.questions.six.error : null
+      case 7:
+        return !brandEmoji1 && !brandEmoji2 && !brandEmoji3 && !brandEmoji4 && !brandEmoji5 ? t.questions.seven.error : null
+      case 8:
+        return !specificTopics ? t.questions.eight.error : null
+      case 9:
+        return !createFromScratch && graphics.length === 0 ? t.questions.nine.error : null
+      case 10:
+        return !email || !isValidEmail(email) ? t.questions.ten.error : null
+        default:
+        return null
+    }
+  }
 
   useEffect(() => {
     setQuestionNumber(parseInt(question))
   }, [question])
+
+  useEffect(() => {
+    setError(getErrorText())
+  }, [
+      brandName, website, socialMedia1, socialMedia2, description, objective, 
+      brandColor1, brandColor2, brandColor3, brandColor4, brandColor5, brandEmoji1, 
+      brandEmoji2, brandEmoji3, brandEmoji4, brandEmoji5, specificTopics, useHolidays, 
+      country, createFromScratch, graphics, styleId, email
+  ])
 
   return (
     <main id='magicFormContainer'>
@@ -75,6 +124,7 @@ const MagicForm = ({
         <img id='magicFormTitleWand' src={i.stock.wand} />
         <img id='magicFormTitleWandMagic' src={i.stars.starTwinklesLarge} />
       </div>
+
       {questionNumber === 1 && (
         <div className='magicQuestion one'>
           <div className='magicQuestionFormContainer one'>
@@ -84,9 +134,10 @@ const MagicForm = ({
               className='magicFormInput' 
               value={brandName} 
               onChange={e => setMagicValues({ brandName:  e.target.value })} 
-              />
-            </div>
-            <img className='magicQuestionImage' src={i.magicCalendars.questions.question1} />
+            />
+            <Error />
+          </div>
+          <img className='magicQuestionImage' src={i.magicCalendars.questions.question1} />
         </div>
       )}
       {questionNumber === 2 && (
@@ -98,9 +149,10 @@ const MagicForm = ({
               className='magicFormInput' 
               value={website} 
               onChange={e => setMagicValues({ website:  e.target.value })} 
-              />
-            </div>
-            <img className='magicQuestionImage' src={i.magicCalendars.questions.question2} />
+            />
+            <Error />          
+          </div>
+          <img className='magicQuestionImage' src={i.magicCalendars.questions.question2} />
         </div>
       )}
       {questionNumber === 3 && (
@@ -111,14 +163,15 @@ const MagicForm = ({
               className='magicFormInput' 
               value={socialMedia1} 
               onChange={e => setMagicValues({ socialMedia1:  e.target.value })} 
-              />
+            />
             <input 
               className='magicFormInput' 
               value={socialMedia2} 
               onChange={e => setMagicValues({ socialMedia2:  e.target.value })} 
-              />
-            </div>
-            <img className='magicQuestionImage' src={i.magicCalendars.questions.question3} />
+            />
+            <Error />
+          </div>
+          <img className='magicQuestionImage' src={i.magicCalendars.questions.question3} />
         </div>
       )}
       {questionNumber === 4 && (
@@ -131,9 +184,10 @@ const MagicForm = ({
               className='magicFormTextarea' 
               value={description} 
               onChange={e => setMagicValues({ description:  e.target.value })} 
-              />
-            </div>
-            <img className='magicQuestionImage' src={i.magicCalendars.questions.question4} />
+            />
+            <Error />
+          </div>
+          <img className='magicQuestionImage' src={i.magicCalendars.questions.question4} />
         </div>
       )}
       {questionNumber === 5 && (
@@ -144,9 +198,10 @@ const MagicForm = ({
               className='magicFormTextarea' 
               value={objective} 
               onChange={e => setMagicValues({ objective:  e.target.value })} 
-              />
-            </div>
-            <img className='magicQuestionImage' src={i.magicCalendars.questions.question5} />
+            />
+            <Error />
+          </div>
+          <img className='magicQuestionImage' src={i.magicCalendars.questions.question5} />
         </div>
       )}
       {questionNumber === 6 && (
@@ -179,6 +234,8 @@ const MagicForm = ({
               onColorClear={() => setMagicValues({ brandColor5: null })}
             />
           </div>
+          <br/><br/>
+          <Error />
         </div>
       )}
       {questionNumber === 7 && (
@@ -211,6 +268,8 @@ const MagicForm = ({
               onEmojiClear={() => setMagicValues({ brandEmoji5: null })}
             />
           </div>
+          <br/><br/>
+          <Error />
         </div>
       )}
       {questionNumber === 8 && (
@@ -240,6 +299,8 @@ const MagicForm = ({
                 )}
               </div>
             </div>
+            <br/><br/><br/><br/>
+            <Error />
           </div>
           <img className='magicQuestionImage' src={i.magicCalendars.questions.question8} />
         </div>
@@ -301,6 +362,8 @@ const MagicForm = ({
                 </div>
               )
             })}
+            <br/><br/><br/>
+            <Error />
           </div>
           <img className='magicQuestionImage' src={i.magicCalendars.questions.question9} />
         </div>
@@ -311,11 +374,34 @@ const MagicForm = ({
             <h2>{t.questions.ten.question1}</h2>
             <div id='magicFormQuestionTenRadioContainer'>
              {t.questions.ten.options.map(o => (
-              <div className='magicFormQuestionTenRadio clickable' onClick={() => setMagicValues({ styleId: o.id })}> 
-                <img src={o.url} />
-                <label htmlFor={o.id}>{o.name}</label>  
-                <input type='radio' name='style' value={o.id} checked={styleId === o.id} />
-              </div>
+                <Tooltip 
+                  key={o.id}
+                  className='styleTooltip'
+                  title={o.tooltip}
+                  position='bottom'
+                  delay={300}
+                  hideDelay={1000}
+                  animation='perspective'
+                  arrowSize='small'
+                  stickyDuration={100}
+                  theme='dark'
+                  arrow
+                  inertia
+                  sticky
+                  touchHold
+                  size='regular'
+                >
+                <div className='magicFormQuestionTenRadio clickable' onClick={() => setMagicValues({ styleId: o.id })}> 
+                  <label htmlFor={o.id}>{o.name}</label>  
+                  {/* <hr /> */}
+                  <input 
+                    type='radio' 
+                    value={o.id} 
+                    checked={styleId === o.id} 
+                    onChange={() => {}}
+                  />
+                </div>
+              </Tooltip>
              ))}
             </div>
             <h2>{t.questions.ten.question2}</h2>
@@ -324,6 +410,8 @@ const MagicForm = ({
               value={email} 
               onChange={e => setMagicValues({ email:  e.target.value })} 
             />
+            <br/><br/>
+            <Error />
           </div>
           <img className='magicQuestionImage' src={i.magicCalendars.questions.question10} />
         </div>
@@ -345,24 +433,38 @@ const MagicForm = ({
         <button 
           id='magicFormBackButton' className='magicButton clickable' 
           onClick={() => {
+            setError(null)
+            setIsErrorInitialized(false)
             setQuestionNumber(questionNumber - 1)
             navigate(`${paths.magicCalendars.page}/form/${questionNumber - 1 }`)
           }}
         >Take Me Back</button>
       )}
-      {questionNumber !== 10 && (
-        <button 
-          id='magicFormNextButton' className='magicButton clickable' 
-          onClick={() => {
+
+      <button 
+        id='magicFormNextButton' 
+        className={`magicButton ${
+          isErrorInitialized && error !== null ? 'disabled' : 'clickable'
+        } ${questionNumber === 10 ? 'magicFormNextButtonReview' : ''}`}
+        onClick={() => {
+          const error = getErrorText()
+          if(error) {
+            setError(error)
+            setIsErrorInitialized(true)
+          }
+          else {
+            setError(null)
+            setIsErrorInitialized(false)
             setQuestionNumber(questionNumber + 1)
-            navigate(`${paths.magicCalendars.page}/form/${questionNumber + 1 }`)
-          }}
-        >Next Question</button>
-      )}
-      {questionNumber === 10 && (
-        <button id='magicFormCheckoutButton' className='magicButton clickable' 
-        ><Link to={paths.magicCalendars.checkout}>Review in Magic Checkout</Link></button>
-      )}
+            if(questionNumber === 10)
+              navigate(`${paths.magicCalendars.page}/checkout`)
+            else
+              navigate(`${paths.magicCalendars.page}/form/${questionNumber + 1 }`)
+          }
+        }}
+      >
+        {questionNumber === 10 ? 'Review in Magic Checkout' : 'Next Question'}
+      </button>
     </main>
   )
 }
