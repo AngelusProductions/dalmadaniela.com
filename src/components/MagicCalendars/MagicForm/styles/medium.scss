@@ -2,6 +2,79 @@
 
 @media (min-width: 640px) and  (max-width: 1024px) {
     #magicFormContainer {
-        
+        .magicQuestion {
+            flex-direction: column;
+            align-items: center !important;
+
+            .magicQuestionFormContainer {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                width: 75% !important;
+
+                h2 {
+                    font-size: 2.6vw;
+                }
+
+                h3 {
+                    font-size: 1.8vw;
+                }
+
+                .magicFormInput,
+                .magicFormTextarea {
+                    margin-top: 5% !important;
+                    width: 50vw;
+                }
+            }
+
+            &.eight {
+                #magicFormQuestionEightToggleContainer {
+                    margin-top: 5%;
+                }
+            }
+
+            &.nine {
+                justify-content: flex-start;
+                
+                #magicFormQuestionNineToggleContainer {
+                    flex-direction: column;
+            
+                    label {
+                        font-size: 1.5vw;
+                        ;
+                    }
+            
+                    .react-toggle {
+                        margin: 10px 0;
+                    }
+                }
+
+                #magicFormGraphicsContainer {
+                    width: 75vw;
+                }
+                
+                .magicQuestionImage {
+                    display: none;
+                }
+            }
+            
+            &.ten {
+                #magicFormQuestionTenRadioContainer {
+                    width: 75vw;
+                    margin: 10% 0;
+                }
+
+                .magicFormInput {
+                    width: 50vw;
+                }
+            }
+
+            .magicQuestionImage {
+                width: 33%;
+                height: auto !important;
+                margin-top: 3%;
+            }
+        }
     }
 }
