@@ -177,6 +177,55 @@
                 display: none;
             }
         }
+
+        &.ten {
+            #magicCheckoutQuestionTenRadioContainer {
+                display: flex;
+                width: 67%;
+                justify-content: space-around;
+
+                .magicCheckoutQuestionTenRadio {
+                    display: flex;
+                    flex-direction: column;
+                    font-family: 'Hatton';
+                    justify-content: space-between;
+                    text-align: center;
+                    cursor: pointer;
+            
+                    label {
+                        margin: 5% 0 2%;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color: $pink;
+                        cursor: pointer;
+                    }
+            
+                    hr {
+                        width: 100%;
+                        margin-bottom: 15px;
+                        background: $pink;
+                        border: 1px solid $pink;
+                        height: 0px;
+                    }
+            
+                    input {
+                        width: 2vw;
+                        height: 2vw;
+                        margin: 5% auto 0;
+                        filter: hue-rotate(110deg);
+                        cursor: pointer;
+            
+                        &::after {
+                            background: $pink;
+                        }
+                    }
+                }
+            }
+
+            .magicCheckoutQuestionInputContainer:nth-of-type(2) {
+                margin-top: 3%;
+            }
+        }
     }
 
     #magicCheckoutTitleSectionWandContainer {

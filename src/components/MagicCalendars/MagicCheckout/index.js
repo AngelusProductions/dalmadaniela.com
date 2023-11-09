@@ -8,6 +8,8 @@ import { Uploader } from "uploader"
 import { UploadButton } from "react-uploader"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
+import { Tooltip } from 'react-tippy'
+import 'react-tippy/dist/tippy.css'
 
 import BackIcon from '../../UI/BackIcon'
 import MagicColorPicker from '../MagicColorPicker'
@@ -377,6 +379,53 @@ const MagicCheckout = ({
           )}
         </div>
       </div>
+
+      <div className='magicCheckoutQuestion ten'>
+        <div className='magicCheckoutQuestionInputContainer'>
+          <h2>{t.questions.ten.label1}</h2>
+          <div id='magicCheckoutQuestionTenRadioContainer'>
+             {t.questions.ten.options.map(o => (
+                <Tooltip 
+                  key={o.id}
+                  className='styleTooltip'
+                  title={o.tooltip}
+                  position='bottom'
+                  delay={300}
+                  hideDelay={1000}
+                  animation='perspective'
+                  arrowSize='small'
+                  stickyDuration={100}
+                  theme='dark'
+                  arrow
+                  inertia
+                  sticky
+                  touchHold
+                  size='regular'
+                >
+                <div className='magicCheckoutQuestionTenRadio clickable' onClick={() => setMagicValues({ styleId: o.id })}> 
+                  <label htmlFor={o.id}>{o.name}</label>  
+                  <input 
+                    type='radio' 
+                    value={o.id} 
+                    checked={styleId === o.id} 
+                    onChange={() => {}}
+                  />
+                </div>
+              </Tooltip>
+             ))}
+          </div>
+        </div>
+        <div className='magicCheckoutQuestionInputContainer'>
+          <h2>{t.questions.ten.label2}</h2>
+          <input 
+            className='magicCheckoutInput' 
+            value={email} 
+            onChange={e => setMagicValues({ email:  e.target.value })} 
+          />
+          <Error type='email' />
+        </div>
+      </div>
+
 {/* 
       <button 
         id='magicCheckoutSubmitButton' 

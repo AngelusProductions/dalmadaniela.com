@@ -50,6 +50,28 @@ export default {
         },
         ten: {
             label1: 'Your style:',
+            options: [
+                {
+                    id: 1,
+                    name: 'Minimalistic',
+                    tooltip: `This style is perfect for businesses that want a sleek and classy look. Think high-end fashion brands, modern tech startups, or luxury real estate agencies.`
+                },
+                {
+                    id: 2,
+                    name: 'Aesthetic',
+                    tooltip: `This style is all about creativity and looks. It's a great match for content creators, bloggers, art galleries, hip clothing stores, or photography studios.`
+                },
+                {
+                    id: 3,
+                    name: 'Business',
+                    tooltip: `If your company needs to share info in a pro and organized way, this style is for you. It's great for B2B companies, banks, or consulting firms.`
+                },
+                {
+                    id: 4,
+                    name: 'Surprise me!',
+                    tooltip: `This style follows what similar brands and creators do on social media, but it also adds something special to make your brand unique!`
+                }
+            ],
             label2: 'Your email:',
             error: 'Please give us a good email :)'
         }
