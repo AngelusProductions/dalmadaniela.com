@@ -3,5 +3,145 @@
 @media (max-width: 640px) {
     #magicFormContainer {
         
+        #magicFormTitleContainer {
+            h1 {
+                font-size: 7vw;
+            }
+            
+            #magicFormTitleWand {
+                width: 12% !important;
+                top: 0% !important;
+                left: 40% !important;
+            }
+
+            #magicFormTitleWandMagic {
+                width: 15% !important;
+                transform: rotate(300deg) scaleX(-1) !important;
+                top: 25% !important;
+                left: 50% !important;
+            }
+        }
+
+        .magicQuestion {
+            flex-direction: column;
+            align-items: center !important;
+            margin-top: 15%;
+
+            .magicQuestionFormContainer {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                width: 100% !important;
+
+                h2 {
+                    font-size: 5.2vw;
+                }
+
+                h3 {
+                    font-size: 4.8vw;
+                }
+
+                .magicFormInput,
+                .magicFormTextarea {
+                    margin-top: 5% !important;
+                    width: 67vw;
+                    padding: 0 5%;
+                }
+            }
+
+            &.seven {
+                .magicEmojiPickerContainer {
+                    width: 100% !important;
+                    left: 0 !important;
+                }
+            }
+
+            &.eight {
+                #magicFormQuestionEightToggleContainer {
+                    margin-top: 5%;
+                }
+            }
+
+            &.nine {
+                justify-content: flex-start;
+
+                #magicFormQuestionNineToggleContainer {
+                    flex-direction: column;
+
+                    label {
+                        font-size: 4vw;
+                    }
+
+                    .react-toggle {
+                        margin: 10px 0;
+                    }
+                }
+
+                #magicFormGraphicsContainer {
+                    width: 75vw;
+
+                    .magicFormGraphicContainer {
+                        h4 {
+                            display: none;
+                        }
+                    }
+                }
+
+                .magicFormGraphicContainer {
+                    // margin: 15px 25px !important;
+                }
+
+                .magicQuestionImage {
+                    display: none;
+                }
+            }
+
+            &.ten {
+                #magicFormQuestionTenRadioContainer {
+                    margin: 5% 0;
+                    font-size: 4.1vw;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 75vw;
+                    justify-content: space-around;
+
+                    .styleTooltip {
+                        .magicFormQuestionTenRadio {
+                            width: 35vw;
+
+                            input {
+                                width: 9vw;
+                                height: 9vw;
+                            }
+                        }
+                    }
+                }
+
+                .magicFormInput {
+                    width: 75vw;
+                }
+            }
+
+            .magicQuestionImage {
+                width: 67%;
+                height: auto !important;
+                margin-top: 3%;
+            }
+        }
+
+        #magicFormProgressBarContainer {
+            width: 25% !important;
+            right: 10% !important;
+            top: 2% !important;
+        }
+
+        .magicButton {
+            font-size: 4.5vw !important;
+
+            &.magicFormNextButtonReview {
+                font-size: 3.3vw !important;
+            }
+        }
     }
 }
