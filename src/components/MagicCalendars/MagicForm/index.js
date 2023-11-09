@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import { CircularProgressbar } from 'react-circular-progressbar'
 import 'react-circular-progressbar/dist/styles.css'
@@ -13,8 +13,8 @@ import { faClose } from '@fortawesome/free-solid-svg-icons'
 import { Tooltip } from 'react-tippy'
 import 'react-tippy/dist/tippy.css'
 
-import MagicColorPicker from './MagicColorPicker'
-import MagicEmojiPicker from './MagicEmojiPicker'
+import MagicColorPicker from '../MagicColorPicker'
+import MagicEmojiPicker from '../MagicEmojiPicker'
 
 import { paths } from '../../../constants/paths'
 import { setMagicValues } from '../../../actions/magicCalendars'
@@ -321,8 +321,7 @@ const MagicForm = ({
                 onChange={() => setMagicValues({ createFromScratch: !createFromScratch })} 
                 defaultChecked={createFromScratch}
               />
-            </div>
-            {!createFromScratch && graphics.length < 6 && (
+              {!createFromScratch && graphics.length < 6 && (
                 <UploadButton 
                   uploader={graphicUploader}
                   options={{ 
@@ -343,25 +342,33 @@ const MagicForm = ({
                     {t.questions.nine.upload}
                   </button>}
                 </UploadButton>
+              )}
+            </div>
+            {!createFromScratch && (
+              <div id='magicFormGraphicsContainer'>
+                {graphics.map(g => {
+                  return (
+                    <div key={g.originalFile.metadata.uploadId} className='magicFormGraphicContainer'>
+                      {g.originalFile.mime.includes('image') && <img src={g.fileUrl} />}
+                      {g.originalFile.mime.includes('video') && <video src={g.fileUrl} />}
+                      <h4>
+                        {g.originalFile.originalFileName.slice(0, 15)}
+                        {g.originalFile.originalFileName.length > 15 && '...'}
+                      </h4>
+                      <FontAwesomeIcon 
+                        icon={faClose} 
+                        color={'#DA2A7D'} 
+                        className='magicFormGraphicCloseIcon clickable' 
+                        onClick={() => {
+                          setMagicValues({ graphics: graphics.filter(graphic => 
+                          graphic.originalFile.metadata.uploadId !== g.originalFile.metadata.uploadId) 
+                        })}}
+                      />
+                    </div>
+                  )
+                })}
+              </div>
             )}
-            {!createFromScratch && graphics.map(g => {
-              return (
-                <div key={g.originalFile.metadata.uploadId} className='magicFormGraphicContainer'>
-                  {g.originalFile.mime.includes('image') && <img src={g.fileUrl} />}
-                  {g.originalFile.mime.includes('video') && <video src={g.fileUrl} />}
-                  <h4>{g.originalFile.originalFileName}</h4>
-                  <FontAwesomeIcon 
-                    icon={faClose} 
-                    color={'#DA2A7D'} 
-                    className='magicFormGraphicCloseIcon clickable' 
-                    onClick={() => {
-                      setMagicValues({ graphics: graphics.filter(graphic => 
-                      graphic.originalFile.metadata.uploadId !== g.originalFile.metadata.uploadId) 
-                    })}}
-                  />
-                </div>
-              )
-            })}
             <br/><br/><br/>
             <Error />
           </div>
@@ -457,7 +464,7 @@ const MagicForm = ({
             setIsErrorInitialized(false)
             setQuestionNumber(questionNumber + 1)
             if(questionNumber === 10)
-              navigate(`${paths.magicCalendars.page}/checkout`)
+              navigate(`${paths.magicCalendars.checkout}`)
             else
               navigate(`${paths.magicCalendars.page}/form/${questionNumber + 1 }`)
           }

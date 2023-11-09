@@ -5,23 +5,184 @@
 
     h1 {
         font-size: 6vw;
-        color: $pink;
         font-family: 'Garbata';
         font-weight: 300;
         margin-bottom: 5%;
     }
 
     h2 {
-        font-family: 'Garet';
-        font-weight: 100;
+        font-weight: 300;
+        font-size: 1.3vw;
+        margin-right: 10px;
         color: $pink;
-        font-size: 1.9vw;
+        display: inline-flex;
+        font-family: 'Garet';
+        text-transform: uppercase;
+    }
+
+    .magicCheckoutError {
+        margin: 2% auto;
+        color: $pink;
+        position: absolute;
+        right: 5%;
+        font-size: 1.5vw;
+    }
+
+    .magicCheckoutQuestion {
+        margin: 2% 0;
+
+        .magicCheckoutQuestionInputContainer {
+            display: flex;
+            align-items: center;
+            width: 67%;
+            justify-content: space-between;
+        }
+
+        .magicCheckoutInput {
+            font-family: 'Garet';
+            border: 1px solid black;
+            font-weight: 300;
+            height: 30px;
+            border-radius: 15px;
+            width: 50%;
+            padding: 0 2%;
+            margin-left: 2%;
+            font-size: 1vw;
+        }
+    
+        .magicCheckoutTextarea {
+            font-family: 'Garet';
+            border: 1px solid black;
+            height: 100px;
+            border-radius: 15px;
+            width: 50%;
+            padding: 1% 2%;
+            font-size: 1vw;
+        }
+
+        &.four {
+            display: flex;
+            align-items: center;
+        }
+
+        &.six {
+            #magicCheckoutColorPickersContainer {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                width: 55%;
+
+                .w-color-alpha:nth-of-type(2) {
+                    display: none;
+                }
+
+                .magicColorPickerContainer:nth-of-type(1) {
+                    .magicColorPicker {
+                        left: 0;
+                    }
+                }
+                .magicColorPickerContainer:nth-of-type(5) {
+                    .magicColorPicker {
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &.seven {
+            #magicCheckoutEmojiPickersContainer {
+                display: flex;
+                width: 55%;
+                height: 50px;
+            }
+        }
+
+        &.eight {
+            .ReactFlagsSelect-module_flagsSelect__2pfa2 {
+                font-family: 'Garbata';
+                font-weight: 300;
+                display: inline-block;
+                margin-left: 10%;
+                padding-bottom: 0;
+                margin-top: -6px;
+        
+                button {
+                    font-weight: 300;
+                }
+            }
+            #magicCheckoutQuestionEightToggleContainer {
+                width: 50%;
+                margin-top: 3%;
+                height: 50px;
+            }
+        }
+
+        &.nine {
+            .magicCheckoutQuestionInputContainer:nth-of-type(1) {
+                width: 100%;
+                height: 50px;
+            }
+            .magicCheckoutQuestionInputContainer:nth-of-type(2) {
+                width: 100%;
+                margin-top: 1%;
+            }
+
+            #magicCheckoutQuestionNineToggleContainer {
+                width: 52%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            }
+
+            button {
+                background: $pink;
+                color: white;
+                font-family: 'Hatton';
+                font-weight: 600;
+                padding: 12px 10px 10px;
+                cursor: pointer;
+                height: 50px;
+                margin-left: 10%;
+            }
+
+            #magicCheckoutGraphicsContainer {
+                display: flex;
+                justify-content: space-around;
+                width: 80%;
+
+                .magicCheckoutGraphicContainer {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 20px 0;
+
+                    h4 {
+                        margin-top: 10px;
+                    }
+
+                    img,
+                    video {
+                        height: 50px;
+                        border-radius: 5px;
+                        filter: drop-shadow(0 0 2px $pink);
+                    }
+
+                    svg {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .uploader__submitted-file__container {
+                display: none;
+            }
+        }
     }
 
     #magicCheckoutTitleSectionWandContainer {
         position: absolute;
         top: 5vw;
-        left: 37vw;
+        left: 50vw;
 
         #magicCheckoutTitleSectionWand {
             width: 12vw;
@@ -33,185 +194,6 @@
             position: absolute;
             right: -108%;
             top: -31%;
-        }
-    }
-
-    #magicCheckoutQuestionsContainer {
-        font-family: 'Garet';
-
-        .magicCheckoutQuestionContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin: auto;
-            padding: 2% 0%;
-
-            &.one {
-                #magicCheckoutQuestionOneInputContainer {
-                    display: flex;
-
-                    input {
-                        width: 25vw;
-                        margin-left: 2vw; 
-                    }
-                } 
-            }&.two {
-                h2 {
-                    margin: 1% 0;
-                }
-            
-                input:nth-of-type(2) {
-                    margin-bottom: 1%;
-                }
-            }
-            
-            &.five {
-                h2 {
-                    margin-bottom: 3%;
-                }
-
-                .rcp {
-                    width: 19% !important;
-                }
-                .rcp-fields-floor {
-                    display: unset !important;
-                }
-                .rcp-field {
-                    width: unset !important;
-                }
-            }
-
-            &.six {
-                h2 {
-                    margin-bottom: 3%;
-                }
-            }
-
-            &.eight {
-                #magicCheckoutQuestionEightContainer {
-                    display: flex;
-                    align-items: center;
-
-                    .react-toggle {
-                        margin-left: 1vw;
-                    }
-                }
-
-                #magicCheckoutQuestionEightCountryContainer {
-                    display: flex;
-                    margin-top: 1%;
-
-                    h2 {
-                        width: 25%;
-                    }
-
-                    select {
-                        background: $yellow;
-                        border: 1px solid $pink;
-                        font-family: 'Garet';
-                        width: 25%;
-                        font-size: 1vw;
-                        padding-left: 0.6vw;
-                        height: 50px;
-                        border-radius: 4px;
-                        box-shadow: inset 0 0 2px 1px darkgray;
-                        cursor: pointer;
-
-                        &:hover {
-                            box-shadow: inset 0 0 1px 1px black;
-                        }
-                    }
-                }
-            }
-            
-            &.nine {
-                .react-toggle {
-                    margin-left: 1vw;
-                }
-            }
-
-            &.ten {
-                .MuiInputBase-root {
-                    width: 25%;
-                    background: $yellow;
-                    border: 1px solid $pink;
-                    font-family: 'Garet';
-                }
-            }
-
-            textarea {
-                width: 75%;
-                padding-top: 1%;
-                margin-top: 1%;
-            }
-
-            .magicCheckoutForm {
-                display: flex;
-                justify-content: space-between;
-                width: 25%;
-                margin: 13px auto;
-                align-items: center;
-            }
-
-            .magicCheckoutInput {
-                border: 1px solid black;
-                height: 25px;
-                border-radius: 15px;
-                font-family: 'Garet';
-                width: 66%;
-                padding: 0 2%;
-            }
-            
-            .magicCheckoutTextArea {
-                border: 1px solid black;
-                height: 25px;
-                border-radius: 15px;
-                font-family: 'Garet';
-                width: 66%;
-                padding: 1% 2%;
-                height: 150px;
-            }
-
-            #magicCheckoutColorPickersContainer,
-            #magicCheckoutEmojiPickersContainer,
-            #magicCheckoutWantGraphicsContainer {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-            }
-            
-            #magicCheckoutColorPickersContainer {
-                width: 100%;
-                justify-content: space-between;
-            }
-
-            #magicCheckoutEmojiPickersContainer {
-                display: flex;
-                flex-direction: column;
-                
-                .magicEmojiPickerContainer {
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    margin: 1% 0;
-                    width: 100%;
-            
-                    .magicEmojiContainer {
-                        width: 15vw;
-                        height: 15vw;
-                        background: $yellow;
-                        border: 1px solid $pink;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border-radius: 50%;
-
-                        img {
-                            height: 50%;
-                        }
-                    }
-                }
-            }
         }
     }
 
@@ -377,4 +359,99 @@
     -webkit-box-shadow: 0px 0px 5px 5px #0099E0;
     -moz-box-shadow: 0px 0px 5px 5px #0099E0;
     box-shadow: 0px 0px 5px 5px #0099E0;
+}
+.w-color-block {
+    --block-background-color: black !important;
+    --block-box-shadow: rgb(0 0 0 / 10%) 0 1px !important;
+}
+
+.w-color-editable-input {
+    font-family: 'Garet';
+    --editable-input-label-color: #DA2A7D !important;
+    --editable-input-box-shadow: #616161 0px 0px 0px 1px inset !important;
+    --editable-input-color: #DA2A7D !important;
+}
+
+.w-color-github {
+    --github-border: 1px solid rgba(0, 0, 0, 0.2) !important;
+    --github-background-color: #ffffff !important;
+    --github-box-shadow: rgb(0 0 0 / 15%) 0px 3px 12px !important;
+    --github-arrow-border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.w-color-compact {
+    --compact-background-color: $pink !important;
+}
+
+.w-color-material {
+    --material-background-color: #323232 !important;
+    --material-border-bottom-color: #707070 !important;
+}
+
+.w-color-alpha {
+    --alpha-pointer-background-color: #6a6a6a !important;
+    --alpha-pointer-box-shadow: rgb(0 0 0 / 37%) 0px 1px 4px 0px !important;
+}
+
+.uploader__widget-base__children {
+    font-family: 'Garbata';
+    font-weight: 300;
+
+    .btn {
+        font-weight: bold;
+        font-family: 'Garbata';
+    }
+
+    .btn--primary {
+        background: $pink;
+        border: none;
+        border-radius: 0;
+        font-family: 'Garbata';
+
+        input {
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: $pink !important;
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+.uploader__modal__close svg {
+    color: $pink !important;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.uploader__main-screen__info,
+.uploader__image-editor__header,
+.uploader__submitted-file__name {
+    font-family: 'Hatton';
+    font-weight: bold;
+}
+
+.uploader__submitted-file__container {
+    background: $pinkFaded;
+}
+
+.uploader__submitted-file__inner {
+    filter: hue-rotate(267deg);
+}
+
+.tippy-popper {
+    font-family: 'Garet' !important;
+    font-weight: 300 !important;
+    font-size: 10px !important;
 }

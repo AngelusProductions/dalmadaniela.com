@@ -6,13 +6,12 @@ import UserInfo from '../Auth/UserInfo'
 
 import { paths } from '../../constants/paths'
 import { i } from '../../constants/data/assets'
-import { adminEmails } from '../../constants/data/admins'
 import { setMagicLength } from '../../actions/magicCalendars'
 
 import t from './text.js'
 import './styles/index.scss'
 
-const MagicCalendars = ({ setMagicLength, currentUser }) => {
+const MagicCalendars = ({ setMagicLength }) => {
   const containerRef = useRef()
   const navigate = useNavigate()
 
@@ -23,14 +22,10 @@ const MagicCalendars = ({ setMagicLength, currentUser }) => {
 
   useEffect(() => {
     containerRef.current?.scrollIntoView(true)
-    if(!currentUser.email) {
-      navigate(`${paths.auth.login}?redirect=${paths.magicCalendars.page}`)
-    }
   })
 
-  return currentUser.email && adminEmails.includes(currentUser?.email) && (
+  return (
     <main id='magicCalendarsPage' ref={containerRef}>
-      <UserInfo />
       <section id='titleSection' className='magicCalendarsSection'>
         <div id='magicCalendarsTitleContainer'>
           <img id='magicCalendarsTitle' src={i.magicCalendars.title} />

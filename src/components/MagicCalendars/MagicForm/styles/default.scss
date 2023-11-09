@@ -180,7 +180,7 @@
 
         &.nine {
             align-items: flex-start;
-            min-height: 700px;
+            // min-height: 700px;
 
             .magicQuestionFormContainer {
                 height: 250px;
@@ -188,7 +188,7 @@
                 #magicFormQuestionNineToggleContainer {
                     display: flex;
                     align-items: center;
-                    margin: 5% 0;
+                    margin: 3% 0;
 
                     .react-toggle {
                         margin-left: 2%;
@@ -206,24 +206,32 @@
                     font-weight: 600;
                     padding: 12px 10px 10px;
                     cursor: pointer;
+                    margin-left: 2%;
                 }
-
-                .magicFormGraphicContainer {
+                #magicFormGraphicsContainer {
                     display: flex;
-                    align-items: center;
-                    margin: 20px 0;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
 
-                    img, video {
-                        height: 50px;
-                        margin-right: 10px;
-                    }
-
-                    svg {
-                        cursor: pointer;
-                        margin-left: 10px;
+                    .magicFormGraphicContainer {
+                        display: flex;
+                        align-items: center;
+                        margin: 20px 0;
+                        
+                        img, video {
+                            height: 50px;
+                            margin-right: 10px;
+                            border-radius: 5px;
+                            filter: drop-shadow(0 0 2px $pink);
+                        }
+                        
+                        svg {
+                            cursor: pointer;
+                            margin-left: 10px;
+                        }
                     }
                 }
-
+                
                 .uploader__submitted-file__container {
                     display: none;
                 }
@@ -324,8 +332,8 @@
     div#magicFormProgressBarContainer {
         position: absolute;
         width: 10%;
-        left: 45%;
-        bottom: 10%;
+        right: 10%;
+        top: 2%;
 
         .CircularProgressbar-path {
             stroke: $green;

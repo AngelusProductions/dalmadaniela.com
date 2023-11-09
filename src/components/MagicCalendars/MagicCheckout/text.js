@@ -1,5 +1,5 @@
 export default {
-    title: "Magic Form",
+    title: "Magic Checkout",
     yourMagicSpeed: "Speed:",
     magicSpeeds: {
         standard: "Standard",
@@ -8,64 +8,50 @@ export default {
     },
     questions: {
         one: {
-            intro: "It's nice to e-meet you!",
-            question: "Tell us your brand name:"
+            label: "Your brand name:",
+            error: 'Please enter a valid brand name :)'
         },
         two: {
-            question1: "Let's check out your website (if you have one):",
-            websiteLabel: "Website:",
-            question2: "and main social media accounts:",
-            socialMediaLabel1: "Social Media:",
-            socialMediaLabel2: "Social Media:"
+            label: "Your website:",
+            error: 'Please enter a valid URL :)'
         },
         three: {
-            question: "Tell us about your brand or business (There's no wrong answer!).",
-            helper: "Feel free to share your brand's mission and vision if you have them:"
+            label1: 'Your primary social media:',
+            label2: 'Your secondary social media:',
+            error: 'Please ensure all URLs are valid :)'
         },
         four: {
-            question: "What's your main business objective?"
+            label: "About your brand:",
+            error: 'Please enter something :)'
         },
         five: {
-            question: "What are your brand colors? Choose up to 5:"
+            label: "Your business objective:",
+            error: 'Please enter something :)'
         },
         six: {
-            question: "Your brand emojis (Choose up to 5 emojis):"
+            label: "Your brand colors:",
+            error: 'Please choose at least one color :)'
         },
         seven: {
-            question: "Is there a specific topic you'd like us to include this month?"
+            label: "Your brand emojis:",
+            error: 'Please choose at least one emoji :)'
         },
         eight: {
-            question1: "Should we include national holiday posts if applicable?",
-            question2: "For which country?"
+            label1: "Specific topics to cover:",
+            label2: "Include national holiday posts?",
+            label3: "For this country:",
+            error: 'Please enter something :)'
         },
         nine: {
-            question: "Now upload up to 6 photos you'd like us to use.",
-            helper: "No pics? No problem! Just choose \"I want graphics\", and you're all set!",
-            graphics: "I want graphics"
+            label1: "Should we create your graphics from scratch?",
+            label2: "Use these graphics:",
+            upload: "Click to upload...",
+            error: 'Please upload at least one graphic :)'
         },
         ten: {
-            question: 'Choose your style.',
-            options: [
-                {
-                    id: 1,
-                    name: 'Minimalist'
-                },
-                {
-                    id: 2,
-                    name: 'Aesthetic'
-                },
-                {
-                    id: 3,
-                    name: 'Business'
-                },
-                {
-                    id: 4,
-                    name: 'Surprise me!'
-                }
-            ]
-        },
-        eleven: {
-            question: "What's a good email to send your calendar link to?"
+            label1: 'Your style:',
+            label2: 'Your email:',
+            error: 'Please give us a good email :)'
         }
     },
     cta: "Create My Calendar",
