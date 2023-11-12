@@ -13,6 +13,7 @@ export const paths = {
     page: '/magic-calendars',
     form: '/magic-calendars/form/:question',
     review: '/magic-calendars/form/review',
+    checkout: '/magic-calendars/form/checkout',
   },
   blog: {
     page: '/blog',

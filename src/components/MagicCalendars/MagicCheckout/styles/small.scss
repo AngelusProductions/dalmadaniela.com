@@ -1,0 +1,118 @@
+@import '../../../colors.scss';
+
+@media (max-width: 1024px) {
+    #magicReviewPage {
+        #magicReviewTitleSectionContainer {
+            margin-top: 5%;
+            position: relative;
+
+            #magicReviewTitleSectionWandContainer {
+                top: -2vw;
+                left: 35vw;
+            }
+        }
+
+        .magicReviewQuestion {
+            .magicReviewQuestionInputContainer {
+                flex-direction: column;
+                width: 100%;
+
+                h2 {
+                    font-size: 4vw;
+                    margin: 2% 0px;
+                    text-align: center;
+                }
+
+                input,
+                textarea {
+                    font-size: 2.4vw;
+                    width: 75%;
+                }
+
+                .magicReviewError {
+                    position: relative !important;
+                    right: 0 !important;
+                    font-size: 2.4vw !important;
+                }
+            }
+
+            &.six {
+                #magicReviewColorPickersContainer {
+                    width: 100%;
+                    margin: 5% 0;
+                }
+            }
+
+            &.seven {
+                #magicReviewEmojiPickersContainer {
+                    width: 100%;
+                    margin: 5% 0;
+                }
+            }
+
+            &.eight {
+                #magicReviewQuestionEightToggleContainer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    height: unset !important;
+                    margin-top: 2%;
+
+                    .react-toggle {
+                        margin-bottom: 8px;
+                    }
+
+                    .ReactFlagsSelect-module_flagsSelect__2pfa2 {
+                        margin-top: unset !important;
+                        margin-left: unset !important;
+                    }
+                }
+            }
+
+            &.nine {
+                #magicReviewQuestionNineToggleContainer {
+                    margin-top: 0;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .magicReviewQuestionInputContainer:nth-of-type(1) {
+                    height: unset !important;
+                }
+
+                #magicReviewGraphicsContainer {
+                    h4 {
+                        display: none;
+                    }
+
+                    svg {
+                        margin-top: 10px;
+                    }
+
+                    .magicReviewGraphicContainer {
+                        margin: 2% auto 0;
+                    }
+                }
+            }
+
+            &.ten {
+                #magicReviewQuestionTenRadioContainer {
+                    width: 100%;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+
+                    .styleTooltip {
+                        width: 50%;
+
+                        input {
+                            width: 5vw;
+                            height: 5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

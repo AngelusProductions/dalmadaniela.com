@@ -18,8 +18,7 @@ import MagicEmojiPicker from '../MagicEmojiPicker/index.js'
 import { paths } from '../../../constants/paths.js'
 import { i } from '../../../constants/data/assets.js'
 import { isValidUrl, isValidEmail } from '../../../utils/validators.js'
-import { setMagicLength, setMagicValues } from '../../../actions/magicCalendars.js'
-import { createMagicCalendar, saveGraphic } from '../../../api/magicCalendars.js'
+import { setMagicValues } from '../../../actions/magicCalendars.js'
 
 import t from './text.js'
 import './styles/index.scss'
@@ -52,12 +51,11 @@ const MagicReview = ({
   graphics,
   styleId,
   email,
-  magicSpeed, 
   setMagicValues
 }) => {
   const navigate = useNavigate()
   const [errors, setErrors] = useState({})
-  const [status, setStatus] = useState(null)
+  const [isError, setIsError] = useState(false)
 
   const Error = ({ type }) => {
     return errors && errors[type] && (
@@ -84,360 +82,351 @@ const MagicReview = ({
     return newErrors
   }
 
-  useEffect(() => {9
-    setErrors(getErrors())
+  useEffect(() => {
+    const errors = getErrors()
+    setErrors(errors)
+    setIsError(Object.keys(errors).some((key) => errors[key] !== null));
   }, [
       brandName, website, socialMedia1, socialMedia2, description, objective, 
       brandColor1, brandColor2, brandColor3, brandColor4, brandColor5, brandEmoji1, 
       brandEmoji2, brandEmoji3, brandEmoji4, brandEmoji5, specificTopics, useHolidays, 
       country, createFromScratch, graphics, styleId, email
   ])
-
   
-  const onSubmitClick = async () => {
-    let brandColors = [brandColor1.hex, brandColor2.hex, brandColor3.hex, brandColor4.hex, brandColor5.hex]
-
-    const brandEmojis = [brandEmoji1, brandEmoji2, brandEmoji3, brandEmoji4, brandEmoji5]
-      .filter(emoji => emoji !== null).map(e => e.emoji)
-    
-    const style = t.questions.ten.options.find(o => o.id === styleId)
-    
-    setStatus("Creating your calendar.")
-    
-    const { magicCalendarId } = await createMagicCalendar({
-      calendar: {
-        email,
-        brandName,
-        magicSpeed,
-        chatGPTResponse: null,
-        website,
-        socialMedia1,
-        socialMedia2,
-        description,
-        objective,
-        brandColors: brandColors.join(','),
-        brandEmojis: brandEmojis.join(','),
-        specificTopics,
-        useHolidays,
-        country,
-        wantsGraphics,
-        style: style.name
-      }
-    })
-
-    setStatus("Uploading your graphics.")
-
-    graphics.forEach(({ fileUrl }) => {
-      saveGraphic({
-        fileUrl,
-        magicCalendarId
-      })
-    })
-
-    setStatus("Magic Calendar Created.")
-  }
-
   return (
-    <main id='magicReviewPage'>
+    <main id="magicReviewPage">
       <BackIcon text pink path={`${paths.magicCalendars.page}/form/10`} />
-      
-      <div id='magicReviewTitleSectionContainer'>
+
+      <div id="magicReviewTitleSectionContainer">
         <h1>{t.title}</h1>
-        <div id='magicReviewTitleSectionWandContainer'>
-          <img id='magicReviewTitleSectionWand' src={i.stock.wand} />
-          <img id='magicReviewTitleSectionWandMagic' src={i.stars.starTwinklesLarge} />
+        <div id="magicReviewTitleSectionWandContainer">
+          <img id="magicReviewTitleSectionWand" src={i.stock.wand} />
+          <img
+            id="magicReviewTitleSectionWandMagic"
+            src={i.stars.starTwinklesLarge}
+          />
         </div>
       </div>
 
-      <div className='magicReviewQuestionsContainer'>
-        <div className='magicReviewQuestion one'>
-          <div className='magicReviewQuestionInputContainer'>
-            <h2 className='magicReviewInputLabel'>{t.questions.one.label}</h2>
-            <input 
-              className='magicReviewInput' 
-              value={brandName} 
-              onChange={e => setMagicValues({ brandName:  e.target.value })} 
+      <div className="magicReviewQuestionsContainer">
+        <div className="magicReviewQuestion one">
+          <div className="magicReviewQuestionInputContainer">
+            <h2 className="magicReviewInputLabel">{t.questions.one.label}</h2>
+            <input
+              className="magicReviewInput"
+              value={brandName}
+              onChange={(e) => setMagicValues({ brandName: e.target.value })}
             />
-            <Error type='brandName' />
+            <Error type="brandName" />
           </div>
         </div>
 
-        <div className='magicReviewQuestion two'>
-          <div className='magicReviewQuestionInputContainer'>
-            <h2 className='magicReviewInputLabel'>{t.questions.two.label}</h2>
-            <input 
-              className='magicReviewInput' 
-              value={website} 
-              onChange={e => setMagicValues({ website:  e.target.value })} 
+        <div className="magicReviewQuestion two">
+          <div className="magicReviewQuestionInputContainer">
+            <h2 className="magicReviewInputLabel">{t.questions.two.label}</h2>
+            <input
+              className="magicReviewInput"
+              value={website}
+              onChange={(e) => setMagicValues({ website: e.target.value })}
             />
-            <Error type='website' />
+            <Error type="website" />
           </div>
         </div>
 
-        <div className='magicReviewQuestion three'>
-          <div className='magicReviewQuestionInputContainer'>
+        <div className="magicReviewQuestion three">
+          <div className="magicReviewQuestionInputContainer">
             <h2>{t.questions.three.label1}</h2>
-            <input 
-              className='magicReviewInput' 
-              value={socialMedia1} 
-              onChange={e => setMagicValues({ socialMedia1:  e.target.value })} 
+            <input
+              className="magicReviewInput"
+              value={socialMedia1}
+              onChange={(e) => setMagicValues({ socialMedia1: e.target.value })}
             />
           </div>
           <br />
-          <div className='magicReviewQuestionInputContainer'>
+          <div className="magicReviewQuestionInputContainer">
             <h2>{t.questions.three.label2}</h2>
-            <input 
-              className='magicReviewInput' 
-              value={socialMedia2} 
-              onChange={e => setMagicValues({ socialMedia2:  e.target.value })} 
+            <input
+              className="magicReviewInput"
+              value={socialMedia2}
+              onChange={(e) => setMagicValues({ socialMedia2: e.target.value })}
             />
-            <Error type='socialMedia' />
+            <Error type="socialMedia" />
           </div>
         </div>
 
-        <div className='magicReviewQuestion four'>
-          <div className='magicReviewQuestionInputContainer'>
+        <div className="magicReviewQuestion four">
+          <div className="magicReviewQuestionInputContainer">
             <h2>{t.questions.four.label}</h2>
-            <textarea 
-              className='magicReviewTextarea' 
-              value={description} 
-              onChange={e => setMagicValues({ description:  e.target.value })} 
+            <textarea
+              className="magicReviewTextarea"
+              value={description}
+              onChange={(e) => setMagicValues({ description: e.target.value })}
             />
-            <Error type='description' />
+            <Error type="description" />
           </div>
         </div>
 
-        <div className='magicReviewQuestion five'>
-          <div className='magicReviewQuestionInputContainer'>
+        <div className="magicReviewQuestion five">
+          <div className="magicReviewQuestionInputContainer">
             <h2>{t.questions.five.label}</h2>
-            <textarea 
-              className='magicReviewTextarea' 
-              value={objective} 
-              onChange={e => setMagicValues({ objective:  e.target.value })} 
+            <textarea
+              className="magicReviewTextarea"
+              value={objective}
+              onChange={(e) => setMagicValues({ objective: e.target.value })}
             />
-            <Error type='objective' />
+            <Error type="objective" />
           </div>
         </div>
 
-        <div className='magicReviewQuestion six'>
-          <div className='magicReviewQuestionInputContainer'>
+        <div className="magicReviewQuestion six">
+          <div className="magicReviewQuestionInputContainer">
             <h2>{t.questions.six.label}</h2>
-            <div id='magicReviewColorPickersContainer'>
-              <MagicColorPicker 
-                color={brandColor1} 
-                onColorClick={c => setMagicValues({ brandColor1: c.hex })}
+            <div id="magicReviewColorPickersContainer">
+              <MagicColorPicker
+                color={brandColor1}
+                onColorClick={(c) => setMagicValues({ brandColor1: c.hex })}
                 onColorClear={() => setMagicValues({ brandColor1: null })}
               />
-              <MagicColorPicker 
-                color={brandColor2} 
-                onColorClick={c => setMagicValues({ brandColor2: c.hex })}
+              <MagicColorPicker
+                color={brandColor2}
+                onColorClick={(c) => setMagicValues({ brandColor2: c.hex })}
                 onColorClear={() => setMagicValues({ brandColor2: null })}
               />
-              <MagicColorPicker 
-                color={brandColor3} 
-                onColorClick={c => setMagicValues({ brandColor3: c.hex })}
+              <MagicColorPicker
+                color={brandColor3}
+                onColorClick={(c) => setMagicValues({ brandColor3: c.hex })}
                 onColorClear={() => setMagicValues({ brandColor3: null })}
               />
-              <MagicColorPicker 
-                color={brandColor4} 
-                onColorClick={c => setMagicValues({ brandColor4: c.hex })}
+              <MagicColorPicker
+                color={brandColor4}
+                onColorClick={(c) => setMagicValues({ brandColor4: c.hex })}
                 onColorClear={() => setMagicValues({ brandColor4: null })}
               />
-              <MagicColorPicker 
-                color={brandColor5} 
-                onColorClick={c => setMagicValues({ brandColor5: c.hex })}
+              <MagicColorPicker
+                color={brandColor5}
+                onColorClick={(c) => setMagicValues({ brandColor5: c.hex })}
                 onColorClear={() => setMagicValues({ brandColor5: null })}
               />
             </div>
-            <Error type='brandColors' />
+            <Error type="brandColors" />
           </div>
         </div>
 
-        <div className='magicReviewQuestion seven'>
-          <div className='magicReviewQuestionInputContainer'>
+        <div className="magicReviewQuestion seven">
+          <div className="magicReviewQuestionInputContainer">
             <h2>{t.questions.seven.label}</h2>
-            <div id='magicReviewEmojiPickersContainer'>
-              <MagicEmojiPicker 
-                emoji={brandEmoji1} 
-                onEmojiClick={e => setMagicValues({ brandEmoji1: e })}
+            <div id="magicReviewEmojiPickersContainer">
+              <MagicEmojiPicker
+                emoji={brandEmoji1}
+                onEmojiClick={(e) => setMagicValues({ brandEmoji1: e })}
                 onEmojiClear={() => setMagicValues({ brandEmoji1: null })}
               />
-              <MagicEmojiPicker 
-                emoji={brandEmoji2} 
-                onEmojiClick={e => setMagicValues({ brandEmoji2: e })}
+              <MagicEmojiPicker
+                emoji={brandEmoji2}
+                onEmojiClick={(e) => setMagicValues({ brandEmoji2: e })}
                 onEmojiClear={() => setMagicValues({ brandEmoji2: null })}
               />
-              <MagicEmojiPicker 
-                emoji={brandEmoji3} 
-                onEmojiClick={e => setMagicValues({ brandEmoji3: e })}
+              <MagicEmojiPicker
+                emoji={brandEmoji3}
+                onEmojiClick={(e) => setMagicValues({ brandEmoji3: e })}
                 onEmojiClear={() => setMagicValues({ brandEmoji3: null })}
               />
-              <MagicEmojiPicker 
-                emoji={brandEmoji4} 
-                onEmojiClick={e => setMagicValues({ brandEmoji4: e })}
+              <MagicEmojiPicker
+                emoji={brandEmoji4}
+                onEmojiClick={(e) => setMagicValues({ brandEmoji4: e })}
                 onEmojiClear={() => setMagicValues({ brandEmoji4: null })}
               />
-              <MagicEmojiPicker 
-                emoji={brandEmoji5} 
-                onEmojiClick={e => setMagicValues({ brandEmoji5: e })}
+              <MagicEmojiPicker
+                emoji={brandEmoji5}
+                onEmojiClick={(e) => setMagicValues({ brandEmoji5: e })}
                 onEmojiClear={() => setMagicValues({ brandEmoji5: null })}
               />
             </div>
-            <Error type='brandEmojis' />
+            <Error type="brandEmojis" />
           </div>
         </div>
 
-        <div className='magicReviewQuestion eight'>
-          <div className='magicReviewQuestionInputContainer'>  
+        <div className="magicReviewQuestion eight">
+          <div className="magicReviewQuestionInputContainer">
             <h2>{t.questions.eight.label1}</h2>
-            <textarea 
-              className='magicReviewTextarea' 
-              value={specificTopics} 
-              onChange={e => setMagicValues({ specificTopics:  e.target.value })} 
+            <textarea
+              className="magicReviewTextarea"
+              value={specificTopics}
+              onChange={(e) =>
+                setMagicValues({ specificTopics: e.target.value })
+              }
             />
-            <Error type='specificTopics' />
+            <Error type="specificTopics" />
           </div>
-          <div className='magicReviewQuestionInputContainer'>  
+          <div className="magicReviewQuestionInputContainer">
             <h2>{t.questions.eight.label2}</h2>
-            <div id='magicReviewQuestionEightToggleContainer'>
+            <div id="magicReviewQuestionEightToggleContainer">
               <Toggle
-                id='toggleUseHolidays'
-                onChange={() => setMagicValues({ useHolidays:  !useHolidays })} 
+                id="toggleUseHolidays"
+                onChange={() => setMagicValues({ useHolidays: !useHolidays })}
                 defaultChecked={useHolidays}
               />
               {useHolidays && (
-                  <ReactFlagsSelect
-                    selected={country}
-                    onSelect={(code) => setMagicValues({ country: code })}
-                  />
+                <ReactFlagsSelect
+                  selected={country}
+                  onSelect={(code) => setMagicValues({ country: code })}
+                />
               )}
             </div>
           </div>
         </div>
       </div>
 
-      <div className='magicReviewQuestion nine'>
-        <div className='magicReviewQuestionInputContainer'>
+      <div className="magicReviewQuestion nine">
+        <div className="magicReviewQuestionInputContainer">
           <h2>{t.questions.nine.label1}</h2>
-          <div id='magicReviewQuestionNineToggleContainer'>
-              <Toggle
-                id='toggleCreateFromScratch'
-                onChange={() => setMagicValues({ createFromScratch: !createFromScratch })} 
-                defaultChecked={createFromScratch}
-              />
-              {!createFromScratch && graphics.length < 6 && (
-                <UploadButton 
-                  uploader={graphicUploader}
-                  options={{ 
-                    multi: true, 
-                    maxFileCount: 6 - graphics.length,
-                    maxFileSizeBytes: 524288000,
-                    mimeTypes: ['image/*', 'video/*']
-                  }}
-                  onComplete={newGraphics => {
-                    const existingUploadIds = graphics.map(g => g.originalFile.metadata.uploadId)
-                    newGraphics = newGraphics.filter(g => !existingUploadIds.includes(g.originalFile.metadata.uploadId))
-                    setMagicValues({ graphics: [...graphics, ...newGraphics] })
-                  }}
-                  width="100%"
-                  height="100%" 
-                >
-                  {({ onClick }) => <button onClick={onClick} className='clickable'>
+          <div id="magicReviewQuestionNineToggleContainer">
+            <Toggle
+              id="toggleCreateFromScratch"
+              onChange={() =>
+                setMagicValues({ createFromScratch: !createFromScratch })
+              }
+              defaultChecked={createFromScratch}
+            />
+            {!createFromScratch && graphics.length < 6 && (
+              <UploadButton
+                uploader={graphicUploader}
+                options={{
+                  multi: true,
+                  maxFileCount: 6 - graphics.length,
+                  maxFileSizeBytes: 524288000,
+                  mimeTypes: ["image/*", "video/*"],
+                }}
+                onComplete={(newGraphics) => {
+                  const existingUploadIds = graphics.map(
+                    (g) => g.originalFile.metadata.uploadId
+                  );
+                  newGraphics = newGraphics.filter(
+                    (g) =>
+                      !existingUploadIds.includes(
+                        g.originalFile.metadata.uploadId
+                      )
+                  );
+                  setMagicValues({ graphics: [...graphics, ...newGraphics] });
+                }}
+                width="100%"
+                height="100%"
+              >
+                {({ onClick }) => (
+                  <button onClick={onClick} className="clickable">
                     {t.questions.nine.upload}
-                  </button>}
-                </UploadButton>
+                  </button>
+                )}
+              </UploadButton>
             )}
           </div>
         </div>
-        <div className='magicReviewQuestionInputContainer'>
+        <div className="magicReviewQuestionInputContainer">
           {!createFromScratch && <h2>{t.questions.nine.label2}</h2>}
           {!createFromScratch && (
-            <div id='magicReviewGraphicsContainer'>
-              {graphics.map(g => {
+            <div id="magicReviewGraphicsContainer">
+              {graphics.map((g) => {
                 return (
-                  <div key={g.originalFile.metadata.uploadId} className='magicReviewGraphicContainer'>
-                    {g.originalFile.mime.includes('image') && <img src={g.fileUrl} />}
-                    {g.originalFile.mime.includes('video') && <video src={g.fileUrl} />}
+                  <div
+                    key={g.originalFile.metadata.uploadId}
+                    className="magicReviewGraphicContainer"
+                  >
+                    {g.originalFile.mime.includes("image") && (
+                      <img src={g.fileUrl} />
+                    )}
+                    {g.originalFile.mime.includes("video") && (
+                      <video src={g.fileUrl} />
+                    )}
                     <h4>
                       {g.originalFile.originalFileName.slice(0, 15)}
-                      {g.originalFile.originalFileName.length > 15 && '...'}
+                      {g.originalFile.originalFileName.length > 15 && "..."}
                     </h4>
-                    <FontAwesomeIcon 
-                      icon={faClose} 
-                      color={'#DA2A7D'} 
-                      className='magicReviewGraphicCloseIcon clickable' 
+                    <FontAwesomeIcon
+                      icon={faClose}
+                      color={"#DA2A7D"}
+                      className="magicReviewGraphicCloseIcon clickable"
                       onClick={() => {
-                        setMagicValues({ graphics: graphics.filter(graphic => 
-                        graphic.originalFile.metadata.uploadId !== g.originalFile.metadata.uploadId) 
-                      })}}
+                        setMagicValues({
+                          graphics: graphics.filter(
+                            (graphic) =>
+                              graphic.originalFile.metadata.uploadId !==
+                              g.originalFile.metadata.uploadId
+                          ),
+                        });
+                      }}
                     />
                   </div>
-                )
+                );
               })}
-              <Error type='graphics' />
+              <Error type="graphics" />
             </div>
           )}
         </div>
       </div>
 
-      <div className='magicReviewQuestion ten'>
-        <div className='magicReviewQuestionInputContainer'>
+      <div className="magicReviewQuestion ten">
+        <div className="magicReviewQuestionInputContainer">
           <h2>{t.questions.ten.label1}</h2>
-          <div id='magicReviewQuestionTenRadioContainer'>
-             {t.questions.ten.options.map(o => (
-                <Tooltip 
-                  key={o.id}
-                  className='styleTooltip'
-                  title={o.tooltip}
-                  position='bottom'
-                  delay={300}
-                  hideDelay={1000}
-                  animation='perspective'
-                  arrowSize='small'
-                  stickyDuration={100}
-                  theme='dark'
-                  arrow
-                  inertia
-                  sticky
-                  touchHold
-                  size='regular'
+          <div id="magicReviewQuestionTenRadioContainer">
+            {t.questions.ten.options.map((o) => (
+              <Tooltip
+                key={o.id}
+                className="styleTooltip"
+                title={o.tooltip}
+                position="bottom"
+                delay={300}
+                hideDelay={1000}
+                animation="perspective"
+                arrowSize="small"
+                stickyDuration={100}
+                theme="dark"
+                arrow
+                inertia
+                sticky
+                touchHold
+                size="regular"
+              >
+                <div
+                  className="magicReviewQuestionTenRadio clickable"
+                  onClick={() => setMagicValues({ styleId: o.id })}
                 >
-                <div className='magicReviewQuestionTenRadio clickable' onClick={() => setMagicValues({ styleId: o.id })}> 
-                  <input 
-                    type='radio' 
-                    value={o.id} 
-                    checked={styleId === o.id} 
+                  <input
+                    type="radio"
+                    value={o.id}
+                    checked={styleId === o.id}
                     onChange={() => {}}
                   />
-                  <label htmlFor={o.id}>{o.name}</label>  
+                  <label htmlFor={o.id}>{o.name}</label>
                 </div>
               </Tooltip>
-             ))}
+            ))}
           </div>
         </div>
-        <div className='magicReviewQuestionInputContainer'>
+        <div className="magicReviewQuestionInputContainer">
           <h2>{t.questions.ten.label2}</h2>
-          <input 
-            className='magicReviewInput' 
-            value={email} 
-            onChange={e => setMagicValues({ email:  e.target.value })} 
+          <input
+            className="magicReviewInput"
+            value={email}
+            onChange={(e) => setMagicValues({ email: e.target.value })}
           />
-          <Error type='email' />
+          <Error type="email" />
         </div>
       </div>
 
-{/* 
-      <button 
-        id='magicReviewSubmitButton' 
-        className='clickable'
-        onClick={onSubmitClick}
+      <button
+        id="magicReviewSubmitButton"
+        className={`magicButton ${
+          isError ? "disabled" : "clickable"
+        }`}
+        onClick={() => {
+          if (isError) return
+          navigate(`${paths.magicCalendars.checkout}`);
+        }}
       >
-        {t.cta}
+        {isError ? t.error : t.cta}
       </button>
-
-      {status && <p id='magicReviewStatus'>{status}</p>} */}
     </main>
-  )
+  );
 }
 
 const mapState = state => {

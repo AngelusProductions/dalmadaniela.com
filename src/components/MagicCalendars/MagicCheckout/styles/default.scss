@@ -1,0 +1,30 @@
+@import '../../../colors.scss';
+
+#magicCheckoutPage {
+    padding: 7%;
+
+    h1 {
+        font-size: 6vw;
+        font-family: 'Garbata';
+        font-weight: 300;
+        margin-bottom: 5%;
+    }
+
+    #magicCheckoutTitleSectionWandContainer {
+        position: absolute;
+        top: 5vw;
+        left: 50vw;
+
+        #magicCheckoutTitleSectionWand {
+            width: 12vw;
+        }
+
+        #magicCheckoutTitleSectionWandMagic {
+            width: 18vw;
+            transform: rotate(-112deg) scaleX(-1);
+            position: absolute;
+            right: -207%;
+            top: -80%;
+        }
+    }
+}

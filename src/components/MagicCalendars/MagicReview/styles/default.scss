@@ -262,16 +262,22 @@
     }
 
     #magicReviewSubmitButton {
-        background: $yellow;
-        color: $pink;
+        background: $green;
+        color: white;
         font-size: 4vw;
         padding: 13px;
         cursor: pointer;
         font-family: 'Garbata';
         font-weight: bold;
         margin: 5%;
+        margin-bottom: 0;
         width: 90%;
-        border: 2px solid black;
+
+        &.disabled {
+            background: $blackFaded !important;
+            cursor: not-allowed !important;
+            font-size: 3vw;
+        }
     }
 
     #magicReviewStatus {
