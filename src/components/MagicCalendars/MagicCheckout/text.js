@@ -1,5 +1,5 @@
 export default {
-    title: "Magic Checkout",
+    title: "Magic Review",
     yourMagicSpeed: "Speed:",
     magicSpeeds: {
         standard: "Standard",

@@ -12,23 +12,26 @@
 
     h2 {
         font-weight: 300;
-        font-size: 1.3vw;
+        font-size: 1.7vw;
         margin-right: 10px;
         color: $pink;
         display: inline-flex;
-        font-family: 'Garet';
-        text-transform: uppercase;
+        font-family: "Garbata";
     }
 
     .magicCheckoutError {
         margin: 2% auto;
         color: $pink;
         position: absolute;
-        right: 5%;
-        font-size: 1.5vw;
+        right: 10%;
+        font-size: 1.2vw;
     }
 
     .magicCheckoutQuestion {
+        border: 1px solid $pink;
+        padding: 2%;
+        border-radius: 15px;
+        background: $pinkFaded;
         margin: 2% 0;
 
         .magicCheckoutQuestionInputContainer {
@@ -47,9 +50,9 @@
             width: 50%;
             padding: 0 2%;
             margin-left: 2%;
-            font-size: 1vw;
+            font-size: 1.2vw;
         }
-    
+
         .magicCheckoutTextarea {
             font-family: 'Garet';
             border: 1px solid black;
@@ -57,7 +60,7 @@
             border-radius: 15px;
             width: 50%;
             padding: 1% 2%;
-            font-size: 1vw;
+            font-size: 1.2vw;
         }
 
         &.four {
@@ -81,6 +84,7 @@
                         left: 0;
                     }
                 }
+
                 .magicColorPickerContainer:nth-of-type(5) {
                     .magicColorPicker {
                         right: 0;
@@ -105,11 +109,13 @@
                 margin-left: 10%;
                 padding-bottom: 0;
                 margin-top: -6px;
-        
+                background: white;
+
                 button {
                     font-weight: 300;
                 }
             }
+
             #magicCheckoutQuestionEightToggleContainer {
                 width: 50%;
                 margin-top: 3%;
@@ -122,6 +128,7 @@
                 width: 100%;
                 height: 50px;
             }
+
             .magicCheckoutQuestionInputContainer:nth-of-type(2) {
                 width: 100%;
                 margin-top: 1%;
@@ -149,6 +156,8 @@
                 display: flex;
                 justify-content: space-around;
                 width: 80%;
+                flex-wrap: wrap;
+                gap: 2%;
 
                 .magicCheckoutGraphicContainer {
                     display: flex;
@@ -158,6 +167,7 @@
 
                     h4 {
                         margin-top: 10px;
+                        font-size: 1vw;
                     }
 
                     img,
@@ -179,9 +189,13 @@
         }
 
         &.ten {
+            .magicCheckoutQuestionInputContainer:nth-of-type(1) {
+                width: 100%;
+            }
+
             #magicCheckoutQuestionTenRadioContainer {
                 display: flex;
-                width: 67%;
+                width: 80%;
                 justify-content: space-around;
 
                 .magicCheckoutQuestionTenRadio {
@@ -191,7 +205,7 @@
                     justify-content: space-between;
                     text-align: center;
                     cursor: pointer;
-            
+
                     label {
                         margin: 5% 0 2%;
                         font-weight: bold;
@@ -199,7 +213,7 @@
                         color: $pink;
                         cursor: pointer;
                     }
-            
+
                     hr {
                         width: 100%;
                         margin-bottom: 15px;
@@ -207,14 +221,14 @@
                         border: 1px solid $pink;
                         height: 0px;
                     }
-            
+
                     input {
                         width: 2vw;
                         height: 2vw;
-                        margin: 5% auto 0;
+                        margin: 5% auto;
                         filter: hue-rotate(110deg);
                         cursor: pointer;
-            
+
                         &::after {
                             background: $pink;
                         }
@@ -236,13 +250,13 @@
         #magicCheckoutTitleSectionWand {
             width: 12vw;
         }
-        
+
         #magicCheckoutTitleSectionWandMagic {
-            width: 10vw;
+            width: 18vw;
             transform: rotate(-112deg) scaleX(-1);
             position: absolute;
-            right: -108%;
-            top: -31%;
+            right: -207%;
+            top: -80%;
         }
     }
 
@@ -409,6 +423,7 @@
     -moz-box-shadow: 0px 0px 5px 5px #0099E0;
     box-shadow: 0px 0px 5px 5px #0099E0;
 }
+
 .w-color-block {
     --block-background-color: black !important;
     --block-box-shadow: rgb(0 0 0 / 10%) 0 1px !important;

@@ -2,12 +2,12 @@
 
 @media (max-width: 640px) {
     #magicFormContainer {
-        
+
         #magicFormTitleContainer {
             h1 {
                 font-size: 7vw;
             }
-            
+
             #magicFormTitleWand {
                 width: 12% !important;
                 top: 0% !important;
@@ -46,7 +46,7 @@
                 .magicFormTextarea {
                     margin-top: 5% !important;
                     width: 67vw;
-                    padding: 0 5%;
+                    padding: 2% 5%;
                 }
             }
 
@@ -60,6 +60,10 @@
             &.eight {
                 #magicFormQuestionEightToggleContainer {
                     margin-top: 5%;
+                }
+
+                .magicQuestionImage {
+                    display: none;
                 }
             }
 
@@ -120,6 +124,10 @@
 
                 .magicFormInput {
                     width: 75vw;
+                }
+
+                .magicQuestionImage {
+                    display: none;
                 }
             }
 

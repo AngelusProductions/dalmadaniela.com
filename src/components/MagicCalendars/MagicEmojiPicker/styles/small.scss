@@ -2,6 +2,25 @@
 
 @media (max-width: 640px) {
     .magicEmojiPickerContainer {
-        
+        .magicEmojiContainer {
+            .magicEmojiSelectionContainer {}
+
+            .magicEmoji {}
+
+            svg.magicEmojiAddIcon {}
+
+            svg.magicEmojiCloseIcon {}
+
+            svg.magicEmojiCloseIcon,
+            svg.magicEmojiAddIcon {}
+        }
+
+        .magicEmojiPickerContainer {
+            top: 10%;
+            width: 100%;
+            left: 0;
+        }
+
+        aside {}
     }
 }

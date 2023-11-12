@@ -295,8 +295,8 @@ const MagicCheckout = ({
               value={specificTopics} 
               onChange={e => setMagicValues({ specificTopics:  e.target.value })} 
             />
+            <Error type='specificTopics' />
           </div>
-          <Error type='specificTopics' />
           <div className='magicCheckoutQuestionInputContainer'>  
             <h2>{t.questions.eight.label2}</h2>
             <div id='magicCheckoutQuestionEightToggleContainer'>
@@ -403,13 +403,13 @@ const MagicCheckout = ({
                   size='regular'
                 >
                 <div className='magicCheckoutQuestionTenRadio clickable' onClick={() => setMagicValues({ styleId: o.id })}> 
-                  <label htmlFor={o.id}>{o.name}</label>  
                   <input 
                     type='radio' 
                     value={o.id} 
                     checked={styleId === o.id} 
                     onChange={() => {}}
                   />
+                  <label htmlFor={o.id}>{o.name}</label>  
                 </div>
               </Tooltip>
              ))}

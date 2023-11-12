@@ -1,5 +1,3 @@
-import { bucketPrefix } from "../../../constants/data/assets"
-
 export default {
     title: "Magic Form",
     questions: {
@@ -77,7 +75,6 @@ export default {
             error: 'Please give us a good email :)'
         }
     },
-    cta: "Create My Calendar",
 
     test: {
         brandName: "Angelus Productions",

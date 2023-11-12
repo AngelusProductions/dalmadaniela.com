@@ -1,356 +1,361 @@
-@import '../../../colors.scss';
+@import "../../../colors.scss";
 
 #magicFormContainer {
-    padding: 5vh 5%;
-    min-height: 90vh;
+  padding: 5vh 5%;
+  min-height: 90vh;
+  position: relative;
+
+  h2,
+  h3,
+  input {
+    font-family: "Garbata";
+  }
+
+  h3 {
+    font-weight: 300;
+  }
+
+  #magicFormTitleContainer {
     position: relative;
 
-    h2, h3, input {
-        font-family: 'Garbata';
+    h1 {
+      font-size: 6vw;
+      font-family: "Garbata";
+      font-weight: 300;
+      margin-bottom: 5%;
+    }
+
+    img#magicFormTitleWand {
+      width: 8%;
+      position: absolute;
+      top: 10%;
+      left: 35%;
+    }
+
+    img#magicFormTitleWandMagic {
+      width: 15%;
+      transform: rotate(-112deg) scaleX(-1);
+      position: absolute;
+      top: -125%;
+      left: 50%;
+    }
+  }
+
+  .magicQuestion {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    min-height: 500px;
+
+    h2,
+    h3 {
+      font-family: "Garbata";
+    }
+
+    h2 {
+      font-weight: bold;
     }
 
     h3 {
+      margin: 2% 0;
+    }
+
+    h4.magicFormError {
+      color: $pink;
+      font-size: 1em;
+      margin-top: 2%;
+    }
+
+    .magicQuestionFormContainer {
+      width: 50%;
+
+      .magicFormInput {
+        font-family: "Garet";
+        border: 1px solid black;
         font-weight: 300;
+        height: 30px;
+        border-radius: 15px;
+        width: 67%;
+        padding: 0 2%;
+      }
+
+      .magicFormTextarea {
+        font-family: "Garet";
+        border: 1px solid black;
+        height: 150px;
+        border-radius: 15px;
+        width: 66%;
+        padding: 1% 2%;
+      }
     }
 
-    #magicFormTitleContainer {
-        position: relative;
-
-        h1 {
-            font-size: 6vw;
-            font-family: 'Garbata';
-            font-weight: 300;
-            margin-bottom: 5%;
-        }
-
-        img#magicFormTitleWand {
-            width: 8%;
-            position: absolute;
-            top: 10%;
-            left: 35%;
-        }
-
-        img#magicFormTitleWandMagic {
-            width: 15%;
-            transform: rotate(-112deg) scaleX(-1);
-            position: absolute;
-            top: -125%;
-            left: 50%;
-        }
+    .magicQuestionImage {
+      height: 33vh;
+      max-width: 50%;
     }
-        
-    .magicQuestion {
+
+    &.three {
+      input:nth-of-type(1) {
+        margin: 2% 0;
+      }
+    }
+
+    &.five {
+      textarea {
+        margin-top: 2%;
+      }
+    }
+
+    &.six {
+      flex-direction: column;
+      justify-content: flex-start;
+
+      input {
+        font-family: "Hatton";
+        padding-top: 1%;
+      }
+      #magicFormColorPickersContainer {
         display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        min-height: 500px;
+        justify-content: space-between;
+        margin-top: 5%;
+        position: relative;
+        width: 100%;
+        height: 50px;
 
-        h2, h3 {
-            font-family: 'Garbata';
+        .w-color-alpha:nth-of-type(2) {
+          display: none;
         }
 
-        h2 {
-            font-weight: bold;
+        .magicColorPickerContainer:nth-of-type(1) {
+          .magicColorPicker {
+            left: 0;
+          }
+        }
+        .magicColorPickerContainer:nth-of-type(5) {
+          .magicColorPicker {
+            right: 0;
+          }
+        }
+      }
+    }
+
+    &.seven {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      #magicFormEmojiPickersContainer {
+        display: flex;
+        margin-top: 5%;
+        width: 100%;
+        height: 50px;
+      }
+    }
+
+    &.eight {
+      .magicFormQuestionEightContainer {
+        h2,
+        h3 {
+          margin-bottom: 2%;
         }
 
         h3 {
-            margin: 2% 0;
+          margin-bottom: 3%;
         }
 
-        h4.magicFormError {
-            color: $pink;
-            font-size: 1em;
-            margin-top: 2%;
+        .ReactFlagsSelect-module_flagsSelect__2pfa2 {
+          font-family: "Garbata";
+          font-weight: 300;
+          display: inline-block;
+          margin-left: 10%;
+          padding-bottom: 0;
+          margin-top: -6px;
+
+          button {
+            font-weight: 300;
+          }
         }
 
-        .magicQuestionFormContainer {
-            width: 50%;
+        &:nth-of-type(2) {
+          height: 25px;
+        }
+      }
+    }
 
-            .magicFormInput {
-                font-family: 'Garet';
-                border: 1px solid black;
-                font-weight: 300;
-                height: 30px;
-                border-radius: 15px;
-                width: 67%;
-                padding: 0 2%;
-            }
+    &.nine {
+      align-items: flex-start;
+      // min-height: 700px;
 
-            .magicFormTextarea {
-                font-family: 'Garet';
-                border: 1px solid black;
-                height: 150px;
-                border-radius: 15px;
-                width: 66%;
-                padding: 1% 2%;
-            }
+      .magicQuestionFormContainer {
+        height: 250px;
+
+        #magicFormQuestionNineToggleContainer {
+          display: flex;
+          align-items: center;
+          margin: 3% 0;
+
+          .react-toggle {
+            margin-left: 2%;
+          }
+
+          label {
+            font-family: "Garet";
+          }
         }
 
-        .magicQuestionImage {
-            height: 33vh;
-            max-width: 50%;
+        button {
+          background: $pink;
+          color: white;
+          font-family: "Hatton";
+          font-weight: 600;
+          padding: 12px 10px 10px;
+          cursor: pointer;
+          margin-left: 2%;
         }
+        #magicFormGraphicsContainer {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
 
-        &.three {
-            input:nth-of-type(1) {
-                margin: 2% 0;
-            }
-        }
-
-        &.five {
-            textarea {
-                margin-top: 2%;
-            }
-        }
-
-        &.six {
-            flex-direction: column;
-            justify-content: flex-start;
-
-            input {
-                font-family: 'Hatton';
-                padding-top: 1%;
-            }
-            #magicFormColorPickersContainer {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 5%;
-                position: relative;
-                width: 100%;
-                height: 50px;
-
-                .w-color-alpha:nth-of-type(2) {
-                    display: none;
-                }
-
-                .magicColorPickerContainer:nth-of-type(1) {
-                    .magicColorPicker {
-                        left: 0;
-                    }
-                }
-                .magicColorPickerContainer:nth-of-type(5) {
-                    .magicColorPicker {
-                        right: 0;
-                    }
-                }
-            }
-        }
-
-        &.seven {
+          .magicFormGraphicContainer {
             display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+            align-items: center;
+            margin: 20px 0;
 
-            #magicFormEmojiPickersContainer {
-                display: flex;
-                margin-top: 5%;
-                width: 100%;
-                height: 50px;
+            img,
+            video {
+              height: 50px;
+              margin-right: 10px;
+              border-radius: 5px;
+              filter: drop-shadow(0 0 2px $pink);
             }
+
+            svg {
+              cursor: pointer;
+              margin-left: 10px;
+            }
+          }
         }
 
-        &.eight {
-            .magicFormQuestionEightContainer {
-                h2, h3 {
-                    margin-bottom: 2%;
-                }
-
-                h3 {
-                    margin-bottom: 3%;
-                }
-
-                .ReactFlagsSelect-module_flagsSelect__2pfa2 {
-                    font-family: 'Garbata';
-                    font-weight: 300;
-                    display: inline-block;
-                    margin-left: 10%;
-                    padding-bottom: 0;
-                    margin-top: -6px;
-
-                    button {
-                        font-weight: 300;
-                    }
-                }
-
-                &:nth-of-type(2) {
-                    height: 25px;
-                }
-            }
+        .uploader__submitted-file__container {
+          display: none;
         }
-
-        &.nine {
-            align-items: flex-start;
-            // min-height: 700px;
-
-            .magicQuestionFormContainer {
-                height: 250px;
-
-                #magicFormQuestionNineToggleContainer {
-                    display: flex;
-                    align-items: center;
-                    margin: 3% 0;
-
-                    .react-toggle {
-                        margin-left: 2%;
-                    }
-
-                    label {
-                        font-family: 'Garet';
-                    }
-                }
-
-                button {
-                    background: $pink;
-                    color: white;
-                    font-family: 'Hatton';
-                    font-weight: 600;
-                    padding: 12px 10px 10px;
-                    cursor: pointer;
-                    margin-left: 2%;
-                }
-                #magicFormGraphicsContainer {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-
-                    .magicFormGraphicContainer {
-                        display: flex;
-                        align-items: center;
-                        margin: 20px 0;
-                        
-                        img, video {
-                            height: 50px;
-                            margin-right: 10px;
-                            border-radius: 5px;
-                            filter: drop-shadow(0 0 2px $pink);
-                        }
-                        
-                        svg {
-                            cursor: pointer;
-                            margin-left: 10px;
-                        }
-                    }
-                }
-                
-                .uploader__submitted-file__container {
-                    display: none;
-                }
-            }
-        }
-        
-        &.ten {
-            .styleTooltip {
-                font-family: 'Garet' !important;
-            }
-            #magicFormQuestionTenRadioContainer {
-                display: flex;
-                justify-content: space-between;
-                margin: 3% 0;
-
-                .styleTooltip {
-                    font-family: 'Garet' !important;
-                }
-
-                .magicFormQuestionTenRadio {
-                    display: flex;
-                    flex-direction: column;
-                    font-family: 'Hatton';
-                    justify-content: space-between;
-                    text-align: center;
-                    cursor: pointer;
-
-                    label {
-                        margin: 5% 0 2%;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        color: $pink;
-                        cursor: pointer;
-                    }
-
-                    hr {
-                        width: 100%;
-                        margin-bottom: 15px;
-                        background: $pink;
-                        border: 1px solid $pink;
-                        height: 0px;
-                    }
-
-                    input {
-                        width: 2vw;
-                        height: 2vw;
-                        margin: 5% auto 0;
-                        filter: hue-rotate(110deg);
-                        cursor: pointer;
-                        &::after {
-                            background: $pink;
-                        }
-                    }
-                }
-            }
-
-            .magicFormInput {
-                margin-top: 2%;
-            }
-        }
+      }
     }
 
-    .magicButton {
-        font-family: 'Garbata';
-        color: $pink;
-        background: none;
-        cursor: pointer;
-        position: absolute;
-        bottom: 5%;
-        font-size: 3vw;
-        
-        &#magicFormBackButton {
-            left: 5%;
-            color: $pink;
-            font-weight: 600;
+    &.ten {
+      .styleTooltip {
+        font-family: "Garet" !important;
+      }
+      #magicFormQuestionTenRadioContainer {
+        display: flex;
+        justify-content: space-between;
+        margin: 3% 0;
+
+        .styleTooltip {
+          font-family: "Garet" !important;
         }
 
-        &#magicFormNextButton,
-        &#magicFormCheckoutButton {
-            right: 5%;
-            background: $green;
-            color: white;
-            font-family: 'Garet';
+        .magicFormQuestionTenRadio {
+          display: flex;
+          flex-direction: column;
+          font-family: "Hatton";
+          justify-content: space-between;
+          text-align: center;
+          cursor: pointer;
+
+          label {
+            margin: 5% 0 2%;
             font-weight: bold;
-            padding: 5px 15px;
-        }
+            text-transform: uppercase;
+            color: $pink;
+            cursor: pointer;
+          }
 
-        &.disabled {
-            background: $blackFaded !important;
-            cursor: not-allowed !important;
-        }
+          hr {
+            width: 100%;
+            margin-bottom: 15px;
+            background: $pink;
+            border: 1px solid $pink;
+            height: 0px;
+          }
 
-        &.magicFormNextButtonReview {
-            font-size: 2vw !important;
+          input {
+            width: 2vw;
+            height: 2vw;
+            margin: 5% auto;
+            filter: hue-rotate(110deg);
+            cursor: pointer;
+            &::after {
+              background: $pink;
+            }
+          }
         }
+      }
+
+      .magicFormInput {
+        margin-top: 2%;
+      }
+    }
+  }
+
+  .magicButton {
+    font-family: "Garbata";
+    color: $pink;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    font-size: 3vw;
+
+    &#magicFormBackButton {
+      left: 5%;
+      color: $pink;
+      font-weight: 600;
     }
 
-    div#magicFormProgressBarContainer {
-        position: absolute;
-        width: 10%;
-        right: 10%;
-        top: 2%;
-
-        .CircularProgressbar-path {
-            stroke: $green;
-            stroke-linecap: round;
-            transition: 0.5s ease 0s;
-        }
-
-        .CircularProgressbar-trail {
-            stroke: $blackFaded;
-            stroke-width: 3px;
-        }
-
-        .CircularProgressbar-text {
-            font-family: 'Hatton';
-            fill: $green;
-        }
+    &#magicFormNextButton,
+    &#magicFormCheckoutButton {
+      right: 5%;
+      background: $green;
+      color: white;
+      font-family: "Garet";
+      font-weight: bold;
+      padding: 5px 15px;
     }
+
+    &.disabled {
+      background: $blackFaded !important;
+      cursor: not-allowed !important;
+    }
+
+    &.magicFormNextButtonReview {
+      font-size: 2vw !important;
+    }
+  }
+
+  div#magicFormProgressBarContainer {
+    position: absolute;
+    width: 10%;
+    right: 10%;
+    top: 2%;
+
+    .CircularProgressbar-path {
+      stroke: $green;
+      stroke-linecap: round;
+      transition: 0.5s ease 0s;
+    }
+
+    .CircularProgressbar-trail {
+      stroke: $blackFaded;
+      stroke-width: 3px;
+    }
+
+    .CircularProgressbar-text {
+      font-family: "Hatton";
+      fill: $green;
+    }
+  }
 }
 
 .w-color-block {
@@ -359,10 +364,10 @@
 }
 
 .w-color-editable-input {
-    font-family: 'Garet';
-  --editable-input-label-color: #DA2A7D !important;
+  font-family: "Garet";
+  --editable-input-label-color: #da2a7d !important;
   --editable-input-box-shadow: #616161 0px 0px 0px 1px inset !important;
-  --editable-input-color: #DA2A7D !important;
+  --editable-input-color: #da2a7d !important;
 }
 
 .w-color-github {
@@ -387,62 +392,62 @@
 }
 
 .uploader__widget-base__children {
-    font-family: 'Garbata';
-    font-weight: 300;
+  font-family: "Garbata";
+  font-weight: 300;
 
-    .btn {
-        font-weight: bold;
-        font-family: 'Garbata';
+  .btn {
+    font-weight: bold;
+    font-family: "Garbata";
+  }
+
+  .btn--primary {
+    background: $pink;
+    border: none;
+    border-radius: 0;
+    font-family: "Garbata";
+
+    input {
+      cursor: pointer;
     }
 
-    .btn--primary {
-        background: $pink;
-        border: none;
-        border-radius: 0;
-        font-family: 'Garbata';
-
-        input {
-            cursor: pointer;
-        }
-
-        &:hover {
-            background-color: $pink !important;
-            transform: scale(1.05);
-        }
-        &:active {
-            transform: scale(0.95);
-        }
+    &:hover {
+      background-color: $pink !important;
+      transform: scale(1.05);
     }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
 }
 
 .uploader__modal__close svg {
-    color: $pink !important;
+  color: $pink !important;
 
-    &:hover {
-        transform: scale(1.05);
-    }
-    &:active {
-        transform: scale(0.95);
-    }
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 .uploader__main-screen__info,
 .uploader__image-editor__header,
 .uploader__submitted-file__name {
-    font-family: 'Hatton';
-    font-weight: bold;
+  font-family: "Hatton";
+  font-weight: bold;
 }
 
 .uploader__submitted-file__container {
-    background: $pinkFaded;
+  background: $pinkFaded;
 }
 
 .uploader__submitted-file__inner {
-    filter: hue-rotate(267deg);
+  filter: hue-rotate(267deg);
 }
 
 .tippy-popper {
-    font-family: 'Garet' !important;
-    font-weight: 300 !important;
-    font-size: 10px !important;
+  font-family: "Garet" !important;
+  font-weight: 300 !important;
+  font-size: 10px !important;
 }

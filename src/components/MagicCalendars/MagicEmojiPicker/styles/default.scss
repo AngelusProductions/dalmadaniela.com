@@ -21,6 +21,7 @@
 
         .magicEmoji {
             font-size: 50px;
+            transform: translateY(-7.5px);
         }
 
         svg.magicEmojiAddIcon {
@@ -41,7 +42,7 @@
     }
 
     .magicEmojiPickerContainer {
-        position: absolute;
+        position: fixed;
         z-index: 99;
         left: 25%;
         width: 50%;

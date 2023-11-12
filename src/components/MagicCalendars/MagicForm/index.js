@@ -399,14 +399,13 @@ const MagicForm = ({
                   size='regular'
                 >
                 <div className='magicFormQuestionTenRadio clickable' onClick={() => setMagicValues({ styleId: o.id })}> 
-                  <label htmlFor={o.id}>{o.name}</label>  
-                  {/* <hr /> */}
                   <input 
                     type='radio' 
                     value={o.id} 
                     checked={styleId === o.id} 
                     onChange={() => {}}
                   />
+                  <label htmlFor={o.id}>{o.name}</label>  
                 </div>
               </Tooltip>
              ))}
@@ -470,7 +469,7 @@ const MagicForm = ({
           }
         }}
       >
-        {questionNumber === 10 ? 'Review in Magic Checkout' : 'Next Question'}
+        {questionNumber === 10 ? 'Go to Magic Review' : 'Next Question'}
       </button>
     </main>
   )
