@@ -11,7 +11,6 @@ import SuperLogin from './SuperClass/SuperLogin'
 
 import MagicCalendars from './MagicCalendars'
 import MagicForm from './MagicCalendars/MagicForm'
-import MagicReview from './MagicCalendars/MagicReview'
 import MagicCheckout from './MagicCalendars/MagicCheckout'
 
 import Blog from './Blog'
@@ -48,7 +47,6 @@ const App = ({ currentUser, onBoot }) => {
       
       <Route path={paths.magicCalendars.page} element={<MagicCalendars />} />
       <Route path={paths.magicCalendars.form} element={<MagicForm />} />
-      <Route path={paths.magicCalendars.review} element={<MagicReview />} />
       <Route path={paths.magicCalendars.checkout} element={<MagicCheckout />} />
 
       <Route path={paths.blog.page} element={<Blog />} />

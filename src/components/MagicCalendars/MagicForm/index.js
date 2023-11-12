@@ -463,13 +463,13 @@ const MagicForm = ({
             setIsErrorInitialized(false)
             setQuestionNumber(questionNumber + 1)
             if(questionNumber === 10)
-              navigate(`${paths.magicCalendars.review}`)
+              navigate(`${paths.magicCalendars.checkout}`)
             else
               navigate(`${paths.magicCalendars.page}/form/${questionNumber + 1 }`)
           }
         }}
       >
-        {questionNumber === 10 ? 'Go to Magic Review' : 'Next Question'}
+        {questionNumber === 10 ? 'Review in Magic Checkout' : 'Next Question'}
       </button>
     </main>
   )

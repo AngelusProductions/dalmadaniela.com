@@ -3,7 +3,7 @@ import { Card, Layout } from '@shopify/polaris'
 import StripeCheckout from 'react-stripe-checkout'
 import './index.scss'
 
-import { sendPaymentRequest } from 'api/stripe'
+import { sendPaymentRequest } from '../../api/stripe'
 import { STRIPE_PUBLISHABLE_TEST_KEY } from '../../constants/config'
 
 const Checkout = ({ name, description, amount }) => {
