@@ -463,7 +463,7 @@ const MagicForm = ({
             setIsErrorInitialized(false)
             setQuestionNumber(questionNumber + 1)
             if(questionNumber === 10)
-              navigate(`${paths.magicCalendars.checkout}`)
+              navigate(`${paths.magicCalendars.review}`)
             else
               navigate(`${paths.magicCalendars.page}/form/${questionNumber + 1 }`)
           }

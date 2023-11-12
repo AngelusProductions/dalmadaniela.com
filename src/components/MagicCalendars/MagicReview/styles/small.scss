@@ -1,19 +1,19 @@
 @import '../../../colors.scss';
 
-@media (max-width: 640px) {
-    #magicCheckoutPage {
-        #magicCheckoutTitleSectionContainer {
+@media (max-width: 1024px) {
+    #magicReviewPage {
+        #magicReviewTitleSectionContainer {
             margin-top: 5%;
             position: relative;
 
-            #magicCheckoutTitleSectionWandContainer {
+            #magicReviewTitleSectionWandContainer {
                 top: -2vw;
-                left: 41vw;
+                left: 35vw;
             }
         }
 
-        .magicCheckoutQuestion {
-            .magicCheckoutQuestionInputContainer {
+        .magicReviewQuestion {
+            .magicReviewQuestionInputContainer {
                 flex-direction: column;
                 width: 100%;
 
@@ -29,7 +29,7 @@
                     width: 75%;
                 }
 
-                .magicCheckoutError {
+                .magicReviewError {
                     position: relative !important;
                     right: 0 !important;
                     font-size: 2.4vw !important;
@@ -37,21 +37,21 @@
             }
 
             &.six {
-                #magicCheckoutColorPickersContainer {
+                #magicReviewColorPickersContainer {
                     width: 100%;
                     margin: 5% 0;
                 }
             }
 
             &.seven {
-                #magicCheckoutEmojiPickersContainer {
+                #magicReviewEmojiPickersContainer {
                     width: 100%;
                     margin: 5% 0;
                 }
             }
 
             &.eight {
-                #magicCheckoutQuestionEightToggleContainer {
+                #magicReviewQuestionEightToggleContainer {
                     display: flex;
                     align-items: center;
                     justify-content: space-evenly;
@@ -72,17 +72,17 @@
             }
 
             &.nine {
-                #magicCheckoutQuestionNineToggleContainer {
+                #magicReviewQuestionNineToggleContainer {
                     margin-top: 0;
                     flex-direction: column;
                     gap: 10px;
                 }
 
-                .magicCheckoutQuestionInputContainer:nth-of-type(1) {
+                .magicReviewQuestionInputContainer:nth-of-type(1) {
                     height: unset !important;
                 }
 
-                #magicCheckoutGraphicsContainer {
+                #magicReviewGraphicsContainer {
                     h4 {
                         display: none;
                     }
@@ -91,14 +91,14 @@
                         margin-top: 10px;
                     }
 
-                    .magicCheckoutGraphicContainer {
+                    .magicReviewGraphicContainer {
                         margin: 2% auto 0;
                     }
                 }
             }
 
             &.ten {
-                #magicCheckoutQuestionTenRadioContainer {
+                #magicReviewQuestionTenRadioContainer {
                     width: 100%;
                     flex-wrap: wrap;
                     justify-content: space-evenly;

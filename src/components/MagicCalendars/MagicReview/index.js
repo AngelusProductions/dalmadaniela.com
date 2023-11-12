@@ -11,15 +11,15 @@ import { faClose } from '@fortawesome/free-solid-svg-icons'
 import { Tooltip } from 'react-tippy'
 import 'react-tippy/dist/tippy.css'
 
-import BackIcon from '../../UI/BackIcon'
-import MagicColorPicker from '../MagicColorPicker'
-import MagicEmojiPicker from '../MagicEmojiPicker'
+import BackIcon from '../../UI/BackIcon/index.js'
+import MagicColorPicker from '../MagicColorPicker/index.js'
+import MagicEmojiPicker from '../MagicEmojiPicker/index.js'
 
-import { paths } from '../../../constants/paths'
-import { i } from '../../../constants/data/assets'
-import { isValidUrl, isValidEmail } from '../../../utils/validators'
-import { setMagicLength, setMagicValues } from '../../../actions/magicCalendars'
-import { createMagicCalendar, saveGraphic } from '../../../api/magicCalendars'
+import { paths } from '../../../constants/paths.js'
+import { i } from '../../../constants/data/assets.js'
+import { isValidUrl, isValidEmail } from '../../../utils/validators.js'
+import { setMagicLength, setMagicValues } from '../../../actions/magicCalendars.js'
+import { createMagicCalendar, saveGraphic } from '../../../api/magicCalendars.js'
 
 import t from './text.js'
 import './styles/index.scss'
@@ -28,7 +28,7 @@ const graphicUploader = Uploader({
   apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ"
 })
 
-const MagicCheckout = ({ 
+const MagicReview = ({ 
   brandName,
   website,
   socialMedia1,
@@ -61,7 +61,7 @@ const MagicCheckout = ({
 
   const Error = ({ type }) => {
     return errors && errors[type] && (
-    <h4 className='magicCheckoutError'>{errors[type]}</h4>
+    <h4 className='magicReviewError'>{errors[type]}</h4>
   )}
 
   const getErrors = () => {
@@ -138,23 +138,23 @@ const MagicCheckout = ({
   }
 
   return (
-    <main id='magicCheckoutPage'>
+    <main id='magicReviewPage'>
       <BackIcon text pink path={`${paths.magicCalendars.page}/form/10`} />
       
-      <div id='magicCheckoutTitleSectionContainer'>
+      <div id='magicReviewTitleSectionContainer'>
         <h1>{t.title}</h1>
-        <div id='magicCheckoutTitleSectionWandContainer'>
-          <img id='magicCheckoutTitleSectionWand' src={i.stock.wand} />
-          <img id='magicCheckoutTitleSectionWandMagic' src={i.stars.starTwinklesLarge} />
+        <div id='magicReviewTitleSectionWandContainer'>
+          <img id='magicReviewTitleSectionWand' src={i.stock.wand} />
+          <img id='magicReviewTitleSectionWandMagic' src={i.stars.starTwinklesLarge} />
         </div>
       </div>
 
-      <div className='magicCheckoutQuestionsContainer'>
-        <div className='magicCheckoutQuestion one'>
-          <div className='magicCheckoutQuestionInputContainer'>
-            <h2 className='magicCheckoutInputLabel'>{t.questions.one.label}</h2>
+      <div className='magicReviewQuestionsContainer'>
+        <div className='magicReviewQuestion one'>
+          <div className='magicReviewQuestionInputContainer'>
+            <h2 className='magicReviewInputLabel'>{t.questions.one.label}</h2>
             <input 
-              className='magicCheckoutInput' 
+              className='magicReviewInput' 
               value={brandName} 
               onChange={e => setMagicValues({ brandName:  e.target.value })} 
             />
@@ -162,11 +162,11 @@ const MagicCheckout = ({
           </div>
         </div>
 
-        <div className='magicCheckoutQuestion two'>
-          <div className='magicCheckoutQuestionInputContainer'>
-            <h2 className='magicCheckoutInputLabel'>{t.questions.two.label}</h2>
+        <div className='magicReviewQuestion two'>
+          <div className='magicReviewQuestionInputContainer'>
+            <h2 className='magicReviewInputLabel'>{t.questions.two.label}</h2>
             <input 
-              className='magicCheckoutInput' 
+              className='magicReviewInput' 
               value={website} 
               onChange={e => setMagicValues({ website:  e.target.value })} 
             />
@@ -174,20 +174,20 @@ const MagicCheckout = ({
           </div>
         </div>
 
-        <div className='magicCheckoutQuestion three'>
-          <div className='magicCheckoutQuestionInputContainer'>
+        <div className='magicReviewQuestion three'>
+          <div className='magicReviewQuestionInputContainer'>
             <h2>{t.questions.three.label1}</h2>
             <input 
-              className='magicCheckoutInput' 
+              className='magicReviewInput' 
               value={socialMedia1} 
               onChange={e => setMagicValues({ socialMedia1:  e.target.value })} 
             />
           </div>
           <br />
-          <div className='magicCheckoutQuestionInputContainer'>
+          <div className='magicReviewQuestionInputContainer'>
             <h2>{t.questions.three.label2}</h2>
             <input 
-              className='magicCheckoutInput' 
+              className='magicReviewInput' 
               value={socialMedia2} 
               onChange={e => setMagicValues({ socialMedia2:  e.target.value })} 
             />
@@ -195,11 +195,11 @@ const MagicCheckout = ({
           </div>
         </div>
 
-        <div className='magicCheckoutQuestion four'>
-          <div className='magicCheckoutQuestionInputContainer'>
+        <div className='magicReviewQuestion four'>
+          <div className='magicReviewQuestionInputContainer'>
             <h2>{t.questions.four.label}</h2>
             <textarea 
-              className='magicCheckoutTextarea' 
+              className='magicReviewTextarea' 
               value={description} 
               onChange={e => setMagicValues({ description:  e.target.value })} 
             />
@@ -207,11 +207,11 @@ const MagicCheckout = ({
           </div>
         </div>
 
-        <div className='magicCheckoutQuestion five'>
-          <div className='magicCheckoutQuestionInputContainer'>
+        <div className='magicReviewQuestion five'>
+          <div className='magicReviewQuestionInputContainer'>
             <h2>{t.questions.five.label}</h2>
             <textarea 
-              className='magicCheckoutTextarea' 
+              className='magicReviewTextarea' 
               value={objective} 
               onChange={e => setMagicValues({ objective:  e.target.value })} 
             />
@@ -219,10 +219,10 @@ const MagicCheckout = ({
           </div>
         </div>
 
-        <div className='magicCheckoutQuestion six'>
-          <div className='magicCheckoutQuestionInputContainer'>
+        <div className='magicReviewQuestion six'>
+          <div className='magicReviewQuestionInputContainer'>
             <h2>{t.questions.six.label}</h2>
-            <div id='magicCheckoutColorPickersContainer'>
+            <div id='magicReviewColorPickersContainer'>
               <MagicColorPicker 
                 color={brandColor1} 
                 onColorClick={c => setMagicValues({ brandColor1: c.hex })}
@@ -253,10 +253,10 @@ const MagicCheckout = ({
           </div>
         </div>
 
-        <div className='magicCheckoutQuestion seven'>
-          <div className='magicCheckoutQuestionInputContainer'>
+        <div className='magicReviewQuestion seven'>
+          <div className='magicReviewQuestionInputContainer'>
             <h2>{t.questions.seven.label}</h2>
-            <div id='magicCheckoutEmojiPickersContainer'>
+            <div id='magicReviewEmojiPickersContainer'>
               <MagicEmojiPicker 
                 emoji={brandEmoji1} 
                 onEmojiClick={e => setMagicValues({ brandEmoji1: e })}
@@ -287,19 +287,19 @@ const MagicCheckout = ({
           </div>
         </div>
 
-        <div className='magicCheckoutQuestion eight'>
-          <div className='magicCheckoutQuestionInputContainer'>  
+        <div className='magicReviewQuestion eight'>
+          <div className='magicReviewQuestionInputContainer'>  
             <h2>{t.questions.eight.label1}</h2>
             <textarea 
-              className='magicCheckoutTextarea' 
+              className='magicReviewTextarea' 
               value={specificTopics} 
               onChange={e => setMagicValues({ specificTopics:  e.target.value })} 
             />
             <Error type='specificTopics' />
           </div>
-          <div className='magicCheckoutQuestionInputContainer'>  
+          <div className='magicReviewQuestionInputContainer'>  
             <h2>{t.questions.eight.label2}</h2>
-            <div id='magicCheckoutQuestionEightToggleContainer'>
+            <div id='magicReviewQuestionEightToggleContainer'>
               <Toggle
                 id='toggleUseHolidays'
                 onChange={() => setMagicValues({ useHolidays:  !useHolidays })} 
@@ -316,10 +316,10 @@ const MagicCheckout = ({
         </div>
       </div>
 
-      <div className='magicCheckoutQuestion nine'>
-        <div className='magicCheckoutQuestionInputContainer'>
+      <div className='magicReviewQuestion nine'>
+        <div className='magicReviewQuestionInputContainer'>
           <h2>{t.questions.nine.label1}</h2>
-          <div id='magicCheckoutQuestionNineToggleContainer'>
+          <div id='magicReviewQuestionNineToggleContainer'>
               <Toggle
                 id='toggleCreateFromScratch'
                 onChange={() => setMagicValues({ createFromScratch: !createFromScratch })} 
@@ -349,13 +349,13 @@ const MagicCheckout = ({
             )}
           </div>
         </div>
-        <div className='magicCheckoutQuestionInputContainer'>
+        <div className='magicReviewQuestionInputContainer'>
           {!createFromScratch && <h2>{t.questions.nine.label2}</h2>}
           {!createFromScratch && (
-            <div id='magicCheckoutGraphicsContainer'>
+            <div id='magicReviewGraphicsContainer'>
               {graphics.map(g => {
                 return (
-                  <div key={g.originalFile.metadata.uploadId} className='magicCheckoutGraphicContainer'>
+                  <div key={g.originalFile.metadata.uploadId} className='magicReviewGraphicContainer'>
                     {g.originalFile.mime.includes('image') && <img src={g.fileUrl} />}
                     {g.originalFile.mime.includes('video') && <video src={g.fileUrl} />}
                     <h4>
@@ -365,7 +365,7 @@ const MagicCheckout = ({
                     <FontAwesomeIcon 
                       icon={faClose} 
                       color={'#DA2A7D'} 
-                      className='magicCheckoutGraphicCloseIcon clickable' 
+                      className='magicReviewGraphicCloseIcon clickable' 
                       onClick={() => {
                         setMagicValues({ graphics: graphics.filter(graphic => 
                         graphic.originalFile.metadata.uploadId !== g.originalFile.metadata.uploadId) 
@@ -380,10 +380,10 @@ const MagicCheckout = ({
         </div>
       </div>
 
-      <div className='magicCheckoutQuestion ten'>
-        <div className='magicCheckoutQuestionInputContainer'>
+      <div className='magicReviewQuestion ten'>
+        <div className='magicReviewQuestionInputContainer'>
           <h2>{t.questions.ten.label1}</h2>
-          <div id='magicCheckoutQuestionTenRadioContainer'>
+          <div id='magicReviewQuestionTenRadioContainer'>
              {t.questions.ten.options.map(o => (
                 <Tooltip 
                   key={o.id}
@@ -402,7 +402,7 @@ const MagicCheckout = ({
                   touchHold
                   size='regular'
                 >
-                <div className='magicCheckoutQuestionTenRadio clickable' onClick={() => setMagicValues({ styleId: o.id })}> 
+                <div className='magicReviewQuestionTenRadio clickable' onClick={() => setMagicValues({ styleId: o.id })}> 
                   <input 
                     type='radio' 
                     value={o.id} 
@@ -415,10 +415,10 @@ const MagicCheckout = ({
              ))}
           </div>
         </div>
-        <div className='magicCheckoutQuestionInputContainer'>
+        <div className='magicReviewQuestionInputContainer'>
           <h2>{t.questions.ten.label2}</h2>
           <input 
-            className='magicCheckoutInput' 
+            className='magicReviewInput' 
             value={email} 
             onChange={e => setMagicValues({ email:  e.target.value })} 
           />
@@ -428,14 +428,14 @@ const MagicCheckout = ({
 
 {/* 
       <button 
-        id='magicCheckoutSubmitButton' 
+        id='magicReviewSubmitButton' 
         className='clickable'
         onClick={onSubmitClick}
       >
         {t.cta}
       </button>
 
-      {status && <p id='magicCheckoutStatus'>{status}</p>} */}
+      {status && <p id='magicReviewStatus'>{status}</p>} */}
     </main>
   )
 }
@@ -474,4 +474,4 @@ const mapDispatch = dispatch => ({
   }
 })
 
-export default connect(mapState, mapDispatch)(MagicCheckout)
+export default connect(mapState, mapDispatch)(MagicReview)

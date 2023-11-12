@@ -267,7 +267,6 @@
           label {
             margin: 5% 0 2%;
             font-weight: bold;
-            text-transform: uppercase;
             color: $pink;
             cursor: pointer;
           }
@@ -315,7 +314,7 @@
     }
 
     &#magicFormNextButton,
-    &#magicFormCheckoutButton {
+    &#magicFormReviewButton {
       right: 5%;
       background: $green;
       color: white;
@@ -330,7 +329,7 @@
     }
 
     &.magicFormNextButtonReview {
-      font-size: 2vw !important;
+      font-size: 3vw !important;
     }
   }
 
