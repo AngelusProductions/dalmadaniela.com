@@ -10,23 +10,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 import { Tooltip } from 'react-tippy'
 import 'react-tippy/dist/tippy.css'
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
 import BackIcon from '../../UI/BackIcon/index.js'
 import MagicColorPicker from '../MagicColorPicker/index.js'
 import MagicEmojiPicker from '../MagicEmojiPicker/index.js'
-import Payment from "../../Payment"
+import CheckoutForm from "./CheckoutForm"
 
 import { paths } from '../../../constants/paths.js'
 import { i } from '../../../constants/data/assets.js'
 import { isValidUrl, isValidEmail } from '../../../utils/validators.js'
 import { setMagicValues } from '../../../actions/magicCalendars.js'
+import { createPaymentIntent } from '../../../api/stripe.js'
 
 import t from './text.js'
 import './styles/index.scss'
-
+ 
 const graphicUploader = Uploader({
   apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ"
 })
+const stripePromise = loadStripe(
+  "pk_test_51N3WiQFYHcKM5vsbDAEumut55G5Zm7sZBGWQctLpMZU12o1NxnB7sx7oWPnUzN2jGodLFNHwomR5GJrFxiEjP5uM00LhzdOKk7"
+);
 
 const MagicCheckout = ({ 
   brandName,
@@ -57,6 +63,7 @@ const MagicCheckout = ({
   const navigate = useNavigate()
   const [errors, setErrors] = useState({})
   const [isError, setIsError] = useState(false)
+  const [stripeClientSecret, setStripeClientSecret] = useState(null)
 
   const Error = ({ type }) => {
     return errors && errors[type] && (
@@ -93,6 +100,16 @@ const MagicCheckout = ({
       brandEmoji2, brandEmoji3, brandEmoji4, brandEmoji5, specificTopics, useHolidays, 
       country, createFromScratch, graphics, styleId, email
   ])
+
+  useEffect(() => {
+    createPaymentIntent().then((res) => {
+      setStripeClientSecret(res.clientSecret)
+    })
+  }, [])
+
+  const stripeOptions = {
+    clientSecret: stripeClientSecret,
+  }
   
   return (
     <main id="magicCheckoutPage">
@@ -414,20 +431,11 @@ const MagicCheckout = ({
         </div>
       </div>
 
-      <Payment />
-
-      <button
-        id="magicCheckoutSubmitButton"
-        className={`magicButton ${
-          isError ? "disabled" : "clickable"
-        }`}
-        onClick={() => {
-          if (isError) return
-          navigate(`${paths.magicCalendars.checkout}`);
-        }}
-      >
-        {isError ? t.error : t.cta}
-      </button>
+      {stripeClientSecret && (
+        <Elements stripe={stripePromise} options={stripeOptions}>
+          <CheckoutForm isError={isError} />
+        </Elements>
+      )}
     </main>
   );
 }

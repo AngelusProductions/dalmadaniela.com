@@ -6,7 +6,6 @@ export const sendPaymentRequest = (
   amount,
   description
 ) => async (token) => {
-  debugger
   const res = await axios.post(`${ROOT_API_URL}${apiEndpoints.payment}`, {
     description,
     source: token.id,
@@ -17,3 +16,10 @@ export const sendPaymentRequest = (
   console.log(res)
   return res
 }
+
+export const createPaymentIntent = async () => {
+  const res = await axios.get(
+    `${ROOT_API_URL}${apiEndpoints.stripe.createPaymentIntent}`
+  );
+  return res.data;
+};

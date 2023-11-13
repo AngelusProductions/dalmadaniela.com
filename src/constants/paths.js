@@ -13,6 +13,7 @@ export const paths = {
     page: '/magic-calendars',
     form: '/magic-calendars/form/:question',
     checkout: '/magic-calendars/form/checkout',
+    success: '/magic-calendars/success',
   },
   blog: {
     page: '/blog',
@@ -50,6 +51,9 @@ export const apiEndpoints = {
     create: '/magic-calendars/create',
     saveGraphic: '/magic-calendars/saveGraphic',
     chatGPT: '/magic-calendars/chatGPT',
+  },
+  stripe: {
+    createPaymentIntent: '/stripe/createPaymentIntent',
   }
 }
 

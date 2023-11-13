@@ -1,0 +1,30 @@
+@import '../../../../colors.scss';
+
+#magicCheckoutForm {
+    #magicCheckoutSubmitButton {
+        background: $green;
+        color: white;
+        font-size: 4vw;
+        padding: 13px;
+        cursor: pointer;
+        font-family: 'Garbata';
+        font-weight: bold;
+        margin: 5%;
+        margin-bottom: 0;
+        width: 90%;
+
+        &.disabled {
+            background: $blackFaded !important;
+            cursor: not-allowed !important;
+            font-size: 3vw;
+            color: #0000006b;
+        }
+    }
+    p.error {
+        text-align: center;
+        font-size: 3vw;
+        margin-top: 5%;
+        font-family: 'Hatton';
+        color: $pink;
+    }
+}
