@@ -1,6 +1,5 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { useNavigate } from 'react-router'
 
 import Toggle from 'react-toggle'
 import ReactFlagsSelect from "react-flags-select"
@@ -23,16 +22,14 @@ import { i } from '../../../constants/data/assets.js'
 import { isValidUrl, isValidEmail } from '../../../utils/validators.js'
 import { setMagicValues } from '../../../actions/magicCalendars.js'
 import { createPaymentIntent } from '../../../api/stripe.js'
+import { STRIPE_PUBLISHABLE_TEST_KEY } from "../../../constants/config.js";
+import { configureStripeKey } from '../../../utils/config.js'
 
 import t from './text.js'
 import './styles/index.scss'
  
-const graphicUploader = Uploader({
-  apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ"
-})
-const stripePromise = loadStripe(
-  "pk_test_51N3WiQFYHcKM5vsbDAEumut55G5Zm7sZBGWQctLpMZU12o1NxnB7sx7oWPnUzN2jGodLFNHwomR5GJrFxiEjP5uM00LhzdOKk7"
-);
+const graphicUploader = Uploader({ apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ" })
+const stripePromise = loadStripe(configureStripeKey());
 
 const MagicCheckout = ({ 
   brandName,
@@ -60,7 +57,6 @@ const MagicCheckout = ({
   email,
   setMagicValues
 }) => {
-  const navigate = useNavigate()
   const [errors, setErrors] = useState({})
   const [isError, setIsError] = useState(false)
   const [stripeClientSecret, setStripeClientSecret] = useState(null)
@@ -109,7 +105,19 @@ const MagicCheckout = ({
 
   const stripeOptions = {
     clientSecret: stripeClientSecret,
+    appearance: {
+      base: {
+        color: '#333333'
+      }
+    }
   }
+
+  const appearance = {
+    base: {
+      borderColor: "#333333",
+      fontSize: '50px'
+    },
+  };
   
   return (
     <main id="magicCheckoutPage">
@@ -432,7 +440,25 @@ const MagicCheckout = ({
       </div>
 
       {stripeClientSecret && (
-        <Elements stripe={stripePromise} options={stripeOptions}>
+        <Elements
+          stripe={stripePromise}
+          options={{
+            clientSecret: stripeClientSecret,
+            appearance: {
+              theme: "stripe",
+              variables: {
+                colorText: "#DA2A7D",
+                borderRadius: "15px",
+                colorIcon: "#56c035",
+                spacingGridRow: "25px",
+                fontFamily: "Trebuchet MS, sans-serif",
+                focusOutline: '#DA2A7D',
+                focusBoxShadow: '#DA2A7D',
+              },
+            },
+          }}
+          appearance={appearance}
+        >
           <CheckoutForm isError={isError} />
         </Elements>
       )}

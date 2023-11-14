@@ -1,6 +1,18 @@
 @import '../../../../colors.scss';
 
 #magicCheckoutForm {
+    border: 1px solid $pink;
+    padding: 2%;
+    border-radius: 15px;
+    background: $pinkFaded;
+    margin: 2% 0;
+
+    .magicPaymentElement {
+        label {
+            font-family: 'Garet' !important;
+        }
+    }
+
     #magicCheckoutSubmitButton {
         background: $green;
         color: white;
@@ -20,6 +32,7 @@
             color: #0000006b;
         }
     }
+
     p.error {
         text-align: center;
         font-size: 3vw;

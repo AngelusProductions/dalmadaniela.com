@@ -13,7 +13,6 @@ export const sendPaymentRequest = (
     currency: 'USD',
     amount
   })
-  console.log(res)
   return res
 }
 
