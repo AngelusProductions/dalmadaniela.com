@@ -16,9 +16,11 @@ export const sendPaymentRequest = (
   return res
 }
 
-export const createPaymentIntent = async () => {
-  const res = await axios.get(
-    `${ROOT_API_URL}${apiEndpoints.stripe.createPaymentIntent}`
+export const createPaymentIntent = async magicLength => {
+  const res = await axios.post(
+    `${ROOT_API_URL}${apiEndpoints.stripe.createPaymentIntent}`, {
+      magicLength
+    }
   );
   return res.data;
 };

@@ -20,12 +20,12 @@ import CheckoutForm from "./CheckoutForm"
 import { paths } from '../../../constants/paths.js'
 import { i } from '../../../constants/data/assets.js'
 import { isValidUrl, isValidEmail } from '../../../utils/validators.js'
-import { setMagicValues } from '../../../actions/magicCalendars.js'
+import { setMagicValues, setMagicLength } from '../../../actions/magicCalendars.js'
 import { createPaymentIntent } from '../../../api/stripe.js'
-import { STRIPE_PUBLISHABLE_TEST_KEY } from "../../../constants/config.js";
 import { configureStripeKey } from '../../../utils/config.js'
 
-import t from './text.js'
+import mt from '../text.js'
+import t from "./text.js";
 import './styles/index.scss'
  
 const graphicUploader = Uploader({ apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ" })
@@ -55,6 +55,8 @@ const MagicCheckout = ({
   graphics,
   styleId,
   email,
+  magicLength,
+  setMagicLength,
   setMagicValues
 }) => {
   const [errors, setErrors] = useState({})
@@ -98,27 +100,11 @@ const MagicCheckout = ({
   ])
 
   useEffect(() => {
-    createPaymentIntent().then((res) => {
+    createPaymentIntent(magicLength).then((res) => {
       setStripeClientSecret(res.clientSecret)
     })
-  }, [])
+  }, [magicLength])
 
-  const stripeOptions = {
-    clientSecret: stripeClientSecret,
-    appearance: {
-      base: {
-        color: '#333333'
-      }
-    }
-  }
-
-  const appearance = {
-    base: {
-      borderColor: "#333333",
-      fontSize: '50px'
-    },
-  };
-  
   return (
     <main id="magicCheckoutPage">
       <BackIcon text pink path={`${paths.magicCalendars.page}/form/10`} />
@@ -439,6 +425,43 @@ const MagicCheckout = ({
         </div>
       </div>
 
+      <div id="chooseSectionSelectionsContainer">
+        <div className="chooseSectionSelection">
+          <div className="chooseSectionSelectionTitleContainer">
+            <h3>{mt.chooseSection.options.one.title}</h3>
+            <h2>{mt.chooseSection.options.one.price}</h2>
+            <hr />
+            <div className="chooseSectionSelectionDescription">
+              <span>{mt.chooseSection.options.one.description.choice}</span>
+              <span>{mt.chooseSection.options.one.description.inbox}</span>
+              <span>{mt.chooseSection.options.one.description.time}</span>
+            </div>
+          </div>
+          <input
+            type="radio"
+            checked={magicLength === "month"}
+            onClick={() => setMagicLength("month")}
+          />
+        </div>
+        <div className="chooseSectionSelection">
+          <div className="chooseSectionSelectionTitleContainer">
+            <h3>{mt.chooseSection.options.two.title}</h3>
+            <h2>{mt.chooseSection.options.two.price}</h2>
+            <hr />
+            <div className="chooseSectionSelectionDescription">
+              <span>{mt.chooseSection.options.two.description.choice}</span>
+              <span>{mt.chooseSection.options.two.description.inbox}</span>
+              <span>{mt.chooseSection.options.two.description.time}</span>
+            </div>
+          </div>
+          <input
+            type="radio"
+            checked={magicLength === "year"}
+            onClick={() => setMagicLength("year")}
+          />
+        </div>
+      </div>
+
       {stripeClientSecret && (
         <Elements
           stripe={stripePromise}
@@ -452,12 +475,11 @@ const MagicCheckout = ({
                 colorIcon: "#56c035",
                 spacingGridRow: "25px",
                 fontFamily: "Trebuchet MS, sans-serif",
-                focusOutline: '#DA2A7D',
-                focusBoxShadow: '#DA2A7D',
+                focusOutline: "#DA2A7D",
+                focusBoxShadow: "#DA2A7D",
               },
             },
           }}
-          appearance={appearance}
         >
           <CheckoutForm isError={isError} />
         </Elements>
@@ -490,13 +512,17 @@ const mapState = state => {
     createFromScratch: state.magicCalendars.createFromScratch,
     graphics: state.magicCalendars.graphics,
     styleId: state.magicCalendars.styleId,
-    email: state.magicCalendars.email
+    email: state.magicCalendars.email,
+    magicLength: state.magicCalendars.magicLength,
   }
 }
 
 const mapDispatch = dispatch => ({
   setMagicValues: async valuePairs => {
     dispatch(setMagicValues(valuePairs))
+  },
+  setMagicLength: async length => {
+    dispatch(setMagicLength(length))
   }
 })
 
