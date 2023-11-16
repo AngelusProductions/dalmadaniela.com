@@ -1,7 +1,7 @@
-import { SET_MAGIC_LENGTH, SET_MAGIC_VALUES } from '../constants'
+import { CLEAR_MAGIC_VALUES, SET_MAGIC_LENGTH, SET_MAGIC_VALUES } from '../constants'
 
 const initialState = {
-  magicLength: null,
+  magicLength: 'month',
   brandName: '',
   website: '',
   socialMedia1: '',
@@ -39,6 +39,10 @@ export default (state = initialState, action) => {
       return {
         ...state,
         ...action.valuePairs
+      }
+    case CLEAR_MAGIC_VALUES:
+      return {
+        ...initialState
       }
     default:
       return state

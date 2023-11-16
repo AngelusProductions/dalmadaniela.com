@@ -28,11 +28,11 @@ const CheckoutForm = ({ isError, brandName, email }) => {
         payment_method_data: {
           billing_details: {
             name: brandName,
-            email,
-          },
-        },
-      },
-    });
+            email
+          }
+        }
+      }
+    })
 
     if (error) {
       setMessage(error.message);
