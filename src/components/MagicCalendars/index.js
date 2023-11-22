@@ -31,7 +31,7 @@ const MagicCalendars = ({ setMagicLength }) => {
           <img id='magicCalendarsTitle' src={i.magicCalendars.title} />
           <img id='magicCalendarsTitleWand' src={i.stock.wand} />
        </div>
-       <h2 className='clickable' onClick={() => onChooseClick('superfast')}>
+       <h2 className='clickable' onClick={() => onChooseClick('month')}>
           {t.getMagicCalendar}
         </h2>
         <img id='magicCalendarsSubtitle' src={i.magicCalendars.subtitle} />
@@ -64,7 +64,7 @@ const MagicCalendars = ({ setMagicLength }) => {
         <div id='whatYouGetLeftSection'>
           <span
             className='clickable'
-            onClick={() => onChooseClick('superfast')}
+            onClick={() => onChooseClick('month')}
           >{t.getMagicCalendar}</span>
           <h1>{t.whatYouGetSection.title}</h1>
           <div className='whatYouGetLeftSectionSection'>

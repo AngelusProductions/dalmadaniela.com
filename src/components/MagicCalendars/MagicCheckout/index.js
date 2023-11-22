@@ -105,6 +105,8 @@ const MagicCheckout = ({
     })
   }, [magicLength])
 
+  debugger
+
   return (
     <main id="magicCheckoutPage">
       <BackIcon text pink path={`${paths.magicCalendars.page}/form/10`} />

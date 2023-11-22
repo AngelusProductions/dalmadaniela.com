@@ -1,7 +1,37 @@
 @import '../../../colors.scss';
 
-@media (min-width: 640px) and  (max-width: 1024px) {
+@media (min-width: 640px) and (max-width: 1024px) {
     #magicSuccessPage {
-        
+        #magicSuccessPageLeft {
+            width: 100%;
+
+            >div {
+                p {
+                    font-size: 2.6vw;
+                    width: 75%;
+                }
+
+                div {
+                    h1 {
+                        font-size: 8vw;
+                    }
+
+                    h2 {
+                        font-size: 2.6vw;
+                        width: 45%;
+                    }
+
+                }
+
+                #magicSuccessCta {
+                    font-size: 2.6vw;
+                    padding: 25px;
+                }
+            }
+        }
+
+        #magicSuccessPageRight {
+            display: none;
+        }
     }
 }

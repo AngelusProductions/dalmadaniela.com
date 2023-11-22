@@ -150,5 +150,6 @@ export const i = {
     },
     videos: {
         lightbulbConstruction: `${bucketPrefix}/videos/lightbulbConstruction.gif`,
+        emojiBlast: `${bucketPrefix}/videos/emojiBlast.mp4`,
     }
 }

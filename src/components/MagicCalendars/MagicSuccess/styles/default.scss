@@ -1,5 +1,88 @@
 @import '../../../colors.scss';
 
 #magicSuccessPage {
-    
+    position: relative;
+    overflow: hidden;
+    // min-height: 100vh;
+
+    #magicSuccessProcessing {
+        text-align: center;
+        margin-top: 10%;
+        color: $pink;
+        font-size: 5vw;
+    }
+
+    #magicSuccessPageLeft,
+    #magicSuccessPageRight {
+        display: inline-block;
+        flex-direction: column;
+        width: 50%;
+        min-height: 99vh;
+        overflow: hidden;
+    }
+
+    #magicSuccessPageLeft {
+        position: relative;
+
+        >div {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            height: 99vh;
+            align-items: center;
+            text-align: center;
+
+            p {
+                font-family: "Garet";
+                font-weight: bold;
+                width: 67%;
+                font-style: italic;
+                font-size: 1.2vw;
+            }
+
+            div {
+                text-align: center;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                h1 {
+                    font-family: 'Garbata';
+                    font-size: 5vw;
+                    margin-bottom: 5%;
+                }
+
+                h2 {
+                    font-family: "Garet";
+                    font-weight: 400;
+                    font-size: 1.5vw;
+                    width: 50%;
+                }
+
+            }
+
+            #magicSuccessCta {
+                color: white;
+                font-family: "Garet";
+                font-size: 1.5vw;
+                background: #56c035;
+                padding: 25px;
+                border-radius: 25px;
+            }
+        }
+    }
+
+    #magicSuccessPageRight {
+        position: relative;
+
+        video {
+            top: 25%;
+            position: absolute;
+            width: 90%;
+            left: 5%;
+            border-radius: 25px;
+            border: 5px solid $pink;
+            clip-path: circle(33%);
+        }
+    }
 }
