@@ -97,7 +97,7 @@ const FAQ = () => {
                         If you are busy running a business, you can get a&nbsp;
                     </span>
                     <span className='five'>
-                         Magic Calendar&nbsp;
+                         <Link to={paths.magicCalendars.page}>Magic Calendar</Link>&nbsp;
                     </span>
                     <span className='six'>
                          that creates your monthly social media content for you.
@@ -110,7 +110,7 @@ const FAQ = () => {
                         With&nbsp;
                     </span>
                     <span className='two'>
-                        Magic Calendars&nbsp;
+                        <Link to={paths.magicCalendars.page}>Magic Calendars</Link>&nbsp;
                     </span>
                     <span className='three'>
                        you can have high-quality social media posts for your brand or business in an&nbsp;
