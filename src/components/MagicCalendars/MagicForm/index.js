@@ -321,17 +321,17 @@ const MagicForm = ({
                 onChange={() => setMagicValues({ createFromScratch: !createFromScratch })} 
                 defaultChecked={createFromScratch}
               />
-              {!createFromScratch && graphics.length < 6 && (
+              {!createFromScratch && graphics?.length < 6 && (
                 <UploadButton 
                   uploader={graphicUploader}
                   options={{ 
                     multi: true, 
-                    maxFileCount: 6 - graphics.length,
+                    maxFileCount: 6 - graphics?.length,
                     maxFileSizeBytes: 524288000,
                     mimeTypes: ['image/*', 'video/*']
                   }}
                   onComplete={newGraphics => {
-                    const existingUploadIds = graphics.map(g => g.originalFile.metadata.uploadId)
+                    const existingUploadIds = graphics?.map(g => g.originalFile.metadata.uploadId)
                     newGraphics = newGraphics.filter(g => !existingUploadIds.includes(g.originalFile.metadata.uploadId))
                     setMagicValues({ graphics: [...graphics, ...newGraphics] })
                   }}
@@ -346,7 +346,7 @@ const MagicForm = ({
             </div>
             {!createFromScratch && (
               <div id='magicFormGraphicsContainer'>
-                {graphics.map(g => {
+                {graphics?.map(g => {
                   return (
                     <div key={g.originalFile.metadata.uploadId} className='magicFormGraphicContainer'>
                       {g.originalFile.mime.includes('image') && <img src={g.fileUrl} />}

@@ -471,7 +471,11 @@ const MagicCheckout = ({
       <button
         id="magicCheckoutSubmitButton"
         className={`magicButton ${isError ? "disabled" : "clickable"}`}
-        onClick={() => navigate(paths.magicCalendars.success)}
+        onClick={() => {
+          if(!isError) {
+            navigate(paths.magicCalendars.success)
+          }
+        }}
       >
         {isError ? t.error : t.cta}
       </button>
