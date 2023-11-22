@@ -73,8 +73,8 @@ const MagicCheckout = ({
   const getErrors = () => {
     let newErrors = { ...errors }
     const isSocialMediaError = (socialMedia1.length === 0 && socialMedia2.length === 0)
-          || (socialMedia1?.length > 0 && !isValidUrl(socialMedia1)) 
-          || (socialMedia2?.length > 0 && !isValidUrl(socialMedia2)) 
+          || (socialMedia1.length > 0 && !isValidUrl(socialMedia1)) 
+          || (socialMedia2.length > 0 && !isValidUrl(socialMedia2)) 
     
     newErrors['brandName'] = brandName ? null : t.questions.one.error
     newErrors['website'] = !website || !isValidUrl(website) ? t.questions.two.error : null
@@ -84,7 +84,7 @@ const MagicCheckout = ({
     newErrors['brandColors'] = !brandColor1 && !brandColor2 && !brandColor3 && !brandColor4 && !brandColor5 ? t.questions.six.error : null
     newErrors['brandEmojis'] = !brandEmoji1 && !brandEmoji2 && !brandEmoji3 && !brandEmoji4 && !brandEmoji5 ? t.questions.seven.error : null
     newErrors['specificTopics'] = !specificTopics ? t.questions.eight.error : null
-    newErrors['graphics'] = !createFromScratch && graphics?.length === 0 ? t.questions.nine.error : null
+    newErrors['graphics'] = !createFromScratch && graphics.length === 0 ? t.questions.nine.error : null
     newErrors['email'] = !email || !isValidEmail(email) ? t.questions.ten.error : null
 
     return newErrors
@@ -151,6 +151,7 @@ const MagicCheckout = ({
           <div className="magicCheckoutQuestionInputContainer">
             <h2>{t.questions.three.label1}</h2>
             <input
+              type='text'
               className="magicCheckoutInput"
               value={socialMedia1}
               onChange={(e) => setMagicValues({ socialMedia1: e.target.value })}
@@ -160,6 +161,7 @@ const MagicCheckout = ({
           <div className="magicCheckoutQuestionInputContainer">
             <h2>{t.questions.three.label2}</h2>
             <input
+              type='text'
               className="magicCheckoutInput"
               value={socialMedia2}
               onChange={(e) => setMagicValues({ socialMedia2: e.target.value })}

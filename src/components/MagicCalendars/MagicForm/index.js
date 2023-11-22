@@ -81,9 +81,9 @@ const MagicForm = ({
       case 2:
         return !website || !isValidUrl(website) ? t.questions.two.error : null
       case 3:
-        const isError = (socialMedia1.length === 0 && socialMedia2.length === 0)
-          || (socialMedia1.length > 0 && !isValidUrl(socialMedia1)) 
-          || (socialMedia2.length > 0 && !isValidUrl(socialMedia2)) 
+        const isError = (socialMedia1?.length === 0 && socialMedia2?.length === 0)
+          || (socialMedia1?.length > 0 && !isValidUrl(socialMedia1)) 
+          || (socialMedia2?.length > 0 && !isValidUrl(socialMedia2)) 
         return isError ? t.questions.three.error : null
       case 4:
         return !description ? t.questions.four.error : null
@@ -96,7 +96,7 @@ const MagicForm = ({
       case 8:
         return !specificTopics ? t.questions.eight.error : null
       case 9:
-        return !createFromScratch && graphics.length === 0 ? t.questions.nine.error : null
+        return !createFromScratch && graphics?.length === 0 ? t.questions.nine.error : null
       case 10:
         return !email || !isValidEmail(email) ? t.questions.ten.error : null
         default:
