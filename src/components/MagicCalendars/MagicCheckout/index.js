@@ -73,8 +73,8 @@ const MagicCheckout = ({
   const getErrors = () => {
     let newErrors = { ...errors }
     const isSocialMediaError = (socialMedia1.length === 0 && socialMedia2.length === 0)
-          || (socialMedia1.length > 0 && !isValidUrl(socialMedia1)) 
-          || (socialMedia2.length > 0 && !isValidUrl(socialMedia2)) 
+          || (socialMedia1?.length > 0 && !isValidUrl(socialMedia1)) 
+          || (socialMedia2?.length > 0 && !isValidUrl(socialMedia2)) 
     
     newErrors['brandName'] = brandName ? null : t.questions.one.error
     newErrors['website'] = !website || !isValidUrl(website) ? t.questions.two.error : null
@@ -84,7 +84,7 @@ const MagicCheckout = ({
     newErrors['brandColors'] = !brandColor1 && !brandColor2 && !brandColor3 && !brandColor4 && !brandColor5 ? t.questions.six.error : null
     newErrors['brandEmojis'] = !brandEmoji1 && !brandEmoji2 && !brandEmoji3 && !brandEmoji4 && !brandEmoji5 ? t.questions.seven.error : null
     newErrors['specificTopics'] = !specificTopics ? t.questions.eight.error : null
-    newErrors['graphics'] = !createFromScratch && graphics.length === 0 ? t.questions.nine.error : null
+    newErrors['graphics'] = !createFromScratch && graphics?.length === 0 ? t.questions.nine.error : null
     newErrors['email'] = !email || !isValidEmail(email) ? t.questions.ten.error : null
 
     return newErrors
@@ -443,6 +443,7 @@ const MagicCheckout = ({
             type="radio"
             checked={magicLength === "month"}
             onClick={() => setMagicLength("month")}
+            onChange={() => {}}
           />
         </div>
         <div className="chooseSectionSelection">
@@ -460,6 +461,7 @@ const MagicCheckout = ({
             type="radio"
             checked={magicLength === "year"}
             onClick={() => setMagicLength("year")}
+            onChange={() => {}}
           />
         </div>
       </div>
