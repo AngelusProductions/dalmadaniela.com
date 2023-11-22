@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
+import { useNavigate } from "react-router-dom";
 
 import Toggle from 'react-toggle'
 import ReactFlagsSelect from "react-flags-select"
@@ -9,8 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 import { Tooltip } from 'react-tippy'
 import 'react-tippy/dist/tippy.css'
-import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
+// import { Elements } from "@stripe/react-stripe-js";
+// import { loadStripe } from "@stripe/stripe-js";
 
 import BackIcon from '../../UI/BackIcon/index.js'
 import MagicColorPicker from '../MagicColorPicker/index.js'
@@ -22,14 +23,14 @@ import { i } from '../../../constants/data/assets.js'
 import { isValidUrl, isValidEmail } from '../../../utils/validators.js'
 import { setMagicValues, setMagicLength } from '../../../actions/magicCalendars.js'
 import { createPaymentIntent } from '../../../api/stripe.js'
-import { configureStripeKey } from '../../../utils/config.js'
+// import { configureStripeKey } from '../../../utils/config.js'
 
 import mt from '../text.js'
 import t from "./text.js";
 import './styles/index.scss'
  
 const graphicUploader = Uploader({ apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ" })
-const stripePromise = loadStripe(configureStripeKey());
+// const stripePromise = loadStripe(configureStripeKey());
 
 const MagicCheckout = ({ 
   brandName,
@@ -59,6 +60,7 @@ const MagicCheckout = ({
   setMagicLength,
   setMagicValues
 }) => {
+  const navigate = useNavigate()
   const [errors, setErrors] = useState({})
   const [isError, setIsError] = useState(false)
   const [stripeClientSecret, setStripeClientSecret] = useState(null)
@@ -100,12 +102,10 @@ const MagicCheckout = ({
   ])
 
   useEffect(() => {
-    createPaymentIntent(magicLength).then((res) => {
-      setStripeClientSecret(res.clientSecret)
-    })
+    // createPaymentIntent(magicLength).then((res) => {
+    //   setStripeClientSecret(res.clientSecret)
+    // })
   }, [magicLength])
-
-  debugger
 
   return (
     <main id="magicCheckoutPage">
@@ -464,7 +464,15 @@ const MagicCheckout = ({
         </div>
       </div>
 
-      {stripeClientSecret && (
+      <button
+        id="magicCheckoutSubmitButton"
+        className={`magicButton ${isError ? "disabled" : "clickable"}`}
+        onClick={() => navigate(paths.magicCalendars.success)}
+      >
+        {isError ? t.error : t.cta}
+      </button>
+
+      {/* {stripeClientSecret && (
         <Elements
           stripe={stripePromise}
           options={{
@@ -485,7 +493,7 @@ const MagicCheckout = ({
         >
           <CheckoutForm isError={isError} />
         </Elements>
-      )}
+      )} */}
     </main>
   );
 }
