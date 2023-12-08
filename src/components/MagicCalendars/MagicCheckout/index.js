@@ -10,8 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClose } from '@fortawesome/free-solid-svg-icons'
 import { Tooltip } from 'react-tippy'
 import 'react-tippy/dist/tippy.css'
-// import { Elements } from "@stripe/react-stripe-js";
-// import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
 import BackIcon from '../../UI/BackIcon/index.js'
 import MagicColorPicker from '../MagicColorPicker/index.js'
@@ -23,14 +23,14 @@ import { i } from '../../../constants/data/assets.js'
 import { isValidUrl, isValidEmail } from '../../../utils/validators.js'
 import { setMagicValues, setMagicLength } from '../../../actions/magicCalendars.js'
 import { createPaymentIntent } from '../../../api/stripe.js'
-// import { configureStripeKey } from '../../../utils/config.js'
+import { configureStripeKey } from '../../../utils/config.js'
 
 import mt from '../text.js'
 import t from "./text.js";
 import './styles/index.scss'
  
 const graphicUploader = Uploader({ apiKey: "public_W142iDU3ThB1F3k2tafDxn6HUtYJ" })
-// const stripePromise = loadStripe(configureStripeKey());
+const stripePromise = loadStripe(configureStripeKey())
 
 const MagicCheckout = ({ 
   brandName,
@@ -102,9 +102,9 @@ const MagicCheckout = ({
   ])
 
   useEffect(() => {
-    // createPaymentIntent(magicLength).then((res) => {
-    //   setStripeClientSecret(res.clientSecret)
-    // })
+    createPaymentIntent(magicLength).then((res) => {
+      setStripeClientSecret(res.clientSecret)
+    })
   }, [magicLength])
 
   return (
@@ -468,20 +468,9 @@ const MagicCheckout = ({
         </div>
       </div>
 
-      <button
-        id="magicCheckoutSubmitButton"
-        className={`magicButton ${isError ? "disabled" : "clickable"}`}
-        onClick={() => {
-          if(!isError) {
-            navigate(paths.magicCalendars.success)
-          }
-        }}
-      >
-        {isError ? t.error : t.cta}
-      </button>
-
-      {/* {stripeClientSecret && (
+      {stripeClientSecret && (
         <Elements
+          key={stripeClientSecret}
           stripe={stripePromise}
           options={{
             clientSecret: stripeClientSecret,
@@ -501,7 +490,7 @@ const MagicCheckout = ({
         >
           <CheckoutForm isError={isError} />
         </Elements>
-      )} */}
+      )}
     </main>
   );
 }

@@ -17,35 +17,35 @@ const CheckoutForm = ({ isError, brandName, email }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // if (isError || !stripe || !elements) return;
+    if (isError || !stripe || !elements) return;
 
-    // setIsProcessing(true);
+    setIsProcessing(true);
+    
+    const { error } = await stripe.confirmPayment({
+      elements,
+      confirmParams: {
+        return_url: `${window.location.origin}${paths.magicCalendars.success}`,
+        payment_method_data: {
+          billing_details: {
+            name: brandName,
+            email
+          }
+        }
+      }
+    })
 
-    // const { error } = await stripe.confirmPayment({
-    //   elements,
-    //   confirmParams: {
-    //     return_url: `${window.location.origin}${paths.magicCalendars.success}`,
-    //     payment_method_data: {
-    //       billing_details: {
-    //         name: brandName,
-    //         email
-    //       }
-    //     }
-    //   }
-    // })
+    if (error) {
+      setMessage(error.message);
+    } else {
+      setMessage("");
+    }
 
-    // if (error) {
-    //   setMessage(error.message);
-    // } else {
-    //   setMessage("");
-    // }
-
-    // setIsProcessing(false);
+    setIsProcessing(false);
   };
-
+  
   return (
     <form id="magicCheckoutForm" onSubmit={handleSubmit}>
-      {/* <PaymentElement className="magicPaymentElement"/> */}
+      <PaymentElement className="magicPaymentElement"/>
       {message && <p className="error">{message}</p>}
       <button
         id="magicCheckoutSubmitButton"
@@ -62,6 +62,7 @@ const mapState = (state) => {
   return {
     brandName: state.magicCalendars.brandName,
     email: state.magicCalendars.email,
+    magicLength: state.magicCalendars.magicLength,
   };
 };
 
