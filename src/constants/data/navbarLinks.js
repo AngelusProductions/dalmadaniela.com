@@ -31,7 +31,7 @@ export default [
   },
   {
     id: 5,
-    name: 'Meet the Team',
+    name: 'Meet the team',
     path: paths.team,
     side: 'right',
     tooltip: null
@@ -45,7 +45,7 @@ export default [
   },
   {
     id: 7,
-    name: 'Digital Marketing Services',
+    name: 'Digital marketing services',
     path: paths.services,
     side: 'right',
     tooltip: null

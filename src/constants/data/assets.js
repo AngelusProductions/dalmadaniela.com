@@ -122,6 +122,7 @@ export const i = {
         bullseye: `${bucketPrefix}/stock/bullseye.webp`,
         computerHands: `${bucketPrefix}/stock/computerHands.png`,
         consistency: `${bucketPrefix}/stock/consistency.jpeg`,
+        conactUs: `${bucketPrefix}/stock/contactUs.jpeg`,
         contentCalendarAssets: `${bucketPrefix}/stock/contentCalendarAssets.png`,
         girlOnPhoneOverYellow: `${bucketPrefix}/stock/girlOnPhoneOverYellow.png`,
         groupOfPeopleInCircle: `${bucketPrefix}/stock/groupOfPeopleInCircle.png`,
@@ -134,6 +135,13 @@ export const i = {
         survey: `${bucketPrefix}/stock/survey.png`,
         wand: `${bucketPrefix}/stock/wand.png`,
         whiteChick: `${bucketPrefix}/stock/whiteChick.png`,
+    },
+    services: {
+        arianaPodcast: `${bucketPrefix}/services/arianaPodcast.webp`,
+        businessCards: `${bucketPrefix}/services/businessCards.webp`,
+        colorPallette: `${bucketPrefix}/services/colorPallette.webp`,
+        podcastGirl: `${bucketPrefix}/services/podcastGirl.webp`,
+        socialMediaGrid: `${bucketPrefix}/services/socialMediaGrid.webp`,
     },
     superClass: {
         adTrailerStill: `${bucketPrefix}/superclass/superClassAdTrailerStill.png`

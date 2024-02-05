@@ -102,7 +102,7 @@ const ContactUs = () => {
         )}
       </div>
       <div id='contactUsPageRight'>
-        <img src={i.dalma.onPhone} />
+        <img src={i.stock.conactUs} />
       </div>
     </main>
   )
