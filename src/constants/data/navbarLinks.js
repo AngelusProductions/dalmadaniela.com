@@ -45,8 +45,8 @@ export default [
   },
   {
     id: 7,
-    name: 'Angelus Productions',
-    path: 'https://angelusproductions.com',
+    name: 'Digital Marketing Services',
+    path: paths.services,
     side: 'right',
     tooltip: null
   }

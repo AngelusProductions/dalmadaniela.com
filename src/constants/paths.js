@@ -23,7 +23,7 @@ export const paths = {
   },
   team: '/team',
   contactUs: '/contact-us',
-  geniusMarketingServices: '/services',
+  services: '/services',
   auth: {
     login: '/auth/login',
     signup: '/auth/signup'
