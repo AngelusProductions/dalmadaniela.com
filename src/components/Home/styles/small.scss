@@ -67,11 +67,9 @@
 
         .right {
             width: 100% !important;
-            height: 120%;
-            margin-top: 5vw;
-
-            span#angelusProductions {
-                font-size: 2.5vw !important;
+            
+            #dalmaTitle {
+                font-size: 3.3vw;
             }
         }
     }
@@ -164,6 +162,7 @@
 
         #socialMediaPhone {
             width: 50% !important;
+
             a img {
                 width: 5vw !important;
                 height: 5vw !important;
