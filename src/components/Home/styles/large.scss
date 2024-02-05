@@ -1,47 +1,9 @@
 @import '../../colors.scss';
 
 @media (min-width: 1024px) {
-    section#landing {
-        #landingRight {
-            #dalmaNameContainer {
-                #landingStarsTwinkleSmall {
-                    position: absolute;
-                    top: 6vw !important;
-                    width: 1.5vw !important;
-                    right: 20vw !important;
-                }
-
-                #landingStarsTwinkleLarge {
-                    position: absolute;
-                    right: -8vw !important;
-                        top: 0vw !important;
-                        width: 14vw !important;
-                }
-            }
-        }
-    }
-
-    section#bio {
-        div#bioLeft {
-            h2 {
-                font-size: 3.5vw;
-            }
-
-            p {
-                margin-top: 5vh;
-            }
-        }
-    }
-
-    section#films {
-        #filmsLeft {
-            top: 25%;
-        }
-    }
-
     .testimonial {
         img.testimonialPhone {
-            width: 47vmin;
+            width: 35vmin;
         }
     }
 }

@@ -1,25 +1,6 @@
 @import '../../colors.scss';
 
 @media (min-width: 640px) and  (max-width: 1024px) {
-    section#landing {
-        #landingRight {
-            #dalmaNameContainer {
-                #landingStarsTwinkleSmall {
-                    position: absolute;
-                    top: 10vw;
-                        width: 2.2vw;
-                        right: 22.7vw;
-                }
-
-                #landingStarsTwinkleLarge {
-                    position: absolute;
-                    right: -4vw;
-                    top: 17vw;
-                    width: 15vw;
-                }
-            }
-        }
-    }
 
     section#classAbout {
         .videoContainer h2 {

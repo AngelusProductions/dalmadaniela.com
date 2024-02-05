@@ -12,18 +12,18 @@
         width: 35px !important;
         height: 35px !important;
         position: absolute !important;
-        left: 35px !important;
+        right: 35px !important;
         top: 35px !important;
-        right: unset !important;
+        left: unset !important;
         cursor: pointer;
         z-index: 99;
         filter: brightness(0);
     }
 
     section#landing {
-        flex-direction: column-reverse;
+        flex-direction: column;
 
-        .right {
+        .left {
             width: 100%;
 
             #landingMinifiedBackground {
@@ -32,6 +32,7 @@
                 object-position: right;
                 right: -172%;
             }
+
             #dalmadanielaTitle {
                 width: 100%;
                 justify-content: center;
@@ -41,40 +42,33 @@
                     #dalmadanielaTitleFaceIcon {
                         width: 12vw !important;
                     }
-            
+
                     h3 {
                         font-size: 4.5vw;
                     }
                 }
-            
+
                 p {
                     font-weight: 300;
-                    text-align: center;
-                    line-height: 6vw;
                     margin-top: 0 !important;
-                    font-size: 3.9vw;
-                    width: 53%;
+                    font-size: 3.8vw;
+                    width: 75%;
+                    margin-bottom: 2vw;
                 }
 
                 h1 {
-                    margin-top: 2vw !important;
-                    font-size: 8vw !important;
-                    text-align: center;
-                    width: 55%;
+                    margin-top: 5vw !important;
+                    font-size: 6vw !important;
+                    width: 75%;
                     margin-bottom: 3vw;
-                }
-    
-                #landingStarsTwinkleLarge {
-                    right: -25vw !important;
-                    top: -13vw !important;
-                    width: 25vw !important;
                 }
             }
         }
 
-        .left {
+        .right {
             width: 100% !important;
             height: 120%;
+            margin-top: 5vw;
 
             span#angelusProductions {
                 font-size: 2.5vw !important;
@@ -83,6 +77,8 @@
     }
 
     section#bio {
+        flex-direction: column;
+
         .right {
             display: none;
         }
@@ -91,37 +87,36 @@
             width: 100%;
         }
 
-        img#bioLeftMagic {
-            left: -23vw;
-            height: 146%;
-            position: absolute;
-            top: -45vh;
-            transform: rotate(5deg);
-            filter: opacity(0.4);
-        }
-
         div#bioLeft {
-            justify-content: space-evenly !important;
+            width: 75%;
+            padding: 0 5% !important;
 
             h2 {
-                font-size: 10vw !important;
+                font-size: 6vw !important;
+                margin-bottom: 5vw !important;
+                width: 67%;
             }
 
             p {
-                font-size: 5vw !important;
-                line-height: 7vw !important;
-                margin: 0 !important;
+                font-size: 3.8vw !important;
             }
 
-            #bioMinifiedPhoto {
-                padding: 10px;
-                border: 1px solid $pink;
+            a {
+                font-size: 3.8vw !important;
+            }
+        }
+
+        img {
+            width: 50% !important;
+
+            &:nth-of-type(2) {
+                margin-top: 10%;
             }
         }
     }
 
     section#brands {
-        padding-bottom: 5vw !important;
+        padding-bottom: 10vw !important;
 
         #brandsHelped .brandLogo {
             width: 17% !important;
@@ -150,86 +145,25 @@
         #brandsFeatured {
             margin-top: 0 !important;
 
-            h4 { 
+            h4 {
                 font-size: 4vw !important;
                 width: 80% !important;
             }
         }
     }
 
-    section#films {
-        display: flex;
-        flex-direction: column;
-        height: fit-content !important;
-
-        .left,
-        .right {
-            width: 100% !important;
-            height: 70% !important
-        }
-
-        .right {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        #filmsLeft {
-            h2 {
-                font-size: 10vw !important;
-            }
-
-            p {
-                font-size: 5vw !important;
-                margin-top: 5vw !important;
-                line-height: 7vw !important;
-            }
-        }
-
-        .film {
-            width: 100% !important;
-            position: relative !important;
-            top: 0 !important;
-            flex-direction: row-reverse !important;
-            justify-content: space-evenly;
-            align-items: center;
-
-            img {
-                height: unset !important;
-                width: 31vw !important;
-            }
-
-            span {
-                font-size: 4vw !important;
-                width: 25vw !important;
-            }
-        }
-
-        #theSovereign {
-            right: unset !important;
-        }
-    }
-
     section#socialMedia {
-        .left {
-            display: none;
-        }
+        flex-direction: column;
+        margin-top: 10%;
 
-        .right {
-            width: 100% !important;
-        }
-
-        #socialMediaRight {
-            padding: 0 5% !important;
-            width: 90% !important;
-
-            p {
-                line-height: 7vw !important;
-                font-size: 5vw !important;
-            }
+        p {
+            font-size: 3.8vw !important;
+            width: 75%;
+            margin-bottom: 10%;
         }
 
         #socialMediaPhone {
+            width: 50% !important;
             a img {
                 width: 5vw !important;
                 height: 5vw !important;
@@ -278,15 +212,15 @@
             bottom: 18%;
             width: 50%;
             padding: 3vw;
-            
+
             #teachYouTeachYouText {
                 font-size: 6vw;
             }
-        
+
             p#teachYouClassName {
                 font-size: 4.5vw;
             }
-        
+
             a#teachYouClassCta {
                 width: 85%;
                 padding: 2vw 2vw;

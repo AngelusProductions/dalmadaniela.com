@@ -8,6 +8,8 @@ export const i = {
         onPhone: `${bucketPrefix}/dalma/onPhone.png`,
         pointingUp: `${bucketPrefix}/dalma/pointingUp.png`,
         iVisaPhoto: `${bucketPrefix}/dalma/iVisaPhoto.JPG`,
+        redSweater: `${bucketPrefix}/dalma/redSweater.webp`,
+        brownBackground: `${bucketPrefix}/dalma/brownBackground.jpeg`,
     },
     films: {
         limeAndVinegar: `${bucketPrefix}/films/limeAndVinegar.png`,
@@ -49,6 +51,8 @@ export const i = {
             mamb: `${bucketPrefix}/logos/mamb.png`,
             it49: `${bucketPrefix}/logos/it49.png`,
             errante: `${bucketPrefix}/logos/errante.png`,
+            civitasNetworks: `${bucketPrefix}/logos/civitasNetworks.webp`,
+            artivistsUnited: `${bucketPrefix}/logos/artivistsUnited.webp`,
         },
         brandsCollaborated: {
             hardRockCafe: `${bucketPrefix}/logos/hardRockCafe.png`,
@@ -61,6 +65,8 @@ export const i = {
             sunWink: `${bucketPrefix}/logos/sunWink.png`,
             dominant: `${bucketPrefix}/logos/dominant.png`,
             vireo: `${bucketPrefix}/logos/vireo.png`,
+            madresBrunch: `${bucketPrefix}/logos/madresBrunch.webp`,
+            nelsonJ: `${bucketPrefix}/logos/nelsonJ.webp`,
         },
         brandsFeatured: {
             shoutoutLA: `${bucketPrefix}/logos/shoutoutLA.jpeg`,

@@ -30,16 +30,6 @@
     animation: fadeIn 2000ms ease-in-out;
     height: 100vh;
     overflow: hidden;
-    min-height: 700px;
-
-    &:nth-of-type(even) {
-        background: $yellow;
-    }
-
-    &:nth-of-type(odd) {
-        background: $pink;
-        color: white;
-    }
 }
 
 img.halfSection {
@@ -69,8 +59,9 @@ img.halfSection {
 section#landing {
     display: flex;
     background: white;
+    overflow: unset !important;
 
-    .right {
+    .left {
         #dalmadanielaTitle {
             display: flex;
             align-items: center;
@@ -80,14 +71,13 @@ section#landing {
             height: 100%;
             width: 67%;
             margin: auto;
-            text-align: center;
 
             .animate__animated {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-            } 
+            }
 
             #dalmadanielaLogoContainer {
                 display: flex;
@@ -104,82 +94,76 @@ section#landing {
                     font-weight: 100;
                     font-size: 1.4vw;
                 }
-        
-            }
-
-            #landingStarsTwinkleLarge {
-                position: absolute;
-                right: -22vw;
-                top: -6vw;
-                width: 15vw;
             }
 
             h1 {
-                font-size: 4.2vw;
+                font-size: 3.2vw;
                 font-family: 'Hatton';
                 color: $pink;
-                margin-top: 3vh;
                 font-weight: 400;
+                text-align: left
             }
-        
+
             p {
                 color: black;
                 font-family: "Garbata";
                 font-weight: 300;
-                text-align: center;
-                line-height: 3vw;
+                text-align: left;
                 margin-top: 2vh;
-                font-size: 1.8vw;
-                width: 93%;
+                font-size: 1.6vw;
             }
         }
     }
 
-    span#angelusProductions {
-        position: absolute;
-        left: 3vw;
-        font-family: 'Hatton';
-        color: $yellow;
-        bottom: 2vh;
-        font-size: 1.3vw;
+    .right {
+        #dalmaTitle {
+            font-family: "Garet";
+            text-align: center;
+            font-size: 1.3vw;
+        }
     }
 }
 
 section#bio {
-    background: $pink;
-
-    img#bioLeftMagic {
-        left: -23vw;
-        height: 146%;
-        position: absolute;
-        top: -45vh;
-        transform: rotate(5deg);
-        filter: opacity(0.4);
-    }
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
 
     div#bioLeft {
+        width: 25%;
+        padding: 0 3vw;
+
         h2 {
-            color: $yellow;
             font-family: 'Hatton';
             font-weight: 400;
             font-size: 3.2vw;
+            color: $pink;
         }
 
         p {
-            color: $white;
             font-family: "Garbata";
             font-weight: 300;
             font-size: 1.8vw;
             margin-top: 3vh;
-
-            a {
-                text-decoration: underline;
-
-                &:hover {
-                    color: $yellow;
-                }
-            }
         }
+
+        a {
+            font-family: "Garbata";
+            font-weight: 700;
+            font-size: 1.8vw;
+            background: $green;
+            color: white;
+            padding: 1vw 2vw;
+            display: block;
+            width: fit-content;
+            margin: 10% 0;
+        }
+    }
+
+    img {
+        width: 25%;
+        height: max-content;
     }
 }
 
@@ -188,7 +172,7 @@ section#brands {
     flex-direction: column;
     justify-content: space-evenly;
     height: fit-content;
-    padding-bottom: 10vh;
+    padding: 5vh 0;
     background: white;
 
     #brandsHelped .brandLogo {
@@ -196,7 +180,7 @@ section#brands {
     }
 
     #brandsCollaborated .brandLogo {
-        width: 10%;
+        width: 8%;
     }
 
     #brandsFeatured .brandLogo {
@@ -220,6 +204,10 @@ section#brands {
 
     #brandsFeatured .brandLogosContainer {
         padding: 0 5vw;
+    }
+
+    #brandsHelped>div>img:nth-child(7) {
+        transform: scale(1.5);
     }
 
     #brandsCollaborated>div>img:nth-child(1) {
@@ -276,7 +264,7 @@ section#brands {
         transform: scale(0.7);
         filter: brightness(0);
     }
-    
+
     #brandsFeatured>div>img:nth-child(8) {
         filter: brightness(0);
         transform: scale(1.3);
@@ -312,133 +300,50 @@ section#brands {
     }
 }
 
-section#films {
-    
-    > div {
-        height: 100% !important;
-    }
-    .left {
-        width: 33%;
-    }
+section#socialMedia {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
 
-    .right {
-        width: 67%;
-    }
+    p {
+        font-family: 'Garbata';
+        font-weight: 300;
+        font-size: 1.8vw;
+        width: 25%;
 
-    #filmsContainer {
-        display: inline-flex;
-        justify-content: space-evenly;
-        align-items: center;
+        a {
+            text-decoration: underline;
 
-    }
-
-    #filmsLeft {
-        h2 {
-            font-family: 'Hatton';
-            font-size: 3.5vw;
-            color: $pink;
-            margin-top: 3vh;
-            font-weight: 500;
-        }
-
-        p {
-            color: $black;
-            font-family: "Garbata";
-            font-weight: 300;
-            font-size: 1.8vw;
-            margin-top: 3vh;
+            &:hover {
+                color: $pink;
+            }
         }
     }
 
-    .film {
+    div#socialMediaPhone {
+        width: 25%;
         display: flex;
         flex-direction: column;
-        text-align: center;
+        position: relative;
 
-        img {
-            height: 45vw;
-            object-fit: contain;
-            margin-bottom: 1vw;
-        }
-
-        span {
-            font-family: 'Garbata';
-            font-weight: 700;
-            color: $pink;
-            font-size: 1.3vw;
-        }
-    }
-
-    #theSovereign {
-        right: 1%;
-    }
-}
-
-section#socialMedia {
-    background: white;
-
-    .left {
-        width: 50%;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-    div#socialMediaRight {
-        height: 100%;
-        padding: 0 4vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        > div {
-            width: 50%;
-        }
-
-        p {
-            color: $black;
-            font-family: 'Garbata';
-            font-weight: 300;
-            // width: 45%;
-            font-size: 1.8vw;
-
-            a {
-                text-decoration: underline;
-
-                &:hover {
-                    color: $pink;
-                }
-            }
-        }
-
-        div#socialMediaPhone {
-            // width: 50%;
+        div {
             display: flex;
-            flex-direction: column;
-            position: relative;
+            justify-content: space-between;
+            padding: 0 1vw;
+            margin-bottom: 0.7vh;
+            height: fit-content;
+        }
 
-            div {
-                display: flex;
-                justify-content: space-between;
-                padding: 0 1vw;
-                margin-bottom: 0.7vh;
-            }
+        a img {
+            width: 2vw;
+            height: 2vw;
 
-            a img {
-                width: 2vw;
-                height: 2vw;
-
-                &:hover {
-                    color: black;
-                }
+            &:hover {
+                color: black;
             }
         }
     }
-
- 
 
     img#socialMediaInstagramPhone {
         z-index: 97;
@@ -458,7 +363,7 @@ section#socialMedia {
 
 #garettTestimonial h2 {
     font-family: "Hatton";
-    font-size: 5vw;
+    font-size: 3.8vw;
     letter-spacing: 0.2vw;
     font-weight: 500;
     transform: translateY(1vw);
@@ -482,15 +387,10 @@ section#socialMedia {
     }
 
     p {
-        font-size: 1.9vw;
+        font-size: 1.8vw;
         font-family: "Garbata";
-        font-weight: 400;
         font-style: italic;
         width: 72%;
-
-        .black {
-            color: $black;
-        }
     }
 
     .right {
@@ -507,26 +407,12 @@ section#socialMedia {
         font-family: "Garbata";
         font-weight: 700;
         font-style: italic;
-
-        &.pink {
-            color: $pink;
-        }
-
-        &.yellow {
-            color: $yellow;
-        }
+        color: $green;
     }
 
     img.testimonialPhone {
-        width: 67%;
+        width: 90%;
         z-index: 97;
-    }
-
-    img.testimonialMagic {
-        height: 100%;
-        position: absolute;
-        right: -20%;
-        filter: opacity(0.6);
     }
 }
 
@@ -558,7 +444,7 @@ section#teachYou {
         padding: 2vw;
         border: 4px solid;
         box-shadow: 2px 2px 8px 1px gray;
-        
+
         #teachYouTeachYouText {
             color: $pink;
             font-family: "Hatton";
@@ -568,21 +454,21 @@ section#teachYou {
             flex-direction: column;
             font-size: 3vw;
         }
-    
+
         p#teachYouClassName {
             font-family: 'Garbata';
             font-weight: 300;
             text-align: center;
             font-size: 2.1vw;
         }
-    
+
         a#teachYouClassCta {
             font-family: 'Garbata';
-            font-weight: 700;
-            background: black;
+            font-weight: 300;
+            background: $green;
             width: 67%;
             margin: auto;
-            color: $yellow;
+            color: white;
             padding: 1vw 2vw;
             margin-top: 1vw;
             font-size: 1.5vw;
