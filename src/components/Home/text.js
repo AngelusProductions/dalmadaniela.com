@@ -12,8 +12,13 @@ export default {
 
   bioTitle: "As an actress and producer",
   bioText:
-    "Born in Colombia, Dalma's passion and resilience serve as two of her most significant assets. As an actress, the roles she portrays are transformational; they're characters that have learned to transform their pain into something positive.  They're also temperamental, and they’re not afraid to stand up for what they believe in, which creates a bit of drama for better or for worse.",
+    "Dalma's passion and resilience serve as two of her most significant strenghts. As an actress based in Los Angeles, the lead roles she plays are temperamental and unafraid to stand up for what they believe in. As a supporting actress, she enjoys portraying characters who transform their pain into something positive, moving the plot forward.",
   bioButton: "Watch Reel",
+
+  musicTitle: "As a singer and cultural advocate",
+  musicText:
+    "She combines her passion for music and pop culture. As a rock singer, she's collaborated with renowned DJs and released original songs with millions of views. As a cultural manager, she created the acoustic rock movement called “Acustico Barranquilla.” She promoted bilingualism through music and supported the LGBTQ community in her hometown through various projects and events. Dalma uses her voice to inspire and empower others.",
+  musicButton: "Listen to Her Latest Single",
 
   brandsHelped: "Some brands Dalma has helped across the globe:",
   brandsCollaborated: "Some brands we've collaborated with on social:",
@@ -27,10 +32,8 @@ export default {
   limeAndVinegarCaption: "Lime and Vinegar, directed by Evan Snyder",
   theSovereignCaption: "The Sovereign, directed by Farah Y. Mourad Vera",
 
-  socialMediaText1: "Social media is the new frontier. Our ",
-  socialMediaText2: "social media products",
-  socialMediaText3:
-    " are crafted to make sure your potential followers enjoy the vibe of your profile with every scroll.",
+  socialMediaText:
+    "Because of this multipotentiality, our digital strategies are effective and impact-driven. We make sure your audience enjoys the vibe of your profile while fully connecting with your brand through every scroll.",
 
   testimonialsTitle: "Testimonials",
 
