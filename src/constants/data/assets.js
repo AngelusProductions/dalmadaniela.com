@@ -138,10 +138,11 @@ export const i = {
     },
     services: {
         arianaPodcast: `${bucketPrefix}/services/arianaPodcast.webp`,
-        businessCards: `${bucketPrefix}/services/businessCards.webp`,
-        colorPallette: `${bucketPrefix}/services/colorPallette.webp`,
+        businessCards: `${bucketPrefix}/services/businessCards.png`,
+        colorPallette: `${bucketPrefix}/services/colorPallette.png`,
         podcastGirl: `${bucketPrefix}/services/podcastGirl.webp`,
         socialMediaGrid: `${bucketPrefix}/services/socialMediaGrid.webp`,
+        laptop: `${bucketPrefix}/services/laptop.webp`,
     },
     superClass: {
         adTrailerStill: `${bucketPrefix}/superclass/superClassAdTrailerStill.png`

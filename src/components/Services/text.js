@@ -2,7 +2,7 @@ export default {
   title: "Digital marketing that sells and serves",
   titleSubtitle:
     "From UGC and digital strategies to full-on rebranding, web development, and corporate hero video production, we're all about creating digital solutions that enhance our collaborators' outcomes both online and offline.",
-  titleButton: "Plans & Prices",
+  titleButton: "Plans and Prices",
 
   brandLabel: "Brand strategy",
   brandTitle: "Personal & Corporate Branding",

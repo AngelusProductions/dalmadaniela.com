@@ -1,5 +1,63 @@
 @import '../../colors.scss';
 
 #servicesPage {
-    
+    section#servicesTitleSection {
+        display: flex;
+        justify-content: space-around;
+
+        div#servicesTitleLeft {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            padding: 10% 0 5% 10%;
+
+            h1 {
+                font-size: 3.4vw;
+            }
+
+            p {
+                font-size: 1.5vw;
+                font-family: "Garet";
+            }
+
+            button {
+                font-family: "Garbata";
+                font-weight: 700;
+                font-size: 1.8vw;
+                background: $green;
+                color: white;
+                padding: 1vw 2vw;
+                display: block;
+                width: fit-content;
+                margin: 10% 0;
+                cursor: pointer;
+            }
+        }
+
+        div#servicesTitleRight {
+            width: 50%;
+
+            #servicesTitleRight {
+                width: 100%;
+                margin-right: 10%;
+                margin-top: 10%;
+            }
+
+            #servicesTitleVideo {
+                margin-top: 20%;
+            }
+        }
+    }
+
+    section#servicesBrandSection {
+        display: flex;
+
+        div#servicesBrandLeft {
+            width: 33%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
 }
