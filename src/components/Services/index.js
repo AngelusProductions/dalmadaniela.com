@@ -34,10 +34,10 @@ const Services = () => {
         </div>
       </section>
       <section id="servicesBrandSection">
-      <div id="servicesBrandLeft">
-        <img id="servicesBrandColorPallette" src={i.services.colorPallette} />
-        <img id="servicesBrandBusinessCards" src={i.services.businessCards} />
-      </div>
+        <div id="servicesBrandLeft">
+          <img id="servicesBrandColorPallette" src={i.services.colorPallette} />
+          <img id="servicesBrandBusinessCards" src={i.services.businessCards} />
+        </div>
         <div id="servicesBrandRight">
           <label>{t.brandLabel}</label>
           <h2>{t.brandTitle}</h2>
