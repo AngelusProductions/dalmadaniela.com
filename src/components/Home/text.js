@@ -3,11 +3,9 @@ export default {
 
   title: "dalmadaniela.com",
   titleTagline:
-    "Your one-stop solution for digital marketing, web development, and video creation",
-  titleDescription1:
-    "dalmadaniela.com embodies ten years of marketing experience helping brands in the US and Latin America grow their online presence and reach their business goals by increasing conversions, but most importantly, by changing how their audience perceives them.",
-  titleDescription2:
-    "Because, after all, that's what real marketing is all about: Impact and change.",
+    "Crafting Impact: Elevating Brands and Films Through Unbordered Creativity",
+  titleDescription:
+    "In the limelight or behind the screen, Dalma Llinás' journey unfolds. Navigating the intersection of art and digital prowess, she crafts impactful narratives. Yes, she has boosted conversions, but her legacy lies in shifting perceptions. Brands aren't mere logos; like the characters she brings to life, they have stories waiting to be told. So, welcome aboard— where creativity meets purpose.",
   titletitle: "Dalma Llinas, Founder & CMO.",
 
   bioTitle: "As an actress and producer",
@@ -20,8 +18,8 @@ export default {
     "She combines her passion for music and pop culture. As a rock singer, she's collaborated with renowned DJs and released original songs with millions of views. As a cultural manager, she created the acoustic rock movement called “Acustico Barranquilla.” She promoted bilingualism through music and supported the LGBTQ community in her hometown through various projects and events. Dalma uses her voice to inspire and empower others.",
   musicButton: "Listen to Her Latest Single",
 
-  brandsHelped: "Some brands Dalma has helped across the globe:",
-  brandsCollaborated: "Some brands we've collaborated with on social:",
+  brandsHelped: "Brands transformed by Dalma's decade in digital marketing:",
+  brandsCollaborated: "Brands we've joined forces with on social:",
   brandsFeatured: "As featured in:",
   brandsFigures:
     "Over 7 figures in revenue made for brands in the US and Latin America.",

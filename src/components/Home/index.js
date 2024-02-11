@@ -42,12 +42,11 @@ const Home = () => {
         <div className="left">
           <div id="dalmadanielaTitle">
             <h1>{t.titleTagline}</h1>
-            <p>{t.titleDescription1}</p>
-            <p>{t.titleDescription2}</p>
+            <p>{t.titleDescription}</p>
           </div>
         </div>
         <div className="right">
-          <img className="halfSection" src={i.dalma.iVisaPhoto} alt={t.title} />
+          <img className="halfSection" src={i.dalma.redSweater1} alt={t.title} />
           <p id="dalmaTitle">{t.titletitle}</p>
         </div>
       </section>
@@ -81,6 +80,7 @@ const Home = () => {
           <div className="brandLogosContainer">
             {Object.keys(i.logos.brandsFeatured).map((key) => (
               <a
+                key={key}
                 className="brandFeatured brandLogo clickable"
                 href={i.logos.brandsFeatured[key].linkUrl}
                 target="_blank"
@@ -93,9 +93,6 @@ const Home = () => {
               </a>
             ))}
           </div>
-          <h4>
-            <Link to={paths.superClass.page}>{t.brandsFigures}</Link>
-          </h4>
         </div>
       </section>
       <section id="bio" className="homeSection">
@@ -112,7 +109,7 @@ const Home = () => {
         </div>
         <div id="bioRight">
           <img id="bioBrownBackground" src={i.dalma.brownBackground} />
-          <img id="bioRedSweater" src={i.dalma.redSweater} />
+          <img id="bioRedSweater" src={i.dalma.redSweater2} />
         </div>
       </section>
       <section id="music" className="homeSection">

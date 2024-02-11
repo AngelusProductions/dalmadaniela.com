@@ -10,8 +10,9 @@ export const i = {
     onPhone: `${bucketPrefix}/dalma/onPhone.png`,
     pointingUp: `${bucketPrefix}/dalma/pointingUp.png`,
     iVisaPhoto: `${bucketPrefix}/dalma/iVisaPhoto.JPG`,
-    redSweater: `${bucketPrefix}/dalma/redSweater.webp`,
     brownBackground: `${bucketPrefix}/dalma/brownBackground.jpeg`,
+    redSweater1: `${bucketPrefix}/dalma/redSweater1.webp`,
+    redSweater2: `${bucketPrefix}/dalma/redSweater2.webp`,
   },
   films: {
     limeAndVinegar: `${bucketPrefix}/films/limeAndVinegar.png`,
