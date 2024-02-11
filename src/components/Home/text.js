@@ -9,8 +9,9 @@ export default {
   titletitle: "Dalma Llinas, Founder & CMO.",
 
   bioTitle: "As an actress and producer",
-  bioText:
-    "Dalma's passion and resilience serve as two of her most significant strenghts. As an actress based in Los Angeles, the lead roles she plays are temperamental and unafraid to stand up for what they believe in. As a supporting actress, she enjoys portraying characters who transform their pain into something positive, moving the plot forward.",
+  bioText1:
+    "Dalma's charisma and resilience serve as two of her most significant strengths. As an actress based in Los Angeles, the lead roles she plays are temperamental and unafraid to stand up for what they believe in. As a supporting actress, she enjoys portraying characters who transform their pain into growth, moving the plot forward.",
+  bioText2: "For bookings, you can email dalma@dalmadaniela.com.",
   bioButton: "Watch Reel",
 
   musicTitle: "As a singer and cultural advocate",

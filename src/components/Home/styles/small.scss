@@ -193,13 +193,13 @@
     }
 
     section#socialMedia {
-        flex-direction: column;
-        margin-top: 10%;
+        flex-direction: column-reverse;
+        margin-top: 15%;
 
         p {
             font-size: 3.8vw !important;
             width: 75%;
-            margin-bottom: 10%;
+            margin-top: 10%;
         }
 
         #socialMediaPhone {

@@ -98,7 +98,8 @@ const Home = () => {
       <section id="bio" className="homeSection">
         <div id="bioLeft">
           <h2>{t.bioTitle}</h2>
-          <p>{t.bioText}</p>
+          <p>{t.bioText1}</p>
+          <p>{t.bioText2}</p>
           <a
             target="_blank"
             className="clickable"
