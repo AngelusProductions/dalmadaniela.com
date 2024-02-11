@@ -16,7 +16,7 @@ export default {
 
   musicTitle: "As a singer and cultural advocate",
   musicText:
-    "She combines her passion for music and pop culture. As a rock singer, she's collaborated with renowned DJs and released original songs with millions of views. As a cultural manager, she created the acoustic rock movement called “Acustico Barranquilla.” She promoted bilingualism through music and supported the LGBTQ community in her hometown through various projects and events. Dalma uses her voice to inspire and empower others.",
+    "She combines her passion for music and pop culture. As a rock singer born in Colombia, she's collaborated with renowned DJs and released original songs with millions of views. As a cultural manager, she created the acoustic rock movement called “Acústico Barranquilla.” She promoted bilingualism through music and supported the LGBTQ community in her hometown through various projects and events. Dalma uses her voice to inspire and empower others.",
   musicButton: "Listen to Her Latest Single",
 
   brandsHelped: "Brands transformed by Dalma's decade in digital marketing:",
