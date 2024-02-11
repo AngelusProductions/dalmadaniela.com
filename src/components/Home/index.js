@@ -46,7 +46,11 @@ const Home = () => {
           </div>
         </div>
         <div className="right">
-          <img className="halfSection" src={i.dalma.redSweater1} alt={t.title} />
+          <img
+            className="halfSection"
+            src={i.dalma.redSweater1}
+            alt={t.title}
+          />
           <p id="dalmaTitle">{t.titletitle}</p>
         </div>
       </section>
@@ -93,6 +97,9 @@ const Home = () => {
               </a>
             ))}
           </div>
+          <h4>
+            <Link to={paths.superClass.page}>{t.brandsFigures}</Link>
+          </h4>
         </div>
       </section>
       <section id="bio" className="homeSection">
