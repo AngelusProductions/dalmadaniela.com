@@ -1,6 +1,52 @@
 @import '../../colors.scss';
 
 #servicesPage {
+    .servicesSection {
+        display: flex;
+
+        label {
+            text-transform: uppercase;
+            font-family: "Garet";
+            font-size: 1.5vw;
+        }
+
+        h2 {
+            font-family: "Garbata";
+            font-size: 3.7vw;
+        }
+
+        p {
+            font-size: 1.5vw;
+            font-family: "Garet";
+            margin-top: 5%;
+        }
+
+        .servicesSectionLeft,
+        .servicesSectionRight {
+            width: 50%;
+            padding: 5%;
+        }
+
+        .servicesSectionLeft {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                max-width: 500px;
+                margin: auto;
+            }
+        }
+
+        .servicesSectionRight {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-right: 10%;
+        }
+    }
+
     section#servicesTitleSection {
         display: flex;
 
@@ -8,10 +54,10 @@
             width: 33%;
             display: flex;
             flex-direction: column;
-            padding: 5% 0 5% 10%;
+            padding: 10% 0 5% 10%;
 
             h1 {
-                font-size: 3.4vw;
+                font-size: 3.5vw;
             }
 
             p {
@@ -49,14 +95,21 @@
         }
     }
 
-    section#servicesBrandSection {
-        display: flex;
+    section#servicesBrandSection {}
 
-        div#servicesBrandLeft {
-            width: 33%;
-
+    section#servicesDigitalSection {
+        #servicesDigitalLeft {
             img {
-                width: 100%;
+                margin-top: 20%;
+            }
+        }
+    }
+
+
+    section#servicesAccelerationSection {
+        #servicesAccelerationLeft {
+            img {
+                margin-top: 15%;
             }
         }
     }

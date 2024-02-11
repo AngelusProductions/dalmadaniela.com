@@ -33,18 +33,47 @@ const Services = () => {
           />
         </div>
       </section>
-      <section id="servicesBrandSection">
-        <div id="servicesBrandLeft">
+      <section id="servicesBrandSection" className="servicesSection">
+        <div id="servicesBrandLeft" className="servicesSectionLeft">
           <img id="servicesBrandColorPallette" src={i.services.colorPallette} />
           <img id="servicesBrandBusinessCards" src={i.services.businessCards} />
         </div>
-        <div id="servicesBrandRight">
+        <div id="servicesBrandRight" className="servicesSectionRight">
           <label>{t.brandLabel}</label>
           <h2>{t.brandTitle}</h2>
-          <div id="servicesBrandDescription">
+          <div id="servicesBrandDescription" className="servicesDescription">
             <p>{t.brandDescription1}</p>
             <p>{t.brandDescription2}</p>
             <p>{t.brandDescription3}</p>
+          </div>
+        </div>
+      </section>
+      <section id="servicesDigitalSection" className="servicesSection">
+        <div id="servicesDigitalLeft" className="servicesSectionLeft">
+          <img id="servicesDigitalPodcast" src={i.services.arianaPodcast} />
+        </div>
+        <div id="servicesDigitalRight" className="servicesSectionRight">
+          <label>{t.digitalLabel}</label>
+          <h2>{t.digitalTitle}</h2>
+          <div id="servicesDigitalDescription" className="servicesDescription">
+            <p>{t.digitalDescription1}</p>
+            <p>{t.digitalDescription2}</p>
+          </div>
+        </div>
+      </section>
+      <section id="servicesAccelerationSection" className="servicesSection">
+        <div id="servicesAccelerationLeft" className="servicesSectionLeft">
+          <img id="servicesAccelerationPodcast" src={i.services.podcastGirl} />
+        </div>
+        <div id="servicesAccelerationRight" className="servicesSectionRight">
+          <label>{t.accelerationLabel}</label>
+          <h2>{t.accelerationTitle}</h2>
+          <div
+            id="servicesAccelerationDescription"
+            className="servicesDescription"
+          >
+            <p>{t.accelerationDescription1}</p>
+            <p>{t.accelerationDescription2}</p>
           </div>
         </div>
       </section>
