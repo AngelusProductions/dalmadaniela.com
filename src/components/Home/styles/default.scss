@@ -126,13 +126,13 @@ section#landing {
 
 section#bio {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: fit-content;
 
     div#bioLeft {
-        width: 25%;
-        padding: 0 3vw;
+        width: 33%;
+        padding-left: 7%;
 
         h2 {
             font-family: 'Hatton';
@@ -161,9 +161,58 @@ section#bio {
         }
     }
 
+    div#bioRight {
+        display: flex;
+        justify-content: space-evenly;
+
+        img {
+            width: 33%;
+            height: max-content;
+        }
+    }
+}
+
+section#music {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+
+    div#musicLeft {
+        width: 33%;
+        padding-left: 7%;
+
+        h2 {
+            font-family: 'Hatton';
+            font-weight: 400;
+            font-size: 3.2vw;
+            width: 90% !important;
+            color: $pink;
+        }
+
+        p {
+            font-family: "Garbata";
+            font-weight: 300;
+            font-size: 1.8vw;
+            margin-top: 3vh;
+        }
+
+        a {
+            font-family: "Garbata";
+            font-weight: 700;
+            font-size: 1.8vw;
+            background: $green;
+            color: white;
+            padding: 1vw 2vw;
+            display: block;
+            width: fit-content;
+            margin: 10% 0;
+        }
+    }
+
     img {
-        width: 25%;
-        height: max-content;
+        width: 40%;
+        padding-right: 11%;
     }
 }
 
@@ -185,6 +234,10 @@ section#brands {
 
     #brandsFeatured .brandLogo {
         width: 10%;
+
+        .brandLogoImage {
+            width: 100%;
+        }
     }
 
     .brandLogosContainer {
@@ -252,20 +305,16 @@ section#brands {
         transform: scale(0.8);
     }
 
-    #brandsFeatured>div>img:nth-child(3) {
+    #brandsFeatured>div>a:nth-child(3)>img {
         transform: scale(0.7);
     }
 
-    #brandsFeatured>div>img:nth-child(6) {
-        transform: scale(1.5);
-    }
-
-    #brandsFeatured>div>img:nth-child(7) {
+    #brandsFeatured>div>a:nth-child(7)>img {
         transform: scale(0.7);
         filter: brightness(0);
     }
 
-    #brandsFeatured>div>img:nth-child(8) {
+    #brandsFeatured>div>a:nth-child(8)>img {
         filter: brightness(0);
         transform: scale(1.3);
     }

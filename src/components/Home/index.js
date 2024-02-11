@@ -42,12 +42,11 @@ const Home = () => {
         <div className="left">
           <div id="dalmadanielaTitle">
             <h1>{t.titleTagline}</h1>
-            <p>{t.titleDescription1}</p>
-            <p>{t.titleDescription2}</p>
+            <p>{t.titleDescription}</p>
           </div>
         </div>
         <div className="right">
-          <img className="halfSection" src={i.dalma.iVisaPhoto} alt={t.title} />
+          <img className="halfSection" src={i.dalma.redSweater1} alt={t.title} />
           <p id="dalmaTitle">{t.titletitle}</p>
         </div>
       </section>
@@ -80,16 +79,20 @@ const Home = () => {
           <h3>{t.brandsFeatured}</h3>
           <div className="brandLogosContainer">
             {Object.keys(i.logos.brandsFeatured).map((key) => (
-              <img
-                src={i.logos.brandsFeatured[key]}
-                className="brandFeatured brandLogo"
+              <a
                 key={key}
-              />
+                className="brandFeatured brandLogo clickable"
+                href={i.logos.brandsFeatured[key].linkUrl}
+                target="_blank"
+              >
+                <img
+                  src={i.logos.brandsFeatured[key].imgUrl}
+                  className="brandLogoImage"
+                  key={key}
+                />
+              </a>
             ))}
           </div>
-          <h4>
-            <Link to={paths.superClass.page}>{t.brandsFigures}</Link>
-          </h4>
         </div>
       </section>
       <section id="bio" className="homeSection">
@@ -97,7 +100,6 @@ const Home = () => {
           <h2>{t.bioTitle}</h2>
           <p>{t.bioText}</p>
           <a
-            to={paths.reel}
             target="_blank"
             className="clickable"
             href="https://www.imdb.com/name/nm12559836/"
@@ -105,15 +107,28 @@ const Home = () => {
             {t.bioButton}
           </a>
         </div>
-        <img id="bioBrownBackground" src={i.dalma.brownBackground} />
-        <img id="bioRedSweater" src={i.dalma.redSweater} />
+        <div id="bioRight">
+          <img id="bioBrownBackground" src={i.dalma.brownBackground} />
+          <img id="bioRedSweater" src={i.dalma.redSweater2} />
+        </div>
+      </section>
+      <section id="music" className="homeSection">
+        <div id="musicLeft">
+          <h2>{t.musicTitle}</h2>
+          <p>{t.musicText}</p>
+          <a
+            to={paths.reel}
+            target="_blank"
+            className="clickable"
+            href="https://open.spotify.com/track/1Stir6c3YO1FyinED2l40O"
+          >
+            {t.musicButton}
+          </a>
+        </div>
+        <img id="bioCollage" src={i.dalma.collage} />
       </section>
       <section id="socialMedia" className="homeSection">
-        <p>
-          {t.socialMediaText1}
-          <Link to={paths.superClass.page}>{t.socialMediaText2}</Link>
-          {t.socialMediaText3}
-        </p>
+        <p>{t.socialMediaText}</p>
         <div id="socialMediaPhone">
           <div>
             <a href="https://www.youtube.com/user/TheDalma725" target="_blank">

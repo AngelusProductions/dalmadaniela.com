@@ -3,20 +3,23 @@ export default {
 
   title: "dalmadaniela.com",
   titleTagline:
-    "Your one-stop solution for digital marketing, web development, and video creation",
-  titleDescription1:
-    "dalmadaniela.com embodies ten years of marketing experience helping brands in the US and Latin America grow their online presence and reach their business goals by increasing conversions, but most importantly, by changing how their audience perceives them.",
-  titleDescription2:
-    "Because, after all, that's what real marketing is all about: Impact and change.",
+    "Crafting Impact: Elevating Brands and Films Through Unbordered Creativity",
+  titleDescription:
+    "In the limelight or behind the screen, Dalma Llinás' journey unfolds. Navigating the intersection of art and digital prowess, she crafts impactful narratives. Yes, she has boosted conversions, but her legacy lies in shifting perceptions. Brands aren't mere logos; like the characters she brings to life, they have stories waiting to be told. So, welcome aboard— where creativity meets purpose.",
   titletitle: "Dalma Llinas, Founder & CMO.",
 
   bioTitle: "As an actress and producer",
   bioText:
-    "Born in Colombia, Dalma's passion and resilience serve as two of her most significant assets. As an actress, the roles she portrays are transformational; they're characters that have learned to transform their pain into something positive.  They're also temperamental, and they’re not afraid to stand up for what they believe in, which creates a bit of drama for better or for worse.",
+    "Dalma's passion and resilience serve as two of her most significant strenghts. As an actress based in Los Angeles, the lead roles she plays are temperamental and unafraid to stand up for what they believe in. As a supporting actress, she enjoys portraying characters who transform their pain into something positive, moving the plot forward.",
   bioButton: "Watch Reel",
 
-  brandsHelped: "Some brands Dalma has helped across the globe:",
-  brandsCollaborated: "Some brands we've collaborated with on social:",
+  musicTitle: "As a singer and cultural advocate",
+  musicText:
+    "She combines her passion for music and pop culture. As a rock singer, she's collaborated with renowned DJs and released original songs with millions of views. As a cultural manager, she created the acoustic rock movement called “Acustico Barranquilla.” She promoted bilingualism through music and supported the LGBTQ community in her hometown through various projects and events. Dalma uses her voice to inspire and empower others.",
+  musicButton: "Listen to Her Latest Single",
+
+  brandsHelped: "Brands transformed by Dalma's decade in digital marketing:",
+  brandsCollaborated: "Brands we've joined forces with on social:",
   brandsFeatured: "As featured in:",
   brandsFigures:
     "Over 7 figures in revenue made for brands in the US and Latin America.",
@@ -27,10 +30,8 @@ export default {
   limeAndVinegarCaption: "Lime and Vinegar, directed by Evan Snyder",
   theSovereignCaption: "The Sovereign, directed by Farah Y. Mourad Vera",
 
-  socialMediaText1: "Social media is the new frontier. Our ",
-  socialMediaText2: "social media products",
-  socialMediaText3:
-    " are crafted to make sure your potential followers enjoy the vibe of your profile with every scroll.",
+  socialMediaText:
+    "Because of this multipotentiality, our digital strategies are effective and impact-driven. We make sure your audience enjoys the vibe of your profile while fully connecting with your brand through every scroll.",
 
   testimonialsTitle: "Testimonials",
 
