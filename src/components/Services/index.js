@@ -14,7 +14,7 @@ import "./styles/index.scss";
 const Services = () => {
   return (
     <main id="servicesPage">
-      <HomeIcon text pink />
+      {/* <HomeIcon text pink /> */}
       <section id="servicesTitleSection">
         <div id="servicesTitleLeft">
           <h1>{t.title}</h1>

@@ -1,7 +1,215 @@
-@import '../../colors.scss';
-
 @media (max-width: 640px) {
     #servicesPage {
-        
+        .servicesSection {
+            flex-direction: column-reverse;
+            margin-top: 15%;
+
+            label {
+                font-size: 2.5vw;
+            }
+
+            h2 {
+                font-size: 5.2vw;
+            }
+
+            p {
+                margin-top: 5%;
+                font-size: 3vw;
+            }
+
+            .servicesSectionLeft,
+            .servicesSectionRight {
+                width: 80%;
+            }
+
+            .servicesSectionLeft {
+
+
+                img {}
+            }
+
+            .servicesSectionRight {}
+        }
+
+        section#servicesTitleSection {
+            flex-direction: column;
+
+            div#servicesTitleLeft {
+                width: 80%;
+                padding: 10%;
+
+                h1 {
+                    font-size: 5.5vw;
+                }
+
+                p {
+                    font-size: 3vw;
+                    margin-top: 5%;
+                }
+
+                button {
+                    font-size: 4vw;
+                    padding: 3%;
+                }
+            }
+
+            div#servicesTitleRight {
+                width: 100%;
+                padding-left: 0%;
+                display: flex;
+                justify-content: center;
+
+                #servicesTitleVideo {
+                    margin-top: -8%;
+                    width: 95%;
+                }
+            }
+        }
+
+        section#servicesDigitalSection {
+            #servicesDigitalLeft {
+                img {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        section#servicesAccelerationSection {
+            #servicesAccelerationLeft {
+                img {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        section#servicesPlanSection {
+            h3 {
+                font-size: 4vw;
+            }
+
+            ul#servicesPlanBulletList {
+                li.servicesPlanBullet {
+                    font-size: 3vw;
+
+                    img {}
+                }
+
+                ul#servicesPlanBulletOneList {
+                    li {
+                        font-size: 2.6vw;
+                    }
+                }
+            }
+        }
+
+        section#servicesPlansAndPricesSection {
+
+            h3 {
+                font-size: 5vw;
+            }
+
+            div#servicesPlansAndPricesContainer {
+                flex-direction: column;
+
+                .servicesPlansAndPrices {
+                    width: 100%;
+
+                    .servicesPlansAndPricesContent {
+                        h4 {
+                            font-size: 4vw;
+                            width: 67%;
+                        }
+
+                        label {
+                            top: 6%;
+                            font-size: 3vw;
+                        }
+
+                        p {
+                            margin: 5% 0;
+                            font-size: 3vw;
+                        }
+
+                        ul.servicesPlansAndPricesList {
+                            li.servicesPlansAndPricesItem {
+                                font-size: 3vw;
+                            }
+                        }
+                    }
+
+                    button {
+                        font-size: 3vw;
+                        padding: 2.5%;
+                        width: fit-content;
+                        margin: 5% 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #servicesAlexTestimonial {}
+
+    .servicesTestimonial {
+        .left {}
+
+        p {
+            font-size: 2.2vw !important;
+            width: 95% !important;
+        }
+
+        .right {}
+
+        .testimonialLabel {
+            font-size: 2.3vw;
+        }
+
+        img.testimonialPhone {
+            width: 60%;
+        }
+    }
+
+    section#servicesContactSection {
+        flex-direction: column;
+
+        div#servicesContactLeft {
+            width: 80% !important;
+
+            h4 {
+                font-size: 3.5vw !important;
+            }
+
+            h3 {
+                font-size: 7vw !important;
+            }
+
+            p#servicesContactDescription {
+                font-size: 2.7vw !important;
+            }
+
+            p#servicesContactTagline {
+                font-size: 5vw !important;
+            }
+
+            div.servicesContactButton {
+                font-size: 2.5vw !important;
+
+                img {
+                    width: 2vw !important;
+                }
+            }
+        }
+
+        div#servicesContactRight {
+            width: 100% !important;
+            display: flex !important;
+            display: none !important;
+            justify-content: center;
+
+            img {
+                width: 75%;
+                margin: 0 !important;
+            }
+        }
     }
 }

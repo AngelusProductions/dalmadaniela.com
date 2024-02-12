@@ -115,7 +115,7 @@
     }
 
     section#servicesPlanSection {
-        padding: 0% 10% 5%;
+        padding: 5% 10%;
 
         h3 {
             font-family: "Garbata";
@@ -130,7 +130,7 @@
             li.servicesPlanBullet {
                 font-family: "Garbata";
                 font-size: 1.6vw;
-                font-weight: 700;
+                font-weight: 300;
                 margin-bottom: 5%;
                 display: flex;
                 align-items: center;
@@ -227,11 +227,12 @@
                     background: $green;
                     color: white;
                     padding: 5%;
-                    font-family: "Garet";
+                    font-family: "Garbata";
+                    font-weight: 700;
                     width: 75%;
                     margin-top: 7%;
                     cursor: pointer;
-                    font-size: 0.8vw;
+                    font-size: 1.1vw;
                 }
             }
         }
