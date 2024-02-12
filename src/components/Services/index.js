@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 import MuxPlayer from "@mux/mux-player-react";
 
-import { i } from '../../constants/data/assets'
-import { paths } from '../../constants/paths'
+import { i } from "../../constants/data/assets";
+import { paths } from "../../constants/paths";
 
-import HomeIcon from '../UI/HomeIcon'
+import HomeIcon from "../UI/HomeIcon";
 
-import t from './text'
-import './styles/index.scss'
+import t from "./text";
+import "./styles/index.scss";
 
 const Services = () => {
   return (
@@ -77,8 +77,119 @@ const Services = () => {
           </div>
         </div>
       </section>
+      <section id="servicesPlanSection">
+        <h3>{t.accelerationProgram}</h3>
+        <ul id="servicesPlanBulletList">
+          <li className="servicesPlanBullet">
+            <img src={i.icons.checkMark} />
+            <span>{t.accelerationProgramBullets.one}</span>
+          </li>
+          <ul id="servicesPlanBulletOneList">
+            {t.accelerationProgramBullets.oneBullets.map((bullet, i) => (
+              <li key={i}>{bullet}</li>
+            ))}
+            <li>
+              {t.accelerationProgramBullets.oneLastBullet.one}
+              <a
+                href="https://drive.google.com/file/d/1uL1KlVVF82Vp1zjrlTfJSYNefAkiOS9r/view?usp=sharing"
+                target="_blank"
+              >
+                <u>{t.accelerationProgramBullets.oneLastBullet.two}</u>
+              </a>
+              {t.accelerationProgramBullets.oneLastBullet.three}
+            </li>
+          </ul>
+          <li className="servicesPlanBullet">
+            <img src={i.icons.checkMark} />
+            <span>{t.accelerationProgramBullets.two}</span>
+          </li>
+          <li className="servicesPlanBullet">
+            <img src={i.icons.checkMark} />
+            <span>{t.accelerationProgramBullets.three}</span>
+          </li>
+          <li className="servicesPlanBullet">
+            <img src={i.icons.checkMark} />
+            <span>{t.accelerationProgramBullets.four}</span>
+          </li>
+        </ul>
+      </section>
+      <section id="servicesPlansAndPricesSection">
+        <h3>{t.plansAndPricesTitle}</h3>
+        <div id="servicesPlansAndPricesContainer">
+          <div className="servicesPlansAndPrices">
+            <div className="servicesPlansAndPricesContent">
+              <h4>{t.planOne.title}</h4>
+              <label>{t.planOne.price}</label>
+              <p>{t.planOne.description}</p>
+              <ul className="servicesPlansAndPricesList">
+                {t.planOne.bullets.map((bullet, i) => (
+                  <li className="servicesPlansAndPricesItem" key={i}>
+                    {bullet}
+                  </li>
+                ))}
+                <li className="servicesPlansAndPricesItem">
+                  {t.planOne.lastBullet.one}
+                  <a
+                    href="https://drive.google.com/file/d/1uL1KlVVF82Vp1zjrlTfJSYNefAkiOS9r/view?usp=sharing"
+                    target="_blank"
+                  >
+                    <u>{t.planOne.lastBullet.two}</u>
+                  </a>
+                  {t.planOne.lastBullet.three}
+                </li>
+              </ul>
+            </div>
+            <button className="clickable">{t.planOne.cta}</button>
+          </div>
+          <div className="servicesPlansAndPrices">
+            <div className="servicesPlansAndPricesContent">
+              <h4>{t.planTwo.title}</h4>
+              <label>{t.planTwo.price}</label>
+              <p>{t.planTwo.description}</p>
+              <ul className="servicesPlansAndPricesList">
+                {t.planTwo.bullets.map((bullet, i) => (
+                  <li className="servicesPlansAndPricesItem" key={i}>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <button className="clickable">{t.planTwo.cta}</button>
+          </div>
+          <div className="servicesPlansAndPrices">
+            <div className="servicesPlansAndPricesContent">
+              <h4>{t.planThree.title}</h4>
+              <label>{t.planThree.price}</label>
+              <p>{t.planThree.description}</p>
+              <ul className="servicesPlansAndPricesList">
+                {t.planThree.bullets.map((bullet, i) => (
+                  <li className="servicesPlansAndPricesItem" key={i}>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <button className="clickable">{t.planThree.cta}</button>
+          </div>
+          <div className="servicesPlansAndPrices">
+            <div className="servicesPlansAndPricesContent">
+              <h4>{t.planFour.title}</h4>
+              <label>{t.planFour.price}</label>
+              <p>{t.planFour.description}</p>
+              <ul className="servicesPlansAndPricesList">
+                {t.planFour.bullets.map((bullet, i) => (
+                  <li className="servicesPlansAndPricesItem" key={i}>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <button className="clickable">{t.planFour.cta}</button>
+          </div>
+        </div>
+      </section>
     </main>
   );
-}
+};
 
-export default Services
+export default Services;

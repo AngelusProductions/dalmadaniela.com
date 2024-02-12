@@ -13,6 +13,7 @@
         h2 {
             font-family: "Garbata";
             font-size: 3.7vw;
+            margin-top: 1%;
         }
 
         p {
@@ -105,11 +106,133 @@
         }
     }
 
-
     section#servicesAccelerationSection {
         #servicesAccelerationLeft {
             img {
                 margin-top: 15%;
+            }
+        }
+    }
+
+    section#servicesPlanSection {
+        padding: 0% 10% 5%;
+
+        h3 {
+            font-family: "Garbata";
+            font-size: 2vw;
+        }
+
+        ul#servicesPlanBulletList {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5%;
+
+            li.servicesPlanBullet {
+                font-family: "Garbata";
+                font-size: 1.6vw;
+                font-weight: 700;
+                margin-bottom: 5%;
+                display: flex;
+                align-items: center;
+                width: 85%;
+
+                &:nth-of-type(1) {
+                    margin-bottom: 1%;
+                }
+
+                img {
+                    width: 2.5vw;
+                    height: 2.5vw;
+                    margin-right: 1vw;
+                }
+            }
+
+            ul#servicesPlanBulletOneList {
+                display: flex;
+                flex-direction: column;
+                margin-left: 5%;
+                margin-bottom: 5%;
+
+                li {
+                    font-family: "Garet";
+                    font-size: 1.2vw;
+                }
+            }
+        }
+    }
+
+    section#servicesPlansAndPricesSection {
+        padding: 0% 10% 5%;
+
+        h3 {
+            font-family: "Garbata";
+            font-size: 2.5vw;
+            margin-left: -5%;
+            margin-bottom: 2%;
+        }
+
+        div#servicesPlansAndPricesContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .servicesPlansAndPrices {
+                position: relative;
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .servicesPlansAndPricesContent {
+                    h4 {
+                        font-family: "Garbata";
+                        font-size: 1.5vw;
+                        margin-top: 5%;
+                    }
+
+                    label {
+                        color: $green;
+                        font-family: "Garet";
+                        text-align: right;
+                        display: block;
+                        font-size: 1vw;
+                        position: absolute;
+                        right: 20%;
+                        top: 9%;
+                    }
+
+                    p {
+                        font-family: "Garet";
+                        font-size: 1vw;
+                        width: 75%;
+                        margin: 10% 0 5%;
+                    }
+
+                    ul.servicesPlansAndPricesList {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 5%;
+
+                        li.servicesPlansAndPricesItem {
+                            list-style: disc;
+                            font-family: "Garet";
+                            font-size: 0.8vw;
+                            margin-bottom: 0%;
+                            margin-left: 5%;
+                            width: 75%;
+                        }
+                    }
+                }
+
+                button {
+                    background: $green;
+                    color: white;
+                    padding: 5%;
+                    font-family: "Garet";
+                    width: 75%;
+                    margin-top: 7%;
+                    cursor: pointer;
+                    font-size: 0.8vw;
+                }
             }
         }
     }

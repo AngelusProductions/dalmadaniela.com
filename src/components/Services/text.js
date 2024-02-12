@@ -48,7 +48,7 @@ export default {
     two: "Digital strategy and social media content calendar ready to implement",
     three:
       "Done-for-you social media graphics and videos created with your branding so you can replicate on your own",
-    four: "1:1 guidance and personalized feedback from start to finish",
+    four: "One to one guidance and personalized feedback from start to finish",
   },
 
   plansAndPricesTitle: "Plans & Prices",
@@ -66,8 +66,8 @@ export default {
       "Graphic elements",
     ],
     lastBullet: {
-      one: "Delivery in JPG, SVG, PNG, and PDF",
-      two: "View sample here",
+      one: "Delivery in JPG, SVG, PNG, and PDF (",
+      two: "view sample here",
       three: ")",
     },
     cta: "Scale your brand",
