@@ -162,7 +162,7 @@
     }
 
     section#servicesPlansAndPricesSection {
-        padding: 0% 10% 5%;
+        padding: 0% 10% 10%;
 
         h3 {
             font-family: "Garbata";
@@ -233,6 +233,116 @@
                     cursor: pointer;
                     font-size: 0.8vw;
                 }
+            }
+        }
+    }
+
+    #servicesAlexTestimonial {
+        margin-bottom: 5%;
+    }
+
+    .servicesTestimonial {
+        margin-bottom: 10%;
+
+        .left {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-left: 10%;
+        }
+
+        p {
+            font-size: 1.8vw;
+            font-family: "Garbata";
+            font-style: italic;
+            width: 72%;
+            margin-bottom: 10%;
+        }
+
+        .right {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 40%;
+        }
+
+        .testimonialLabel {
+            display: flex;
+            flex-direction: column;
+            font-size: 2vw;
+            font-family: "Garbata";
+            font-weight: 700;
+            font-style: italic;
+            color: $green;
+        }
+
+        img.testimonialPhone {
+            width: 50%;
+        }
+    }
+
+    section#servicesContactSection {
+        display: flex;
+
+        div#servicesContactLeft {
+            width: 50%;
+            padding: 5%;
+
+            h4 {
+                font-family: "Garbata";
+                font-size: 2.5vw;
+                margin-bottom: 5%;
+            }
+
+            h3 {
+                font-family: "Garbata";
+                font-size: 5vw;
+
+                &:nth-of-type(2) {
+                    margin-bottom: 5%;
+                }
+            }
+
+            p#servicesContactDescription {
+                font-family: "Garet";
+                font-size: 1.5vw;
+                margin-bottom: 5%;
+            }
+
+            p#servicesContactTagline {
+                font-family: "Garbata";
+                font-size: 3vw;
+                font-weight: 300;
+                margin-bottom: 5%;
+                color: $green;
+            }
+
+            div.servicesContactButton {
+                font-family: "Garet";
+                border-radius: 25px;
+                font-size: 1.5vw;
+                background: none;
+                border: 1px solid black;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 2.5%;
+                margin-bottom: 2.5%;
+                align-items: center;
+
+                img {
+                    width: 1vw;
+                }
+            }
+        }
+
+        div#servicesContactRight {
+            width: 50%;
+            display: flex;
+
+            img {
+                width: 90%;
+                margin: auto auto auto 0;
             }
         }
     }

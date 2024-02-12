@@ -4,6 +4,7 @@ import MuxPlayer from "@mux/mux-player-react";
 
 import { i } from "../../constants/data/assets";
 import { paths } from "../../constants/paths";
+import testimonials from "../../constants/data/testimonials";
 
 import HomeIcon from "../UI/HomeIcon";
 
@@ -186,6 +187,58 @@ const Services = () => {
             </div>
             <button className="clickable">{t.planFour.cta}</button>
           </div>
+        </div>
+      </section>
+      <section id="servicesGarettTestimonial" className="servicesTestimonial">
+        <div className="left">
+          <p>{testimonials.garett.quote}</p>
+          <div className="testimonialLabel">
+            <span>{testimonials.garett.name}</span>
+            <span>{testimonials.garett.label1}</span>
+            <span>{testimonials.garett.label2}</span>
+          </div>
+        </div>
+        <div className="right">
+          <img className="testimonialPhone" src={testimonials.garett.phone} />
+        </div>
+      </section>
+      <section id="servicesAlexTestimonial" className="servicesTestimonial">
+        <div className="left">
+          <p>{testimonials.alex.quote}</p>
+          <div className="testimonialLabel">
+            <span>{testimonials.alex.name}</span>
+            <span>{testimonials.alex.label1}</span>
+            <span>{testimonials.alex.label2}</span>
+          </div>
+        </div>
+        <div className="right">
+          <img className="testimonialPhone" src={testimonials.alex.phone} />
+        </div>
+      </section>
+      <section id="servicesContactSection">
+        <div id="servicesContactLeft">
+          <h4>{t.contactTitle1}</h4>
+          <h3>{t.contactTitle2}</h3>
+          <h3>{t.contactTitle3}</h3>
+          <p id="servicesContactDescription">{t.contactDescription}</p>
+          <p id="servicesContactTagline">{t.contactTagline}</p>
+          <div id="servicesContactButtons">
+            <div className="servicesContactButton">
+              <span>{t.contactPhone}</span>
+              <img src={i.icons.arrow} />
+            </div>
+            <div className="servicesContactButton">
+              <span>{t.contactEmail}</span>
+              <img src={i.icons.arrow} />
+            </div>
+            <div className="servicesContactButton">
+              <Link to={paths.contactUs}><u>{t.contactLink}</u></Link>
+              <img src={i.icons.arrow} />
+            </div>
+          </div>
+        </div>
+        <div id="servicesContactRight">
+          <img src={i.services.socialMediaGrid} />
         </div>
       </section>
     </main>

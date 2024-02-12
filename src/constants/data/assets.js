@@ -20,6 +20,7 @@ export const i = {
   },
   icons: {
     add: `${bucketPrefix}/icons/add.png`,
+    arrow: `${bucketPrefix}/icons/arrow.webp`,
     backBlack: `${bucketPrefix}/icons/backBlack.png`,
     backPink: `${bucketPrefix}/icons/backPink.png`,
     backYellow: `${bucketPrefix}/icons/backYellow.png`,
