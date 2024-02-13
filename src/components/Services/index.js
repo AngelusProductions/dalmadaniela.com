@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import MuxPlayer from "@mux/mux-player-react";
 
@@ -12,6 +12,7 @@ import t from "./text";
 import "./styles/index.scss";
 
 const Services = () => {
+  const plansAndPricesRef = useRef()
   return (
     <main id="servicesPage">
       {/* <HomeIcon text pink /> */}
@@ -19,7 +20,14 @@ const Services = () => {
         <div id="servicesTitleLeft">
           <h1>{t.title}</h1>
           <p>{t.titleSubtitle}</p>
-          <button className="clickable">{t.titleButton}</button>
+          <button
+            className="clickable"
+            onClick={() =>
+              plansAndPricesRef.current.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            {t.titleButton}
+          </button>
         </div>
         <div id="servicesTitleRight">
           <MuxPlayer
@@ -114,7 +122,7 @@ const Services = () => {
           </li>
         </ul>
       </section>
-      <section id="servicesPlansAndPricesSection">
+      <section id="servicesPlansAndPricesSection" ref={plansAndPricesRef}>
         <h3>{t.plansAndPricesTitle}</h3>
         <div id="servicesPlansAndPricesContainer">
           <div className="servicesPlansAndPrices">
@@ -140,7 +148,13 @@ const Services = () => {
                 </li>
               </ul>
             </div>
-            <button className="clickable">{t.planOne.cta}</button>
+            <a
+              href="https://buy.stripe.com/cN23fN8T827Jd5CaEG"
+              className="checkoutButton clickable"
+              target="_blank"
+            >
+              {t.planOne.cta}
+            </a>
           </div>
           <div className="servicesPlansAndPrices">
             <div className="servicesPlansAndPricesContent">
@@ -155,7 +169,13 @@ const Services = () => {
                 ))}
               </ul>
             </div>
-            <button className="clickable">{t.planTwo.cta}</button>
+            <a
+              href="https://buy.stripe.com/28o2bJ8T84fRc1y8wx"
+              target="_blank"
+              className="checkoutButton clickable"
+            >
+              {t.planTwo.cta}
+            </a>
           </div>
           <div className="servicesPlansAndPrices">
             <div className="servicesPlansAndPricesContent">
@@ -170,7 +190,13 @@ const Services = () => {
                 ))}
               </ul>
             </div>
-            <button className="clickable">{t.planThree.cta}</button>
+            <a
+              href="https://buy.stripe.com/14k9Ebc5k7s3aXu5kn"
+              className="checkoutButton clickable"
+              target="_blank"
+            >
+              {t.planThree.cta}
+            </a>
           </div>
           <div className="servicesPlansAndPrices">
             <div className="servicesPlansAndPricesContent">
@@ -185,7 +211,13 @@ const Services = () => {
                 ))}
               </ul>
             </div>
-            <button className="clickable">{t.planFour.cta}</button>
+            <a
+              href="https://buy.stripe.com/5kA2bJ1qG3bNfdK8wA"
+              target="_blank"
+              className="checkoutButton clickable"
+            >
+              {t.planFour.cta}
+            </a>
           </div>
         </div>
       </section>
@@ -232,7 +264,9 @@ const Services = () => {
               <img src={i.icons.arrow} />
             </div>
             <div className="servicesContactButton">
-              <Link to={paths.contactUs}><u>{t.contactLink}</u></Link>
+              <Link to={paths.contactUs}>
+                <u>{t.contactLink}</u>
+              </Link>
               <img src={i.icons.arrow} />
             </div>
           </div>

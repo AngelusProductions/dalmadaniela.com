@@ -19,7 +19,8 @@
 
             .servicesSectionLeft,
             .servicesSectionRight {
-                width: 80%;
+                display: flex;
+                width: 90%;
             }
 
             .servicesSectionLeft {
@@ -137,7 +138,7 @@
                         }
                     }
 
-                    button {
+                    a.checkoutButton {
                         font-size: 3vw;
                         padding: 2.5%;
                         width: fit-content;

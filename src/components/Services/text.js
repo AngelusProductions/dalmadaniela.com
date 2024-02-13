@@ -108,14 +108,14 @@ export default {
     title: "Digital Acceleration Program",
     price: "$3000",
     description:
-      "The Digital Success Program empowers solopreneurs with all the elements they need to accelerate their online success and generate more revenue:",
+      "This program empowers solopreneurs with all the elements they need to accelerate their online success and generate more revenue:",
     bullets: [
       "Comprehensive Brand Manual",
       "Digital strategy and social media content calendar ready to implement",
       "Done-for-you social media graphics and videos created with your branding so you can replicate on your own",
       "1:1 guidance and personalized feedback from start to finish",
     ],
-    cta: "Accelerate your online success",
+    cta: "Accelerate your success",
   },
 
   testimonialsTitle: "Testimonials",
