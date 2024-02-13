@@ -231,12 +231,11 @@ const Home = () => {
           <p id="teachYouTeachYouText">
             <span>{t.classTeach1}</span>
             <span>{t.classTeach2}</span>
-            <span>{t.classTeach3}</span>
           </p>
-          <p id="teachYouClassName">{t.className}</p>
+          {/* <p id="teachYouClassName">{t.className}</p> */}
           <Link
             id="teachYouClassCta"
-            to={paths.superClass.page}
+            to={paths.services}
             className="clickable"
           >
             {t.classCta}

@@ -36,9 +36,8 @@ export default {
 
   testimonialsTitle: "Testimonials",
 
-  classTeach1: "And now,",
-  classTeach2: "we're going to",
-  classTeach3: "teach you:",
+  classTeach1: "And now it's time to",
+  classTeach2: "serve you",
   className: "How to be successful on social media without having to go viral",
-  classCta: "Get SuperClass",
+  classCta: "Digital Marketing Services",
 };

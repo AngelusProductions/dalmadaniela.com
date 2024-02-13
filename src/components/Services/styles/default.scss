@@ -1,6 +1,53 @@
 @import '../../colors.scss';
 
 #servicesPage {
+    .servicesSection {
+        display: flex;
+
+        label {
+            text-transform: uppercase;
+            font-family: "Garet";
+            font-size: 1.5vw;
+        }
+
+        h2 {
+            font-family: "Garbata";
+            font-size: 3.7vw;
+            margin-top: 1%;
+        }
+
+        p {
+            font-size: 1.5vw;
+            font-family: "Garet";
+            margin-top: 5%;
+        }
+
+        .servicesSectionLeft,
+        .servicesSectionRight {
+            width: 50%;
+            padding: 5%;
+        }
+
+        .servicesSectionLeft {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                max-width: 500px;
+                margin: auto;
+            }
+        }
+
+        .servicesSectionRight {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-right: 10%;
+        }
+    }
+
     section#servicesTitleSection {
         display: flex;
 
@@ -8,10 +55,10 @@
             width: 33%;
             display: flex;
             flex-direction: column;
-            padding: 5% 0 5% 10%;
+            padding: 10% 0 5% 10%;
 
             h1 {
-                font-size: 3.4vw;
+                font-size: 3.5vw;
             }
 
             p {
@@ -49,14 +96,255 @@
         }
     }
 
-    section#servicesBrandSection {
+    section#servicesBrandSection {}
+
+    section#servicesDigitalSection {
+        #servicesDigitalLeft {
+            img {
+                margin-top: 20%;
+            }
+        }
+    }
+
+    section#servicesAccelerationSection {
+        #servicesAccelerationLeft {
+            img {
+                margin-top: 15%;
+            }
+        }
+    }
+
+    section#servicesPlanSection {
+        padding: 5% 10%;
+
+        h3 {
+            font-family: "Garbata";
+            font-size: 2vw;
+        }
+
+        ul#servicesPlanBulletList {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5%;
+
+            li.servicesPlanBullet {
+                font-family: "Garbata";
+                font-size: 1.6vw;
+                font-weight: 300;
+                margin-bottom: 5%;
+                display: flex;
+                align-items: center;
+                width: 85%;
+
+                &:nth-of-type(1) {
+                    margin-bottom: 1%;
+                }
+
+                img {
+                    width: 2.5vw;
+                    height: 2.5vw;
+                    margin-right: 1vw;
+                }
+            }
+
+            ul#servicesPlanBulletOneList {
+                display: flex;
+                flex-direction: column;
+                margin-left: 5%;
+                margin-bottom: 5%;
+
+                li {
+                    font-family: "Garet";
+                    font-size: 1.2vw;
+                }
+            }
+        }
+    }
+
+    section#servicesPlansAndPricesSection {
+        padding: 0% 10% 10%;
+
+        h3 {
+            font-family: "Garbata";
+            font-size: 2.5vw;
+            margin-left: -5%;
+            margin-bottom: 2%;
+        }
+
+        div#servicesPlansAndPricesContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .servicesPlansAndPrices {
+                position: relative;
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .servicesPlansAndPricesContent {
+                    h4 {
+                        font-family: "Garbata";
+                        font-size: 1.5vw;
+                        margin-top: 5%;
+                    }
+
+                    label {
+                        color: $green;
+                        font-family: "Garet";
+                        text-align: right;
+                        display: block;
+                        font-size: 1vw;
+                        position: absolute;
+                        right: 20%;
+                        top: 9%;
+                    }
+
+                    p {
+                        font-family: "Garet";
+                        font-size: 1vw;
+                        width: 75%;
+                        margin: 10% 0 5%;
+                    }
+
+                    ul.servicesPlansAndPricesList {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 5%;
+
+                        li.servicesPlansAndPricesItem {
+                            list-style: disc;
+                            font-family: "Garet";
+                            font-size: 1vw;
+                            margin-bottom: 0%;
+                            margin-left: 5%;
+                            width: 75%;
+                        }
+                    }
+                }
+
+                a.checkoutButton {
+                    background: $green;
+                    color: white;
+                    padding: 5%;
+                    font-family: "Garbata";
+                    font-weight: 700;
+                    width: 75%;
+                    margin-top: 7%;
+                    cursor: pointer;
+                    font-size: 1.1vw;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    #servicesAlexTestimonial {
+        margin-bottom: 5%;
+    }
+
+    .servicesTestimonial {
+        margin-bottom: 10%;
+
+        .left {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-left: 10%;
+        }
+
+        p {
+            font-size: 1.8vw;
+            font-family: "Garbata";
+            font-style: italic;
+            width: 72%;
+            margin-bottom: 10%;
+        }
+
+        .right {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 40%;
+        }
+
+        .testimonialLabel {
+            display: flex;
+            flex-direction: column;
+            font-size: 2vw;
+            font-family: "Garbata";
+            font-weight: 700;
+            font-style: italic;
+            color: $green;
+        }
+
+        img.testimonialPhone {
+            width: 50%;
+        }
+    }
+
+    section#servicesContactSection {
         display: flex;
 
-        div#servicesBrandLeft {
-            width: 33%;
+        div#servicesContactLeft {
+            width: 50%;
+            padding: 5%;
+
+            h4 {
+                font-family: "Garbata";
+                font-size: 2.5vw;
+                margin-bottom: 5%;
+            }
+
+            h3 {
+                font-family: "Garbata";
+                font-size: 5vw;
+
+                &:nth-of-type(2) {
+                    margin-bottom: 5%;
+                }
+            }
+
+            p#servicesContactDescription {
+                font-family: "Garet";
+                font-size: 1.5vw;
+                margin-bottom: 5%;
+            }
+
+            p#servicesContactTagline {
+                font-family: "Garbata";
+                font-size: 3vw;
+                font-weight: 300;
+                margin-bottom: 5%;
+                color: $green;
+            }
+
+            div.servicesContactButton {
+                font-family: "Garet";
+                border-radius: 25px;
+                font-size: 1.5vw;
+                background: none;
+                border: 1px solid black;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: 2.5%;
+                margin-bottom: 2.5%;
+                align-items: center;
+
+                img {
+                    width: 1vw;
+                }
+            }
+        }
+
+        div#servicesContactRight {
+            width: 50%;
+            display: flex;
 
             img {
-                width: 100%;
+                width: 90%;
+                margin: auto auto auto 0;
             }
         }
     }
