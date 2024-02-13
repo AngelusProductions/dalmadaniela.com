@@ -98,7 +98,7 @@ const Home = () => {
             ))}
           </div>
           <h4>
-            <Link to={paths.superClass.page}>{t.brandsFigures}</Link>
+            <Link to={paths.services}>{t.brandsFigures}</Link>
           </h4>
         </div>
       </section>
