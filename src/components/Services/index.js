@@ -254,7 +254,7 @@ const Services = () => {
       </section>
       <section id="servicesContactSection">
         <div id="servicesContactLeft">
-          <h4>{t.contactTitle1}</h4>
+          {/* <h4>{t.contactTitle1}</h4> */}
           <h3>{t.contactTitle2}</h3>
           <h3>{t.contactTitle3}</h3>
           <p id="servicesContactDescription">{t.contactDescription}</p>
