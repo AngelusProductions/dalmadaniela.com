@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import MuxPlayer from "@mux/mux-player-react";
 
@@ -13,6 +13,11 @@ import "./styles/index.scss";
 
 const Services = () => {
   const plansAndPricesRef = useRef()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+  }, []);
+  
   return (
     <main id="servicesPage">
       {/* <HomeIcon text pink /> */}
