@@ -49,6 +49,15 @@ export const i = {
     youtube: `${bucketPrefix}/icons/youtube.svg`,
   },
   logos: {
+    setCollaborated: {
+      avenida: `${bucketPrefix}/logos/avenida.jpeg`,
+      forty4Blue: `${bucketPrefix}/logos/44Blue.jpeg`,
+      cambur: `${bucketPrefix}/logos/cambur.jpeg`,
+      skinflint: `${bucketPrefix}/logos/skinflint.jpeg`,
+      speak: `${bucketPrefix}/logos/speak.jpeg`,
+      everpost: `${bucketPrefix}/logos/everpost.jpeg`,
+      abogados: `${bucketPrefix}/logos/abogados.jpeg`,
+    },
     brandsHelped: {
       iVisa: `${bucketPrefix}/logos/iVisa.png`,
       fridays: `${bucketPrefix}/logos/fridays.png`,

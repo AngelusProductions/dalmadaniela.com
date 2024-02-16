@@ -120,6 +120,18 @@ const Home = () => {
           <img id="bioRedSweater" src={i.dalma.redSweater2} />
         </div>
       </section>
+      <div id="onSetCollaborated">
+        <h3>{t.onSetCollaborated}</h3>
+        <div id="onSetCollaboratedContainer">
+          {Object.keys(i.logos.setCollaborated).map((key) => (
+            <img
+              key={key}
+              src={i.logos.setCollaborated[key]}
+              className="setCollaborated brandLogo"
+            />
+          ))}
+        </div>
+      </div>
       <section id="music" className="homeSection">
         <div id="musicLeft">
           <h2>{t.musicTitle}</h2>
@@ -233,11 +245,7 @@ const Home = () => {
             <span>{t.classTeach2}</span>
           </p>
           {/* <p id="teachYouClassName">{t.className}</p> */}
-          <Link
-            id="teachYouClassCta"
-            to={paths.services}
-            className="clickable"
-          >
+          <Link id="teachYouClassCta" to={paths.services} className="clickable">
             {t.classCta}
           </Link>
         </div>

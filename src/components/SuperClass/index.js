@@ -6,6 +6,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import "animate.css/animate.min.css"
 
 import t from './text'
+import { paths } from '../../constants/paths'
 import { i } from '../../constants/data/assets'
 import testimonials from '../../constants/data/testimonials'
 
@@ -33,7 +34,7 @@ const SuperClass = () => {
           volume={1}
         />
       
-      <a href={t.samcartUrl} id='superClassCta1' className='clickable' target="_blank">{t.cta1}</a>
+      <a href={paths.superClass.login} id='superClassCta1' className='clickable'>{t.cta1}</a>
 
       <ul id='superClassFeaturesList'>
         {t.superClassFeatureBullets.map(({ title, body }, index) => (
@@ -79,7 +80,7 @@ const SuperClass = () => {
         </div>
       </div>
 
-      <a href={t.samcartUrl} id='superClassCta2' className='clickable' target="_blank">{t.cta2}</a>
+      <a href={paths.superClass.login} id='superClassCta2' className='clickable'>{t.cta2}</a>
 
       {/* <button id='superClassCta2' className='clickable' onClick={scrollToCheckout}>
         <span>{t.cta2Three}</span>

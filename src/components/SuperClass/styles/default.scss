@@ -58,11 +58,11 @@ main#superClassPage {
     }
 
     a {
-        background: $black;
-        color: $yellow;
+        background: $green;
+        color: $white;
         font-family: "Garbata";
         font-weight: 600;
-        width: 35%;
+        width: 25%;
         margin: 5% auto;
         padding: 2%;
         padding-top: 1.4%;
@@ -70,7 +70,7 @@ main#superClassPage {
         text-align: center;
 
         &#superClassCta2 {
-            width: 67%;
+            width: 25%;
         }
         
         &:hover {

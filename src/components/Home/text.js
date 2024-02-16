@@ -2,17 +2,17 @@ export default {
   angelusProductions: "Angelus Productions LLC ®",
 
   title: "dalmadaniela.com",
-  titleTagline:
-    "Crafting Impact: Elevating Brands and Films Through Unbordered Creativity",
+  titleTagline: "Elevating Brands and Films Through Unbordered Creativity",
   titleDescription:
     "In the limelight or behind the screen, Dalma Llinás' journey unfolds. Navigating the intersection of art and digital prowess, she crafts impactful narratives. Yes, she has boosted conversions, but her legacy lies in shifting perceptions. Brands aren't mere logos; like the characters she brings to life, they have stories waiting to be told. So, welcome aboard— where creativity meets purpose.",
   titletitle: "Dalma Llinas, Founder & CMO.",
 
-  bioTitle: "As an actress and producer",
+  bioTitle: "As an actress and bilingual host",
   bioText1:
-    "Dalma's charisma and resilience serve as two of her most significant strengths. As an actress based in Los Angeles, the lead roles she plays are temperamental and unafraid to stand up for what they believe in. As a supporting actress, she enjoys portraying characters who transform their pain into growth, moving the plot forward.",
-  bioText2: "For bookings, you can email dalma@dalmadaniela.com.",
+    "Dalma's charisma and resilience serve as two of her most significant strengths. As an actress based in Los Angeles, the lead roles she plays are temperamental and unafraid to stand up for what they believe in. As a supporting actress, she enjoys portraying characters who transform their pain into growth, moving the plot forward. Dalma is also a bilingual host who exudes warmth and professionalism. Her excellent command of English and Spanish makes her a go-to choice for corporate educational videos.",
+  bioText2: "For booking inquiries, you can email dalma@dalmadaniela.com.",
   bioButton: "Watch Reel",
+  onSetCollaborated: "On Set Collaborations:",
 
   musicTitle: "As a singer and cultural advocate",
   musicText:

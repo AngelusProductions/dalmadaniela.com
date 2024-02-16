@@ -60,6 +60,7 @@ section#landing {
     display: flex;
     background: white;
     overflow: unset !important;
+    height: fit-content !important;
 
     .left {
         #dalmadanielaTitle {
@@ -71,6 +72,7 @@ section#landing {
             height: 100%;
             width: 67%;
             margin: auto;
+            margin-top: 38%;
 
             .animate__animated {
                 display: flex;
@@ -116,6 +118,11 @@ section#landing {
     }
 
     .right {
+        img {
+            max-height: 100vh;
+            object-position: top;
+        }
+
         #dalmaTitle {
             font-family: "Garet";
             text-align: center;
@@ -145,7 +152,7 @@ section#bio {
         p {
             font-family: "Garet";
             font-weight: 300;
-            font-size: 1.8vw;
+            font-size: 1.6vw;
             margin-top: 3vh;
         }
 
@@ -164,11 +171,28 @@ section#bio {
 
     div#bioRight {
         display: flex;
+        justify-content: center;
+        padding-left: 3%;
+
+        img {
+            width: 50%;
+            height: max-content;
+        }
+    }
+}
+
+div#onSetCollaborated {
+    h3 {
+        font-size: 1.8vw;
+    }
+
+    div#onSetCollaboratedContainer {
+        display: flex;
+        align-items: center;
         justify-content: space-evenly;
 
         img {
-            width: 33%;
-            height: max-content;
+            width: 12%;
         }
     }
 }
@@ -196,7 +220,7 @@ section#music {
         p {
             font-family: "Garet";
             font-weight: 300;
-            font-size: 1.8vw;
+            font-size: 1.6vw;
             margin-top: 3vh;
         }
 
