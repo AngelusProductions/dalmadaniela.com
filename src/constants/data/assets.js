@@ -59,7 +59,7 @@ export const i = {
       abogados: `${bucketPrefix}/logos/abogados.jpeg`,
     },
     brandsHelped: {
-      iVisa: `${bucketPrefix}/logos/iVisa.png`,
+      iVisa: `${bucketPrefix}/logos/iVisa.jpeg`,
       fridays: `${bucketPrefix}/logos/fridays.png`,
       mamb: `${bucketPrefix}/logos/mamb.png`,
       it49: `${bucketPrefix}/logos/it49.png`,
