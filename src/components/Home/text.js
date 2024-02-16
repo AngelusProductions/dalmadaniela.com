@@ -2,7 +2,7 @@ export default {
   angelusProductions: "Angelus Productions LLC ®",
 
   title: "dalmadaniela.com",
-  titleTagline: "Elevating Brands and Films Through Unbordered Creativity",
+  titleTagline: "Elevating Brands and Film Through Unbordered Creativity",
   titleDescription:
     "In the limelight or behind the screen, Dalma Llinás' journey unfolds. Navigating the intersection of art and digital prowess, she crafts impactful narratives. Yes, she has boosted conversions, but her legacy lies in shifting perceptions. Brands aren't mere logos; like the characters she brings to life, they have stories waiting to be told. So, welcome aboard— where creativity meets purpose.",
   titletitle: "Dalma Llinas, Founder & CMO.",
