@@ -51,7 +51,7 @@ const Home = () => {
             src={i.dalma.redSweater1}
             alt={t.title}
           />
-          <p id="dalmaTitle">{t.titletitle}</p>
+          {/* <p id="dalmaTitle">{t.titletitle}</p> */}
         </div>
       </section>
       <section id="brands" className="homeSection">

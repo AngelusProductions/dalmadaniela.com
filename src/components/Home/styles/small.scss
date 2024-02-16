@@ -85,6 +85,7 @@
 
     section#bio {
         flex-direction: column;
+        margin-top: 0 !important;
 
         .right {
             display: none;
@@ -102,6 +103,7 @@
                 font-size: 6vw !important;
                 margin-bottom: 5vw !important;
                 width: 71%;
+                padding-top: 0 !important;
             }
 
             p {
@@ -116,6 +118,7 @@
         div#bioRight {
             flex-direction: column;
             align-items: center;
+            transform: unset !important;
 
             img {
                 width: 75% !important;
