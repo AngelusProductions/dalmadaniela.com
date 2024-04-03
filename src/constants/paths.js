@@ -24,6 +24,7 @@ export const paths = {
   team: '/team',
   contactUs: '/contact-us',
   services: '/services',
+  acting: '/acting',
   auth: {
     login: '/auth/login',
     signup: '/auth/signup'

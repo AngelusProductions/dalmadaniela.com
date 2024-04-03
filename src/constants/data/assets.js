@@ -11,6 +11,7 @@ export const i = {
     pointingUp: `${bucketPrefix}/dalma/pointingUp.png`,
     iVisaPhoto: `${bucketPrefix}/dalma/iVisaPhoto.JPG`,
     brownBackground: `${bucketPrefix}/dalma/brownBackground.jpeg`,
+    brownBackground2: `${bucketPrefix}/dalma/brownBackground2.jpeg`,
     redSweater1: `${bucketPrefix}/dalma/redSweater1.webp`,
     redSweater2: `${bucketPrefix}/dalma/redSweater2.webp`,
   },
@@ -208,7 +209,8 @@ export const i = {
     garettHeadshot: `${bucketPrefix}/testimonials/garettHeadshot.jpg`,
   },
   videos: {
-    lightbulbConstruction: `${bucketPrefix}/videos/lightbulbConstruction.gif`,
     emojiBlast: `${bucketPrefix}/videos/emojiBlast.mp4`,
+    lightbulbConstruction: `${bucketPrefix}/videos/lightbulbConstruction.gif`,
+    reelArcShoot: `${bucketPrefix}/videos/1.%20DALMA%20DANIELA%20-%20DRAMATIC%20REEL.mov`,
   },
 };

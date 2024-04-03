@@ -178,6 +178,10 @@ section#bio {
             width: 43%;
             height: max-content;
         }
+
+        #bioRightVideo {
+            margin: 5%;
+        }
     }
 }
 
@@ -371,17 +375,24 @@ section#brands {
 
     #brandsFeatured h4 {
         margin: 4vh auto 0 auto;
-        font-size: 1.2vw;
+        font-size: 2vw;
         font-family: 'Hatton';
-
+        
         a:hover {
             text-decoration: underline;
+            color: $green;
         }
     }
 
     .brandsSection {
         margin-top: 2.5%;
         margin-bottom: 0;
+    }
+}
+
+#onSetCollaborated {
+    img:nth-child(1) {
+        margin-right: -3%;
     }
 }
 

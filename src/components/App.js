@@ -21,6 +21,7 @@ import CreateBlogPost from './Blog/CreateBlogPost'
 import Team from './Team'
 import ContactUs from './ContactUs'
 import Services from './Services'
+import Acting from './Acting'
 
 import Signup from './Auth/Signup'
 import Login from './Auth/Login'
@@ -60,6 +61,7 @@ const App = ({ currentUser, onBoot }) => {
       <Route path={paths.team} element={<Team />} />
       <Route path={paths.contactUs} element={<ContactUs />} />
       <Route path={paths.services} element={<Services />} />
+      <Route path={paths.acting} element={<Acting />} />
 
       <Route path={paths.auth.login} element={<Login />} />
       <Route path={paths.auth.signup} element={<Signup />} />

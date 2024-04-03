@@ -3,29 +3,35 @@ export default {
 
   title: "dalmadaniela.com",
   titleTagline: "Elevating Brands and Film Through Unbordered Creativity",
-  titleDescription:
-    "In the limelight or behind the screen, Dalma Llinás' journey unfolds. Navigating the intersection of art and digital prowess, she crafts impactful narratives. Yes, she has boosted conversions, but her legacy lies in shifting perceptions. Brands aren't mere logos; like the characters she brings to life, they have stories waiting to be told. So, welcome aboard— where creativity meets purpose.",
+  titleDescription1:
+    "In front or behind the screen, Dalma's journey unfolds. Navigating the intersection of acting and digital prowess, she crafts impactful narratives.",
+  titleDescription2:
+    "She has boosted conversions, but her legacy lies in shifting perceptions. Brands aren't just logos; like the roles she brings to life, they have stories waiting to be told.",
+  titleDescription3:
+    "So welcome aboard— where artistry meets mindful marketing!",
   titletitle: "Dalma Llinas, Founder & CMO.",
 
-  bioTitle: "As an actress and bilingual host",
+  bioTitle: "As an actress in Los Angeles",
   bioText1:
-    "Dalma's charisma and resilience serve as two of her most significant strengths. As an actress based in Los Angeles, the lead roles she plays are temperamental and unafraid to stand up for what they believe in. As a supporting actress, she enjoys portraying characters who transform their pain into growth, moving the plot forward. Dalma is also a bilingual host who exudes warmth and professionalism. Her excellent command of English and Spanish makes her a go-to choice for corporate educational videos.",
-  bioText2: "For booking inquiries, you can email dalma@dalmadaniela.com.",
+    "Dalma's charisma and resilience serve as two of her most significant strengths. The lead roles she plays are temperamental and unafraid to stand up for what they believe in. She enjoys portraying transformational supports that move the plot forward.",
+  bioText2:
+    "As a host, Dalma exudes warmth and professionalism. Her excellent command of English and Spanish makes her the perfect choice for commercial/educational videos.",
+  bioText3: "For bookings, email dalma@dalmadaniela.com.",
   bioButton: "Watch Reel",
-  onSetCollaborated: "On Set Collaborations:",
+  onSetCollaborated: "Some Recent Collaborations:",
 
   musicTitle: "As a singer and cultural advocate",
   musicText:
-    "She combines her passion for music and pop culture. As a rock singer born in Colombia, she's collaborated with renowned DJs and released original songs with millions of views. As a cultural manager, she created the acoustic rock movement called “Acústico Barranquilla.” She promoted bilingualism through music and supported the LGBTQ community in her hometown through various projects and events. Dalma uses her voice to inspire and empower others.",
+    "Blending her love for music and pop culture, she, a rock singer hailing from Colombia, has partnered with well-known DJs and shared original songs garnering millions of views. In her role as a cultural manager, she pioneered the acoustic rock movement known as “Acústico Barranquilla.” She advocated for bilingualism through music and championed the LGBTQ community in her local area by initiating diverse projects and events, always leveraging the power of social media.",
   musicButton: "Listen to Her Latest Single",
 
-  brandsHelped: "Brands transformed by Dalma across the globe:",
-  brandsCollaborated: "Brands we've joined forces with on social:",
+  brandsHelped: "Brands transformed by Dalma's work across the globe:",
+  brandsCollaborated: "Brands we've collaborated with on social:",
   brandsFeatured: "As featured in:",
   brandsFigures:
-    "Over 7 figures in revenue made for brands in the US and Latin America.",
+    "Over 7 figures in revenue generated across the US and Latin America!",
 
-  filmsTitle: "As an actress and producer",
+  filmsTitle: "As an actress in Los Angeles",
   filmsText:
     "Dalma has used her social media influence to promote the projects that have cast her as an actress and launched successful crowdfunding campaigns that have funded the entire pre and post production of her latest feature film.",
   limeAndVinegarCaption: "Lime and Vinegar, directed by Evan Snyder",

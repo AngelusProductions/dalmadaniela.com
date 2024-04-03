@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import MuxPlayer from "@mux/mux-player-react";
 import "animate.css/animate.min.css";
 
 import FAQ from "./FAQ";
@@ -42,16 +43,13 @@ const Home = () => {
         <div className="left">
           <div id="dalmadanielaTitle">
             <h1>{t.titleTagline}</h1>
-            <p>{t.titleDescription}</p>
+            <p>{t.titleDescription1}</p>
+            <p>{t.titleDescription2}</p>
+            <p>{t.titleDescription3}</p>
           </div>
         </div>
         <div className="right">
-          <img
-            className="halfSection"
-            src={i.dalma.redSweater1}
-            alt={t.title}
-          />
-          {/* <p id="dalmaTitle">{t.titletitle}</p> */}
+          <img src={i.dalma.redSweater2} alt={t.title} />
         </div>
       </section>
       <section id="brands" className="homeSection">
@@ -107,17 +105,18 @@ const Home = () => {
           <h2>{t.bioTitle}</h2>
           <p>{t.bioText1}</p>
           <p>{t.bioText2}</p>
-          <a
-            target="_blank"
-            className="clickable"
-            href="https://www.imdb.com/name/nm12559836/"
-          >
-            {t.bioButton}
-          </a>
+          <p>{t.bioText3}</p>
         </div>
         <div id="bioRight">
-          <img id="bioBrownBackground" src={i.dalma.brownBackground} />
-          <img id="bioRedSweater" src={i.dalma.redSweater2} />
+          <MuxPlayer
+            id="bioRightVideo"
+            streamType="on-demand"
+            playbackId="aNCR3LSdzqNhairwa2yBItbsme2yPOsYp33JDRgUhXY"
+            metadataVideoTitle="Dalma's Reel"
+            metadataViewerUserId="dalmadaniela.com"
+            primaryColor="#FFFFFF"
+            secondaryColor="#000000"
+          />
         </div>
       </section>
       <div id="onSetCollaborated">
