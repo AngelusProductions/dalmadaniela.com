@@ -18,6 +18,19 @@ export const i = {
   films: {
     limeAndVinegar: `${bucketPrefix}/films/limeAndVinegar.png`,
     theSovereign: `${bucketPrefix}/films/theSovereign.png`,
+    deadPower: `${bucketPrefix}/films/deadPower.webp`,
+  },
+  acting: {
+    celebMixCover: `${bucketPrefix}/acting/celebMixCover.webp`,
+    evan: `${bucketPrefix}/acting/evan.webp`,
+    farah: `${bucketPrefix}/acting/farah.webp`,
+    flanelleCover: `${bucketPrefix}/acting/flanelleCover.webp`,
+    headshot1: `${bucketPrefix}/acting/headshot1.webp`,
+    headshot2: `${bucketPrefix}/acting/headshot2.jpeg`,
+    headshot3: `${bucketPrefix}/acting/headshot3.jpeg`,
+    headshot4: `${bucketPrefix}/acting/headshot4.webp`,
+    newYorkWeeklyCover: `${bucketPrefix}/acting/newYorkWeeklyCover.webp`,
+    resume: `${bucketPrefix}/acting/resume.webp`,
   },
   icons: {
     add: `${bucketPrefix}/icons/add.png`,

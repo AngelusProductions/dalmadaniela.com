@@ -66,6 +66,22 @@ const Acting = () => {
           </div>
         </div>
       </section>
+      <section id="actingEducation" className="actingSection">
+        <div id="actingEducationLeft">
+          <h1>{t.educationTitle}</h1>
+          <h2>{t.educationSubtitle}</h2>
+        </div>
+        <div id="actingEducationRight">
+          <h3>{t.educationClassesTitle}</h3>
+          {t.educationClasses.map((c, i) => (
+            <div key={i} className="actingEducationRightClass">
+              <p>{c.type}</p>
+              <p>{c.title}</p>
+              <p>{c.location}</p>
+            </div>
+          ))}
+        </div>
+      </section>
     </main>
   );
 };
