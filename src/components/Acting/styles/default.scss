@@ -6,8 +6,11 @@ main#actingPage {
     h2,
     h3,
     h4,
+    h5,
+    h6,
     p,
     a,
+    b,
     span {
         font-family: "Garet";
     }
@@ -144,6 +147,10 @@ main#actingPage {
             }
         }
 
+        h3 {
+            margin-bottom: 1vw;
+        }
+
         div#actingEducationRight {
             width: 60%;
             display: inline-block;
@@ -152,10 +159,6 @@ main#actingPage {
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 1vw;
-
-                h3 {
-                    margin-bottom: 1vw
-                }
 
                 p {
                     font-size: 1.2vw;
@@ -174,5 +177,239 @@ main#actingPage {
                 }
             }
         }
+    }
+
+    section#actingResume {
+        padding: 0% 10%;
+        display: flex;
+
+        div#actingResumeLeft {
+            h1 {
+                width: 87%;
+                font-size: 3.5vw;
+                margin-bottom: 2vw;
+            }
+
+            h2 {
+                font-size: 1.2vw;
+                font-weight: 400;
+                width: 90%;
+            }
+        }
+
+        div#actingResumeRight {
+            width: 200%;
+            display: inline-block;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    section#actingHosting {
+        padding: 5% 10%;
+        display: flex;
+        background: black;
+        color: white;
+
+        div#actingHostingLeft {
+            width: 40%;
+            padding-top: 5%;
+
+            h1 {
+                width: 87%;
+                font-size: 3.5vw;
+                margin-bottom: 2vw;
+            }
+
+            h2 {
+                font-size: 1.2vw;
+                font-weight: 400;
+                width: 90%;
+            }
+        }
+
+        div#actingHostingRight {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    section#actingFilms {
+        padding: 0% 10% 5%;
+        background: black;
+        color: white;
+
+        h1 {
+            font-size: 6vw;
+            margin-bottom: 3vw;
+            text-align: right;
+        }
+
+        div#actingFilmsBottom {
+            display: flex;
+            justify-content: space-between;
+
+            div.actingFilmsBottomFilm {
+                width: 30%;
+                display: inline-block;
+
+                h3 {
+                    font-size: 1.5vw;
+                    margin-bottom: 1vw;
+                    font-weight: 400;
+                }
+
+                img {
+                    height: 30vw;
+                }
+
+                p {
+                    font-size: 1.2vw;
+                    margin-top: 1vw;
+                }
+            }
+        }
+    }
+
+    section#actingTestimonials {
+        padding: 5% 10%;
+
+        h1 {
+            font-size: 3.5vw;
+            margin-bottom: 3vw;
+        }
+
+        div#actingTestimonialsBottom {
+            display: flex;
+            justify-content: space-between;
+
+            div.actingTestimonial {
+                display: inline-flex;
+                width: 50%;
+
+                img {
+                    width: 33%;
+                }
+
+                .actingTestimonialTextContainer {
+                    padding: 0 5%;
+                    font-size: 1.2vw;
+
+                    i {
+                        margin-left: 0.25vw;
+                    }
+
+                    p {
+                        font-size: 1.2vw;
+                    }
+
+                    p:nth-of-type(1) {
+                        font-size: 1.2vw;
+                        margin-bottom: 1vw;
+                    }
+                }
+            }
+        }
+    }
+
+    section#actingPress {
+        padding: 5% 10%;
+        background: black;
+        color: white;
+
+        h1 {
+            font-size: 3.5vw;
+            margin-bottom: 3vw;
+        }
+
+        div#actingPressBottom {
+            display: flex;
+            justify-content: space-between;
+
+            div.actingPress {
+                display: inline-flex;
+                width: 30%;
+                flex-direction: column;
+                justify-content: space-between;
+
+                div.actingPressTop {
+                    display: flex;
+                    flex-direction: column;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    p.actingPressTitle {
+                        text-transform: uppercase;
+                        margin-top: 0.5vw;
+                    }
+
+                    b.actingPressPublication {
+                        margin: 2.5% 0;
+                    }
+                }
+
+                a {
+                    padding: 5%;
+                    border: solid;
+                    width: fit-content;
+                    text-decoration: underline;
+                    margin-top: 10%;
+                }
+            }
+        }
+    }
+
+    section#actingContact {
+        background: black;
+        color: white;
+
+        div#actingContactTop {
+            padding: 5%;
+            display: flex;
+            justify-content: space-between;
+
+            img {
+                width: 23%;
+            }
+        }
+
+        div#actingContactBottom {
+            display: flex;
+            border: solid;
+            margin: 0 5%;
+            border-bottom: none;
+
+            div#actingContactBottomLeft {
+                width: 100%;
+
+                h1 {
+                    font-size: 8vw;
+                    margin-left: 5%;
+                }
+            }
+
+            div#actingContactBottomRight {
+                padding: 5%;
+                width: 50%;
+
+                h5 {
+                    font-size: 1.2vw;
+                    margin-bottom: 1vw;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-size: 1.2vw;
+                }
+            }
+        }
+
     }
 }

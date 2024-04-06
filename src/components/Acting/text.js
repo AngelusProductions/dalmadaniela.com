@@ -6,17 +6,17 @@ export default {
   title3: "Actress",
   subtitle: "Portfolio",
 
-  landingTitle: "New and Different: Dalma and the Roles That Redefine",
+  landingTitle: "New and Different: Dalma and Roles That Redefine",
   landingSubtitle:
-    "As an actress based in Los Angeles, Dalma's artistic goal is shifting perceptions. The lead roles she plays are transformative and unafraid to shake things up a bit! She also thrives at playing diverse and temperamental supports that move the story forward.",
+    "As an actress in Los Angeles, Dalma's goal is shifting perceptions. The lead roles she plays are bold and unafraid to shake things up a bit! She also thrives at playing diverse and transformative supports that move the story forward.",
   landingVideoSubtitle: "HUMAN RESOURCES (2024)",
 
   bioTitle1: "BIO",
   bioSubtitle1:
-    "Dalma Daniela is the perfect example of artistic bravery and diversity. Her Colombian roots and Los Angeles flair bring to life characters that are as complex as they are captivating. Her perspectives defy convention, creating a symphony of roles that resonate with strength and authenticity. Dalma’s commitment to cultural dialogue and representation shines through her work, making her a promise of inclusion in the arts. Drawing inspiration from the stars of music and the screen, Dalma Daniela’s career is a mosaic of impactful performances and soul-stirring melodies.",
+    "Dalma Daniela's Colombian roots and Los Angeles flair bring to life characters that are as flawed as they are redeemable. Her perspectives defy convention, creating performances that resonate with self-improvement and resiliency. Dalma’s commitment to cultural dialogue and representation shines through her work, making her an advocate for real inclusion in the arts. Driven by a professional ethos that embraces hard work, Dalma stands out with her ability to embody bold leads and transformative supports.",
   bioTitle2: "MY APPROACH",
   bioSubtitle2:
-    "My approach to the craft of acting is grounded in the belief that true artistry comes from the heart. Following Meisner’s wisdom, I see acting as an act of self-betrayal, where the raw and real aspects of my persona bleed into my characters. This method, enriched by personal branding and life experiences, allows me to be present—fully and freely.",
+    "My approach to the craft of acting is grounded in the belief that true artistry comes from the heart. Following Meisner’s wisdom, I see acting as an act of self-betrayal, where the raw and real aspects of my persona bleed into my characters. This method, enriched by personal branding and unique life experiences, allows me to be—fully and freely.",
 
   educationTitle: "Education",
   educationSubtitle:
@@ -101,7 +101,9 @@ export default {
     },
   ],
 
-  hostTitle: "Bilingual Hosting Reel",
+  hostTitle: "Bilingual Hosting",
+  hostSubtitle:
+    "As a bilingual host, Dalma exudes warmth and professionalism, making her a go-to choice for commercial and educational projects.",
 
   testimonialsTitle: "Testimonials",
   testimonials: [
@@ -130,6 +132,7 @@ export default {
         "FROM ACTING TO ARTISTRY: THE EVOLVING CAREER OF COLOMBIAN ICON DALMA DANIELA",
       image: i.acting.flanelleCover,
       publication: "Flanelle Magazine",
+      url: "https://flanellemag.com/from-acting-to-artistry-the-evolving-career-of-colombian-icon-dalma-daniela/",
       summary:
         "Explore the multifaceted journey of Dalma Daniela, where acting converges with digital artistry in this enthralling career retrospective.",
     },
@@ -138,6 +141,7 @@ export default {
         "Innovative Approaches to Bilingualism: How Dalma Daniela's Cultural Programs Made a Difference",
       image: i.acting.celebMixCover,
       publication: "Celeb Mix",
+      url: "https://celebmix.com/innovative-approaches-to-bilingualism-how-dalma-danielas-cultural-programs-made-a-difference/#google_vignette",
       summary:
         "Embark on a journey through Dalma Daniela's visionary projects, where her approach to bilingualism in music is making waves across cultures.",
     },
@@ -146,14 +150,15 @@ export default {
         "Unveiling the Multi-Talented Dalma Daniela: A Fusion of Artistry, Entrepreneurship, and Advocacy",
       image: i.acting.newYorkWeeklyCover,
       publication: "New York Weekly",
+      url: "https://nyweekly.com/entertainment/unveiling-the-multi-talented-dalma-daniela-a-fusion-of-artistry-entrepreneurship-and-advocacy/",
       summary:
         "Discover the artistic journey and entrepreneurial spirit of Dalma Daniela, whose multifaceted talents forge a path of advocacy and inspiration in the vibrant world of entertainment.",
     },
   ],
   pressReadMore: "Read more",
 
-  thankYou: "Thank you",
+  contactThankYou: "Thank you",
   contactTitle: "Contact",
   contactName: "Dalma Daniela",
-  contactEmail: "dalma@dalmadaniela.com"
+  contactEmail: "dalma@dalmadaniela.com",
 };
