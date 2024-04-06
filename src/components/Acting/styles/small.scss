@@ -1,5 +1,319 @@
 @import '../../colors.scss';
 
-@media (max-width: 640px) {
-    
+@media (max-width: 840px) {
+
+    main#actingPage {
+        section#actingTitle {
+            video {}
+
+            div#actingTitleText {
+                line-height: 8vw;
+
+                h1 {
+                    font-size: 8vw;
+                }
+
+                h2 {}
+
+                h3 {
+                    font-size: 2.5vw;
+                }
+            }
+        }
+
+        section#actingLanding {
+            flex-direction: column;
+
+            div#actingLandingLeft {
+                width: 100%;
+
+                h1 {
+                    font-size: 9vw;
+                    width: 100%;
+                }
+
+                h2 {
+                    margin-bottom: 5%;
+                    font-size: 3.5vw;
+                    width: 100%;
+                }
+            }
+
+            div#actingLandingRight {
+                width: 100%;
+
+                #actingLandingRightVideo {}
+
+                p {
+                    font-size: 2.5vw;
+                }
+            }
+        }
+
+        section#actingBio {
+            flex-direction: column;
+            padding: 5%;
+
+            div#actingBioLeft {
+                img {
+                    width: 100%;
+                }
+            }
+
+            div#actingBioRight {
+
+                hr {
+                    margin: 5% 0;
+                }
+
+                div.actingBioRightSectionText {
+                    flex-direction: column;
+
+                    h4,
+                    p {}
+
+                    h4 {
+                        font-size: 3.5vw;
+                    }
+
+                    p {
+                        width: 100%;
+                        font-size: 3.5vw;
+                        margin-bottom: 5%;
+                    }
+                }
+
+            }
+        }
+
+        section#actingEducation {
+            flex-direction: column;
+
+            div#actingEducationLeft {
+                width: 100%;
+
+                h1 {
+                    font-size: 9vw;
+                }
+
+                h2 {
+                    width: 100%;
+                    font-size: 3.5vw;
+                    margin-bottom: 10%;
+                }
+            }
+
+            h3 {
+                font-size: 3vw;
+            }
+
+            div#actingEducationRight {
+                width: 100%;
+
+                div.actingEducationRightClass {
+
+                    p {
+                        font-size: 2vw;
+
+                        &:nth-of-type(1) {}
+
+                        &:nth-of-type(2) {}
+
+                        &:nth-of-type(3) {}
+                    }
+                }
+            }
+        }
+
+        section#actingResume {
+            flex-direction: column;
+
+            div#actingResumeLeft {
+                h1 {
+                    font-size: 9vw;
+                }
+
+                h2 {
+                    width: 100%;
+                    font-size: 3.5vw;
+                }
+            }
+
+            div#actingResumeRight {
+                width: 100%;
+
+                img {}
+            }
+        }
+
+        section#actingHosting {
+            flex-direction: column;
+
+            div#actingHostingLeft {
+                width: 100%;
+                padding-top: 0;
+
+                h1 {
+                    width: 100%;
+                    font-size: 9vw;
+                }
+
+                h2 {
+                    width: 100%;
+                    font-size: 3.5vw;
+                    margin-bottom: 10%;
+                }
+            }
+
+            div#actingHostingRight {
+                width: 100%;
+
+                img {}
+            }
+        }
+
+        section#actingFilms {
+
+            h1 {
+                text-align: left;
+                font-size: 9vw;
+                margin-bottom: 5%;
+            }
+
+            div#actingFilmsBottom {
+                flex-direction: column;
+
+                div.actingFilmsBottomFilm {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h3 {
+                        font-size: 3.5vw;
+                    }
+
+                    img {
+                        height: auto;
+                        width: 75%;
+                        margin: auto;
+                    }
+
+                    p {
+                        font-size: 3.5vw;
+                        margin-bottom: 10%;
+                        text-align: center;
+                        margin-top: 5%;
+                    }
+                }
+            }
+        }
+
+        section#actingTestimonials {
+
+            h1 {
+                font-size: 9vw;
+                margin-bottom: 10%;
+            }
+
+            div#actingTestimonialsBottom {
+                flex-direction: column;
+
+                div.actingTestimonial {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10%;
+
+                    img {
+                        width: 50%;
+                        margin: 0 auto 5%;
+                    }
+
+                    .actingTestimonialTextContainer {
+                        font-size: 3.5vw;
+                        text-align: center;
+                        padding: 0;
+
+                        i {}
+
+                        p {
+                            font-size: 3.5vw;
+                        }
+
+                        p:nth-of-type(1) {
+                            font-size: 3.5vw;
+                            margin-bottom: 5%;
+                        }
+                    }
+                }
+            }
+        }
+
+        section#actingPress {
+
+            h1 {
+                font-size: 9vw;
+                margin-bottom: 10%;
+            }
+
+            div#actingPressBottom {
+                flex-direction: column;
+
+                div.actingPress {
+                    width: 100%;
+                    div.actingPressTop {
+                        font-size: 3.5vw;
+                        text-align: center;
+
+                        img {}
+
+                        p.actingPressTitle {
+                            margin-top: 2.5%;
+                        }
+
+                        b.actingPressPublication {}
+                    }
+
+                    a {
+                        font-size: 3.5vw;
+                        margin: 10% auto;
+                    }
+                }
+            }
+        }
+
+        section#actingContact {
+
+            div#actingContactTop {
+                flex-direction: column;
+                img {
+                    width: 75%;
+                    margin: 5% auto;
+                }
+            }
+
+            div#actingContactBottom {
+                flex-direction: column;
+
+                div#actingContactBottomLeft {
+
+                    h1 {
+                        font-size: 12vw;
+                        margin: 5%;
+                    }
+                }
+
+                div#actingContactBottomRight {
+                    h5 {
+                        font-size: 3.5vw;
+                    }
+
+                    p {
+                        font-size: 3.5vw;
+                    }
+                }
+            }
+        }
+    }
 }
