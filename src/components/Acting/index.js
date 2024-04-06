@@ -17,6 +17,7 @@ const Acting = () => {
           autoPlay
           muted
           loop
+          playsInline
           id="actingVideo"
           src={i.videos.reelArcShoot}
         />

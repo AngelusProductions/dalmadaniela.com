@@ -30,7 +30,7 @@ export const i = {
     headshot3: `${bucketPrefix}/acting/headshot3.jpeg`,
     headshot4: `${bucketPrefix}/acting/headshot4.webp`,
     newYorkWeeklyCover: `${bucketPrefix}/acting/newYorkWeeklyCover.webp`,
-    resume: `${bucketPrefix}/acting/resume.jpg`,
+    resume: `${bucketPrefix}/acting/resume.jpeg`,
   },
   icons: {
     add: `${bucketPrefix}/icons/add.png`,

@@ -262,6 +262,7 @@
 
                 div.actingPress {
                     width: 100%;
+
                     div.actingPressTop {
                         font-size: 3.5vw;
                         text-align: center;
@@ -287,9 +288,12 @@
 
             div#actingContactTop {
                 flex-direction: column;
+
                 img {
                     width: 75%;
                     margin: 5% auto;
+                    height: auto;
+                    object-fit: cover;
                 }
             }
 

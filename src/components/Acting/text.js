@@ -69,7 +69,7 @@ export default {
       location: "Colombia",
     },
     {
-      type: "Acting (Theatre, Film & TV)",
+      type: "Acting (Theatre, Film, TV)",
       title: "Albie Birmann",
       location: "Colombia",
     },
