@@ -96,6 +96,15 @@
         }
     }
 
+    section#servicesUgcSection {
+        div#servicesUgcLeft {
+            video#servicesUgcVideo {
+                width: 50%;
+                margin: auto;
+            }
+        }
+    }
+
     section#servicesBrandSection {}
 
     section#servicesDigitalSection {
@@ -166,9 +175,9 @@
 
         h3 {
             font-family: "Garbata";
-            font-size: 2.5vw;
-            margin-left: -5%;
+            font-size: 3.7vw;
             margin-bottom: 2%;
+            text-align: center;
         }
 
         div#servicesPlansAndPricesContainer {
@@ -235,6 +244,92 @@
                     font-size: 1.1vw;
                     text-align: center;
                 }
+            }
+        }
+    }
+
+    section#servicesUgcPackagesSection {
+        display: flex;
+        padding: 0% 10% 10%;
+        justify-content: space-between;
+
+        video#servicesUgcPackagesVideo {
+            width: 30%;
+            border-radius: 50px;
+            padding: 15px;
+            border: 3px solid;
+        }
+
+        div#servicesUgcPackagesRight {
+            transform: translateX(15%);
+
+            ul {
+                margin: 5% 0 14%;
+            }
+        }
+
+        .servicesUgcPackage {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 30%;
+            height: 50%;
+
+            h4 {
+                font-family: "Garbata";
+                font-size: 1.5vw;
+                margin: 25% 0 5%;
+
+                span.servicesUgcTitleNumber {
+                    font-family: 'Hatton';
+                    font-size: 1.3vw;
+                }
+            }
+
+            label {
+                color: $green;
+                font-family: "Garet";
+                text-align: right;
+                display: block;
+                font-size: 1vw;
+                position: absolute;
+                right: 31%;
+                top: 26%;
+            }
+
+            p {
+                font-family: "Garet";
+                font-size: 1vw;
+                margin: 10% 0 5%;
+                width: 75%;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                margin-top: 5%;
+
+                li {
+                    list-style: disc;
+                    font-family: "Garet";
+                    font-size: 1vw;
+                    margin-bottom: 0%;
+                    margin-left: 5%;
+                    width: 75%;
+                }
+            }
+
+            a.checkoutButton {
+                background: $green;
+                color: white;
+                padding: 5%;
+                font-family: "Garbata";
+                font-weight: 700;
+                width: 75%;
+                margin-top: 7%;
+                cursor: pointer;
+                font-size: 1.1vw;
+                text-align: center;
             }
         }
     }

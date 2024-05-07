@@ -12,12 +12,12 @@ import t from "./text";
 import "./styles/index.scss";
 
 const Services = () => {
-  const plansAndPricesRef = useRef()
+  const plansAndPricesRef = useRef();
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0 });
   }, []);
-  
+
   return (
     <main id="servicesPage">
       {/* <HomeIcon text pink /> */}
@@ -44,7 +44,28 @@ const Services = () => {
             primaryColor="#FFFFFF"
             secondaryColor="#000000"
             thumbnailTime={117}
+            autoPlay
           />
+        </div>
+      </section>
+      <section id="servicesUgcSection" className="servicesSection">
+        <div id="servicesUgcLeft" className="servicesSectionLeft">
+          <video 
+            id="servicesUgcVideo" 
+            src={i.videos.magicCalendarsAd} 
+            autoPlay
+            muted
+            loop
+            controls
+          />
+        </div>
+        <div id="servicesUgcRight" className="servicesSectionRight">
+          <label>{t.ugcLabel}</label>
+          <h2>{t.ugcTitle}</h2>
+          <div id="servicesUgcDescription" className="servicesDescription">
+            <p>{t.ugcDescription1}</p>
+            <p>{t.ugcDescription2}</p>
+          </div>
         </div>
       </section>
       <section id="servicesBrandSection" className="servicesSection">
@@ -141,20 +162,10 @@ const Services = () => {
                     {bullet}
                   </li>
                 ))}
-                <li className="servicesPlansAndPricesItem">
-                  {t.planOne.lastBullet.one}
-                  <a
-                    href="https://drive.google.com/file/d/1uL1KlVVF82Vp1zjrlTfJSYNefAkiOS9r/view?usp=sharing"
-                    target="_blank"
-                  >
-                    <u>{t.planOne.lastBullet.two}</u>
-                  </a>
-                  {t.planOne.lastBullet.three}
-                </li>
               </ul>
             </div>
             <a
-              href="https://buy.stripe.com/cN23fN8T827Jd5CaEG"
+              href="https://buy.stripe.com/14k9Ebc5k7s3aXu5kn"
               className="checkoutButton clickable"
               target="_blank"
             >
@@ -175,7 +186,7 @@ const Services = () => {
               </ul>
             </div>
             <a
-              href="https://buy.stripe.com/28o2bJ8T84fRc1y8wx"
+              href="https://buy.stripe.com/5kA2bJ1qG3bNfdK8wA"
               target="_blank"
               className="checkoutButton clickable"
             >
@@ -193,10 +204,20 @@ const Services = () => {
                     {bullet}
                   </li>
                 ))}
+                <li className="servicesPlansAndPricesItem">
+                  {t.planThree.lastBullet.one}
+                  <a
+                    href="https://drive.google.com/file/d/1uL1KlVVF82Vp1zjrlTfJSYNefAkiOS9r/view?usp=sharing"
+                    target="_blank"
+                  >
+                    <u>{t.planThree.lastBullet.two}</u>
+                  </a>
+                  {t.planThree.lastBullet.three}
+                </li>
               </ul>
             </div>
             <a
-              href="https://buy.stripe.com/14k9Ebc5k7s3aXu5kn"
+              href="https://buy.stripe.com/cN23fN8T827Jd5CaEG"
               className="checkoutButton clickable"
               target="_blank"
             >
@@ -217,13 +238,73 @@ const Services = () => {
               </ul>
             </div>
             <a
-              href="https://buy.stripe.com/5kA2bJ1qG3bNfdK8wA"
+              href="https://buy.stripe.com/28o2bJ8T84fRc1y8wx"
               target="_blank"
               className="checkoutButton clickable"
             >
               {t.planFour.cta}
             </a>
           </div>
+        </div>
+      </section>
+      <section id="servicesUgcPackagesSection">
+        <div id="servicesUgcPackagesLeft" className="servicesUgcPackage">
+          <h4>
+            <span className="servicesUgcTitleNumber">
+              {t.ugcPackagesLeft.title1}
+            </span>
+            &nbsp;
+            {t.ugcPackagesLeft.title2}
+          </h4>
+          <label>{t.ugcPackagesLeft.price}</label>
+          <p>{t.ugcPackagesLeft.description}</p>
+          <ul className="servicesUgcPackagesList">
+            {t.ugcPackagesLeft.bullets.map((bullet, i) => (
+              <li className="servicesUgcPackagesListItem" key={i}>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="https://buy.stripe.com/9AQg2zc5keUve9G9AF"
+            className="checkoutButton clickable"
+            target="_blank"
+          >
+            {t.ugcPackagesLeft.cta}
+          </a>
+        </div>
+        <video
+          id="servicesUgcPackagesVideo"
+          src={i.videos.ugcVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div id="servicesUgcPackagesRight" className="servicesUgcPackage">
+          <h4>
+            <span className="servicesUgcTitleNumber">
+              {t.ugcPackagesRight.title1}
+            </span>
+            &nbsp;
+            {t.ugcPackagesRight.title2}
+          </h4>
+          <label>{t.ugcPackagesRight.price}</label>
+          <p>{t.ugcPackagesRight.description}</p>
+          <ul className="servicesUgcPackagesList">
+            {t.ugcPackagesRight.bullets.map((bullet, i) => (
+              <li className="servicesUgcPackagesListItem" key={i}>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="https://buy.stripe.com/7sI2bJ8T87s39TqeV0"
+            className="checkoutButton clickable"
+            target="_blank"
+          >
+            {t.ugcPackagesRight.cta}
+          </a>
         </div>
       </section>
       <section id="servicesGarettTestimonial" className="servicesTestimonial">

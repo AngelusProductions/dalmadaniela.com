@@ -224,6 +224,8 @@ export const i = {
   videos: {
     emojiBlast: `${bucketPrefix}/videos/emojiBlast.mp4`,
     lightbulbConstruction: `${bucketPrefix}/videos/lightbulbConstruction.gif`,
+    magicCalendarsAd: `${bucketPrefix}/videos/magicCalendarsAd.mp4`,
     reelArcShoot: `${bucketPrefix}/videos/1.%20DALMA%20DANIELA%20-%20DRAMATIC%20REEL.mov`,
+    ugcVideo: `${bucketPrefix}/videos/ugcVideo.mp4`,
   },
 };

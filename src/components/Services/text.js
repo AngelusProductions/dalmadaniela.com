@@ -4,6 +4,13 @@ export default {
     "From UGC and digital strategies to full-on rebranding, web development, and corporate hero video production, we're all about creating digital solutions that enhance our collaborators' outcomes both online and offline.",
   titleButton: "Plans and Prices",
 
+  ugcLabel: "UGC Packages",
+  ugcTitle: "Authentic UGC",
+  ugcDescription1:
+    "Authentic User-Generated Content (UGC) is the heartbeat of modern marketing. It’s not just about showcasing your brand; it’s about connecting with your audience on a deeper level.",
+  ugcDescription2:
+    "Our team curates and amplifies UGC that reflects your brand’s essence, values, and vision. Whether it’s customer reviews, social media posts, or community-generated content, we transform it into compelling narratives that resonate with your prospects. Let us help you harness the authenticity of UGC to build trust and drive engagement.",
+
   brandLabel: "Brand strategy",
   brandTitle: "Personal & Corporate Branding",
   brandDescription1:
@@ -51,8 +58,37 @@ export default {
     four: "One on one guidance and personalized feedback from start to finish",
   },
 
-  plansAndPricesTitle: "Plans & Prices",
+  plansAndPricesTitle: "Digital Solutions",
   planOne: {
+    title: "Digital Strategy Full",
+    price: "$2350",
+    description:
+      "Professional digital strategy creation for all of the brand's social media channels (up to 4), aligned with the company's short to long-term objectives.",
+    bullets: [
+      "Digital goals",
+      "Audiences and platforms to focus on",
+      "Content strategy",
+      "KPIs to measure success",
+      "Monthly social media content calendar with copies, captions, and video scripts",
+      "In-house content production",
+      "Digital consultancy, branding, and business support",
+    ],
+    cta: "Increase online revenue",
+  },
+  planTwo: {
+    title: "Digital Acceleration Program",
+    price: "$3000",
+    description:
+      "This program empowers solopreneurs with all the elements they need to accelerate their online success and generate more revenue:",
+    bullets: [
+      "Comprehensive Brand Manual",
+      "Digital strategy and social media content calendar ready to implement",
+      "Done-for-you social media graphics and videos created with your branding so you can replicate on your own",
+      "1:1 guidance and personalized feedback from start to finish",
+    ],
+    cta: "Accelerate your success",
+  },
+  planThree: {
     title: "Personal & Corporate Branding",
     price: "$1050",
     description: "Comprehensive Brand Manual with:",
@@ -72,7 +108,7 @@ export default {
     },
     cta: "Scale your brand",
   },
-  planTwo: {
+  planFour: {
     title: "Digital Strategy Light",
     price: "$1875",
     description:
@@ -88,34 +124,33 @@ export default {
     ],
     cta: "Revitalize your strategy",
   },
-  planThree: {
-    title: "Digital Strategy Full",
-    price: "$2350",
-    description:
-      "Professional digital strategy creation for all of the brand's social media channels (up to 4), aligned with the company's short to long-term objectives.",
+
+  ugcPackagesLeft: {
+    title1: "360",
+    title2: "UGC Package",
+    price: "$950",
+    description: "5 high-value, keyword-friendly, professionally edited UGC videos:",
     bullets: [
-      "Digital goals",
-      "Audiences and platforms to focus on",
-      "Content strategy",
-      "KPIs to measure success",
-      "Monthly social media content calendar with copies, captions, and video scripts",
-      "In-house content production",
-      "Digital consultancy, branding, and business support",
+      "Each video lasts up to 90 seconds",
+      "Features a spokesperson and voiceover",
+      "Script created around your brand's guidelines",
+      "One correction allowed per video",
+      "All videos delivered within one week",
     ],
-    cta: "Increase online revenue",
+    cta: "Generate more engagement",
   },
-  planFour: {
-    title: "Digital Acceleration Program",
-    price: "$3000",
-    description:
-      "This program empowers solopreneurs with all the elements they need to accelerate their online success and generate more revenue:",
+  ugcPackagesRight: {
+    title1: "180",
+    title2: "UGC Package",
+    price: "$699",
+    description: "3 high-value, keyword-friendly, professionally edited UGC videos:",
     bullets: [
-      "Comprehensive Brand Manual",
-      "Digital strategy and social media content calendar ready to implement",
-      "Done-for-you social media graphics and videos created with your branding so you can replicate on your own",
-      "1:1 guidance and personalized feedback from start to finish",
+      "Each video lasts up to 30 seconds",
+      "Features a voiceover",
+      "One correction allowed per package",
+      "All videos delivered within one week",
     ],
-    cta: "Accelerate your success",
+    cta: "Improve you content",
   },
 
   testimonialsTitle: "Testimonials",
