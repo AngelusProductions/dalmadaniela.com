@@ -150,7 +150,7 @@ export default {
       "One correction allowed per package",
       "All videos delivered within one week",
     ],
-    cta: "Improve you content",
+    cta: "Improve your content",
   },
 
   testimonialsTitle: "Testimonials",

@@ -1,8 +1,11 @@
 @media (max-width: 640px) {
     #servicesPage {
+        section#servicesTitleSection {
+            margin-bottom: 10%;
+        }
+
         .servicesSection {
             flex-direction: column-reverse;
-            margin-top: 15%;
 
             label {
                 font-size: 2.5vw;
@@ -34,6 +37,7 @@
 
         section#servicesTitleSection {
             flex-direction: column;
+            margin-bottom: 5% !important;
 
             div#servicesTitleLeft {
                 width: 80%;
@@ -107,7 +111,6 @@
         }
 
         section#servicesPlansAndPricesSection {
-
             h3 {
                 font-size: 5vw;
             }
@@ -152,24 +155,83 @@
         }
     }
 
+    section#servicesUgcPackagesSection {
+        flex-direction: column;
+
+        video#servicesUgcPackagesVideo {
+            width: 50% !important;
+            border-radius: 50px !important;
+            padding: 15px !important;
+            border: 3px solid !important;
+            margin: 10% auto 15%;
+        }
+
+        div#servicesUgcPackagesRight {
+            transform: none !important;
+
+            ul {
+                margin: 5% 0 !important;
+            }
+        }
+
+        .servicesUgcPackage {
+            width: 100% !important;
+
+            h4 {
+                font-size: 4.4vw !important;
+                width: 67%;
+                margin: 0 !important;
+
+                span.servicesUgcTitleNumber {
+                    font-size: 4.1vw !important;
+                }
+            }
+
+            label {
+                top: 3% !important;
+                font-size: 3.8vw !important;
+                right: 20% !important;
+            }
+
+            p {
+                margin: 5% 0 5% !important;
+                font-size: 3.8vw !important;
+            }
+
+            ul {
+                margin-top: 0 !important;
+                li {
+                    font-size: 3.8vw !important;
+                }
+            }
+        }
+
+        a.checkoutButton {
+            font-size: 4vw !important;
+            padding: 2.5% !important;
+            width: fit-content !important;
+            margin: 5% 0 !important;
+        }
+    }
+
     #servicesAlexTestimonial {}
 
     .servicesTestimonial {
         .left {}
 
         p {
-            font-size: 2.5vw !important;
+            font-size: 3vw !important;
             width: 95% !important;
         }
 
         .right {}
 
         .testimonialLabel {
-            font-size: 2.3vw;
+            font-size: 3vw !important;
         }
 
         img.testimonialPhone {
-            width: 60%;
+            width: 80% !important;
         }
     }
 

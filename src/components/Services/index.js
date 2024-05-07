@@ -45,6 +45,7 @@ const Services = () => {
             secondaryColor="#000000"
             thumbnailTime={117}
             autoPlay
+            muted
           />
         </div>
       </section>
