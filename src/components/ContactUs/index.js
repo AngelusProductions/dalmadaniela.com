@@ -14,7 +14,7 @@ const t = {
   name: 'Name',
   email: 'Email',
   message: 'Message',
-  submit: 'Submit',
+  submit: 'Send message',
   emailPattern: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
   thankYou: 'Thank you for reaching out!'
 }
@@ -102,7 +102,7 @@ const ContactUs = () => {
         )}
       </div>
       <div id='contactUsPageRight'>
-        <img src={i.stock.conactUs} />
+        <img src={i.stock.groupOfPeopleInCircle} />
       </div>
     </main>
   )

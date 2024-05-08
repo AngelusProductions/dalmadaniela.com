@@ -7,7 +7,6 @@
     h1#contactUsPageTitle {
         font-family: 'Garbata';
         font-size: 3vw;
-        color: $pink;
         margin-bottom: 10%;
     }
 
@@ -52,21 +51,18 @@
 
             button {
                 cursor: pointer;
-                border: 1px solid $black;
-                border-radius: 15px;
-                padding: 2.5%;
+                padding: 2.5% 5%;
                 font-family: 'Garbata';
                 font-size: 1.5vw;
                 background-color: $green;
                 color: $white;
-                font-weight: bold;  
+                font-weight: 600;  
                 font-size: 2vw;
-                width: 50%;
+                width: fit-content;
                 margin: 10% auto;
 
                 &:hover {
-                    background-color: $white;
-                    color: $black;
+                    background-color: $pink;
                 }
             }
 

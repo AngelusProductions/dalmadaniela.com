@@ -27,8 +27,8 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
 
   return (
     <div id="blogPageContainer" ref={containerRef}>
-      <HomeIcon text yellow />
-      <UserInfo redirect={paths.blog.page} backgroundColor='pink' />
+      <HomeIcon text pink />
+      <UserInfo redirect={paths.blog.page} backgroundColor='yellow' />
       {adminEmails.includes(currentUser?.email) && (
         <Link to={paths.blog.create}>
           <img 
@@ -41,7 +41,7 @@ export const Blog = ({ currentUser, getAllBlogPosts, blogPosts }) => {
 
       <div id='blogPageTitleContainer'>
         <h1>{t.title}</h1>
-        <img src={i.icons.syringe} />
+        {/* <img src={i.icons.syringe} /> */}
       </div>
 
       <div id='blogPageHilightsContainer'>
