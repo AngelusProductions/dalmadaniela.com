@@ -57,7 +57,7 @@ const FAQ = () => {
           <h1>{t.faqShort}</h1>
           <h2>{t.faqLong}</h2>
         </div>
-        <img src={i.dalma.pointingUp} />
+        <img src={i.dalma.redSweater3} />
       </div>
       <div id="faqContainer">
         <div className="faqQuestionContainer">

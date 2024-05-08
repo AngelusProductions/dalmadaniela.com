@@ -2,25 +2,39 @@
 
 @media (max-width: 640px) {
     #faq {
+        flex-direction: column;
+
         #faqTitleContainer {
             padding-top: 0 !important;
             z-index: 97;
+            width: 100%;
 
             h1 {
-                font-size: 7vw;
+                font-size: 7vw !important;
             }
 
             h2 {
-                font-size: 3vw;
+                font-size: 3vw !important;
+            }
+
+            img {
+                width: 50%;
+                margin: auto;
+                margin-top: 10%;
             }
         }
 
         #faqContainer {
+            width: 100%;
+            height: 100vh;
+            min-height: 1000px;
+
             .faqQuestionContainer {
                 .cardFlipQuestionContainer {
                     padding: 5px;
-                    font-size: 3vw;;
+                    font-size: 3vw;
                 }
+
                 .cardFlipAnswerContainer {
                     span {
                         font-size: 2.5vw !important;

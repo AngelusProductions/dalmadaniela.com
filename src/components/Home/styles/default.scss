@@ -172,7 +172,7 @@ section#bio {
     div#bioRight {
         display: flex;
         justify-content: center;
-        padding-left: 3%;
+        width: 66%;
 
         img {
             width: 43%;
@@ -682,6 +682,8 @@ section#classAbout {
 
 section#faqHomeSection {
     display: flex;
+    overflow: unset;
+    height: fit-content;
 }
 
 @keyframes fadeIn {

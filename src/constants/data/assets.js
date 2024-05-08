@@ -14,6 +14,7 @@ export const i = {
     brownBackground2: `${bucketPrefix}/dalma/brownBackground2.jpeg`,
     redSweater1: `${bucketPrefix}/dalma/redSweater1.webp`,
     redSweater2: `${bucketPrefix}/dalma/redSweater2.webp`,
+    redSweater3: `${bucketPrefix}/dalma/redSweater3.webp`,
   },
   films: {
     limeAndVinegar: `${bucketPrefix}/films/limeAndVinegar.png`,
