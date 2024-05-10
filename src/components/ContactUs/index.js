@@ -49,7 +49,7 @@ const ContactUs = () => {
 
   return (
     <main id='contactUsPage'>
-      <HomeIcon text pink />
+      <HomeIcon text />
       <div id='contactUsPageLeft'>
         {showThankYou ? (
           <div id='contactUsThankYouContainer'>

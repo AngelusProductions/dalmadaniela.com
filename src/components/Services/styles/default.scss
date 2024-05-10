@@ -412,7 +412,6 @@
                 font-size: 3vw;
                 font-weight: 300;
                 margin-bottom: 5%;
-                color: $green;
             }
 
             div.servicesContactButton {
@@ -428,6 +427,11 @@
                 margin-bottom: 2.5%;
                 align-items: center;
 
+                &:last-child {
+                    background: $green;
+                    color: white;
+                }
+
                 img {
                     width: 1vw;
                 }
@@ -441,6 +445,7 @@
             img {
                 width: 90%;
                 margin: auto auto auto 0;
+                display: none;
             }
         }
     }

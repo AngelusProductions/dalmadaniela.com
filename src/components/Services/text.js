@@ -163,5 +163,5 @@ export default {
   contactTagline: "We look forward to serving you!",
   contactPhone: "786-589-0554",
   contactEmail: "dalma@dalmadaniela.com",
-  contactLink: "dalmadaniela.com/contact-us",
+  contactLink: "Send message",
 };

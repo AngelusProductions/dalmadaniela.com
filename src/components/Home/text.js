@@ -45,5 +45,5 @@ export default {
   classTeach1: "And now it's time to",
   classTeach2: "serve you",
   className: "How to be successful on social media without having to go viral",
-  classCta: "Digital Marketing Services",
+  classCta: "Digital Solutions",
 };

@@ -49,7 +49,7 @@ const Home = () => {
           </div>
         </div>
         <div className="right">
-          <img src={i.dalma.redSweater2} alt={t.title} />
+          <img src={i.dalma.toga} alt={t.title} />
         </div>
       </section>
       <section id="brands" className="homeSection">
@@ -236,18 +236,10 @@ const Home = () => {
         </div>
       </section>
       <section id="teachYou" className="homeSection">
-        <img id="whiteChick" src={i.stock.whiteChick} />
-        <img id="whiteChickStars" src={i.stars.starTwinklesLarge} />
-        <div id="teachYouTextcontainer">
-          <p id="teachYouTeachYouText">
-            <span>{t.classTeach1}</span>
-            <span>{t.classTeach2}</span>
-          </p>
-          {/* <p id="teachYouClassName">{t.className}</p> */}
-          <Link id="teachYouClassCta" to={paths.services} className="clickable">
-            {t.classCta}
-          </Link>
-        </div>
+        <img id="whiteChick" src={i.stock.artsyGirl} />
+        <Link id="teachYouClassCta" to={paths.services} className="clickable">
+          {t.classCta}
+        </Link>
       </section>
       <section id="faqHomeSection" className="homeSection">
         <FAQ />

@@ -159,6 +159,7 @@ export default {
 
   contactThankYou: "Thank you",
   contactTitle: "Contact",
-  contactName: "Dalma Daniela",
-  contactEmail: "dalma@dalmadaniela.com",
+  contactName: "Catherine Carmichael",
+  contactCompany: "Aegis Talent",
+  contactEmail: "(424) 202-2446",
 };

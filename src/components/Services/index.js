@@ -51,9 +51,9 @@ const Services = () => {
       </section>
       <section id="servicesUgcSection" className="servicesSection">
         <div id="servicesUgcLeft" className="servicesSectionLeft">
-          <video 
-            id="servicesUgcVideo" 
-            src={i.videos.magicCalendarsAd} 
+          <video
+            id="servicesUgcVideo"
+            src={i.videos.magicCalendarsAd}
             autoPlay
             muted
             loop
@@ -69,7 +69,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section id="servicesBrandSection" className="servicesSection">
+      {/* <section id="servicesBrandSection" className="servicesSection">
         <div id="servicesBrandLeft" className="servicesSectionLeft">
           <img id="servicesBrandColorPallette" src={i.services.colorPallette} />
           <img id="servicesBrandBusinessCards" src={i.services.businessCards} />
@@ -112,8 +112,8 @@ const Services = () => {
             <p>{t.accelerationDescription2}</p>
           </div>
         </div>
-      </section>
-      <section id="servicesPlanSection">
+      </section> */}
+      {/* <section id="servicesPlanSection">
         <h3>{t.accelerationProgram}</h3>
         <ul id="servicesPlanBulletList">
           <li className="servicesPlanBullet">
@@ -148,6 +148,66 @@ const Services = () => {
             <span>{t.accelerationProgramBullets.four}</span>
           </li>
         </ul>
+      </section> */}
+      <section id="servicesUgcPackagesSection">
+        <div id="servicesUgcPackagesLeft" className="servicesUgcPackage">
+          <h4>
+            <span className="servicesUgcTitleNumber">
+              {t.ugcPackagesLeft.title1}
+            </span>
+            &nbsp;
+            {t.ugcPackagesLeft.title2}
+          </h4>
+          <label>{t.ugcPackagesLeft.price}</label>
+          <p>{t.ugcPackagesLeft.description}</p>
+          <ul className="servicesUgcPackagesList">
+            {t.ugcPackagesLeft.bullets.map((bullet, i) => (
+              <li className="servicesUgcPackagesListItem" key={i}>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="https://buy.stripe.com/9AQg2zc5keUve9G9AF"
+            className="checkoutButton clickable"
+            target="_blank"
+          >
+            {t.ugcPackagesLeft.cta}
+          </a>
+        </div>
+        <video
+          id="servicesUgcPackagesVideo"
+          src={i.videos.ugcVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div id="servicesUgcPackagesRight" className="servicesUgcPackage">
+          <h4>
+            <span className="servicesUgcTitleNumber">
+              {t.ugcPackagesRight.title1}
+            </span>
+            &nbsp;
+            {t.ugcPackagesRight.title2}
+          </h4>
+          <label>{t.ugcPackagesRight.price}</label>
+          <p>{t.ugcPackagesRight.description}</p>
+          <ul className="servicesUgcPackagesList">
+            {t.ugcPackagesRight.bullets.map((bullet, i) => (
+              <li className="servicesUgcPackagesListItem" key={i}>
+                {bullet}
+              </li>
+            ))}
+          </ul>
+          <a
+            href="https://buy.stripe.com/7sI2bJ8T87s39TqeV0"
+            className="checkoutButton clickable"
+            target="_blank"
+          >
+            {t.ugcPackagesRight.cta}
+          </a>
+        </div>
       </section>
       <section id="servicesPlansAndPricesSection" ref={plansAndPricesRef}>
         <h3>{t.plansAndPricesTitle}</h3>
@@ -248,66 +308,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section id="servicesUgcPackagesSection">
-        <div id="servicesUgcPackagesLeft" className="servicesUgcPackage">
-          <h4>
-            <span className="servicesUgcTitleNumber">
-              {t.ugcPackagesLeft.title1}
-            </span>
-            &nbsp;
-            {t.ugcPackagesLeft.title2}
-          </h4>
-          <label>{t.ugcPackagesLeft.price}</label>
-          <p>{t.ugcPackagesLeft.description}</p>
-          <ul className="servicesUgcPackagesList">
-            {t.ugcPackagesLeft.bullets.map((bullet, i) => (
-              <li className="servicesUgcPackagesListItem" key={i}>
-                {bullet}
-              </li>
-            ))}
-          </ul>
-          <a
-            href="https://buy.stripe.com/9AQg2zc5keUve9G9AF"
-            className="checkoutButton clickable"
-            target="_blank"
-          >
-            {t.ugcPackagesLeft.cta}
-          </a>
-        </div>
-        <video
-          id="servicesUgcPackagesVideo"
-          src={i.videos.ugcVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-        <div id="servicesUgcPackagesRight" className="servicesUgcPackage">
-          <h4>
-            <span className="servicesUgcTitleNumber">
-              {t.ugcPackagesRight.title1}
-            </span>
-            &nbsp;
-            {t.ugcPackagesRight.title2}
-          </h4>
-          <label>{t.ugcPackagesRight.price}</label>
-          <p>{t.ugcPackagesRight.description}</p>
-          <ul className="servicesUgcPackagesList">
-            {t.ugcPackagesRight.bullets.map((bullet, i) => (
-              <li className="servicesUgcPackagesListItem" key={i}>
-                {bullet}
-              </li>
-            ))}
-          </ul>
-          <a
-            href="https://buy.stripe.com/7sI2bJ8T87s39TqeV0"
-            className="checkoutButton clickable"
-            target="_blank"
-          >
-            {t.ugcPackagesRight.cta}
-          </a>
-        </div>
-      </section>
       <section id="servicesGarettTestimonial" className="servicesTestimonial">
         <div className="left">
           <p>{testimonials.garett.quote}</p>
@@ -343,19 +343,22 @@ const Services = () => {
           <p id="servicesContactTagline">{t.contactTagline}</p>
           <div id="servicesContactButtons">
             <div className="servicesContactButton">
+              <div />
               <span>{t.contactPhone}</span>
               <img src={i.icons.arrow} />
             </div>
             <div className="servicesContactButton">
+              <div />
               <span>{t.contactEmail}</span>
               <img src={i.icons.arrow} />
             </div>
-            <div className="servicesContactButton">
-              <Link to={paths.contactUs}>
-                <u>{t.contactLink}</u>
-              </Link>
-              <img src={i.icons.arrow} />
-            </div>
+            <Link to={paths.contactUs}>
+              <div className="servicesContactButton clickable">
+                <div />
+                {t.contactLink}
+                <img src={i.icons.arrow} />
+              </div>
+            </Link>
           </div>
         </div>
         <div id="servicesContactRight">

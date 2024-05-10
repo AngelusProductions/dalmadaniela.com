@@ -169,7 +169,10 @@ const Acting = () => {
             <h1>{t.contactThankYou}</h1>
           </div>
           <div id="actingContactBottomRight">
-            <h5>{t.contactTitle}</h5>
+            <h5>
+              <Link to={paths.contactUs}>{t.contactTitle}</Link>
+            </h5>
+            <p>{t.contactCompany}</p>
             <p>{t.contactName}</p>
             <p>{t.contactEmail}</p>
           </div>

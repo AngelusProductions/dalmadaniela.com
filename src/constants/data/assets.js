@@ -15,6 +15,7 @@ export const i = {
     redSweater1: `${bucketPrefix}/dalma/redSweater1.webp`,
     redSweater2: `${bucketPrefix}/dalma/redSweater2.webp`,
     redSweater3: `${bucketPrefix}/dalma/redSweater3.webp`,
+    toga: `${bucketPrefix}/dalma/toga.JPG`,
   },
   films: {
     limeAndVinegar: `${bucketPrefix}/films/limeAndVinegar.png`,
@@ -176,6 +177,7 @@ export const i = {
     starTwinklesLarge: `${bucketPrefix}/stars/starTwinklesLarge.webp`,
   },
   stock: {
+    artsyGirl: `${bucketPrefix}/stock/artsyGirl.webp`,
     bigBenContentCalendar: `${bucketPrefix}/stock/bigBenContentCalendar.png`,
     brand: `${bucketPrefix}/stock/brand.png`,
     bullseye: `${bucketPrefix}/stock/bullseye.webp`,
