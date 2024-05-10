@@ -10,10 +10,10 @@ const t = {
   faqLong: "Frequently Asked Questions",
   questions: {
     one: "What is dalmadaniela.com?",
-    two: "What products & services can I buy on dalmadaniela.com?",
-    three: "What are Magic Calendars?",
-    four: "Why should I get the SuperClass: How to be successful on social without having to go viral?",
-    five: "Why should I choose dalmadaniela.com?",
+    two: "How can I work with Dalma?",
+    three: "How do I hire Dalma as an actress for my film or video project?",
+    four: "How can I work with Dalma to improve my branding and social media?",
+    five: "Why should I choose the team at dalmadaniela.com?",
     six: "Where is dalmadaniela.com's expert digital marketing team located?",
   },
 };
@@ -68,17 +68,12 @@ const FAQ = () => {
               <div id="faqAnswer-one" className="faqAnswer">
                 <span className="one">We are a&nbsp;</span>
                 <span className="two">
-                  <Link to={paths.superClass.page}>
-                    one-stop content creation shop
-                  </Link>
-                  &nbsp;
+                  one-stop content creation shop&nbsp;
                 </span>
                 <span className="three">
                   for small businesses, personal brands, artists, and
-                  solopreneurs&nbsp;
-                </span>
-                <span className="four">
-                  looking to optimize their social media experience.
+                  solopreneurs looking to optimize their social media
+                  experience.
                 </span>
               </div>
             )}
@@ -88,24 +83,13 @@ const FAQ = () => {
             question={t.questions.two}
             answer={() => (
               <div id="faqAnswer-two" className="faqAnswer">
-                <span className="one">
-                  It depends on your journey. If you want to master how to
-                  create your own social media strategy and produce content that
-                  aligns with your goals,&nbsp;
-                </span>
-                <span className="two">sign up for&nbsp;</span>
+                <span className="one">You can purchase a&nbsp;</span>
+                <span className="two">digital solution&nbsp;</span>
                 <span className="three">
-                  <Link to={paths.superClass.page}>SuperClass.</Link>&nbsp;
+                  or request a personalized one by contacting us&nbsp;
                 </span>
                 <span className="four">
-                  If you are busy running a business, you can get a&nbsp;
-                </span>
-                <span className="five">
-                  <Link to={paths.magicCalendars.page}>Magic Calendar</Link>
-                  &nbsp;
-                </span>
-                <span className="six">
-                  that creates your monthly social media content for you.
+                  <Link to={paths.services}>here</Link>
                 </span>
               </div>
             )}
@@ -115,26 +99,16 @@ const FAQ = () => {
             question={t.questions.three}
             answer={() => (
               <div id="faqAnswer-three" className="faqAnswer">
-                <span className="one">With&nbsp;</span>
+                <span className="one">You can email&nbsp;</span>
                 <span className="two">
-                  <Link to={paths.magicCalendars.page}>Magic Calendars</Link>
+                  <a href="mailto:dalma@dalmadaniela.com">
+                    dalma@dalmadaniela.com
+                  </a>
                   &nbsp;
                 </span>
                 <span className="three">
-                  you can have high-quality social media posts for your brand or
-                  business in an&nbsp;
+                  for booking inquiries and rates information.
                 </span>
-                <span className="four">
-                  easy, affordable, and innovative way.&nbsp;
-                </span>
-                <span className="five">
-                  The content will be in your email in less than 24 hours.&nbsp;
-                </span>
-                <span className="six">
-                  Learn how to automate your monthly social media content
-                  creation&nbsp;
-                </span>
-                <span className="seven">here.</span>
               </div>
             )}
           />
@@ -144,24 +118,16 @@ const FAQ = () => {
             answer={() => (
               <div id="faqAnswer-four" className="faqAnswer">
                 <span className="one">
-                  <Link to={paths.superClass.page}>SuperClass</Link>&nbsp;
+                  Once you're one of our collaborators, the team at
+                  dalmadaniela.com will help you tap into what makes you who you
+                  are so we can build or improve your brand based on that
+                  essence. We believe in sustainable marketing, which means that
+                  all the strategies we'll create for you will be&nbsp;
                 </span>
-                <span className="two">
-                  teaches you the only content creation system you need for
-                  social media.&nbsp;
-                </span>
+                <span className="two">based on impact and revenue&nbsp;</span>
                 <span className="three">
-                  <Link to={paths.superClass.page}>
-                    Only 1.1% of social media posts go viral,
-                  </Link>
-                  &nbsp;
-                </span>
-                <span className="four">
-                  so you need the best skills to make an impact.&nbsp;
-                </span>
-                <span className="five">
-                  SuperClass will help you use social media to accomplish your
-                  real-world goals.
+                  not on quick hacks or clickbait strategies, but on
+                  change-driven marketing.
                 </span>
               </div>
             )}
@@ -172,21 +138,14 @@ const FAQ = () => {
             answer={() => (
               <div id="faqAnswer-five" className="faqAnswer">
                 <span className="one">
-                  <Link to={paths.superClass.page}>
-                    We realize that social media can be stressful.
-                  </Link>
-                  &nbsp;
+                  We realize that social media can be stressful. Our team has
+                  10+ years of experience in social media marketing for all
+                  kinds of businesses and has faced the troubles that brands and
+                  creators encounter on social media.&nbsp;
                 </span>
-                <span className="two">In 10+ years of experience&nbsp;</span>
-                <span className="three">
-                  our team has faced the troubles that brands and creators
-                  encounter on social media.&nbsp;
-                </span>
-                <span className="four">
-                  <Link to={paths.superClass.page}>
-                    We want to make social media better for everyone by making
-                    content creation easy, simple, and affordable.
-                  </Link>
+                <span className="two">
+                  We want to make social media better for everyone by making
+                  content creation easy, simple, and affordable.
                 </span>
               </div>
             )}
