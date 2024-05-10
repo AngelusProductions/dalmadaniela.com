@@ -54,9 +54,6 @@ const Services = () => {
           <video
             id="servicesUgcVideo"
             src={i.videos.magicCalendarsAd}
-            autoPlay
-            muted
-            loop
             controls
           />
         </div>

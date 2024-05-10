@@ -112,7 +112,8 @@
 
         section#servicesPlansAndPricesSection {
             h3 {
-                font-size: 5vw;
+                font-size: 7vw;
+                text-align: left;
             }
 
             div#servicesPlansAndPricesContainer {
@@ -157,6 +158,7 @@
 
     section#servicesUgcPackagesSection {
         flex-direction: column;
+        margin-top: 10%;
 
         video#servicesUgcPackagesVideo {
             width: 50% !important;
