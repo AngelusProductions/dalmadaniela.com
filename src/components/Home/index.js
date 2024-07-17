@@ -153,7 +153,7 @@ const Home = () => {
             <a href="https://www.youtube.com/user/TheDalma725" target="_blank">
               <img className="clickable" src={i.icons.youtube} />
             </a>
-            <a href="https://www.instagram.com/dalma.llinas/" target="_blank">
+            <a href="https://www.instagram.com/dalmadanielaa/" target="_blank">
               <img className="clickable" src={i.icons.instagram} />
             </a>
             <a
@@ -164,12 +164,12 @@ const Home = () => {
               <img src={i.icons.facebook} />
             </a>
             <a
-              href="https://www.linkedin.com/in/dalma-llin%C3%A1s-5851b549/"
+              href="https://www.linkedin.com/in/dalma-daniela-angelus-5851b549/"
               target="_blank"
             >
               <img className="clickable" src={i.icons.linkedIn} />
             </a>
-            <a href="https://www.threads.net/@dalma.llinas" target="_blank">
+            <a href="https://www.threads.net/@dalmadanielaa" target="_blank">
               <img className="clickable" src={i.icons.threads} />
             </a>
           </div>
